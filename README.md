@@ -77,6 +77,7 @@ database service. Not "shouldn't": cannot.
 | Repository | What it is |
 | :--------- | :--------- |
 | [`unierp-api`](https://github.com/kannan19302/unierp-api) | The modular monolith. 45 business modules, two routers, one deployable |
+| [`unierp-idp`](https://github.com/kannan19302/unierp-idp) | Identity provider. A separate realm per plane, so no customer identity can obtain a control-plane token |
 
 ### L4 — Presentation
 
@@ -84,7 +85,9 @@ database service. Not "shouldn't": cannot.
 | :--------- | :--------- |
 | [`unierp-web`](https://github.com/kannan19302/unierp-web) | Tenant Admin Portal + Application Layer — what customers use |
 | [`unierp-console`](https://github.com/kannan19302/unierp-console) | Platform Admin Console. Separate origin, separate IdP realm, restricted ingress |
+| [`unierp-developer`](https://github.com/kannan19302/unierp-developer) | The developer platform: App Studio, the workflow/form/report builders, and tenant CMS |
 | [`unierp-corporate-website`](https://github.com/kannan19302/unierp-corporate-website) | Marketing, docs, pricing, status |
+| [`unierp-corporate-site-template`](https://github.com/kannan19302/unierp-corporate-site-template) | Starter template a tenant's public website is generated from |
 
 ### L5 — Clients
 
