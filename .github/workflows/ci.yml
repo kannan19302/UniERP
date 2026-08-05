@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  links:
+    name: Documentation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # The landing README is the front door: every repository is linked from it,
+      # so a stale link here is the first thing a new reader hits. Checking that
+      # the community files GitHub surfaces are actually present stops the repo
+      # from quietly losing its issue templates or security policy.
+      - name: Required community files are present
+        run: |
+          for f in README.md LICENSE SECURITY.md CONTRIBUTING.md CODE_OF_CONDUCT.md \
+                   profile/README.md .github/ISSUE_TEMPLATE/bug_report.yml \
+                   .github/ISSUE_TEMPLATE/feature_request.yml; do
+            [ -f "$f" ] || { echo "::error::missing $f"; exit 1; }
+          done
+          echo "all community files present"
+      - name: Organisation profile matches the README
+        run: |
+          diff -q README.md profile/README.md || {
+            echo "::error::profile/README.md has drifted from README.md"; exit 1; }
