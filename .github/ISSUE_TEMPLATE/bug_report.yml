@@ -1,0 +1,58 @@
+name: Bug report
+description: Something behaves incorrectly
+labels: [bug, needs-triage]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Security issues do not belong here.** If this is a vulnerability —
+        especially anything touching tenant isolation, authentication, or the
+        extension sandbox — follow `SECURITY.md` instead. A public issue on a
+        cross-tenant bug tells every operator and every attacker at the same time.
+  - type: dropdown
+    id: repo
+    attributes:
+      label: Which layer
+      options:
+        - unierp-api (backend)
+        - unierp-web (customer app)
+        - unierp-console (platform admin)
+        - unierp-mobile
+        - unierp-data (schema / migrations)
+        - unierp-design-system
+        - unierp-extension-api / sandbox
+        - unierp-infra (deployment)
+        - Not sure
+    validations: { required: true }
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should have happened
+    validations: { required: true }
+  - type: textarea
+    id: actual
+    attributes:
+      label: What actually happened
+      description: Include the exact error, status code, and correlation id if you have one.
+    validations: { required: true }
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Log in as a tenant admin
+        2. Go to Finance → Invoices
+        3. …
+    validations: { required: true }
+  - type: input
+    id: version
+    attributes:
+      label: Release train / version
+      placeholder: "2026.08.0"
+  - type: checkboxes
+    id: tenancy
+    attributes:
+      label: Does this involve more than one tenant?
+      description: If data from one tenant appeared under another, stop and read SECURITY.md.
+      options:
+        - label: This bug involves data or access across tenants
