@@ -22,6 +22,9 @@ Honest summary, because the repository map can read as more finished than it is:
   projects**. They still declare `@unerp/*` as `workspace:*`, so `npm install`
   in a clean clone fails with `EUNSUPPORTEDPROTOCOL`.
 - There are **no tagged releases and no published container images** yet.
+- Every active repository in the family is **AGPL-3.0**, including the `ERPSys`
+  monorepo. It was previously All Rights Reserved, which quietly contradicted
+  this project's claim to be self-hostable in full.
 
 Extraction is finished when a consumer can install the artifact and compile
 against it — not when a directory exists and a tag is written.

@@ -51,6 +51,14 @@ there is deliberately no version number pretending otherwise.
 
 ### Fixed
 
+- **The licence claim in this README was false.** It said UniERP is
+  "self-hostable in full, with no proprietary runtime dependency", while
+  [`ERPSys`](https://github.com/kannan19302/ERPSys) — the only working build,
+  and the one this README tells you to clone — was All Rights Reserved. ERPSys
+  is now AGPL-3.0, along with every other active repository in the family.
+- The four `unierp-app-*` repositories were both proprietary and superseded by
+  [`unierp-extensions`](https://github.com/kannan19302/unierp-extensions), which
+  already contains the same four verticals. They are archived and point there.
 - `profile/README.md` had drifted 43 lines behind `README.md`, leaving CI red on
   `main`.
 - Issue-template contact links pointed at `github.com/unierp/*`, an organisation
