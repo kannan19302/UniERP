@@ -4,13 +4,22 @@
 
 **An open-source, self-hostable multi-tenant application platform — that happens to ship an ERP as its first-party app suite.**
 
-[![Licence](https://img.shields.io/badge/licence-AGPL--3.0-blue)](LICENSE)
-[![Platform](https://img.shields.io/badge/platform-multi--tenant-informational)]()
-[![Self-hosted](https://img.shields.io/badge/self--hosted-yes-success)]()
+[![CI](https://github.com/kannan19302/UniERP/actions/workflows/ci.yml/badge.svg)](https://github.com/kannan19302/UniERP/actions/workflows/ci.yml)
+[![Licence: AGPL-3.0](https://img.shields.io/badge/licence-AGPL--3.0-blue)](LICENSE)
+[![Status: pre-release](https://img.shields.io/badge/status-pre--release-orange)](ROADMAP.md)
+[![Code of conduct](https://img.shields.io/badge/code%20of%20conduct-Contributor%20Covenant%202.1-purple)](CODE_OF_CONDUCT.md)
 
 </div>
 
 ---
+
+> **Project status: pre-release, single maintainer.** The architecture below is
+> real and the code exists, but there are no tagged releases, no published
+> container images, and the extracted repositories cannot yet install
+> standalone — the build is still the [`ERPSys`](https://github.com/kannan19302/ERPSys)
+> monorepo. [`ROADMAP.md`](ROADMAP.md) says exactly what is and is not finished,
+> and [`GOVERNANCE.md`](GOVERNANCE.md) says who maintains it. Please read both
+> before deploying this anywhere that matters.
 
 ## Start here
 
@@ -19,7 +28,9 @@
 | **Evaluating UniERP** | [What makes it different](#what-makes-it-different) |
 | **Deploying it** | [`unierp-infra`](https://github.com/kannan19302/unierp-infra) — compose, Kubernetes, runbooks |
 | **Building on it** | [`unierp-extension-api`](https://github.com/kannan19302/unierp-extension-api) — the public contract |
-| **Contributing** | [Repository map](#repository-map), then that repo's `CONTRIBUTING.md` |
+| **Contributing** | [`CONTRIBUTING.md`](CONTRIBUTING.md) — it starts by telling you which of the repositories below your change belongs in |
+| **Stuck, or unsure where to ask** | [`SUPPORT.md`](SUPPORT.md) |
+| **Wondering how finished this is** | [`ROADMAP.md`](ROADMAP.md) — read this before you deploy it |
 | **Understanding the design** | [`ARCHITECTURE.md`](ARCHITECTURE.md) here, then [`PLATFORM_ARCHITECTURE.md`](https://github.com/kannan19302/ERPSys/blob/main/docs/PLATFORM_ARCHITECTURE.md) for the full specification |
 
 ## What makes it different

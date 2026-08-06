@@ -1,0 +1,19 @@
+# This repository holds documentation and CI — no application dependencies.
+# The GitHub Actions it pins are the whole supply chain, and a pinned action is
+# exactly the kind of dependency that goes quietly stale.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    commit-message:
+      prefix: "ci"
+    labels:
+      - dependencies
+    # One maintainer, one review queue: batch the updates rather than opening a
+    # pull request per action.
+    groups:
+      actions:
+        patterns:
+          - "*"

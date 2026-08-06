@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+title: >-
+  UniERP: an open-source, self-hostable multi-tenant application
+  platform
+message: If you use UniERP in your research, please cite it as below.
+type: software
+authors:
+  - given-names: Kannan
+    family-names: Rajagopal
+    alias: kannan19302
+repository-code: https://github.com/kannan19302/UniERP
+url: https://github.com/kannan19302/UniERP
+abstract: >-
+  UniERP is a self-hostable, multi-tenant application platform that ships an ERP
+  as its first-party app suite. Tenant isolation is enforced by PostgreSQL
+  row-level security with FORCE and a NOBYPASSRLS application role rather than by
+  application code, third-party extensions execute in a capability-scoped V8
+  isolate under metered CPU, memory, query and egress budgets, and AI features
+  run locally against Ollama and pgvector so tenant data does not leave the
+  operator's infrastructure.
+keywords:
+  - erp
+  - multi-tenancy
+  - row-level-security
+  - self-hosted
+  - postgresql
+  - sandboxing
+license: AGPL-3.0-or-later
+# No tagged release yet — see ROADMAP.md. Add version and date-released here
+# when the first one is cut.
