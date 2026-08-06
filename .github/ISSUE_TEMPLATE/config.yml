@@ -4,8 +4,11 @@ contact_links:
     url: https://github.com/kannan19302/UniERP/security/advisories/new
     about: Report privately. Never open a public issue for a tenant-isolation, control-plane or auth flaw.
   - name: Question, or help running it
+    url: https://github.com/kannan19302/UniERP/discussions
+    about: Ask here rather than opening an issue. Answers stay public for the next person.
+  - name: What to include, and what response to expect
     url: https://github.com/kannan19302/UniERP/blob/main/SUPPORT.md
-    about: Where to ask, what to include, and what response you can expect.
+    about: One maintainer, no SLA. This says plainly what that means.
   - name: Deployment and operations
     url: https://github.com/kannan19302/unierp-infra
     about: Compose, Kubernetes, ingress, runbooks. Open infrastructure issues there.

@@ -11,8 +11,9 @@ expect.
 | A **security vulnerability** | [Private advisory](https://github.com/kannan19302/UniERP/security/advisories/new). Never a public issue — see [`SECURITY.md`](SECURITY.md) |
 | A **bug in specific code** | An issue on the repository that owns it, from the [repository map](README.md#repository-map) |
 | A **deployment or Compose problem** | [`unierp-infra`](https://github.com/kannan19302/unierp-infra) |
-| **"Which repository is this?"**, or anything unclear about the architecture | An issue [here](https://github.com/kannan19302/UniERP/issues) |
-| A **feature idea** | An issue here, after checking [`ROADMAP.md`](ROADMAP.md) |
+| A **question** — how something works, which repository owns what, whether an approach is sensible | [Discussions](https://github.com/kannan19302/UniERP/discussions) |
+| Something **wrong or unclear in the documentation** | An issue [here](https://github.com/kannan19302/UniERP/issues) |
+| A **feature idea** | Discussions first, after checking [`ROADMAP.md`](ROADMAP.md). It becomes an issue once it is concrete |
 
 Reporting a bug in the repository that owns the code — rather than here — is the
 single biggest thing you can do to get it fixed quickly.

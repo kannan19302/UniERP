@@ -30,6 +30,11 @@ there is deliberately no version number pretending otherwise.
 - Dependabot updates for the GitHub Actions this repository uses.
 - CI now link-checks every URL in the repository. As a map of roughly thirty
   repositories, its most common failure mode is a link that no longer resolves.
+- GitHub Discussions, so questions have somewhere to go that is not the issue
+  tracker, and answers stay public for the next person.
+- Shared topics across every repository in the family, and a homepage on each
+  sibling pointing back at this one. Thirty repositories with no common topic
+  and no link home read as thirty unrelated projects.
 
 ### Changed
 
