@@ -1,1 +1,47 @@
-node_modules/\ndist/\n.next/\n.turbo/\ncoverage/\nstorybook-static/\n*.tsbuildinfo\n*.log\n.DS_Store\n.env\n.env.local\n
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build output
+dist/
+.next/
+out/
+build/
+*.tsbuildinfo
+
+# Test and coverage artifacts
+coverage/
+test-results/
+playwright-report/
+
+# Caches
+.turbo/
+.eslintcache
+.vite/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Editor and OS
+.vscode/*
+!.vscode/launch.json
+!.vscode/settings.json
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+
+# Logs and scratch
+*.log
+*.tmp
+*.bak
+*.orig
+scratch/
+
+# Storybook
+storybook-static/
+
+# Repository-specific
+.env.local
