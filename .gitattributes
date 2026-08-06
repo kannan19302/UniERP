@@ -1,0 +1,13 @@
+# Normalise line endings in the repository to LF.
+#
+# CI compares README.md against profile/README.md byte for byte. Without this,
+# a contributor on Windows checks out CRLF, and whether that check passes
+# depends on which machine last touched the file rather than on the content.
+* text=auto eol=lf
+
+# Shell scripts must stay LF even on a Windows checkout, or bash refuses them.
+*.sh text eol=lf
+
+# GitHub language statistics: this repository is documentation and CI, so mark
+# the generated profile copies as such rather than counting them twice.
+profile/** linguist-documentation

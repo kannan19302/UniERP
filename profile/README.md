@@ -108,6 +108,49 @@ database service. Not "shouldn't": cannot.
 | [`unierp-infra`](https://github.com/kannan19302/unierp-infra) | Compose, Kubernetes, control-plane ingress, load tests, runbooks, the package registry |
 | [`unierp-workspace`](https://github.com/kannan19302/unierp-workspace) | Release-train manifest, shared CI gates, the federated ratchet |
 
+## Run it locally
+
+The layered repositories above are the **architecture**. The **build** is still
+[`ERPSys`](https://github.com/kannan19302/ERPSys), the development monorepo the
+polyrepo was extracted from, and that is deliberate rather than unfinished:
+`PLATFORM_ARCHITECTURE.md` § 14 rule 4 keeps the monorepo buildable at every
+extraction tag until each consumer has switched to a published artifact. The
+extracted L3/L4 repositories still declare `@unerp/*` as `workspace:*`, so they
+cannot yet install standalone — see § 14.1 for what unblocks that.
+
+```bash
+git clone https://github.com/kannan19302/ERPSys
+cd ERPSys
+pnpm install
+pnpm dev
+```
+
+`pnpm dev` starts PostgreSQL, Redis, MinIO and the package registry in Docker
+and runs the API, IdP and web app natively — the same Next.js middleware compile
+takes ~1 second natively and ~960 seconds in a bind-mounted container on
+Windows, so the datastores get Docker and the applications do not.
+
+| | |
+| :-- | :-- |
+| Web | http://localhost:3000 |
+| API | http://localhost:3001/api/v1 · Swagger at `/swagger` |
+| IdP | http://localhost:3005 |
+
+Then prove it actually works, rather than assuming green gates mean a working
+product:
+
+```bash
+pnpm smoke
+```
+
+That walks register → log in → read a tenant's data over HTTP against the
+running services and fails loudly. It exists because every gate in `pnpm verify`
+was green at a point when the application did not boot.
+
+Shared services alone, without the monorepo, come from
+[`unierp-infra`](https://github.com/kannan19302/unierp-infra):
+`docker compose -f docker-compose.dev.yml up -d`.
+
 ## How the pieces fit at runtime
 
 Fifteen-plus repositories build **three** deployables. Repository topology and

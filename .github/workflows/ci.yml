@@ -23,7 +23,16 @@ jobs:
             [ -f "$f" ] || { echo "::error::missing $f"; exit 1; }
           done
           echo "all community files present"
-      - name: Organisation profile matches the README
+      # profile/ is a published copy, not a second source of truth. Checking
+      # only README.md let ARCHITECTURE.md drift unnoticed, so check every file
+      # the sync script writes, and name the fix in the failure message.
+      - name: Published profile matches the repository root
         run: |
-          diff -q README.md profile/README.md || {
-            echo "::error::profile/README.md has drifted from README.md"; exit 1; }
+          status=0
+          for f in README.md ARCHITECTURE.md; do
+            diff -q "$f" "profile/$f" >/dev/null 2>&1 || {
+              echo "::error file=profile/$f::profile/$f has drifted from $f — run scripts/sync-profile.sh and commit the result"
+              status=1
+            }
+          done
+          exit $status
