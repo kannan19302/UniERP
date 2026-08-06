@@ -1,0 +1,13 @@
+# URLs the link checker cannot verify anonymously, and must not fail on.
+
+# Creating a security advisory requires being signed in with write access, so
+# an anonymous request is redirected to login rather than to the form. The link
+# is correct; it is simply not checkable from CI.
+https://github.com/kannan19302/UniERP/security/advisories/new
+
+# Shields.io renders badges on demand and rate-limits aggressive checkers.
+https://img.shields.io/.*
+
+# Local development URLs from the "Run it locally" section. Nothing is
+# listening on a CI runner, by design.
+http://localhost:.*

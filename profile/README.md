@@ -5,9 +5,9 @@
 **An open-source, self-hostable multi-tenant application platform — that happens to ship an ERP as its first-party app suite.**
 
 [![CI](https://github.com/kannan19302/UniERP/actions/workflows/ci.yml/badge.svg)](https://github.com/kannan19302/UniERP/actions/workflows/ci.yml)
-[![Licence: AGPL-3.0](https://img.shields.io/badge/licence-AGPL--3.0-blue)](LICENSE)
-[![Status: pre-release](https://img.shields.io/badge/status-pre--release-orange)](ROADMAP.md)
-[![Code of conduct](https://img.shields.io/badge/code%20of%20conduct-Contributor%20Covenant%202.1-purple)](CODE_OF_CONDUCT.md)
+[![Licence: AGPL-3.0](https://img.shields.io/badge/licence-AGPL--3.0-blue)](https://github.com/kannan19302/UniERP/blob/main/LICENSE)
+[![Status: pre-release](https://img.shields.io/badge/status-pre--release-orange)](https://github.com/kannan19302/UniERP/blob/main/ROADMAP.md)
+[![Code of conduct](https://img.shields.io/badge/code%20of%20conduct-Contributor%20Covenant%202.1-purple)](https://github.com/kannan19302/UniERP/blob/main/CODE_OF_CONDUCT.md)
 
 </div>
 
@@ -17,21 +17,21 @@
 > real and the code exists, but there are no tagged releases, no published
 > container images, and the extracted repositories cannot yet install
 > standalone — the build is still the [`ERPSys`](https://github.com/kannan19302/ERPSys)
-> monorepo. [`ROADMAP.md`](ROADMAP.md) says exactly what is and is not finished,
-> and [`GOVERNANCE.md`](GOVERNANCE.md) says who maintains it. Please read both
+> monorepo. [`ROADMAP.md`](https://github.com/kannan19302/UniERP/blob/main/ROADMAP.md) says exactly what is and is not finished,
+> and [`GOVERNANCE.md`](https://github.com/kannan19302/UniERP/blob/main/GOVERNANCE.md) says who maintains it. Please read both
 > before deploying this anywhere that matters.
 
 ## Start here
 
 | If you are… | Go to |
 | :---------- | :---- |
-| **Evaluating UniERP** | [What makes it different](#what-makes-it-different) |
+| **Evaluating UniERP** | [What makes it different](https://github.com/kannan19302/UniERP#what-makes-it-different) |
 | **Deploying it** | [`unierp-infra`](https://github.com/kannan19302/unierp-infra) — compose, Kubernetes, runbooks |
 | **Building on it** | [`unierp-extension-api`](https://github.com/kannan19302/unierp-extension-api) — the public contract |
-| **Contributing** | [`CONTRIBUTING.md`](CONTRIBUTING.md) — it starts by telling you which of the repositories below your change belongs in |
-| **Stuck, or unsure where to ask** | [`SUPPORT.md`](SUPPORT.md) |
-| **Wondering how finished this is** | [`ROADMAP.md`](ROADMAP.md) — read this before you deploy it |
-| **Understanding the design** | [`ARCHITECTURE.md`](ARCHITECTURE.md) here, then [`PLATFORM_ARCHITECTURE.md`](https://github.com/kannan19302/ERPSys/blob/main/docs/PLATFORM_ARCHITECTURE.md) for the full specification |
+| **Contributing** | [`CONTRIBUTING.md`](https://github.com/kannan19302/UniERP/blob/main/CONTRIBUTING.md) — it starts by telling you which of the repositories below your change belongs in |
+| **Stuck, or unsure where to ask** | [`SUPPORT.md`](https://github.com/kannan19302/UniERP/blob/main/SUPPORT.md) |
+| **Wondering how finished this is** | [`ROADMAP.md`](https://github.com/kannan19302/UniERP/blob/main/ROADMAP.md) — read this before you deploy it |
+| **Understanding the design** | [`ARCHITECTURE.md`](https://github.com/kannan19302/UniERP/blob/main/ARCHITECTURE.md) here, then [`PLATFORM_ARCHITECTURE.md`](https://github.com/kannan19302/ERPSys/blob/main/docs/PLATFORM_ARCHITECTURE.md) for the full specification |
 
 ## What makes it different
 
@@ -128,7 +128,7 @@ polyrepo was extracted from, and that is deliberate rather than unfinished:
 § 14 rule 4 keeps the monorepo buildable at every extraction tag until each
 consumer has switched to a published artifact. The extracted L3/L4 repositories
 still declare `@unerp/*` as `workspace:*`, so they cannot yet install
-standalone — see § 14.1 for what unblocks that, and [`ROADMAP.md`](ROADMAP.md)
+standalone — see § 14.1 for what unblocks that, and [`ROADMAP.md`](https://github.com/kannan19302/UniERP/blob/main/ROADMAP.md)
 for where that migration currently stands.
 
 ```bash
@@ -191,7 +191,7 @@ PLANE 4  developer       Studio, workflow/form/report builders, extension runtim
 
 Copyright (C) 2026 UniERP contributors.
 
-[GNU Affero General Public License v3.0](LICENSE). Self-hostable in full, with
+[GNU Affero General Public License v3.0](https://github.com/kannan19302/UniERP/blob/main/LICENSE). Self-hostable in full, with
 no proprietary runtime dependency — there is no open-core edition holding back
 tenant isolation, the sandbox or the audit trail.
 

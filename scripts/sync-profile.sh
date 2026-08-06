@@ -3,20 +3,44 @@
 # Regenerate profile/ from the repository root.
 #
 # profile/ holds the copies of README.md and ARCHITECTURE.md that get published
-# to the GitHub profile repository. They must be byte-identical to the root
-# files, and CI enforces that. Keeping them in sync by hand does not work: the
-# "Run it locally" section was added to README.md and not to profile/README.md,
-# and main went red.
+# to the GitHub profile repository. They are *generated*, not edited: run this
+# after changing either root file, then commit the result. CI regenerates and
+# fails if the committed output differs.
 #
-# Run this after editing README.md or ARCHITECTURE.md, then commit both.
+# Why this is not a plain `cp`. The published copies end up in a different
+# repository, where a relative link like [ROADMAP.md](ROADMAP.md) points at a
+# file that is not there. Every relative link is therefore rewritten to an
+# absolute URL into this repository. A byte copy looked correct and shipped
+# seven dead links.
 
 set -euo pipefail
 
 root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$root"
 
+repo="https://github.com/kannan19302/UniERP"
+blob="$repo/blob/main"
+
+# The documents that live at the repository root and may be linked relatively.
+# Listing them explicitly keeps the rewrite auditable: a link to something not
+# on this list is left alone and caught by the link checker.
+targets='README\.md|ARCHITECTURE\.md|ROADMAP\.md|GOVERNANCE\.md|SUPPORT\.md|CONTRIBUTING\.md|CODE_OF_CONDUCT\.md|SECURITY\.md|CHANGELOG\.md|CITATION\.cff|LICENSE'
+
 mkdir -p profile
 for f in README.md ARCHITECTURE.md; do
-  cp "$f" "profile/$f"
+  # A bare "#anchor" resolves against the containing document, so its absolute
+  # form depends on which file we are rewriting.
+  if [ "$f" = "README.md" ]; then
+    self="$repo" # the repository front page renders README.md
+  else
+    self="$blob/$f"
+  fi
+
+  # Delimited with @ rather than |, because $targets is an alternation.
+  sed -E \
+    -e "s@\]\(#@](${self}#@g" \
+    -e "s@\]\((${targets})@](${blob}/\1@g" \
+    "$f" >"profile/$f"
+
   echo "synced profile/$f"
 done

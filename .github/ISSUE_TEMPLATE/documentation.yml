@@ -1,0 +1,42 @@
+name: Documentation problem
+description: Something here is wrong, out of date, or claims more than the project delivers
+labels: [documentation, needs-triage]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This repository is the map. If it describes the platform inaccurately,
+        that is a defect in the thing this repository exists to do — please do
+        report it, including for a single broken link.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of problem
+      options:
+        - A link does not resolve
+        - Something described here does not match reality
+        - A claimed capability the project does not actually have
+        - Instructions that did not work on my machine
+        - Something is missing or unexplained
+    validations: { required: true }
+  - type: input
+    id: where
+    attributes:
+      label: Where
+      description: File and section, or a permalink to the lines.
+      placeholder: "README.md § Run it locally"
+    validations: { required: true }
+  - type: textarea
+    id: problem
+    attributes:
+      label: What it says, and why that is wrong
+      description: >-
+        If you followed instructions that failed, paste what you ran and the
+        error verbatim. Your platform is useful here — setup is only routinely
+        verified on the maintainer's.
+    validations: { required: true }
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: What it should say instead
+      description: Optional. A pull request is welcome and will be faster than an issue.

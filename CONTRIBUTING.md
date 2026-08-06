@@ -24,11 +24,14 @@ There is no build. Edit the Markdown, then:
 bash scripts/sync-profile.sh
 ```
 
-`profile/` holds published copies of `README.md` and `ARCHITECTURE.md`, and CI
-requires them to be byte-identical. Running the script and committing the result
-is the whole workflow. CI also link-checks every URL in the repository, so a
-repository you rename or a document you move is caught before merge, not by a
-reader hitting a 404.
+`profile/` holds generated copies of `README.md` and `ARCHITECTURE.md` for
+publication to the GitHub profile repository, with relative links rewritten to
+absolute ones — they would otherwise point at files that do not exist there.
+Never edit `profile/` by hand; run the script and commit the result. CI
+regenerates it and fails if your commit is stale.
+
+CI also link-checks every URL in the repository, so a repository you rename or a
+document you move is caught before merge, not by a reader hitting a 404.
 
 Good first contributions here: a broken link, a repository description that no
 longer matches what the repository does, a step in [Run it

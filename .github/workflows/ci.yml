@@ -4,35 +4,88 @@ on:
   push:
     branches: [main]
   pull_request:
+  # Links rot without anyone touching this repository — a sibling repository
+  # gets renamed and the map silently lies. Re-check on a schedule so that is
+  # found by CI rather than by a reader.
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  links:
-    name: Documentation
+  community:
+    name: Community files
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      # The landing README is the front door: every repository is linked from it,
-      # so a stale link here is the first thing a new reader hits. Checking that
-      # the community files GitHub surfaces are actually present stops the repo
-      # from quietly losing its issue templates or security policy.
+
+      # These are the files GitHub surfaces in the community profile and in the
+      # contribute/report flows. Losing one is invisible until a contributor
+      # goes looking for it and concludes the project does not have one.
       - name: Required community files are present
         run: |
-          for f in README.md LICENSE SECURITY.md CONTRIBUTING.md CODE_OF_CONDUCT.md \
-                   profile/README.md .github/ISSUE_TEMPLATE/bug_report.yml \
-                   .github/ISSUE_TEMPLATE/feature_request.yml; do
-            [ -f "$f" ] || { echo "::error::missing $f"; exit 1; }
-          done
-          echo "all community files present"
-      # profile/ is a published copy, not a second source of truth. Checking
-      # only README.md let ARCHITECTURE.md drift unnoticed, so check every file
-      # the sync script writes, and name the fix in the failure message.
-      - name: Published profile matches the repository root
-        run: |
           status=0
-          for f in README.md ARCHITECTURE.md; do
-            diff -q "$f" "profile/$f" >/dev/null 2>&1 || {
-              echo "::error file=profile/$f::profile/$f has drifted from $f — run scripts/sync-profile.sh and commit the result"
-              status=1
-            }
+          for f in README.md LICENSE SECURITY.md CONTRIBUTING.md CODE_OF_CONDUCT.md \
+                   GOVERNANCE.md SUPPORT.md ROADMAP.md CHANGELOG.md CITATION.cff \
+                   profile/README.md profile/ARCHITECTURE.md \
+                   .github/pull_request_template.md \
+                   .github/ISSUE_TEMPLATE/bug_report.yml \
+                   .github/ISSUE_TEMPLATE/feature_request.yml \
+                   .github/ISSUE_TEMPLATE/documentation.yml; do
+            [ -f "$f" ] || { echo "::error::missing $f"; status=1; }
           done
           exit $status
+
+      # The licence is the one file whose *contents* matter to a machine:
+      # GitHub's detection reads the text, and this repository shipped a
+      # 116-byte link to gnu.org for its first seven commits while the README
+      # badge claimed AGPL-3.0. Assert the text is actually there.
+      - name: LICENSE contains the AGPL-3.0 text
+        run: |
+          grep -q "GNU AFFERO GENERAL PUBLIC LICENSE" LICENSE \
+            && grep -q "Version 3, 19 November 2007" LICENSE \
+            || { echo "::error file=LICENSE::LICENSE must contain the verbatim AGPL-3.0 text, not a link to it"; exit 1; }
+
+      # profile/ is generated, not a second source of truth. Regenerating and
+      # diffing against what was committed checks the content and the generator
+      # together — comparing the two files to each other could only ever check
+      # that someone had run a copy.
+      - name: Published profile is up to date
+        run: |
+          bash scripts/sync-profile.sh
+          git diff --exit-code -- profile/ || {
+            echo "::error::profile/ is stale — run scripts/sync-profile.sh and commit the result"
+            exit 1
+          }
+
+  links:
+    name: Links resolve
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # This repository is a map of roughly thirty sibling repositories. Almost
+      # everything it asserts is a link, so an unresolvable link is not a typo
+      # here — it is the document being wrong about the thing it exists to
+      # describe. Two of these were already dead before this check existed.
+      - name: Check every link
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress
+            --include-verbatim
+            --accept 200,206,429
+            --max-retries 3
+            --exclude-mail
+            .
+          fail: true
+        env:
+          # Authenticated requests to github.com so the run is not rate-limited
+          # into a false failure.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

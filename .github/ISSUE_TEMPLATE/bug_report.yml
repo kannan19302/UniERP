@@ -47,8 +47,29 @@ body:
   - type: input
     id: version
     attributes:
-      label: Release train / version
-      placeholder: "2026.08.0"
+      label: Commit
+      description: >-
+        There are no tagged releases yet, so the commit SHA you are running is
+        what identifies your build. `git rev-parse --short HEAD`.
+      placeholder: "a1b2c3d"
+    validations: { required: true }
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: >-
+        Say whether you are running the ERPSys monorepo or an extracted
+        repository. An extracted repository failing `npm install` with
+        `EUNSUPPORTEDPROTOCOL` is a known state of the migration, not a bug —
+        see ROADMAP.md.
+      placeholder: |
+        Running: ERPSys monorepo
+        OS:      Ubuntu 24.04
+        Node:    20.11.0
+        pnpm:    9.1.0
+        Docker:  26.1.0
+      render: text
+    validations: { required: true }
   - type: checkboxes
     id: tenancy
     attributes:
