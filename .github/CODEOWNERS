@@ -1,2 +1,7 @@
-# UniERP platform — the public landing repository
-* @unierp/platform-team
+# UniERP platform — the public landing repository.
+#
+# This was previously @unierp/platform-team. Teams only exist inside GitHub
+# organisations, and this repository lives under a personal account, so that
+# entry matched nobody and no review was ever requested. An owner that does not
+# resolve fails silently, which is the worst way for a review gate to fail.
+* @kannan19302

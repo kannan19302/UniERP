@@ -20,7 +20,7 @@
 | **Deploying it** | [`unierp-infra`](https://github.com/kannan19302/unierp-infra) — compose, Kubernetes, runbooks |
 | **Building on it** | [`unierp-extension-api`](https://github.com/kannan19302/unierp-extension-api) — the public contract |
 | **Contributing** | [Repository map](#repository-map), then that repo's `CONTRIBUTING.md` |
-| **Understanding the design** | [`PLATFORM_ARCHITECTURE.md`](https://github.com/kannan19302/unierp-workspace) |
+| **Understanding the design** | [`ARCHITECTURE.md`](ARCHITECTURE.md) here, then [`PLATFORM_ARCHITECTURE.md`](https://github.com/kannan19302/ERPSys/blob/main/docs/PLATFORM_ARCHITECTURE.md) for the full specification |
 
 ## What makes it different
 
@@ -113,10 +113,12 @@ database service. Not "shouldn't": cannot.
 The layered repositories above are the **architecture**. The **build** is still
 [`ERPSys`](https://github.com/kannan19302/ERPSys), the development monorepo the
 polyrepo was extracted from, and that is deliberate rather than unfinished:
-`PLATFORM_ARCHITECTURE.md` § 14 rule 4 keeps the monorepo buildable at every
-extraction tag until each consumer has switched to a published artifact. The
-extracted L3/L4 repositories still declare `@unerp/*` as `workspace:*`, so they
-cannot yet install standalone — see § 14.1 for what unblocks that.
+[`PLATFORM_ARCHITECTURE.md`](https://github.com/kannan19302/ERPSys/blob/main/docs/PLATFORM_ARCHITECTURE.md)
+§ 14 rule 4 keeps the monorepo buildable at every extraction tag until each
+consumer has switched to a published artifact. The extracted L3/L4 repositories
+still declare `@unerp/*` as `workspace:*`, so they cannot yet install
+standalone — see § 14.1 for what unblocks that, and [`ROADMAP.md`](ROADMAP.md)
+for where that migration currently stands.
 
 ```bash
 git clone https://github.com/kannan19302/ERPSys

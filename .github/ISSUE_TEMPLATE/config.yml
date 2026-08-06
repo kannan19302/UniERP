@@ -1,8 +1,14 @@
 blank_issues_enabled: false
 contact_links:
   - name: Security vulnerability
-    url: https://github.com/unierp/unierp-platform/security/policy
-    about: Report privately. Never open a public issue for a tenant-isolation or auth flaw.
+    url: https://github.com/kannan19302/UniERP/security/advisories/new
+    about: Report privately. Never open a public issue for a tenant-isolation, control-plane or auth flaw.
+  - name: Question, or help running it
+    url: https://github.com/kannan19302/UniERP/blob/main/SUPPORT.md
+    about: Where to ask, what to include, and what response you can expect.
   - name: Deployment and operations
-    url: https://github.com/unierp/unierp-infra
-    about: Compose, Kubernetes, runbooks.
+    url: https://github.com/kannan19302/unierp-infra
+    about: Compose, Kubernetes, ingress, runbooks. Open infrastructure issues there.
+  - name: Bug in a specific repository
+    url: https://github.com/kannan19302/UniERP#repository-map
+    about: UniERP is a polyrepo. Report API, web or data bugs in the repo that owns the code.
