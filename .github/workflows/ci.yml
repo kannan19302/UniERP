@@ -23,7 +23,7 @@ jobs:
     name: Community files
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       # These are the files GitHub surfaces in the community profile and in the
       # contribute/report flows. Losing one is invisible until a contributor
@@ -68,7 +68,7 @@ jobs:
     name: Links resolve
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       # This repository is a map of roughly thirty sibling repositories. Almost
       # everything it asserts is a link, so an unresolvable link is not a typo
