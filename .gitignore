@@ -1,1 +1,1 @@
-node_modules/
+node_modules/\ndist/\n.next/\n.turbo/\ncoverage/\nstorybook-static/\n*.tsbuildinfo\n*.log\n.DS_Store\n.env\n.env.local\n
