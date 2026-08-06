@@ -176,4 +176,15 @@ PLANE 4  developer       Studio, workflow/form/report builders, extension runtim
 
 ## Licence
 
-AGPL-3.0. Self-hostable in full, with no proprietary runtime dependency.
+Copyright (C) 2026 UniERP contributors.
+
+[GNU Affero General Public License v3.0](LICENSE). Self-hostable in full, with
+no proprietary runtime dependency — there is no open-core edition holding back
+tenant isolation, the sandbox or the audit trail.
+
+The Affero clause is the part worth reading before you build on it: if you run a
+modified UniERP as a network service, you owe your users the modified source.
+Running it unmodified, or modifying it privately without offering it as a
+service, carries no such obligation. Extensions that only compile against
+[`unierp-extension-api`](https://github.com/kannan19302/unierp-extension-api)
+are separate works and are yours to licence as you choose.
