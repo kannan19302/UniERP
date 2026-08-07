@@ -10,7 +10,7 @@ one governing set for the whole platform and it lives in the **`unierp-workspace
 
 - **[`AGENTS.md`](https://github.com/kannan19302/unierp-workspace/blob/main/AGENTS.md)** — the operating contract for every coding agent, whichever vendor
 - `docs/ai/` — the ten governance documents (product, technical, flow, design, schema, standards)
-- `docs/programme/` — the 308-phase development plan
+- `docs/programme/` — the 309-phase development plan
 
 ## Do not read the plan. Run start.
 
@@ -21,7 +21,7 @@ node scripts/start.mjs        # picks the next phase, CLAIMS it, prints the work
 node scripts/start.mjs --who  # what other agents are holding right now
 ```
 
-The plan is 308 phases across 20 documents. An agent that reads it partially produces work that
+The plan is 309 phases across 20 documents. An agent that reads it partially produces work that
 contradicts a phase it never opened, which is worse than not reading it. `start.mjs` extracts
 exactly one phase — and claims it with a pushed commit, so two agents never take the same work.
 
