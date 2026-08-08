@@ -19,7 +19,7 @@ Honest summary, because the repository map can read as more finished than it is:
   development monorepo the polyrepo was extracted from. `pnpm dev` and
   `pnpm smoke` work there.
 - The extracted L3/L4 repositories are faithful copies, **not yet standalone
-  projects**. They still declare `@unerp/*` as `workspace:*`, so `npm install`
+  projects**. They still declare `@kannan19302/*` as `workspace:*`, so `npm install`
   in a clean clone fails with `EUNSUPPORTEDPROTOCOL`.
 - There are **no tagged releases and no published container images** yet.
 - Every active repository in the family is **AGPL-3.0**, including the `ERPSys`
@@ -31,22 +31,22 @@ against it — not when a directory exists and a tag is written.
 
 ## Now — the one thing that blocks the rest
 
-**Publish `@unerp/*` to a registry CI can reach.**
+**Publish `@kannan19302/*` to a registry CI can reach.**
 
 The self-hosted Verdaccio answers on `localhost` only. That is why the first
 cutover was reverted: every `pnpm install --frozen-lockfile` on a runner
-resolved `@unerp` against the runner's own localhost.
+resolved `@kannan19302` against the runner's own localhost.
 
 **Decided: the public npm registry.** This paragraph previously said GitHub
 Packages was "the obvious candidate, since the OIDC-federated publish tokens
 already exist there." That was wrong, and not marginally — **GitHub Packages
 cannot host this scope at all.** It requires the npm scope to equal the account
 or organisation that owns the repository; these repositories are owned by the
-user `kannan19302` while the packages are scoped `@unerp`. No `unerp`
+user `kannan19302` while the packages are scoped `@kannan19302`. No `unerp`
 organisation exists, and the `unierp` one that does still would not match.
 
 The public registry is also the better answer on its merits, not merely the
-available one: a self-hoster can `npm install @unerp/kernel` with no
+available one: a self-hoster can `npm install @kannan19302/kernel` with no
 authentication, which is what a claim to be self-hostable in full under
 AGPL-3.0 actually requires. Publishing uses npm trusted publishing, so there is
 no long-lived token to leak — which matters here, because fourteen were

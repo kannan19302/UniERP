@@ -127,7 +127,7 @@ polyrepo was extracted from, and that is deliberate rather than unfinished:
 [`PLATFORM_ARCHITECTURE.md`](https://github.com/kannan19302/ERPSys/blob/main/docs/PLATFORM_ARCHITECTURE.md)
 § 14 rule 4 keeps the monorepo buildable at every extraction tag until each
 consumer has switched to a published artifact. The extracted L3/L4 repositories
-still declare `@unerp/*` as `workspace:*`, so they cannot yet install
+still declare `@kannan19302/*` as `workspace:*`, so they cannot yet install
 standalone — see § 14.1 for what unblocks that, and [`ROADMAP.md`](ROADMAP.md)
 for where that migration currently stands.
 

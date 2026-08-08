@@ -2,9 +2,10 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches: [ "main" ]
   pull_request:
+    branches: [ "main" ]
 
 jobs:
-  layer-gate:
-    uses: kannan19302/unierp-workspace/.github/workflows/layer-gate.yml@main
+  ci:
+    uses: kannan19302/unierp-workspace/.github/workflows/reusable-ci.yml@main

@@ -46,7 +46,7 @@ const LAYERS = {
 };
 
 function pkgToRepo(pkgName) {
-  if (pkgName.startsWith('@unerp/')) {
+  if (pkgName.startsWith('@kannan19302/')) {
     return 'unierp-' + pkgName.slice(7);
   }
   return pkgName;
@@ -77,7 +77,7 @@ const deps = {
 const violations = [];
 
 for (const depName of Object.keys(deps)) {
-  if (!depName.startsWith('@unerp/')) continue;
+  if (!depName.startsWith('@kannan19302/')) continue;
   const targetRepo = pkgToRepo(depName);
   const targetLayer = LAYERS[targetRepo];
 
@@ -94,7 +94,7 @@ for (const depName of Object.keys(deps)) {
 }
 
 if (violations.length === 0) {
-  console.log(`  ✅ Layer rule verified for ${repoName} (L${currentLayer}): all @unerp/* dependencies are strictly lower-layer.`);
+  console.log(`  ✅ Layer rule verified for ${repoName} (L${currentLayer}): all @kannan19302/* dependencies are strictly lower-layer.`);
   process.exit(0);
 }
 
