@@ -1,0 +1,86 @@
+# Models in prisma/schema/core-part-7.prisma
+
+Generated structural evidence.
+
+| Model | tenantId | deletedAt | Decimal | Float | indexes/uniques | Review |
+| --- | --- | --- | ---: | ---: | ---: | --- |
+| `CapaAction` | yes | no | 0 | 0 | 2 | tenant signal |
+| `CalibrationRecord` | yes | no | 0 | 0 | 3 | tenant signal |
+| `DeviationRecord` | yes | no | 0 | 0 | 3 | tenant signal |
+| `SopDocument` | yes | no | 0 | 0 | 3 | tenant signal |
+| `SopRevision` | yes | no | 0 | 0 | 2 | tenant signal |
+| `BinTransferRequest` | yes | no | 1 | 0 | 3 | tenant signal |
+| `GoodsReceiptNote` | yes | no | 1 | 0 | 4 | tenant signal |
+| `GrnLineItem` | yes | no | 4 | 0 | 2 | tenant signal |
+| `PackingSession` | yes | no | 1 | 0 | 3 | tenant signal |
+| `PackingCarton` | yes | no | 4 | 0 | 2 | tenant signal |
+| `LotMovement` | yes | no | 1 | 0 | 3 | tenant signal |
+| `PickSuggestion` | yes | no | 2 | 0 | 3 | tenant signal |
+| `ExpiryAlert` | yes | no | 1 | 0 | 3 | tenant signal |
+| `QuarantineOrder` | yes | no | 1 | 0 | 3 | tenant signal |
+| `DemandForecast` | yes | no | 5 | 0 | 3 | tenant signal |
+| `ReorderPoint` | yes | no | 5 | 0 | 3 | tenant signal |
+| `SafetyStockConfig` | yes | no | 5 | 0 | 2 | tenant signal |
+| `ReplenishmentOrder` | yes | no | 4 | 0 | 4 | tenant signal |
+| `LandedCostVoucher` | yes | no | 1 | 0 | 3 | tenant signal |
+| `LandedCostChargeLine` | yes | no | 1 | 0 | 2 | tenant signal |
+| `LandedCostReceiptLink` | yes | no | 4 | 0 | 3 | tenant signal |
+| `LandedCostAllocation` | yes | no | 3 | 0 | 3 | tenant signal |
+| `CostAdjustment` | yes | no | 4 | 0 | 3 | tenant signal |
+| `TransferOrder` | yes | no | 1 | 0 | 5 | tenant signal |
+| `TransferOrderLine` | yes | no | 4 | 0 | 3 | tenant signal |
+| `TransferOrderReceipt` | yes | no | 0 | 0 | 3 | tenant signal |
+| `TransferOrderReceiptLine` | yes | no | 3 | 0 | 2 | tenant signal |
+| `DockDoor` | yes | no | 0 | 0 | 3 | tenant signal |
+| `YardAppointment` | yes | no | 0 | 0 | 5 | tenant signal |
+| `GatePass` | yes | no | 1 | 0 | 2 | tenant signal |
+| `YardMove` | yes | no | 0 | 0 | 3 | tenant signal |
+| `YardInventory` | yes | no | 1 | 0 | 3 | tenant signal |
+| `CountSheet` | yes | no | 0 | 0 | 3 | tenant signal |
+| `CountSheetItem` | yes | no | 7 | 0 | 2 | tenant signal |
+| `HazmatClassification` | yes | no | 4 | 0 | 3 | tenant signal |
+| `SafetyDataSheet` | yes | no | 0 | 0 | 4 | tenant signal |
+| `HazmatStorageRule` | yes | no | 0 | 0 | 2 | tenant signal |
+| `HazmatManifest` | yes | no | 1 | 0 | 3 | tenant signal |
+| `HazmatManifestLine` | yes | no | 3 | 0 | 2 | tenant signal |
+| `HazmatIncident` | yes | no | 0 | 0 | 3 | tenant signal |
+| `ApprovedSupplier` | yes | no | 4 | 0 | 5 | tenant signal |
+| `SupplierPriceTier` | yes | no | 3 | 0 | 2 | tenant signal |
+| `AslChangeLog` | yes | no | 0 | 0 | 2 | tenant signal |
+| `VendorItemAttribute` | yes | no | 0 | 0 | 3 | tenant signal |
+| `AslComplianceRule` | yes | no | 0 | 0 | 2 | tenant signal |
+| `PalletType` | yes | no | 2 | 0 | 2 | tenant signal |
+| `ContainerType` | yes | no | 3 | 0 | 2 | tenant signal |
+| `LoadPlan` | yes | no | 3 | 0 | 3 | tenant signal |
+| `LoadPlanPallet` | yes | no | 2 | 0 | 2 | tenant signal |
+| `LoadPlanItem` | yes | no | 3 | 0 | 2 | tenant signal |
+| `PackingPlan` | yes | no | 1 | 0 | 3 | tenant signal |
+| `LoadCarton` | yes | no | 1 | 0 | 2 | tenant signal |
+| `LoadCartonItem` | yes | no | 1 | 0 | 2 | tenant signal |
+| `CatchWeightConfig` | yes | no | 4 | 0 | 2 | tenant signal |
+| `CatchWeightReading` | yes | no | 4 | 0 | 3 | tenant signal |
+| `CatchWeightTare` | yes | no | 1 | 0 | 2 | tenant signal |
+| `RecallAffectedStock` | yes | no | 3 | 0 | 2 | tenant signal |
+| `RecallCustomerNotice` | yes | no | 2 | 0 | 2 | tenant signal |
+| `RecallDisposalRecord` | yes | no | 1 | 0 | 2 | tenant signal |
+| `PackagingSpec` | yes | no | 6 | 0 | 3 | tenant signal |
+| `Gs1ApplicationIdentifier` | yes | no | 0 | 0 | 2 | tenant signal |
+| `LabelTemplate` | yes | no | 2 | 0 | 2 | tenant signal |
+| `LabelAssignment` | yes | no | 0 | 0 | 2 | tenant signal |
+| `SsccRecord` | yes | no | 0 | 0 | 2 | tenant signal |
+| `ColdChainRequirement` | yes | no | 4 | 0 | 2 | tenant signal |
+| `TemperatureExcursion` | yes | no | 2 | 0 | 3 | tenant signal |
+| `VelocityClassificationRun` | yes | no | 0 | 0 | 3 | tenant signal |
+| `VelocityClassificationItem` | yes | no | 7 | 0 | 6 | tenant signal |
+| `VelocitySlottingPolicy` | yes | no | 1 | 0 | 2 | tenant signal |
+| `CustomerRma` | yes | no | 0 | 0 | 4 | tenant signal |
+| `CustomerRmaLine` | yes | no | 3 | 0 | 3 | tenant signal |
+| `ReturnCredit` | yes | no | 1 | 0 | 4 | tenant signal |
+| `ReturnRestock` | yes | no | 1 | 0 | 3 | tenant signal |
+| `MinMaxLevel` | yes | no | 3 | 0 | 4 | tenant signal |
+| `ReplenSuggestion` | yes | no | 2 | 0 | 5 | tenant signal |
+| `ReplenRunLog` | yes | no | 0 | 0 | 2 | tenant signal |
+| `CargoDamageReport` | yes | no | 2 | 0 | 4 | tenant signal |
+| `FreightClaim` | yes | no | 2 | 0 | 5 | tenant signal |
+| `FreightClaimEvent` | yes | no | 0 | 0 | 2 | tenant signal |
+

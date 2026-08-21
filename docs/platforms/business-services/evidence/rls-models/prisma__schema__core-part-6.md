@@ -1,0 +1,111 @@
+# Tenant model to RLS migration linkage: prisma/schema/core-part-6.prisma
+
+Lexical linkage compares effective Prisma table names with tables named by RLS ENABLE/FORCE/CREATE POLICY migration statements. A match is structural evidence, not a runtime policy test.
+
+| Model | Effective table | tenantId | Named by RLS migration | Status |
+| --- | --- | --- | --- | --- |
+| `FixedAssetAuditLog` | `fixed_asset_audit_logs` | yes | no | RLS LINK GAP |
+| `DuplicateRule` | `crm_duplicate_rules` | yes | no | RLS LINK GAP |
+| `PipelineStage` | `crm_pipeline_stages` | yes | no | RLS LINK GAP |
+| `Segment` | `crm_segments` | yes | no | RLS LINK GAP |
+| `SegmentMember` | `crm_segment_members` | no | yes | global/ownership review |
+| `SlaPolicy` | `crm_sla_policies` | yes | no | RLS LINK GAP |
+| `SlaBreach` | `crm_sla_breaches` | yes | no | RLS LINK GAP |
+| `ContractLineItem` | `crm_contract_line_items` | yes | no | RLS LINK GAP |
+| `BankConnection` | `bank_connections` | yes | no | RLS LINK GAP |
+| `BankTransaction` | `bank_transactions` | yes | no | RLS LINK GAP |
+| `ForecastWeek` | `forecast_weeks` | yes | no | RLS LINK GAP |
+| `InterCompanyTransaction` | `intercompany_transactions` | yes | no | RLS LINK GAP |
+| `FxRevaluationRun` | `fx_revaluation_runs` | yes | no | RLS LINK GAP |
+| `FxRevaluationDetail` | `fx_revaluation_details` | no | no | global/ownership review |
+| `APMatchRule` | `ap_match_rules` | yes | no | RLS LINK GAP |
+| `APMatchException` | `ap_match_exceptions` | yes | no | RLS LINK GAP |
+| `CloseTask` | `close_tasks` | yes | no | RLS LINK GAP |
+| `VarianceFlag` | `variance_flags` | yes | no | RLS LINK GAP |
+| `BudgetScenario` | `budget_scenarios` | yes | no | RLS LINK GAP |
+| `BudgetScenarioLine` | `budget_scenario_lines` | yes | no | RLS LINK GAP |
+| `APInvoiceCapture` | `ap_invoice_captures` | yes | no | RLS LINK GAP |
+| `APInvoiceCaptureLine` | `ap_invoice_capture_lines` | yes | no | RLS LINK GAP |
+| `AllocationRule` | `allocation_rules` | yes | no | RLS LINK GAP |
+| `AllocationRun` | `allocation_runs` | yes | no | RLS LINK GAP |
+| `EliminationRule` | `elimination_rules` | yes | no | RLS LINK GAP |
+| `EliminationRun` | `elimination_runs` | yes | no | RLS LINK GAP |
+| `EliminationRunDetail` | `elimination_run_details` | no | no | global/ownership review |
+| `BudgetPeriodAmount` | `budget_period_amounts` | yes | no | RLS LINK GAP |
+| `BudgetControlConfig` | `budget_control_configs` | yes | no | RLS LINK GAP |
+| `BudgetReallocation` | `budget_reallocations` | yes | no | RLS LINK GAP |
+| `BudgetReallocationLine` | `budget_reallocation_lines` | yes | no | RLS LINK GAP |
+| `TaxJurisdiction` | `tax_jurisdictions` | yes | no | RLS LINK GAP |
+| `TaxExemptionCertificate` | `tax_exemption_certificates` | yes | no | RLS LINK GAP |
+| `TaxReconciliation` | `tax_reconciliations` | yes | no | RLS LINK GAP |
+| `WithholdingCertificate` | `withholding_certificates` | yes | no | RLS LINK GAP |
+| `AmendedTaxFiling` | `amended_tax_filings` | yes | no | RLS LINK GAP |
+| `TreasuryPosition` | `treasury_positions` | yes | no | RLS LINK GAP |
+| `HedgeInstrument` | `hedge_instruments` | yes | no | RLS LINK GAP |
+| `DebtFacility` | `debt_facilities` | yes | no | RLS LINK GAP |
+| `VendorStatement` | `vendor_statements` | yes | no | RLS LINK GAP |
+| `APDuplicateFlag` | `ap_duplicate_flags` | yes | no | RLS LINK GAP |
+| `APApprovalPolicy` | `ap_approval_policies` | yes | no | RLS LINK GAP |
+| `GrniRecord` | `grni_records` | yes | no | RLS LINK GAP |
+| `ARPromiseToPay` | `ar_promises_to_pay` | yes | no | RLS LINK GAP |
+| `ARDispute` | `ar_disputes` | yes | no | RLS LINK GAP |
+| `BadDebtProvision` | `bad_debt_provisions` | yes | no | RLS LINK GAP |
+| `AssetInsurance` | `asset_insurances` | yes | no | RLS LINK GAP |
+| `AssetImpairment` | `asset_impairments` | yes | no | RLS LINK GAP |
+| `CapitalProject` | `capital_projects` | yes | no | RLS LINK GAP |
+| `CapitalProjectCost` | `capital_project_costs` | yes | no | RLS LINK GAP |
+| `RollingForecast` | `rolling_forecasts` | yes | no | RLS LINK GAP |
+| `HeadcountPlan` | `headcount_plans` | yes | no | RLS LINK GAP |
+| `BudgetComment` | `budget_comments` | yes | no | RLS LINK GAP |
+| `ManagementReport` | `management_reports` | yes | no | RLS LINK GAP |
+| `BillingRule` | `billing_rules` | yes | no | RLS LINK GAP |
+| `BillingMilestone` | `billing_milestones` | yes | no | RLS LINK GAP |
+| `ContractModification` | `contract_modifications` | yes | no | RLS LINK GAP |
+| `DeferredRevenueRollForward` | `deferred_revenue_roll_forwards` | yes | no | RLS LINK GAP |
+| `TieredPricingTable` | `tiered_pricing_tables` | yes | no | RLS LINK GAP |
+| `ControlTest` | `control_tests` | yes | no | RLS LINK GAP |
+| `SodConflict` | `sod_conflicts` | yes | no | RLS LINK GAP |
+| `AuditConfirmation` | `audit_confirmations` | yes | no | RLS LINK GAP |
+| `PeriodCertification` | `period_certifications` | yes | no | RLS LINK GAP |
+| `SodRuleDefinition` | `sod_rule_definitions` | yes | no | RLS LINK GAP |
+| `IntercompanyLoan` | `intercompany_loans` | yes | no | RLS LINK GAP |
+| `LoanDrawdown` | `loan_drawdowns` | yes | no | RLS LINK GAP |
+| `LoanRepayment` | `loan_repayments` | yes | no | RLS LINK GAP |
+| `AssetRevaluation` | `asset_revaluations` | yes | no | RLS LINK GAP |
+| `AssetDisposal` | `asset_disposals` | yes | no | RLS LINK GAP |
+| `CashPool` | `cash_pools` | yes | no | RLS LINK GAP |
+| `CashPoolRun` | `cash_pool_runs` | yes | no | RLS LINK GAP |
+| `VarianceAlertConfig` | `variance_alert_configs` | yes | no | RLS LINK GAP |
+| `ConsolidationRate` | `consolidation_rates` | yes | no | RLS LINK GAP |
+| `Vendor1099Profile` | `vendor_1099_profiles` | yes | no | RLS LINK GAP |
+| `Form1099` | `form_1099s` | yes | no | RLS LINK GAP |
+| `Form1099Batch` | `form_1099_batches` | yes | no | RLS LINK GAP |
+| `EconomicNexusThreshold` | `economic_nexus_thresholds` | yes | no | RLS LINK GAP |
+| `NexusMonitoringSnapshot` | `nexus_monitoring_snapshots` | yes | no | RLS LINK GAP |
+| `NexusRegistration` | `nexus_registrations` | yes | no | RLS LINK GAP |
+| `GamificationBadge` | `gamification_badges` | yes | no | RLS LINK GAP |
+| `GamificationBadgeAward` | `gamification_badge_awards` | yes | no | RLS LINK GAP |
+| `SalesStreak` | `sales_streaks` | yes | no | RLS LINK GAP |
+| `CommissionPlan` | `commission_plans` | yes | no | RLS LINK GAP |
+| `CommissionPlanTier` | `commission_plan_tiers` | yes | no | RLS LINK GAP |
+| `CommissionSpiff` | `commission_spiffs` | yes | no | RLS LINK GAP |
+| `CommissionPayout` | `commission_payouts` | yes | no | RLS LINK GAP |
+| `CommissionPayoutSpiffLine` | `commission_payout_spiff_lines` | yes | no | RLS LINK GAP |
+| `ReturnReasonCode` | `return_reason_codes` | yes | no | RLS LINK GAP |
+| `VendorRmaRequest` | `vendor_rma_requests` | yes | no | RLS LINK GAP |
+| `VendorReturnShipment` | `vendor_return_shipments` | yes | no | RLS LINK GAP |
+| `LaborStandard` | `labor_standards` | yes | no | RLS LINK GAP |
+| `WorkerTaskLog` | `worker_task_logs` | yes | no | RLS LINK GAP |
+| `SupplierScorecard` | `supplier_scorecards` | yes | no | RLS LINK GAP |
+| `SupplierNcr` | `supplier_ncrs` | yes | no | RLS LINK GAP |
+| `SupplierCarRequest` | `supplier_car_requests` | yes | no | RLS LINK GAP |
+| `BinReplenishmentRule` | `bin_replenishment_rules` | yes | no | RLS LINK GAP |
+| `ShippingCarrier` | `shipping_carriers` | yes | no | RLS LINK GAP |
+| `CarrierServiceLevel` | `carrier_service_levels` | yes | no | RLS LINK GAP |
+| `AdvanceShippingNotice` | `advance_shipping_notices` | yes | no | RLS LINK GAP |
+| `ASNLineItem` | `asn_line_items` | yes | no | RLS LINK GAP |
+| `InboundShipment` | `inbound_shipments` | yes | no | RLS LINK GAP |
+| `OutboundShipment` | `outbound_shipments` | yes | no | RLS LINK GAP |
+| `ShipmentTrackingEvent` | `shipment_tracking_events` | yes | no | RLS LINK GAP |
+| `CapaRecord` | `capa_records` | yes | no | RLS LINK GAP |
+

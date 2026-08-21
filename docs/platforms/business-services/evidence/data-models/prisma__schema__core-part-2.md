@@ -1,0 +1,111 @@
+# Models in prisma/schema/core-part-2.prisma
+
+Generated structural evidence.
+
+| Model | tenantId | deletedAt | Decimal | Float | indexes/uniques | Review |
+| --- | --- | --- | ---: | ---: | ---: | --- |
+| `TicketComment` | yes | no | 0 | 0 | 1 | tenant signal |
+| `CannedResponse` | yes | no | 0 | 0 | 1 | tenant signal |
+| `TicketSla` | yes | no | 0 | 0 | 1 | tenant signal |
+| `CustomerSatisfaction` | yes | no | 0 | 0 | 1 | tenant signal |
+| `OmnichannelConversation` | yes | no | 0 | 0 | 4 | tenant signal |
+| `ConversationMessage` | yes | no | 0 | 0 | 1 | tenant signal |
+| `ChannelIntegration` | yes | no | 0 | 0 | 2 | tenant signal |
+| `BreakoutRoom` | yes | no | 0 | 0 | 1 | tenant signal |
+| `MeetingAnalytics` | yes | no | 0 | 1 | 2 | tenant signal; Float review |
+| `VoipCall` | yes | no | 0 | 0 | 4 | tenant signal |
+| `VoipCallAnalytics` | yes | no | 0 | 1 | 1 | tenant signal; Float review |
+| `Voicemail` | yes | no | 0 | 0 | 2 | tenant signal |
+| `IvrMenu` | yes | no | 0 | 0 | 1 | tenant signal |
+| `IvrOption` | yes | no | 0 | 0 | 2 | tenant signal |
+| `SavedSearch` | yes | no | 0 | 0 | 2 | tenant signal |
+| `SearchHistory` | yes | no | 0 | 0 | 1 | tenant signal |
+| `SynonymDictionary` | yes | no | 0 | 0 | 2 | tenant signal |
+| `CollabDocument` | yes | yes | 0 | 0 | 2 | tenant signal |
+| `CollabDocumentVersion` | yes | no | 0 | 0 | 2 | tenant signal |
+| `Whiteboard` | yes | no | 0 | 0 | 2 | tenant signal |
+| `WhiteboardElement` | yes | no | 0 | 0 | 1 | tenant signal |
+| `CommSurvey` | yes | no | 0 | 0 | 2 | tenant signal |
+| `CommSurveyQuestion` | yes | no | 0 | 0 | 1 | tenant signal |
+| `CommSurveyResponse` | yes | no | 0 | 0 | 1 | tenant signal |
+| `CommSurveyAnswer` | yes | no | 0 | 0 | 2 | tenant signal |
+| `CommSurveyTemplate` | yes | no | 0 | 0 | 1 | tenant signal |
+| `POSTerminal` | yes | no | 1 | 0 | 2 | tenant signal |
+| `POSRegister` | yes | no | 6 | 0 | 1 | tenant signal |
+| `POSShift` | yes | no | 4 | 0 | 1 | tenant signal |
+| `CashEntry` | yes | no | 1 | 0 | 1 | tenant signal |
+| `POSOrder` | yes | no | 9 | 0 | 5 | tenant signal |
+| `POSOrderItem` | yes | no | 7 | 0 | 2 | tenant signal |
+| `POSPayment` | yes | no | 1 | 0 | 2 | tenant signal |
+| `POSDiscount` | yes | no | 3 | 0 | 1 | tenant signal |
+| `POSCoupon` | yes | no | 0 | 0 | 2 | tenant signal |
+| `POSTaxProfile` | yes | no | 0 | 0 | 1 | tenant signal |
+| `POSQuickKey` | yes | no | 0 | 0 | 1 | tenant signal |
+| `POSLoyaltyProgram` | yes | no | 2 | 0 | 1 | tenant signal |
+| `POSLoyaltyMember` | yes | no | 1 | 0 | 3 | tenant signal |
+| `POSLoyaltyTransaction` | yes | no | 0 | 0 | 2 | tenant signal |
+| `POSGiftCard` | yes | no | 2 | 0 | 2 | tenant signal |
+| `POSGiftCardTransaction` | yes | no | 2 | 0 | 2 | tenant signal |
+| `POSStoreCredit` | yes | no | 1 | 0 | 2 | tenant signal |
+| `POSReturn` | yes | no | 1 | 0 | 3 | tenant signal |
+| `POSReturnItem` | yes | no | 3 | 0 | 2 | tenant signal |
+| `POSHeldOrder` | yes | no | 1 | 0 | 2 | tenant signal |
+| `POSPriceList` | yes | no | 0 | 0 | 1 | tenant signal |
+| `POSPriceListItem` | yes | no | 2 | 0 | 2 | tenant signal |
+| `POSPromotion` | yes | no | 0 | 0 | 1 | tenant signal |
+| `POSOpenTab` | yes | no | 1 | 0 | 2 | tenant signal |
+| `POSLayaway` | yes | no | 4 | 0 | 2 | tenant signal |
+| `POSLayawayPayment` | yes | no | 1 | 0 | 2 | tenant signal |
+| `SerialNumber` | yes | no | 0 | 0 | 4 | tenant signal |
+| `SerialNumberHistory` | yes | no | 0 | 0 | 2 | tenant signal |
+| `Batch` | yes | no | 3 | 0 | 5 | tenant signal |
+| `BinLocation` | yes | no | 1 | 0 | 3 | tenant signal |
+| `CycleCount` | yes | no | 1 | 0 | 2 | tenant signal |
+| `CycleCountItem` | yes | no | 5 | 0 | 3 | tenant signal |
+| `CycleCountSchedule` | yes | no | 0 | 0 | 2 | tenant signal |
+| `LicensePlate` | yes | no | 0 | 0 | 3 | tenant signal |
+| `LicensePlateItem` | yes | no | 1 | 0 | 3 | tenant signal |
+| `PutawayTask` | yes | no | 1 | 0 | 3 | tenant signal |
+| `BatchQuarantineLog` | yes | no | 0 | 0 | 2 | tenant signal |
+| `TransferApprovalRule` | yes | no | 1 | 0 | 1 | tenant signal |
+| `PickWave` | yes | no | 0 | 0 | 3 | tenant signal |
+| `PickWaveOrder` | yes | no | 0 | 0 | 3 | tenant signal |
+| `PickWaveItem` | yes | no | 2 | 0 | 2 | tenant signal |
+| `ConsignmentStock` | yes | no | 2 | 0 | 3 | tenant signal |
+| `ConsignmentConsumption` | yes | no | 2 | 0 | 2 | tenant signal |
+| `DropShipProvider` | yes | no | 0 | 0 | 2 | tenant signal |
+| `DropShipOrder` | yes | no | 2 | 0 | 2 | tenant signal |
+| `DropShipOrderItem` | yes | no | 4 | 0 | 2 | tenant signal |
+| `AvailableToPromise` | yes | no | 5 | 0 | 3 | tenant signal |
+| `AtpReservation` | yes | no | 1 | 0 | 2 | tenant signal |
+| `RfidTag` | yes | no | 0 | 0 | 2 | tenant signal |
+| `RfidReadEvent` | yes | no | 0 | 1 | 3 | tenant signal; Float review |
+| `Subinventory` | yes | no | 0 | 0 | 3 | tenant signal |
+| `CustomerConsignmentStock` | yes | no | 5 | 0 | 3 | tenant signal |
+| `CustomerConsignmentConsumption` | yes | no | 2 | 0 | 2 | tenant signal |
+| `DistributionPlanRun` | yes | no | 0 | 0 | 2 | tenant signal |
+| `DistributionPlan` | yes | no | 4 | 0 | 3 | tenant signal |
+| `EdiInventoryTransaction` | yes | no | 0 | 0 | 3 | tenant signal |
+| `DockAppointment` | yes | no | 0 | 0 | 3 | tenant signal |
+| `RecurringInvoiceTemplate` | yes | yes | 0 | 0 | 3 | tenant signal |
+| `GeneratedInvoice` | yes | no | 1 | 0 | 3 | tenant signal |
+| `CustomerStatement` | yes | yes | 4 | 0 | 2 | tenant signal |
+| `StatementTemplate` | yes | yes | 0 | 0 | 1 | tenant signal |
+| `Currency` | yes | no | 0 | 0 | 2 | tenant signal |
+| `VendorBill` | yes | yes | 5 | 0 | 4 | tenant signal |
+| `VendorBillLineItem` | yes | no | 6 | 0 | 2 | tenant signal |
+| `ExchangeRate` | yes | no | 1 | 0 | 2 | tenant signal |
+| `CurrencyRevaluation` | yes | no | 3 | 0 | 3 | tenant signal |
+| `EInvoice` | yes | no | 0 | 0 | 3 | tenant signal |
+| `CostCenter` | yes | no | 0 | 0 | 2 | tenant signal |
+| `Journal` | yes | no | 0 | 0 | 2 | tenant signal |
+| `JournalEntry` | yes | no | 2 | 0 | 3 | tenant signal |
+| `Budget` | yes | no | 1 | 0 | 1 | tenant signal |
+| `ForecastScenario` | yes | no | 2 | 0 | 1 | tenant signal |
+| `TaxRate` | yes | no | 1 | 0 | 2 | tenant signal |
+| `BankReconciliation` | yes | no | 1 | 0 | 1 | tenant signal |
+| `SalaryComponent` | yes | no | 1 | 0 | 2 | tenant signal |
+| `SalaryStructure` | yes | no | 1 | 0 | 2 | tenant signal |
+| `AttendanceRecord` | yes | no | 1 | 0 | 3 | tenant signal |
+| `AssetAssignment` | yes | no | 0 | 0 | 2 | tenant signal |
+

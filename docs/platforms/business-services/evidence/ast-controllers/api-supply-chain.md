@@ -1,0 +1,44 @@
+# AST controller summary: api/modules/supply-chain
+
+Generated with the TypeScript compiler AST. Permission/public/skip counts are method-level literal decorator signals; composed guards and global policy still require runtime resolution.
+
+| Controller file | Prefix | HTTP methods | Methods with Permissions | Public methods | Skip-tenant methods | Explicit return types | Typed params / total | Adjacent spec | DTO/type signals |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- | --- |
+| `controllers/advanced-analytics.controller.ts` | `"supply-chain/advanced-analytics"` | 7 | 7 | 0 | 0 | 0 | 12/12 | no | `AuthRequest`, `z.infer<typeof anomalySchema>`, `z.infer<typeof forecastSchema>`, `z.infer<typeof leadTimeSchema>` |
+| `controllers/analytics.controller.ts` | `"supply-chain/analytics"` | 5 | 5 | 0 | 0 | 0 | 5/5 | no | `AuthenticatedRequest` |
+| `controllers/carrier-contract.controller.ts` | `"supply-chain/carrier-contracts"` | 12 | 12 | 0 | 0 | 0 | 35/35 | no | `AuthRequest`, `z.infer<typeof createSchema>`, `z.infer<typeof rateCardSchema>`, `z.infer<typeof spotQuoteResponseSchema>`, `z.infer<typeof spotQuoteSchema>`, `z.infer<typeof updateSchema>` |
+| `controllers/cold-chain.controller.ts` | `"supply-chain/cold-chain"` | 25 | 25 | 0 | 0 | 0 | 73/73 | no | `AuthRequest`, `z.infer<typeof batchLogTemperatureSchema>`, `z.infer<typeof createRequirementSchema>`, `z.infer<typeof createShipmentSchema>`, `z.infer<typeof logTemperatureSchema>`, `z.infer<typeof resolveExcursionSchema>`, `z.infer<typeof updateRequirementSchema>`, `z.infer<typeof updateShipmentSchema>` |
+| `controllers/container-tracking.controller.ts` | `"supply-chain/containers"` | 8 | 8 | 0 | 0 | 0 | 21/21 | no | `AuthRequest`, `z.infer<typeof createSchema>`, `z.infer<typeof eventSchema>`, `z.infer<typeof linkShipmentSchema>`, `z.infer<typeof updateSchema>` |
+| `controllers/control-tower-advanced.controller.ts` | `"supply-chain"` | 12 | 12 | 0 | 0 | 0 | 31/31 | no | `AuthRequest` |
+| `controllers/cross-dock.controller.ts` | `"supply-chain/cross-dock"` | 2 | 2 | 0 | 0 | 0 | 4/4 | no | `AuthenticatedRequest`, `CreateCrossDockStationDto` |
+| `controllers/cross-dock.controller.ts` | `"supply-chain/cross-dock"` | 4 | 4 | 0 | 0 | 0 | 12/12 | no | `AuthenticatedRequest`, `CreateCrossDockOrderDto`, `UpdateCrossDockOrderStatusDto` |
+| `controllers/customs-document.controller.ts` | `"supply-chain/customs"` | 7 | 7 | 0 | 0 | 0 | 21/21 | no | `AuthRequest`, `z.infer<typeof createSchema>`, `z.infer<typeof updateSchema>` |
+| `controllers/demand-planning.controller.ts` | `"supply-chain"` | 10 | 10 | 0 | 0 | 0 | 22/22 | no | `AuthRequest`, `z.infer<typeof createDemandPlanSchema>`, `z.infer<typeof runForecastSchema>`, `z.infer<typeof updateDemandPlanSchema>` |
+| `controllers/digital-twin.controller.ts` | `"supply-chain/digital-twin"` | 9 | 9 | 0 | 0 | 0 | 25/25 | no | `AuthRequest`, `z.infer<typeof addNodeSchema>`, `z.infer<typeof compareSchema>`, `z.infer<typeof createTwinSchema>`, `z.infer<typeof simulateSchema>` |
+| `controllers/fleet-management.controller.ts` | `"supply-chain/fleet"` | 15 | 15 | 0 | 0 | 0 | 46/46 | no | `AuthRequest`, `z.infer<typeof completeMaintSchema>`, `z.infer<typeof fuelSchema>`, `z.infer<typeof maintenanceSchema>`, `z.infer<typeof registerSchema>`, `z.infer<typeof tripSchema>`, `z.infer<typeof updateVehicleSchema>` |
+| `controllers/global-trade.controller.ts` | `"supply-chain"` | 15 | 15 | 0 | 0 | 0 | 39/39 | no | `AuthRequest`, `z.infer<typeof createExportDeclarationSchema>`, `z.infer<typeof createImportDeclarationSchema>` |
+| `controllers/lane-rate.controller.ts` | `"supply-chain/lane-rates"` | 7 | 7 | 0 | 0 | 0 | 22/22 | no | `AuthRequest`, `z.infer<typeof createSchema>`, `z.infer<typeof updateSchema>` |
+| `controllers/logistics-execution.controller.ts` | `"supply-chain"` | 15 | 15 | 0 | 0 | 0 | 44/44 | no | `AuthRequest`, `z.infer<typeof createAppointmentSchema>`, `z.infer<typeof createLoadBuildSchema>`, `z.infer<typeof createPodSchema>` |
+| `controllers/meio.controller.ts` | `"supply-chain/meio"` | 8 | 8 | 0 | 0 | 0 | 19/19 | no | `AuthRequest`, `z.infer<typeof buildModelSchema>`, `z.infer<typeof simulateSchema>` |
+| `controllers/route-optimization.controller.ts` | `"supply-chain/routes"` | 2 | 2 | 0 | 0 | 0 | 2/2 | no | `OptimizeRouteDto`, `RouteEstimateDto` |
+| `controllers/scm-control-tower.controller.ts` | `"supply-chain"` | 3 | 3 | 0 | 0 | 0 | 3/3 | no | `AuthRequest` |
+| `controllers/scm-deep-expansion.controller.ts` | `"supply-chain/deep-expansion"` | 28 | 28 | 0 | 0 | 0 | 60/60 | no | — |
+| `controllers/supplier-assessment.controller.ts` | `"supply-chain/supplier-assessments"` | 6 | 6 | 0 | 0 | 0 | 19/19 | no | `AuthRequest`, `z.infer<typeof completeSchema>`, `z.infer<typeof createSchema>`, `z.infer<typeof updateSchema>` |
+| `controllers/supplier-certification.controller.ts` | `"supply-chain/supplier-certifications"` | 7 | 7 | 0 | 0 | 0 | 20/20 | no | `AuthRequest`, `z.infer<typeof createSchema>`, `z.infer<typeof renewSchema>`, `z.infer<typeof updateSchema>` |
+| `controllers/supplier-contract.controller.ts` | `"supply-chain/contracts"` | 10 | 10 | 0 | 0 | 0 | 26/26 | no | `AuthRequest`, `z.infer<typeof createSchema>`, `z.infer<typeof lineItemSchema>`, `z.infer<typeof renewSchema>`, `z.infer<typeof updateSchema>` |
+| `controllers/supplier-performance.controller.ts` | `"supply-chain/supplier-performance"` | 7 | 7 | 0 | 0 | 0 | 17/17 | no | `AuthRequest`, `z.infer<typeof calculateScorecardSchema>`, `z.infer<typeof createKpiSchema>`, `z.infer<typeof updateKpiSchema>` |
+| `controllers/supplier-portal.controller.ts` | `"supply-chain/supplier-portal"` | 10 | 10 | 0 | 0 | 0 | 29/29 | no | `AuthRequest`, `z.infer<typeof documentSchema>`, `z.infer<typeof inviteSchema>`, `z.infer<typeof poCollabResponseSchema>`, `z.infer<typeof poCollabSchema>` |
+| `controllers/supplier-quality.controller.ts` | `"supply-chain/supplier-quality"` | 6 | 6 | 0 | 0 | 0 | 20/20 | no | `AuthRequest`, `z.infer<typeof createSchema>`, `z.infer<typeof raiseCarSchema>`, `z.infer<typeof updateSchema>` |
+| `controllers/supplier-risk.controller.ts` | `"supply-chain"` | 13 | 13 | 0 | 0 | 0 | 31/31 | no | `AuthRequest` |
+| `controllers/supply-chain-budget.controller.ts` | `"supply-chain/budgets"` | 9 | 9 | 0 | 0 | 0 | 24/24 | no | `AuthRequest`, `z.infer<typeof createSchema>`, `z.infer<typeof lineItemSchema>`, `z.infer<typeof updateLineItemSchema>`, `z.infer<typeof updateSchema>` |
+| `controllers/supply-chain-expansion.controller.ts` | `"supply-chain"` | 10 | 10 | 0 | 0 | 0 | 26/26 | no | `AuthRequest`, `z.infer<typeof addFreightRateSchema>`, `z.infer<typeof addTrackingEventSchema>`, `z.infer<typeof assignCarrierSchema>`, `z.infer<typeof createFreightOrderSchema>`, `z.infer<typeof updateFreightStatusSchema>` |
+| `controllers/supply-chain-expansion.controller.ts` | `"supply-chain"` | 10 | 10 | 0 | 0 | 0 | 21/21 | no | `AuthRequest`, `z.infer<typeof createCollaborationSchema>`, `z.infer<typeof postMessageSchema>`, `z.infer<typeof shipPoSchema>`, `z.infer<typeof submitInvoiceSchema>` |
+| `controllers/supply-chain-expansion.controller.ts` | `"supply-chain"` | 10 | 10 | 0 | 0 | 0 | 17/17 | no | `AuthRequest`, `z.infer<typeof addNetworkNodeSchema>`, `z.infer<typeof reportRiskEventSchema>`, `z.infer<typeof updateRiskStatusSchema>` |
+| `controllers/supply-chain-finance.controller.ts` | `"supply-chain/finance"` | 10 | 10 | 0 | 0 | 0 | 26/26 | no | `AuthRequest`, `z.infer<typeof createProgramSchema>`, `z.infer<typeof discountSchema>`, `z.infer<typeof factoringSchema>`, `z.infer<typeof reverseFactoringSchema>`, `z.infer<typeof updateProgramSchema>` |
+| `controllers/supply-planning.controller.ts` | `"supply-chain"` | 12 | 12 | 0 | 0 | 0 | 23/23 | no | `AuthRequest` |
+| `controllers/sustainability.controller.ts` | `"supply-chain/sustainability"` | 9 | 9 | 0 | 0 | 0 | 27/27 | no | `AuthRequest`, `z.infer<typeof emissionsCalcSchema>`, `z.infer<typeof esgReportSchema>`, `z.infer<typeof offsetSchema>`, `z.infer<typeof progressSchema>`, `z.infer<typeof targetSchema>` |
+| `controllers/vendor-returns.controller.ts` | `"supply-chain/vendor-returns"` | 5 | 5 | 0 | 0 | 0 | 12/12 | no | `AuthenticatedRequest`, `CreateVendorReturnDto`, `UpdateVendorReturnStatusDto` |
+| `settings.controller.ts` | `"supply-chain/settings"` | 0 | 0 | 0 | 0 | 0 | 0/0 | no | — |
+| `supply-chain-enterprise.controller.ts` | `"supply-chain/enterprise"` | 12 | 12 | 0 | 0 | 0 | 29/29 | no | `AuthenticatedRequest` |
+| `supply-chain.controller.ts` | `"supply-chain"` | 28 | 28 | 0 | 0 | 3 | 59/59 | no | `AddTrackingEventDto`, `AuthenticatedRequest`, `CreateAsnDto`, `CreateCarrierDto`, `CreateCarrierServiceLevelDto`, `CreateInboundShipmentDto`, `CreateOutboundShipmentDto`, `CreateShipmentInput`, `Partial<CreateCarrierDto>`, `ReceiveAsnDto`, `ReportExceptionDto`, `ResolveExceptionDto`, `UpdateShipmentStatusInput` |
+

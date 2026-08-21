@@ -1,0 +1,64 @@
+# Route decorators: api/modules/analytics — batch 1
+
+Generated lexical route evidence. Route arguments are source expressions; class/composed guards and DTO contracts require AST/runtime verification.
+
+| Controller | Prefix | Verb | Route argument | Permission decorators | Public | Skip tenant | Adjacent spec |
+| --- | --- | --- | --- | ---: | ---: | ---: | --- |
+| `analytics-anomaly-detection-deep.controller.ts` | `"analytics/anomaly-detection-deep"` | GET | `"anomalies"` | 1 | 0 | 0 | no |
+| `analytics-cohort-retention-deep.controller.ts` | `"analytics/cohort-retention-deep"` | GET | `"analyses"` | 3 | 0 | 0 | no |
+| `analytics-cohort-retention-deep.controller.ts` | `"analytics/cohort-retention-deep"` | POST | `"analyses"` | 3 | 0 | 0 | no |
+| `analytics-cohort-retention-deep.controller.ts` | `"analytics/cohort-retention-deep"` | POST | `"analyses/:id/groups"` | 3 | 0 | 0 | no |
+| `analytics-custom-dashboards-deep.controller.ts` | `"analytics/custom-dashboards-deep"` | GET | `"dashboards"` | 3 | 0 | 0 | no |
+| `analytics-custom-dashboards-deep.controller.ts` | `"analytics/custom-dashboards-deep"` | POST | `"dashboards"` | 3 | 0 | 0 | no |
+| `analytics-custom-dashboards-deep.controller.ts` | `"analytics/custom-dashboards-deep"` | POST | `"dashboards/:id/widgets"` | 3 | 0 | 0 | no |
+| `analytics-data-pipelines-deep.controller.ts` | `"analytics/data-pipelines-deep"` | GET | `"pipelines"` | 3 | 0 | 0 | no |
+| `analytics-data-pipelines-deep.controller.ts` | `"analytics/data-pipelines-deep"` | POST | `"pipelines"` | 3 | 0 | 0 | no |
+| `analytics-data-pipelines-deep.controller.ts` | `"analytics/data-pipelines-deep"` | POST | `"pipelines/:id/run"` | 3 | 0 | 0 | no |
+| `analytics-deep.controller.ts` | `"analytics"` | GET | `"kpi-definitions"` | 21 | 0 | 0 | no |
+| `analytics-deep.controller.ts` | `"analytics"` | GET | `"kpi-definitions/:id"` | 21 | 0 | 0 | no |
+| `analytics-deep.controller.ts` | `"analytics"` | POST | `"kpi-definitions"` | 21 | 0 | 0 | no |
+| `analytics-deep.controller.ts` | `"analytics"` | PATCH | `"kpi-definitions/:id"` | 21 | 0 | 0 | no |
+| `analytics-deep.controller.ts` | `"analytics"` | DELETE | `"kpi-definitions/:id"` | 21 | 0 | 0 | no |
+| `analytics-deep.controller.ts` | `"analytics"` | GET | `"trends/:kpiDefinitionId"` | 21 | 0 | 0 | no |
+| `analytics-deep.controller.ts` | `"analytics"` | POST | `"trends/:kpiDefinitionId/compute"` | 21 | 0 | 0 | no |
+| `analytics-deep.controller.ts` | `"analytics"` | GET | `"scheduled-exports-deep"` | 21 | 0 | 0 | no |
+| `analytics-deep.controller.ts` | `"analytics"` | POST | `"scheduled-exports-deep"` | 21 | 0 | 0 | no |
+| `analytics-deep.controller.ts` | `"analytics"` | PATCH | `"scheduled-exports-deep/:id"` | 21 | 0 | 0 | no |
+| `analytics-deep.controller.ts` | `"analytics"` | DELETE | `"scheduled-exports-deep/:id"` | 21 | 0 | 0 | no |
+| `analytics-deep.controller.ts` | `"analytics"` | GET | `"cross-filter-dashboards"` | 21 | 0 | 0 | no |
+| `analytics-deep.controller.ts` | `"analytics"` | GET | `"cross-filter-dashboards/:id"` | 21 | 0 | 0 | no |
+| `analytics-deep.controller.ts` | `"analytics"` | POST | `"cross-filter-dashboards"` | 21 | 0 | 0 | no |
+| `analytics-deep.controller.ts` | `"analytics"` | PUT | `"cross-filter-dashboards/:id"` | 21 | 0 | 0 | no |
+| `analytics-deep.controller.ts` | `"analytics"` | DELETE | `"cross-filter-dashboards/:id"` | 21 | 0 | 0 | no |
+| `analytics-deep.controller.ts` | `"analytics"` | GET | `"bi-metric-catalog"` | 21 | 0 | 0 | no |
+| `analytics-deep.controller.ts` | `"analytics"` | GET | `"bi-metric-catalog/:id"` | 21 | 0 | 0 | no |
+| `analytics-deep.controller.ts` | `"analytics"` | POST | `"bi-metric-catalog"` | 21 | 0 | 0 | no |
+| `analytics-deep.controller.ts` | `"analytics"` | PATCH | `"bi-metric-catalog/:id"` | 21 | 0 | 0 | no |
+| `analytics-deep.controller.ts` | `"analytics"` | DELETE | `"bi-metric-catalog/:id"` | 21 | 0 | 0 | no |
+| `analytics-enterprise.controller.ts` | `"analytics/enterprise"` | POST | `"multi-source-report"` | 10 | 0 | 0 | no |
+| `analytics-enterprise.controller.ts` | `"analytics/enterprise"` | GET | `"drill-down/:reportId"` | 10 | 0 | 0 | no |
+| `analytics-enterprise.controller.ts` | `"analytics/enterprise"` | POST | `"what-if"` | 10 | 0 | 0 | no |
+| `analytics-enterprise.controller.ts` | `"analytics/enterprise"` | GET | `"forecast/:metric"` | 10 | 0 | 0 | no |
+| `analytics-enterprise.controller.ts` | `"analytics/enterprise"` | POST | `"ad-hoc-query"` | 10 | 0 | 0 | no |
+| `analytics-enterprise.controller.ts` | `"analytics/enterprise"` | GET | `"dashboard-export/:dashboardId"` | 10 | 0 | 0 | no |
+| `analytics-enterprise.controller.ts` | `"analytics/enterprise"` | GET | `"insights"` | 10 | 0 | 0 | no |
+| `analytics-enterprise.controller.ts` | `"analytics/enterprise"` | GET | `"data-quality"` | 10 | 0 | 0 | no |
+| `analytics-enterprise.controller.ts` | `"analytics/enterprise"` | GET | `"anomaly-alert-config"` | 10 | 0 | 0 | no |
+| `analytics-enterprise.controller.ts` | `"analytics/enterprise"` | GET | `"benchmark"` | 10 | 0 | 0 | no |
+| `analytics-expansion.controller.ts` | `"analytics"` | GET | `"reports/:reportId/filters"` | 13 | 0 | 0 | no |
+| `analytics-expansion.controller.ts` | `"analytics"` | POST | `"report-filters"` | 13 | 0 | 0 | no |
+| `analytics-expansion.controller.ts` | `"analytics"` | DELETE | `"report-filters/:id"` | 13 | 0 | 0 | no |
+| `analytics-expansion.controller.ts` | `"analytics"` | GET | `"dashboards/:dashboardId/widgets"` | 13 | 0 | 0 | no |
+| `analytics-expansion.controller.ts` | `"analytics"` | POST | `"dashboard-widgets"` | 13 | 0 | 0 | no |
+| `analytics-expansion.controller.ts` | `"analytics"` | PUT | `"dashboard-widgets/:id"` | 13 | 0 | 0 | no |
+| `analytics-expansion.controller.ts` | `"analytics"` | DELETE | `"dashboard-widgets/:id"` | 13 | 0 | 0 | no |
+| `analytics-expansion.controller.ts` | `"analytics"` | GET | `"kpis/:kpiId/values"` | 13 | 0 | 0 | no |
+| `analytics-expansion.controller.ts` | `"analytics"` | POST | `"kpi-values"` | 13 | 0 | 0 | no |
+| `analytics-expansion.controller.ts` | `"analytics"` | GET | `"scheduled-exports"` | 13 | 0 | 0 | no |
+| `analytics-expansion.controller.ts` | `"analytics"` | POST | `"scheduled-exports"` | 13 | 0 | 0 | no |
+| `analytics-expansion.controller.ts` | `"analytics"` | PUT | `"scheduled-exports/:id"` | 13 | 0 | 0 | no |
+| `analytics-expansion.controller.ts` | `"analytics"` | DELETE | `"scheduled-exports/:id"` | 13 | 0 | 0 | no |
+| `analytics-funnel-conversion-deep.controller.ts` | `"analytics/funnel-conversion-deep"` | GET | `"conversions"` | 3 | 0 | 0 | no |
+| `analytics-funnel-conversion-deep.controller.ts` | `"analytics/funnel-conversion-deep"` | POST | `"steps"` | 3 | 0 | 0 | no |
+| `analytics-funnel-conversion-deep.controller.ts` | `"analytics/funnel-conversion-deep"` | POST | `"compute"` | 3 | 0 | 0 | no |
+

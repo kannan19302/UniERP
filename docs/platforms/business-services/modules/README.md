@@ -1,0 +1,53 @@
+# Business Module Implementation Evidence
+
+These documents were generated from the live API/module, Prisma, event and permission surfaces before migration from the retired workspace. They are implementation evidence—not independently authoritative requirements. Requirements and boundary decisions remain in the parent platform suite.
+
+| Module | Evidence |
+| --- | --- |
+| admin | [orientation](admin.md) |
+| advanced-finance | [orientation](advanced-finance.md) |
+| advanced-hr | [orientation](advanced-hr.md) |
+| ai | [orientation](ai.md) |
+| analytics | [orientation](analytics.md) |
+| api-platform | [orientation](api-platform.md) |
+| blockchain | [orientation](blockchain.md) |
+| communication | [orientation](communication.md) |
+| crm | [orientation](crm.md) |
+| devops | [orientation](devops.md) |
+| documents | [orientation](documents.md) |
+| drive | [orientation](drive.md) |
+| ecommerce | [orientation](ecommerce.md) |
+| education | [orientation](education.md) |
+| ext-gateway | [orientation](ext-gateway.md) |
+| extension-registry | [orientation](extension-registry.md) |
+| field-service | [orientation](field-service.md) |
+| finance | [orientation](finance.md) |
+| fixed-assets | [orientation](fixed-assets.md) |
+| healthcare | [orientation](healthcare.md) |
+| hr-advanced | [orientation](hr-advanced.md) |
+| hr | [orientation](hr.md) |
+| inventory | [orientation](inventory.md) |
+| localization | [orientation](localization.md) |
+| manufacturing | [orientation](manufacturing.md) |
+| marketplace | [orientation](marketplace.md) |
+| notifications | [orientation](notifications.md) |
+| org-structure | [orientation](org-structure.md) |
+| outbox | [orientation](outbox.md) |
+| people | [orientation](people.md) |
+| pos | [orientation](pos.md) |
+| procurement | [orientation](procurement.md) |
+| projects | [orientation](projects.md) |
+| pwa | [orientation](pwa.md) |
+| real-estate | [orientation](real-estate.md) |
+| reporting | [orientation](reporting.md) |
+| saas-portal | [orientation](saas-portal.md) |
+| saas | [orientation](saas.md) |
+| sales | [orientation](sales.md) |
+| saved-views | [orientation](saved-views.md) |
+| search | [orientation](search.md) |
+| service-management | [orientation](service-management.md) |
+| storage | [orientation](storage.md) |
+| subscriptions | [orientation](subscriptions.md) |
+| supply-chain | [orientation](supply-chain.md) |
+| workflow | [orientation](workflow.md) |
+

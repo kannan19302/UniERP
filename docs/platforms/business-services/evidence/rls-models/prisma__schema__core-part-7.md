@@ -1,0 +1,86 @@
+# Tenant model to RLS migration linkage: prisma/schema/core-part-7.prisma
+
+Lexical linkage compares effective Prisma table names with tables named by RLS ENABLE/FORCE/CREATE POLICY migration statements. A match is structural evidence, not a runtime policy test.
+
+| Model | Effective table | tenantId | Named by RLS migration | Status |
+| --- | --- | --- | --- | --- |
+| `CapaAction` | `capa_actions` | yes | no | RLS LINK GAP |
+| `CalibrationRecord` | `calibration_records` | yes | no | RLS LINK GAP |
+| `DeviationRecord` | `deviation_records` | yes | no | RLS LINK GAP |
+| `SopDocument` | `sop_documents` | yes | no | RLS LINK GAP |
+| `SopRevision` | `sop_revisions` | yes | no | RLS LINK GAP |
+| `BinTransferRequest` | `bin_transfer_requests` | yes | no | RLS LINK GAP |
+| `GoodsReceiptNote` | `goods_receipt_notes` | yes | no | RLS LINK GAP |
+| `GrnLineItem` | `grn_line_items` | yes | no | RLS LINK GAP |
+| `PackingSession` | `packing_sessions` | yes | no | RLS LINK GAP |
+| `PackingCarton` | `packing_cartons` | yes | no | RLS LINK GAP |
+| `LotMovement` | `lot_movements` | yes | no | RLS LINK GAP |
+| `PickSuggestion` | `pick_suggestions` | yes | no | RLS LINK GAP |
+| `ExpiryAlert` | `expiry_alerts` | yes | no | RLS LINK GAP |
+| `QuarantineOrder` | `quarantine_orders` | yes | no | RLS LINK GAP |
+| `DemandForecast` | `demand_forecasts` | yes | no | RLS LINK GAP |
+| `ReorderPoint` | `reorder_points` | yes | no | RLS LINK GAP |
+| `SafetyStockConfig` | `safety_stock_configs` | yes | no | RLS LINK GAP |
+| `ReplenishmentOrder` | `replenishment_orders` | yes | no | RLS LINK GAP |
+| `LandedCostVoucher` | `landed_cost_vouchers` | yes | no | RLS LINK GAP |
+| `LandedCostChargeLine` | `landed_cost_charge_lines` | yes | no | RLS LINK GAP |
+| `LandedCostReceiptLink` | `landed_cost_receipt_links` | yes | no | RLS LINK GAP |
+| `LandedCostAllocation` | `landed_cost_allocations` | yes | no | RLS LINK GAP |
+| `CostAdjustment` | `cost_adjustments` | yes | no | RLS LINK GAP |
+| `TransferOrder` | `transfer_orders` | yes | no | RLS LINK GAP |
+| `TransferOrderLine` | `transfer_order_lines` | yes | no | RLS LINK GAP |
+| `TransferOrderReceipt` | `transfer_order_receipts` | yes | no | RLS LINK GAP |
+| `TransferOrderReceiptLine` | `transfer_order_receipt_lines` | yes | no | RLS LINK GAP |
+| `DockDoor` | `dock_doors` | yes | no | RLS LINK GAP |
+| `YardAppointment` | `yard_appointments` | yes | no | RLS LINK GAP |
+| `GatePass` | `gate_passes` | yes | no | RLS LINK GAP |
+| `YardMove` | `yard_moves` | yes | no | RLS LINK GAP |
+| `YardInventory` | `yard_inventory` | yes | no | RLS LINK GAP |
+| `CountSheet` | `count_sheets` | yes | no | RLS LINK GAP |
+| `CountSheetItem` | `count_sheet_items` | yes | no | RLS LINK GAP |
+| `HazmatClassification` | `hazmat_classifications` | yes | no | RLS LINK GAP |
+| `SafetyDataSheet` | `safety_data_sheets` | yes | no | RLS LINK GAP |
+| `HazmatStorageRule` | `hazmat_storage_rules` | yes | no | RLS LINK GAP |
+| `HazmatManifest` | `hazmat_manifests` | yes | no | RLS LINK GAP |
+| `HazmatManifestLine` | `hazmat_manifest_lines` | yes | no | RLS LINK GAP |
+| `HazmatIncident` | `hazmat_incidents` | yes | no | RLS LINK GAP |
+| `ApprovedSupplier` | `approved_suppliers` | yes | no | RLS LINK GAP |
+| `SupplierPriceTier` | `supplier_price_tiers` | yes | no | RLS LINK GAP |
+| `AslChangeLog` | `asl_change_logs` | yes | no | RLS LINK GAP |
+| `VendorItemAttribute` | `vendor_item_attributes` | yes | no | RLS LINK GAP |
+| `AslComplianceRule` | `asl_compliance_rules` | yes | no | RLS LINK GAP |
+| `PalletType` | `pallet_types` | yes | no | RLS LINK GAP |
+| `ContainerType` | `container_types` | yes | no | RLS LINK GAP |
+| `LoadPlan` | `load_plans` | yes | no | RLS LINK GAP |
+| `LoadPlanPallet` | `load_plan_pallets` | yes | no | RLS LINK GAP |
+| `LoadPlanItem` | `load_plan_items` | yes | no | RLS LINK GAP |
+| `PackingPlan` | `packing_plans` | yes | no | RLS LINK GAP |
+| `LoadCarton` | `load_cartons` | yes | no | RLS LINK GAP |
+| `LoadCartonItem` | `load_carton_items` | yes | no | RLS LINK GAP |
+| `CatchWeightConfig` | `catch_weight_configs` | yes | no | RLS LINK GAP |
+| `CatchWeightReading` | `catch_weight_readings` | yes | no | RLS LINK GAP |
+| `CatchWeightTare` | `catch_weight_tares` | yes | no | RLS LINK GAP |
+| `RecallAffectedStock` | `recall_affected_stocks` | yes | no | RLS LINK GAP |
+| `RecallCustomerNotice` | `recall_customer_notices` | yes | no | RLS LINK GAP |
+| `RecallDisposalRecord` | `recall_disposal_records` | yes | no | RLS LINK GAP |
+| `PackagingSpec` | `packaging_specs` | yes | no | RLS LINK GAP |
+| `Gs1ApplicationIdentifier` | `gs1_application_identifiers` | yes | no | RLS LINK GAP |
+| `LabelTemplate` | `label_templates` | yes | no | RLS LINK GAP |
+| `LabelAssignment` | `label_assignments` | yes | no | RLS LINK GAP |
+| `SsccRecord` | `sscc_records` | yes | no | RLS LINK GAP |
+| `ColdChainRequirement` | `cold_chain_requirements` | yes | no | RLS LINK GAP |
+| `TemperatureExcursion` | `temperature_excursions` | yes | no | RLS LINK GAP |
+| `VelocityClassificationRun` | `velocity_classification_runs` | yes | no | RLS LINK GAP |
+| `VelocityClassificationItem` | `velocity_classification_items` | yes | no | RLS LINK GAP |
+| `VelocitySlottingPolicy` | `velocity_slotting_policies` | yes | no | RLS LINK GAP |
+| `CustomerRma` | `customer_rmas` | yes | no | RLS LINK GAP |
+| `CustomerRmaLine` | `customer_rma_lines` | yes | no | RLS LINK GAP |
+| `ReturnCredit` | `return_credits` | yes | no | RLS LINK GAP |
+| `ReturnRestock` | `return_restocks` | yes | no | RLS LINK GAP |
+| `MinMaxLevel` | `min_max_levels` | yes | no | RLS LINK GAP |
+| `ReplenSuggestion` | `replen_suggestions` | yes | no | RLS LINK GAP |
+| `ReplenRunLog` | `replen_run_logs` | yes | no | RLS LINK GAP |
+| `CargoDamageReport` | `cargo_damage_reports` | yes | no | RLS LINK GAP |
+| `FreightClaim` | `freight_claims` | yes | no | RLS LINK GAP |
+| `FreightClaimEvent` | `freight_claim_events` | yes | no | RLS LINK GAP |
+

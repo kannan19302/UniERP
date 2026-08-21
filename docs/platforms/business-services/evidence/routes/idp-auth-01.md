@@ -1,0 +1,62 @@
+# Route decorators: idp/modules/auth — batch 1
+
+Generated lexical route evidence. Route arguments are source expressions; class/composed guards and DTO contracts require AST/runtime verification.
+
+| Controller | Prefix | Verb | Route argument | Permission decorators | Public | Skip tenant | Adjacent spec |
+| --- | --- | --- | --- | ---: | ---: | ---: | --- |
+| `auth-deep.controller.ts` | `"auth"` | GET | `"api-tokens"` | 12 | 0 | 0 | no |
+| `auth-deep.controller.ts` | `"auth"` | POST | `"api-tokens"` | 12 | 0 | 0 | no |
+| `auth-deep.controller.ts` | `"auth"` | DELETE | `"api-tokens/:id"` | 12 | 0 | 0 | no |
+| `auth-deep.controller.ts` | `"auth"` | GET | `"login-history"` | 12 | 0 | 0 | no |
+| `auth-deep.controller.ts` | `"auth"` | GET | `"sessions"` | 12 | 0 | 0 | no |
+| `auth-deep.controller.ts` | `"auth"` | DELETE | `"sessions/:id"` | 12 | 0 | 0 | no |
+| `auth-deep.controller.ts` | `"auth"` | GET | `"password-policy"` | 12 | 0 | 0 | no |
+| `auth-deep.controller.ts` | `"auth"` | PUT | `"password-policy"` | 12 | 0 | 0 | no |
+| `auth-deep.controller.ts` | `"auth"` | GET | `"ip-allowlist"` | 12 | 0 | 0 | no |
+| `auth-deep.controller.ts` | `"auth"` | POST | `"ip-allowlist"` | 12 | 0 | 0 | no |
+| `auth-deep.controller.ts` | `"auth"` | PUT | `"ip-allowlist/:id"` | 12 | 0 | 0 | no |
+| `auth-deep.controller.ts` | `"auth"` | DELETE | `"ip-allowlist/:id"` | 12 | 0 | 0 | no |
+| `auth.controller.ts` | `"auth"` | GET | `"provisioning/:tenantId/status"` | 17 | 0 | 1 | no |
+| `auth.controller.ts` | `"auth"` | GET | `"check-email"` | 17 | 0 | 1 | no |
+| `auth.controller.ts` | `"auth"` | POST | `"register"` | 17 | 0 | 1 | no |
+| `auth.controller.ts` | `"auth"` | POST | `"login"` | 17 | 0 | 1 | no |
+| `auth.controller.ts` | `"auth"` | POST | `"provider/login"` | 17 | 0 | 1 | no |
+| `auth.controller.ts` | `"auth"` | POST | `"refresh"` | 17 | 0 | 1 | no |
+| `auth.controller.ts` | `"auth"` | POST | `"logout"` | 17 | 0 | 1 | no |
+| `auth.controller.ts` | `"auth"` | GET | `"me"` | 17 | 0 | 1 | no |
+| `auth.controller.ts` | `"auth"` | PATCH | `"me"` | 17 | 0 | 1 | no |
+| `auth.controller.ts` | `"auth"` | GET | `"tenants"` | 17 | 0 | 1 | no |
+| `auth.controller.ts` | `"auth"` | POST | `"switch-tenant"` | 17 | 0 | 1 | no |
+| `auth.controller.ts` | `"auth"` | POST | `"forgot-password"` | 17 | 0 | 1 | no |
+| `auth.controller.ts` | `"auth"` | POST | `"verify-email"` | 17 | 0 | 1 | no |
+| `auth.controller.ts` | `"auth"` | POST | `"resend-verification"` | 17 | 0 | 1 | no |
+| `auth.controller.ts` | `"auth"` | POST | `"reset-password"` | 17 | 0 | 1 | no |
+| `auth.controller.ts` | `"auth"` | POST | `"login-demo"` | 17 | 0 | 1 | no |
+| `auth.controller.ts` | `"auth"` | GET | `"sessions"` | 17 | 0 | 1 | no |
+| `auth.controller.ts` | `"auth"` | GET | `"login-history"` | 17 | 0 | 1 | no |
+| `auth.controller.ts` | `"auth"` | POST | `"sessions/revoke-others"` | 17 | 0 | 1 | no |
+| `auth.controller.ts` | `"auth"` | DELETE | `"sessions/:id"` | 17 | 0 | 1 | no |
+| `auth.controller.ts` | `"auth"` | POST | `"me/avatar"` | 17 | 0 | 1 | no |
+| `auth.controller.ts` | `"auth"` | POST | `"mfa/setup"` | 17 | 0 | 1 | no |
+| `auth.controller.ts` | `"auth"` | POST | `"mfa/verify"` | 17 | 0 | 1 | no |
+| `auth.controller.ts` | `"auth"` | POST | `"mfa/verify-login"` | 17 | 0 | 1 | no |
+| `auth.controller.ts` | `"auth"` | POST | `"push/subscribe"` | 17 | 0 | 1 | no |
+| `auth.controller.ts` | `"auth"` | POST | `"push/unsubscribe"` | 17 | 0 | 1 | no |
+| `auth.controller.ts` | `"auth"` | GET | `"push/devices"` | 17 | 0 | 1 | no |
+| `auth.controller.ts` | `"auth"` | POST | `"push/devices/:id/remove"` | 17 | 0 | 1 | no |
+| `auth.controller.ts` | `"auth"` | POST | `"mfa/push/status"` | 17 | 0 | 1 | no |
+| `auth.controller.ts` | `"auth"` | POST | `"mfa/push/respond"` | 17 | 0 | 1 | no |
+| `auth.controller.ts` | `"auth"` | POST | `"send-otp"` | 17 | 0 | 1 | no |
+| `auth.controller.ts` | `"auth"` | POST | `"verify-otp"` | 17 | 0 | 1 | no |
+| `auth.controller.ts` | `"auth"` | GET | `"onboarding/status"` | 17 | 0 | 1 | no |
+| `oauth.controller.ts` | `"auth/oauth"` | GET | `"providers"` | 0 | 0 | 0 | no |
+| `oauth.controller.ts` | `"auth/oauth"` | GET | `":provider/start"` | 0 | 0 | 0 | no |
+| `oauth.controller.ts` | `"auth/oauth"` | GET | `":provider/callback"` | 0 | 0 | 0 | no |
+| `onboarding.controller.ts` | `"auth/onboarding"` | GET | `` | 0 | 0 | 0 | no |
+| `onboarding.controller.ts` | `"auth/onboarding"` | PUT | `"complete/:key"` | 0 | 0 | 0 | no |
+| `sso.controller.ts` | `"auth/sso"` | GET | `"saml/login/:tenantSlug"` | 0 | 0 | 0 | no |
+| `sso.controller.ts` | `"auth/sso"` | POST | `"saml/callback/:tenantSlug"` | 0 | 0 | 0 | no |
+| `sso.controller.ts` | `"auth/sso"` | GET | `"oidc/login/:tenantSlug"` | 0 | 0 | 0 | no |
+| `sso.controller.ts` | `"auth/sso"` | GET | `"oidc/callback/:tenantSlug"` | 0 | 0 | 0 | no |
+| `sso.controller.ts` | `"auth/sso"` | GET | `"config/:tenantSlug"` | 0 | 0 | 0 | no |
+

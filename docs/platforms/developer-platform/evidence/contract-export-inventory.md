@@ -1,0 +1,97 @@
+# Contract Export Inventory
+
+Generated from `unierp-contracts/src` on 2026-08-21. Counts are lexical.
+
+- Files: 87; exports: 291; exported types/interfaces: 136; exported classes: 41; schema signals: 111
+
+| Source | Exports | Types/interfaces | Classes | Schema signals |
+| --- | ---: | ---: | ---: | ---: |
+| `api-versioning.spec.ts` | 0 | 0 | 0 | 0 |
+| `api-versioning.ts` | 4 | 2 | 1 | 0 |
+| `audit.spec.ts` | 0 | 0 | 0 | 0 |
+| `audit.ts` | 5 | 2 | 1 | 0 |
+| `backup-restore.spec.ts` | 0 | 0 | 0 | 0 |
+| `backup-restore.ts` | 6 | 4 | 1 | 0 |
+| `client-generator.spec.ts` | 0 | 0 | 0 | 0 |
+| `client-generator.ts` | 10 | 3 | 3 | 0 |
+| `connection-pool.spec.ts` | 0 | 0 | 0 | 0 |
+| `connection-pool.ts` | 3 | 2 | 1 | 0 |
+| `consumer-contract-test.spec.ts` | 0 | 0 | 0 | 1 |
+| `consumer-contract-test.ts` | 3 | 1 | 1 | 0 |
+| `contract-compatibility.spec.ts` | 0 | 0 | 0 | 8 |
+| `contract-compatibility.ts` | 8 | 5 | 1 | 2 |
+| `contract-governance.spec.ts` | 0 | 0 | 0 | 0 |
+| `contract-governance.ts` | 5 | 2 | 1 | 0 |
+| `contract-harness.spec.ts` | 0 | 0 | 0 | 0 |
+| `contract-harness.ts` | 2 | 1 | 1 | 0 |
+| `contract-performance.spec.ts` | 0 | 0 | 0 | 0 |
+| `contract-performance.ts` | 7 | 1 | 2 | 0 |
+| `contract-registry.spec.ts` | 0 | 0 | 0 | 0 |
+| `contract-registry.ts` | 5 | 3 | 2 | 0 |
+| `contract-security.spec.ts` | 0 | 0 | 0 | 1 |
+| `contract-security.ts` | 3 | 2 | 0 | 6 |
+| `db-performance.spec.ts` | 0 | 0 | 0 | 0 |
+| `db-performance.ts` | 5 | 2 | 1 | 0 |
+| `deprecation.spec.ts` | 0 | 0 | 0 | 0 |
+| `deprecation.ts` | 6 | 3 | 1 | 0 |
+| `encryption.spec.ts` | 0 | 0 | 0 | 0 |
+| `encryption.ts` | 10 | 6 | 0 | 0 |
+| `entities/index.ts` | 5 | 4 | 0 | 0 |
+| `entities/notification.ts` | 7 | 7 | 0 | 0 |
+| `errors.spec.ts` | 0 | 0 | 0 | 0 |
+| `errors.ts` | 6 | 2 | 4 | 0 |
+| `events/index.ts` | 7 | 5 | 0 | 1 |
+| `events/notification.ts` | 4 | 4 | 0 | 0 |
+| `events/schema-registry.spec.ts` | 0 | 0 | 0 | 5 |
+| `events/schema-registry.ts` | 6 | 2 | 4 | 34 |
+| `fixtures.spec.ts` | 0 | 0 | 0 | 0 |
+| `fixtures.ts` | 5 | 3 | 0 | 0 |
+| `health.spec.ts` | 0 | 0 | 0 | 2 |
+| `health.ts` | 5 | 5 | 0 | 0 |
+| `http/index.ts` | 6 | 5 | 0 | 1 |
+| `http/notification.ts` | 5 | 5 | 0 | 0 |
+| `idempotency.spec.ts` | 0 | 0 | 0 | 0 |
+| `idempotency.ts` | 4 | 2 | 1 | 0 |
+| `index.ts` | 40 | 0 | 0 | 4 |
+| `meta-schema.spec.ts` | 0 | 0 | 0 | 4 |
+| `meta-schema.ts` | 3 | 1 | 1 | 6 |
+| `money.spec.ts` | 0 | 0 | 0 | 0 |
+| `money.ts` | 3 | 2 | 0 | 0 |
+| `multi-version.spec.ts` | 0 | 0 | 0 | 0 |
+| `multi-version.ts` | 3 | 2 | 1 | 0 |
+| `online-schema-change.spec.ts` | 0 | 0 | 0 | 2 |
+| `online-schema-change.ts` | 4 | 3 | 0 | 4 |
+| `outbox.spec.ts` | 0 | 0 | 0 | 0 |
+| `outbox.ts` | 13 | 8 | 2 | 0 |
+| `pagination.spec.ts` | 0 | 0 | 0 | 0 |
+| `pagination.ts` | 8 | 6 | 1 | 1 |
+| `rate-limiting.spec.ts` | 0 | 0 | 0 | 0 |
+| `rate-limiting.ts` | 3 | 1 | 1 | 0 |
+| `residency.spec.ts` | 0 | 0 | 0 | 0 |
+| `residency.ts` | 2 | 0 | 1 | 0 |
+| `retention.spec.ts` | 0 | 0 | 0 | 0 |
+| `retention.ts` | 6 | 5 | 0 | 0 |
+| `runtime-validator.spec.ts` | 0 | 0 | 0 | 2 |
+| `runtime-validator.ts` | 3 | 1 | 1 | 3 |
+| `schema-completeness.spec.ts` | 0 | 0 | 0 | 7 |
+| `schema-completeness.ts` | 6 | 2 | 2 | 10 |
+| `sdk-compatibility.spec.ts` | 0 | 0 | 0 | 0 |
+| `sdk-compatibility.ts` | 4 | 1 | 1 | 0 |
+| `settings-migration.spec.ts` | 0 | 0 | 0 | 3 |
+| `settings-migration.ts` | 6 | 1 | 0 | 1 |
+| `settings-promotion.spec.ts` | 0 | 0 | 0 | 0 |
+| `settings-promotion.ts` | 6 | 3 | 0 | 0 |
+| `settings-resolution.spec.ts` | 0 | 0 | 0 | 0 |
+| `settings-resolution.ts` | 3 | 2 | 0 | 0 |
+| `settings.spec.ts` | 0 | 0 | 0 | 1 |
+| `settings.ts` | 13 | 4 | 2 | 2 |
+| `single-source-proof.spec.ts` | 0 | 0 | 0 | 0 |
+| `single-source-proof.ts` | 6 | 3 | 1 | 0 |
+| `soft-delete.spec.ts` | 0 | 0 | 0 | 0 |
+| `soft-delete.ts` | 7 | 4 | 0 | 0 |
+| `transactions.spec.ts` | 0 | 0 | 0 | 0 |
+| `transactions.ts` | 6 | 3 | 1 | 0 |
+| `webhook-contracts.spec.ts` | 0 | 0 | 0 | 0 |
+| `webhook-contracts.ts` | 4 | 1 | 0 | 0 |
+
+Lexical presence does not prove compatibility, publication, validation or consumer adoption.

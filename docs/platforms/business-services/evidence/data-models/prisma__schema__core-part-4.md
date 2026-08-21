@@ -1,0 +1,113 @@
+# Models in prisma/schema/core-part-4.prisma
+
+Generated structural evidence.
+
+| Model | tenantId | deletedAt | Decimal | Float | indexes/uniques | Review |
+| --- | --- | --- | ---: | ---: | ---: | --- |
+| `TenantWebhookEndpoint` | yes | no | 0 | 0 | 1 | tenant signal |
+| `TenantWebhookDelivery` | yes | no | 0 | 0 | 1 | tenant signal |
+| `TenantAnnouncement` | yes | no | 0 | 0 | 1 | tenant signal |
+| `ExpenseReport` | yes | no | 1 | 0 | 2 | tenant signal |
+| `ExpenseReportItem` | yes | no | 6 | 1 | 1 | tenant signal; Float review |
+| `ExpenseCategoryPolicy` | yes | no | 2 | 0 | 2 | tenant signal |
+| `MileageRate` | yes | no | 1 | 0 | 1 | tenant signal |
+| `PerDiemRate` | yes | no | 1 | 0 | 2 | tenant signal |
+| `CorporateCard` | yes | no | 0 | 0 | 2 | tenant signal |
+| `CardSpendLimit` | yes | no | 2 | 0 | 3 | tenant signal |
+| `CardCategoryLimit` | yes | no | 2 | 0 | 3 | tenant signal |
+| `CardLimitAuditLog` | yes | no | 0 | 0 | 2 | tenant signal |
+| `CardLimitIncreaseRequest` | yes | no | 2 | 0 | 2 | tenant signal |
+| `CorporateCardTransaction` | yes | no | 1 | 0 | 2 | tenant signal |
+| `RevenueSchedule` | yes | no | 3 | 0 | 1 | tenant signal |
+| `Subscription` | yes | no | 1 | 0 | 3 | tenant signal |
+| `SubscriptionLine` | yes | no | 3 | 0 | 2 | tenant signal |
+| `SubscriptionInvoice` | yes | no | 1 | 0 | 3 | tenant signal |
+| `SubscriptionUsage` | yes | no | 2 | 0 | 3 | tenant signal |
+| `ConsolidationRun` | yes | no | 6 | 0 | 1 | tenant signal |
+| `ConsolidationElimination` | yes | no | 1 | 0 | 1 | tenant signal |
+| `RecurringJournal` | yes | no | 0 | 0 | 1 | tenant signal |
+| `FixedAsset` | yes | no | 4 | 0 | 5 | tenant signal |
+| `AssetDepreciation` | yes | no | 3 | 0 | 1 | tenant signal |
+| `BankAccount` | yes | no | 0 | 0 | 2 | tenant signal |
+| `CreditNote` | yes | yes | 1 | 0 | 2 | tenant signal |
+| `DebitNote` | yes | yes | 1 | 0 | 2 | tenant signal |
+| `DunningLevel` | yes | no | 3 | 0 | 2 | tenant signal |
+| `DunningRun` | yes | no | 1 | 0 | 1 | tenant signal |
+| `TaxRule` | yes | no | 0 | 0 | 1 | tenant signal |
+| `TaxComponent` | yes | no | 1 | 0 | 1 | tenant signal |
+| `WithholdingTax` | yes | no | 2 | 0 | 1 | tenant signal |
+| `TaxFiling` | yes | no | 0 | 0 | 1 | tenant signal |
+| `TreasuryTransaction` | yes | no | 1 | 0 | 1 | tenant signal |
+| `InterCompanyTransfer` | yes | no | 1 | 0 | 1 | tenant signal |
+| `QualityInspection` | yes | no | 4 | 0 | 4 | tenant signal |
+| `QAInspectionCheckpoint` | yes | no | 0 | 0 | 2 | tenant signal |
+| `QAInspectionTemplate` | yes | no | 0 | 0 | 1 | tenant signal |
+| `Campaign` | yes | yes | 2 | 0 | 2 | tenant signal |
+| `SalesReturn` | yes | no | 3 | 0 | 2 | tenant signal |
+| `SalesReturnItem` | yes | no | 5 | 0 | 1 | tenant signal |
+| `PurchaseReturn` | yes | no | 3 | 0 | 2 | tenant signal |
+| `PurchaseReturnItem` | yes | no | 5 | 0 | 1 | tenant signal |
+| `Workstation` | yes | no | 2 | 0 | 2 | tenant signal |
+| `MRPRun` | yes | no | 0 | 0 | 1 | tenant signal |
+| `MRPPlannedItem` | yes | no | 3 | 0 | 2 | tenant signal |
+| `QualityInspectionPlan` | yes | no | 0 | 0 | 2 | tenant signal |
+| `NonConformanceReport` | yes | no | 0 | 0 | 1 | tenant signal |
+| `MachineDowntimeLog` | yes | no | 0 | 0 | 2 | tenant signal |
+| `MaintenanceRequest` | yes | no | 1 | 0 | 2 | tenant signal |
+| `SubcontractingOrder` | yes | no | 3 | 0 | 1 | tenant signal |
+| `WorkstationShift` | yes | no | 0 | 0 | 2 | tenant signal |
+| `SubcontractingMaterial` | yes | no | 3 | 0 | 2 | tenant signal |
+| `EquipmentTool` | yes | no | 0 | 0 | 3 | tenant signal |
+| `EngineeringChangeOrder` | yes | no | 0 | 0 | 2 | tenant signal |
+| `BuilderForm` | yes | no | 0 | 0 | 2 | tenant signal |
+| `BuilderWorkflow` | yes | no | 0 | 0 | 1 | tenant signal |
+| `BuilderDashboard` | yes | no | 0 | 0 | 1 | tenant signal |
+| `BuilderModule` | yes | no | 0 | 0 | 3 | tenant signal |
+| `AutomationRule` | yes | no | 0 | 0 | 1 | tenant signal |
+| `DataImportJob` | yes | no | 0 | 0 | 1 | tenant signal |
+| `AdvancedForm` | yes | no | 0 | 0 | 2 | tenant signal |
+| `FormCondition` | yes | no | 0 | 0 | 1 | tenant signal |
+| `FormCalculatedField` | yes | no | 0 | 0 | 1 | tenant signal |
+| `FormPage` | yes | no | 0 | 0 | 1 | tenant signal |
+| `FormAnalytics` | yes | no | 0 | 1 | 2 | tenant signal; Float review |
+| `FormVersion` | yes | no | 0 | 0 | 2 | tenant signal |
+| `BpmnProcessDefinition` | yes | no | 0 | 0 | 2 | tenant signal |
+| `BpmnProcessInstance` | yes | no | 0 | 0 | 2 | tenant signal |
+| `BpmnActivityInstance` | yes | no | 0 | 0 | 1 | tenant signal |
+| `BpmnTimerDefinition` | yes | no | 0 | 0 | 1 | tenant signal |
+| `ApiEndpoint` | yes | no | 0 | 0 | 2 | tenant signal |
+| `ApiEndpointMapping` | yes | no | 0 | 0 | 1 | tenant signal |
+| `ApiTestRun` | yes | no | 0 | 0 | 1 | tenant signal |
+| `ApiTestResult` | yes | no | 0 | 0 | 1 | tenant signal |
+| `DecisionTable` | yes | no | 0 | 0 | 2 | tenant signal |
+| `DecisionTableRule` | yes | no | 0 | 0 | 1 | tenant signal |
+| `RuleSet` | yes | no | 0 | 0 | 2 | tenant signal |
+| `RuleDefinition` | yes | no | 0 | 0 | 1 | tenant signal |
+| `RuleEvaluationLog` | yes | no | 0 | 0 | 1 | tenant signal |
+| `EtlDataSource` | yes | no | 0 | 0 | 2 | tenant signal |
+| `EtlPipeline` | yes | no | 0 | 0 | 2 | tenant signal |
+| `EtlMapping` | yes | no | 0 | 0 | 1 | tenant signal |
+| `EtlJobRun` | yes | no | 0 | 0 | 2 | tenant signal |
+| `MobileApp` | yes | no | 0 | 0 | 2 | tenant signal |
+| `MobileScreen` | yes | no | 0 | 0 | 1 | tenant signal |
+| `MobileNotificationConfig` | yes | no | 0 | 0 | 1 | tenant signal |
+| `MobileBuild` | yes | no | 0 | 0 | 1 | tenant signal |
+| `ThemeConfig` | yes | no | 0 | 0 | 2 | tenant signal |
+| `DesignToken` | yes | no | 0 | 0 | 2 | tenant signal |
+| `TokenValue` | yes | no | 0 | 0 | 2 | tenant signal |
+| `ThemeSnapshot` | yes | no | 0 | 0 | 2 | tenant signal |
+| `AbTest` | yes | no | 0 | 1 | 1 | tenant signal; Float review |
+| `AbTestVariant` | yes | no | 0 | 0 | 2 | tenant signal |
+| `AudienceSegment` | yes | no | 0 | 0 | 2 | tenant signal |
+| `SegmentRule` | yes | no | 0 | 0 | 1 | tenant signal |
+| `PersonalizationRule` | yes | no | 0 | 0 | 1 | tenant signal |
+| `BlogPost` | yes | no | 0 | 0 | 2 | tenant signal |
+| `SchemaRegistry` | yes | no | 0 | 0 | 2 | tenant signal |
+| `PageRegistry` | yes | no | 0 | 0 | 2 | tenant signal |
+| `CustomRecord` | yes | no | 0 | 0 | 2 | tenant signal |
+| `AppNavOverlay` | yes | no | 0 | 0 | 2 | tenant signal |
+| `PriceBook` | yes | yes | 0 | 0 | 2 | tenant signal |
+| `PriceBookEntry` | yes | no | 2 | 0 | 2 | tenant signal |
+| `ContactTag` | yes | no | 0 | 0 | 2 | tenant signal |
+| `ContactTagLink` | no | no | 0 | 0 | 1 | ownership review |
+

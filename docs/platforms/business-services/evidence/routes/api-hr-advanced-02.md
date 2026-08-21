@@ -1,0 +1,64 @@
+# Route decorators: api/modules/hr-advanced — batch 2
+
+Generated lexical route evidence. Route arguments are source expressions; class/composed guards and DTO contracts require AST/runtime verification.
+
+| Controller | Prefix | Verb | Route argument | Permission decorators | Public | Skip tenant | Adjacent spec |
+| --- | --- | --- | --- | ---: | ---: | ---: | --- |
+| `hr-performance-appraisals-deep.controller.ts` | `"hr-advanced/performance-appraisals-deep"` | POST | `"appraisal-cycles"` | 5 | 0 | 0 | no |
+| `hr-performance-appraisals-deep.controller.ts` | `"hr-advanced/performance-appraisals-deep"` | GET | `"appraisal-cycles"` | 5 | 0 | 0 | no |
+| `hr-performance-appraisals-deep.controller.ts` | `"hr-advanced/performance-appraisals-deep"` | POST | `"calibrate-9box"` | 5 | 0 | 0 | no |
+| `hr-performance-appraisals-deep.controller.ts` | `"hr-advanced/performance-appraisals-deep"` | GET | `"9box-matrix"` | 5 | 0 | 0 | no |
+| `hr-performance-appraisals-deep.controller.ts` | `"hr-advanced/performance-appraisals-deep"` | GET | `"merit-budget-pool"` | 5 | 0 | 0 | no |
+| `hr-talent-acquisition-deep.controller.ts` | `"hr-advanced/talent-acquisition-deep"` | POST | `"requisitions"` | 5 | 0 | 0 | no |
+| `hr-talent-acquisition-deep.controller.ts` | `"hr-advanced/talent-acquisition-deep"` | GET | `"requisitions"` | 5 | 0 | 0 | no |
+| `hr-talent-acquisition-deep.controller.ts` | `"hr-advanced/talent-acquisition-deep"` | POST | `"offer-letters"` | 5 | 0 | 0 | no |
+| `hr-talent-acquisition-deep.controller.ts` | `"hr-advanced/talent-acquisition-deep"` | GET | `"candidate-match/:candidateId"` | 5 | 0 | 0 | no |
+| `hr-talent-acquisition-deep.controller.ts` | `"hr-advanced/talent-acquisition-deep"` | GET | `"funnel-analytics"` | 5 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | GET | `"learning-courses"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | GET | `"learning-courses/:id"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | POST | `"learning-courses"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | PATCH | `"learning-courses/:id"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | DELETE | `"learning-courses/:id"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | GET | `"learning-modules"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | POST | `"learning-modules"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | PATCH | `"learning-modules/:id"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | DELETE | `"learning-modules/:id"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | GET | `"learning-enrollments"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | POST | `"learning-enrollments"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | PATCH | `"learning-enrollments/:id/status"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | PATCH | `"learning-enrollments/:id/progress"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | GET | `"certifications"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | POST | `"certifications"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | PATCH | `"certifications/:id"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | DELETE | `"certifications/:id"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | GET | `"certifications/expiring"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | GET | `"skills"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | POST | `"skills"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | PATCH | `"skills/:id"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | DELETE | `"skills/:id"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | GET | `"skill-gap-analyses"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | POST | `"skill-gap-analyses"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | PATCH | `"skill-gap-analyses/:id"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | PATCH | `"skill-gap-analyses/:id/close"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | GET | `"career-paths"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | POST | `"career-paths"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | PATCH | `"career-paths/:id"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | POST | `"career-paths/:id/requirements"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | GET | `"mentoring-programs"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | POST | `"mentoring-programs"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | PATCH | `"mentoring-programs/:id"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | GET | `"mentoring-sessions"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | POST | `"mentoring-sessions"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | PATCH | `"mentoring-sessions/:id"` | 37 | 0 | 0 | no |
+| `hr-talent.controller.ts` | `"hr-advanced/talent"` | PATCH | `"mentoring-sessions/:id/complete"` | 37 | 0 | 0 | no |
+| `hr-time-attendance-deep.controller.ts` | `"hr-advanced/time-attendance-deep"` | POST | `"geo-clock-in"` | 4 | 0 | 0 | no |
+| `hr-time-attendance-deep.controller.ts` | `"hr-advanced/time-attendance-deep"` | POST | `"shift-swaps"` | 4 | 0 | 0 | no |
+| `hr-time-attendance-deep.controller.ts` | `"hr-advanced/time-attendance-deep"` | GET | `"overtime-calculator"` | 4 | 0 | 0 | no |
+| `hr-time-attendance-deep.controller.ts` | `"hr-advanced/time-attendance-deep"` | GET | `"meal-break-compliance"` | 4 | 0 | 0 | no |
+| `hr-workforce-analytics-deep.controller.ts` | `"hr-advanced/workforce-analytics-deep"` | POST | `"flight-risk-rules"` | 6 | 0 | 0 | no |
+| `hr-workforce-analytics-deep.controller.ts` | `"hr-advanced/workforce-analytics-deep"` | GET | `"flight-risk-rules"` | 6 | 0 | 0 | no |
+| `hr-workforce-analytics-deep.controller.ts` | `"hr-advanced/workforce-analytics-deep"` | GET | `"attrition-heatmap"` | 6 | 0 | 0 | no |
+| `hr-workforce-analytics-deep.controller.ts` | `"hr-advanced/workforce-analytics-deep"` | GET | `"dei-equity-parity"` | 6 | 0 | 0 | no |
+| `hr-workforce-analytics-deep.controller.ts` | `"hr-advanced/workforce-analytics-deep"` | GET | `"span-of-control"` | 6 | 0 | 0 | no |
+| `hr-workforce-analytics-deep.controller.ts` | `"hr-advanced/workforce-analytics-deep"` | GET | `"headcount-budget-variance"` | 6 | 0 | 0 | no |
+
