@@ -1,5 +1,11 @@
 # Developer Platform
 
+## Strategic plan
+
+- [Advanced customization target architecture and delivery plan](ADVANCED-CUSTOMIZATION-PLAN.md)
+- [Artifact portability matrix](ARTIFACT-PORTABILITY-MATRIX.md)
+- [Phase 1 pilot acceptance contract](PILOT-ACCEPTANCE.md)
+
 Platform for extension developers, integration engineers and tenant technical administrators. It owns developer portal, API discovery, credentials, SDKs, extension packaging, capability declaration, sandbox execution and diagnostics.
 
 Primary implementation: `developer-platform`, `sdk`, `extension-api`, `sandbox`.
