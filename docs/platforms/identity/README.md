@@ -10,6 +10,7 @@ Current risk: Identity data ownership and administration boundaries span tenant/
 
 ## Authoritative suite
 
+- [Customer onboarding, unified login and IAM plan](CUSTOMER_ONBOARDING_AND_IAM_PLAN.md)
 - [PRD](PRD.md)
 - [Requirements](REQUIREMENTS.md)
 - [Architecture/TRD](ARCHITECTURE.md)
