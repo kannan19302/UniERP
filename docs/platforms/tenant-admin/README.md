@@ -9,6 +9,6 @@ localization, integrations, workflows, retention, audit and subscription configu
 `settings/super-admin` contradict the intended tenant boundary and are treated as a gap pending authorization
 and ownership inspection.
 
-Documents: [PRD](PRD.md), [requirements](REQUIREMENTS.md), [architecture](ARCHITECTURE.md),
+Documents: [PCC and OCC execution plan](../platform-admin-os/PCC_OCC_ARCHITECTURE_AND_EXECUTION_PLAN.md), [PRD](PRD.md), [requirements](REQUIREMENTS.md), [architecture](ARCHITECTURE.md),
 [contracts](CONTRACTS.md), [security](SECURITY.md), [experience](EXPERIENCE.md),
 [operations](OPERATIONS.md), [traceability](TRACEABILITY.md).

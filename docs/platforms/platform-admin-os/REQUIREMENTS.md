@@ -8,6 +8,10 @@
 - `PAO-FR-004`: Operators shall manage provider roles, permissions, sessions, authentication policy and audit review.
 - `PAO-FR-005`: Operators shall govern marketplace publication, versions, reviews, approvals and installations.
 - `PAO-FR-006`: Operators shall inspect billing plans, subscriptions, invoices, payments, revenue and usage.
+- `PAO-FR-007`: The provider control plane shall expose one non-overlapping application boundary for each canonical PCC capability: platform operations, platform security, organization identity governance, subscription operations, entitlement and license authority, revenue and billing operations, key and secrets authority, API traffic control, governance and compliance, security intelligence, mobile platform operations, desktop platform operations, global configuration, developer ecosystem operations, knowledge and adoption, platform intelligence, marketplace operations, tenant and customer lifecycle, cloud infrastructure, connector operations, AI platform governance, and support operations.
+- `PAO-FR-008`: Provider-only tenant lifecycle commands shall remain outside every organization control-center route and permission namespace.
+- `PAO-FR-009`: Permanent tenant purge shall require completed offboarding, elapsed retention, no active legal hold, explicit purge confirmation, and two-person approval or an audited break-glass justification.
+- `PAO-FR-010`: Every PCC application shall declare a stable application id, entry route, permission namespace, resource ownership, event family, help topic, telemetry namespace, and supported channel set in the shared control-center catalog.
 
 ## System behavior
 
@@ -25,8 +29,8 @@
 - `PAO-NFR-004`: Recovery procedures shall have tested RTO/RPO targets.
 - `PAO-NFR-005`: Secrets and personal data shall never appear in client logs or telemetry.
 
-## Current gaps
+## Verification obligations
 
-- Route inventory is not yet mapped one-to-one to backing APIs and permissions.
-- Four observed test files do not provide adequate coverage for the exposed control-plane breadth.
-- Provider-versus-tenant responsibility is contradicted by tenant-admin routes labelled `super-admin`.
+- Route-to-application ownership, provider/organization boundary checks, and complete manifest coverage shall be enforced by repository gates.
+- Each application remains unverified until its UI, API, persistence, authorization, audit, telemetry, failure, and recovery evidence is linked in traceability.
+- Planned mobile and desktop operations surfaces shall not be advertised as active until their command and evidence paths exist.

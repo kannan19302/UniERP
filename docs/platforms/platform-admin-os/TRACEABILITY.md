@@ -2,10 +2,13 @@
 
 | Requirement | Architecture/control | Implementation evidence | Test evidence | Status | Gap |
 | --- | --- | --- | --- | --- | --- |
-| PAO-BR-001 | separate provider trust boundary | provider and tenant apps are separate repositories | no boundary test identified | PARTIAL | tenant-admin exposes `super-admin` routes |
-| PAO-FR-001 | lifecycle command/state model | tenant/provision routes observed; API `saas`/`admin` modules observed | `e2e/provision.spec.ts` exists; assertions not yet audited | UNVERIFIED | map UI → API → persistence |
+| PAO-BR-001 | separate provider trust boundary | provider and tenant apps are separate repositories; provider-only OCC routes removed; canonical route-ownership registry in `unierp-workspace` | `check:control-center-boundaries` reports zero violations | VERIFIED | continue gate in CI |
+| PAO-FR-001 | lifecycle command/state model | PCC configuration surface calls suspend, restore, offboard, cancel and purge APIs; API persists lifecycle events and uses durable jobs for suspend/restore | 21 tenant lifecycle service tests plus provider API-client tests | PARTIAL | add browser workflow and recovery-path evidence |
+| PAO-FR-007 | canonical PCC application boundaries | 22 PCC entries in `unierp-contracts` catalog and provider shell manifest | catalog, manifest and route-ownership gates | VERIFIED | application-level behavior remains traced separately |
+| PAO-FR-009 | guarded permanent purge | API enforces offboarding state, retention expiry, four legal-hold sources, confirmation header and two-person/break-glass guard | lifecycle refusal tests and platform-permission gate | PARTIAL | add integration test against a real database and approval record |
+| PAO-FR-010 | shared application manifest contract | `unierp-contracts/src/control-center-manifest.ts`; provider shell consumes all PCC manifests | `check:control-center-manifests`; provider manifest unit tests | VERIFIED | migrate legacy permissions to canonical namespaces |
 | PAO-FR-003 | operations read/command models | ops and infrastructure pages observed | `e2e/console.spec.ts` exists | UNVERIFIED | prove non-mock data and failure behavior |
-| PAO-SEC-001 | OIDC + provider entitlement | IDP OIDC and platform-entitlement services observed | IDP service tests observed | PARTIAL | end-to-end provider entitlement test missing from inspected evidence |
+| PAO-SEC-001 | OIDC + provider entitlement | hosted OIDC session shell is the only provider sign-in path; retired local super-admin token-minting route removed | provider production build and session-shell tests | PARTIAL | add end-to-end provider entitlement and MFA-negative browser tests |
 | PAO-SEC-003 | server authorization | auth package dependency and IDP guards observed | guard tests exist in IDP | PARTIAL | endpoint permission inventory not mapped |
 | PAO-UX-004 | design-system + WCAG | UI package dependency declared | no PAO accessibility tests identified | GAP | add critical-workflow a11y evidence |
 | PAO-NFR-004 | tested recovery | infra routes observed | no PAO recovery exercise evidence identified | GAP | define and execute RTO/RPO tests |
@@ -42,6 +45,4 @@ These requirements are linked to their owning architecture and live repository b
 | PAO-UX-003 | [owning architecture](ARCHITECTURE.md) | [repository baseline](../../evidence/IMPLEMENTATION_BASELINE.md) | [test inventory](../../evidence/TEST_INVENTORY.md) — boundary/assertions not mapped | GAP | inspect mechanism and behavioral assertions |
 | PAO-UX-005 | [owning architecture](ARCHITECTURE.md) | [repository baseline](../../evidence/IMPLEMENTATION_BASELINE.md) | [test inventory](../../evidence/TEST_INVENTORY.md) — boundary/assertions not mapped | GAP | inspect mechanism and behavioral assertions |
 | PAO-UX-006 | [owning architecture](ARCHITECTURE.md) | [repository baseline](../../evidence/IMPLEMENTATION_BASELINE.md) | [test inventory](../../evidence/TEST_INVENTORY.md) — boundary/assertions not mapped | GAP | inspect mechanism and behavioral assertions |
-
-
 

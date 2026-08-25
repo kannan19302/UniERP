@@ -19,6 +19,7 @@ that every control-plane page performs a real, authorized provider operation.
 
 ## Suite
 
+- [PCC and OCC architecture and execution plan](PCC_OCC_ARCHITECTURE_AND_EXECUTION_PLAN.md)
 - [Product requirements](PRD.md)
 - [System requirements](REQUIREMENTS.md)
 - [Architecture and TRD](ARCHITECTURE.md)
