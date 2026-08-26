@@ -1,0 +1,169 @@
+{
+  "$schema": "./AI_AGENT_PROTOCOL.schema.json",
+  "protocol": "unierp-ai-agent-development-protocol",
+  "version": "1.1.0",
+  "status": "active",
+  "providerNeutral": true,
+  "entrypoint": "AGENTS.md",
+  "entrypointMarker": "UniERP-Agent-Protocol: 1.1.0",
+  "workspaceFile": "UniERP.code-workspace",
+  "governanceSources": {
+    "AGENTS.md": "unierp-workspace/governance/AGENTS.md",
+    "UniERP.code-workspace": "unierp-workspace/governance/UniERP.code-workspace"
+  },
+  "workspaceDiscoverySettings": {
+    "chat.useAgentsMdFile": true,
+    "chat.includeReferencedInstructions": true
+  },
+  "repositoryPlatformMap": "unierp-platform/docs/standards/AI_REPOSITORY_PLATFORM_MAP.json",
+  "cycleStatusTemplate": "unierp-platform/docs/standards/AI_CYCLE_STATUS_TEMPLATE.md",
+  "playbooksDocument": "unierp-platform/docs/standards/AI_AGENT_PLAYBOOKS.md",
+  "prAttestationTemplate": "unierp-platform/docs/standards/AI_PR_ATTESTATION_TEMPLATE.md",
+  "prAttestationMarker": "UniERP-AI-PR-Attestation: 1.1.0",
+  "changelogDocument": "unierp-platform/docs/standards/AI_AGENT_PROTOCOL_CHANGELOG.md",
+  "conformanceLedger": "unierp-platform/docs/standards/AI_AGENT_CONFORMANCE_LEDGER.md",
+  "changeClassifier": "unierp-workspace/scripts/classify-ai-change.mjs",
+  "canonicalDocument": "unierp-platform/docs/standards/AI_AGENT_DEVELOPMENT_PROTOCOL.md",
+  "changeContractTemplate": "unierp-platform/docs/standards/AI_CHANGE_CONTRACT_TEMPLATE.md",
+  "authority": [
+    "explicit-current-human-direction",
+    "unierp-platform/docs/adr",
+    "unierp-platform/docs/platforms",
+    "unierp-platform/docs/standards",
+    "AGENTS.md",
+    "repository-local-instructions-and-configuration"
+  ],
+  "riskClasses": {
+    "R0": {
+      "name": "advisory",
+      "mutationAllowed": false,
+      "changeContractRequired": false,
+      "explicitHumanAuthorizationRequired": false
+    },
+    "R1": {
+      "name": "local",
+      "mutationAllowed": true,
+      "changeContractRequired": false,
+      "explicitHumanAuthorizationRequired": false
+    },
+    "R2": {
+      "name": "coordinated",
+      "mutationAllowed": true,
+      "changeContractRequired": true,
+      "explicitHumanAuthorizationRequired": false
+    },
+    "R3": {
+      "name": "restricted",
+      "mutationAllowed": false,
+      "changeContractRequired": true,
+      "explicitHumanAuthorizationRequired": true
+    }
+  },
+  "requiredDomains": [
+    "core",
+    "governance",
+    "planning",
+    "architecture",
+    "code",
+    "data",
+    "api-contracts-events",
+    "auth-tenancy",
+    "security",
+    "privacy",
+    "ui-ux",
+    "accessibility",
+    "testing",
+    "operations",
+    "observability",
+    "performance-resilience",
+    "supply-chain",
+    "source-control-review",
+    "documentation-traceability",
+    "completion-handoff",
+    "cycle-status-honesty",
+    "multi-agent-coordination"
+  ],
+  "rules": [
+    { "id": "AIP-CORE-001", "domain": "core", "summary": "Apply authority order and surface conflicts." },
+    { "id": "AIP-CORE-002", "domain": "core", "summary": "Inspect repository evidence before proposing or editing." },
+    { "id": "AIP-CORE-003", "domain": "core", "summary": "Stay in scope and preserve unrelated work." },
+    { "id": "AIP-CORE-004", "domain": "core", "summary": "Report facts, inference, evidence, and completion honestly." },
+    { "id": "AIP-STATUS-001", "domain": "cycle-status-honesty", "summary": "Publish one exact evidence-backed status for every cycle and say plainly when work is not done." },
+    { "id": "AIP-STATUS-002", "domain": "cycle-status-honesty", "summary": "Keep designed, implemented, tested, integrated, deployed, and released states separate." },
+    { "id": "AIP-HUMAN-001", "domain": "governance", "summary": "Obtain exact human authorization before restricted actions." },
+    { "id": "AIP-GOV-001", "domain": "governance", "summary": "Name the accountable platform and contract owner." },
+    { "id": "AIP-GOV-002", "domain": "architecture", "summary": "Extend the existing semantic owner instead of duplicating truth." },
+    { "id": "AIP-PLAN-001", "domain": "planning", "summary": "Create a written change contract for R2 and R3 work." },
+    { "id": "AIP-CODE-001", "domain": "code", "summary": "Follow repository formatter, lint, static analysis, typecheck, and build conventions." },
+    { "id": "AIP-CODE-002", "domain": "code", "summary": "Keep production code typed, cohesive, deterministic, and explicit about failure." },
+    { "id": "AIP-DATA-001", "domain": "data", "summary": "Define ownership, isolation, lifecycle, constraints, compatibility, and migration proof." },
+    { "id": "AIP-API-001", "domain": "api-contracts-events", "summary": "Publish one versioned contract and prove provider/consumer compatibility." },
+    { "id": "AIP-AUTH-001", "domain": "auth-tenancy", "summary": "Authenticate and authorize all protected scopes server-side with deny-by-default behavior." },
+    { "id": "AIP-SEC-001", "domain": "security", "summary": "Preserve secure defaults and threat-model changed trust boundaries." },
+    { "id": "AIP-PRIV-001", "domain": "privacy", "summary": "Minimize and govern personal, financial, and regulated data." },
+    { "id": "AIP-UX-001", "domain": "ui-ux", "summary": "Use the owned design system and implement complete workflow states." },
+    { "id": "AIP-A11Y-001", "domain": "accessibility", "summary": "Meet WCAG 2.2 AA with automated and manual evidence." },
+    { "id": "AIP-QA-001", "domain": "testing", "summary": "Prove every changed claim with a test at the matching boundary." },
+    { "id": "AIP-QA-002", "domain": "testing", "summary": "Never weaken, skip, or manipulate quality gates to obtain a pass." },
+    { "id": "AIP-OPS-001", "domain": "operations", "summary": "Make deployable behavior observable, bounded, and safely reversible." },
+    { "id": "AIP-SUPPLY-001", "domain": "supply-chain", "summary": "Evaluate necessity, license, provenance, vulnerabilities, and lockfile impact." },
+    { "id": "AIP-SCM-001", "domain": "source-control-review", "summary": "Preserve the working tree and honor review, CI, signing, and release controls." },
+    { "id": "AIP-COORD-001", "domain": "multi-agent-coordination", "summary": "Give concurrent agents non-overlapping ownership and independently review their output." },
+    { "id": "AIP-DOC-001", "domain": "documentation-traceability", "summary": "Update owning authority and traceability with matching implementation and test evidence." },
+    { "id": "AIP-DONE-001", "domain": "completion-handoff", "summary": "Complete only after artifacts, gates, diff review, and an accurate handoff." }
+  ],
+  "restrictedActions": [
+    "production-or-staging-mutation",
+    "deployment-release-or-publication",
+    "credential-or-secret-operation",
+    "destructive-or-irreversible-data-or-file-operation",
+    "database-reset-rollback-or-tenant-purge",
+    "security-control-or-test-weakening",
+    "breaking-public-contract-or-support-window-reduction",
+    "accepted-adr-reversal-or-ownership-transfer",
+    "external-message-or-external-system-mutation"
+  ],
+  "cycleStatuses": {
+    "DONE": "All in-scope acceptance criteria, artifacts, gates, and diff review are complete; no required work remains.",
+    "PARTIAL": "Useful work is complete but at least one required item remains; this is not done.",
+    "BLOCKED": "A named external dependency or missing authority prevents progress; this is not done.",
+    "FAILED": "The attempted cycle objective was not achieved; this is not done.",
+    "NOT STARTED": "No material work toward the cycle objective was performed; this is not done.",
+    "NOT VERIFIED": "Implementation or claims exist without required proof; this is not done."
+  },
+  "donePredicates": [
+    "all-acceptance-criteria-satisfied",
+    "all-required-artifacts-complete",
+    "all-required-gates-pass",
+    "final-diff-reviewed",
+    "no-required-work-remains",
+    "no-unresolved-high-severity-risk",
+    "completion-report-is-evidence-backed"
+  ],
+  "claimStates": [
+    "designed",
+    "implemented",
+    "tested",
+    "integrated",
+    "deployed",
+    "released"
+  ],
+  "claimEvidenceStates": [
+    "YES",
+    "NO",
+    "PARTIAL",
+    "NOT VERIFIED",
+    "NOT APPLICABLE"
+  ],
+  "completionReport": [
+    "exactly-one-cycle-status",
+    "completed-and-incomplete-items",
+    "claim-states-kept-separate",
+    "outcome",
+    "affected-platforms-repositories-and-files",
+    "contract-schema-auth-privacy-ux-and-operations-impact",
+    "verification-pass-fail-not-run",
+    "compatibility-rollout-migration-and-rollback",
+    "remaining-risks-assumptions-and-human-actions"
+  ]
+}

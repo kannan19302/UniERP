@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:unierp:schema:ai-agent-protocol:1.1",
+  "title": "UniERP AI Agent Protocol Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "protocol",
+    "version",
+    "status",
+    "providerNeutral",
+    "entrypoint",
+    "entrypointMarker",
+    "workspaceFile",
+    "governanceSources",
+    "workspaceDiscoverySettings",
+    "repositoryPlatformMap",
+    "cycleStatusTemplate",
+    "playbooksDocument",
+    "prAttestationTemplate",
+    "prAttestationMarker",
+    "changelogDocument",
+    "conformanceLedger",
+    "changeClassifier",
+    "canonicalDocument",
+    "changeContractTemplate",
+    "authority",
+    "riskClasses",
+    "requiredDomains",
+    "rules",
+    "restrictedActions",
+    "cycleStatuses",
+    "donePredicates",
+    "claimStates",
+    "claimEvidenceStates",
+    "completionReport"
+  ],
+  "properties": {
+    "$schema": { "const": "./AI_AGENT_PROTOCOL.schema.json" },
+    "protocol": { "const": "unierp-ai-agent-development-protocol" },
+    "version": { "type": "string", "pattern": "^[1-9][0-9]*\\.[0-9]+\\.[0-9]+$" },
+    "status": { "const": "active" },
+    "providerNeutral": { "const": true },
+    "entrypoint": { "type": "string", "minLength": 1 },
+    "entrypointMarker": { "type": "string", "minLength": 1 },
+    "workspaceFile": { "type": "string", "minLength": 1 },
+    "governanceSources": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["AGENTS.md", "UniERP.code-workspace"],
+      "properties": {
+        "AGENTS.md": { "type": "string", "minLength": 1 },
+        "UniERP.code-workspace": { "type": "string", "minLength": 1 }
+      }
+    },
+    "workspaceDiscoverySettings": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "type": ["boolean", "string", "number"] }
+    },
+    "repositoryPlatformMap": { "type": "string", "minLength": 1 },
+    "cycleStatusTemplate": { "type": "string", "minLength": 1 },
+    "playbooksDocument": { "type": "string", "minLength": 1 },
+    "prAttestationTemplate": { "type": "string", "minLength": 1 },
+    "prAttestationMarker": { "type": "string", "minLength": 1 },
+    "changelogDocument": { "type": "string", "minLength": 1 },
+    "conformanceLedger": { "type": "string", "minLength": 1 },
+    "changeClassifier": { "type": "string", "minLength": 1 },
+    "canonicalDocument": { "type": "string", "minLength": 1 },
+    "changeContractTemplate": { "type": "string", "minLength": 1 },
+    "authority": { "$ref": "#/$defs/nonEmptyUniqueStrings" },
+    "riskClasses": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["R0", "R1", "R2", "R3"],
+      "properties": {
+        "R0": { "$ref": "#/$defs/riskClass" },
+        "R1": { "$ref": "#/$defs/riskClass" },
+        "R2": { "$ref": "#/$defs/riskClass" },
+        "R3": { "$ref": "#/$defs/riskClass" }
+      }
+    },
+    "requiredDomains": { "$ref": "#/$defs/nonEmptyUniqueStrings" },
+    "rules": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "domain", "summary"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^AIP-[A-Z0-9]+-[0-9]{3}$" },
+          "domain": { "type": "string", "minLength": 1 },
+          "summary": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "restrictedActions": { "$ref": "#/$defs/nonEmptyUniqueStrings" },
+    "cycleStatuses": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["DONE", "PARTIAL", "BLOCKED", "FAILED", "NOT STARTED", "NOT VERIFIED"],
+      "properties": {
+        "DONE": { "type": "string", "minLength": 1 },
+        "PARTIAL": { "type": "string", "minLength": 1 },
+        "BLOCKED": { "type": "string", "minLength": 1 },
+        "FAILED": { "type": "string", "minLength": 1 },
+        "NOT STARTED": { "type": "string", "minLength": 1 },
+        "NOT VERIFIED": { "type": "string", "minLength": 1 }
+      }
+    },
+    "donePredicates": { "$ref": "#/$defs/nonEmptyUniqueStrings" },
+    "claimStates": { "$ref": "#/$defs/nonEmptyUniqueStrings" },
+    "claimEvidenceStates": { "$ref": "#/$defs/nonEmptyUniqueStrings" },
+    "completionReport": { "$ref": "#/$defs/nonEmptyUniqueStrings" }
+  },
+  "$defs": {
+    "nonEmptyUniqueStrings": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "riskClass": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "mutationAllowed",
+        "changeContractRequired",
+        "explicitHumanAuthorizationRequired"
+      ],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "mutationAllowed": { "type": "boolean" },
+        "changeContractRequired": { "type": "boolean" },
+        "explicitHumanAuthorizationRequired": { "type": "boolean" }
+      }
+    }
+  }
+}

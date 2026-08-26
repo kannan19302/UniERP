@@ -5,3 +5,8 @@
 # entry matched nobody and no review was ever requested. An owner that does not
 # resolve fails silently, which is the worst way for a review gate to fail.
 * @kannan19302
+
+# UniERP AI agent protocol governance
+/AGENTS.md @kannan19302
+/.github/pull_request_template.md @kannan19302
+/docs/standards/AI_* @kannan19302

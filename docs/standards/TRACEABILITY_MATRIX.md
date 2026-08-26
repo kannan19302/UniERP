@@ -53,4 +53,38 @@ Every standard requirement is linked to its definition and the live implementati
 | STD-SEC-009 | [definition](SECURITY_BASELINE.md) | [repository baseline](../evidence/IMPLEMENTATION_BASELINE.md) | [test inventory](../evidence/TEST_INVENTORY.md) — enforcement/assertions not mapped | GAP | map enforcing platforms and tests |
 | STD-SEC-010 | [definition](SECURITY_BASELINE.md) | [repository baseline](../evidence/IMPLEMENTATION_BASELINE.md) | [test inventory](../evidence/TEST_INVENTORY.md) — enforcement/assertions not mapped | GAP | map enforcing platforms and tests |
 
+## AI development agent protocol
 
+The protocol is structurally validated by `unierp-workspace/scripts/check-ai-agent-protocol.mjs`. The root
+entrypoint and machine-readable rule catalog are implementation mechanisms; conformance by every agent runtime is
+`PARTIAL` until CI and provider-runtime evidence are attached. No model or vendor self-attestation counts as proof.
+
+| Requirement | Standard/control | Implementation evidence | Test evidence | Status | Gap |
+| --- | --- | --- | --- | --- | --- |
+| AIP-CORE-001 | [definition](AI_AGENT_DEVELOPMENT_PROTOCOL.md) | root `AGENTS.md`; [rule catalog](AI_AGENT_PROTOCOL.json) | `npm run check:ai-agent-protocol` in `unierp-workspace` | PARTIAL | add runtime instruction-load evidence |
+| AIP-CORE-002 | [definition](AI_AGENT_DEVELOPMENT_PROTOCOL.md) | root `AGENTS.md`; [change contract](AI_CHANGE_CONTRACT_TEMPLATE.md) | structural protocol check | PARTIAL | audit completed task evidence |
+| AIP-CORE-003 | [definition](AI_AGENT_DEVELOPMENT_PROTOCOL.md) | root `AGENTS.md`; risk model | structural protocol check | PARTIAL | audit scope/diff preservation |
+| AIP-CORE-004 | [definition](AI_AGENT_DEVELOPMENT_PROTOCOL.md) | evidence vocabulary and completion template | structural protocol check | PARTIAL | audit result accuracy |
+| AIP-STATUS-001 | [definition](AI_AGENT_DEVELOPMENT_PROTOCOL.md) | strict status table; cycle status template and manifest enum | protocol structural and adversarial checks | PARTIAL | gate agent handoffs on exact status fields |
+| AIP-STATUS-002 | [definition](AI_AGENT_DEVELOPMENT_PROTOCOL.md) | separate claim-state table in change contract and manifest | protocol structural and adversarial checks | PARTIAL | audit designed/implemented/tested/integrated/deployed/released claims |
+| AIP-HUMAN-001 | [definition](AI_AGENT_DEVELOPMENT_PROTOCOL.md) | R3 restricted-action catalog | structural protocol check | PARTIAL | integrate approval evidence with runtimes |
+| AIP-GOV-001 | [definition](AI_AGENT_DEVELOPMENT_PROTOCOL.md) | [platform catalog](../PLATFORM_CATALOG.md); change contract | structural protocol check | PARTIAL | audit owner mapping in changes |
+| AIP-GOV-002 | [definition](AI_AGENT_DEVELOPMENT_PROTOCOL.md) | no-duplication rule; change contract search record | structural protocol check | PARTIAL | automate catalog collision checks where possible |
+| AIP-PLAN-001 | [definition](AI_AGENT_DEVELOPMENT_PROTOCOL.md) | [change contract template](AI_CHANGE_CONTRACT_TEMPLATE.md) | structural protocol check | PARTIAL | gate R2/R3 changes on a completed contract |
+| AIP-CODE-001 | [definition](AI_AGENT_DEVELOPMENT_PROTOCOL.md) | repository-local lint/typecheck/build scripts | protocol verification matrix | PARTIAL | connect affected-repository gates in CI |
+| AIP-CODE-002 | [definition](AI_AGENT_DEVELOPMENT_PROTOCOL.md) | coding clauses and repository static analysis | protocol verification matrix | PARTIAL | add cross-repository quality gate evidence |
+| AIP-DATA-001 | [definition](AI_AGENT_DEVELOPMENT_PROTOCOL.md) | [data lifecycle](DATA_LIFECYCLE.md); Prisma/RLS clauses | migration and RLS lanes referenced by verification matrix | PARTIAL | gate every new tenant table and migration |
+| AIP-API-001 | [definition](AI_AGENT_DEVELOPMENT_PROTOCOL.md) | [API compatibility](API_COMPATIBILITY.md); contract clauses | provider/consumer lanes referenced by verification matrix | PARTIAL | connect every published contract consumer |
+| AIP-AUTH-001 | [definition](AI_AGENT_DEVELOPMENT_PROTOCOL.md) | [security baseline](SECURITY_BASELINE.md); trust-boundary clauses | API security and tenant lanes referenced by verification matrix | PARTIAL | attach endpoint-level permission/IDOR evidence |
+| AIP-SEC-001 | [definition](AI_AGENT_DEVELOPMENT_PROTOCOL.md) | [security baseline](SECURITY_BASELINE.md); secure-development clauses | security lanes referenced by verification matrix | PARTIAL | attach threat-model and scan evidence per change |
+| AIP-PRIV-001 | [definition](AI_AGENT_DEVELOPMENT_PROTOCOL.md) | privacy/data minimization clauses; [data lifecycle](DATA_LIFECYCLE.md) | privacy cases required by change contract | PARTIAL | attach data-flow and lifecycle evidence per change |
+| AIP-UX-001 | [definition](AI_AGENT_DEVELOPMENT_PROTOCOL.md) | design-system and complete-state clauses | token/UI/E2E lanes referenced by verification matrix | PARTIAL | enforce on every user-facing repository |
+| AIP-A11Y-001 | [definition](AI_AGENT_DEVELOPMENT_PROTOCOL.md) | [accessibility standard](ACCESSIBILITY.md); WCAG clauses | automated plus manual evidence required | PARTIAL | attach scoped keyboard/screen-reader evidence |
+| AIP-QA-001 | [definition](AI_AGENT_DEVELOPMENT_PROTOCOL.md) | [quality standard](QUALITY_AND_TESTING.md); change contract proof table | affected test lanes in verification matrix | PARTIAL | audit boundary-to-claim match |
+| AIP-QA-002 | [definition](AI_AGENT_DEVELOPMENT_PROTOCOL.md) | anti-bypass clauses | affected test lanes in verification matrix | PARTIAL | add policy checks for skipped/weakened tests |
+| AIP-OPS-001 | [definition](AI_AGENT_DEVELOPMENT_PROTOCOL.md) | [operations standard](RELIABILITY_AND_OPERATIONS.md); delivery clauses | runtime/infra lane referenced by verification matrix | PARTIAL | attach rollout, rollback, SLO, and recovery evidence |
+| AIP-SUPPLY-001 | [definition](AI_AGENT_DEVELOPMENT_PROTOCOL.md) | dependency and provenance clauses | supply-chain evidence required by change contract | PARTIAL | connect license, provenance, SBOM, and vulnerability gates |
+| AIP-SCM-001 | [definition](AI_AGENT_DEVELOPMENT_PROTOCOL.md) | source-control, review, and release clauses | final diff review and CI evidence required by completion gate | PARTIAL | audit agent source-control actions and review evidence |
+| AIP-COORD-001 | [definition](AI_AGENT_DEVELOPMENT_PROTOCOL.md) | multi-agent ownership and independent review clauses | change contract ownership evidence | PARTIAL | add work-packet collision checks where agents run concurrently |
+| AIP-DOC-001 | [definition](AI_AGENT_DEVELOPMENT_PROTOCOL.md) | [documentation governance](DOCUMENTATION_GOVERNANCE.md); completion template | structural protocol check | PARTIAL | gate behavior changes on traceability update |
+| AIP-DONE-001 | [definition](AI_AGENT_DEVELOPMENT_PROTOCOL.md) | completion gate and evidence template | structural protocol check | PARTIAL | audit completed agent handoffs |

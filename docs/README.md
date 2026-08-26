@@ -66,6 +66,10 @@ Cross-platform rules are defined once in `standards/` and referenced, not copied
 See [documentation governance](standards/DOCUMENTATION_GOVERNANCE.md) and the
 [platform catalog](PLATFORM_CATALOG.md).
 
+All AI development agents, independent of provider or runtime, follow the
+[AI agent development protocol](standards/AI_AGENT_DEVELOPMENT_PROTOCOL.md). The workspace root `AGENTS.md`
+is its mandatory discovery entry point.
+
 The dated [implementation baseline](evidence/IMPLEMENTATION_BASELINE.md) records repository-level source and test signals.
 The [requirement traceability coverage matrix](evidence/REQUIREMENT_TRACEABILITY_COVERAGE.md) exposes every linked and unmapped requirement.
 The [polyrepo test inventory](evidence/TEST_INVENTORY.md) records current test-like files and evidence gaps.

@@ -1,0 +1,408 @@
+{
+  "version": "1.0.0",
+  "protocolVersion": "1.1.0",
+  "platformIds": [
+    "PLT-PAO",
+    "PLT-TAD",
+    "PLT-ERP",
+    "PLT-DEV",
+    "PLT-MKT",
+    "PLT-IAM",
+    "PLT-BIZ",
+    "PLT-DS",
+    "PLT-SITE",
+    "PLT-MOB",
+    "PLT-DESK",
+    "PLT-MAR",
+    "PLT-OPS",
+    "CROSS-PLATFORM"
+  ],
+  "repositories": {
+    "unierp-contracts": {
+      "primaryPlatform": "PLT-BIZ",
+      "secondaryPlatforms": [
+        "PLT-DEV",
+        "PLT-IAM",
+        "PLT-PAO",
+        "PLT-TAD",
+        "PLT-ERP"
+      ],
+      "trustPlane": "cross-platform-contract",
+      "requiredGates": [
+        "npm run typecheck",
+        "npm run build",
+        "npm run check:control-centers",
+        "npm run check:control-center-contracts",
+        "npm run check:control-center-manifests"
+      ]
+    },
+    "auth": {
+      "primaryPlatform": "PLT-IAM",
+      "secondaryPlatforms": [],
+      "trustPlane": "identity",
+      "requiredGates": [
+        "npm run lint",
+        "npm test",
+        "npm run build"
+      ]
+    },
+    "config": {
+      "primaryPlatform": "PLT-OPS",
+      "secondaryPlatforms": [],
+      "trustPlane": "runtime",
+      "requiredGates": [
+        "npm run build"
+      ]
+    },
+    "design-system": {
+      "primaryPlatform": "PLT-DS",
+      "secondaryPlatforms": [],
+      "trustPlane": "shared-ui",
+      "requiredGates": [
+        "npm run typecheck",
+        "npm run lint",
+        "npm test",
+        "npm run check:tokens",
+        "npm run check:contrast",
+        "npm run build"
+      ]
+    },
+    "kernel": {
+      "primaryPlatform": "PLT-OPS",
+      "secondaryPlatforms": [],
+      "trustPlane": "runtime",
+      "requiredGates": [
+        "npm run typecheck",
+        "npm test",
+        "npm run build"
+      ]
+    },
+    "sdk": {
+      "primaryPlatform": "PLT-DEV",
+      "secondaryPlatforms": [
+        "PLT-BIZ"
+      ],
+      "trustPlane": "public-developer-contract",
+      "requiredGates": [
+        "npm run typecheck",
+        "npm run build"
+      ]
+    },
+    "service-kit": {
+      "primaryPlatform": "PLT-OPS",
+      "secondaryPlatforms": [
+        "PLT-BIZ"
+      ],
+      "trustPlane": "shared-runtime",
+      "requiredGates": [
+        "npm run typecheck",
+        "npm run lint",
+        "npm test",
+        "npm run build"
+      ]
+    },
+    "shared": {
+      "primaryPlatform": "PLT-OPS",
+      "secondaryPlatforms": [
+        "PLT-IAM",
+        "PLT-BIZ"
+      ],
+      "trustPlane": "shared-runtime",
+      "requiredGates": [
+        "npm run lint",
+        "npm test",
+        "npm run build"
+      ]
+    },
+    "storybook": {
+      "primaryPlatform": "PLT-DS",
+      "secondaryPlatforms": [],
+      "trustPlane": "shared-ui-evidence",
+      "requiredGates": [
+        "npm run build-storybook"
+      ]
+    },
+    "blockchain": {
+      "primaryPlatform": "PLT-BIZ",
+      "secondaryPlatforms": [],
+      "trustPlane": "tenant-business",
+      "requiredGates": [
+        "npm run typecheck",
+        "npm test",
+        "npm run build"
+      ]
+    },
+    "data": {
+      "primaryPlatform": "PLT-BIZ",
+      "secondaryPlatforms": [
+        "PLT-IAM",
+        "PLT-DEV",
+        "PLT-MKT"
+      ],
+      "trustPlane": "authoritative-persistence",
+      "requiredGates": [
+        "npm run db:generate",
+        "npm run typecheck",
+        "npm test",
+        "npm run build"
+      ]
+    },
+    "extension-api": {
+      "primaryPlatform": "PLT-DEV",
+      "secondaryPlatforms": [
+        "PLT-MKT"
+      ],
+      "trustPlane": "public-extension-contract",
+      "requiredGates": [
+        "npm run build"
+      ]
+    },
+    "framework": {
+      "primaryPlatform": "PLT-DS",
+      "secondaryPlatforms": [
+        "PLT-DEV"
+      ],
+      "trustPlane": "shared-ui-runtime",
+      "requiredGates": [
+        "npm run typecheck",
+        "npm run lint",
+        "npm test",
+        "npm run build"
+      ]
+    },
+    "sandbox": {
+      "primaryPlatform": "PLT-DEV",
+      "secondaryPlatforms": [
+        "PLT-MKT"
+      ],
+      "trustPlane": "untrusted-extension-runtime",
+      "requiredGates": [
+        "npm run typecheck",
+        "npm run lint",
+        "npm test",
+        "npm run test:escape",
+        "npm run test:governor",
+        "npm run test:hardening",
+        "npm run build"
+      ]
+    },
+    "api": {
+      "primaryPlatform": "PLT-BIZ",
+      "secondaryPlatforms": [
+        "PLT-PAO",
+        "PLT-TAD",
+        "PLT-ERP",
+        "PLT-DEV",
+        "PLT-MKT",
+        "PLT-IAM",
+        "PLT-SITE"
+      ],
+      "trustPlane": "authoritative-service",
+      "requiredGates": [
+        "npm run typecheck",
+        "npm run lint",
+        "npm test",
+        "npm run security:plane1",
+        "npm run build"
+      ]
+    },
+    "idp": {
+      "primaryPlatform": "PLT-IAM",
+      "secondaryPlatforms": [
+        "PLT-PAO",
+        "PLT-TAD"
+      ],
+      "trustPlane": "identity",
+      "requiredGates": [
+        "npm run architecture:check",
+        "npm run typecheck",
+        "npm run lint",
+        "npm test",
+        "npm run build"
+      ]
+    },
+    "developer-platform": {
+      "primaryPlatform": "PLT-DEV",
+      "secondaryPlatforms": [],
+      "trustPlane": "developer-control",
+      "requiredGates": [
+        "npm run check:nav",
+        "npm run check:tokens",
+        "npm run typecheck",
+        "npm run lint",
+        "npm run test:e2e",
+        "npm run build"
+      ]
+    },
+    "marketing-site": {
+      "primaryPlatform": "PLT-MAR",
+      "secondaryPlatforms": [],
+      "trustPlane": "public",
+      "requiredGates": [
+        "npm run check:tokens",
+        "npm run lint",
+        "npm test",
+        "npm run test:e2e",
+        "npm run build"
+      ]
+    },
+    "marketplace": {
+      "primaryPlatform": "PLT-MKT",
+      "secondaryPlatforms": [
+        "PLT-DEV"
+      ],
+      "trustPlane": "tenant-commerce",
+      "requiredGates": [
+        "npm run check:tokens",
+        "npm run typecheck",
+        "npm run lint",
+        "npm test",
+        "npm run test:e2e",
+        "npm run build"
+      ]
+    },
+    "provider-admin-os": {
+      "primaryPlatform": "PLT-PAO",
+      "secondaryPlatforms": [],
+      "trustPlane": "provider-control",
+      "requiredGates": [
+        "npm run check:tokens",
+        "npm run typecheck",
+        "npm run lint",
+        "npm test",
+        "npm run test:e2e",
+        "npm run build"
+      ]
+    },
+    "tenant-admin": {
+      "primaryPlatform": "PLT-TAD",
+      "secondaryPlatforms": [],
+      "trustPlane": "tenant-control",
+      "requiredGates": [
+        "npm run check:tokens",
+        "npm run typecheck",
+        "npm run lint",
+        "npm test",
+        "npm run test:e2e",
+        "npm run build"
+      ]
+    },
+    "tenant-apps": {
+      "primaryPlatform": "PLT-ERP",
+      "secondaryPlatforms": [],
+      "trustPlane": "tenant-business",
+      "requiredGates": [
+        "npm run check:tokens",
+        "npm run typecheck",
+        "npm run lint",
+        "npm test",
+        "npm run test:e2e:journeys",
+        "npm run build"
+      ]
+    },
+    "tenant-site-template": {
+      "primaryPlatform": "PLT-SITE",
+      "secondaryPlatforms": [],
+      "trustPlane": "public-site-template",
+      "requiredGates": [
+        "npm run build"
+      ]
+    },
+    "tenant-sites": {
+      "primaryPlatform": "PLT-SITE",
+      "secondaryPlatforms": [],
+      "trustPlane": "tenant-publication",
+      "requiredGates": [
+        "npm run check:tokens",
+        "npm run typecheck",
+        "npm run lint",
+        "npm test",
+        "npm run test:e2e",
+        "npm run build"
+      ]
+    },
+    "web-studio": {
+      "primaryPlatform": "PLT-SITE",
+      "secondaryPlatforms": [
+        "PLT-DEV"
+      ],
+      "trustPlane": "tenant-builder",
+      "requiredGates": [
+        "npm run typecheck",
+        "npm run lint",
+        "npm run test:e2e",
+        "npm run build"
+      ]
+    },
+    "desktop-app": {
+      "primaryPlatform": "PLT-DESK",
+      "secondaryPlatforms": [
+        "PLT-ERP"
+      ],
+      "trustPlane": "tenant-client",
+      "requiredGates": [
+        "npm run build",
+        "cargo fmt --check --manifest-path src-tauri/Cargo.toml",
+        "cargo test --manifest-path src-tauri/Cargo.toml"
+      ]
+    },
+    "unierp-mobile": {
+      "primaryPlatform": "PLT-MOB",
+      "secondaryPlatforms": [
+        "PLT-ERP"
+      ],
+      "trustPlane": "tenant-client",
+      "requiredGates": [
+        "flutter analyze",
+        "flutter test"
+      ]
+    },
+    "extensions": {
+      "primaryPlatform": "PLT-MKT",
+      "secondaryPlatforms": [
+        "PLT-DEV"
+      ],
+      "trustPlane": "extension-package",
+      "requiredGates": [
+        "npm run typecheck",
+        "npm run lint",
+        "npm test",
+        "npm run build"
+      ]
+    },
+    "infra": {
+      "primaryPlatform": "PLT-OPS",
+      "secondaryPlatforms": [],
+      "trustPlane": "runtime",
+      "requiredGates": [
+        "format/validate/plan for changed infrastructure",
+        "policy and security scan",
+        "rollback and health proof in non-production"
+      ]
+    },
+    "unierp-workspace": {
+      "primaryPlatform": "PLT-OPS",
+      "secondaryPlatforms": [
+        "CROSS-PLATFORM"
+      ],
+      "trustPlane": "programme-governance",
+      "requiredGates": [
+        "npm run check:ai-agent-protocol",
+        "npm run test:ai-agent-protocol",
+        "npm run check:control-center-boundaries",
+        "npm run check:control-center-manifests"
+      ]
+    },
+    "unierp-platform": {
+      "primaryPlatform": "CROSS-PLATFORM",
+      "secondaryPlatforms": [],
+      "trustPlane": "documentation-authority",
+      "requiredGates": [
+        "npm run check:ai-agent-protocol from ../unierp-workspace",
+        "local Markdown link validation",
+        "git diff --check"
+      ]
+    }
+  }
+}
+
