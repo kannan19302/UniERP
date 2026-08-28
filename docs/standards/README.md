@@ -13,6 +13,7 @@ only platform-specific constraints.
 - [Reliability and operations](RELIABILITY_AND_OPERATIONS.md)
 - [Accessibility](ACCESSIBILITY.md)
 - [AI agent development protocol](AI_AGENT_DEVELOPMENT_PROTOCOL.md)
+- [AI knowledge lifecycle](AI_KNOWLEDGE_LIFECYCLE.md)
 - [AI change contract and evidence template](AI_CHANGE_CONTRACT_TEMPLATE.md)
 - [AI development cycle status template](AI_CYCLE_STATUS_TEMPLATE.md)
 - [AI development playbooks](AI_AGENT_PLAYBOOKS.md)
@@ -23,6 +24,9 @@ only platform-specific constraints.
 The machine-readable conformance profile for development agents is
 [`AI_AGENT_PROTOCOL.json`](AI_AGENT_PROTOCOL.json). The workspace discovery entry point remains the root
 `AGENTS.md`; vendor adapters may point to it but must not redefine this standard.
+
+The project-level `unierp-workspace/governance/skills/unierp-enterprise-brain/` skill provides a provider-neutral operational
+navigation layer over these authorities. It is not a competing product or architecture source of truth.
 
 The manifest is defined by [`AI_AGENT_PROTOCOL.schema.json`](AI_AGENT_PROTOCOL.schema.json), and every repository
 listed by the workspace is assigned through [`AI_REPOSITORY_PLATFORM_MAP.json`](AI_REPOSITORY_PLATFORM_MAP.json).

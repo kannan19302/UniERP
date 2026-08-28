@@ -8,3 +8,4 @@
 
 Canonical failures include unauthenticated, forbidden, validation, conflict, rate limit, dependency unavailable and internal failure, all with safe correlation identifiers. Source-derived endpoint, schema and event inventories remain required before coverage is IMPLEMENTED.
 
+Inbound SSO is governed by the [inbound federation contract](contracts/INBOUND_FEDERATION.md). `SsoConfig` is the canonical record consumed by PLT-IAM; duplicate tenant configuration models are not a federation trust source.

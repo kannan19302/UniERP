@@ -1,6 +1,11 @@
-# API and IDP Controller Inventory
+# API and IDP Controller Inventory — Historical Snapshot
 
-Generated from current Nest controller source on 2026-08-21. HTTP and decorator counts are lexical structural signals. A permission count smaller than route count is a review candidate, not automatic proof of an unguarded endpoint because decorators may be class-level or composed.
+Generated from then-current Nest controller source on 2026-08-21. This retained snapshot is evidence only; it is
+not the authorization source of truth and must not be used to claim current coverage. The active fail-closed
+inventory is `unierp-workspace/scripts/check-http-authorization-inventory.mjs` under FND-P0-005. It derives routes
+from the current workspace estate, requires either `@Public(reason)` or `@Permissions(...)`, and reports a
+permission declaration without an RBAC guard as a blocking gap. HTTP and decorator counts below remain lexical
+structural signals, not proof of record, tenant or runtime authorization.
 
 ## Summary
 
@@ -615,5 +620,4 @@ Generated from current Nest controller source on 2026-08-21. HTTP and decorator 
 
 ## Required follow-up
 
-Resolve composed/class-level guards, enumerate exact method routes and DTOs with an AST-aware generator, and link every endpoint to permission, tenant policy, contract schema and positive/negative tests. `@SkipTenantScope` requires provider/global ownership justification.
-
+Resolve composed/class-level guards, enumerate exact method routes and DTOs with an AST-aware generator, and link every endpoint to permission, tenant policy, contract schema and positive/negative tests. `@SkipTenantScope` requires provider/global ownership justification. The historical snapshot must be refreshed only by replacing it with generated evidence linked to the active checker; do not manually update its counts.

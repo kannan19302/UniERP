@@ -70,6 +70,10 @@ All AI development agents, independent of provider or runtime, follow the
 [AI agent development protocol](standards/AI_AGENT_DEVELOPMENT_PROTOCOL.md). The workspace root `AGENTS.md`
 is its mandatory discovery entry point.
 
+Agents also use the project-level `unierp-workspace/governance/skills/unierp-enterprise-brain/` adapter and follow the
+[AI knowledge lifecycle](standards/AI_KNOWLEDGE_LIFECYCLE.md), ensuring that authoritative knowledge,
+contracts, evidence and operational guidance evolve with the codebase without creating duplicate sources of truth.
+
 The dated [implementation baseline](evidence/IMPLEMENTATION_BASELINE.md) records repository-level source and test signals.
 The [requirement traceability coverage matrix](evidence/REQUIREMENT_TRACEABILITY_COVERAGE.md) exposes every linked and unmapped requirement.
 The [polyrepo test inventory](evidence/TEST_INVENTORY.md) records current test-like files and evidence gaps.
