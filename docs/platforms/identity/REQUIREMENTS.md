@@ -8,6 +8,8 @@
 - `IAM-FR-004`: The platform shall provision and deprovision principals and identities.
 - `IAM-FR-005`: The platform shall evaluate platform, tenant, role and delegated entitlements.
 - `IAM-FR-006`: Inbound OIDC federation shall use a one-time opaque transaction, PKCE, nonce, issuer discovery and cryptographic ID-token validation before provisioning or session issuance. The published [inbound federation contract](contracts/INBOUND_FEDERATION.md) defines the required trust boundary.
+- `IAM-FR-007`: Federation configuration shall have an explicit inactive/unverified/verified/failed lifecycle; every material edit shall invalidate verification, and only a currently verified configuration may be activated.
+- `IAM-FR-008`: Federation client secrets shall be stored in a versioned authenticated-encryption envelope, support current-plus-previous key rotation, and never be returned by read or test APIs.
 
 ## System and non-functional requirements
 

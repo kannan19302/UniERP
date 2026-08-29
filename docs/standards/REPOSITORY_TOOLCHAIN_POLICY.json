@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "standardId": "STD-REP-001",
+  "canonicalPackageScope": "@kannan19302/",
+  "retiredPackageScopes": ["@unerp/"],
+  "javascript": {
+    "nodeEngine": ">=22 <23",
+    "packageManager": "pnpm@9.15.4",
+    "lockfile": "pnpm-lock.yaml",
+    "forbiddenLockfiles": ["package-lock.json", "yarn.lock"]
+  },
+  "retiredExecutablePathPrefixes": [
+    "unierp-api",
+    "unierp-data",
+    "unierp-web",
+    "apps/",
+    "packages/"
+  ],
+  "exceptions": []
+}

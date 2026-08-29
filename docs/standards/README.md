@@ -11,6 +11,7 @@ only platform-specific constraints.
 - [Data lifecycle](DATA_LIFECYCLE.md)
 - [Testing and quality evidence](QUALITY_AND_TESTING.md)
 - [Reliability and operations](RELIABILITY_AND_OPERATIONS.md)
+- [Repository, package and toolchain standard](REPOSITORY_AND_TOOLCHAIN_STANDARD.md)
 - [Accessibility](ACCESSIBILITY.md)
 - [AI agent development protocol](AI_AGENT_DEVELOPMENT_PROTOCOL.md)
 - [AI knowledge lifecycle](AI_KNOWLEDGE_LIFECYCLE.md)

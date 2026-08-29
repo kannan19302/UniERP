@@ -13,11 +13,14 @@ Owner: PLT-IAM. Tenant administrators configure the federation connection throug
 
 ## Lifecycle and security
 
-- A connection is inactive until an administrator validates it through a dedicated connection test and records the result. That lifecycle is not fully implemented yet; an active record without a usable issuer is rejected at runtime.
+- Every new or edited connection is forced inactive and `UNVERIFIED`. The OIDC connection-test route validates the configured issuer, exact discovery metadata and a compatible identified signing key from JWKS, then records `VERIFIED`, `lastVerifiedAt` and the tenant administrator who ran the test. Failure records `FAILED`, clears prior verification and disables the connection. Activation rejects any record without current verification evidence.
+- Administrative lifecycle routes are additive under `/saas-portal/security/sso/:providerType/{test,activate,deactivate}` and require `admin.security.update`. The older `/saas/sso` surface is a compatibility adapter over the same `SsoConfig` record and cannot report synthetic success.
+- The connection test is a metadata/JWKS preflight, not proof of client credentials or a complete browser login. Production acceptance still requires a successful end-to-end federation exercise with the configured provider.
+- OIDC client secrets use an authenticated AES-256-GCM envelope and are never returned by administrative reads. `SSO_CONFIG_ENCRYPTION_KEYS` is a JSON keyring of base64-encoded 32-byte keys and `SSO_CONFIG_ENCRYPTION_ACTIVE_KEY_ID` selects the write key. Reads accept retained previous keys during rotation; plaintext, unknown-key and tampered envelopes fail closed.
 - Endpoint trust is defense in depth. Production networking must also deny federation egress to private, loopback, link-local and metadata addresses through an approved egress control.
 - Federation configuration changes, connection tests, activation, key rotation, login success/failure and JIT provisioning require immutable audit events. Durable audit/outbox implementation remains tracked by FND-P0-006.
-- `TenantSsoConfig` is a legacy duplicate and must not be consumed by identity code. Its migration/retirement is tracked as a data-convergence item; no new federation feature may depend on it.
+- `TenantSsoConfig` is a legacy duplicate and is no longer consumed by active SSO administration, identity or feature-adoption code. Its table is retained pending an explicitly authorized data migration/drop; no new feature may read or write it.
 
 ## Compatibility
 
-The callback endpoints remain additive. Configurations that do not provide a compliant issuer no longer authenticate users; an authorized tenant administrator must correct the configuration before reactivation.
+The callback endpoints remain additive. Migration `20260829010000_sso_connection_verification` disables existing connections and requires authorized tenant administrators to re-save plaintext legacy credentials into encrypted envelopes, run connection preflight and reactivate. Configurations without a compliant issuer do not authenticate users.
