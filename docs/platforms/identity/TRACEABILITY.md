@@ -11,6 +11,7 @@
 | IAM-FR-007 | [inbound federation contract](contracts/INBOUND_FEDERATION.md) | `api/src/modules/saas-portal/services/security.service.ts`; `data/prisma/migrations/20260829010000_sso_connection_verification/migration.sql` | `api/src/modules/saas-portal/tests/security-sso-config.service.spec.ts`; `api/src/modules/saas/tests/sso-config.service.spec.ts` | PARTIAL | SAML verification lifecycle and durable audit remain |
 | IAM-FR-008 / IAM-SEC-008 | authenticated envelope and rotating keyring | `auth/src/configuration-secret.ts`; API/IDP production env validation | `auth/src/configuration-secret.spec.ts`; API/IDP env-schema tests | IMPLEMENTED | operational rotation exercise remains unverified |
 | IAM-UX-004 | shared design/accessibility | UI dependency/use not fully measured | workflow evidence not mapped | UNVERIFIED | run consumer and a11y audit |
+| IAM-UX-006 | hosted-auth experience and server-owned scope resolution | `idp/src/modules/oidc/controllers/login.controller.ts` | `idp/src/modules/oidc/controllers/login.controller.spec.ts` (7 focused tests); compiled desktop and 390 x 844 render review | PARTIAL | ambiguous multi-membership selection still needs the post-authentication chooser; production-candidate manual assistive-technology evidence remains a release gate |
 | IAM-NFR-005 | retention/recovery controls | operational files observed where noted | recovery exercise not mapped | UNVERIFIED | define targets and evidence |
 
 Inspected baseline: IDP has 135 implementation files/26 tests with auth, OAuth, SSO, OIDC authorization/token/session, signing keys, platform entitlements and agent delegation. Auth package has token/session types and 2 tests.
@@ -45,5 +46,3 @@ These requirements are linked to their owning architecture and live repository b
 | IAM-UX-002 | [owning architecture](ARCHITECTURE.md) | [repository baseline](../../evidence/IMPLEMENTATION_BASELINE.md) | [test inventory](../../evidence/TEST_INVENTORY.md) — boundary/assertions not mapped | GAP | inspect mechanism and behavioral assertions |
 | IAM-UX-003 | [owning architecture](ARCHITECTURE.md) | [repository baseline](../../evidence/IMPLEMENTATION_BASELINE.md) | [test inventory](../../evidence/TEST_INVENTORY.md) — boundary/assertions not mapped | GAP | inspect mechanism and behavioral assertions |
 | IAM-UX-005 | [owning architecture](ARCHITECTURE.md) | [repository baseline](../../evidence/IMPLEMENTATION_BASELINE.md) | [test inventory](../../evidence/TEST_INVENTORY.md) — boundary/assertions not mapped | GAP | inspect mechanism and behavioral assertions |
-
-
