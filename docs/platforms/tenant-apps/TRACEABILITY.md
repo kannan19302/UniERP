@@ -9,6 +9,10 @@
 | ERP-NFR-003 | transaction + outbox | outbox module observed | no mapped atomicity test yet | PARTIAL | prove rollback and retry behavior |
 | ERP-SEC-001 | auth/permission/record scope | auth and IDP dependencies exist | auth and journey tests observed | UNVERIFIED | endpoint permission matrix needed |
 | ERP-UX-006 | shared design platform | UI dependency used by client | component test observed | PARTIAL | route-level token/a11y coverage |
+| ERP-UX-007 | [Meridian Workbench ADR](../../adr/ADR-0008-meridian-workbench-design-language.md) and seven floorplans | 701/764 authenticated routes directly import shared UI in 2026-09-01 static census | no route-to-floorplan journey matrix | PARTIAL | classify all routes and migrate page-local composition |
+| ERP-UX-008 | Design Platform shell adaptation contract | root ThemeProvider and shared styles observed | no mapped shell contract test | GAP | root hard-codes light and does not declare `apps` platform identity |
+| ERP-UX-009 | compact expert-workspace requirements | shared DataTable observed on 391 authenticated routes | no production-shaped keyboard/mobile matrix | UNVERIFIED | pilot Finance and Inventory workspaces in real browsers |
+| ERP-UX-010 | supported-state contract | state components and scattered route behavior observed | no all-archetype state evidence | UNVERIFIED | prove representative states per floorplan before rollout |
 
 ## Requirement coverage gaps
 
@@ -48,6 +52,5 @@ These requirements are linked to their owning architecture and live repository b
 | ERP-UX-003 | [owning architecture](ARCHITECTURE.md) | [repository baseline](../../evidence/IMPLEMENTATION_BASELINE.md) | [test inventory](../../evidence/TEST_INVENTORY.md) — boundary/assertions not mapped | GAP | inspect mechanism and behavioral assertions |
 | ERP-UX-004 | [owning architecture](ARCHITECTURE.md) | [repository baseline](../../evidence/IMPLEMENTATION_BASELINE.md) | [test inventory](../../evidence/TEST_INVENTORY.md) — boundary/assertions not mapped | GAP | inspect mechanism and behavioral assertions |
 | ERP-UX-005 | [owning architecture](ARCHITECTURE.md) | [repository baseline](../../evidence/IMPLEMENTATION_BASELINE.md) | [test inventory](../../evidence/TEST_INVENTORY.md) — boundary/assertions not mapped | GAP | inspect mechanism and behavioral assertions |
-
 
 
