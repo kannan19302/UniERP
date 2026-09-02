@@ -12,4 +12,6 @@ Accepted ADRs are immutable except for status and links; a later ADR supersedes 
 | [ADR-0005](ADR-0005-developer-platform-artifact-and-package-lifecycle.md) | Developer artifacts and packages use an owned lifecycle | Accepted |
 | [ADR-0006](ADR-0006-developer-platform-cells-and-runtime-independence.md) | Developer runtime cells preserve isolation and portability | Accepted |
 | [ADR-0007](ADR-0007-developer-platform-compatibility-and-portability.md) | Developer contracts preserve compatibility and portability | Accepted |
-| [ADR-0008](ADR-0008-meridian-workbench-design-language.md) | Meridian Workbench is the UniERP design language | Accepted |
+| [ADR-0008](ADR-0008-meridian-workbench-design-language.md) | Meridian Workbench is the UniERP design language | Superseded by ADR-0009 |
+| [ADR-0009](ADR-0009-strata-enterprise-design-language.md) | Strata Workbench is the Authoritative UniERP Enterprise Design Language | Accepted |
+
