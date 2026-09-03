@@ -8,4 +8,4 @@ on:
 
 jobs:
   ci:
-    uses: kannan19302/unierp-workspace/.github/workflows/reusable-ci.yml@0cc3003b3968c28d220f7ad4521bf0b0923093df
+    uses: kannan19302/unierp-workspace/.github/workflows/reusable-ci.yml@730dacc512d50e5b10ed2b5f6e80bf4d41c9010b
