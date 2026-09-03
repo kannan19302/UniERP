@@ -787,7 +787,7 @@ Only direct dependencies are listed; shared services in §3.2 apply to every app
 | `unierp-platform` | normative documentation authority and evidence | phase tracker or implementation source |
 | `unierp-workspace` | programme scripts/load tests/local orchestration where retained | second product-requirement authority |
 
-`unierp-api` and `unierp-infra` are currently empty directory stubs and receive no ownership. `archives/` contains historical vertical snapshots, `UniERP_scratch/` is scratch material, and `release-artifacts/` contains generated packages; none is an authoritative implementation source. If any becomes active, first give it an explicit catalog role, repository metadata, owner and dependency boundary rather than copying live code into it.
+The retired `unierp-api` and `unierp-infra` directory stubs, historical `archives/` vertical snapshots, `UniERP_scratch/` material, retired `create-unierp/` bootstrap, and generated `release-artifacts/` packages are retained outside the active workspace under the operator backup policy; none is an authoritative implementation source. If any becomes active, first give it an explicit catalog role, repository metadata, owner and dependency boundary rather than copying live code into it.
 
 ### 9.1 Initial service boundaries inside `api`
 

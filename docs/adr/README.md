@@ -14,4 +14,6 @@ Accepted ADRs are immutable except for status and links; a later ADR supersedes 
 | [ADR-0007](ADR-0007-developer-platform-compatibility-and-portability.md) | Developer contracts preserve compatibility and portability | Accepted |
 | [ADR-0008](ADR-0008-meridian-workbench-design-language.md) | Meridian Workbench is the UniERP design language | Superseded by ADR-0009 |
 | [ADR-0009](ADR-0009-strata-enterprise-design-language.md) | Strata Workbench is the Authoritative UniERP Enterprise Design Language | Accepted |
+| [ADR-0010](ADR-0010-platform-north-star-and-polyrepo-boundaries.md) | UniERP Master Platform Goal and Polyrepo Architecture Boundaries | Accepted |
+
 
