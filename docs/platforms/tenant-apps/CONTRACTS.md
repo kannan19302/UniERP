@@ -10,3 +10,7 @@
 
 Actual endpoint, schema and event inventories are `UNVERIFIED` and must be generated from source before contract
 coverage can be claimed.
+
+## Platform Program Contracts
+- [UniERP Analytics Enterprise Program R2 Change Contract](ANALYTICS_CHANGE_CONTRACT.md)
+

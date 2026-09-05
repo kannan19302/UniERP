@@ -15,5 +15,19 @@
   accessible small-screen alternative.
 - `ERP-UX-010`: Route migration shall include loading, empty, partial, stale, error, forbidden, offline and recovery
   states according to the workflow; a successful route render alone is not adoption evidence.
+- `ERP-UX-011`: Analytics workspaces shall implement the Sentra Analytics dialect layered on Meridian Workbench
+  floorplans and Strata DL 2.0 tokens; page composition shall not define parallel button, card or color primitives.
+- `ERP-UX-012`: Numerical analytical data shall declare `font-variant-numeric: tabular-nums lining-nums`, and comparisons
+  shall explicitly state baseline context with directional status indicators.
+- `ERP-UX-013`: Every metric card, chart and analytical report shall expose data freshness timestamps, data steward
+  certification badges, and an inspectable source lineage drawer.
+- `ERP-UX-014`: Mobile and narrow-screen views (<768px) shall implement progressive disclosure (top KPI swipe decks,
+  table-to-card conversions, and bottom sheet filter drawers) instead of indiscriminate card stacking.
+- `ERP-UX-015`: Shell navigation shall be single-source via `ContextBar` (`StrataBar`); duplicate horizontal tab strips
+  (`ModuleTabLayout`) are prohibited.
 
 The route tree provides information-architecture evidence, not usability or accessibility proof.
+
+## Detailed Module Experience Specifications
+- [Sentra Analytics Product & Experience Architecture](ANALYTICS_EXPERIENCE_ARCHITECTURE.md)
+

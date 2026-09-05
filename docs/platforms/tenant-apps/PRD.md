@@ -13,6 +13,15 @@ manufacturing, HR/people, CRM, projects, service, commerce, communication, repor
 - `ERP-BR-004`: Cross-module effects shall preserve a traceable causal chain and idempotency.
 - `ERP-BR-005`: Money shall preserve currency and decimal precision; quantities shall preserve unit semantics.
 - `ERP-BR-006`: Posted/approved records shall be corrected through controlled reversal or amendment, not silent mutation.
+- `ERP-BR-007`: Analytical cockpits and reporting shall derive truthful metrics directly from immutable posted ledger
+  transactions and operational events without simulated or mock data.
+- `ERP-BR-008`: Enterprise business intelligence shall support institutional governance, certified metric dictionaries,
+  and auditor attestation across all business domains.
 
 Success is measured by correct completed business journeys, tenant isolation, reconciliation and recovery—not
 route count or screen availability.
+
+## Related Specifications
+- [Sentra Analytics Product & Experience Architecture](ANALYTICS_EXPERIENCE_ARCHITECTURE.md)
+- [UniERP Analytics Enterprise Program R2 Change Contract](ANALYTICS_CHANGE_CONTRACT.md)
+
