@@ -7,10 +7,8 @@
 - `DS-FR-003`: The platform shall render schema-driven forms and settings safely.
 - `DS-FR-004`: The platform shall provide framework navigation, session and permission primitives.
 - `DS-FR-005`: The platform shall publish stories, usage guidance and visual baselines.
-- `DS-FR-006`: The platform shall publish Meridian light, dark and high-contrast themes from one semantic token
-  contract, with generated cross-platform outputs and compatibility aliases during migration.
-- `DS-FR-007`: The platform shall support comfortable, standard and compact density as semantic workspace modes;
-  table header, body, toolbar, filter and pagination dimensions shall remain synchronized within a mode.
+- `DS-FR-006`: The platform shall publish Strata light (`strata`), dark (`strata-dark`), and high-contrast (`strata-high-contrast`) themes from one semantic token contract, with generated cross-platform outputs (Dart, CSS) and Meridian compatibility aliases during migration.
+- `DS-FR-007`: The platform shall support comfortable (40px), standard (32px), compact (28px), and ultra-compact (24px) density as semantic workspace modes; table header, body, toolbar, filter and pagination dimensions shall remain synchronized within a mode.
 - `DS-FR-008`: The platform shall provide Data, Record, Transaction, Operational, Planning, Settings and Studio
   floorplans with explicit loading, empty, partial, stale, error, forbidden, offline and recovery behavior as
   applicable.
@@ -36,9 +34,7 @@
   intrinsically two-dimensional data, and shall provide an accessible small-screen alternative for complex grids.
 - `DS-NFR-008`: Critical interactive controls shall define and measure production-shaped p50/p95 response,
   rendered-row/DOM and bundle-size budgets before release; an unbounded dataset is prohibited.
-- `DS-NFR-009`: Visual evidence shall cover Meridian light, dark and high contrast; comfortable, standard and
-  compact density; LTR and RTL; supported responsive breakpoints; and representative states using a documented
-  full or pairwise matrix according to risk.
+- `DS-NFR-009`: Visual evidence shall cover Strata light, dark and high contrast (alongside legacy Meridian aliases); comfortable, standard, compact and ultra-compact density; LTR and RTL; supported responsive breakpoints; and representative states using a documented full or pairwise matrix according to risk.
 - `DS-NFR-010`: Package evolution shall remain additive within a major. Removal or semantic break requires a new
   major, named consumers, migration guidance, deprecation telemetry, rollback and explicit owner approval.
 

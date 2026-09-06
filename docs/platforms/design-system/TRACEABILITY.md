@@ -12,25 +12,25 @@
 
 Inspected baseline: Design system has 200 implementation files/30 tests; Storybook 8/3 visual tooling; framework 22/3 with API client, navigation, permissions and provider context.
 
-## Meridian Workbench decision trace
+## Strata Workbench decision trace
 
 | Requirement | Architecture/control | Implementation evidence | Test evidence | Status | Gap |
 | --- | --- | --- | --- | --- | --- |
-| DS-BR-006 | [ADR-0008](../../adr/ADR-0008-meridian-workbench-design-language.md), package layers | categorized subpath exports in `@kannan19302/ui` (33 subpaths) | typecheck, package build, and 166 test suites passing | VERIFIED | package release and publication under human direction |
-| DS-BR-007 | semantic density and floorplans | 3 density modes and 7 formal floorplans | density check, component unit/a11y tests passing | VERIFIED | consumer route-level adoption rolling out |
-| DS-FR-006 | theme/token contract | Meridian light, dark, and high-contrast theme palettes | `check-contrast.mjs` passes 100% WCAG AA across all 3 themes | VERIFIED | none |
-| DS-FR-007 | density family | comfortable, standard, and compact tokens; compact label at 11px | `check-density.mjs` passes min text size and touch target gates | VERIFIED | none |
-| DS-FR-008 | seven floorplans | DataWorkspace, RecordWorkspace, TransactionWorkspace, OperationalWorkspace, PlanningWorkspace, SettingsWorkspace, StudioWorkspace in `@kannan19302/ui/shell` | 5-file uniform anatomies, 100% test pass and zero a11y violations | VERIFIED | none |
+| DS-BR-006 | [ADR-0009](../../adr/ADR-0009-strata-enterprise-design-language.md), package layers | categorized subpath exports in `@kannan19302/ui` (34 subpaths) | typecheck, package build, and 177 test suites (602 tests) passing | VERIFIED | package release and publication under human direction |
+| DS-BR-007 | semantic density and floorplans | 4 density modes (ultra-compact 24px, compact 28px, standard 32px, comfortable 40px) and formal floorplans | density check, component unit/a11y tests passing | VERIFIED | consumer route-level adoption rolling out |
+| DS-FR-006 | theme/token contract | Strata light, dark, and high-contrast theme palettes (with Meridian aliases) | `check-contrast.mjs` passes 100% WCAG AA across all 6 themes | VERIFIED | none |
+| DS-FR-007 | density family | ultra-compact (24px), compact (28px), standard (32px), comfortable (40px); touch target >= 44px on comfortable | `check-density.mjs` passes min text size (>=11px), touch target, and canonical heights | VERIFIED | none |
+| DS-FR-008 | formal floorplans | DataWorkspace, RecordWorkspace, TransactionWorkspace, OperationalWorkspace, PlanningWorkspace, SettingsWorkspace, StudioWorkspace in `@kannan19302/ui/shell` | 5-file uniform anatomies, 100% test pass and zero a11y violations | VERIFIED | none |
 | DS-FR-009 | high-volume controls | Table, VirtualizedTable, PivotGrid, QueryBuilder | component vitest and vitest-axe suites pass | VERIFIED | real-browser E2E journey execution |
-| DS-FR-010 | explicit shell identity | `tenant-apps/app/layout.tsx` configured with `data-theme="meridian"`, `data-density="standard"`, `data-platform="apps"` | token gate passes with 0 regressions; layout typechecks | VERIFIED | none |
-| DS-FR-011 | explicit package subpaths | 33 subpath exports in package.json | typecheck, build, and consumer imports verified | VERIFIED | none |
-| DS-FR-012 | fail-closed conformance inventory | `scripts/generate-inventory.mjs` outputs `dist/component-inventory.json` (146 components, 146 stories, 146 tests, 7 floorplans) | build script executes inventory generation | VERIFIED | none |
-| DS-NFR-006 | readable/operable density | density token sources; compact label at 11px; comfortable target at 44px | `check-density.mjs` gate passes cleanly | VERIFIED | none |
-| DS-NFR-009 | visual matrix | Storybook preview and `discover-stories.ts` configured for `meridian`, `meridian-dark`, `high-contrast` across all 3 densities | `pnpm build-storybook` succeeds in 24.7s with 0 errors | VERIFIED | none |
+| DS-FR-010 | explicit shell identity | `tenant-apps/app/layout.tsx` configured with `data-theme="strata"`, `data-density="compact"`, `data-platform="apps"` | token gate passes with 0 regressions; layout typechecks | VERIFIED | none |
+| DS-FR-011 | explicit package subpaths | 34 subpath exports in package.json | typecheck, build, and consumer imports verified | VERIFIED | none |
+| DS-FR-012 | fail-closed conformance inventory | `scripts/generate-inventory.mjs` outputs `dist/component-inventory.json` (156 components, 156 stories, 156 tests, formal floorplans) | build script executes inventory generation | VERIFIED | none |
+| DS-NFR-006 | readable/operable density | density token sources; ultra-compact clamped at 11px; comfortable target at 44px | `check-density.mjs` gate passes cleanly | VERIFIED | none |
+| DS-NFR-009 | visual matrix | Storybook preview and `discover-stories.ts` configured for `strata`, `strata-dark`, `strata-high-contrast` across all 4 densities | `pnpm build-storybook` succeeds with 0 errors | VERIFIED | none |
 | DS-NFR-010 | additive compatibility | root and subpath exports retained; backward-compatible aliases exported | package build and typechecks pass | VERIFIED | none |
-| DS-UX-006 | Meridian context boundary | `MeridianBar` integrated into shared shell and floorplan components | unit and a11y tests pass | VERIFIED | none |
-| DS-UX-007 | intentional surfaces | 7 formal floorplans replace generic card composition | floorplan stories and tests verified | VERIFIED | route migration across tenant apps |
-| DS-UX-010 | stable type roles | `src/tokens/v2/typography.css` declares Instrument Sans, Inter, Martian Mono | build gate and mobile tokens match | VERIFIED | none |
+| DS-UX-006 | Strata context boundary | `StrataBar` integrated into shared shell and floorplan components (with `MeridianBar` adapter) | unit and a11y tests pass | VERIFIED | none |
+| DS-UX-007 | intentional surfaces | formal floorplans replace generic card composition | floorplan stories and tests verified | VERIFIED | route migration across tenant apps |
+| DS-UX-010 | stable type roles | `src/tokens/v2/typography.css` declares Plus Jakarta Sans/Inter Display, Inter, JetBrains/Geist Mono | build gate and mobile tokens match | VERIFIED | none |
 
 The dated counts above are discovery evidence, not usability claims. They must be regenerated after route,
 component, export or story topology changes.

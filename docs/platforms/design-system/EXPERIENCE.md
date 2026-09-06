@@ -7,25 +7,28 @@ Experience scope: WCAG 2.2 AA, keyboard/focus semantics, theme and density compa
 - `DS-UX-003`: Destructive or irreversible actions shall disclose target, impact and recovery.
 - `DS-UX-004`: Shared patterns shall use the Design Platform and meet WCAG 2.2 AA.
 - `DS-UX-005`: Localization, time, number, currency and unit semantics shall be unambiguous where applicable.
-- `DS-UX-006`: Meridian Workbench shall use operational context—not ornamental styling—as its recognizable
+- `DS-UX-006`: Strata Workbench shall use operational context—not ornamental styling—as its recognizable
   signature, and shall expose actor, tenant, legal entity, organizational scope, period, object and lifecycle state
-  where they affect meaning or authorization.
+  where they affect meaning or authorization (with legacy `MeridianBar` preserved as a drop-in adapter).
 - `DS-UX-007`: Independent cards shall represent independent summaries, comparisons or choices. Records, tables,
   forms and related panels shall otherwise use aligned, separator-led workspace surfaces.
-- `DS-UX-008`: Density shall follow task, device and input mode. Compact is the default recommendation for expert
-  finance, inventory, procurement, manufacturing and operations; standard for CRM, HR, projects and forms; and
-  comfortable for onboarding, touch-first, storefront and public experiences.
+- `DS-UX-008`: Density shall follow task, device and input mode across a 4-tier scale: Ultra-Compact (24px) for
+  general ledgers, financial journals, stock balances; Compact (28px) for operational queues and incident triage;
+  Standard (32px) for default enterprise workflows, CRM, HR, master records; and Comfortable (40px) for onboarding,
+  touch-first POS terminals, and executive overviews.
 - `DS-UX-009`: Status, selection, focus, validation and authorization state shall never rely on colour alone.
-- `DS-UX-010`: Typography roles shall be stable across themes and import paths: Instrument Sans for restrained
-  display hierarchy, Inter for body and business data, and Martian Mono for identifiers and aligned metadata.
+- `DS-UX-010`: Typography roles shall be stable across themes and import paths: Plus Jakarta Sans / Inter Display
+  for clean structural hierarchy, Inter with tabular lining figures for body and business data, and JetBrains Mono /
+  Geist Mono for identifiers, UUIDs, cryptographic hashes, and aligned code.
 
-## Meridian Workbench visual language
+## Strata Workbench visual language
 
-The canonical light palette begins with Graphite `#14191b`, Instrument Teal `#0e6b75`, Porcelain `#f7f6f4`,
-Paper `#ffffff`, Rule `#e2e0db` and Sunken Stone `#eeedea`. Forest, ochre, crimson and indigo-violet are semantic
-status families, not alternate brand accents. Equivalent dark and forced/high-contrast semantics are token-owned.
+The canonical Strata light palette begins with tactile Slate 50 `#f8fafc` ground, elevated cards `#ffffff`, sunken wells `#f1f5f9`,
+hairline 1px micro-borders `#e2e8f0`, and Strata Cobalt `#2563eb` interaction accent. Obsidian dark mode establishes `#09090b` ground,
+`#18181b` card elevated, `#27272a` borders, and `#38bdf8` electric sky accent. High Contrast mode guarantees WCAG AAA 21:1 pure black/white
+with 2px focus indicators. Legacy Meridian tokens (`#14191b`, `#0e6b75`, `#f7f6f4`) are preserved through backward-compatible aliases.
 
-The single expressive element is the **Meridian context boundary**: a compact address-like band or rail that
+The single expressive element is the **Strata context boundary** (`<StrataBar>` / `<MeridianBar>`): a compact address-like band or rail that
 locates the user in organizational and business state. Everything around it is disciplined—strong alignment,
 short labels, tabular numerals, minimal shadow and motion only when it explains a state transition.
 

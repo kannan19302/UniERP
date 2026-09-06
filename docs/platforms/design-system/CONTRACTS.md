@@ -25,8 +25,8 @@ Canonical failures include unauthenticated, forbidden, validation, conflict, rat
 
 Every application shell declares:
 
-- `data-theme`: `meridian`, `meridian-dark` or `high-contrast` after preference resolution;
-- `data-density`: `comfortable`, `standard` or `compact` after accessible resolution;
+- `data-theme`: `strata`, `strata-dark`, or `strata-high-contrast` (with `meridian`, `meridian-dark`, `high-contrast` supported as aliases) after preference resolution;
+- `data-density`: `ultra-compact` (24px), `compact` (28px), `standard` (32px), or `comfortable` (40px) after accessible resolution;
 - `data-platform`: a registered platform identity such as `apps`;
 - locale and direction;
 - design-language compatibility version.
