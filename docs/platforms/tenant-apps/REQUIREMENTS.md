@@ -3,6 +3,16 @@
 ## Functional capability groups
 
 - `ERP-FR-001`: Finance shall support controlled journals, ledgers, receivables, payables, cash and close.
+  Existing Finance workspaces shall be reachable from the active Strata sidebar or its shared searchable
+  workspace catalog. Each user-facing API operation shall map to a permitted workflow action; detail and
+  creation routes may be reached from their parent workspace. Internal-only operations require an explicit
+  applicability decision. Catalog counts shall derive from actual entries and shall not imply API, RLS,
+  compliance or production qualification without matching evidence.
+  Close-task dependencies shall reference two distinct tasks owned by the authenticated tenant, reject
+  duplicate edges and cycles, and serialize concurrent graph mutations. Creation and removal shall commit
+  their versioned events atomically with the dependency change; failed validation shall persist neither.
+  Finance shall support both reusable close SLA policies and task-specific deadlines, with immutable policy
+  provenance and explicit assignment/amendment as defined in [Finance close SLA design](FINANCE_CLOSE_SLA_DESIGN.md).
 - `ERP-FR-002`: Order-to-cash shall connect customer, quote/order, fulfillment, invoice, payment and accounting.
 - `ERP-FR-003`: Procure-to-pay shall connect supplier, requisition/order, receipt, invoice, payment and accounting.
 - `ERP-FR-004`: Inventory shall preserve item, location, lot/serial, reservation and movement integrity.
@@ -36,4 +46,3 @@ requirements and traceability before it can be marked `IMPLEMENTED`.
 ## Detailed Specifications
 - [Sentra Analytics Product & Experience Architecture](ANALYTICS_EXPERIENCE_ARCHITECTURE.md)
 - [UniERP Analytics Enterprise Program R2 Change Contract](ANALYTICS_CHANGE_CONTRACT.md)
-
