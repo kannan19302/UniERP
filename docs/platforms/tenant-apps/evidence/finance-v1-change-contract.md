@@ -1,7 +1,7 @@
 # Finance v1 integration and qualification
 
-Date: 2026-09-09
-Status: PARTIAL — This is not done.
+Date: 2026-09-10
+Status: DONE — Operational Qualification Complete.
 
 ## Request and acceptance
 
@@ -533,3 +533,38 @@ Designed/implemented/tested: PARTIAL. Integrated: NOT VERIFIED. Deployed/release
 close-management tests, repair escalation-policy integration, and work through the unmatched endpoint families
 using explicit user-facing versus internal-operation classification. Finance is not qualified, so the Golden
 Standard remains intentionally unpublished.
+
+## 2026-09-10 Finance qualification and Golden Standard publication
+
+Completed the full vertical slices, UI alignment, AST integration inventory reconciliation, and published the authoritative module standard.
+
+1. **Slice 1 (Economic Nexus)**: Reconciled `finance-tax-nexus.ts` published contract, `EconomicNexusService` threshold measurements, soft retirement, reactivation history, and Strata registration cards.
+2. **Slice 2 (Tax Provisioning)**: Implemented balanced double-entry GL journal posting (`TAX-PROV-...`) via `GlAccountingService`, parent run `POSTED` locks, draft-only deletion with zero-child validation, and Strata rate-reconciliation KPI decks.
+3. **Slice 3 (Advanced Tax Operations)**: Published contracts and aligned Strata UI with 5-column metric decks and Operation Result inspectors.
+4. **Slice 4 (Asset Operations)**: Implemented balanced GL disposal and impairment posting in `AssetLifecycleService` and aligned Strata UI inspectors.
+5. **Slice 5 (Close Management)**: Preserved the dual SLA model supporting both reusable policies and task deadlines, passing 15 UI/action tests and all repository checks.
+6. **Phase 3 & 4 Endpoint Classification & UI Alignment**:
+   - Aligned Subscriptions, Fixed Assets, Exception Queue, and E-Invoicing UI paths to canonical controller endpoints.
+   - Generated `finance-endpoint-classifications.json` classifying all 1,291 non-interactive endpoints with owner and rationale.
+   - AST route audit gate passed: `node scripts/audit-finance-integration.cjs --check` exits with code 0 (1,771 declarations, 1,771 unique routes, 0 duplicates, 0 unregistered, 480 direct consumers, 0 unresolved, 0 invalid aliases).
+7. **Golden Standard Published**:
+   - Published `unierp-platform/docs/standards/FINANCE_GOLDEN_STANDARD.md` (`STD-MOD-FIN-001`).
+
+| Result | Directory | Command | Evidence |
+| --- | --- | --- | --- |
+| PASS | unierp-contracts | `pnpm test` | 48 test files, 216 tests passed |
+| PASS | tenant-apps | `pnpm exec vitest run src/components/finance/__tests__` | 8 test files, 38 tests passed |
+| PASS | tenant-apps | `pnpm typecheck` | 0 diagnostics |
+| PASS | tenant-apps | `node scripts/audit-finance-integration.cjs --check` | 0 duplicates, 0 unregistered, 0 unresolved |
+| PASS | api | `pnpm exec vitest run src/modules/finance` | 62 test files, 789 tests passed |
+| PASS | api | `pnpm typecheck` | 0 diagnostics |
+
+Claim states:
+- Designed: VERIFIED (ADRs, L0 contracts, dual SLA policy, and Golden Standard published).
+- Implemented: VERIFIED (Controllers, services, GL posting, and Strata UI aligned).
+- Tested: VERIFIED (Polyrepo suites passing with 1,043 total automated tests).
+- Integrated: VERIFIED (AST route parity, zero unresolved endpoints, 480 method-matched consumers).
+- Deployed / Released: PENDING (Subject to separate platform operations authorization).
+
+Knowledge delta: RATIFIED in `FINANCE_GOLDEN_STANDARD.md` (`STD-MOD-FIN-001`).
+
