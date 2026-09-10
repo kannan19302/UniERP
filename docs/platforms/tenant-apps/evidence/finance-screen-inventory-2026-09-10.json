@@ -1,0 +1,3818 @@
+{
+  "generatedAt": "2026-09-10T11:32:13.881Z",
+  "scope": "Direct source scan of all finance page.tsx routes; advisory proposals, not runtime proof",
+  "routeCount": 90,
+  "digest": "e9f7d16e73a19415431402592f31982d6e8c74e32855438327ce32712de0b902",
+  "routes": [
+    {
+      "route": "/finance/advanced/1099-reporting",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/1099-reporting/page.tsx",
+      "sha256": "ead9e69a0330486cf385ffd142d54c7cf7360624777abc121be8f38135d6eb41",
+      "lines": 628,
+      "titles": [],
+      "endpointLiterals": [
+        "/finance/advanced/1099-reporting?subtab=${tab}",
+        "/advanced-finance/1099/vendors?taxYear=${taxYear}",
+        "/advanced-finance/1099/forms?taxYear=${taxYear}",
+        "/advanced-finance/1099/batches?taxYear=${taxYear}",
+        "/advanced-finance/1099/summary?taxYear=${taxYear}",
+        "/advanced-finance/1099/vendor-profiles/${vendorId}",
+        "/advanced-finance/1099/vendor-profiles/${vendorId}/tin-match",
+        "/advanced-finance/1099/generate",
+        "/advanced-finance/1099/forms/${id}/mark-ready",
+        "/advanced-finance/1099/forms/${id}/file",
+        "/advanced-finance/1099/batches",
+        "/advanced-finance/1099/batches/${id}/efile",
+        "/finance/advanced/1099-reporting?subtab=vendors",
+        "/finance/advanced/1099-reporting?subtab=forms",
+        "/finance/advanced/1099-reporting?subtab=batches"
+      ],
+      "markers": {
+        "nativeDialog": [
+          165,
+          218
+        ],
+        "localMoneyConversion": [
+          361,
+          370,
+          441,
+          496
+        ],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [
+          15,
+          554
+        ],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "1099 preparation",
+        "layout": "Vendor eligibility/data quality, year/type totals, generated batches and validation results.",
+        "workflow": "Replace native alerts/confirm; identify applicable filing year/format and require authorized submission separately.",
+        "proof": "Prove missing vendor fields, thresholds from effective policy, corrected return linkage and actual file schema."
+      }
+    },
+    {
+      "route": "/finance/advanced/account-reconciliation",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/account-reconciliation/page.tsx",
+      "sha256": "70e3f27ffc93b201fc2ed30aa8af2e858ea73a26cc3746c867ddd75e83941b2a",
+      "lines": 144,
+      "titles": [
+        "Account Reconciliation",
+        "Accounts Matched",
+        "Variances Found",
+        "Total Accounts"
+      ],
+      "endpointLiterals": [
+        "/finance/reports/account-reconciliation?asOfDate=${new Date().toISOString()}"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "GL to subledger reconciliation",
+        "layout": "As-of account comparison with signed GL/subledger/difference and evidence detail.",
+        "workflow": "Do not use absolute value for signed balances or turn load errors into empty success.",
+        "proof": "Prove negative differences remain negative, as-of/book scope matches and variance drill-through explains residuals."
+      }
+    },
+    {
+      "route": "/finance/advanced/accounting-books",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/accounting-books/page.tsx",
+      "sha256": "c546b71945a3b8f491d4fd2ddc711e1760e574df496f4f235cd4d11dfbe0646a",
+      "lines": 888,
+      "titles": [
+        "Delete Mapping Rule"
+      ],
+      "endpointLiterals": [
+        "/advanced-finance/accounting-books/rules",
+        "/advanced-finance/accounts",
+        "/advanced-finance/accounting-books",
+        "/advanced-finance/accounting-books/${book.id}/trial-balance",
+        "/advanced-finance/accounting-books/variance?book1=${book1Id}&book2=${book2Id}",
+        "/advanced-finance/accounting-books/rules/${id}"
+      ],
+      "markers": {
+        "nativeDialog": [
+          208,
+          212,
+          244,
+          249
+        ],
+        "localMoneyConversion": [
+          224,
+          465,
+          635,
+          646,
+          657,
+          659,
+          729,
+          740,
+          751,
+          753,
+          754,
+          856
+        ],
+        "explicitRouteGuard": [
+          17,
+          254,
+          885
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Accounting books and mappings",
+        "layout": "Book list/detail with basis, currency, effective period and mapping-rule table.",
+        "workflow": "Replace native dialogs; show source/destination accounts by name; preview mapping impact and unmapped accounts.",
+        "proof": "Prove same-book invalid mapping, missing accounts, effective dates, signed multiplier and controlled deletion."
+      }
+    },
+    {
+      "route": "/finance/advanced/ai-analytics",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/ai-analytics/page.tsx",
+      "sha256": "3b662245046af6979ea4a53bc019ed06df2dd4f9eedcbb1c02236fe85b5bfe23",
+      "lines": 1072,
+      "titles": [],
+      "endpointLiterals": [
+        "/advanced-finance/ai-analytics/forecast-scenarios",
+        "/advanced-finance/ai-analytics/forecast-lines",
+        "/advanced-finance/ai-analytics/anomaly-detection-runs",
+        "/advanced-finance/ai-analytics/anomaly-results",
+        "/advanced-finance/ai-analytics/gl-coding-suggestions",
+        "/advanced-finance/ai-analytics/nlp-queries",
+        "/advanced-finance/ai-analytics/forecast-scenarios/${id}/generate-lines",
+        "/advanced-finance/ai-analytics/forecast-scenarios/${id}/activate",
+        "/advanced-finance/ai-analytics/anomaly-results/${id}",
+        "/advanced-finance/ai-analytics/gl-coding-suggestions/generate",
+        "/advanced-finance/ai-analytics/gl-coding-suggestions/${id}",
+        "/finance/advanced/ai-analytics?subtab=forecast",
+        "/finance/advanced/ai-analytics?subtab=anomaly",
+        "/finance/advanced/ai-analytics?subtab=glcoding",
+        "/finance/advanced/ai-analytics?subtab=nlp"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          211,
+          634,
+          643,
+          802,
+          811,
+          820,
+          823,
+          913,
+          917
+        ],
+        "explicitRouteGuard": [
+          21,
+          307,
+          1069
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [
+          22,
+          366
+        ],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Financial analytical assistance",
+        "layout": "Forecast/anomaly run list with source scope, model/version, assumptions and review.",
+        "workflow": "Label predictions and uncertainty; show evidence and human decision, never autonomous posting or invented certainty.",
+        "proof": "Prove data availability, reproducible run metadata, reviewer feedback, permission scope and safe failure."
+      }
+    },
+    {
+      "route": "/finance/advanced/allocations",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/allocations/page.tsx",
+      "sha256": "d70552e76b4bf628c09825f9c41bf5d04c46922cf28da0abd2d34cfe6d2e6743",
+      "lines": 829,
+      "titles": [],
+      "endpointLiterals": [
+        "/finance/advanced/allocations?subtab=${tab}",
+        "/advanced-finance/allocations/rules",
+        "/advanced-finance/allocations/runs",
+        "/advanced-finance/accounts",
+        "/advanced-finance/cost-centers",
+        "/advanced-finance/allocations/rules/${id}",
+        "/advanced-finance/allocations/rules/${rule.id}",
+        "/advanced-finance/allocations/rules/${showRun.id}/run",
+        "/advanced-finance/allocations/runs/${id}/post",
+        "/finance/advanced/allocations?subtab=rules",
+        "/finance/advanced/allocations?subtab=runs"
+      ],
+      "markers": {
+        "nativeDialog": [
+          195
+        ],
+        "localMoneyConversion": [
+          177,
+          467
+        ],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [
+          19,
+          274
+        ],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Allocation rules and runs",
+        "layout": "Rule register, source-pool/driver setup, allocation preview and run history.",
+        "workflow": "Expose basis, dimensions, effective date, rounding remainder and destination accounts using lookups.",
+        "proof": "Prove allocated total equals source pool, zero denominator, missing driver, replay and journal lineage."
+      }
+    },
+    {
+      "route": "/finance/advanced/ap-automation",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/ap-automation/page.tsx",
+      "sha256": "531a13eb70af9bd97811f3119b0c31d8f1a3e85106b8502bfbfd6e5113827331",
+      "lines": 475,
+      "titles": [],
+      "endpointLiterals": [
+        "/advanced-finance/payment-schedules",
+        "/advanced-finance/payment-runs",
+        "/advanced-finance/bank-accounts",
+        "/finance/advanced/ap-match-rules"
+      ],
+      "markers": {
+        "nativeDialog": [
+          86,
+          111,
+          130
+        ],
+        "localMoneyConversion": [
+          101,
+          120,
+          370,
+          448
+        ],
+        "explicitRouteGuard": [
+          17,
+          142,
+          472
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "AP scheduling and payment runs",
+        "layout": "Schedules/run queue with due date, bank account, amount, status and exceptions.",
+        "workflow": "Separate proposal, approval, execution and settlement; expose failed items rather than single success toast.",
+        "proof": "Prove duplicate-run protection, approval expiry, funds/currency constraints and item-level retry."
+      }
+    },
+    {
+      "route": "/finance/advanced/ap-match-rules",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/ap-match-rules/page.tsx",
+      "sha256": "36c067bd59bd90c8287dcffd2089deef865c55d6c092ee7a2b783046d0033b81",
+      "lines": 335,
+      "titles": [
+        "Edit",
+        "Delete"
+      ],
+      "endpointLiterals": [
+        "/advanced-finance/payables/match-rules",
+        "/advanced-finance/payables/match-rules/${editingId}",
+        "/advanced-finance/payables/match-rules/${id}"
+      ],
+      "markers": {
+        "nativeDialog": [
+          92
+        ],
+        "localMoneyConversion": [
+          70,
+          71,
+          267,
+          280
+        ],
+        "explicitRouteGuard": [
+          15,
+          109,
+          332
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Invoice matching rules",
+        "layout": "Rule table with supplier/category scope, quantity/price tolerance and effective dates.",
+        "workflow": "Replace terse edit/delete with impact-aware operations; simulate against example bill lines before activating.",
+        "proof": "Prove overlapping rule precedence, unauthorized tolerance changes and auditable version activation."
+      }
+    },
+    {
+      "route": "/finance/advanced/ar-aging",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/ar-aging/page.tsx",
+      "sha256": "c3f96757676b51d6aa64485a174a4061df7b42ad71378f8ad9f44c0832a23ddd",
+      "lines": 407,
+      "titles": [],
+      "endpointLiterals": [
+        "/advanced-finance/ar-aging"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          349,
+          373
+        ],
+        "explicitRouteGuard": [
+          16,
+          143,
+          404
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "AR aging analysis",
+        "layout": "As-of customer/invoice aging matrix with open balance and dispute drill-down.",
+        "workflow": "One aging bucket definition and currency policy shared with AR overview and exports.",
+        "proof": "Prove exact boundary days, credits/partial payments, as-of allocation and aggregate reconciliation."
+      }
+    },
+    {
+      "route": "/finance/advanced/ar-automation",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/ar-automation/page.tsx",
+      "sha256": "98f5f88b1599e9e314f312912ac0a2e80fcfcca66e97e49deaa3df0d5f44a9c4",
+      "lines": 594,
+      "titles": [
+        "Delete"
+      ],
+      "endpointLiterals": [
+        "/advanced-finance/dunning-levels",
+        "/advanced-finance/dunning-runs",
+        "/advanced-finance/dunning-stats",
+        "/advanced-finance/dunning-levels/${id}",
+        "/advanced-finance/dunning/invoices/${pauseInvoiceId}/pause",
+        "/advanced-finance/dunning/invoices/${pauseInvoiceId}/resume"
+      ],
+      "markers": {
+        "nativeDialog": [
+          88,
+          110,
+          115,
+          121,
+          127,
+          137,
+          142,
+          157,
+          163
+        ],
+        "localMoneyConversion": [
+          104,
+          465
+        ],
+        "explicitRouteGuard": [
+          23,
+          176,
+          591
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Collections and dunning automation",
+        "layout": "Dunning levels, eligibility preview, run history and exclusion controls.",
+        "workflow": "Separate rule setup from outbound execution; preview recipients/content and respect holds/disputes.",
+        "proof": "Prove no unauthorized sends, duplicate-run prevention, exclusion reasons and delivery outcomes."
+      }
+    },
+    {
+      "route": "/finance/advanced/asset-operations",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/asset-operations/page.tsx",
+      "sha256": "d4808635525c2cabe4433aab3f371c5dd51fd915d40d9b73e601374f7e0acf0c",
+      "lines": 164,
+      "titles": [
+        "Asset operation sections"
+      ],
+      "endpointLiterals": [
+        "/advanced-finance/assets"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          47,
+          48,
+          49,
+          53,
+          56,
+          59,
+          62
+        ],
+        "explicitRouteGuard": [
+          6,
+          78,
+          162
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Advanced asset operations",
+        "layout": "Operation sections and run history over owned asset contracts.",
+        "workflow": "Preserve specialized operation inputs; review selection, effective date, valuation and required approval.",
+        "proof": "Prove multi-asset partial outcomes, tenant scope, idempotency and lifecycle-specific accounting evidence."
+      }
+    },
+    {
+      "route": "/finance/advanced/audit-logs",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/audit-logs/page.tsx",
+      "sha256": "2dac2d78479f73ccdbe46c334ec5d346f0cb1b637d6376f941a1e52cd14be781",
+      "lines": 493,
+      "titles": [],
+      "endpointLiterals": [
+        "/advanced-finance/sox/summary",
+        "/advanced-finance/sox/rules",
+        "/advanced-finance/sox/conflicts",
+        "/advanced-finance/sox/violations"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [],
+        "explicitRouteGuard": [
+          14,
+          113,
+          490
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Finance audit and control evidence",
+        "layout": "Searchable audit stream and explicitly separate SOX rules/conflicts sections.",
+        "workflow": "Page name must match actual controls surface; show actor/action/record/time/outcome and resolution history.",
+        "proof": "Prove read-only audit integrity, redaction, bounded export, filter persistence and permission-controlled conflict resolution."
+      }
+    },
+    {
+      "route": "/finance/advanced/bank-accounts",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/bank-accounts/page.tsx",
+      "sha256": "9e2e307eac83c5b22df69a1aee8d6e5909aadb05e0e788f22737ffcb510598ea",
+      "lines": 42,
+      "titles": [
+        "Bank Accounts",
+        "Add Bank Account"
+      ],
+      "endpointLiterals": [],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [],
+        "explicitRouteGuard": [
+          5,
+          12,
+          39
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Bank account master",
+        "layout": "Masked account register/detail with entity, currency, ledger mapping, status and reconciliation setup.",
+        "workflow": "Use verified reference lookups; expose ownership and change approval without leaking full sensitive identifiers.",
+        "proof": "Prove invalid mapping, duplicate identity, role restriction, masking and historical transaction compatibility."
+      }
+    },
+    {
+      "route": "/finance/advanced/bank-feeds",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/bank-feeds/page.tsx",
+      "sha256": "6320a7f1a62cf6271b386353f65b863a758606b970674b65f7b5761bfdd92888",
+      "lines": 692,
+      "titles": [],
+      "endpointLiterals": [
+        "/advanced-finance/bank-statements/parse",
+        "/advanced-finance/bank-statements/import",
+        "/advanced-finance/bank-feeds/connections",
+        "/advanced-finance/bank-accounts",
+        "/advanced-finance/bank-feeds/connections/${id}",
+        "/advanced-finance/bank-feeds/connections/${id}/sync",
+        "/finance/advanced/bank-recon"
+      ],
+      "markers": {
+        "nativeDialog": [
+          141,
+          151,
+          168,
+          182,
+          188,
+          197,
+          207,
+          210,
+          211
+        ],
+        "localMoneyConversion": [
+          391
+        ],
+        "explicitRouteGuard": [
+          7,
+          226,
+          689
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Bank feed connections and import",
+        "layout": "Connection health, sync history, statement import preview and transaction list.",
+        "workflow": "Show provider/source, last successful sync, reauthorization, duplication and mapping errors; never fabricate credentials.",
+        "proof": "Prove malformed file/duplicate import, connection expiry, retry idempotency and no secret exposure."
+      }
+    },
+    {
+      "route": "/finance/advanced/bank-recon",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/bank-recon/page.tsx",
+      "sha256": "486154c8647d5cd4756e9cc7f519bb74d5731a12ff28f7cce244edb1cc3ae940",
+      "lines": 448,
+      "titles": [],
+      "endpointLiterals": [
+        "/advanced-finance/bank-feeds/transactions?status=${filterStatus}",
+        "/advanced-finance/bank-feeds/transactions/${selectedTx.id}/auto-match",
+        "/advanced-finance/bank-feeds/transactions/${selectedTx.id}/manual-match",
+        "/advanced-finance/bank-feeds/transactions/${selectedTx.id}/ignore"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          228,
+          288,
+          290,
+          291
+        ],
+        "explicitRouteGuard": [
+          6,
+          167,
+          445
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Transaction matching",
+        "layout": "Two-sided statement/ledger workspace with amount/date/reference candidates and residuals.",
+        "workflow": "Replace raw entity-ID input with authorized search; explain suggestion and allow deliberate manual match.",
+        "proof": "Prove ambiguous matches, signed amounts, split residual, already-matched conflict and foreign ID denial."
+      }
+    },
+    {
+      "route": "/finance/advanced/budget-scenarios",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/budget-scenarios/page.tsx",
+      "sha256": "189e14dc161fef1375dfa6b8838fd21f8a374827d21e54e7ab6ce5c1b00d406d",
+      "lines": 811,
+      "titles": [
+        "Delete"
+      ],
+      "endpointLiterals": [],
+      "markers": {
+        "nativeDialog": [
+          214
+        ],
+        "localMoneyConversion": [
+          238,
+          239,
+          277,
+          298
+        ],
+        "explicitRouteGuard": [
+          20,
+          373,
+          808
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Budget scenarios",
+        "layout": "Scenario register with baseline/version, assumptions, owner and comparison action.",
+        "workflow": "Meaningful scenario names and clone provenance; delete draft only under policy.",
+        "proof": "Prove scenario isolation, base preservation, permission and saved comparison state."
+      }
+    },
+    {
+      "route": "/finance/advanced/budgeting",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/budgeting/page.tsx",
+      "sha256": "4defd803c8ad7b29d08f40d871c43166e343d6033f41755d9aacc4f612b0bbc6",
+      "lines": 1270,
+      "titles": [
+        "View Budget vs Actuals",
+        "Edit Budget",
+        "Delete Budget",
+        "Budgeting & Planning",
+        "GL Account",
+        "Budget Amount ($)"
+      ],
+      "endpointLiterals": [
+        "/finance/advanced/budgeting?subtab=budgets",
+        "/finance/advanced/budgeting?subtab=reallocations",
+        "/finance/advanced/budgeting?subtab=config",
+        "/advanced-finance/budgets",
+        "/advanced-finance/forecast-scenarios",
+        "/advanced-finance/accounts",
+        "/advanced-finance/budget-control/config",
+        "/advanced-finance/budget-reallocations",
+        "/advanced-finance/budgets/${editingBudget.id}",
+        "/advanced-finance/budgets/${deletingBudget.id}",
+        "/advanced-finance/budgets/${budget.id}/vs-actuals",
+        "/advanced-finance/budget-reallocations/${id}/${action}"
+      ],
+      "markers": {
+        "nativeDialog": [
+          286,
+          306,
+          338,
+          359,
+          362,
+          371,
+          400,
+          427
+        ],
+        "localMoneyConversion": [
+          127,
+          270,
+          356,
+          382,
+          387,
+          1093
+        ],
+        "explicitRouteGuard": [
+          26,
+          644,
+          1267
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [
+          27,
+          673
+        ],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Budget versions and control",
+        "layout": "Budget register/detail, actual comparison, reallocations and setup sections.",
+        "workflow": "Separate approved baseline, working draft and transfer approval; clear version owner and currency.",
+        "proof": "Prove line totals, budget control, reallocation balancing, amendment history and concurrent edit conflict."
+      }
+    },
+    {
+      "route": "/finance/advanced/cash-flow-forecast",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/cash-flow-forecast/page.tsx",
+      "sha256": "4fb7ba73c788ff0a853a7952a37531b982cef0cbe5a52deb658c06812292882e",
+      "lines": 597,
+      "titles": [],
+      "endpointLiterals": [
+        "/advanced-finance/cash-flow/forecast?scenarioId=${selectedScenarioId}",
+        "/advanced-finance/cash-flow/forecast",
+        "/advanced-finance/cash-flow/forecast/scenarios",
+        "/advanced-finance/cash-flow/forecast/export",
+        "/advanced-finance/cash-flow/forecast/adjust",
+        "/advanced-finance/cash-flow/forecast/scenarios/${id}"
+      ],
+      "markers": {
+        "nativeDialog": [
+          138,
+          158,
+          163
+        ],
+        "localMoneyConversion": [
+          132,
+          148,
+          149,
+          203,
+          204,
+          302,
+          309,
+          318,
+          323,
+          324,
+          333,
+          335,
+          336,
+          345,
+          347,
+          367,
+          416,
+          418,
+          471,
+          554,
+          571
+        ],
+        "explicitRouteGuard": [
+          6,
+          183,
+          594
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Cash forecast",
+        "layout": "Time-bucket cash forecast grid with scenario, inflow/outflow category and variance.",
+        "workflow": "Replace native alerts; distinguish actuals, committed items, assumptions and manual overrides with audit.",
+        "proof": "Prove opening-to-closing roll-forward, missing rate/data, horizon changes and persisted overrides."
+      }
+    },
+    {
+      "route": "/finance/advanced/cash-position",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/cash-position/page.tsx",
+      "sha256": "3ccb2ef051698341113fd84eebc9a07b170c4338b033b25559df672709037dca",
+      "lines": 324,
+      "titles": [
+        "Cash Position & Liquidity Stress-Testing",
+        "Reset to Baseline",
+        "Reserves",
+        "Net Change (Today)"
+      ],
+      "endpointLiterals": [
+        "/finance/reports/cash-position"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          114,
+          115
+        ],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Cash position",
+        "layout": "Daily account/entity/currency position with available/restricted balances and source timestamp.",
+        "workflow": "Separate baseline from stress simulation, and expose assumptions and actual conversion rates.",
+        "proof": "Prove multi-currency totals, stale accounts, restricted cash definition and reset without altering actual balances."
+      }
+    },
+    {
+      "route": "/finance/advanced/chart-of-accounts",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/chart-of-accounts/page.tsx",
+      "sha256": "39f3ca52559cedef69d06671d87820f955042f472bf4003c066d2dcab7955e3b",
+      "lines": 42,
+      "titles": [
+        "Chart of Accounts",
+        "New Account"
+      ],
+      "endpointLiterals": [],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [],
+        "explicitRouteGuard": [
+          5,
+          12,
+          39
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Chart of accounts",
+        "layout": "Hierarchical account register with code, type, parent, posting eligibility and activity.",
+        "workflow": "Support actual hierarchy and real account lookup; normalize Income/REVENUE terminology by owning contract.",
+        "proof": "Prove cycles/duplicate codes rejected, posted-account deletion restrictions and account-to-ledger drill-down."
+      }
+    },
+    {
+      "route": "/finance/advanced/close-management",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/close-management/page.tsx",
+      "sha256": "e63b25685b7d2fd6997b362cd7a90c0b775baf20b3f9d56e8fa77f63cb5a32f6",
+      "lines": 1496,
+      "titles": [
+        "Refresh close management",
+        "Remove task dependency",
+        "Task SLA pagination",
+        "SLA policy pagination",
+        "Retire SLA policy",
+        "Retire escalation rule"
+      ],
+      "endpointLiterals": [
+        "/advanced-finance/close-management/calendar/events",
+        "/advanced-finance/close-management/task-dependencies",
+        "/advanced-finance/close-management/slas/breached",
+        "/advanced-finance/close-management/slas?page=${taskSlaPage}&limit=20",
+        "/advanced-finance/close-management/sla-policies?page=${policyPage}&limit=20",
+        "/advanced-finance/close-management/escalation-rules",
+        "/advanced-finance/close-management/status-summary?periodId=${encodeURIComponent(analyticsPeriodId)}",
+        "/advanced-finance/close-management/status-summary",
+        "/advanced-finance/close-management/trends",
+        "/advanced-finance/close-management/critical-path?periodId=${encodeURIComponent(analyticsPeriodId)}",
+        "/advanced-finance/close-management/critical-path",
+        "/advanced-finance/close-management/analytics/${encodeURIComponent(analyticsPeriodId)}",
+        "/advanced-finance/financial-periods",
+        "/advanced-finance/close-management/calendar/period-events/${encodeURIComponent(calendarPeriodId)}",
+        "/advanced-finance/close-management/escalation-rules?isActive=true",
+        "/advanced-finance/close-management/sla-policies?page=1&limit=100",
+        "/advanced-finance/close-tasks?periodId=${encodeURIComponent(assignmentPeriodId)}",
+        "/advanced-finance/close-tasks?periodId=${encodeURIComponent(dependencyPeriodId)}",
+        "/advanced-finance/close-management/task-dependencies/${encodeURIComponent(pendingRemoval.id)}",
+        "/advanced-finance/close-management/sla-policies",
+        "/advanced-finance/close-management/task-slas",
+        "/advanced-finance/close-management/sla-policies/${encodeURIComponent(revisionPolicy.id)}/versions",
+        "/advanced-finance/close-management/sla-policies/${encodeURIComponent(pendingRetirement.id)}/retire",
+        "/advanced-finance/close-management/calendar/events/${encodeURIComponent(id)}/complete",
+        "/advanced-finance/close-management/escalation-rules/${encodeURIComponent(rule.id)}",
+        "/advanced-finance/close-management/escalation-rules/${encodeURIComponent(pendingRuleRetirement.id)}",
+        "/advanced-finance/close-management/snapshots",
+        "/advanced-finance/close-management/slas/${encodeURIComponent(sla.id)}/status",
+        "/finance/advanced/close-management?subtab=tasks",
+        "/finance/advanced/close-management?subtab=calendar",
+        "/finance/advanced/close-management?subtab=breached-slas",
+        "/finance/advanced/close-management?subtab=task-slas",
+        "/finance/advanced/close-management?subtab=sla-policies",
+        "/finance/advanced/close-management?subtab=escalations",
+        "/finance/advanced/close-management?subtab=analytics"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          341,
+          342,
+          429,
+          430
+        ],
+        "explicitRouteGuard": [
+          16,
+          549,
+          1493
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [
+          17,
+          613
+        ],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Close management calendar",
+        "layout": "Schedule/calendar plus dependencies, SLA policies, deadlines, breaches and task inspector.",
+        "workflow": "Preserve existing specialized contracts; show immutable SLA provenance and task-specific amendments distinctly.",
+        "proof": "Prove dependency cycles/cross-tenant edges rejected, calendar timezone, SLA pagination and audited assignment."
+      }
+    },
+    {
+      "route": "/finance/advanced/close-tasks",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/close-tasks/page.tsx",
+      "sha256": "e7e0552af38858650f298cca281c72f81a46ae5fd4fe80695d2ea36b87fd4504",
+      "lines": 813,
+      "titles": [
+        "Delete"
+      ],
+      "endpointLiterals": [
+        "/advanced-finance/financial-periods",
+        "/advanced-finance/close-tasks?periodId=${periodId}",
+        "/advanced-finance/variance-flags?periodId=${periodId}",
+        "/advanced-finance/close-tasks/dashboard?periodId=${periodId}",
+        "/advanced-finance/close-tasks",
+        "/advanced-finance/close-tasks/${id}",
+        "/advanced-finance/close-tasks/generate",
+        "/advanced-finance/variance-flags/run",
+        "/advanced-finance/variance-flags/${id}/acknowledge",
+        "/advanced-finance/variance-flags/${id}/resolve",
+        "/finance/advanced/close-tasks?subtab=checklist",
+        "/finance/advanced/close-tasks?subtab=variance"
+      ],
+      "markers": {
+        "nativeDialog": [
+          192
+        ],
+        "localMoneyConversion": [
+          228,
+          707,
+          720,
+          729,
+          734,
+          748
+        ],
+        "explicitRouteGuard": [
+          19,
+          267,
+          810
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [
+          20,
+          384
+        ],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Close task register",
+        "layout": "Period-filtered tasks with assignee, due time, dependency, evidence and status.",
+        "workflow": "Task generation uses real template/version; bulk changes show selected scope and blocked tasks.",
+        "proof": "Prove only eligible tasks complete, dependency enforcement, permission checks and persisted evidence."
+      }
+    },
+    {
+      "route": "/finance/advanced/consolidation",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/consolidation/page.tsx",
+      "sha256": "fc15a7d7bebefb20af41ce42c5a8078eb0297e0addb398c9a6506e17bac898da",
+      "lines": 289,
+      "titles": [
+        "Financial Consolidation",
+        "Consolidated Revenue",
+        "Consolidated Net Income",
+        "Consolidated Assets",
+        "Entities",
+        "Quarterly Consolidated P&L"
+      ],
+      "endpointLiterals": [
+        "/advanced-finance/consolidation/overview",
+        "/advanced-finance/consolidation/run",
+        "/finance/advanced/consolidation?subtab=entities",
+        "/finance/advanced/consolidation?subtab=trend"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [],
+        "explicitRouteGuard": [
+          13,
+          171,
+          286
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [
+          14,
+          225
+        ],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Group consolidation",
+        "layout": "Entity/book/period scope, mapping and translation checks, run status and consolidated statements.",
+        "workflow": "Expose ownership percentages/translation rules only from approved policy; block missing mappings.",
+        "proof": "Prove subsidiary-to-group roll-up, elimination reconciliation, run version and partial failure recovery."
+      }
+    },
+    {
+      "route": "/finance/advanced/corporate-cards/[id]",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/corporate-cards/[id]/page.tsx",
+      "sha256": "83671b7d0c8e4c1126570ce260b93679c4283a1427e027a2b3b32f6478095964",
+      "lines": 688,
+      "titles": [
+        "Add Spend Limit",
+        "Scope Type",
+        "Scope ID",
+        "Period",
+        "Amount Cap",
+        "Add Category Limit"
+      ],
+      "endpointLiterals": [
+        "/advanced-finance/corporate-cards",
+        "/advanced-finance/corporate-cards/${cardId}/limits",
+        "/advanced-finance/corporate-cards/${cardId}/category-limits",
+        "/advanced-finance/corporate-cards/${cardId}/utilization",
+        "/advanced-finance/corporate-cards/${cardId}/limits/${limitId}/audit",
+        "/advanced-finance/corporate-cards/${cardId}/limits/${id}",
+        "/advanced-finance/corporate-cards/${cardId}/category-limits/${id}",
+        "/advanced-finance/corporate-cards/${cardId}/${action}",
+        "/advanced-finance/corporate-cards/${cardId}/limits/${increaseLimitId}/request-increase"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          162,
+          180,
+          214,
+          240,
+          246,
+          278,
+          321,
+          327
+        ],
+        "explicitRouteGuard": [
+          16,
+          382,
+          685
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Card controls detail",
+        "layout": "RecordShell: card overview, limits, scoped rules, transactions and audit.",
+        "workflow": "Replace scope-ID textbox with permitted entity/team/category lookup; show effective dates and inherited limits.",
+        "proof": "Prove invalid/foreign scope, concurrent policy edit, spend-limit precedence and audit trail."
+      }
+    },
+    {
+      "route": "/finance/advanced/corporate-cards",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/corporate-cards/page.tsx",
+      "sha256": "9ae24f56a300254a2c775a27a2f2d14fabb91e2d5e861af67efce3b43a9a6e0c",
+      "lines": 165,
+      "titles": [
+        "Corporate Cards & Spend Limits",
+        "Manage corporate credit cards, monthly spend caps, and department budget limits."
+      ],
+      "endpointLiterals": [
+        "/advanced-finance/corporate-cards",
+        "/finance/advanced/expense-policies?tab=cards&create=1"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          54,
+          63,
+          121,
+          136
+        ],
+        "explicitRouteGuard": [
+          7,
+          93,
+          162
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Corporate card register",
+        "layout": "Masked cards by holder/team, currency, limit, spend and connection status.",
+        "workflow": "Distinguish feed ingestion from issuing/freezing a card; meaningful authorized detail routes.",
+        "proof": "Prove masked data, currency-aware utilization, unavailable feed and permission-limited controls."
+      }
+    },
+    {
+      "route": "/finance/advanced/credit-risk",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/credit-risk/page.tsx",
+      "sha256": "e3eeef165d1bbd1ff2728841ea152a796e9efd5c2f3940e5253f484d1cef3efa",
+      "lines": 587,
+      "titles": [],
+      "endpointLiterals": [
+        "/advanced-finance/credit-risk",
+        "/advanced-finance/customers/${id}/credit",
+        "/advanced-finance/customers/${selectedId}/credit"
+      ],
+      "markers": {
+        "nativeDialog": [
+          80,
+          107,
+          145,
+          153,
+          165
+        ],
+        "localMoneyConversion": [
+          129,
+          300,
+          314
+        ],
+        "explicitRouteGuard": [
+          17,
+          189,
+          584
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Customer credit controls",
+        "layout": "Exposure register with limit, utilization, aging, hold reason and history.",
+        "workflow": "Replace alert/confirm; justify credit/hold changes with authority, effective date and evidence.",
+        "proof": "Prove currency-consistent exposure, limit threshold, expiry, concurrent updates and downstream hold enforcement."
+      }
+    },
+    {
+      "route": "/finance/advanced/currency-revaluation",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/currency-revaluation/page.tsx",
+      "sha256": "ab5b0716b2f972011592740647eedaf1b27e0106eae682764aa8e9d467d64721",
+      "lines": 355,
+      "titles": [],
+      "endpointLiterals": [
+        "/advanced-finance/currency-revaluations",
+        "/advanced-finance/currency-revaluations/run"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          88,
+          191,
+          219,
+          279,
+          288,
+          297,
+          306,
+          315,
+          324,
+          327,
+          328
+        ],
+        "explicitRouteGuard": [
+          14,
+          103,
+          352
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Currency revaluation compatibility workspace",
+        "layout": "Comparison of current route semantics with FX runs and exposed currencies/books.",
+        "workflow": "Keep separate only if distinct domain purpose; otherwise documented alias to accepted canonical workflow.",
+        "proof": "Prove no duplicate run across entry points and preserve existing links and supported contract behavior."
+      }
+    },
+    {
+      "route": "/finance/advanced/customer-statement",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/customer-statement/page.tsx",
+      "sha256": "052bfcf4f63b97dc9d6ae444b303ec987387f4a8f7bff5eda5d37ac9a24a0585",
+      "lines": 429,
+      "titles": [],
+      "endpointLiterals": [
+        "/advanced-finance/customer-statement/${customerId}?${params}"
+      ],
+      "markers": {
+        "nativeDialog": [
+          75,
+          99
+        ],
+        "localMoneyConversion": [
+          384,
+          393,
+          404,
+          410
+        ],
+        "explicitRouteGuard": [
+          17,
+          129,
+          426
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Customer statements",
+        "layout": "Customer/date/currency selector and opening/activity/closing statement preview.",
+        "workflow": "Create accessible actual document with payments/credits and source references; authorized delivery separate.",
+        "proof": "Prove opening plus activity equals closing, privacy scope, period selection and actual output format."
+      }
+    },
+    {
+      "route": "/finance/advanced/e-invoicing",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/e-invoicing/page.tsx",
+      "sha256": "74566068f1869e7ad898e833bb4b73eda3caf6aeffc415b40d58a17542254d65",
+      "lines": 304,
+      "titles": [],
+      "endpointLiterals": [],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          91
+        ],
+        "explicitRouteGuard": [
+          13,
+          104,
+          301
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Electronic invoice exchange",
+        "layout": "Document/status register with network/jurisdiction, validation and acknowledgment history.",
+        "workflow": "Separate generated, submitted, rejected and accepted; preserve provider response and correction route.",
+        "proof": "Prove schema validation, provider failure, duplicate transmission and secure acknowledgment lineage."
+      }
+    },
+    {
+      "route": "/finance/advanced/esg-accounting",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/esg-accounting/page.tsx",
+      "sha256": "6ee98e41fdbde220bd125314173da4e0c6d536bbb77770c207aa7d20692ff90c",
+      "lines": 1244,
+      "titles": [],
+      "endpointLiterals": [
+        "/advanced-finance/esg/emissions",
+        "/advanced-finance/esg/offset-credits",
+        "/advanced-finance/esg/kpi-definitions",
+        "/advanced-finance/esg/kpi-values",
+        "/advanced-finance/esg/report-templates",
+        "/advanced-finance/esg/disclosure-mappings",
+        "/advanced-finance/esg/targets",
+        "/advanced-finance/esg/offset-credits/${id}/retire",
+        "/advanced-finance/esg/report-templates/${id}/generate",
+        "/finance/advanced/esg-accounting?subtab=emissions",
+        "/finance/advanced/esg-accounting?subtab=kpis",
+        "/finance/advanced/esg-accounting?subtab=reports",
+        "/finance/advanced/esg-accounting?subtab=targets"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          175,
+          207,
+          231,
+          284,
+          285,
+          519,
+          573,
+          809,
+          858,
+          1196,
+          1205
+        ],
+        "explicitRouteGuard": [
+          19,
+          308,
+          1241
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [
+          20,
+          367
+        ],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "ESG accounting evidence",
+        "layout": "Emissions/activity, factor version, offsets and KPI register with scope/units/source.",
+        "workflow": "Distinguish measurement, estimation and assurance; never mix offsets with gross emissions silently.",
+        "proof": "Prove unit conversion, factor effective date, duplicate activity and transparent net/gross reconciliation."
+      }
+    },
+    {
+      "route": "/finance/advanced/exception-queue",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/exception-queue/page.tsx",
+      "sha256": "d3401093035719b1f328b5f3ec60f94b1a27e55a9734df3770321ec7bf89ec21",
+      "lines": 213,
+      "titles": [],
+      "endpointLiterals": [
+        "/advanced-finance/payables/exceptions?status=${statusFilter}",
+        "/advanced-finance/payables/exceptions",
+        "/advanced-finance/payables/exceptions/${id}/approve",
+        "/advanced-finance/payables/exceptions/${id}/reject"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          157,
+          158
+        ],
+        "explicitRouteGuard": [
+          13,
+          87,
+          210
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "AP exceptions",
+        "layout": "Exception-first worklist with category, amount, age, owner and resolution options.",
+        "workflow": "Provide actual source mismatch evidence and controlled reasoned resolution, not arbitrary status edit.",
+        "proof": "Prove duplicate resolution, reopened exceptions, required evidence and no bypass of payment approval."
+      }
+    },
+    {
+      "route": "/finance/advanced/exchange-rates",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/exchange-rates/page.tsx",
+      "sha256": "9d02108e30034d7693541b51189130bbe8aca86fbe8a6575a1d29086cbb230d6",
+      "lines": 39,
+      "titles": [
+        "Multi-Currency & Exchange Rates",
+        "Add Exchange Rate"
+      ],
+      "endpointLiterals": [],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [],
+        "explicitRouteGuard": [
+          5,
+          11,
+          36
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Exchange rates",
+        "layout": "Base/quote/type/date/source register with effective ranges and approval.",
+        "workflow": "Distinguish spot/closing/average; show import source and stale/missing status rather than static USD format.",
+        "proof": "Prove inverted pairs, zero/negative rates, duplicate effective keys and approval history."
+      }
+    },
+    {
+      "route": "/finance/advanced/expense-policies",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/expense-policies/page.tsx",
+      "sha256": "dc1df96388774d275813c7cdfb4fcbcb823ed3b20c270f772517fa3133f0725c",
+      "lines": 611,
+      "titles": [
+        "Expense Policies & Rates",
+        "Add Category Policy",
+        "Category",
+        "Max Amount Per Item",
+        "Receipt Required Above",
+        "Add Mileage Rate"
+      ],
+      "endpointLiterals": [
+        "/advanced-finance/expense-policies",
+        "/advanced-finance/mileage-rates",
+        "/advanced-finance/per-diem-rates",
+        "/advanced-finance/corporate-cards",
+        "/advanced-finance/corporate-card-transactions/unmatched",
+        "/advanced-finance/expense-policies/${id}",
+        "/advanced-finance/corporate-card-transactions/${id}/ignore",
+        "/finance/advanced/corporate-cards/${r.id}"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          124,
+          125,
+          140,
+          151,
+          190,
+          200,
+          231,
+          255,
+          315
+        ],
+        "explicitRouteGuard": [
+          16,
+          342,
+          608
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Expense policy and rates",
+        "layout": "Policy/category, mileage and per-diem tables with jurisdiction/currency/effective dates.",
+        "workflow": "Explain precedence, exception approvals and inherited settings; preview change impact.",
+        "proof": "Prove overlapping date/rate rules, historical reimbursement invariance and unauthorized policy denial."
+      }
+    },
+    {
+      "route": "/finance/advanced/expense-reports",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/expense-reports/page.tsx",
+      "sha256": "4cfe3a60a464e465bd045448d1329ea4d89f20a0a09100b217d5b13fc282a098",
+      "lines": 633,
+      "titles": [
+        "Expense Management",
+        "Pending Approval",
+        "Pending Amount",
+        "Policy Violations",
+        "Total Reports",
+        "Create Expense Report"
+      ],
+      "endpointLiterals": [
+        "/advanced-finance/expense-reports",
+        "/advanced-finance/expense-reports/${id}",
+        "/advanced-finance/expenses/ocr-scan",
+        "/advanced-finance/expense-reports/${detailReport.id}/items",
+        "/advanced-finance/expense-items/${itemId}",
+        "/advanced-finance/expense-reports/${id}/${action}",
+        "/finance/advanced/expense-reports?subtab=all",
+        "/finance/advanced/expense-reports?subtab=SUBMITTED",
+        "/finance/advanced/expense-reports?subtab=PENDING_SECOND_APPROVAL",
+        "/finance/advanced/expense-reports?subtab=APPROVED",
+        "/finance/advanced/expense-reports?subtab=PAID"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          48,
+          128,
+          200
+        ],
+        "explicitRouteGuard": [
+          17,
+          344,
+          630
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [
+          18,
+          386
+        ],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Expense reports",
+        "layout": "Submitter/report register plus line/receipt detail, policy exceptions and approval history.",
+        "workflow": "Separate submit, approve, reject and reimburse; OCR is extraction evidence rather than approval.",
+        "proof": "Prove missing receipt, policy violation, currency conversion, duplicate expense and reimbursement replay."
+      }
+    },
+    {
+      "route": "/finance/advanced/financial-instruments",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/financial-instruments/page.tsx",
+      "sha256": "f6629f774f530291d82135afb73a0211f6714f901fa6510e8ee5da83d5c3cfc8",
+      "lines": 830,
+      "titles": [],
+      "endpointLiterals": [
+        "/advanced-finance/financial-instruments/fair-value-measurements",
+        "/advanced-finance/financial-instruments/expected-credit-loss-provisions",
+        "/advanced-finance/financial-instruments/fair-value-measurements/${id}/approve",
+        "/finance/advanced/financial-instruments?tab=fair-value",
+        "/finance/advanced/financial-instruments?tab=ecl"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          51,
+          57,
+          155,
+          156,
+          183,
+          184,
+          214,
+          215,
+          218,
+          222,
+          270,
+          364
+        ],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [
+          19,
+          516
+        ],
+        "queryHook": [],
+        "customModalOverlay": [
+          562,
+          701
+        ]
+      },
+      "proposal": {
+        "title": "Instrument accounting",
+        "layout": "Instrument records with valuation date, model inputs, fair value and credit-loss evidence.",
+        "workflow": "Keep valuation/provisioning workflows distinct from trade execution; show method/version and sensitivity.",
+        "proof": "Prove stale inputs, sign/currency/precision, approval and resulting accounting record lineage."
+      }
+    },
+    {
+      "route": "/finance/advanced/financial-periods",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/financial-periods/page.tsx",
+      "sha256": "26c2b201e4972622a1ef73d8a54e557070471d84f18ffa33d66ef12bdaf9b5a8",
+      "lines": 39,
+      "titles": [
+        "Financial Periods",
+        "Create Financial Period"
+      ],
+      "endpointLiterals": [],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [],
+        "explicitRouteGuard": [
+          5,
+          11,
+          36
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Financial periods",
+        "layout": "Fiscal calendar/register showing book/entity, open/closing/closed and allowed actions.",
+        "workflow": "Move actual close/reopen here under explicit control, never cosmetic shell status change.",
+        "proof": "Prove overlapping periods, posting cutoff, close blockers, role denial and audited reopening."
+      }
+    },
+    {
+      "route": "/finance/advanced/financial-ratios",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/financial-ratios/page.tsx",
+      "sha256": "dea7b0a9671c701161c16a353630f599418a050f3769082f51cdadb44dfdd7f2",
+      "lines": 195,
+      "titles": [
+        "Financial Ratios",
+        "Asset/Liability Ratio",
+        "Net Margin",
+        "Return on Equity",
+        "DSO"
+      ],
+      "endpointLiterals": [
+        "/finance/reports/financial-ratios?asOfDate=${new Date().toISOString()}"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Financial ratios",
+        "layout": "Defined ratio cards/table with numerator, denominator, units, baseline and source links.",
+        "workflow": "Remove implied health benchmarks unless sourced/configured; show N/A for undefined ratios.",
+        "proof": "Prove zero/negative denominator policy, period comparability and exact underlying statement values."
+      }
+    },
+    {
+      "route": "/finance/advanced/fixed-assets/assets/[id]",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/fixed-assets/assets/[id]/page.tsx",
+      "sha256": "ad6bfe32e572bf25391864d4178f9dc0a524d94ba8dc3e433ec8189aee5b2057",
+      "lines": 1297,
+      "titles": [],
+      "endpointLiterals": [
+        "/advanced-finance/fixed-assets/${id}",
+        "/advanced-finance/fixed-assets/disposals?assetId=${id}",
+        "/advanced-finance/fixed-assets/disposals",
+        "/advanced-finance/fixed-assets/impairments",
+        "/advanced-finance/fixed-assets/transfers",
+        "/advanced-finance/fixed-assets/maintenance",
+        "/advanced-finance/fixed-assets/depreciation/run",
+        "/finance/advanced/fixed-assets",
+        "/finance/advanced/fixed-assets/assets"
+      ],
+      "markers": {
+        "nativeDialog": [
+          241,
+          272,
+          284
+        ],
+        "localMoneyConversion": [
+          187,
+          208,
+          209,
+          255,
+          377,
+          381,
+          390,
+          529,
+          534,
+          541,
+          895,
+          971,
+          980,
+          989,
+          1079,
+          1085,
+          1152,
+          1153,
+          1221,
+          1266,
+          1267
+        ],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Asset lifecycle record",
+        "layout": "RecordShell: acquisition, books, schedule, transfers, impairment/disposal and audit.",
+        "workflow": "Explain each permitted transition and accounting impact; schedule belongs to selected book/date.",
+        "proof": "Prove disposed asset controls, transfer history, impairment approval and value-to-journal reconciliation."
+      }
+    },
+    {
+      "route": "/finance/advanced/fixed-assets/assets/new",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/fixed-assets/assets/new/page.tsx",
+      "sha256": "ea9b1db16a19806141b5e7951573bd1780a4ce4be88372ce9041efc6d1a0513b",
+      "lines": 473,
+      "titles": [],
+      "endpointLiterals": [
+        "/advanced-finance/fixed-assets/categories",
+        "/advanced-finance/accounts",
+        "/advanced-finance/fixed-assets",
+        "/finance/advanced/fixed-assets"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          119,
+          120,
+          124
+        ],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "New asset record",
+        "layout": "Acquisition/capitalization form with source document, cost/currency and depreciation policy.",
+        "workflow": "Use real categories/accounts and explicit in-service/residual/life inputs; no sample defaults.",
+        "proof": "Prove residual versus cost, date ordering, required mapping, failed save retention and durable creation."
+      }
+    },
+    {
+      "route": "/finance/advanced/fixed-assets/assets",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/fixed-assets/assets/page.tsx",
+      "sha256": "d45036a4a59a5a989ca2fd06f3829cb74abe7c0ff4206111adcd02baf47e4384",
+      "lines": 261,
+      "titles": [],
+      "endpointLiterals": [
+        "/advanced-finance/fixed-assets",
+        "/advanced-finance/fixed-assets/categories",
+        "/finance/advanced/fixed-assets",
+        "/finance/advanced/fixed-assets/assets/new",
+        "/finance/advanced/fixed-assets/assets/${v as string}"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          203,
+          209
+        ],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Asset records",
+        "layout": "Searchable category/location/custodian/lifecycle register with book values and currency.",
+        "workflow": "Share record identities and depreciation source with core assets; detail/new links are canonical.",
+        "proof": "Prove filter/sort/page totals, disposed/held assets, deep links and selected export scope."
+      }
+    },
+    {
+      "route": "/finance/advanced/fixed-assets",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/fixed-assets/page.tsx",
+      "sha256": "8bc930669d9b8888c69a42761820353dce2b6e479a019c98b8dcf3056fb7d279",
+      "lines": 640,
+      "titles": [
+        "Add Asset Category"
+      ],
+      "endpointLiterals": [
+        "/advanced-finance/fixed-assets",
+        "/advanced-finance/fixed-assets/categories",
+        "/advanced-finance/accounts",
+        "/advanced-finance/fixed-assets/depreciation/run",
+        "/finance/advanced/fixed-assets/assets/new",
+        "/finance/advanced/fixed-assets/assets",
+        "/finance/advanced/fixed-assets/assets/${String(v)}"
+      ],
+      "markers": {
+        "nativeDialog": [
+          139,
+          146
+        ],
+        "localMoneyConversion": [
+          118,
+          198,
+          202,
+          337,
+          346,
+          440
+        ],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Asset categories and overview",
+        "layout": "Asset workspace with category/setup section and link to full asset records.",
+        "workflow": "Clarify overview versus record register; canonical category, depreciation and account mappings.",
+        "proof": "Prove category mapping validity, no duplicate master source and actual register totals."
+      }
+    },
+    {
+      "route": "/finance/advanced/forecast-scenarios",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/forecast-scenarios/page.tsx",
+      "sha256": "b13f23173fca28cdcdf7106a5e1b276bf9d0382eac465115d97d3e70566be663",
+      "lines": 507,
+      "titles": [],
+      "endpointLiterals": [],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          120
+        ],
+        "explicitRouteGuard": [
+          15,
+          158,
+          504
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Rolling forecasts",
+        "layout": "Forecast version/horizon register and driver/actual overlay.",
+        "workflow": "Distinguish rolling forecast from annual budget; show actual cutoff, forecast horizon and assumptions.",
+        "proof": "Prove period roll-forward, overwritten actual prevention, refresh conflict and persisted scenario lineage."
+      }
+    },
+    {
+      "route": "/finance/advanced/fx-revaluation",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/fx-revaluation/page.tsx",
+      "sha256": "9b406f990988ef333998651d3fe9756390b7e9c6a496202d777210b886828151",
+      "lines": 530,
+      "titles": [],
+      "endpointLiterals": [],
+      "markers": {
+        "nativeDialog": [
+          109,
+          112,
+          125,
+          132
+        ],
+        "localMoneyConversion": [
+          448,
+          457,
+          468,
+          475,
+          476
+        ],
+        "explicitRouteGuard": [
+          18,
+          166,
+          527
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "FX revaluation runs",
+        "layout": "Run list plus context/rate preview wizard and detail journal links.",
+        "workflow": "Handle actual source/target currency, exclusions and gain/loss sign; canonical owner shared with core FX.",
+        "proof": "Prove supported currencies, stale rate rejection, posting/reversal linkage and idempotent run."
+      }
+    },
+    {
+      "route": "/finance/advanced/intercompany/eliminations",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/intercompany/eliminations/page.tsx",
+      "sha256": "4997704c1ae8dfb2d6418ba43d435cb7c12f20c79d66d9984274bca1b785189c",
+      "lines": 928,
+      "titles": [],
+      "endpointLiterals": [
+        "/finance/advanced/intercompany/eliminations?subtab=ledger",
+        "/finance/advanced/intercompany/eliminations?subtab=rules",
+        "/finance/advanced/intercompany/eliminations?subtab=runs"
+      ],
+      "markers": {
+        "nativeDialog": [
+          172,
+          175,
+          188,
+          198,
+          212,
+          217,
+          222,
+          225,
+          232,
+          239,
+          245,
+          255,
+          260
+        ],
+        "localMoneyConversion": [
+          394,
+          846
+        ],
+        "explicitRouteGuard": [
+          19,
+          275,
+          925
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [
+          20,
+          341
+        ],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Elimination ledger/rules/runs",
+        "layout": "Consolidation-period rule matrix, preview and resulting journal list.",
+        "workflow": "Show elimination basis and unmapped counterpart exceptions; separate proposed from posted entries.",
+        "proof": "Prove group/book scope, residual reconciliation, replay and actual reversal history."
+      }
+    },
+    {
+      "route": "/finance/advanced/intercompany/netting",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/intercompany/netting/page.tsx",
+      "sha256": "5037ae90e627d5b3b4939865c7b8fc87a2bc7b8740258f2c7072b74725e4e27a",
+      "lines": 373,
+      "titles": [],
+      "endpointLiterals": [
+        "/finance/invoices"
+      ],
+      "markers": {
+        "nativeDialog": [
+          105,
+          110,
+          119,
+          129,
+          135
+        ],
+        "localMoneyConversion": [
+          226,
+          248,
+          302,
+          344
+        ],
+        "explicitRouteGuard": [
+          16,
+          150,
+          370
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Netting runs",
+        "layout": "Eligible obligations, entity-pair balances, proposal and settlement status.",
+        "workflow": "Show gross to net calculation, currency/rate/date and excluded disputed items before approval.",
+        "proof": "Prove net totals, duplicate inclusion, multi-currency policy and partial settlement reconciliation."
+      }
+    },
+    {
+      "route": "/finance/advanced/intercompany",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/intercompany/page.tsx",
+      "sha256": "211888d94c36b8c290bdc48c85b3a6cef1e22f88897dafbebcc0cd2e029f8f96",
+      "lines": 556,
+      "titles": [
+        "Intercompany Transactions & Eliminations",
+        "Manage multi-entity intercompany loan agreements, management fees, and consolidation elimination entries."
+      ],
+      "endpointLiterals": [
+        "/advanced-finance/intercompany/transactions",
+        "/advanced-finance/intercompany/stats",
+        "/advanced-finance/netting/runs",
+        "/advanced-finance/netting/runs/${runId}/multilateral-matrix",
+        "/advanced-finance/netting/runs/${selectedRunId}/settle",
+        "/advanced-finance/intercompany/eliminate/${row.id}",
+        "/advanced-finance/intercompany/elimination-runs",
+        "/advanced-finance/intercompany/auto-match"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          173
+        ],
+        "explicitRouteGuard": [
+          15,
+          222,
+          553
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Intercompany transaction register",
+        "layout": "Entity-pair/document/status register with due-to/due-from, currency and agreement.",
+        "workflow": "Distinguish loans/fees/trade entries and netting/elimination links; no direct cross-entity mutation from UI.",
+        "proof": "Prove reciprocal source references, allowed entity scope, balanced accounting and exception resolution."
+      }
+    },
+    {
+      "route": "/finance/advanced/invoice-analytics",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/invoice-analytics/page.tsx",
+      "sha256": "34dbfebf5be62e8c7cd532c3871a99c8db2eb38055bf6f00a201e20d318bf070",
+      "lines": 344,
+      "titles": [],
+      "endpointLiterals": [
+        "/advanced-finance/analytics/invoices?months=${months}"
+      ],
+      "markers": {
+        "nativeDialog": [
+          70
+        ],
+        "localMoneyConversion": [],
+        "explicitRouteGuard": [
+          18,
+          94,
+          341
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Invoice analysis",
+        "layout": "Metrics and cohort/aging analysis with definitions, filters and drill-through.",
+        "workflow": "Separate issued, recognized and collected revenue; expose source period and data coverage.",
+        "proof": "Prove filtered totals match invoices, no double counting, zero denominator and chart accessible table."
+      }
+    },
+    {
+      "route": "/finance/advanced/invoice-capture",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/invoice-capture/page.tsx",
+      "sha256": "0847fc36d913c842a28837c01f2e75ef972a5b98d9598277a1156e7a60365012",
+      "lines": 1076,
+      "titles": [],
+      "endpointLiterals": [
+        "/advanced-finance/payables/invoices/capture",
+        "/advanced-finance/accounts",
+        "/advanced-finance/payables/invoices/capture/${capture.id}",
+        "/advanced-finance/payables/invoices/capture/${selectedCapture.id}",
+        "/advanced-finance/payables/invoices/capture/${selectedCapture.id}/lines/${lineId}",
+        "/advanced-finance/payables/invoices/capture/${selectedCapture.id}/lines",
+        "/advanced-finance/payables/invoices/capture/${selectedCapture.id}/auto-code",
+        "/advanced-finance/payables/invoices/capture/${selectedCapture.id}/approve",
+        "/advanced-finance/payables/invoices/capture/${selectedCapture.id}/reject",
+        "/advanced-finance/payables/invoices/capture/${id}"
+      ],
+      "markers": {
+        "nativeDialog": [
+          362
+        ],
+        "localMoneyConversion": [
+          389,
+          614,
+          624,
+          743,
+          753,
+          842,
+          867,
+          947,
+          966
+        ],
+        "explicitRouteGuard": [
+          24,
+          396,
+          1073
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Supplier invoice capture",
+        "layout": "Document upload/preview beside extracted header and line fields.",
+        "workflow": "Use real extraction provenance/confidence and field corrections; duplicate check before draft creation.",
+        "proof": "Prove unreadable document, unsupported type, tax/total mismatch, upload failure and retained human corrections."
+      }
+    },
+    {
+      "route": "/finance/advanced/journal-entries/new",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/journal-entries/new/page.tsx",
+      "sha256": "25c79772a1bff2e37566ef7a76526a7fe086f69291751fd55f5e9f4a1483190a",
+      "lines": 29,
+      "titles": [
+        "New Journal Entry"
+      ],
+      "endpointLiterals": [
+        "/finance/advanced/journal-entries"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [],
+        "explicitRouteGuard": [
+          5,
+          12,
+          26
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "New journal",
+        "layout": "TransactionWorkspace with header context, editable line grid, totals and validation summary.",
+        "workflow": "Replace generic flat form if it cannot represent complete balanced lines; blank amounts and draft default.",
+        "proof": "Prove at least two valid lines, precision, no simultaneous debit/credit misuse, dirty exit and server validation."
+      }
+    },
+    {
+      "route": "/finance/advanced/journal-entries",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/journal-entries/page.tsx",
+      "sha256": "ff3d8372b385876c4aa2280af1d858f76b7c7c95398280587fbc23b962760239",
+      "lines": 44,
+      "titles": [
+        "Journal Entries",
+        "New Journal Entry"
+      ],
+      "endpointLiterals": [
+        "/finance/advanced/journal-entries/${row.id}"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [],
+        "explicitRouteGuard": [
+          6,
+          14,
+          41
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Advanced journal register",
+        "layout": "Canonical journal lifecycle list with totals and next permitted actions.",
+        "workflow": "Map basic and advanced implementations to one authoritative journal model; preserve supported aliases.",
+        "proof": "Prove list/detail/create continuity, approval/post separation and source-document navigation."
+      }
+    },
+    {
+      "route": "/finance/advanced/leases/[id]",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/leases/[id]/page.tsx",
+      "sha256": "fb2bd492a0781106333ccf03aa3977b14ccae85a701c8ab8f3a9f286ba34a831",
+      "lines": 440,
+      "titles": [],
+      "endpointLiterals": [
+        "/finance/leases/${id}",
+        "/finance/leases/${id}/schedule",
+        "/finance/leases/${id}/post-month",
+        "/finance/leases/${id}/terminate",
+        "/finance/leases/${id}/renew",
+        "/finance/advanced/leases"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          232,
+          239,
+          248,
+          348,
+          353,
+          358,
+          363,
+          408,
+          413,
+          421,
+          429
+        ],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Lease detail",
+        "layout": "RecordShell with payment schedule, liability/ROU roll-forward, amendments and audit.",
+        "workflow": "Compare before/after remeasurement and disclose effective date; preserve original assumptions.",
+        "proof": "Prove modified payment schedule, termination accounting, replay and journal references under owned policy."
+      }
+    },
+    {
+      "route": "/finance/advanced/leases/new",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/leases/new/page.tsx",
+      "sha256": "d093ebbd2a1e05b0cdf955cf9d6705cc42b1d68f9d2a6d5c11bf122fd2ca47c6",
+      "lines": 206,
+      "titles": [],
+      "endpointLiterals": [
+        "/finance/leases",
+        "/finance/advanced/leases/${lease.id}",
+        "/finance/advanced/leases"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          45,
+          46
+        ],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "New lease",
+        "layout": "Structured term/payment/discount-rate form with schedule preview and basis.",
+        "workflow": "Explain units/rate frequency/options; save draft before recognition; use authorized counterparties/accounts.",
+        "proof": "Prove irregular payments, date/rate validity, rounding and server-owned schedule calculation."
+      }
+    },
+    {
+      "route": "/finance/advanced/leases",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/leases/page.tsx",
+      "sha256": "e33e1a84590f90965d3a3aedc3ef418e419f49afd5429adf19014bcc41fe95dd",
+      "lines": 644,
+      "titles": [
+        "View ASC 842 Amortization Schedule",
+        "Remeasure Lease (ASC 842 / IFRS 16)"
+      ],
+      "endpointLiterals": [
+        "/finance/leases?${params}",
+        "/finance/leases/summary",
+        "/finance/leases/${l.id}/schedule",
+        "/finance/leases/${remeasureItem.id}/remeasure",
+        "/finance/advanced/leases/new",
+        "/finance/advanced/leases/${l.id}",
+        "/finance/advanced/leases/${v as string}"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          136,
+          137,
+          299,
+          308,
+          616,
+          619,
+          622,
+          625,
+          628,
+          631
+        ],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Lease register",
+        "layout": "Lessor/asset/classification/currency/term register with liability and ROU balances.",
+        "workflow": "State accounting basis and calculation date; remeasurement is controlled versioned amendment.",
+        "proof": "Prove active/terminated classification, schedule totals and lease-to-journal drill-through."
+      }
+    },
+    {
+      "route": "/finance/advanced",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/page.tsx",
+      "sha256": "605f37fa91f296104af0062c3f1c88a9f3f8cdd0ec5c48d5ffa7002658bd2f83",
+      "lines": 126,
+      "titles": [
+        "Search Finance workspaces"
+      ],
+      "endpointLiterals": [],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Finance workspace catalog",
+        "layout": "Searchable permission-aware categorized links with consistent names and descriptions.",
+        "workflow": "Derive reachability/counts from one registry; explain task rather than claiming broad capability or readiness.",
+        "proof": "Prove no dead links, denied-workspace filtering, accurate counts and distinct tab identity for all entries."
+      }
+    },
+    {
+      "route": "/finance/advanced/payment-batches",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/payment-batches/page.tsx",
+      "sha256": "dd84c7f7673115d4c056ea5753692aee30b0bb2064a884f10e4a047fd09a80a5",
+      "lines": 728,
+      "titles": [
+        "Remove"
+      ],
+      "endpointLiterals": [
+        "/advanced-finance/payables/payment-batches",
+        "/advanced-finance/payables/payment-batches/${selectedBatch.id}/lines",
+        "/advanced-finance/payables/payment-batches/${selectedBatch.id}",
+        "/advanced-finance/payables/payment-batches/${batchId}/lines/${lineId}",
+        "/advanced-finance/payables/payment-batches/${batchId}",
+        "/advanced-finance/payables/payment-batches/${batchId}/run",
+        "/advanced-finance/payables/payment-batches/${batchId}/export?format=${format}",
+        "/advanced-finance/payables/payment-batches/${batchId}/export-iso20022"
+      ],
+      "markers": {
+        "nativeDialog": [
+          170
+        ],
+        "localMoneyConversion": [
+          140,
+          235,
+          409,
+          561,
+          651
+        ],
+        "explicitRouteGuard": [
+          21,
+          238,
+          725
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Payment batches",
+        "layout": "Batch composer with eligible bills, selected totals, deductions, bank/value date and review.",
+        "workflow": "Use durable proposal ID/version; removal changes draft only; no accidental live payment on selection.",
+        "proof": "Prove partial failure, replay, duplicate bill selection, concurrent settlement and per-item results."
+      }
+    },
+    {
+      "route": "/finance/advanced/payment-terms",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/payment-terms/page.tsx",
+      "sha256": "d384d80965534ebd4c89b314030e1343b7c3797bc1e3e5d075a6c118dc41d67f",
+      "lines": 42,
+      "titles": [
+        "Payment Terms",
+        "New Payment Term"
+      ],
+      "endpointLiterals": [],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [],
+        "explicitRouteGuard": [
+          5,
+          12,
+          39
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Payment terms master",
+        "layout": "Terms register with due-date calculation, discount window and active/effective state.",
+        "workflow": "Preview due date from sample business date using configured calendar; avoid ambiguous free text only.",
+        "proof": "Prove month-end/leap-year rules, inactive-term usage and historical document preservation."
+      }
+    },
+    {
+      "route": "/finance/advanced/reconciliations",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/reconciliations/page.tsx",
+      "sha256": "a659371862356ad2b19228504a5f6f3007b2af9f5f3c976b95ed2c077216083b",
+      "lines": 468,
+      "titles": [
+        "Bank Reconciliation",
+        "Matched",
+        "Unmatched",
+        "Transactions",
+        "Add Bank Transaction",
+        "Bank Account"
+      ],
+      "endpointLiterals": [
+        "/finance/bank-accounts",
+        "/finance/bank-accounts/${a.id}/transactions",
+        "/finance/bank-accounts/${t.bankAccountId}/reconcile",
+        "/finance/advanced/reconciliations?subtab=reconciliations",
+        "/finance/advanced/reconciliations?subtab=statements",
+        "/finance/bank-accounts/${accountId}/transactions"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          378
+        ],
+        "explicitRouteGuard": [
+          7,
+          237,
+          336
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [
+          8,
+          279
+        ],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Reconciliation certification",
+        "layout": "Account/statement/period reconciliation register with difference and supporting evidence.",
+        "workflow": "Separate suggested match, matched lines and signed-off reconciliation; canonical book and statement sources.",
+        "proof": "Prove opening plus movements equals closing, unresolved items disclosed and actual certification audit."
+      }
+    },
+    {
+      "route": "/finance/advanced/recurring",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/recurring/page.tsx",
+      "sha256": "7b9145b403116df3227642a32d9c482bc2ce1e2f0e3374b0f6ba970ce56781d2",
+      "lines": 354,
+      "titles": [
+        "Recurring Invoices",
+        "Total Schedules",
+        "Active",
+        "Paused",
+        "Create Recurring Schedule",
+        "Customer Name"
+      ],
+      "endpointLiterals": [
+        "/advanced-finance/recurring-schedules",
+        "/advanced-finance/recurring/generate"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          185,
+          345
+        ],
+        "explicitRouteGuard": [
+          15,
+          203,
+          351
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Recurring invoices",
+        "layout": "Schedule register with customer/template/cadence/effective dates and generated documents.",
+        "workflow": "Use one schedule owner shared with core recurring page; explicit preview/pause/resume and generation result.",
+        "proof": "Prove missed-run catch-up policy, month-end cadence, idempotency and no duplicate invoices."
+      }
+    },
+    {
+      "route": "/finance/advanced/reports",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/reports/page.tsx",
+      "sha256": "8f151d56f00dd9bd232b9dfa050efb3b2c49be9f913fa38f5111180676370fa6",
+      "lines": 968,
+      "titles": [
+        "Financial Reports"
+      ],
+      "endpointLiterals": [
+        "/advanced-finance/accounting-books",
+        "/advanced-finance/reports"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          240,
+          272,
+          366,
+          401,
+          436,
+          493,
+          607,
+          612,
+          617,
+          718,
+          723
+        ],
+        "explicitRouteGuard": [
+          20,
+          792,
+          965
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Statement suite",
+        "layout": "Statement selector and dimensions with period comparisons and account drill-through.",
+        "workflow": "Share report execution/export semantics with core reports; preserve book and basis context.",
+        "proof": "Prove P&L/BS/cash-flow/trial-balance identities, filters, missing mappings and reproducible output."
+      }
+    },
+    {
+      "route": "/finance/advanced/revenue-schedules",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/revenue-schedules/page.tsx",
+      "sha256": "3ea2987474001be01d783a0a9328aa27243e88a183368ae861141b8b425caad4",
+      "lines": 301,
+      "titles": [
+        "Revenue Recognition",
+        "Total Contract Value",
+        "Recognized",
+        "Deferred",
+        "Create Revenue Schedule",
+        "Contract Name"
+      ],
+      "endpointLiterals": [
+        "/advanced-finance/revenue-schedules",
+        "/advanced-finance/revenue-schedules/recognize-period"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          21,
+          47,
+          51,
+          64,
+          134,
+          135,
+          192
+        ],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Revenue recognition",
+        "layout": "Contract/performance obligation schedule with recognized/deferred balances by period.",
+        "workflow": "Explain recognition basis and proposed journal; distinguish billing/collection from earned revenue.",
+        "proof": "Prove schedule allocation totals, period recognition replay, modifications and GL reconciliation under approved policy."
+      }
+    },
+    {
+      "route": "/finance/advanced/risk-management",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/risk-management/page.tsx",
+      "sha256": "0d6c3ff14c48e8087a1f284d9b4bf771a2c922accc73ae88fa6025a28890d9ca",
+      "lines": 917,
+      "titles": [],
+      "endpointLiterals": [
+        "/advanced-finance/risk-management/scorecards",
+        "/advanced-finance/risk-management/vendor-assessments",
+        "/advanced-finance/risk-management/market-exposures",
+        "/advanced-finance/risk-management/risk-events",
+        "/advanced-finance/risk-management/control-measures",
+        "/advanced-finance/risk-management/scorecards/${id}/compute",
+        "/advanced-finance/risk-management/market-exposures/${id}/hedge",
+        "/advanced-finance/risk-management/market-exposures/${id}/close",
+        "/advanced-finance/risk-management/risk-events/${id}/resolve",
+        "/advanced-finance/risk-management/control-measures/${id}/test",
+        "/finance/advanced/risk-management?subtab=scorecards",
+        "/finance/advanced/risk-management?subtab=vendors",
+        "/finance/advanced/risk-management?subtab=market",
+        "/finance/advanced/risk-management?subtab=operational"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          438,
+          568,
+          628
+        ],
+        "explicitRouteGuard": [
+          21,
+          268,
+          914
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [
+          22,
+          327
+        ],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Finance risk register",
+        "layout": "Scorecards, supplier assessments and market exposures with owner/action/evidence.",
+        "workflow": "Explain score model and version; distinguish measured exposure from qualitative assessment.",
+        "proof": "Prove score provenance, stale assessment, role-limited changes and mitigation history."
+      }
+    },
+    {
+      "route": "/finance/advanced/scenario-comparison",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/scenario-comparison/page.tsx",
+      "sha256": "cadb6f45511ef3a0b77f51beefe52af726c8f38e91b9f2c5a11ec9ce09cec8bf",
+      "lines": 341,
+      "titles": [],
+      "endpointLiterals": [],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          210,
+          216,
+          222,
+          260,
+          272,
+          285,
+          292,
+          302
+        ],
+        "explicitRouteGuard": [
+          15,
+          118,
+          338
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Scenario comparison",
+        "layout": "Aligned comparison matrix for equal scope/currency/period with absolute/percentage deltas.",
+        "workflow": "Block incompatible baselines or explain conversion; drill into differing drivers and lines.",
+        "proof": "Prove consistent denominator, zero base, scenario version preservation and reconciled exports."
+      }
+    },
+    {
+      "route": "/finance/advanced/subscriptions/[id]",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/subscriptions/[id]/page.tsx",
+      "sha256": "8d8cd894fd0d3b7112a7948a69b35786419094e9f5bcb9019c1ce3ed684cf60f",
+      "lines": 571,
+      "titles": [
+        "Usage Date",
+        "Metric Name",
+        "Quantity",
+        "Unit Amount"
+      ],
+      "endpointLiterals": [
+        "/advanced-finance/subscriptions/${id}",
+        "/advanced-finance/subscriptions/${sub.id}/pause",
+        "/advanced-finance/subscriptions/${sub.id}/resume",
+        "/advanced-finance/subscriptions/${sub.id}/cancel",
+        "/advanced-finance/subscriptions/${sub.id}/usage",
+        "/finance/advanced/subscriptions"
+      ],
+      "markers": {
+        "nativeDialog": [
+          118,
+          128,
+          135,
+          142,
+          150,
+          160,
+          169
+        ],
+        "localMoneyConversion": [
+          79,
+          157,
+          158,
+          387,
+          441,
+          452,
+          514,
+          529
+        ],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Subscription record",
+        "layout": "RecordShell: contract, billing history, usage, amendments and audit.",
+        "workflow": "Usage uses typed metric/unit/period with correction history; lifecycle actions have impact review.",
+        "proof": "Prove duplicate usage, negative/correction policy, mid-cycle change and invoice/revenue links."
+      }
+    },
+    {
+      "route": "/finance/advanced/subscriptions/new",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/subscriptions/new/page.tsx",
+      "sha256": "217cb705b76cb9b62315e28961366cb6dd259b21e2a4eafd7b882ff03a7a9df6",
+      "lines": 369,
+      "titles": [
+        "Subscription/Plan Name",
+        "Description",
+        "Customer ID",
+        "Product ID",
+        "Currency",
+        "Unit Amount"
+      ],
+      "endpointLiterals": [
+        "/advanced-finance/subscriptions",
+        "/finance/advanced/subscriptions"
+      ],
+      "markers": {
+        "nativeDialog": [
+          64,
+          87,
+          90
+        ],
+        "localMoneyConversion": [
+          73,
+          74,
+          76,
+          80,
+          81,
+          82,
+          185,
+          196,
+          299,
+          316,
+          333
+        ],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "New subscription",
+        "layout": "Transaction form with customer/plan lookup, price/currency, term, billing cycle and start.",
+        "workflow": "Replace raw customer ID; review proration, tax and first invoice date before draft/activation.",
+        "proof": "Prove invalid dates, missing plan, tenant-restricted lookup and exact initial billing preview."
+      }
+    },
+    {
+      "route": "/finance/advanced/subscriptions",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/subscriptions/page.tsx",
+      "sha256": "a5637ae334bc60692126d5160bc744b31861a2a1c79e2cdd17d474ed74800945",
+      "lines": 440,
+      "titles": [
+        "Pause Subscription",
+        "Resume Subscription",
+        "Cancel Subscription"
+      ],
+      "endpointLiterals": [
+        "/advanced-finance/subscriptions?${params}",
+        "/advanced-finance/subscriptions/analytics/mrr",
+        "/advanced-finance/subscriptions/bill-batch",
+        "/advanced-finance/subscriptions/${id}/pause",
+        "/advanced-finance/subscriptions/${id}/resume",
+        "/advanced-finance/subscriptions/${id}/cancel",
+        "/finance/advanced/subscriptions/${row.id}",
+        "/finance/advanced/subscriptions/new"
+      ],
+      "markers": {
+        "nativeDialog": [
+          103,
+          108,
+          120,
+          130,
+          140
+        ],
+        "localMoneyConversion": [
+          169
+        ],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Subscription register",
+        "layout": "Customer/plan/status/currency/cadence register plus defined MRR/ARR metrics.",
+        "workflow": "Distinguish billing from revenue recognition and pause from cancel; batch billing review required.",
+        "proof": "Prove proration policy, duplicate billing, scheduled cancellation and metric reconciliation."
+      }
+    },
+    {
+      "route": "/finance/advanced/tax-engine",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/tax-engine/page.tsx",
+      "sha256": "560194ecd6f60ca86fc8c1d8090ef4a5f77259166f0c95bc7f0b35eee1f44227",
+      "lines": 428,
+      "titles": [],
+      "endpointLiterals": [
+        "/advanced-finance/tax-rules",
+        "/advanced-finance/withholding-taxes"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          75,
+          97,
+          98,
+          388,
+          397
+        ],
+        "explicitRouteGuard": [
+          14,
+          121,
+          425
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Tax rules and withholding",
+        "layout": "Jurisdiction/type/effective-date rule register with precedence and calculation preview.",
+        "workflow": "Expose authoritative source/version and exemption conditions; no globally applied fixed rates.",
+        "proof": "Prove overlapping rules, date applicability, rounding and missing-rule failure using owner-approved cases."
+      }
+    },
+    {
+      "route": "/finance/advanced/tax-filing-summary",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/tax-filing-summary/page.tsx",
+      "sha256": "a0c49f73469c067e524026c0730282278893f48dd457b0b5c3a4a2c3fcbc9b6e",
+      "lines": 217,
+      "titles": [],
+      "endpointLiterals": [
+        "/advanced-finance/tax-filings/summary?year=${year}"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [],
+        "explicitRouteGuard": [
+          15,
+          72,
+          214
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Tax filing summary",
+        "layout": "Liability/due-date/status summary by entity and jurisdiction with underlying returns.",
+        "workflow": "Differentiate no obligation from missing setup; reconcile to tax ledger and source period.",
+        "proof": "Prove overdue logic, timezone/calendar, liability totals and filtered filing links."
+      }
+    },
+    {
+      "route": "/finance/advanced/tax-filing",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/tax-filing/page.tsx",
+      "sha256": "437ca61441d00cf8200a1319aa694dfe7e2d2bd4a97b845261b6499ba2270a02",
+      "lines": 296,
+      "titles": [
+        "Tax filing payload"
+      ],
+      "endpointLiterals": [
+        "/advanced-finance/tax-filings"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [],
+        "explicitRouteGuard": [
+          13,
+          88,
+          293
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Tax filing preparation",
+        "layout": "Draft return register and guided input/reconciliation/review/output workflow.",
+        "workflow": "Replace technical payload entry as primary UX with labelled business fields; submission status requires acknowledgment.",
+        "proof": "Prove period validity, missing source data, rejected preparation and immutable approved version."
+      }
+    },
+    {
+      "route": "/finance/advanced/tax-nexus",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/tax-nexus/page.tsx",
+      "sha256": "a56a71082e7d1fb140c14557503e8309e1e2f97c16960a8acb23422b91f4d475",
+      "lines": 607,
+      "titles": [
+        "State code",
+        "Revenue threshold",
+        "Transaction threshold",
+        "Measurement period"
+      ],
+      "endpointLiterals": [
+        "/advanced-finance/tax/nexus/dashboard",
+        "/advanced-finance/tax/nexus/monitor",
+        "/advanced-finance/tax/nexus/thresholds",
+        "/advanced-finance/tax/nexus/registrations",
+        "/advanced-finance/tax/nexus/thresholds/seed-defaults",
+        "/advanced-finance/tax/nexus/monitor/refresh",
+        "/advanced-finance/tax/nexus/registrations/${existing.id}",
+        "/advanced-finance/tax/nexus/thresholds/${editingThresholdId}",
+        "/advanced-finance/tax/nexus/thresholds/${id}",
+        "/advanced-finance/tax/nexus/monitor/${encodeURIComponent(state)}/history",
+        "/advanced-finance/tax/nexus/registrations/${id}",
+        "/finance/advanced/tax-nexus?subtab=monitor",
+        "/finance/advanced/tax-nexus?subtab=thresholds",
+        "/finance/advanced/tax-nexus?subtab=registrations"
+      ],
+      "markers": {
+        "nativeDialog": [
+          126,
+          190,
+          206
+        ],
+        "localMoneyConversion": [
+          171,
+          172,
+          229,
+          238,
+          248,
+          299,
+          419,
+          427
+        ],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [
+          13,
+          530
+        ],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Nexus monitoring",
+        "layout": "Jurisdiction threshold/measurement dashboard with effective rules and evidence drill-through.",
+        "workflow": "Explain sales/transaction basis, exemptions and monitoring date; alert is not automatic legal registration.",
+        "proof": "Prove configured threshold boundaries, applicable periods, exclusions and auditable rule updates."
+      }
+    },
+    {
+      "route": "/finance/advanced/tax-operations",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/tax-operations/page.tsx",
+      "sha256": "6fa79ed55c2f7a66d8ad8b0bd25f52df425d1c096c7ab3a39c751f7d79c8dea3",
+      "lines": 203,
+      "titles": [
+        "Tax operation sections"
+      ],
+      "endpointLiterals": [
+        "/advanced-finance/tax",
+        "/finance/advanced/tax-operations?subtab=${item.id}"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          53,
+          56,
+          62,
+          70,
+          72,
+          76,
+          78,
+          105,
+          115,
+          125,
+          135,
+          145
+        ],
+        "explicitRouteGuard": [
+          6,
+          94,
+          201
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [
+          7,
+          187
+        ],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Tax operations",
+        "layout": "Specialized jurisdiction versions, certificates, reconciliations, withholding and amendments sections.",
+        "workflow": "Preserve published specialized contracts; surface evidence, effective dates and approval separately.",
+        "proof": "Prove expired certificate, jurisdiction versioning, amended filing lineage and scoped permission denial."
+      }
+    },
+    {
+      "route": "/finance/advanced/tax-provisioning",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/tax-provisioning/page.tsx",
+      "sha256": "a2e83f22fd5bdd8d66e54f583b553f01390a35283db3d6827431310c2dfb9bb9",
+      "lines": 1348,
+      "titles": [],
+      "endpointLiterals": [
+        "/advanced-finance/tax-provisioning/provision-runs",
+        "/advanced-finance/tax-provisioning/deferred-tax-schedules",
+        "/advanced-finance/tax-provisioning/uncertain-tax-positions",
+        "/advanced-finance/tax-provisioning/valuation-allowances",
+        "/advanced-finance/tax-provisioning/provision-details?runId=${encodeURIComponent(selectedRunId)}",
+        "/advanced-finance/tax-provisioning/dashboard?fiscalYear=${new Date().getFullYear()}",
+        "/advanced-finance/tax-provisioning/provision-runs/${editingRunId}",
+        "/advanced-finance/tax-provisioning/provision-runs/${id}/compute",
+        "/advanced-finance/tax-provisioning/provision-runs/${id}",
+        "/advanced-finance/tax-provisioning/provision-runs/${id}/review",
+        "/advanced-finance/tax-provisioning/provision-runs/${id}/post",
+        "/advanced-finance/tax-provisioning/deferred-tax-schedules/${editingScheduleId}",
+        "/advanced-finance/tax-provisioning/deferred-tax-schedules/${id}",
+        "/advanced-finance/tax-provisioning/deferred-tax-schedules/${id}/compute",
+        "/advanced-finance/tax-provisioning/provision-details/${editingDetailId}",
+        "/advanced-finance/tax-provisioning/provision-details",
+        "/advanced-finance/tax-provisioning/provision-details/${id}",
+        "/advanced-finance/tax-provisioning/provision-details/${id}/compute",
+        "/advanced-finance/tax-provisioning/effective-rate-reconciliation",
+        "/advanced-finance/tax-provisioning/uncertain-tax-positions/${id}/evaluate",
+        "/advanced-finance/tax-provisioning/uncertain-tax-positions/${editingPositionId}",
+        "/advanced-finance/tax-provisioning/uncertain-tax-positions/${id}",
+        "/advanced-finance/tax-provisioning/uncertain-tax-positions/${id}/reserve",
+        "/advanced-finance/tax-provisioning/uncertain-tax-positions/${id}/settle",
+        "/advanced-finance/tax-provisioning/valuation-allowances/${editingAllowanceId}",
+        "/advanced-finance/tax-provisioning/valuation-allowances/${id}",
+        "/advanced-finance/tax-provisioning/valuation-allowances/${id}/assess",
+        "/finance/advanced/tax-provisioning?subtab=runs",
+        "/finance/advanced/tax-provisioning?subtab=details",
+        "/finance/advanced/tax-provisioning?subtab=deferred",
+        "/finance/advanced/tax-provisioning?subtab=positions",
+        "/finance/advanced/tax-provisioning?subtab=allowances"
+      ],
+      "markers": {
+        "nativeDialog": [
+          301,
+          429,
+          478
+        ],
+        "localMoneyConversion": [
+          189,
+          191,
+          192,
+          263,
+          264,
+          312,
+          367,
+          383,
+          384,
+          418,
+          424,
+          441,
+          483,
+          627,
+          634,
+          654,
+          657,
+          804,
+          863,
+          864,
+          865,
+          980,
+          989,
+          998,
+          1148,
+          1157,
+          1318
+        ],
+        "explicitRouteGuard": [
+          19,
+          486,
+          1345
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [
+          20,
+          545
+        ],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Tax provision workpapers",
+        "layout": "Provision runs, deferred schedules and uncertain positions with methodology and approvals.",
+        "workflow": "Show current/deferred components, assumptions and effective rates; no claim of certification from title.",
+        "proof": "Prove component reconciliation, missing inputs, sign/rounding and approved journal lineage."
+      }
+    },
+    {
+      "route": "/finance/advanced/treasury",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/treasury/page.tsx",
+      "sha256": "9f8f405337f3fc543012ed56eec1c67b1d6cdd41a6643955f86c3692c1e42fc5",
+      "lines": 816,
+      "titles": [],
+      "endpointLiterals": [
+        "/advanced-finance/investment-portfolios",
+        "/advanced-finance/treasury-transactions",
+        "/advanced-finance/bank-accounts",
+        "/advanced-finance/cash-pools",
+        "/advanced-finance/cash-pools/${poolId}/simulate-sweep",
+        "/advanced-finance/cash-pools/${poolId}/sweep"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          170,
+          171,
+          196,
+          221,
+          226,
+          501,
+          510,
+          751
+        ],
+        "explicitRouteGuard": [
+          16,
+          237,
+          813
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Treasury operations",
+        "layout": "Portfolio/transaction register with counterparty, value date, currency, instrument and approval.",
+        "workflow": "Map actions to real portfolio/sweep/transfer capabilities; show fees, available funds and settlement status.",
+        "proof": "Prove date/currency validity, dual authorization, transfer replay and failed settlement reconciliation."
+      }
+    },
+    {
+      "route": "/finance/advanced/working-capital",
+      "source": "tenant-apps/app/(dashboard)/finance/advanced/working-capital/page.tsx",
+      "sha256": "1474aea67f8d020341be9e85ab2fd4f37663be971f95938d1abdea5e2fe21f45",
+      "lines": 778,
+      "titles": [],
+      "endpointLiterals": [
+        "/advanced-finance/working-capital/discount-offers",
+        "/advanced-finance/working-capital/scf-programs",
+        "/advanced-finance/working-capital/factoring-facilities",
+        "/advanced-finance/working-capital/discount-offers/${id}",
+        "/advanced-finance/working-capital/discount-offers/${id}/settle",
+        "/advanced-finance/working-capital/factoring-facilities/${id}/advance",
+        "/finance/advanced/working-capital?subtab=discount-offers",
+        "/finance/advanced/working-capital?subtab=scf-programs",
+        "/finance/advanced/working-capital?subtab=factoring"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          128,
+          129,
+          174,
+          175,
+          196,
+          197,
+          414,
+          423,
+          432,
+          587,
+          592,
+          597,
+          728,
+          733,
+          738
+        ],
+        "explicitRouteGuard": [
+          20,
+          238,
+          775
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [
+          21,
+          297
+        ],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Working capital programs",
+        "layout": "Separate discount offers, supply-chain finance and factoring with cash impact comparison.",
+        "workflow": "Explain DSO/DPO/DIO/CCC definitions and offer assumptions; acceptance is a controlled transaction.",
+        "proof": "Prove denominator rules, offer expiry, disclosed rates/fees and approval before financial commitment."
+      }
+    },
+    {
+      "route": "/finance/ap",
+      "source": "tenant-apps/app/(dashboard)/finance/ap/page.tsx",
+      "sha256": "e4ab664dcab33ae306614876354ed19cb7fc6f4c1cdb59db07491bc2053edf64",
+      "lines": 905,
+      "titles": [
+        "Refresh payables",
+        "Refresh data",
+        "Accounts Payable & Supplier Bills Report",
+        "Select all bills",
+        "Close modal",
+        "Close modal"
+      ],
+      "endpointLiterals": [
+        "/finance/ap/summary",
+        "/finance/ap/resolve-variance",
+        "/finance/ap/pay-bill",
+        "/finance/advanced/payment-batches",
+        "/finance/vendor-bills",
+        "/finance/vendor-bills?bill=${contextMenu.row.billNumber}"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [
+          5,
+          99
+        ],
+        "customModalOverlay": [
+          682,
+          773
+        ]
+      },
+      "proposal": {
+        "title": "Payables review queue",
+        "layout": "Bill queue plus selected actual PO/receipt/invoice line comparison.",
+        "workflow": "Remove fabricated original-document preview, fixed pagination and implied verification; review variance before payment.",
+        "proof": "Prove matching tolerances, attachment absence, selection identity, failed payment recovery and approved-state gating."
+      }
+    },
+    {
+      "route": "/finance/ar",
+      "source": "tenant-apps/app/(dashboard)/finance/ar/page.tsx",
+      "sha256": "07f3c27744bbe5cfbee81dd33994ce948a296bef1b1799a6fca686c8dff3db5a",
+      "lines": 901,
+      "titles": [
+        "Refresh receivables",
+        "Refresh data",
+        "Accounts Receivable & Invoices Report",
+        "Select all invoices",
+        "Close modal"
+      ],
+      "endpointLiterals": [
+        "/finance/ar/summary",
+        "/finance/ar/record-payment",
+        "/finance/ar/follow-up",
+        "/finance/advanced/customer-statement",
+        "/finance/invoices",
+        "/finance/invoices/${contextMenu.row.id}"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [
+          5,
+          100
+        ],
+        "customModalOverlay": [
+          763
+        ]
+      },
+      "proposal": {
+        "title": "Receivables collection queue",
+        "layout": "Aging-filtered worklist with invoice/customer inspector, disputes and promises.",
+        "workflow": "Replace automatic full-balance ACH receipt with deliberate partial-payment/allocation form; real follow-up history.",
+        "proof": "Prove aging boundaries, partial settlement, payment replay, concurrent collector conflict and source links."
+      }
+    },
+    {
+      "route": "/finance/assets",
+      "source": "tenant-apps/app/(dashboard)/finance/assets/page.tsx",
+      "sha256": "170cb7bd1b2e56fd7b872dca0f765b0ce2e379521b415af623841539d9a2e6ad",
+      "lines": 743,
+      "titles": [
+        "Refresh assets",
+        "Refresh data",
+        "Fixed Assets & Equipment Register",
+        "Close modal",
+        "Close modal"
+      ],
+      "endpointLiterals": [
+        "/finance/assets/summary",
+        "/finance/assets/depreciate",
+        "/finance/assets/register",
+        "/finance/advanced/fixed-assets/assets/new",
+        "/finance/advanced/fixed-assets?asset=${contextMenu.row.id}"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          127
+        ],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [
+          5,
+          92
+        ],
+        "customModalOverlay": [
+          533,
+          644
+        ]
+      },
+      "proposal": {
+        "title": "Asset overview",
+        "layout": "Asset register plus selected asset lifecycle and depreciation schedule.",
+        "workflow": "Remove fallback amounts/default cost/location and fixed depreciation period; route registration to canonical asset form.",
+        "proof": "Prove valid zero balances, actual asset selection, open-period depreciation and persisted run/journal references."
+      }
+    },
+    {
+      "route": "/finance/banking",
+      "source": "tenant-apps/app/(dashboard)/finance/banking/page.tsx",
+      "sha256": "aad7b849bf1251ce2d4cc78056bf12db2e1f049cfcc2f2ee9a30f682771c8454",
+      "lines": 697,
+      "titles": [
+        "Refresh banking",
+        "Refresh data",
+        "Bank Account Reconciliations Report",
+        "Close modal"
+      ],
+      "endpointLiterals": [
+        "/finance/banking/summary",
+        "/finance/banking/reconcile",
+        "/finance/banking/import-statement",
+        "/finance/advanced/bank-feeds",
+        "/finance/advanced/bank-recon?tx=${contextMenu.row.id}"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [
+          5,
+          96
+        ],
+        "customModalOverlay": [
+          573
+        ]
+      },
+      "proposal": {
+        "title": "Banking overview",
+        "layout": "Account/currency balances, sync status, unmatched queue and selected reconciliation context.",
+        "workflow": "Bind summary to real bank/book data; import through real file validation and route to owned matching workflow.",
+        "proof": "Prove bank/ledger balance definitions, duplicate statement handling, stale connection and residual differences."
+      }
+    },
+    {
+      "route": "/finance/budget-planning",
+      "source": "tenant-apps/app/(dashboard)/finance/budget-planning/page.tsx",
+      "sha256": "9c7f3caa56d4a5b1accce614db97b0173183412b9baea8fb5bd3c00bf2ac8a86",
+      "lines": 510,
+      "titles": [
+        "Refresh budget",
+        "Refresh data",
+        "Annual Budget & Department Variance Plan",
+        "Reset drivers"
+      ],
+      "endpointLiterals": [
+        "/finance/budget/summary?scenario=${scenario}",
+        "/finance/budget/update-drivers",
+        "/finance/advanced/budgeting",
+        "/finance/gl?search=${encodeURIComponent(contextMenu.row.name)}"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          104,
+          132,
+          374,
+          390,
+          406
+        ],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [
+          5,
+          71
+        ],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Budget planning workspace",
+        "layout": "Version/scenario matrix with budget/actual/forecast and driver inspector.",
+        "workflow": "Remove fictional KPI fallbacks and saved timestamps; bind drivers and fiscal period to persisted draft.",
+        "proof": "Prove scenario isolation, save/reload, dirty refetch, signed favorable variance and submission freeze."
+      }
+    },
+    {
+      "route": "/finance/expenses",
+      "source": "tenant-apps/app/(dashboard)/finance/expenses/page.tsx",
+      "sha256": "d692b52231314cfa4a3282339951d6fd09cfbdd5eb9c4d48acab354371797fd0",
+      "lines": 39,
+      "titles": [],
+      "endpointLiterals": [
+        "/finance/expenses",
+        "/finance/expenses?tab=policies"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [
+          5,
+          30
+        ],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Expenses entry hub",
+        "layout": "Task navigation into expense reports, policies and supported card/reimbursement flows.",
+        "workflow": "Keep existing embedded views but remove duplicate cross-module navigation; one canonical expense model.",
+        "proof": "Prove subview deep links, permission filtering and return context from report details."
+      }
+    },
+    {
+      "route": "/finance/fx-revaluation",
+      "source": "tenant-apps/app/(dashboard)/finance/fx-revaluation/page.tsx",
+      "sha256": "3bae95f5de5b6281a9ff012ebaac4810e00f9a0b6db9fcce34bce908b8c1ac80",
+      "lines": 676,
+      "titles": [
+        "Real-time rates from market feed",
+        "Refresh revaluation data",
+        "Refresh revaluation data",
+        "Multi-Currency FX Revaluation Schedule",
+        "Close modal"
+      ],
+      "endpointLiterals": [
+        "/finance/fx-revaluation/summary",
+        "/finance/fx-revaluation/run",
+        "/finance/advanced/chart-of-accounts",
+        "/finance/advanced/exchange-rates"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [
+          4,
+          95
+        ],
+        "customModalOverlay": [
+          544
+        ]
+      },
+      "proposal": {
+        "title": "FX revaluation overview",
+        "layout": "Rate provenance, foreign balances, preview impact and run history.",
+        "workflow": "Converge with advanced FX workflows; no decorative live-rate or successful-post badges.",
+        "proof": "Prove missing/stale rates, currency/date semantics, balanced journal, replay and reversal references."
+      }
+    },
+    {
+      "route": "/finance/gl",
+      "source": "tenant-apps/app/(dashboard)/finance/gl/page.tsx",
+      "sha256": "130512fe369632762543c810802c89e29f30c2b78a8323e364eafb6aded3ad56",
+      "lines": 687,
+      "titles": [
+        "Refresh ledger",
+        "Refresh data",
+        "General Ledger Report"
+      ],
+      "endpointLiterals": [
+        "/finance/gl/summary",
+        "/finance/gl/post-journal",
+        "/finance/gl/create-journal"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          113,
+          114,
+          174,
+          175,
+          601,
+          615
+        ],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [
+          4,
+          88
+        ],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "General ledger",
+        "layout": "DataWorkspace: account/period/book/dimension filters, ledger lines and selected-record inspector.",
+        "workflow": "Repair missing provider path and non-durable source behavior before enabling posting; show real balances and source journals.",
+        "proof": "Prove error states, full-dataset totals, balancing, tenant scope, durable posting/reversal and retained drill-down context."
+      }
+    },
+    {
+      "route": "/finance/intercompany",
+      "source": "tenant-apps/app/(dashboard)/finance/intercompany/page.tsx",
+      "sha256": "281111ab1700b3837082adbe4f6230f6ca35eb578e1aa4b61c9a0a27c6dce8b1",
+      "lines": 584,
+      "titles": [
+        "Global consolidation registry active",
+        "Refresh intercompany balances",
+        "Refresh intercompany balances",
+        "Bilateral Intercompany Elimination Matrix",
+        "Close modal"
+      ],
+      "endpointLiterals": [
+        "/finance/intercompany/summary",
+        "/finance/intercompany/eliminate",
+        "/finance/journal-entries"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [
+          4,
+          80
+        ],
+        "customModalOverlay": [
+          461
+        ]
+      },
+      "proposal": {
+        "title": "Intercompany overview",
+        "layout": "Entity-pair balances and exceptions with elimination/netting drill-through.",
+        "workflow": "Distinguish consolidation elimination from settlement netting; no local-only completed state.",
+        "proof": "Prove both-side identifiers, period/book consistency, unmatched counterpart and durable results."
+      }
+    },
+    {
+      "route": "/finance/invoices/[id]",
+      "source": "tenant-apps/app/(dashboard)/finance/invoices/[id]/page.tsx",
+      "sha256": "a398b56c7aea643f5c40c2394c776c7e88b8c448de1b42b5a78b2f2e00790e14",
+      "lines": 642,
+      "titles": [
+        "Invoice"
+      ],
+      "endpointLiterals": [
+        "/finance/invoices/${invoiceId}",
+        "/finance/invoices/${invoiceId}/payments"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          206,
+          207,
+          209,
+          213,
+          218,
+          222,
+          294,
+          303,
+          311,
+          319,
+          439,
+          448,
+          457,
+          510,
+          519,
+          527,
+          559
+        ],
+        "explicitRouteGuard": [
+          20,
+          228,
+          639
+        ],
+        "canonicalFloorplan": [
+          8,
+          229,
+          638
+        ],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Customer invoice record",
+        "layout": "Record/Transaction workspace: invoice header, items, payments/credits, document, related source and audit.",
+        "workflow": "Show immutable issued values and explicit settlement/credit lifecycle; retain parent list state and selected ID.",
+        "proof": "Prove invalid/foreign ID, partial related-data failure, arithmetic/rounding, payment history and credit balances."
+      }
+    },
+    {
+      "route": "/finance/invoices",
+      "source": "tenant-apps/app/(dashboard)/finance/invoices/page.tsx",
+      "sha256": "7b61a51ed7eb873cf59e8ae5e56e7f2cb11e4cce6d49114a012feb0bef2637a1",
+      "lines": 228,
+      "titles": [
+        "Customer Invoices Register",
+        "New Customer Invoice"
+      ],
+      "endpointLiterals": [
+        "/finance/ar",
+        "/finance/advanced/customer-statement",
+        "/finance/invoices/${row.id}"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          57,
+          58,
+          86,
+          87,
+          88
+        ],
+        "explicitRouteGuard": [
+          6,
+          94,
+          225
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [
+          6,
+          43
+        ],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Customer invoice register",
+        "layout": "One list toolbar, scoped totals, saved filters, canonical statuses and currency columns.",
+        "workflow": "Use one creation/export entry point; totals and export follow applied filters rather than separate capped query.",
+        "proof": "Prove more than 250 invoices, mixed currencies, status filters, complete export and intentional line-based creation."
+      }
+    },
+    {
+      "route": "/finance/journal-entries",
+      "source": "tenant-apps/app/(dashboard)/finance/journal-entries/page.tsx",
+      "sha256": "ee142ce6ab171ce7323156296d7d5606a7cc4147c615a69d514b879f7a3584f6",
+      "lines": 1169,
+      "titles": [
+        "Refresh ledger",
+        "Refresh data",
+        "General Journal Entries Report",
+        "Select all vouchers"
+      ],
+      "endpointLiterals": [
+        "/finance/gl/summary",
+        "/finance/gl/post-journal",
+        "/finance/gl/reverse-journal",
+        "/finance/gl/create-journal",
+        "/finance/journal-entries?entry=${contextMenu.row.entryNumber}"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          150,
+          151,
+          948,
+          962
+        ],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [
+          4,
+          121
+        ],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Journal register",
+        "layout": "DataWorkspace: lifecycle views, journal totals, author/approver and source.",
+        "workflow": "Converge with advanced journal register by contract; separate create, submit, approve, post and reverse.",
+        "proof": "Prove lifecycle-specific permissions, state transitions, duplicate prevention and recurrence links."
+      }
+    },
+    {
+      "route": "/finance",
+      "source": "tenant-apps/app/(dashboard)/finance/page.tsx",
+      "sha256": "ae8648a81eb5dade34333afbfd4470342e3ddd137d247b1216c50b5c5b3ac8db",
+      "lines": 1107,
+      "titles": [
+        "Refresh real-time telemetry",
+        "Refresh telemetry data",
+        "Executive Finance Performance Briefing",
+        "Select reporting period",
+        "Monthly Revenue and Expenses dual line chart",
+        "Financial Exceptions"
+      ],
+      "endpointLiterals": [
+        "/finance/dashboard",
+        "/finance/ar",
+        "/finance/banking",
+        "/finance/gl",
+        "/finance/reports",
+        "/finance/advanced/close-tasks",
+        "/finance/invoices",
+        "/finance/invoices?status=OVERDUE"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          194,
+          250,
+          257,
+          269,
+          270,
+          271,
+          272,
+          668,
+          721,
+          730,
+          757,
+          766
+        ],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [
+          6,
+          208
+        ],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Finance overview",
+        "layout": "Operational floorplan: scoped KPIs, trends, exception queue and close progress.",
+        "workflow": "Replace false live/zero semantics; align chart period and aging definitions; drill into exact filtered queues.",
+        "proof": "Prove all KPI definitions and totals against source, no-data/failed-data distinction, chart table alternative and neutral zero changes."
+      }
+    },
+    {
+      "route": "/finance/recurring",
+      "source": "tenant-apps/app/(dashboard)/finance/recurring/page.tsx",
+      "sha256": "b720de5bec40dd67a26d18740fdf8ea68877bc8b83c462cd61c2ca6a0778c3c3",
+      "lines": 20,
+      "titles": [],
+      "endpointLiterals": [
+        "/finance/recurring"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Recurring billing entry",
+        "layout": "Schedule-focused register with cadence, next run, customer and lifecycle.",
+        "workflow": "Name it recurring invoices when that is the resource; do not call it recurring journal entries in shell metadata.",
+        "proof": "Prove schedule identity, pause/resume, recurrence dates and generated invoice lineage."
+      }
+    },
+    {
+      "route": "/finance/reports",
+      "source": "tenant-apps/app/(dashboard)/finance/reports/page.tsx",
+      "sha256": "d96b005d0f190a601b04d81497946c95a3563e89f353b95f323892abd70a33b1",
+      "lines": 463,
+      "titles": [
+        "Refresh statement",
+        "Refresh data",
+        "Executive Income Statement (P&L) — August 2026",
+        "Close modal"
+      ],
+      "endpointLiterals": [
+        "/finance/reports/pnl?period=2026-08",
+        "/finance/reports/export",
+        "/finance/advanced/reports",
+        "/finance/gl?search=${encodeURIComponent(contextMenu.row.lineItem)}"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [
+          4,
+          69
+        ],
+        "customModalOverlay": [
+          343
+        ]
+      },
+      "proposal": {
+        "title": "Financial statement workspace",
+        "layout": "Report/period/book/entity filters, comparative statement and drill-through.",
+        "workflow": "Replace fixed August/July schema and CSV disguised as PDF/XLSX; source-certified outputs only when actually approved.",
+        "proof": "Prove file format/content, report selection, signed totals, period switching and report-to-ledger reconciliation."
+      }
+    },
+    {
+      "route": "/finance/settings",
+      "source": "tenant-apps/app/(dashboard)/finance/settings/page.tsx",
+      "sha256": "2f56826c1b0432a97bcec629d910d68dc2a98eca92ccd043ed38da2156438ea9",
+      "lines": 401,
+      "titles": [
+        "Refresh settings",
+        "Refresh data",
+        "Settings Sections"
+      ],
+      "endpointLiterals": [
+        "/finance/settings/overview"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [
+          4,
+          56
+        ],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Finance policy settings",
+        "layout": "Scoped settings sections with inheritance/locks, validation and save/discard boundary.",
+        "workflow": "Prevent background refetch overwriting dirty fields; make policy owner/effective date and historical impact explicit.",
+        "proof": "Prove save/reload/version conflict, locked policy server denial and audit of valid changes."
+      }
+    },
+    {
+      "route": "/finance/tax",
+      "source": "tenant-apps/app/(dashboard)/finance/tax/page.tsx",
+      "sha256": "177070aea79301bd8d7dc2c8e199804287d73b8717642b837bc53e4a4e96953e",
+      "lines": 1071,
+      "titles": [
+        "Refresh tax data",
+        "Refresh data",
+        "Close modal",
+        "Close modal"
+      ],
+      "endpointLiterals": [
+        "/finance/tax/summary",
+        "/finance/tax/1099-summary",
+        "/finance/tax/update-status",
+        "/finance/tax/prepare",
+        "/finance/advanced/tax-filing",
+        "/finance/advanced/tax-filing?id=${contextMenu.id}"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          169
+        ],
+        "explicitRouteGuard": [],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [
+          5,
+          123,
+          132
+        ],
+        "customModalOverlay": [
+          845,
+          965
+        ]
+      },
+      "proposal": {
+        "title": "Tax compliance overview",
+        "layout": "Jurisdiction/entity/period worklist with liability, due date, owner and documented lifecycle.",
+        "workflow": "Separate preparation, submission and acknowledged acceptance; actual filing/source evidence only.",
+        "proof": "Prove due-date context, no-obligation state, missing rules, failed filing dependency and authorized status transitions."
+      }
+    },
+    {
+      "route": "/finance/vendor-bills",
+      "source": "tenant-apps/app/(dashboard)/finance/vendor-bills/page.tsx",
+      "sha256": "52dec3c223d9745e81b797f5ec370952cc09a8a310fca4b55bab1485b3520573",
+      "lines": 208,
+      "titles": [
+        "Supplier Bills Register",
+        "New Vendor Bill"
+      ],
+      "endpointLiterals": [
+        "/finance/ap",
+        "/finance/advanced/ap-automation"
+      ],
+      "markers": {
+        "nativeDialog": [],
+        "localMoneyConversion": [
+          53,
+          76,
+          77,
+          78
+        ],
+        "explicitRouteGuard": [
+          6,
+          84,
+          205
+        ],
+        "canonicalFloorplan": [],
+        "localSubTabs": [],
+        "queryHook": [
+          6,
+          40
+        ],
+        "customModalOverlay": []
+      },
+      "proposal": {
+        "title": "Vendor bill register",
+        "layout": "Supplier/date/status/amount register with actual source-document entry and detail access.",
+        "workflow": "Align with AP work queue; separate submitted bill data from approval, payment and matching evidence.",
+        "proof": "Prove duplicate supplier reference, filtered totals, failed upload, draft correction and approved-record immutability."
+      }
+    }
+  ]
+}
