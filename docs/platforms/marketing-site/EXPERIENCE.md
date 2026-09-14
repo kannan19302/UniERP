@@ -10,3 +10,7 @@ Experience scope: performance, responsive access, WCAG 2.2 AA, SEO, localization
 
 UI presence is DECLARED evidence only until backed by real contracts and workflow tests.
 
+The unified homepage uses a selectable platform map, a searchable module directory and native architecture
+disclosures. Selection must have a programmatic state, searches must announce results and offer a clear empty
+state, and all content must reflow on mobile. It uses the existing brand tokens and shared Design Platform
+buttons. Industry foundations retain catalog early-access labels; no fabricated metrics or testimonials appear.

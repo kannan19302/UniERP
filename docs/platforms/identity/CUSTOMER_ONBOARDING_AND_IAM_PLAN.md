@@ -721,6 +721,10 @@ section and the current Design Platform standards take precedence.
    configuration is an operational failure, not a successful background job.
 8. Supported workflows meet WCAG 2.2 AA with dated automated, keyboard and representative assistive-technology
    evidence.
+9. **Architectural Evolution & Home Transition:** In accordance with `PLATFORM_WIZARD_DECOMMISSION.md`, the separate
+   Platform Wizard (`infra/platform-wizard:4000`) is transitioned to the in-app **All-In-One Enterprise Home (`tenant-apps:4003/home`)**,
+   Durable Guided Setup (`/setup`), and Workspace Atlas (`/platforms`). The standalone port 4000 gateway maintains a
+   non-blocking migration banner during the 30-day drain window.
 
 ### 14.2 Current repository findings and required correction
 
