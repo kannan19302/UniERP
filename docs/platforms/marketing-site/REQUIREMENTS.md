@@ -7,7 +7,6 @@
 - `MAR-FR-003`: The platform shall serve legal, privacy and security information.
 - `MAR-FR-004`: The platform shall manage authorized editorial content and previews.
 - `MAR-FR-005`: The platform shall measure acquisition within consent and privacy policy.
-- `MAR-FR-006`: The public homepage shall provide one coherent discovery journey across all catalog platforms and the L0–L7 architecture layers, with searchable catalog-derived modules, explicit early-access labels, and existing product/demo destinations. Architecture descriptions shall not imply verified production readiness or unsupported customer outcomes.
 
 ## System and non-functional requirements
 
