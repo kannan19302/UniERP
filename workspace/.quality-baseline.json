@@ -1,0 +1,13 @@
+{
+  "$comment": "Suppression ratchet baseline. These numbers may only go DOWN. See docs/ai/ARCHITECTURE_REVIEW.md R1. Regenerate with: node scripts/ci/check-suppressions.mjs --update",
+  "updatedAt": "2026-08-07",
+  "filesScanned": 0,
+  "counts": {
+    "tsNocheck": 0,
+    "tsIgnore": 0,
+    "tsExpectError": 0,
+    "eslintDisable": 0,
+    "explicitAny": 0,
+    "nonNullAssertion": 0
+  }
+}

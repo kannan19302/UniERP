@@ -1,0 +1,41 @@
+{
+  "name": "unierp-programme",
+  "packageManager": "pnpm@9.15.4",
+  "engines": {
+    "node": ">=22 <23"
+  },
+  "private": true,
+  "scripts": {
+    "check:ai-agent-protocol": "node scripts/check-ai-agent-protocol.mjs",
+    "check:ai-agent-governance": "node scripts/sync-ai-agent-governance.mjs --check",
+    "check:active-estate": "node scripts/test-estate.mjs",
+    "check:active-estate-catalog": "node scripts/check-active-estate-catalog.mjs",
+    "check:repository-toolchain": "node scripts/check-repository-toolchain-policy.mjs",
+    "test:repository-toolchain": "node scripts/check-repository-toolchain-policy.mjs --test",
+    "generate:repository-inventory": "node scripts/generate-repository-inventory.mjs",
+    "check:repository-inventory": "node scripts/generate-repository-inventory.mjs --check",
+    "check:non-active-estate": "node scripts/check-non-active-estate.mjs",
+    "check:sensitive-workspace-hygiene": "node scripts/check-sensitive-workspace-hygiene.mjs",
+    "test:durable-audit-and-outbox": "node scripts/check-durable-audit-and-outbox.mjs --test",
+    "test:disabled-cd": "node scripts/check-disabled-cd.mjs --test",
+    "test:workflow-immutability": "node scripts/check-workflow-immutability.mjs --test",
+    "test:http-authorization-inventory": "node scripts/check-http-authorization-inventory.mjs --test",
+    "test:discovery-gates": "node scripts/test-discovery-gates.mjs",
+    "test:layer": "node scripts/test-layer.mjs",
+    "test:ci-workflows": "node scripts/test-ci-workflows.mjs",
+    "sync:ai-agent-governance": "node scripts/sync-ai-agent-governance.mjs --write",
+    "classify:ai-change": "node scripts/classify-ai-change.mjs",
+    "test:ai-change-classifier": "node scripts/test-ai-change-classifier.mjs",
+    "test:ai-agent-protocol": "node scripts/test-ai-agent-protocol.mjs",
+    "test:migration-safety": "node scripts/test-migration-safety.mjs",
+    "check:control-center-routes": "node scripts/check-control-center-route-ownership.mjs",
+    "check:control-center-boundaries": "node scripts/check-control-center-route-ownership.mjs --verify-boundaries",
+    "check:control-center-manifests": "node scripts/check-control-center-shell-manifests.mjs",
+    "ui:audit": "node scripts/ci/ui-audit.mjs",
+    "check:ui-audit": "node scripts/ci/ui-audit.mjs --check",
+    "test:ui-audit": "node scripts/ci/ui-audit.mjs --test",
+    "overtake:market": "node scripts/run-enterprise-saas-engine.mjs",
+    "overtake:salesforce": "node scripts/run-enterprise-saas-engine.mjs",
+    "overtake:progress": "node scripts/run-enterprise-saas-engine.mjs --progress-only"
+  }
+}

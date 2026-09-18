@@ -1,0 +1,94 @@
+name: Setup GitHub Project (one-time)
+
+# Manually-triggered, one-time bootstrap: creates the "UniERP Roadmap" Projects v2
+# board described in .ai/COMPETITIVE_ROADMAP.md § 6, adds its custom fields, and
+# attaches every Epic/Story issue already seeded (#42-92).
+#
+# Why this runs in Actions instead of the agent doing it directly: Projects v2 is
+# GraphQL-only, and the sandboxed session that authored this repo's automation has
+# its outbound GraphQL blocked to a pinned set of PR-review operations (see
+# .ai/COMPETITIVE_ROADMAP.md § 6). A GitHub-hosted Actions runner talks to
+# api.github.com directly with no such restriction, so it can do what the agent
+# session cannot.
+#
+# Setup (one-time, ~2 minutes):
+#   1. Create a classic PAT with the `project` scope (Settings > Developer
+#      settings > Personal access tokens > Tokens (classic) > Generate new token,
+#      scope: "project").
+#   2. Add it as a repo secret named PROJECTS_PAT (Settings > Secrets and
+#      variables > Actions > New repository secret).
+#   3. Actions tab > "Setup GitHub Project (one-time)" > Run workflow.
+#
+# The default GITHUB_TOKEN cannot do this even with `permissions:` set broader,
+# because Projects v2 write access is only ever granted via a PAT/App token with
+# the `project` scope/permission, never via the repo-scoped default token.
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  setup-project:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check PROJECTS_PAT is configured
+        run: |
+          if [ -z "${{ secrets.PROJECTS_PAT }}" ]; then
+            echo "::error::PROJECTS_PAT secret is not set. See this workflow's header comment for setup steps."
+            exit 1
+          fi
+
+      - name: Create project, fields, and attach issues
+        env:
+          GH_TOKEN: ${{ secrets.PROJECTS_PAT }}
+        run: |
+          set -euo pipefail
+          OWNER="kannan19302"
+          OWNER_FLAG="@me"
+          REPO="erpsys"
+          TITLE="UniERP Roadmap"
+
+          echo "==> Looking for an existing '$TITLE' project (idempotency)..."
+          EXISTING_NUMBER=$(gh project list --owner "$OWNER_FLAG" --format json \
+            | jq -r --arg t "$TITLE" '.projects[] | select(.title == $t) | .number' | head -1)
+          if [ -n "$EXISTING_NUMBER" ]; then
+            PROJECT_NUMBER="$EXISTING_NUMBER"
+            echo "    Found existing project #$PROJECT_NUMBER, reusing it."
+          else
+            echo "==> Creating project '$TITLE'..."
+            PROJECT_JSON=$(gh project create --owner "$OWNER_FLAG" --title "$TITLE" --format json)
+            PROJECT_NUMBER=$(echo "$PROJECT_JSON" | jq -r '.number')
+            echo "    Project #$PROJECT_NUMBER created."
+          fi
+
+          echo "==> Adding custom fields (idempotent: skip ones that already exist)..."
+          EXISTING_FIELDS=$(gh project field-list "$PROJECT_NUMBER" --owner "$OWNER_FLAG" --format json | jq -r '.fields[].name')
+          add_field() {
+            local name="$1"; shift
+            if echo "$EXISTING_FIELDS" | grep -qxF "$name"; then
+              echo "    $name: already exists, skipping"
+            else
+              gh project field-create "$PROJECT_NUMBER" --owner "$OWNER_FLAG" --name "$name" "$@"
+            fi
+          }
+          add_field "Epic" --data-type TEXT
+          add_field "Sprint" --data-type NUMBER
+          add_field "Story Points" --data-type NUMBER
+          add_field "Status" --data-type SINGLE_SELECT --single-select-options "Backlog,Ready,In Progress,In Review,Done"
+          add_field "Phase" --data-type SINGLE_SELECT --single-select-options "F-Foundation,M-Strengthening,X-Expansion"
+          MODULES="finance,advanced-finance,crm,sales,hr,advanced-hr,procurement,supply-chain,inventory,manufacturing,projects,communication,builder,saas,admin,saas-portal,pos,marketplace,ecommerce,auth,analytics,reporting,documents,storage,drive,workflow,notifications,ai,blockchain,fixed-assets,people,subscriptions,api-platform,localization,devops,ext-gateway,pwa,saved-views,outbox,search,healthcare,education,real-estate,field-service"
+          add_field "Module" --data-type SINGLE_SELECT --single-select-options "$MODULES"
+
+          echo "==> Attaching issues #42-92..."
+          EXISTING_ISSUES=$(gh project item-list "$PROJECT_NUMBER" --owner "$OWNER_FLAG" --limit 1000 --format json \
+            | jq -r '.items[] | select(.content.type == "Issue") | .content.number')
+          for n in $(seq 42 92); do
+            if echo "$EXISTING_ISSUES" | grep -qxF "$n"; then
+              echo "    #$n already attached, skipping"
+              continue
+            fi
+            gh project item-add "$PROJECT_NUMBER" --owner "$OWNER_FLAG" \
+              --url "https://github.com/${OWNER}/${REPO}/issues/${n}"
+            echo "    added #$n"
+          done
+
+          echo "==> Done: https://github.com/users/${OWNER}/projects/${PROJECT_NUMBER}"

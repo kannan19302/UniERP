@@ -1,0 +1,807 @@
+# ============================================================
+# UniERP — the platform, built from the layered polyrepo
+# ============================================================
+#
+#   docker compose -f docker-compose.dev.yml -f docker-compose.platform.yml up -d --build
+#
+# PORT ALLOCATION (10 Platforms + 2 Backend Services + Master SSO Wizard)
+# ────────────────────────────────────────────────────────────────────────
+# 4000  ../infra/platform-wizard  Global Platform Wizard (Next.js, real OIDC relying party)
+# 4001  ../marketing-site         L4   P1 — Marketing Site
+# 4002  ../provider-admin-os      L4   P2 — Provider Admin OS (🔒 Internal Only)
+# 4003  ../tenant-apps            L4   P3 — Tenant Applications / ERP
+# 4004  ../tenant-sites           L4   P4 — Tenant Websites
+# 4005  ../web-studio             L4   P5 — Web Studio
+# 4006  ../tenant-admin           L4   P6 — Tenant Admin Console
+# 4007  ../marketplace            L4   P7 — Marketplace
+# 4008  ../developer-platform     L4   P8 — Developer Platform
+# 4009  ../mobile          L5   P9 — Mobile App (Flutter Web)
+# 4010  ../desktop-app            L5   P10 — Desktop App (Web Client Preview)
+# 3001  ../api                    L3   API Monolith Backend
+# 3005  ../idp                    L3   Identity Provider / SSO
+# 6006  ../storybook              Support Design System Catalog
+# ============================================================
+
+x-registry: &registry
+  UNIERP_REGISTRY: https://registry.npmjs.org/
+
+x-datastore-env: &datastore-env
+  DATABASE_URL: postgresql://unerp_api:unerp_api_password@postgres:5432/unerp_dev?schema=public
+  DATABASE_OWNER_URL: postgresql://unerp:unerp_password@postgres:5432/unerp_dev?schema=public
+  REDIS_URL: redis://redis:6379
+  S3_ENDPOINT: http://minio:9000
+  S3_ACCESS_KEY: minioadmin
+  S3_SECRET_KEY: minioadmin
+  S3_BUCKET: unerp-uploads
+  NEXTAUTH_SECRET: ${NEXTAUTH_SECRET:?set NEXTAUTH_SECRET in infra/.env — run scripts/gen-dev-secrets.sh}
+  PII_ENCRYPTION_KEY: ${PII_ENCRYPTION_KEY:?set PII_ENCRYPTION_KEY in infra/.env — run scripts/gen-dev-secrets.sh}
+
+x-watch-env: &watch-env
+  UV_THREADPOOL_SIZE: "16"
+  CHOKIDAR_USEPOLLING: "true"
+  WATCHPACK_POLLING: "1000"
+  NODE_OPTIONS: "--max-old-space-size=8192"
+
+x-frontend-env: &frontend-env
+  <<: *watch-env
+  NODE_ENV: development
+  API_URL: http://api:3001
+  IDP_URL: http://idp:3005
+  NEXT_PUBLIC_API_URL: ""
+  # These two are NOT the same value, and neither is redundant with IDP_URL.
+  #
+  #   OIDC_ISSUER            read by each app's SERVER-side app/api/session
+  #                          route to call /oidc/token and /oidc/revoke. It must
+  #                          be the compose service name: inside a container
+  #                          `localhost` is that container, so the default
+  #                          fallback of http://localhost:3005 made every one of
+  #                          the seven platforms fail session restore with
+  #                          ECONNREFUSED 127.0.0.1:3005 while the IdP beside it
+  #                          was perfectly healthy. Only IDP_URL was set, and
+  #                          nothing reads IDP_URL for this.
+  #
+  #   NEXT_PUBLIC_OIDC_ISSUER  baked into the BROWSER bundle (src/lib/oidc-config.ts)
+  #                          and compared verbatim against the `iss` claim, so it
+  #                          has to be the origin a browser can actually reach.
+  OIDC_ISSUER: http://idp:3005
+  NEXT_PUBLIC_OIDC_ISSUER: http://localhost:3005
+  NEXTAUTH_SECRET: ${NEXTAUTH_SECRET:?set NEXTAUTH_SECRET in infra/.env — run scripts/gen-dev-secrets.sh}
+
+services:
+  # ════════════════════════════════════════════════════════════════════════
+  # GLOBAL PLATFORM WIZARD (port 4000) — SSO landing page
+  # ════════════════════════════════════════════════════════════════════════
+
+  platform-wizard:
+    build:
+      context: ./platform-wizard
+      target: dev
+      args:
+        <<: *registry
+        OIDC_ISSUER: http://idp:3005
+      # Lets the dev target overlay the LOCAL shared/design-system packages over
+      # the published ones — see the `localdeps` stage in platform-wizard/
+      # Dockerfile. shared/auth-client/react and ui/shell exist locally but not
+      # in the published tarballs of the same version. Kept as a named context
+      # rather than widening `context:` so a plain `docker build` in
+      # platform-wizard/ still works unchanged.
+      additional_contexts:
+        localpkgs: ..
+    container_name: platform-wizard
+    restart: unless-stopped
+    profiles: ["deprecated-wizard"]
+    mem_limit: 1500m
+    environment:
+      <<: *watch-env
+      NODE_ENV: development
+      PORT: "4000"
+      OIDC_ISSUER: http://idp:3005
+      NEXT_PUBLIC_OIDC_ISSUER: http://localhost:3005
+    volumes:
+      - ./platform-wizard/app:/app/app
+      - ./platform-wizard/src:/app/src
+    ports:
+      - "4000:4000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    healthcheck:
+      test: ["CMD-SHELL", "node -e \"fetch('http://localhost:4000/api/session').then(r=>process.exit(r.status===401||r.ok?0:1)).catch(()=>process.exit(1))\""]
+      interval: 20s
+      timeout: 5s
+      start_period: 15s
+      retries: 3
+    depends_on:
+      idp:
+        condition: service_started
+
+  # ════════════════════════════════════════════════════════════════════════
+  # BACKEND SERVICES (L3)
+  # ════════════════════════════════════════════════════════════════════════
+
+  api:
+    build:
+      context: ../api
+      target: dev
+      args: *registry
+      # Lets the dev target overlay the LOCAL shared/database packages over the
+      # published ones — see the `localdeps` stage in ../api/Dockerfile. Kept as
+      # a named context rather than widening `context:` so a plain
+      # `docker build` in ../api still works unchanged.
+      additional_contexts:
+        localpkgs: ..
+    container_name: api
+    restart: unless-stopped
+    profiles: ["auth", "backend", "core", "customer", "l4", "l5", "full"]
+    mem_limit: 4g
+    environment:
+      <<: [*datastore-env, *watch-env]
+      NODE_ENV: development
+      API_PORT: "3001"
+      NEXT_PUBLIC_APP_URL: http://localhost:4003
+      NEXTAUTH_URL: http://localhost:4003
+      # api verifies RS256 OIDC bearer tokens (from the shared auth-client and
+      # from mobile/desktop) issued by idp. These two are NOT the same thing:
+      #   OIDC_ISSUER   — the identity in the token's `iss` claim, compared
+      #                   verbatim. idp publishes localhost:3005 because that
+      #                   is where browsers reach it.
+      #   OIDC_JWKS_URL — where THIS container fetches the keys, which must be
+      #                   the compose service name; `localhost` inside this
+      #                   container is this container.
+      OIDC_ISSUER: http://localhost:3005
+      OIDC_JWKS_URL: http://idp:3005/oidc/jwks.json
+    volumes:
+      - ../api/src:/app/src
+    develop:
+      watch:
+        - action: rebuild
+          path: ../api/src
+        - action: rebuild
+          path: ../api/package.json
+        - action: rebuild
+          path: ../api/Dockerfile
+    ports:
+      - "3001:3001"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    healthcheck:
+      test: ["CMD-SHELL", "node -e \"fetch('http://localhost:3001/api/v1/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))\""]
+      interval: 20s
+      timeout: 5s
+      start_period: 60s
+      retries: 3
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  idp:
+    build:
+      context: ../idp
+      target: dev
+      args: *registry
+      # See the api service above and the `localdeps` stage in ../idp/Dockerfile:
+      # the ten W1/W2 Prisma models exist only in the local `data` package, so
+      # the dev image has to build against it rather than published 1.0.14.
+      additional_contexts:
+        localpkgs: ..
+    container_name: idp
+    restart: unless-stopped
+    # "wizard" belongs here even though idp is not itself the wizard: the
+    # platform-wizard service carries that profile and `depends_on: idp`, and a
+    # depends_on target that is filtered out by the active profile is a hard
+    # config error ("depends on undefined service"), not a soft skip. Without
+    # this, `--profile wizard` could not start at all.
+    profiles: ["auth", "backend", "wizard", "core", "customer", "l4", "l5", "full"]
+    # 4g, not 2g. idp is the same NestJS + Prisma build as api, and the shared
+    # *watch-env sets NODE_OPTIONS=--max-old-space-size=8192 — V8 is told it has
+    # an 8GB heap, so it will not collect before it reaches the cgroup wall. At
+    # 2g `nest start --watch` pinned 2GiB/2GiB and never finished compiling, so
+    # nothing on 3005 ever answered. api survives the same NODE_OPTIONS only
+    # because its 4g leaves headroom to GC in. Keep these two numbers equal.
+    mem_limit: 4g
+    environment:
+      <<: [*datastore-env, *watch-env]
+      NODE_ENV: development
+      PORT: "3005"
+      API_PORT: "3005"
+      API_PUBLIC_URL: http://localhost:3005
+      PLATFORM_WIZARD_URL: ${PLATFORM_WIZARD_URL:-http://localhost:4000}
+      TENANT_APP_URL: ${TENANT_APP_URL:-http://localhost:4003}
+      WEBAUTHN_RP_ID: ${WEBAUTHN_RP_ID:-localhost}
+      WEBAUTHN_RP_NAME: ${WEBAUTHN_RP_NAME:-UniERP}
+      WEBAUTHN_ORIGINS: ${WEBAUTHN_ORIGINS:-http://localhost:3005}
+      GOOGLE_OAUTH_ENABLED: ${GOOGLE_OAUTH_ENABLED:-false}
+      GOOGLE_OAUTH_CLIENT_ID: ${GOOGLE_OAUTH_CLIENT_ID:-}
+      GOOGLE_OAUTH_CLIENT_SECRET: ${GOOGLE_OAUTH_CLIENT_SECRET:-}
+      MICROSOFT_OAUTH_ENABLED: ${MICROSOFT_OAUTH_ENABLED:-false}
+      MICROSOFT_OAUTH_CLIENT_ID: ${MICROSOFT_OAUTH_CLIENT_ID:-}
+      MICROSOFT_OAUTH_CLIENT_SECRET: ${MICROSOFT_OAUTH_CLIENT_SECRET:-}
+      MICROSOFT_OAUTH_TENANT: ${MICROSOFT_OAUTH_TENANT:-common}
+      GITHUB_OAUTH_ENABLED: ${GITHUB_OAUTH_ENABLED:-false}
+      GITHUB_OAUTH_CLIENT_ID: ${GITHUB_OAUTH_CLIENT_ID:-}
+      GITHUB_OAUTH_CLIENT_SECRET: ${GITHUB_OAUTH_CLIENT_SECRET:-}
+      EMAIL_PROVIDER: ${EMAIL_PROVIDER:-auto}
+      EMAIL_FROM: ${EMAIL_FROM:-UniERP <noreply@kannan19302.dev>}
+      RESEND_API_KEY: ${RESEND_API_KEY:-}
+      BREVO_API_KEY: ${BREVO_API_KEY:-}
+      SMTP_HOST: ${SMTP_HOST:-mailpit}
+      SMTP_PORT: ${SMTP_PORT:-1025}
+      SMTP_USER: ${SMTP_USER:-}
+      SMTP_PASSWORD: ${SMTP_PASSWORD:-}
+      SMTP_FROM: ${SMTP_FROM:-}
+      TERMS_OF_SERVICE_URL: ${TERMS_OF_SERVICE_URL:-http://localhost:4001/terms}
+      TERMS_OF_SERVICE_VERSION: ${TERMS_OF_SERVICE_VERSION:-2026-07-development}
+      TERMS_OF_SERVICE_EFFECTIVE_DATE: ${TERMS_OF_SERVICE_EFFECTIVE_DATE:-2026-07-01}
+      PRIVACY_POLICY_URL: ${PRIVACY_POLICY_URL:-http://localhost:4001/privacy}
+      PRIVACY_POLICY_VERSION: ${PRIVACY_POLICY_VERSION:-2026-07-development}
+      PRIVACY_POLICY_EFFECTIVE_DATE: ${PRIVACY_POLICY_EFFECTIVE_DATE:-2026-07-01}
+    volumes:
+      # Source stays visible for inspection, but executable dist/ must come
+      # from the image built above. Binding ../idp/dist here overlaid the fresh
+      # image artifact with whichever host build happened to exist, silently
+      # reverting runtime security and policy fixes after a successful build.
+      - ../idp/src:/app/src
+    develop:
+      watch:
+        - action: rebuild
+          path: ../idp/src
+        - action: rebuild
+          path: ../idp/package.json
+        - action: rebuild
+          path: ../idp/Dockerfile
+    ports:
+      - "3005:3005"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      mailpit:
+        condition: service_healthy
+
+  # ════════════════════════════════════════════════════════════════════════
+  # PLATFORM 1 — Marketing Site (port 4001)
+  # ════════════════════════════════════════════════════════════════════════
+
+  marketing-site:
+    build:
+      context: ../marketing-site
+      target: dev
+      args:
+        <<: *registry
+        API_URL: http://api:3001
+        IDP_URL: http://idp:3005
+      additional_contexts:
+        localpkgs: ..
+    container_name: marketing-site
+    restart: unless-stopped
+    profiles: ["l4", "full"]
+    mem_limit: 2g
+    environment:
+      <<: *watch-env
+      NODE_ENV: development
+      PORT: "4001"
+      DATABASE_URL: postgresql://unerp:unerp_password@postgres:5432/unerp_marketing?schema=public
+      JWT_SECRET: ${JWT_SECRET:?set JWT_SECRET in infra/.env — run scripts/gen-dev-secrets.sh}
+      ENCRYPTION_KEY: ${ENCRYPTION_KEY:?set ENCRYPTION_KEY in infra/.env — run scripts/gen-dev-secrets.sh}
+      NEXT_PUBLIC_API_URL: http://localhost:3001
+      NEXT_PUBLIC_ERP_APP_URL: http://localhost:4003
+    # This service keeps its source in app/, lib/ and components/ at the repo
+    # root. prisma/ is mounted too so migrations added on the host are visible.
+    # next.config.mjs is mounted so config updates take effect immediately on dev server reload.
+    volumes:
+      - ../marketing-site/app:/app/app
+      - ../marketing-site/lib:/app/lib
+      - ../marketing-site/components:/app/components
+      - ../marketing-site/prisma:/app/prisma
+      - ../marketing-site/public:/app/public
+      - ../marketing-site/next.config.mjs:/app/next.config.mjs
+      - ../marketing-site/middleware.ts:/app/middleware.ts
+    develop:
+      watch:
+        - action: sync
+          path: ../marketing-site/app
+          target: /app/app
+        - action: sync
+          path: ../marketing-site/components
+          target: /app/components
+        - action: sync
+          path: ../marketing-site/lib
+          target: /app/lib
+        - action: sync
+          path: ../marketing-site/public
+          target: /app/public
+        - action: sync
+          path: ../marketing-site/middleware.ts
+          target: /app/middleware.ts
+        - action: sync
+          path: ../marketing-site/next.config.mjs
+          target: /app/next.config.mjs
+    ports:
+      - "4001:4001"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  # ════════════════════════════════════════════════════════════════════════
+  # PLATFORM 2 — Provider Admin OS (port 4002) — 🔒 Internal Only
+  # ════════════════════════════════════════════════════════════════════════
+
+  provider-admin-os:
+    build:
+      context: ../provider-admin-os
+      target: dev
+      args:
+        <<: *registry
+        API_URL: http://api:3001
+        IDP_URL: http://idp:3005
+      # Lets the dev target overlay the LOCAL shared/design-system packages over
+      # the published ones — see the `localdeps` stage in this service's
+      # Dockerfile. shared/auth-client and ui/shell exist locally but not in the
+      # published tarballs of the same version. Kept as a named context rather
+      # than widening `context:` so a plain `docker build` in the service
+      # directory still works unchanged.
+      additional_contexts:
+        localpkgs: ..
+    container_name: provider-admin-os
+    restart: unless-stopped
+    profiles: ["core", "l4", "full"]
+    mem_limit: 2g
+    environment:
+      <<: *frontend-env
+    volumes:
+      - ../provider-admin-os/app:/app/app
+      - ../provider-admin-os/src:/app/src
+      - ../provider-admin-os/public:/app/public
+      - ../provider-admin-os/middleware.ts:/app/middleware.ts
+      - ../provider-admin-os/next.config.mjs:/app/next.config.mjs
+    develop:
+      watch:
+        - action: sync
+          path: ../provider-admin-os/app
+          target: /app/app
+        - action: sync
+          path: ../provider-admin-os/src
+          target: /app/src
+        - action: sync
+          path: ../provider-admin-os/public
+          target: /app/public
+        - action: sync
+          path: ../provider-admin-os/middleware.ts
+          target: /app/middleware.ts
+        - action: sync
+          path: ../provider-admin-os/next.config.mjs
+          target: /app/next.config.mjs
+    ports:
+      - "4002:4002"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      api:
+        condition: service_healthy
+      idp:
+        condition: service_started
+
+  # ════════════════════════════════════════════════════════════════════════
+  # PLATFORM 3 — Tenant Applications / ERP (port 4003)
+  # ════════════════════════════════════════════════════════════════════════
+
+  tenant-apps:
+    build:
+      context: ../tenant-apps
+      target: dev
+      args:
+        <<: *registry
+        API_URL: http://api:3001
+        IDP_URL: http://idp:3005
+      # Lets the dev target overlay the LOCAL shared/design-system packages over
+      # the published ones — see the `localdeps` stage in this service's
+      # Dockerfile. shared/auth-client and ui/shell exist locally but not in the
+      # published tarballs of the same version. Kept as a named context rather
+      # than widening `context:` so a plain `docker build` in the service
+      # directory still works unchanged.
+      additional_contexts:
+        localpkgs: ..
+    container_name: tenant-apps
+    restart: unless-stopped
+    profiles: ["core", "customer", "l4", "full"]
+    mem_limit: 6g
+    environment:
+      <<: *frontend-env
+      NEXTAUTH_URL: http://localhost:4003
+    # app/ as well as src/: this service keeps its routes in app/ (the Dockerfile
+    # COPYs both), and every other platform with an app/ directory mounts it.
+    # Without this, editing a route here had no effect until the image was
+    # rebuilt, which reads as "my change did nothing" rather than "not mounted".
+    volumes:
+      - ../tenant-apps/app:/app/app
+      - ../tenant-apps/src:/app/src
+      - ../tenant-apps/public:/app/public
+      - ../tenant-apps/middleware.ts:/app/middleware.ts
+      - ../tenant-apps/next.config.mjs:/app/next.config.mjs
+    develop:
+      watch:
+        - action: sync
+          path: ../tenant-apps/app
+          target: /app/app
+        - action: sync
+          path: ../tenant-apps/src
+          target: /app/src
+        - action: sync
+          path: ../tenant-apps/public
+          target: /app/public
+        - action: sync
+          path: ../tenant-apps/middleware.ts
+          target: /app/middleware.ts
+        - action: sync
+          path: ../tenant-apps/next.config.mjs
+          target: /app/next.config.mjs
+    ports:
+      - "4003:4003"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      api:
+        condition: service_healthy
+      idp:
+        condition: service_started
+
+  # ════════════════════════════════════════════════════════════════════════
+  # PLATFORM 4 — Tenant Websites (port 4004)
+  # ════════════════════════════════════════════════════════════════════════
+
+  tenant-sites:
+    build:
+      context: ../tenant-sites
+      target: dev
+      args:
+        <<: *registry
+        API_URL: http://api:3001
+        IDP_URL: http://idp:3005
+      # Lets the dev target overlay the LOCAL shared/design-system packages over
+      # the published ones — see the `localdeps` stage in this service's
+      # Dockerfile. shared/auth-client and ui/shell exist locally but not in the
+      # published tarballs of the same version. Kept as a named context rather
+      # than widening `context:` so a plain `docker build` in the service
+      # directory still works unchanged.
+      additional_contexts:
+        localpkgs: ..
+    container_name: tenant-sites
+    restart: unless-stopped
+    profiles: ["customer", "l4", "full"]
+    mem_limit: 1500m
+    environment:
+      <<: *frontend-env
+    volumes:
+      - ../tenant-sites/app:/app/app
+      - ../tenant-sites/src:/app/src
+      - ../tenant-sites/public:/app/public
+      - ../tenant-sites/middleware.ts:/app/middleware.ts
+      - ../tenant-sites/next.config.mjs:/app/next.config.mjs
+    develop:
+      watch:
+        - action: sync
+          path: ../tenant-sites/app
+          target: /app/app
+        - action: sync
+          path: ../tenant-sites/src
+          target: /app/src
+        - action: sync
+          path: ../tenant-sites/public
+          target: /app/public
+        - action: sync
+          path: ../tenant-sites/middleware.ts
+          target: /app/middleware.ts
+        - action: sync
+          path: ../tenant-sites/next.config.mjs
+          target: /app/next.config.mjs
+    ports:
+      - "4004:4004"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      api:
+        condition: service_healthy
+      idp:
+        condition: service_started
+
+  # ════════════════════════════════════════════════════════════════════════
+  # PLATFORM 5 — Web Studio (port 4005)
+  # ════════════════════════════════════════════════════════════════════════
+
+  web-studio:
+    build:
+      context: ../web-studio
+      target: dev
+      args:
+        <<: *registry
+        API_URL: http://api:3001
+        IDP_URL: http://idp:3005
+      # Lets the dev target overlay the LOCAL shared/design-system packages over
+      # the published ones — see the `localdeps` stage in this service's
+      # Dockerfile. shared/auth-client and ui/shell exist locally but not in the
+      # published tarballs of the same version. Kept as a named context rather
+      # than widening `context:` so a plain `docker build` in the service
+      # directory still works unchanged.
+      additional_contexts:
+        localpkgs: ..
+    container_name: web-studio
+    restart: unless-stopped
+    profiles: ["customer", "l4", "full"]
+    mem_limit: 2g
+    environment:
+      <<: *frontend-env
+    volumes:
+      - ../web-studio/app:/app/app
+      - ../web-studio/src:/app/src
+      - ../web-studio/public:/app/public
+      - ../web-studio/next.config.mjs:/app/next.config.mjs
+    develop:
+      watch:
+        - action: sync
+          path: ../web-studio/app
+          target: /app/app
+        - action: sync
+          path: ../web-studio/src
+          target: /app/src
+        - action: sync
+          path: ../web-studio/public
+          target: /app/public
+        - action: sync
+          path: ../web-studio/next.config.mjs
+          target: /app/next.config.mjs
+    ports:
+      - "4005:4005"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      api:
+        condition: service_healthy
+      idp:
+        condition: service_started
+
+  # ════════════════════════════════════════════════════════════════════════
+  # PLATFORM 6 — Tenant Admin Console (port 4006)
+  # ════════════════════════════════════════════════════════════════════════
+
+  tenant-admin:
+    build:
+      context: ../tenant-admin
+      target: dev
+      args:
+        <<: *registry
+        API_URL: http://api:3001
+        IDP_URL: http://idp:3005
+      # Lets the dev target overlay the LOCAL shared/design-system packages over
+      # the published ones — see the `localdeps` stage in this service's
+      # Dockerfile. shared/auth-client and ui/shell exist locally but not in the
+      # published tarballs of the same version. Kept as a named context rather
+      # than widening `context:` so a plain `docker build` in the service
+      # directory still works unchanged.
+      additional_contexts:
+        localpkgs: ..
+    container_name: tenant-admin
+    restart: unless-stopped
+    profiles: ["core", "customer", "l4", "full"]
+    mem_limit: 2g
+    environment:
+      <<: *frontend-env
+    volumes:
+      - ../tenant-admin/app:/app/app
+      - ../tenant-admin/src:/app/src
+      - ../tenant-admin/public:/app/public
+      - ../tenant-admin/next.config.mjs:/app/next.config.mjs
+    develop:
+      watch:
+        - action: sync
+          path: ../tenant-admin/app
+          target: /app/app
+        - action: sync
+          path: ../tenant-admin/src
+          target: /app/src
+        - action: sync
+          path: ../tenant-admin/public
+          target: /app/public
+        - action: sync
+          path: ../tenant-admin/next.config.mjs
+          target: /app/next.config.mjs
+    ports:
+      - "4006:4006"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      api:
+        condition: service_healthy
+      idp:
+        condition: service_started
+
+  # ════════════════════════════════════════════════════════════════════════
+  # PLATFORM 7 — Marketplace (port 4007)
+  # ════════════════════════════════════════════════════════════════════════
+
+  marketplace:
+    build:
+      context: ../marketplace
+      target: dev
+      args:
+        <<: *registry
+        API_URL: http://api:3001
+        IDP_URL: http://idp:3005
+      # Lets the dev target overlay the LOCAL shared/design-system packages over
+      # the published ones — see the `localdeps` stage in this service's
+      # Dockerfile. shared/auth-client and ui/shell exist locally but not in the
+      # published tarballs of the same version. Kept as a named context rather
+      # than widening `context:` so a plain `docker build` in the service
+      # directory still works unchanged.
+      additional_contexts:
+        localpkgs: ..
+    container_name: marketplace
+    restart: unless-stopped
+    profiles: ["customer", "l4", "full"]
+    mem_limit: 1500m
+    environment:
+      <<: *frontend-env
+    volumes:
+      - ../marketplace/app:/app/app
+      - ../marketplace/src:/app/src
+      - ../marketplace/public:/app/public
+      - ../marketplace/next.config.mjs:/app/next.config.mjs
+    develop:
+      watch:
+        - action: sync
+          path: ../marketplace/app
+          target: /app/app
+        - action: sync
+          path: ../marketplace/src
+          target: /app/src
+        - action: sync
+          path: ../marketplace/public
+          target: /app/public
+        - action: sync
+          path: ../marketplace/next.config.mjs
+          target: /app/next.config.mjs
+    ports:
+      - "4007:4007"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      api:
+        condition: service_healthy
+      idp:
+        condition: service_started
+
+  # ════════════════════════════════════════════════════════════════════════
+  # PLATFORM 8 — Developer Platform (port 4008)
+  # ════════════════════════════════════════════════════════════════════════
+
+  developer-platform:
+    build:
+      context: ../developer-platform
+      target: dev
+      args:
+        <<: *registry
+        API_URL: http://api:3001
+      # Lets the dev target overlay the LOCAL shared/design-system packages over
+      # the published ones — see the `localdeps` stage in this service's
+      # Dockerfile. shared/auth-client and ui/shell exist locally but not in the
+      # published tarballs of the same version. Kept as a named context rather
+      # than widening `context:` so a plain `docker build` in the service
+      # directory still works unchanged.
+      additional_contexts:
+        localpkgs: ..
+    container_name: developer-platform
+    restart: unless-stopped
+    profiles: ["l4", "full"]
+    mem_limit: 2g
+    environment:
+      <<: *frontend-env
+    volumes:
+      - ../developer-platform/src:/app/src
+      - ../developer-platform/public:/app/public
+      - ../developer-platform/next.config.mjs:/app/next.config.mjs
+    develop:
+      watch:
+        - action: sync
+          path: ../developer-platform/src
+          target: /app/src
+        - action: sync
+          path: ../developer-platform/public
+          target: /app/public
+        - action: sync
+          path: ../developer-platform/next.config.mjs
+          target: /app/next.config.mjs
+    ports:
+      - "4008:4008"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      api:
+        condition: service_started
+
+  # ════════════════════════════════════════════════════════════════════════
+  # PLATFORM 9 — Mobile App (port 4009)
+  # ════════════════════════════════════════════════════════════════════════
+
+  mobile:
+    build:
+      context: ../mobile
+      target: dev
+      args:
+        API_BASE_URL: http://api:3001
+    container_name: mobile
+    restart: unless-stopped
+    profiles: ["customer", "l5", "full"]
+    mem_limit: 1g
+    volumes:
+      - ../mobile/lib:/app/lib
+      - ../mobile/assets:/app/assets
+      - ../mobile/web:/app/web
+    ports:
+      - "4009:8080"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      api:
+        condition: service_started
+
+  # ════════════════════════════════════════════════════════════════════════
+  # PLATFORM 10 — Desktop App (port 4010)
+  # ════════════════════════════════════════════════════════════════════════
+
+  desktop-app:
+    build:
+      context: ../desktop-app
+      target: dev
+    container_name: desktop-app
+    restart: unless-stopped
+    profiles: ["customer", "l5", "full"]
+    mem_limit: 1g
+    environment:
+      PORT: "4010"
+      HOST: "0.0.0.0"
+      NODE_ENV: development
+    volumes:
+      - ../desktop-app/public:/app/public
+    ports:
+      - "4010:4010"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      api:
+        condition: service_started
+
+  # ════════════════════════════════════════════════════════════════════════
+  # SUPPORT — Storybook (port 6006)
+  # ════════════════════════════════════════════════════════════════════════
+
+  storybook:
+    build:
+      context: ../storybook
+      target: dev
+      args: *registry
+    container_name: storybook
+    restart: unless-stopped
+    profiles: ["full"]
+    mem_limit: 1g
+    environment:
+      <<: *watch-env
+      NODE_ENV: development
+    # /design-system/src, NOT /unierp-design-system/src. .storybook/main.ts globs
+    # '../../design-system/src/**/*.stories.@(ts|tsx)' and aliases
+    # @kannan19302/ui to the same path — both relative to /app/.storybook, which
+    # resolves to /design-system/src. Nothing in this repo ever referenced
+    # /unierp-design-system, so the 49 story files were mounted somewhere no
+    # config looked: Storybook booted fine, answered 200 on :6006, and served an
+    # empty catalogue with "No story files found for the specified pattern".
+    volumes:
+      - ../storybook/.storybook:/app/.storybook
+      - ../design-system/src:/design-system/src
+    ports:
+      - "6006:6006"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

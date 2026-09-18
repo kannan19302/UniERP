@@ -1,0 +1,45 @@
+{
+  "$schema": "https://unierp.io/schemas/platform-manifest.json",
+  "description": "The platform manifest pins exact versions for every component of the release train. A deploy IS a manifest. A rollback IS the previous manifest. See PLATFORM_ARCHITECTURE.md § 4.5 (M1).",
+  "train": "2026.08.0",
+  "pinned_at": "2026-08-03T12:00:00Z",
+  "components": {
+    "contracts": "1.0.0",
+    "kernel": "1.0.0",
+    "sdk": "1.0.0",
+    "database": "1.0.0",
+    "extension-api": "1.0.0",
+    "sandbox": "1.0.0",
+    "framework": "1.0.0",
+    "auth": "1.0.0",
+    "service-kit": "1.0.0",
+    "shared": "1.0.0",
+    "api": "2026.08.0",
+    "web": "2026.08.0",
+    "console": "0.1.0",
+    "extensions": {
+      "real-estate": "1.0.0",
+      "education": "1.0.0",
+      "healthcare": "1.0.0",
+      "field-service": "1.0.0"
+    }
+  },
+  "deployment": {
+    "staging": {
+      "auto_deploy": true,
+      "gate": "golden-path-ci"
+    },
+    "production": {
+      "auto_deploy": false,
+      "gate": "golden-path-ci",
+      "requires_human_approval": true,
+      "rollback_sha": null
+    }
+  },
+  "rollback_policy": {
+    "strategy": "previous-manifest",
+    "max_minutes": 5,
+    "rehearsal_frequency": "quarterly",
+    "note": "Because every migration is expand→migrate→contract and backward-compatible, a manifest rollback never requires a database rollback."
+  }
+}

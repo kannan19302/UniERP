@@ -1,0 +1,244 @@
+{
+  "comment": "P12-034 legacy migration safety baseline ratchet. May only shrink.",
+  "totalRecorded": 34,
+  "allowed": [
+    {
+      "key": "20260613150301_dev_init:14",
+      "migration": "20260613150301_dev_init",
+      "line": 14,
+      "level": "CRITICAL",
+      "desc": "Blocking table rewrite: ADD COLUMN NOT NULL without DEFAULT detected in \"ADD COLUMN     \"body\" TEXT NOT NULL,\"."
+    },
+    {
+      "key": "20260709153531_add_budget_control_and_reallocation:85",
+      "migration": "20260709153531_add_budget_control_and_reallocation",
+      "line": 85,
+      "level": "HIGH",
+      "desc": "Destructive DROP TABLE without online strategy in \"DROP TABLE \"_archived_agent_commissions\";\"."
+    },
+    {
+      "key": "20260709153531_add_budget_control_and_reallocation:88",
+      "migration": "20260709153531_add_budget_control_and_reallocation",
+      "line": 88,
+      "level": "HIGH",
+      "desc": "Destructive DROP TABLE without online strategy in \"DROP TABLE \"_archived_appointments\";\"."
+    },
+    {
+      "key": "20260709153531_add_budget_control_and_reallocation:91",
+      "migration": "20260709153531_add_budget_control_and_reallocation",
+      "line": 91,
+      "level": "HIGH",
+      "desc": "Destructive DROP TABLE without online strategy in \"DROP TABLE \"_archived_book_register\";\"."
+    },
+    {
+      "key": "20260709153531_add_budget_control_and_reallocation:94",
+      "migration": "20260709153531_add_budget_control_and_reallocation",
+      "line": 94,
+      "level": "HIGH",
+      "desc": "Destructive DROP TABLE without online strategy in \"DROP TABLE \"_archived_book_transactions\";\"."
+    },
+    {
+      "key": "20260709153531_add_budget_control_and_reallocation:97",
+      "migration": "20260709153531_add_budget_control_and_reallocation",
+      "line": 97,
+      "level": "HIGH",
+      "desc": "Destructive DROP TABLE without online strategy in \"DROP TABLE \"_archived_courses\";\"."
+    },
+    {
+      "key": "20260709153531_add_budget_control_and_reallocation:100",
+      "migration": "20260709153531_add_budget_control_and_reallocation",
+      "line": 100,
+      "level": "HIGH",
+      "desc": "Destructive DROP TABLE without online strategy in \"DROP TABLE \"_archived_drug_register\";\"."
+    },
+    {
+      "key": "20260709153531_add_budget_control_and_reallocation:103",
+      "migration": "20260709153531_add_budget_control_and_reallocation",
+      "line": 103,
+      "level": "HIGH",
+      "desc": "Destructive DROP TABLE without online strategy in \"DROP TABLE \"_archived_fee_structures\";\"."
+    },
+    {
+      "key": "20260709153531_add_budget_control_and_reallocation:106",
+      "migration": "20260709153531_add_budget_control_and_reallocation",
+      "line": 106,
+      "level": "HIGH",
+      "desc": "Destructive DROP TABLE without online strategy in \"DROP TABLE \"_archived_leases\";\"."
+    },
+    {
+      "key": "20260709153531_add_budget_control_and_reallocation:109",
+      "migration": "20260709153531_add_budget_control_and_reallocation",
+      "line": 109,
+      "level": "HIGH",
+      "desc": "Destructive DROP TABLE without online strategy in \"DROP TABLE \"_archived_medical_encounters\";\"."
+    },
+    {
+      "key": "20260709153531_add_budget_control_and_reallocation:112",
+      "migration": "20260709153531_add_budget_control_and_reallocation",
+      "line": 112,
+      "level": "HIGH",
+      "desc": "Destructive DROP TABLE without online strategy in \"DROP TABLE \"_archived_patients\";\"."
+    },
+    {
+      "key": "20260709153531_add_budget_control_and_reallocation:115",
+      "migration": "20260709153531_add_budget_control_and_reallocation",
+      "line": 115,
+      "level": "HIGH",
+      "desc": "Destructive DROP TABLE without online strategy in \"DROP TABLE \"_archived_practitioners\";\"."
+    },
+    {
+      "key": "20260709153531_add_budget_control_and_reallocation:118",
+      "migration": "20260709153531_add_budget_control_and_reallocation",
+      "line": 118,
+      "level": "HIGH",
+      "desc": "Destructive DROP TABLE without online strategy in \"DROP TABLE \"_archived_prescriptions\";\"."
+    },
+    {
+      "key": "20260709153531_add_budget_control_and_reallocation:121",
+      "migration": "20260709153531_add_budget_control_and_reallocation",
+      "line": 121,
+      "level": "HIGH",
+      "desc": "Destructive DROP TABLE without online strategy in \"DROP TABLE \"_archived_preventative_maintenances\";\"."
+    },
+    {
+      "key": "20260709153531_add_budget_control_and_reallocation:124",
+      "migration": "20260709153531_add_budget_control_and_reallocation",
+      "line": 124,
+      "level": "HIGH",
+      "desc": "Destructive DROP TABLE without online strategy in \"DROP TABLE \"_archived_properties\";\"."
+    },
+    {
+      "key": "20260709153531_add_budget_control_and_reallocation:127",
+      "migration": "20260709153531_add_budget_control_and_reallocation",
+      "line": 127,
+      "level": "HIGH",
+      "desc": "Destructive DROP TABLE without online strategy in \"DROP TABLE \"_archived_property_maintenances\";\"."
+    },
+    {
+      "key": "20260709153531_add_budget_control_and_reallocation:130",
+      "migration": "20260709153531_add_budget_control_and_reallocation",
+      "line": 130,
+      "level": "HIGH",
+      "desc": "Destructive DROP TABLE without online strategy in \"DROP TABLE \"_archived_service_dispatches\";\"."
+    },
+    {
+      "key": "20260709153531_add_budget_control_and_reallocation:133",
+      "migration": "20260709153531_add_budget_control_and_reallocation",
+      "line": 133,
+      "level": "HIGH",
+      "desc": "Destructive DROP TABLE without online strategy in \"DROP TABLE \"_archived_service_tickets\";\"."
+    },
+    {
+      "key": "20260709153531_add_budget_control_and_reallocation:136",
+      "migration": "20260709153531_add_budget_control_and_reallocation",
+      "line": 136,
+      "level": "HIGH",
+      "desc": "Destructive DROP TABLE without online strategy in \"DROP TABLE \"_archived_student_fees\";\"."
+    },
+    {
+      "key": "20260709153531_add_budget_control_and_reallocation:139",
+      "migration": "20260709153531_add_budget_control_and_reallocation",
+      "line": 139,
+      "level": "HIGH",
+      "desc": "Destructive DROP TABLE without online strategy in \"DROP TABLE \"_archived_students\";\"."
+    },
+    {
+      "key": "20260709153531_add_budget_control_and_reallocation:142",
+      "migration": "20260709153531_add_budget_control_and_reallocation",
+      "line": 142,
+      "level": "HIGH",
+      "desc": "Destructive DROP TABLE without online strategy in \"DROP TABLE \"_archived_technician_checklists\";\"."
+    },
+    {
+      "key": "20260709153531_add_budget_control_and_reallocation:145",
+      "migration": "20260709153531_add_budget_control_and_reallocation",
+      "line": 145,
+      "level": "HIGH",
+      "desc": "Destructive DROP TABLE without online strategy in \"DROP TABLE \"_archived_timetables\";\"."
+    },
+    {
+      "key": "20260721000000_finance_production_grade_persistence:2",
+      "migration": "20260721000000_finance_production_grade_persistence",
+      "line": 2,
+      "level": "CRITICAL",
+      "desc": "Blocking table rewrite: ADD COLUMN NOT NULL without DEFAULT detected in \"ALTER TABLE \"credit_notes\" ADD COLUMN     \"updated_at\" TIMESTAMP(3) NOT NULL;\"."
+    },
+    {
+      "key": "20260721000000_finance_production_grade_persistence:5",
+      "migration": "20260721000000_finance_production_grade_persistence",
+      "line": 5,
+      "level": "CRITICAL",
+      "desc": "Blocking table rewrite: ADD COLUMN NOT NULL without DEFAULT detected in \"ALTER TABLE \"debit_notes\" ADD COLUMN     \"updated_at\" TIMESTAMP(3) NOT NULL;\"."
+    },
+    {
+      "key": "20260723223000_baseline_schema_sync:80",
+      "migration": "20260723223000_baseline_schema_sync",
+      "line": 80,
+      "level": "CRITICAL",
+      "desc": "Blocking table rewrite: ADD COLUMN NOT NULL without DEFAULT detected in \"ADD COLUMN     \"updated_at\" TIMESTAMP(3) NOT NULL,\"."
+    },
+    {
+      "key": "20260723223000_baseline_schema_sync:85",
+      "migration": "20260723223000_baseline_schema_sync",
+      "line": 85,
+      "level": "CRITICAL",
+      "desc": "Blocking table rewrite: ADD COLUMN NOT NULL without DEFAULT detected in \"ADD COLUMN     \"customer_ids\" JSONB NOT NULL,\"."
+    },
+    {
+      "key": "20260723223000_baseline_schema_sync:86",
+      "migration": "20260723223000_baseline_schema_sync",
+      "line": 86,
+      "level": "CRITICAL",
+      "desc": "Blocking table rewrite: ADD COLUMN NOT NULL without DEFAULT detected in \"ADD COLUMN     \"level_ids\" JSONB NOT NULL,\"."
+    },
+    {
+      "key": "20260723223000_baseline_schema_sync:88",
+      "migration": "20260723223000_baseline_schema_sync",
+      "line": 88,
+      "level": "CRITICAL",
+      "desc": "Blocking table rewrite: ADD COLUMN NOT NULL without DEFAULT detected in \"ADD COLUMN     \"results\" JSONB NOT NULL,\"."
+    },
+    {
+      "key": "20260723223000_baseline_schema_sync:89",
+      "migration": "20260723223000_baseline_schema_sync",
+      "line": 89,
+      "level": "CRITICAL",
+      "desc": "Blocking table rewrite: ADD COLUMN NOT NULL without DEFAULT detected in \"ADD COLUMN     \"title\" TEXT NOT NULL,\"."
+    },
+    {
+      "key": "20260723223000_baseline_schema_sync:92",
+      "migration": "20260723223000_baseline_schema_sync",
+      "line": 92,
+      "level": "CRITICAL",
+      "desc": "Blocking table rewrite: ADD COLUMN NOT NULL without DEFAULT detected in \"ADD COLUMN     \"updated_at\" TIMESTAMP(3) NOT NULL,\"."
+    },
+    {
+      "key": "20260723223000_baseline_schema_sync:110",
+      "migration": "20260723223000_baseline_schema_sync",
+      "line": 110,
+      "level": "CRITICAL",
+      "desc": "Blocking table rewrite: ADD COLUMN NOT NULL without DEFAULT detected in \"ADD COLUMN     \"invoice_number\" TEXT NOT NULL,\"."
+    },
+    {
+      "key": "20260723223000_baseline_schema_sync:111",
+      "migration": "20260723223000_baseline_schema_sync",
+      "line": 111,
+      "level": "CRITICAL",
+      "desc": "Blocking table rewrite: ADD COLUMN NOT NULL without DEFAULT detected in \"ADD COLUMN     \"total_amount\" DECIMAL(15,2) NOT NULL;\"."
+    },
+    {
+      "key": "20260723223000_baseline_schema_sync:124",
+      "migration": "20260723223000_baseline_schema_sync",
+      "line": 124,
+      "level": "CRITICAL",
+      "desc": "Blocking table rewrite: ADD COLUMN NOT NULL without DEFAULT detected in \"ADD COLUMN     \"start_date\" TIMESTAMP(3) NOT NULL,\"."
+    },
+    {
+      "key": "20260804020000_add_missing_schema_columns:59",
+      "migration": "20260804020000_add_missing_schema_columns",
+      "line": 59,
+      "level": "CRITICAL",
+      "desc": "Blocking table rewrite: ADD COLUMN NOT NULL without DEFAULT detected in \"ALTER TABLE \"stored_files\" ADD COLUMN IF NOT EXISTS \"updated_at\" TIMESTAMP(3) NOT NULL;\"."
+    }
+  ]
+}

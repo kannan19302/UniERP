@@ -1,0 +1,13 @@
+# Local recovery/partial-service overlay.
+#
+# Use this only when the shared development stack already owns `infra_default`
+# and a single platform service must be recreated without asking Compose to
+# relabel or replace the live network:
+#
+#   docker compose -f docker-compose.dev.yml \
+#     -f docker-compose.platform.yml \
+#     -f docker-compose.existing-network.yml up -d --no-deps <service>
+networks:
+  default:
+    external: true
+    name: infra_default

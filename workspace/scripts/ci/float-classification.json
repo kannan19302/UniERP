@@ -1,0 +1,136 @@
+{
+  "$schema": "https://unierp.io/schemas/float-classification.json",
+  "description": "Per-field verdicts for Prisma Float columns whose NAME matches the money heuristic in check-policy.mjs but whose MEANING is a dimensionless metric. ARCHITECTURE_REVIEW § F11 / R11.",
+  "rules": [
+    "A Float column matching the money heuristic is a violation unless it is listed here as 'metric' with a reason. Fail-closed: an unlisted field is always a violation, so a new Float money column is still caught.",
+    "'metric' means the value is a ratio, count, duration, or physical measurement — never a currency amount, and never multiplied by one. A rate that multiplies money (tax, discount, interest) is NOT a metric: float drift in the rate becomes float drift in the money. Those were converted to Decimal(9,6).",
+    "Adding an entry is a schema-design decision and needs the same review as a migration. Do not add one to make the gate pass."
+  ],
+  "metrics": [
+    {
+      "field": "AiModelAccuracyMetric.value",
+      "reason": "The value of a named ML metric — accuracy, precision, recall, f1 or latency, per the sibling `metric` discriminator. Dimensionless."
+    },
+    {
+      "field": "AnalyticsTrendResult.value",
+      "reason": "A computed KPI trend reading. Presentation-layer analytics recomputed from source records; never the source of a posting."
+    },
+    {
+      "field": "AnalyticsTrendResult.previousValue",
+      "reason": "Prior-period counterpart of AnalyticsTrendResult.value; same treatment."
+    },
+    {
+      "field": "BuilderUsageMetric.value",
+      "reason": "App Studio usage telemetry (views, edits, publishes). A count, not an amount."
+    },
+    {
+      "field": "MfgSpcChart.nominalValue",
+      "reason": "Statistical process control centre line — a physical measurement in the chart's own unit, not currency."
+    },
+    {
+      "field": "MfgSpcDataPoint.value",
+      "reason": "A single SPC measurement against the chart above. Same unit, same treatment."
+    },
+    {
+      "field": "FormAnalytic.completionRate",
+      "reason": "Share of form sessions that reached submission. Dimensionless ratio."
+    },
+    {
+      "field": "LogisticsProviderPerformance.otifRate",
+      "reason": "On-time-in-full delivery ratio. A service-level metric."
+    },
+    {
+      "field": "LogisticsProviderPerformance.onTimeRate",
+      "reason": "Share of deliveries arriving on time. Service-level metric."
+    },
+    {
+      "field": "LogisticsProviderPerformance.inFullRate",
+      "reason": "Share of deliveries arriving complete. Service-level metric."
+    },
+    {
+      "field": "LogisticsProviderPerformance.damageRate",
+      "reason": "Share of shipments damaged. Service-level metric."
+    },
+    {
+      "field": "LogisticsProviderPerformance.claimsRate",
+      "reason": "Share of shipments generating a claim. Service-level metric; the claim's own value is a separate Decimal column."
+    },
+    {
+      "field": "ScmKpiSnapshot.otifRate",
+      "reason": "Supply-chain scorecard counterpart of the logistics metric above."
+    },
+    {
+      "field": "ScmKpiSnapshot.fillRate",
+      "reason": "Share of demand met from stock. Dimensionless ratio."
+    },
+    {
+      "field": "ScmKpiSnapshot.perfectOrderRate",
+      "reason": "Share of orders with no defect of any kind. Dimensionless ratio."
+    },
+    {
+      "field": "ScmKpiSnapshot.returnRate",
+      "reason": "Share of units returned. Dimensionless ratio; refund amounts are Decimal elsewhere."
+    },
+    {
+      "field": "ScmKpiSnapshot.transportCostPct",
+      "reason": "Transport cost as a percentage of revenue — a reported ratio derived from two Decimal columns, not an input to any posting."
+    },
+    {
+      "field": "PpmPortfolioProject.strategicAlignment",
+      "reason": "Subjective scorecard rating. Dimensionless."
+    },
+    {
+      "field": "PpmTimesheet.totalHours",
+      "reason": "Duration in hours. Matched the heuristic on 'total' only; hours are not currency."
+    },
+    {
+      "field": "ProductionAnalyticsSnapshot.totalProduction",
+      "reason": "Units produced in the period. A count; matched on 'total'."
+    },
+    {
+      "field": "ProductionAnalyticsSnapshot.scrapRate",
+      "reason": "Share of output scrapped. Dimensionless ratio."
+    },
+    {
+      "field": "ProductionAnalyticsSnapshot.reworkRate",
+      "reason": "Share of output reworked. Dimensionless ratio."
+    }
+  ],
+  "converted": [
+    {
+      "field": "LogisticsProviderPerformance.costVariance",
+      "to": "Decimal(19,4)",
+      "reason": "A currency variance against contracted cost."
+    },
+    {
+      "field": "ProductionAnalyticsSnapshot.costPerUnit",
+      "to": "Decimal(19,4)",
+      "reason": "A currency amount per unit produced."
+    },
+    {
+      "field": "HsCodeClassification.tariffRate",
+      "to": "Decimal(9,6)",
+      "reason": "Multiplies a customs value to produce duty payable — float drift in the rate becomes float drift in money owed."
+    },
+    {
+      "field": "HsCodeClassification.vatRate",
+      "to": "Decimal(9,6)",
+      "reason": "Multiplies a taxable base to produce VAT payable. Statutory amount; must be exact."
+    },
+    {
+      "field": "DynamicDiscountRequest.discountRate",
+      "to": "Decimal(9,6)",
+      "reason": "Multiplies an invoice line to produce the discount amount."
+    },
+    {
+      "field": "ScmFinancingFacility.interestRate",
+      "to": "Decimal(9,6)",
+      "reason": "Multiplies a principal to produce interest payable."
+    },
+    {
+      "field": "CoProduct.valueFactor",
+      "to": "Decimal(9,6)",
+      "reason": "Joint-cost allocation factor: multiplies total production cost to split it across co-products, so drift in the factor is drift in allocated cost."
+    }
+  ]
+}

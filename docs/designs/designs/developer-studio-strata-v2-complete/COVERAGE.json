@@ -1,0 +1,1170 @@
+{
+  "date": "2026-09-08",
+  "status": "design inventory covered",
+  "routeMap": [
+    {
+      "source": "developer-platform/src/app\\sites\\[siteId]\\[builder]\\[artifactId]\\page.tsx",
+      "screens": [
+        23,
+        4
+      ],
+      "coverage": "dynamic: registry expanded"
+    },
+    {
+      "source": "developer-platform/src/app\\sites\\[siteId]\\[builder]\\page.tsx",
+      "screens": [
+        23,
+        4,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "coverage": "dynamic: registry expanded"
+    },
+    {
+      "source": "developer-platform/src/app\\sites\\[siteId]\\page.tsx",
+      "screens": [
+        22
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\sdk\\page.tsx",
+      "screens": [
+        65
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\login\\page.tsx",
+      "screens": [
+        73
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\library\\[builder]\\[artifactId]\\page.tsx",
+      "screens": [
+        36,
+        37,
+        39,
+        11,
+        54,
+        40,
+        41
+      ],
+      "coverage": "dynamic: registry expanded"
+    },
+    {
+      "source": "developer-platform/src/app\\library\\[builder]\\page.tsx",
+      "screens": [
+        36,
+        37,
+        38,
+        39,
+        11,
+        54,
+        40,
+        41,
+        45
+      ],
+      "coverage": "dynamic: registry expanded"
+    },
+    {
+      "source": "developer-platform/src/app\\auth\\callback\\page.tsx",
+      "screens": [
+        73
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\web\\canvas\\page.tsx",
+      "screens": [
+        4
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\web\\ab-testing\\page.tsx",
+      "screens": [
+        31
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\apps\\[appId]\\[builder]\\[artifactId]\\page.tsx",
+      "screens": [
+        36,
+        37,
+        39,
+        11,
+        54,
+        40,
+        41
+      ],
+      "coverage": "dynamic: registry expanded"
+    },
+    {
+      "source": "developer-platform/src/app\\apps\\[appId]\\[builder]\\page.tsx",
+      "screens": [
+        36,
+        37,
+        38,
+        39,
+        11,
+        54,
+        44,
+        40,
+        41,
+        42,
+        43,
+        45,
+        46,
+        47,
+        48
+      ],
+      "coverage": "dynamic: registry expanded"
+    },
+    {
+      "source": "developer-platform/src/app\\apps\\[appId]\\page.tsx",
+      "screens": [
+        21,
+        49,
+        75
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\web\\(hub)\\submissions\\page.tsx",
+      "screens": [
+        33
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\apps\\[appId]\\[builder]\\new\\page.tsx",
+      "screens": [
+        39,
+        11,
+        54,
+        40,
+        41
+      ],
+      "coverage": "dynamic: registry expanded"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\web\\(hub)\\settings\\page.tsx",
+      "screens": [
+        34,
+        35
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\web\\(hub)\\assets\\page.tsx",
+      "screens": [
+        28
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\web\\(hub)\\collections\\page.tsx",
+      "screens": [
+        24,
+        25
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\web\\(hub)\\seo\\page.tsx",
+      "screens": [
+        30
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\web\\(hub)\\pages\\page.tsx",
+      "screens": [
+        23,
+        4
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\web\\(hub)\\page.tsx",
+      "screens": [
+        22
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\web\\(hub)\\blog\\page.tsx",
+      "screens": [
+        26,
+        27
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\web\\(hub)\\orders\\page.tsx",
+      "screens": [
+        32
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\(platform)\\sites\\page.tsx",
+      "screens": [
+        18
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\(platform)\\library\\page.tsx",
+      "screens": [
+        6,
+        7,
+        72
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\manage\\widgets\\page.tsx",
+      "screens": [
+        60
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\sites\\[id]\\page.tsx",
+      "screens": [
+        22
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\web\\(hub)\\menus\\page.tsx",
+      "screens": [
+        29
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\manage\\git\\page.tsx",
+      "screens": [
+        63
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\(platform)\\sites\\new\\page.tsx",
+      "screens": [
+        20
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\(platform)\\page.tsx",
+      "screens": [
+        1
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\(platform)\\apps\\page.tsx",
+      "screens": [
+        17
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\manage\\etl\\page.tsx",
+      "screens": [
+        61
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\sites\\templates\\page.tsx",
+      "screens": [
+        20
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\manage\\theme-manager\\page.tsx",
+      "screens": [
+        62
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\sites\\page.tsx",
+      "screens": [
+        18
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\manage\\components\\page.tsx",
+      "screens": [
+        56,
+        7,
+        8
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\(platform)\\apps\\new\\page.tsx",
+      "screens": [
+        19
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\manage\\environments\\page.tsx",
+      "screens": [
+        53
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\(platform)\\manage\\page.tsx",
+      "screens": [
+        50
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\manage\\releases\\page.tsx",
+      "screens": [
+        52,
+        13,
+        35
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\manage\\page.tsx",
+      "screens": [
+        50
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\(platform)\\manage\\[section]\\page.tsx",
+      "screens": [
+        51,
+        52,
+        13,
+        35,
+        53,
+        54,
+        55,
+        14,
+        56,
+        7,
+        8,
+        57,
+        10,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64
+      ],
+      "coverage": "dynamic: registry expanded"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\manage\\access\\page.tsx",
+      "screens": [
+        55,
+        14
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\manage\\developer-governance\\page.tsx",
+      "screens": [
+        51
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\manage\\connectors\\page.tsx",
+      "screens": [
+        57,
+        10
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\manage\\query-builder\\page.tsx",
+      "screens": [
+        59
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\manage\\logs\\page.tsx",
+      "screens": [
+        54
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\app-hub\\page.tsx",
+      "screens": [
+        17
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\bpmn\\page.tsx",
+      "screens": [
+        44
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\page.tsx",
+      "screens": [
+        17
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\manage\\marketplace\\page.tsx",
+      "screens": [
+        58
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\api-builder\\page.tsx",
+      "screens": [
+        46
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\manage\\mobile-export\\page.tsx",
+      "screens": [
+        64
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\logic\\page.tsx",
+      "screens": [
+        47
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\rules-engine\\page.tsx",
+      "screens": [
+        45
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\apps\\[id]\\page.tsx",
+      "screens": [
+        21,
+        49,
+        75
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\advanced-forms\\page.tsx",
+      "screens": [
+        38
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\data\\page.tsx",
+      "screens": [
+        42,
+        43
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\mobile-builder\\page.tsx",
+      "screens": [
+        48
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\modules\\page.tsx",
+      "screens": [
+        17
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\workflows\\page.tsx",
+      "screens": [
+        39,
+        11,
+        54
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\workflows\\[id]\\page.tsx",
+      "screens": [
+        39,
+        11,
+        54
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\forms\\page.tsx",
+      "screens": [
+        36,
+        37
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\workflows\\new\\page.tsx",
+      "screens": [
+        39,
+        11,
+        54
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\customize\\page.tsx",
+      "screens": [
+        49
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\data-objects\\page.tsx",
+      "screens": [
+        42,
+        43
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\modules\\[id]\\page.tsx",
+      "screens": [
+        21,
+        49,
+        75
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\forms\\[id]\\page.tsx",
+      "screens": [
+        36,
+        37
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\dashboards\\page.tsx",
+      "screens": [
+        40,
+        41
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\data-objects\\[id]\\page.tsx",
+      "screens": [
+        42,
+        43
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\dashboards\\[id]\\page.tsx",
+      "screens": [
+        40,
+        41
+      ],
+      "coverage": "dedicated"
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\dashboards\\new\\page.tsx",
+      "screens": [
+        40,
+        41
+      ],
+      "coverage": "dedicated"
+    }
+  ],
+  "registry": [
+    {
+      "owner": "app",
+      "id": "forms",
+      "segment": "forms",
+      "kind": "builder",
+      "scopes": [
+        "app",
+        "library"
+      ],
+      "editor": true,
+      "create": "inline",
+      "screens": [
+        36,
+        37
+      ]
+    },
+    {
+      "owner": "app",
+      "id": "advanced-forms",
+      "segment": "advanced-forms",
+      "kind": "builder",
+      "scopes": [
+        "app",
+        "library"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        38
+      ]
+    },
+    {
+      "owner": "app",
+      "id": "workflows",
+      "segment": "workflows",
+      "kind": "builder",
+      "scopes": [
+        "app",
+        "library"
+      ],
+      "editor": true,
+      "create": "wizard",
+      "screens": [
+        39,
+        11,
+        54
+      ]
+    },
+    {
+      "owner": "app",
+      "id": "bpmn",
+      "segment": "bpmn",
+      "kind": "builder",
+      "scopes": [
+        "app"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        44
+      ]
+    },
+    {
+      "owner": "app",
+      "id": "dashboards",
+      "segment": "dashboards",
+      "kind": "builder",
+      "scopes": [
+        "app",
+        "library"
+      ],
+      "editor": true,
+      "create": "wizard",
+      "screens": [
+        40,
+        41
+      ]
+    },
+    {
+      "owner": "app",
+      "id": "data-objects",
+      "segment": "data-objects",
+      "kind": "builder",
+      "scopes": [
+        "app"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        42,
+        43
+      ]
+    },
+    {
+      "owner": "app",
+      "id": "rules-engine",
+      "segment": "rules",
+      "kind": "builder",
+      "scopes": [
+        "app",
+        "library"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        45
+      ]
+    },
+    {
+      "owner": "app",
+      "id": "api-builder",
+      "segment": "apis",
+      "kind": "builder",
+      "scopes": [
+        "app"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        46
+      ]
+    },
+    {
+      "owner": "app",
+      "id": "logic",
+      "segment": "logic",
+      "kind": "builder",
+      "scopes": [
+        "app"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        47
+      ]
+    },
+    {
+      "owner": "app",
+      "id": "mobile-builder",
+      "segment": "mobile",
+      "kind": "builder",
+      "scopes": [
+        "app"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        48
+      ]
+    },
+    {
+      "owner": "site",
+      "id": "site-pages",
+      "segment": "pages",
+      "kind": "builder",
+      "scopes": [
+        "site"
+      ],
+      "editor": true,
+      "create": "inline",
+      "screens": [
+        23,
+        4
+      ]
+    },
+    {
+      "owner": "site",
+      "id": "site-collections",
+      "segment": "collections",
+      "kind": "builder",
+      "scopes": [
+        "site"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        24,
+        25
+      ]
+    },
+    {
+      "owner": "site",
+      "id": "site-blog",
+      "segment": "blog",
+      "kind": "builder",
+      "scopes": [
+        "site"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        26,
+        27
+      ]
+    },
+    {
+      "owner": "site",
+      "id": "site-assets",
+      "segment": "assets",
+      "kind": "builder",
+      "scopes": [
+        "site"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        28
+      ]
+    },
+    {
+      "owner": "site",
+      "id": "site-menus",
+      "segment": "menus",
+      "kind": "builder",
+      "scopes": [
+        "site"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        29
+      ]
+    },
+    {
+      "owner": "site",
+      "id": "site-seo",
+      "segment": "seo",
+      "kind": "builder",
+      "scopes": [
+        "site"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        30
+      ]
+    },
+    {
+      "owner": "site",
+      "id": "site-ab-testing",
+      "segment": "ab-testing",
+      "kind": "builder",
+      "scopes": [
+        "site"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        31
+      ]
+    },
+    {
+      "owner": "site",
+      "id": "site-orders",
+      "segment": "orders",
+      "kind": "data",
+      "scopes": [
+        "site"
+      ],
+      "editor": false,
+      "create": "",
+      "screens": [
+        32
+      ]
+    },
+    {
+      "owner": "site",
+      "id": "site-submissions",
+      "segment": "submissions",
+      "kind": "data",
+      "scopes": [
+        "site"
+      ],
+      "editor": false,
+      "create": "",
+      "screens": [
+        33
+      ]
+    },
+    {
+      "owner": "site",
+      "id": "site-settings",
+      "segment": "settings",
+      "kind": "settings",
+      "scopes": [
+        "site"
+      ],
+      "editor": false,
+      "create": "",
+      "screens": [
+        34,
+        35
+      ]
+    },
+    {
+      "owner": "manage",
+      "id": "manage-developer-governance",
+      "segment": "developer-governance",
+      "kind": "settings",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": "",
+      "screens": [
+        51
+      ]
+    },
+    {
+      "owner": "manage",
+      "id": "manage-releases",
+      "segment": "releases",
+      "kind": "data",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": "",
+      "screens": [
+        52,
+        13,
+        35
+      ]
+    },
+    {
+      "owner": "manage",
+      "id": "manage-environments",
+      "segment": "environments",
+      "kind": "settings",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": "",
+      "screens": [
+        53
+      ]
+    },
+    {
+      "owner": "manage",
+      "id": "manage-logs",
+      "segment": "logs",
+      "kind": "data",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": "",
+      "screens": [
+        54
+      ]
+    },
+    {
+      "owner": "manage",
+      "id": "manage-access",
+      "segment": "access",
+      "kind": "settings",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": "",
+      "screens": [
+        55,
+        14
+      ]
+    },
+    {
+      "owner": "manage",
+      "id": "manage-components",
+      "segment": "components",
+      "kind": "settings",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": "",
+      "screens": [
+        56,
+        7,
+        8
+      ]
+    },
+    {
+      "owner": "manage",
+      "id": "manage-connectors",
+      "segment": "connectors",
+      "kind": "settings",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": "",
+      "screens": [
+        57,
+        10
+      ]
+    },
+    {
+      "owner": "manage",
+      "id": "manage-marketplace",
+      "segment": "marketplace",
+      "kind": "settings",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": "",
+      "screens": [
+        58
+      ]
+    },
+    {
+      "owner": "manage",
+      "id": "manage-query-builder",
+      "segment": "queries",
+      "kind": "builder",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        59
+      ]
+    },
+    {
+      "owner": "manage",
+      "id": "manage-widgets",
+      "segment": "widgets",
+      "kind": "builder",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        60
+      ]
+    },
+    {
+      "owner": "manage",
+      "id": "manage-etl",
+      "segment": "etl",
+      "kind": "builder",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        61
+      ]
+    },
+    {
+      "owner": "manage",
+      "id": "manage-theme",
+      "segment": "themes",
+      "kind": "builder",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        62
+      ]
+    },
+    {
+      "owner": "manage",
+      "id": "manage-git",
+      "segment": "git",
+      "kind": "settings",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": "",
+      "screens": [
+        63
+      ]
+    },
+    {
+      "owner": "manage",
+      "id": "manage-mobile-export",
+      "segment": "mobile-export",
+      "kind": "builder",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        64
+      ]
+    }
+  ],
+  "requirements": {
+    "DEV-FR-001": [
+      15,
+      46,
+      65,
+      71
+    ],
+    "DEV-FR-002": [
+      66,
+      67
+    ],
+    "DEV-FR-003": [
+      68,
+      69
+    ],
+    "DEV-FR-004": [
+      47,
+      70
+    ],
+    "DEV-FR-005": [
+      54,
+      71
+    ],
+    "SITE-FR-001": [
+      20,
+      23,
+      4,
+      24,
+      25
+    ],
+    "SITE-FR-002": [
+      4,
+      12
+    ],
+    "SITE-FR-003": [
+      13,
+      34,
+      35
+    ],
+    "SITE-FR-004": [
+      24,
+      26,
+      27,
+      32
+    ],
+    "SITE-FR-005": [
+      22,
+      35,
+      54
+    ]
+  },
+  "screenIndex": "SCREEN_INVENTORY.json"
+}

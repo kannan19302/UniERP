@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-08-08T06:26:07.145Z",
+  "components": [
+    "button",
+    "card",
+    "modal",
+    "table",
+    "navigation",
+    "form",
+    "identity",
+    "feedback"
+  ],
+  "themes": [
+    "default",
+    "compact",
+    "dark",
+    "corporate",
+    "emerald",
+    "high-contrast",
+    "sunset"
+  ],
+  "densities": [
+    "comfortable",
+    "compact"
+  ],
+  "modes": [
+    "light",
+    "dark"
+  ],
+  "totalBaselines": 224,
+  "status": "ACTIVE"
+}

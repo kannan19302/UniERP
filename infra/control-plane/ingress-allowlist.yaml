@@ -1,0 +1,34 @@
+# Source-IP allowlist for the control plane.
+#
+# § 10: "control-plane ingress IP-allowlisted and off public DNS". The console
+# serves provider-global operations — tenant provisioning, suspension, export,
+# impersonation — so the blast radius of reaching it is every tenant at once.
+#
+# depth: 1 tells Traefik to take the LAST hop in X-Forwarded-For rather than the
+# first. The first entry is client-supplied and therefore forgeable; trusting it
+# would let any caller claim an allowlisted address and defeat the control this
+# file exists to provide.
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: control-plane-allowlist
+  namespace: unierp
+spec:
+  ipAllowList:
+    sourceRange:
+      - 10.0.0.0/8        # cluster-internal
+      - 192.168.0.0/16    # operations VPN
+    ipStrategy:
+      depth: 1
+---
+# Deny-by-default companion: any route that forgets to attach the allowlist
+# above still lands here rather than reaching the console.
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: control-plane-deny-default
+  namespace: unierp
+spec:
+  ipAllowList:
+    sourceRange:
+      - 127.0.0.1/32

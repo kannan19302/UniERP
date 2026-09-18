@@ -5,6 +5,7 @@
 - `PAO-FR-001`: Authorized operators shall create, suspend, restore and retire tenants through explicit lifecycle states.
 - `PAO-FR-002`: Operators shall inspect tenant configuration, usage, quotas, subscriptions and security posture without crossing tenant data boundaries.
 - `PAO-FR-003`: Operators shall inspect service health, releases, jobs, queues, incidents and maintenance state.
+  - PCC-01 shall use Strata workspaces with searchable operational records, explicit loading, empty, forbidden and failure states, and accessible refresh controls. Unavailable measurements remain unknown; neither console adapters nor APIs may manufacture healthy service records, queue totals or enabled automation policies. Query completion and command completion must be reported separately.
 - `PAO-FR-004`: Operators shall manage provider roles, permissions, sessions, authentication policy and audit review.
 - `PAO-FR-005`: Operators shall govern marketplace publication, versions, reviews, approvals and installations.
 - `PAO-FR-006`: Operators shall inspect billing plans, subscriptions, invoices, payments, revenue and usage.

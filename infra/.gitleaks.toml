@@ -1,0 +1,46 @@
+# Gitleaks secret scanning configuration for UniERP
+title = "UniERP Gitleaks Config"
+
+[allowlist]
+description = "Global UniERP secret scanning allowlist for build artifacts and mocks"
+paths = [
+    '''node_modules''',
+    '''\.pnpm-store''',
+    '''dist''',
+    '''\.next''',
+    '''\.turbo''',
+    '''coverage''',
+    '''var/''',
+    '''pnpm-lock\.yaml$''',
+    '''\.env\.example$''',
+    '''check-secrets\.mjs$'''
+]
+regexes = [
+    '''(?i)example|placeholder|dummy|sample|fake|test|mock|changeme''',
+    '''AKIAIOSFODNN7EXAMPLE'''
+]
+
+[[rules]]
+id = "aws-access-token"
+description = "AWS Access Key ID"
+regex = '''\bAKIA[0-9A-Z]{16}\b'''
+
+[[rules]]
+id = "aws-secret-key"
+description = "AWS Secret Access Key"
+regex = '''aws_secret_access_key\s*[=:]\s*['"][A-Za-z0-9/+=]{40}['"]'''
+
+[[rules]]
+id = "github-token"
+description = "GitHub Personal Access Token"
+regex = '''\bgh[pousr]_[A-Za-z0-9]{30,}\b'''
+
+[[rules]]
+id = "stripe-secret-key"
+description = "Stripe Live Secret Key"
+regex = '''\b(sk|rk)_live_[A-Za-z0-9]{16,}\b'''
+
+[[rules]]
+id = "npm-token"
+description = "npm Access Token"
+regex = '''\bnpm_[A-Za-z0-9]{36}\b'''

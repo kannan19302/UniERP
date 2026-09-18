@@ -1,0 +1,39 @@
+# The security headers the console ingress references.
+#
+# `console-ingress.yaml` listed `security-headers` in its middleware chain and
+# nothing defined it. Traefik fails a route whose middleware is missing rather
+# than silently dropping it, so the console would have returned 500 instead of
+# serving unprotected — a safer failure than the alternative, but a failure that
+# would only have appeared at request time, never at apply time.
+#
+# § 10 requires strict CSP, HSTS and frame denial. These are stricter than the
+# tenant plane's: the control plane is provider-only, so it never needs to be
+# framed, never loads third-party script, and is only ever reached over TLS.
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: security-headers
+  namespace: unierp
+spec:
+  headers:
+    stsSeconds: 31536000
+    stsIncludeSubdomains: true
+    stsPreload: true
+    forceSTSHeader: true
+    frameDeny: true
+    contentTypeNosniff: true
+    browserXssFilter: true
+    referrerPolicy: no-referrer
+    contentSecurityPolicy: >-
+      default-src 'self';
+      script-src 'self';
+      style-src 'self' 'unsafe-inline';
+      img-src 'self' data:;
+      font-src 'self';
+      connect-src 'self';
+      frame-ancestors 'none';
+      base-uri 'self';
+      form-action 'self'
+    customResponseHeaders:
+      X-Permitted-Cross-Domain-Policies: none
+      Permissions-Policy: geolocation=(), microphone=(), camera=()

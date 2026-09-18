@@ -1,0 +1,1040 @@
+{
+  "comment": "Track G.8 Float baseline — the ONLY Float fields allowed in schema.prisma. Never add to this list; shrink it. 'metric' entries are legitimately continuous quantities; 'money-QUEUED' entries are violations queued for Decimal conversion in the Track A reconciliation release (schema freeze blocks the migration today).",
+  "allowed": [
+    {
+      "model": "Vendor",
+      "field": "averageLeadTimeDays",
+      "class": "metric"
+    },
+    {
+      "model": "Vendor",
+      "field": "qualityScore",
+      "class": "metric"
+    },
+    {
+      "model": "ExpenseReportItem",
+      "field": "ocrConfidence",
+      "class": "metric"
+    },
+    {
+      "model": "RfidReadEvent",
+      "field": "rssi",
+      "class": "metric"
+    },
+    {
+      "model": "CrmLeadEnrichmentData",
+      "field": "confidence",
+      "class": "metric"
+    },
+    {
+      "model": "CrmEnrichmentCache",
+      "field": "confidence",
+      "class": "metric"
+    },
+    {
+      "model": "FormAnalytic",
+      "field": "completionRate",
+      "class": "metric"
+    },
+    {
+      "model": "AiTrainingJob",
+      "field": "progress",
+      "class": "metric"
+    },
+    {
+      "model": "AiTrainingRun",
+      "field": "loss",
+      "class": "metric"
+    },
+    {
+      "model": "AiTrainingRun",
+      "field": "accuracy",
+      "class": "metric"
+    },
+    {
+      "model": "MeetingAnalytics",
+      "field": "avgDurationMins",
+      "class": "metric"
+    },
+    {
+      "model": "VoipCallAnalytics",
+      "field": "avgDuration",
+      "class": "metric"
+    },
+    {
+      "model": "FormAnalytics",
+      "field": "avgTimeSec",
+      "class": "metric"
+    },
+    {
+      "model": "AbTest",
+      "field": "confidence",
+      "class": "metric"
+    },
+    {
+      "model": "RealEstateProperty",
+      "field": "latitude",
+      "class": "metric"
+    },
+    {
+      "model": "RealEstateProperty",
+      "field": "longitude",
+      "class": "metric"
+    },
+    {
+      "model": "FieldServiceTicket",
+      "field": "latitude",
+      "class": "metric"
+    },
+    {
+      "model": "FieldServiceTicket",
+      "field": "longitude",
+      "class": "metric"
+    },
+    {
+      "model": "FieldServiceTechnician",
+      "field": "locationLat",
+      "class": "metric"
+    },
+    {
+      "model": "FieldServiceTechnician",
+      "field": "locationLng",
+      "class": "metric"
+    },
+    {
+      "model": "FieldServiceDispatch",
+      "field": "travelDistance",
+      "class": "metric"
+    },
+    {
+      "model": "FieldServiceSchedule",
+      "field": "latitude",
+      "class": "metric"
+    },
+    {
+      "model": "FieldServiceSchedule",
+      "field": "longitude",
+      "class": "metric"
+    },
+    {
+      "model": "AiIntentTrainingExample",
+      "field": "confidence",
+      "class": "metric"
+    },
+    {
+      "model": "AiModelAccuracyMetric",
+      "field": "value",
+      "class": "metric"
+    },
+    {
+      "model": "AnalyticsKpiDefinition",
+      "field": "target",
+      "class": "metric"
+    },
+    {
+      "model": "AnalyticsTrendResult",
+      "field": "value",
+      "class": "metric"
+    },
+    {
+      "model": "AnalyticsTrendResult",
+      "field": "previousValue",
+      "class": "metric"
+    },
+    {
+      "model": "AnalyticsTrendResult",
+      "field": "changePercent",
+      "class": "metric"
+    },
+    {
+      "model": "SopDemandPlan",
+      "field": "forecastUnits",
+      "class": "metric"
+    },
+    {
+      "model": "SopDemandPlan",
+      "field": "baselineForecast",
+      "class": "metric"
+    },
+    {
+      "model": "SopDemandPlan",
+      "field": "marketIntelligence",
+      "class": "metric"
+    },
+    {
+      "model": "SopDemandPlan",
+      "field": "salesAdjustment",
+      "class": "metric"
+    },
+    {
+      "model": "SopDemandPlan",
+      "field": "finalForecast",
+      "class": "metric"
+    },
+    {
+      "model": "SopDemandPlan",
+      "field": "confidence",
+      "class": "metric"
+    },
+    {
+      "model": "SopSupplyPlan",
+      "field": "plannedProduction",
+      "class": "metric"
+    },
+    {
+      "model": "SopSupplyPlan",
+      "field": "availableCapacity",
+      "class": "metric"
+    },
+    {
+      "model": "SopSupplyPlan",
+      "field": "constrainedCapacity",
+      "class": "metric"
+    },
+    {
+      "model": "SopSupplyPlan",
+      "field": "openingStock",
+      "class": "metric"
+    },
+    {
+      "model": "SopSupplyPlan",
+      "field": "closingStock",
+      "class": "metric"
+    },
+    {
+      "model": "SopConsensusPlan",
+      "field": "consensusForecast",
+      "class": "metric"
+    },
+    {
+      "model": "LogisticsProvider",
+      "field": "rating",
+      "class": "metric"
+    },
+    {
+      "model": "LogisticsProviderPerformance",
+      "field": "otifRate",
+      "class": "metric"
+    },
+    {
+      "model": "LogisticsProviderPerformance",
+      "field": "onTimeRate",
+      "class": "metric"
+    },
+    {
+      "model": "LogisticsProviderPerformance",
+      "field": "inFullRate",
+      "class": "metric"
+    },
+    {
+      "model": "LogisticsProviderPerformance",
+      "field": "damageRate",
+      "class": "metric"
+    },
+    {
+      "model": "LogisticsProviderPerformance",
+      "field": "costVariance",
+      "class": "metric"
+    },
+    {
+      "model": "LogisticsProviderPerformance",
+      "field": "responseTime",
+      "class": "metric"
+    },
+    {
+      "model": "LogisticsProviderPerformance",
+      "field": "claimsRate",
+      "class": "metric"
+    },
+    {
+      "model": "LogisticsProviderPerformance",
+      "field": "overallScore",
+      "class": "metric"
+    },
+    {
+      "model": "ColdChainShipment",
+      "field": "requiredTempMin",
+      "class": "metric"
+    },
+    {
+      "model": "ColdChainShipment",
+      "field": "requiredTempMax",
+      "class": "metric"
+    },
+    {
+      "model": "ColdChainShipment",
+      "field": "humidity",
+      "class": "metric"
+    },
+    {
+      "model": "ColdChainTemperatureLog",
+      "field": "temperature",
+      "class": "metric"
+    },
+    {
+      "model": "ColdChainTemperatureLog",
+      "field": "humidity",
+      "class": "metric"
+    },
+    {
+      "model": "ColdChainExcursion",
+      "field": "maxDeviation",
+      "class": "metric"
+    },
+    {
+      "model": "ScemAlertRule",
+      "field": "threshold",
+      "class": "metric"
+    },
+    {
+      "model": "SupplyChainRiskEvent",
+      "field": "probability",
+      "class": "metric"
+    },
+    {
+      "model": "SupplyChainRiskEvent",
+      "field": "impact",
+      "class": "metric"
+    },
+    {
+      "model": "SupplyChainRiskEvent",
+      "field": "riskScore",
+      "class": "metric"
+    },
+    {
+      "model": "TradeComplianceCheck",
+      "field": "matchScore",
+      "class": "metric"
+    },
+    {
+      "model": "ExportLicense",
+      "field": "approvedValue",
+      "class": "metric"
+    },
+    {
+      "model": "ExportLicense",
+      "field": "usedValue",
+      "class": "metric"
+    },
+    {
+      "model": "HsCodeClassification",
+      "field": "tariffRate",
+      "class": "metric"
+    },
+    {
+      "model": "HsCodeClassification",
+      "field": "vatRate",
+      "class": "metric"
+    },
+    {
+      "model": "MultiModalTransportOrder",
+      "field": "weight",
+      "class": "metric"
+    },
+    {
+      "model": "MultiModalTransportOrder",
+      "field": "volume",
+      "class": "metric"
+    },
+    {
+      "model": "ReverseLogisticsItem",
+      "field": "quantity",
+      "class": "metric"
+    },
+    {
+      "model": "ReverseLogisticsItem",
+      "field": "returnedQty",
+      "class": "metric"
+    },
+    {
+      "model": "DeliveryZone",
+      "field": "maxWeight",
+      "class": "metric"
+    },
+    {
+      "model": "LastMileDelivery",
+      "field": "rating",
+      "class": "metric"
+    },
+    {
+      "model": "ScmIotDevice",
+      "field": "batteryLevel",
+      "class": "metric"
+    },
+    {
+      "model": "SmartReplenishmentOrder",
+      "field": "currentStock",
+      "class": "metric"
+    },
+    {
+      "model": "SmartReplenishmentOrder",
+      "field": "reorderPoint",
+      "class": "metric"
+    },
+    {
+      "model": "SmartReplenishmentOrder",
+      "field": "suggestedQty",
+      "class": "metric"
+    },
+    {
+      "model": "WarehouseNetworkDesign",
+      "field": "serviceLevel",
+      "class": "metric"
+    },
+    {
+      "model": "WarehouseNetworkDesign",
+      "field": "co2Footprint",
+      "class": "metric"
+    },
+    {
+      "model": "WarehouseNetworkNode",
+      "field": "latitude",
+      "class": "metric"
+    },
+    {
+      "model": "WarehouseNetworkNode",
+      "field": "longitude",
+      "class": "metric"
+    },
+    {
+      "model": "WarehouseNetworkNode",
+      "field": "capacity",
+      "class": "metric"
+    },
+    {
+      "model": "DynamicDiscountRequest",
+      "field": "discountRate",
+      "class": "metric"
+    },
+    {
+      "model": "ScmFinancingFacility",
+      "field": "interestRate",
+      "class": "metric"
+    },
+    {
+      "model": "SupplierDevelopmentPlan",
+      "field": "progressPct",
+      "class": "metric"
+    },
+    {
+      "model": "SupplierDevSurvey",
+      "field": "score",
+      "class": "metric"
+    },
+    {
+      "model": "PortTerminal",
+      "field": "storageArea",
+      "class": "metric"
+    },
+    {
+      "model": "PortTerminal",
+      "field": "handlingCapacity",
+      "class": "metric"
+    },
+    {
+      "model": "ScmKpiSnapshot",
+      "field": "otifRate",
+      "class": "metric"
+    },
+    {
+      "model": "ScmKpiSnapshot",
+      "field": "onTimeDelivery",
+      "class": "metric"
+    },
+    {
+      "model": "ScmKpiSnapshot",
+      "field": "inFullDelivery",
+      "class": "metric"
+    },
+    {
+      "model": "ScmKpiSnapshot",
+      "field": "fillRate",
+      "class": "metric"
+    },
+    {
+      "model": "ScmKpiSnapshot",
+      "field": "orderCycleTime",
+      "class": "metric"
+    },
+    {
+      "model": "ScmKpiSnapshot",
+      "field": "perfectOrderRate",
+      "class": "metric"
+    },
+    {
+      "model": "ScmKpiSnapshot",
+      "field": "returnRate",
+      "class": "metric"
+    },
+    {
+      "model": "ScmKpiSnapshot",
+      "field": "inventoryTurns",
+      "class": "metric"
+    },
+    {
+      "model": "ScmKpiSnapshot",
+      "field": "daysInventory",
+      "class": "metric"
+    },
+    {
+      "model": "ScmKpiSnapshot",
+      "field": "supplierLeadTime",
+      "class": "metric"
+    },
+    {
+      "model": "ScmKpiSnapshot",
+      "field": "transportCostPct",
+      "class": "metric"
+    },
+    {
+      "model": "ScmKpiSnapshot",
+      "field": "co2PerShipment",
+      "class": "metric"
+    },
+    {
+      "model": "MpsEntry",
+      "field": "forecastDemand",
+      "class": "metric"
+    },
+    {
+      "model": "MpsEntry",
+      "field": "actualDemand",
+      "class": "metric"
+    },
+    {
+      "model": "MpsEntry",
+      "field": "openOrders",
+      "class": "metric"
+    },
+    {
+      "model": "MpsEntry",
+      "field": "plannedProd",
+      "class": "metric"
+    },
+    {
+      "model": "MpsEntry",
+      "field": "projectedInventory",
+      "class": "metric"
+    },
+    {
+      "model": "MpsEntry",
+      "field": "availableToPromise",
+      "class": "metric"
+    },
+    {
+      "model": "MfgSpcChart",
+      "field": "nominalValue",
+      "class": "metric"
+    },
+    {
+      "model": "MfgSpcChart",
+      "field": "ucl",
+      "class": "metric"
+    },
+    {
+      "model": "MfgSpcChart",
+      "field": "lcl",
+      "class": "metric"
+    },
+    {
+      "model": "MfgSpcChart",
+      "field": "usl",
+      "class": "metric"
+    },
+    {
+      "model": "MfgSpcChart",
+      "field": "lsl",
+      "class": "metric"
+    },
+    {
+      "model": "MfgSpcDataPoint",
+      "field": "value",
+      "class": "metric"
+    },
+    {
+      "model": "MfgSpcDataPoint",
+      "field": "mean",
+      "class": "metric"
+    },
+    {
+      "model": "MfgSpcDataPoint",
+      "field": "range",
+      "class": "metric"
+    },
+    {
+      "model": "MfgSpcDataPoint",
+      "field": "stdDev",
+      "class": "metric"
+    },
+    {
+      "model": "AqlSamplingPlan",
+      "field": "aqlLevel",
+      "class": "metric"
+    },
+    {
+      "model": "JobCostSheet",
+      "field": "variancePct",
+      "class": "metric"
+    },
+    {
+      "model": "MfgCostEntry",
+      "field": "quantity",
+      "class": "metric"
+    },
+    {
+      "model": "ProductionBatch",
+      "field": "plannedQty",
+      "class": "metric"
+    },
+    {
+      "model": "ProductionBatch",
+      "field": "actualQty",
+      "class": "metric"
+    },
+    {
+      "model": "ProductionBatch",
+      "field": "scrapQty",
+      "class": "metric"
+    },
+    {
+      "model": "ProductionBatch",
+      "field": "yieldPct",
+      "class": "metric"
+    },
+    {
+      "model": "ProductionFormula",
+      "field": "outputQuantity",
+      "class": "metric"
+    },
+    {
+      "model": "FormulaIngredient",
+      "field": "quantity",
+      "class": "metric"
+    },
+    {
+      "model": "FormulaIngredient",
+      "field": "scrapFactor",
+      "class": "metric"
+    },
+    {
+      "model": "CoProduct",
+      "field": "quantity",
+      "class": "metric"
+    },
+    {
+      "model": "CoProduct",
+      "field": "valueFactor",
+      "class": "metric"
+    },
+    {
+      "model": "ManufacturingMachine",
+      "field": "nominalCapacity",
+      "class": "metric"
+    },
+    {
+      "model": "ManufacturingMachine",
+      "field": "cycleTime",
+      "class": "metric"
+    },
+    {
+      "model": "ManufacturingMachine",
+      "field": "setupTime",
+      "class": "metric"
+    },
+    {
+      "model": "ManufacturingMachine",
+      "field": "oeeTarget",
+      "class": "metric"
+    },
+    {
+      "model": "MachineOeeRecord",
+      "field": "plannedRunTime",
+      "class": "metric"
+    },
+    {
+      "model": "MachineOeeRecord",
+      "field": "actualRunTime",
+      "class": "metric"
+    },
+    {
+      "model": "MachineOeeRecord",
+      "field": "downtime",
+      "class": "metric"
+    },
+    {
+      "model": "MachineOeeRecord",
+      "field": "plannedUnits",
+      "class": "metric"
+    },
+    {
+      "model": "MachineOeeRecord",
+      "field": "actualUnits",
+      "class": "metric"
+    },
+    {
+      "model": "MachineOeeRecord",
+      "field": "goodUnits",
+      "class": "metric"
+    },
+    {
+      "model": "MachineOeeRecord",
+      "field": "defects",
+      "class": "metric"
+    },
+    {
+      "model": "MachineOeeRecord",
+      "field": "availability",
+      "class": "metric"
+    },
+    {
+      "model": "MachineOeeRecord",
+      "field": "performance",
+      "class": "metric"
+    },
+    {
+      "model": "MachineOeeRecord",
+      "field": "quality",
+      "class": "metric"
+    },
+    {
+      "model": "MachineOeeRecord",
+      "field": "oee",
+      "class": "metric"
+    },
+    {
+      "model": "MachineMaintenanceLog",
+      "field": "duration",
+      "class": "metric"
+    },
+    {
+      "model": "MachineDowntime",
+      "field": "duration",
+      "class": "metric"
+    },
+    {
+      "model": "MaintenanceSchedule",
+      "field": "estimatedDuration",
+      "class": "metric"
+    },
+    {
+      "model": "MfgMaintenanceWorkOrder",
+      "field": "laborHours",
+      "class": "metric"
+    },
+    {
+      "model": "SparePart",
+      "field": "quantity",
+      "class": "metric"
+    },
+    {
+      "model": "SparePart",
+      "field": "reorderPoint",
+      "class": "metric"
+    },
+    {
+      "model": "SixSigmaMetric",
+      "field": "baseline",
+      "class": "metric"
+    },
+    {
+      "model": "SixSigmaMetric",
+      "field": "target",
+      "class": "metric"
+    },
+    {
+      "model": "SixSigmaMetric",
+      "field": "actual",
+      "class": "metric"
+    },
+    {
+      "model": "ShopFloorTransaction",
+      "field": "quantity",
+      "class": "metric"
+    },
+    {
+      "model": "ShopFloorTransaction",
+      "field": "duration",
+      "class": "metric"
+    },
+    {
+      "model": "ShopFloorTransaction",
+      "field": "scrapQty",
+      "class": "metric"
+    },
+    {
+      "model": "ProductionAnalyticsSnapshot",
+      "field": "totalProduction",
+      "class": "metric"
+    },
+    {
+      "model": "ProductionAnalyticsSnapshot",
+      "field": "targetProduction",
+      "class": "metric"
+    },
+    {
+      "model": "ProductionAnalyticsSnapshot",
+      "field": "efficiency",
+      "class": "metric"
+    },
+    {
+      "model": "ProductionAnalyticsSnapshot",
+      "field": "oeeAvg",
+      "class": "metric"
+    },
+    {
+      "model": "ProductionAnalyticsSnapshot",
+      "field": "scrapRate",
+      "class": "metric"
+    },
+    {
+      "model": "ProductionAnalyticsSnapshot",
+      "field": "reworkRate",
+      "class": "metric"
+    },
+    {
+      "model": "ProductionAnalyticsSnapshot",
+      "field": "firstPassYield",
+      "class": "metric"
+    },
+    {
+      "model": "ProductionAnalyticsSnapshot",
+      "field": "downtimeHours",
+      "class": "metric"
+    },
+    {
+      "model": "ProductionAnalyticsSnapshot",
+      "field": "energyConsumption",
+      "class": "metric"
+    },
+    {
+      "model": "ProductionAnalyticsSnapshot",
+      "field": "laborProductivity",
+      "class": "metric"
+    },
+    {
+      "model": "ProductionAnalyticsSnapshot",
+      "field": "costPerUnit",
+      "class": "metric"
+    },
+    {
+      "model": "GmpBatchRecord",
+      "field": "batchSize",
+      "class": "metric"
+    },
+    {
+      "model": "PpmPortfolioProject",
+      "field": "strategicAlignment",
+      "class": "metric"
+    },
+    {
+      "model": "PpmPortfolioProject",
+      "field": "riskScore",
+      "class": "metric"
+    },
+    {
+      "model": "PpmRiskRegister",
+      "field": "probability",
+      "class": "metric"
+    },
+    {
+      "model": "PpmRiskRegister",
+      "field": "impact",
+      "class": "metric"
+    },
+    {
+      "model": "PpmRiskRegister",
+      "field": "riskScore",
+      "class": "metric"
+    },
+    {
+      "model": "PpmRiskRegister",
+      "field": "residualRisk",
+      "class": "metric"
+    },
+    {
+      "model": "EvmMeasurement",
+      "field": "scheduleVariance",
+      "class": "metric"
+    },
+    {
+      "model": "EvmMeasurement",
+      "field": "spi",
+      "class": "metric"
+    },
+    {
+      "model": "EvmMeasurement",
+      "field": "cpi",
+      "class": "metric"
+    },
+    {
+      "model": "EvmMeasurement",
+      "field": "eac",
+      "class": "metric"
+    },
+    {
+      "model": "EvmMeasurement",
+      "field": "etc",
+      "class": "metric"
+    },
+    {
+      "model": "EvmMeasurement",
+      "field": "tcpi",
+      "class": "metric"
+    },
+    {
+      "model": "EvmMeasurement",
+      "field": "percentComplete",
+      "class": "metric"
+    },
+    {
+      "model": "PpmKanbanCard",
+      "field": "order",
+      "class": "metric"
+    },
+    {
+      "model": "PpmKanbanCard",
+      "field": "storyPoints",
+      "class": "metric"
+    },
+    {
+      "model": "PpmProcurementRequisition",
+      "field": "quantity",
+      "class": "metric"
+    },
+    {
+      "model": "PpmTimesheet",
+      "field": "totalHours",
+      "class": "metric"
+    },
+    {
+      "model": "PpmTimesheet",
+      "field": "billableHours",
+      "class": "metric"
+    },
+    {
+      "model": "PpmTimesheetEntry",
+      "field": "hours",
+      "class": "metric"
+    },
+    {
+      "model": "ProjectSubcontractor",
+      "field": "performanceScore",
+      "class": "metric"
+    },
+    {
+      "model": "InternalSurveyAnswer",
+      "field": "score",
+      "class": "metric"
+    },
+    {
+      "model": "BusinessRuleExecution",
+      "field": "duration",
+      "class": "metric"
+    },
+    {
+      "model": "IntegrationLog",
+      "field": "duration",
+      "class": "metric"
+    },
+    {
+      "model": "BuilderTemplate",
+      "field": "rating",
+      "class": "metric"
+    },
+    {
+      "model": "MarketplacePackage",
+      "field": "rating",
+      "class": "metric"
+    },
+    {
+      "model": "BuilderUsageMetric",
+      "field": "value",
+      "class": "metric"
+    },
+    {
+      "model": "ReportRun",
+      "field": "duration",
+      "class": "metric"
+    },
+    {
+      "model": "SearchAnalytics",
+      "field": "avgResponseMs",
+      "class": "metric"
+    },
+    {
+      "model": "DeploymentAnalytics",
+      "field": "avgDuration",
+      "class": "metric"
+    },
+    {
+      "model": "DeploymentAnalytics",
+      "field": "p95Duration",
+      "class": "metric"
+    },
+    {
+      "model": "DocumentAnnotation",
+      "field": "x",
+      "class": "metric"
+    },
+    {
+      "model": "DocumentAnnotation",
+      "field": "y",
+      "class": "metric"
+    },
+    {
+      "model": "DocumentAnnotation",
+      "field": "width",
+      "class": "metric"
+    },
+    {
+      "model": "DocumentAnnotation",
+      "field": "height",
+      "class": "metric"
+    },
+    {
+      "model": "DocumentWatermark",
+      "field": "opacity",
+      "class": "metric"
+    },
+    {
+      "model": "StorageAlert",
+      "field": "threshold",
+      "class": "metric"
+    },
+    {
+      "model": "StorageCompression",
+      "field": "ratio",
+      "class": "metric"
+    },
+    {
+      "model": "WorkflowMetric",
+      "field": "avgSlaPct",
+      "class": "metric"
+    },
+    {
+      "model": "SloDefinition",
+      "field": "targetPercent",
+      "class": "metric"
+    },
+    {
+      "model": "Incident",
+      "field": "actualPercent",
+      "class": "metric"
+    },
+    {
+      "model": "CapacityObservation",
+      "field": "value",
+      "class": "metric"
+    },
+    {
+      "model": "CapacityObservation",
+      "field": "capacity",
+      "class": "metric"
+    },
+    {
+      "model": "TelemetrySample",
+      "field": "value",
+      "class": "metric"
+    }
+  ]
+}

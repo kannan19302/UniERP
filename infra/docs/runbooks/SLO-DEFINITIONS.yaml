@@ -1,0 +1,112 @@
+# SLO Definitions — UniERP Platform
+# Per PLATFORM_ARCHITECTURE.md § 11: "SLOs per critical journey, each with an error budget and an explicit policy: budget exhausted ⇒ feature work pauses."
+
+version: "1.0"
+# Alert runbook requirement: every alert must have a runbook link. Missing runbook = build failure.
+alert_runbook_required: true
+
+slos:
+  # ─── User Authentication Journey ───────────────────────────────────────────
+  - id: slo-login
+    name: "User Login Journey"
+    description: "OAuth 2.1 / OIDC token exchange, session creation. Blocking user access."
+    journey: "login"
+    endpoint: "POST /api/v1/auth/login"
+    objectives:
+      availability:
+        target: 99.9  # three-nines
+        window: 30d
+        error_budget_minutes: 43.2  # = 30d × 0.1%
+      latency:
+        p99_ms: 800
+        p95_ms: 400
+      window: 30d
+    error_budget_policy:
+      exhausted: "Feature work pauses. On-call required."
+      alert_at_pct: [50, 75, 90, 100]
+    runbook: "docs/runbooks/INCIDENT-RESPONSE.md#login-failure"
+
+  # ─── Document Listing Journey ───────────────────────────────────────────────
+  - id: slo-list-documents
+    name: "List Documents"
+    description: "Tenant document listing with RLS enforcement."
+    journey: "list_document"
+    endpoint: "GET /api/v1/documents"
+    objectives:
+      availability:
+        target: 99.9
+        window: 30d
+        error_budget_minutes: 43.2
+      latency:
+        p99_ms: 1500
+        p95_ms: 500
+    error_budget_policy:
+      exhausted: "Feature work pauses."
+      alert_at_pct: [50, 75, 90, 100]
+    runbook: "docs/runbooks/INCIDENT-RESPONSE.md#read-path-failure"
+
+  # ─── Transaction Posting Journey ────────────────────────────────────────────
+  - id: slo-post-transaction
+    name: "Post Financial Transaction"
+    description: "Journal entry creation, GL posting. Correctness-critical."
+    journey: "post_transaction"
+    endpoint: "POST /api/v1/finance/transactions"
+    objectives:
+      availability:
+        target: 99.95  # money path gets higher target
+        window: 30d
+        error_budget_minutes: 21.6
+      latency:
+        p99_ms: 2000
+        p95_ms: 800
+    error_budget_policy:
+      exhausted: "IMMEDIATE: feature work fully pauses, escalate to CTO."
+      alert_at_pct: [25, 50, 75, 90, 100]
+    runbook: "docs/runbooks/INCIDENT-RESPONSE.md#finance-transaction-failure"
+
+  # ─── Report Generation Journey ──────────────────────────────────────────────
+  - id: slo-run-report
+    name: "Run Report"
+    description: "Analytics report generation, may trigger read-replica queries."
+    journey: "run_report"
+    endpoint: "POST /api/v1/reporting/reports/run"
+    objectives:
+      availability:
+        target: 99.5  # reporting tolerates higher error budget
+        window: 30d
+        error_budget_minutes: 216
+      latency:
+        p99_ms: 30000  # 30s for complex reports
+        p95_ms: 5000
+    error_budget_policy:
+      exhausted: "Feature work pauses."
+      alert_at_pct: [50, 75, 90, 100]
+    runbook: "docs/runbooks/INCIDENT-RESPONSE.md#report-failure"
+
+  # ─── Control Plane: Tenant Provisioning ─────────────────────────────────────
+  - id: slo-provision-tenant
+    name: "Provision Tenant (Control Plane)"
+    description: "Tenant creation via /api/platform/v1. Control-plane path, operator-facing."
+    journey: "provision_tenant"
+    endpoint: "POST /api/platform/v1/tenants"
+    objectives:
+      availability:
+        target: 99.9
+        window: 30d
+        error_budget_minutes: 43.2
+      latency:
+        p99_ms: 5000
+        p95_ms: 2000
+    error_budget_policy:
+      exhausted: "Feature work pauses."
+      alert_at_pct: [50, 75, 90, 100]
+    runbook: "docs/runbooks/INCIDENT-RESPONSE.md#tenant-provision-failure"
+
+per_tenant_reporting:
+  enabled: true
+  description: "Per-tenant SLO reporting in Platform Admin Console. Enables noisy-neighbour detection and cost-per-tenant attribution."
+  metrics:
+    - request_latency_by_tenant
+    - error_rate_by_tenant
+    - db_query_duration_by_tenant
+  dashboard: "docs/runbooks/grafana/per-tenant-slo.json"

@@ -1,0 +1,128 @@
+# Track I.2 — k6 load/performance test suite for tenant-scoped flows.
+#
+# Runs on workflow_dispatch (manual trigger) and nightly at 02:00 UTC.
+# Uses the grafana/k6 Docker image to execute scenario files in load-tests/.
+# Requires a running UniERP deployment at the target URL.
+
+name: Load Test
+
+on:
+  schedule:
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+    inputs:
+      target_url:
+        description: 'Base URL of the UniERP deployment to test'
+        required: false
+        default: 'http://localhost:3001'
+      scenario:
+        description: 'Test scenario to run (smoke, login, list, post, stress, tenant, all)'
+        required: false
+        default: 'smoke'
+      vus:
+        description: 'Override virtual users (optional)'
+        required: false
+        default: ''
+
+concurrency:
+  group: load-test-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  k6-load-test:
+    name: k6 ${{ inputs.scenario || 'smoke' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: ./load-tests
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+
+      - name: Run k6 smoke test
+        if: inputs.scenario == 'smoke' || inputs.scenario == '' || inputs.scenario == 'all'
+        uses: grafana/k6-action@2bd221c807b7cdbe4bb3abc6b3fa4d2da499fa9b
+        with:
+          filename: load-tests/scenarios/smoke-test.js
+          flags: >
+            --env BASE_URL=${{ inputs.target_url || 'http://localhost:3001' }}
+            --out json=/tmp/k6-smoke-results.json
+            --summary-export=/tmp/k6-smoke-summary.json
+
+      - name: Run k6 login load test
+        if: inputs.scenario == 'login' || inputs.scenario == 'all'
+        uses: grafana/k6-action@2bd221c807b7cdbe4bb3abc6b3fa4d2da499fa9b
+        with:
+          filename: load-tests/scenarios/login.js
+          flags: >
+            --env BASE_URL=${{ inputs.target_url || 'http://localhost:3001' }}
+            --out json=/tmp/k6-login-results.json
+            --summary-export=/tmp/k6-login-summary.json
+
+      - name: Run k6 list+paginate load test
+        if: inputs.scenario == 'list' || inputs.scenario == 'all'
+        uses: grafana/k6-action@2bd221c807b7cdbe4bb3abc6b3fa4d2da499fa9b
+        with:
+          filename: load-tests/scenarios/list-paginate.js
+          flags: >
+            --env BASE_URL=${{ inputs.target_url || 'http://localhost:3001' }}
+            --out json=/tmp/k6-list-results.json
+            --summary-export=/tmp/k6-list-summary.json
+
+      - name: Run k6 document post load test
+        if: inputs.scenario == 'post' || inputs.scenario == 'all'
+        uses: grafana/k6-action@2bd221c807b7cdbe4bb3abc6b3fa4d2da499fa9b
+        with:
+          filename: load-tests/scenarios/document-post.js
+          flags: >
+            --env BASE_URL=${{ inputs.target_url || 'http://localhost:3001' }}
+            --out json=/tmp/k6-post-results.json
+            --summary-export=/tmp/k6-post-summary.json
+
+      - name: Run k6 stress test
+        if: inputs.scenario == 'stress' || inputs.scenario == 'all'
+        uses: grafana/k6-action@2bd221c807b7cdbe4bb3abc6b3fa4d2da499fa9b
+        with:
+          filename: load-tests/scenarios/stress-test.js
+          flags: >
+            --env BASE_URL=${{ inputs.target_url || 'http://localhost:3001' }}
+            --out json=/tmp/k6-stress-results.json
+            --summary-export=/tmp/k6-stress-summary.json
+
+      - name: Run k6 tenant isolation test
+        if: inputs.scenario == 'tenant' || inputs.scenario == 'all'
+        uses: grafana/k6-action@2bd221c807b7cdbe4bb3abc6b3fa4d2da499fa9b
+        with:
+          filename: load-tests/scenarios/tenant-isolation.js
+          flags: >
+            --env BASE_URL=${{ inputs.target_url || 'http://localhost:3001' }}
+            --out json=/tmp/k6-tenant-results.json
+            --summary-export=/tmp/k6-tenant-summary.json
+
+      - name: Upload k6 results
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: k6-results-${{ inputs.scenario || 'smoke' }}-${{ github.run_id }}
+          path: /tmp/k6-*-results.json
+          retention-days: 7
+
+      - name: Check threshold results
+        if: always()
+        run: |
+          echo "=== k6 Load Test Complete ==="
+          for f in /tmp/k6-*-summary.json; do
+            if [ -f "$f" ]; then
+              echo "--- $(basename $f) ---"
+              cat "$f" | python3 -m json.tool 2>/dev/null || cat "$f"
+            fi
+          done
+
+  nightly-report:
+    name: Nightly Load Test Report
+    if: github.event_name == 'schedule'
+    needs: k6-load-test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Summarize nightly results
+        run: echo "Nightly load test completed at $(date -u)"

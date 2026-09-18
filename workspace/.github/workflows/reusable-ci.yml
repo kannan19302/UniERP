@@ -1,0 +1,76 @@
+name: Reusable CI
+
+on:
+  workflow_call:
+    inputs:
+      node-version:
+        required: false
+        type: string
+        default: '22'
+      run-integration:
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_DB: unerp_test
+          POSTGRES_USER: unerp
+          POSTGRES_PASSWORD: unerp_password
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U unerp -d unerp_test"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Use Node.js ${{ inputs.node-version }}
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: ${{ inputs.node-version }}
+      - name: Activate the governed pnpm version
+        run: corepack enable && corepack prepare pnpm@9.15.4 --activate
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Checkout unierp-workspace for CI scripts
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: kannan19302/unierp-workspace
+          path: unierp-workspace
+      - name: Run checks
+        run: |
+          pnpm run build
+          pnpm run lint
+          pnpm run test
+      - name: Check out data repository for integration tests
+        if: inputs.run-integration
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: kannan19302/unierp-data
+          path: .unierp-data
+      - name: Run integration tests
+        if: inputs.run-integration
+        env:
+          DATABASE_URL: postgresql://unerp:unerp_password@localhost:5432/unerp_test?schema=public
+        run: |
+          pnpm --dir .unierp-data install --frozen-lockfile
+          pnpm --dir .unierp-data db:deploy
+          pnpm --dir .unierp-data db:seed
+          pnpm test:integration:run
+      - name: Check dependency licences
+        run: node unierp-workspace/scripts/ci/check-licenses.mjs
+      - name: Coverage ratchet
+        run: node unierp-workspace/scripts/ci/check-coverage-ratchet.mjs
+        env:
+          RATCHET_ROOT: ${{ github.workspace }}
+          RATCHET_REPO: ${{ github.event.repository.name }}
+      - name: Mutation testing gate
+        if: ${{ hashFiles('stryker.conf.json') != '' }}
+        run: pnpm test:mutation

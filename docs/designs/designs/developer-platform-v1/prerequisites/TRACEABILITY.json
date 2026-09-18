@@ -1,0 +1,2615 @@
+{
+  "date": "2026-09-08",
+  "meaning": "Design mapping only; not runtime qualification",
+  "routeMap": [
+    {
+      "source": "developer-platform/src/app\\sites\\[siteId]\\[builder]\\[artifactId]\\page.tsx",
+      "screens": [
+        "DP-027",
+        "DP-028"
+      ],
+      "coverage": "dynamic: registry expanded",
+      "originScreens": [
+        23,
+        4
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\sites\\[siteId]\\[builder]\\page.tsx",
+      "screens": [
+        "DP-027",
+        "DP-028",
+        "DP-029",
+        "DP-030",
+        "DP-031",
+        "DP-032",
+        "DP-033",
+        "DP-034",
+        "DP-035",
+        "DP-038",
+        "DP-039",
+        "DP-040",
+        "DP-041",
+        "DP-042"
+      ],
+      "coverage": "dynamic: registry expanded",
+      "originScreens": [
+        23,
+        4,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\sites\\[siteId]\\page.tsx",
+      "screens": [
+        "DP-014"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        22
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\sdk\\page.tsx",
+      "screens": [
+        "DP-068"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        65
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\login\\page.tsx",
+      "screens": [
+        "DP-001"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        73
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\library\\[builder]\\[artifactId]\\page.tsx",
+      "screens": [
+        "DP-044",
+        "DP-045",
+        "DP-053",
+        "DP-054",
+        "DP-107",
+        "DP-047",
+        "DP-048"
+      ],
+      "coverage": "dynamic: registry expanded",
+      "originScreens": [
+        36,
+        37,
+        39,
+        11,
+        54,
+        40,
+        41
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\library\\[builder]\\page.tsx",
+      "screens": [
+        "DP-044",
+        "DP-045",
+        "DP-046",
+        "DP-053",
+        "DP-054",
+        "DP-107",
+        "DP-047",
+        "DP-048",
+        "DP-051"
+      ],
+      "coverage": "dynamic: registry expanded",
+      "originScreens": [
+        36,
+        37,
+        38,
+        39,
+        11,
+        54,
+        40,
+        41,
+        45
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\auth\\callback\\page.tsx",
+      "screens": [
+        "DP-001"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        73
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\web\\canvas\\page.tsx",
+      "screens": [
+        "DP-028"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        4
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\web\\ab-testing\\page.tsx",
+      "screens": [
+        "DP-038"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        31
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\apps\\[appId]\\[builder]\\[artifactId]\\page.tsx",
+      "screens": [
+        "DP-044",
+        "DP-045",
+        "DP-053",
+        "DP-054",
+        "DP-107",
+        "DP-047",
+        "DP-048"
+      ],
+      "coverage": "dynamic: registry expanded",
+      "originScreens": [
+        36,
+        37,
+        39,
+        11,
+        54,
+        40,
+        41
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\apps\\[appId]\\[builder]\\page.tsx",
+      "screens": [
+        "DP-044",
+        "DP-045",
+        "DP-046",
+        "DP-053",
+        "DP-054",
+        "DP-107",
+        "DP-052",
+        "DP-047",
+        "DP-048",
+        "DP-049",
+        "DP-050",
+        "DP-051",
+        "DP-066",
+        "DP-055",
+        "DP-056"
+      ],
+      "coverage": "dynamic: registry expanded",
+      "originScreens": [
+        36,
+        37,
+        38,
+        39,
+        11,
+        54,
+        44,
+        40,
+        41,
+        42,
+        43,
+        45,
+        46,
+        47,
+        48
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\apps\\[appId]\\page.tsx",
+      "screens": [
+        "DP-013",
+        "DP-057",
+        "DP-022"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        21,
+        49,
+        75
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\web\\(hub)\\submissions\\page.tsx",
+      "screens": [
+        "DP-040"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        33
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\apps\\[appId]\\[builder]\\new\\page.tsx",
+      "screens": [
+        "DP-053",
+        "DP-054",
+        "DP-107",
+        "DP-047",
+        "DP-048"
+      ],
+      "coverage": "dynamic: registry expanded",
+      "originScreens": [
+        39,
+        11,
+        54,
+        40,
+        41
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\web\\(hub)\\settings\\page.tsx",
+      "screens": [
+        "DP-041",
+        "DP-042"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        34,
+        35
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\web\\(hub)\\assets\\page.tsx",
+      "screens": [
+        "DP-033"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        28
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\web\\(hub)\\collections\\page.tsx",
+      "screens": [
+        "DP-029",
+        "DP-030"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        24,
+        25
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\web\\(hub)\\seo\\page.tsx",
+      "screens": [
+        "DP-035"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        30
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\web\\(hub)\\pages\\page.tsx",
+      "screens": [
+        "DP-027",
+        "DP-028"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        23,
+        4
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\web\\(hub)\\page.tsx",
+      "screens": [
+        "DP-014"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        22
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\web\\(hub)\\blog\\page.tsx",
+      "screens": [
+        "DP-031",
+        "DP-032"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        26,
+        27
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\web\\(hub)\\orders\\page.tsx",
+      "screens": [
+        "DP-039"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        32
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\(platform)\\sites\\page.tsx",
+      "screens": [
+        "DP-008"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        18
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\(platform)\\library\\page.tsx",
+      "screens": [
+        "DP-011",
+        "DP-012",
+        "DP-016"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        6,
+        7,
+        72
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\manage\\widgets\\page.tsx",
+      "screens": [
+        "DP-064"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        60
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\sites\\[id]\\page.tsx",
+      "screens": [
+        "DP-014"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        22
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\web\\(hub)\\menus\\page.tsx",
+      "screens": [
+        "DP-034"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        29
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\manage\\git\\page.tsx",
+      "screens": [
+        "DP-081"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        63
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\(platform)\\sites\\new\\page.tsx",
+      "screens": [
+        "DP-010"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        20
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\(platform)\\page.tsx",
+      "screens": [
+        "DP-003"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        1
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\(platform)\\apps\\page.tsx",
+      "screens": [
+        "DP-007"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        17
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\manage\\etl\\page.tsx",
+      "screens": [
+        "DP-065"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        61
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\sites\\templates\\page.tsx",
+      "screens": [
+        "DP-010"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        20
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\manage\\theme-manager\\page.tsx",
+      "screens": [
+        "DP-083"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        62
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\sites\\page.tsx",
+      "screens": [
+        "DP-008"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        18
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\manage\\components\\page.tsx",
+      "screens": [
+        "DP-021",
+        "DP-012",
+        "DP-020"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        56,
+        7,
+        8
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\(platform)\\apps\\new\\page.tsx",
+      "screens": [
+        "DP-009"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        19
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\manage\\environments\\page.tsx",
+      "screens": [
+        "DP-087"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        53
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\(platform)\\manage\\page.tsx",
+      "screens": [
+        "DP-092"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        50
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\manage\\releases\\page.tsx",
+      "screens": [
+        "DP-086",
+        "DP-085",
+        "DP-042"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        52,
+        13,
+        35
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\manage\\page.tsx",
+      "screens": [
+        "DP-092"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        50
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\(platform)\\manage\\[section]\\page.tsx",
+      "screens": [
+        "DP-093",
+        "DP-086",
+        "DP-085",
+        "DP-042",
+        "DP-087",
+        "DP-107",
+        "DP-094",
+        "DP-023",
+        "DP-021",
+        "DP-012",
+        "DP-020",
+        "DP-062",
+        "DP-061",
+        "DP-108",
+        "DP-063",
+        "DP-064",
+        "DP-065",
+        "DP-083",
+        "DP-081",
+        "DP-091"
+      ],
+      "coverage": "dynamic: registry expanded",
+      "originScreens": [
+        51,
+        52,
+        13,
+        35,
+        53,
+        54,
+        55,
+        14,
+        56,
+        7,
+        8,
+        57,
+        10,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\manage\\access\\page.tsx",
+      "screens": [
+        "DP-094",
+        "DP-023"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        55,
+        14
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\manage\\developer-governance\\page.tsx",
+      "screens": [
+        "DP-093"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        51
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\manage\\connectors\\page.tsx",
+      "screens": [
+        "DP-062",
+        "DP-061"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        57,
+        10
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\manage\\query-builder\\page.tsx",
+      "screens": [
+        "DP-063"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        59
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\manage\\logs\\page.tsx",
+      "screens": [
+        "DP-107"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        54
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\app-hub\\page.tsx",
+      "screens": [
+        "DP-007"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        17
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\bpmn\\page.tsx",
+      "screens": [
+        "DP-052"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        44
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\page.tsx",
+      "screens": [
+        "DP-007"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        17
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\manage\\marketplace\\page.tsx",
+      "screens": [
+        "DP-108"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        58
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\api-builder\\page.tsx",
+      "screens": [
+        "DP-066"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        46
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\manage\\mobile-export\\page.tsx",
+      "screens": [
+        "DP-091"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        64
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\logic\\page.tsx",
+      "screens": [
+        "DP-055"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        47
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\rules-engine\\page.tsx",
+      "screens": [
+        "DP-051"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        45
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\apps\\[id]\\page.tsx",
+      "screens": [
+        "DP-013",
+        "DP-057",
+        "DP-022"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        21,
+        49,
+        75
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\advanced-forms\\page.tsx",
+      "screens": [
+        "DP-046"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        38
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\data\\page.tsx",
+      "screens": [
+        "DP-049",
+        "DP-050"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        42,
+        43
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\mobile-builder\\page.tsx",
+      "screens": [
+        "DP-056"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        48
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\modules\\page.tsx",
+      "screens": [
+        "DP-007"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        17
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\workflows\\page.tsx",
+      "screens": [
+        "DP-053",
+        "DP-054",
+        "DP-107"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        39,
+        11,
+        54
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\workflows\\[id]\\page.tsx",
+      "screens": [
+        "DP-053",
+        "DP-054",
+        "DP-107"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        39,
+        11,
+        54
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\forms\\page.tsx",
+      "screens": [
+        "DP-044",
+        "DP-045"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        36,
+        37
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\workflows\\new\\page.tsx",
+      "screens": [
+        "DP-053",
+        "DP-054",
+        "DP-107"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        39,
+        11,
+        54
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\customize\\page.tsx",
+      "screens": [
+        "DP-057"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        49
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\data-objects\\page.tsx",
+      "screens": [
+        "DP-049",
+        "DP-050"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        42,
+        43
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\modules\\[id]\\page.tsx",
+      "screens": [
+        "DP-013",
+        "DP-057",
+        "DP-022"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        21,
+        49,
+        75
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\forms\\[id]\\page.tsx",
+      "screens": [
+        "DP-044",
+        "DP-045"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        36,
+        37
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\dashboards\\page.tsx",
+      "screens": [
+        "DP-047",
+        "DP-048"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        40,
+        41
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\data-objects\\[id]\\page.tsx",
+      "screens": [
+        "DP-049",
+        "DP-050"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        42,
+        43
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\dashboards\\[id]\\page.tsx",
+      "screens": [
+        "DP-047",
+        "DP-048"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        40,
+        41
+      ]
+    },
+    {
+      "source": "developer-platform/src/app\\builder\\erp\\dashboards\\new\\page.tsx",
+      "screens": [
+        "DP-047",
+        "DP-048"
+      ],
+      "coverage": "dedicated",
+      "originScreens": [
+        40,
+        41
+      ]
+    }
+  ],
+  "registry": [
+    {
+      "owner": "app",
+      "id": "forms",
+      "segment": "forms",
+      "kind": "builder",
+      "scopes": [
+        "app",
+        "library"
+      ],
+      "editor": true,
+      "create": "inline",
+      "screens": [
+        "DP-044",
+        "DP-045"
+      ],
+      "observedScopes": [
+        "app",
+        "library"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        36,
+        37
+      ]
+    },
+    {
+      "owner": "app",
+      "id": "advanced-forms",
+      "segment": "advanced-forms",
+      "kind": "builder",
+      "scopes": [
+        "app",
+        "library"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        "DP-046"
+      ],
+      "observedScopes": [
+        "app",
+        "library"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        38
+      ]
+    },
+    {
+      "owner": "app",
+      "id": "workflows",
+      "segment": "workflows",
+      "kind": "builder",
+      "scopes": [
+        "app",
+        "library"
+      ],
+      "editor": true,
+      "create": "wizard",
+      "screens": [
+        "DP-053",
+        "DP-054",
+        "DP-107"
+      ],
+      "observedScopes": [
+        "app",
+        "library"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        39,
+        11,
+        54
+      ]
+    },
+    {
+      "owner": "app",
+      "id": "bpmn",
+      "segment": "bpmn",
+      "kind": "builder",
+      "scopes": [
+        "app"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        "DP-052"
+      ],
+      "observedScopes": [
+        "app"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        44
+      ]
+    },
+    {
+      "owner": "app",
+      "id": "dashboards",
+      "segment": "dashboards",
+      "kind": "builder",
+      "scopes": [
+        "app",
+        "library"
+      ],
+      "editor": true,
+      "create": "wizard",
+      "screens": [
+        "DP-047",
+        "DP-048"
+      ],
+      "observedScopes": [
+        "app",
+        "library"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        40,
+        41
+      ]
+    },
+    {
+      "owner": "app",
+      "id": "data-objects",
+      "segment": "data-objects",
+      "kind": "builder",
+      "scopes": [
+        "app"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        "DP-049",
+        "DP-050"
+      ],
+      "observedScopes": [
+        "app"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        42,
+        43
+      ]
+    },
+    {
+      "owner": "app",
+      "id": "rules-engine",
+      "segment": "rules",
+      "kind": "builder",
+      "scopes": [
+        "app",
+        "library"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        "DP-051"
+      ],
+      "observedScopes": [
+        "app",
+        "library"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        45
+      ]
+    },
+    {
+      "owner": "app",
+      "id": "api-builder",
+      "segment": "apis",
+      "kind": "builder",
+      "scopes": [
+        "app"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        "DP-066"
+      ],
+      "observedScopes": [
+        "app"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        46
+      ]
+    },
+    {
+      "owner": "app",
+      "id": "logic",
+      "segment": "logic",
+      "kind": "builder",
+      "scopes": [
+        "app"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        "DP-055"
+      ],
+      "observedScopes": [
+        "app"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        47
+      ]
+    },
+    {
+      "owner": "app",
+      "id": "mobile-builder",
+      "segment": "mobile",
+      "kind": "builder",
+      "scopes": [
+        "app"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        "DP-056"
+      ],
+      "observedScopes": [
+        "app"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        48
+      ]
+    },
+    {
+      "owner": "site",
+      "id": "site-pages",
+      "segment": "pages",
+      "kind": "builder",
+      "scopes": [
+        "site"
+      ],
+      "editor": true,
+      "create": "inline",
+      "screens": [
+        "DP-027",
+        "DP-028"
+      ],
+      "observedScopes": [
+        "site"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        23,
+        4
+      ]
+    },
+    {
+      "owner": "site",
+      "id": "site-collections",
+      "segment": "collections",
+      "kind": "builder",
+      "scopes": [
+        "site"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        "DP-029",
+        "DP-030"
+      ],
+      "observedScopes": [
+        "site"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        24,
+        25
+      ]
+    },
+    {
+      "owner": "site",
+      "id": "site-blog",
+      "segment": "blog",
+      "kind": "builder",
+      "scopes": [
+        "site"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        "DP-031",
+        "DP-032"
+      ],
+      "observedScopes": [
+        "site"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        26,
+        27
+      ]
+    },
+    {
+      "owner": "site",
+      "id": "site-assets",
+      "segment": "assets",
+      "kind": "builder",
+      "scopes": [
+        "site"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        "DP-033"
+      ],
+      "observedScopes": [
+        "site"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        28
+      ]
+    },
+    {
+      "owner": "site",
+      "id": "site-menus",
+      "segment": "menus",
+      "kind": "builder",
+      "scopes": [
+        "site"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        "DP-034"
+      ],
+      "observedScopes": [
+        "site"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        29
+      ]
+    },
+    {
+      "owner": "site",
+      "id": "site-seo",
+      "segment": "seo",
+      "kind": "builder",
+      "scopes": [
+        "site"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        "DP-035"
+      ],
+      "observedScopes": [
+        "site"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        30
+      ]
+    },
+    {
+      "owner": "site",
+      "id": "site-ab-testing",
+      "segment": "ab-testing",
+      "kind": "builder",
+      "scopes": [
+        "site"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        "DP-038"
+      ],
+      "observedScopes": [
+        "site"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        31
+      ]
+    },
+    {
+      "owner": "site",
+      "id": "site-orders",
+      "segment": "orders",
+      "kind": "data",
+      "scopes": [
+        "site"
+      ],
+      "editor": false,
+      "create": "",
+      "screens": [
+        "DP-039"
+      ],
+      "observedScopes": [
+        "site"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        32
+      ]
+    },
+    {
+      "owner": "site",
+      "id": "site-submissions",
+      "segment": "submissions",
+      "kind": "data",
+      "scopes": [
+        "site"
+      ],
+      "editor": false,
+      "create": "",
+      "screens": [
+        "DP-040"
+      ],
+      "observedScopes": [
+        "site"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        33
+      ]
+    },
+    {
+      "owner": "site",
+      "id": "site-settings",
+      "segment": "settings",
+      "kind": "settings",
+      "scopes": [
+        "site"
+      ],
+      "editor": false,
+      "create": "",
+      "screens": [
+        "DP-041",
+        "DP-042"
+      ],
+      "observedScopes": [
+        "site"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        34,
+        35
+      ]
+    },
+    {
+      "owner": "manage",
+      "id": "manage-developer-governance",
+      "segment": "developer-governance",
+      "kind": "settings",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": "",
+      "screens": [
+        "DP-093"
+      ],
+      "observedScopes": [
+        "manage"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        51
+      ]
+    },
+    {
+      "owner": "manage",
+      "id": "manage-releases",
+      "segment": "releases",
+      "kind": "data",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": "",
+      "screens": [
+        "DP-086",
+        "DP-085",
+        "DP-042"
+      ],
+      "observedScopes": [
+        "manage"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        52,
+        13,
+        35
+      ]
+    },
+    {
+      "owner": "manage",
+      "id": "manage-environments",
+      "segment": "environments",
+      "kind": "settings",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": "",
+      "screens": [
+        "DP-087"
+      ],
+      "observedScopes": [
+        "manage"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        53
+      ]
+    },
+    {
+      "owner": "manage",
+      "id": "manage-logs",
+      "segment": "logs",
+      "kind": "data",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": "",
+      "screens": [
+        "DP-107"
+      ],
+      "observedScopes": [
+        "manage"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        54
+      ]
+    },
+    {
+      "owner": "manage",
+      "id": "manage-access",
+      "segment": "access",
+      "kind": "settings",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": "",
+      "screens": [
+        "DP-094",
+        "DP-023"
+      ],
+      "observedScopes": [
+        "manage"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        55,
+        14
+      ]
+    },
+    {
+      "owner": "manage",
+      "id": "manage-components",
+      "segment": "components",
+      "kind": "settings",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": "",
+      "screens": [
+        "DP-021",
+        "DP-012",
+        "DP-020"
+      ],
+      "observedScopes": [
+        "manage"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        56,
+        7,
+        8
+      ]
+    },
+    {
+      "owner": "manage",
+      "id": "manage-connectors",
+      "segment": "connectors",
+      "kind": "settings",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": "",
+      "screens": [
+        "DP-062",
+        "DP-061"
+      ],
+      "observedScopes": [
+        "manage"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        57,
+        10
+      ]
+    },
+    {
+      "owner": "manage",
+      "id": "manage-marketplace",
+      "segment": "marketplace",
+      "kind": "settings",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": "",
+      "screens": [
+        "DP-108"
+      ],
+      "observedScopes": [
+        "manage"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        58
+      ]
+    },
+    {
+      "owner": "manage",
+      "id": "manage-query-builder",
+      "segment": "queries",
+      "kind": "builder",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        "DP-063"
+      ],
+      "observedScopes": [
+        "manage"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        59
+      ]
+    },
+    {
+      "owner": "manage",
+      "id": "manage-widgets",
+      "segment": "widgets",
+      "kind": "builder",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        "DP-064"
+      ],
+      "observedScopes": [
+        "manage"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        60
+      ]
+    },
+    {
+      "owner": "manage",
+      "id": "manage-etl",
+      "segment": "etl",
+      "kind": "builder",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        "DP-065"
+      ],
+      "observedScopes": [
+        "manage"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        61
+      ]
+    },
+    {
+      "owner": "manage",
+      "id": "manage-theme",
+      "segment": "themes",
+      "kind": "builder",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        "DP-083"
+      ],
+      "observedScopes": [
+        "manage"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        62
+      ]
+    },
+    {
+      "owner": "manage",
+      "id": "manage-git",
+      "segment": "git",
+      "kind": "settings",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": "",
+      "screens": [
+        "DP-081"
+      ],
+      "observedScopes": [
+        "manage"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        63
+      ]
+    },
+    {
+      "owner": "manage",
+      "id": "manage-mobile-export",
+      "segment": "mobile-export",
+      "kind": "builder",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": "inline",
+      "screens": [
+        "DP-091"
+      ],
+      "observedScopes": [
+        "manage"
+      ],
+      "scopeAuthority": "Accepted ARTIFACT-PORTABILITY-MATRIX; observed registry may drift",
+      "originScreens": [
+        64
+      ]
+    }
+  ],
+  "requirements": {
+    "DEV-FR-001": [
+      "DP-067",
+      "DP-066",
+      "DP-068",
+      "DP-073"
+    ],
+    "DEV-FR-002": [
+      "DP-095",
+      "DP-096"
+    ],
+    "DEV-FR-003": [
+      "DP-070",
+      "DP-071"
+    ],
+    "DEV-FR-004": [
+      "DP-055",
+      "DP-072"
+    ],
+    "DEV-FR-005": [
+      "DP-107",
+      "DP-073"
+    ],
+    "SITE-FR-001": [
+      "DP-010",
+      "DP-027",
+      "DP-028",
+      "DP-029",
+      "DP-030"
+    ],
+    "SITE-FR-002": [
+      "DP-028",
+      "DP-076"
+    ],
+    "SITE-FR-003": [
+      "DP-085",
+      "DP-041",
+      "DP-042"
+    ],
+    "SITE-FR-004": [
+      "DP-029",
+      "DP-031",
+      "DP-032",
+      "DP-039"
+    ],
+    "SITE-FR-005": [
+      "DP-014",
+      "DP-042",
+      "DP-107"
+    ]
+  },
+  "screens": [
+    {
+      "screen": "DP-001",
+      "origin": 73,
+      "story": "DEV-001",
+      "requirement": "DP-RQ-01",
+      "epic": "EP-01",
+      "group": "01 Start and navigate"
+    },
+    {
+      "screen": "DP-002",
+      "origin": 77,
+      "story": "DEV-002",
+      "requirement": "DP-RQ-01",
+      "epic": "EP-01",
+      "group": "01 Start and navigate"
+    },
+    {
+      "screen": "DP-003",
+      "origin": 1,
+      "story": "DEV-003",
+      "requirement": "DP-RQ-01",
+      "epic": "EP-01",
+      "group": "01 Start and navigate"
+    },
+    {
+      "screen": "DP-004",
+      "origin": 2,
+      "story": "DEV-004",
+      "requirement": "DP-RQ-01",
+      "epic": "EP-01",
+      "group": "01 Start and navigate"
+    },
+    {
+      "screen": "DP-005",
+      "origin": 3,
+      "story": "DEV-005",
+      "requirement": "DP-RQ-01",
+      "epic": "EP-01",
+      "group": "01 Start and navigate"
+    },
+    {
+      "screen": "DP-006",
+      "origin": 78,
+      "story": "DEV-006",
+      "requirement": "DP-RQ-01",
+      "epic": "EP-01",
+      "group": "01 Start and navigate"
+    },
+    {
+      "screen": "DP-007",
+      "origin": 17,
+      "story": "DEV-007",
+      "requirement": "DP-RQ-01",
+      "epic": "EP-01",
+      "group": "01 Start and navigate"
+    },
+    {
+      "screen": "DP-008",
+      "origin": 18,
+      "story": "DEV-008",
+      "requirement": "DP-RQ-01",
+      "epic": "EP-01",
+      "group": "01 Start and navigate"
+    },
+    {
+      "screen": "DP-009",
+      "origin": 19,
+      "story": "DEV-009",
+      "requirement": "DP-RQ-01",
+      "epic": "EP-01",
+      "group": "01 Start and navigate"
+    },
+    {
+      "screen": "DP-010",
+      "origin": 20,
+      "story": "DEV-010",
+      "requirement": "DP-RQ-01",
+      "epic": "EP-01",
+      "group": "01 Start and navigate"
+    },
+    {
+      "screen": "DP-011",
+      "origin": 6,
+      "story": "DEV-011",
+      "requirement": "DP-RQ-01",
+      "epic": "EP-01",
+      "group": "01 Start and navigate"
+    },
+    {
+      "screen": "DP-012",
+      "origin": 7,
+      "story": "DEV-012",
+      "requirement": "DP-RQ-01",
+      "epic": "EP-01",
+      "group": "01 Start and navigate"
+    },
+    {
+      "screen": "DP-013",
+      "origin": 21,
+      "story": "DEV-013",
+      "requirement": "DP-RQ-02",
+      "epic": "EP-02",
+      "group": "02 Compose and reuse"
+    },
+    {
+      "screen": "DP-014",
+      "origin": 22,
+      "story": "DEV-014",
+      "requirement": "DP-RQ-02",
+      "epic": "EP-02",
+      "group": "02 Compose and reuse"
+    },
+    {
+      "screen": "DP-015",
+      "origin": 9,
+      "story": "DEV-015",
+      "requirement": "DP-RQ-02",
+      "epic": "EP-02",
+      "group": "02 Compose and reuse"
+    },
+    {
+      "screen": "DP-016",
+      "origin": 72,
+      "story": "DEV-016",
+      "requirement": "DP-RQ-02",
+      "epic": "EP-02",
+      "group": "02 Compose and reuse"
+    },
+    {
+      "screen": "DP-017",
+      "origin": 93,
+      "story": "DEV-017",
+      "requirement": "DP-RQ-02",
+      "epic": "EP-02",
+      "group": "02 Compose and reuse"
+    },
+    {
+      "screen": "DP-018",
+      "origin": 94,
+      "story": "DEV-018",
+      "requirement": "DP-RQ-02",
+      "epic": "EP-02",
+      "group": "02 Compose and reuse"
+    },
+    {
+      "screen": "DP-019",
+      "origin": 104,
+      "story": "DEV-019",
+      "requirement": "DP-RQ-02",
+      "epic": "EP-02",
+      "group": "02 Compose and reuse"
+    },
+    {
+      "screen": "DP-020",
+      "origin": 8,
+      "story": "DEV-020",
+      "requirement": "DP-RQ-02",
+      "epic": "EP-02",
+      "group": "02 Compose and reuse"
+    },
+    {
+      "screen": "DP-021",
+      "origin": 56,
+      "story": "DEV-021",
+      "requirement": "DP-RQ-02",
+      "epic": "EP-02",
+      "group": "02 Compose and reuse"
+    },
+    {
+      "screen": "DP-022",
+      "origin": 75,
+      "story": "DEV-022",
+      "requirement": "DP-RQ-02",
+      "epic": "EP-02",
+      "group": "02 Compose and reuse"
+    },
+    {
+      "screen": "DP-023",
+      "origin": 14,
+      "story": "DEV-023",
+      "requirement": "DP-RQ-02",
+      "epic": "EP-02",
+      "group": "02 Compose and reuse"
+    },
+    {
+      "screen": "DP-024",
+      "origin": 76,
+      "story": "DEV-024",
+      "requirement": "DP-RQ-02",
+      "epic": "EP-02",
+      "group": "02 Compose and reuse"
+    },
+    {
+      "screen": "DP-025",
+      "origin": 16,
+      "story": "DEV-025",
+      "requirement": "DP-RQ-02",
+      "epic": "EP-02",
+      "group": "02 Compose and reuse"
+    },
+    {
+      "screen": "DP-026",
+      "origin": 74,
+      "story": "DEV-026",
+      "requirement": "DP-RQ-02",
+      "epic": "EP-02",
+      "group": "02 Compose and reuse"
+    },
+    {
+      "screen": "DP-027",
+      "origin": 23,
+      "story": "DEV-027",
+      "requirement": "DP-RQ-03",
+      "epic": "EP-03",
+      "group": "03 Build websites"
+    },
+    {
+      "screen": "DP-028",
+      "origin": 4,
+      "story": "DEV-028",
+      "requirement": "DP-RQ-03",
+      "epic": "EP-03",
+      "group": "03 Build websites"
+    },
+    {
+      "screen": "DP-029",
+      "origin": 24,
+      "story": "DEV-029",
+      "requirement": "DP-RQ-03",
+      "epic": "EP-03",
+      "group": "03 Build websites"
+    },
+    {
+      "screen": "DP-030",
+      "origin": 25,
+      "story": "DEV-030",
+      "requirement": "DP-RQ-03",
+      "epic": "EP-03",
+      "group": "03 Build websites"
+    },
+    {
+      "screen": "DP-031",
+      "origin": 26,
+      "story": "DEV-031",
+      "requirement": "DP-RQ-03",
+      "epic": "EP-03",
+      "group": "03 Build websites"
+    },
+    {
+      "screen": "DP-032",
+      "origin": 27,
+      "story": "DEV-032",
+      "requirement": "DP-RQ-03",
+      "epic": "EP-03",
+      "group": "03 Build websites"
+    },
+    {
+      "screen": "DP-033",
+      "origin": 28,
+      "story": "DEV-033",
+      "requirement": "DP-RQ-03",
+      "epic": "EP-03",
+      "group": "03 Build websites"
+    },
+    {
+      "screen": "DP-034",
+      "origin": 29,
+      "story": "DEV-034",
+      "requirement": "DP-RQ-03",
+      "epic": "EP-03",
+      "group": "03 Build websites"
+    },
+    {
+      "screen": "DP-035",
+      "origin": 30,
+      "story": "DEV-035",
+      "requirement": "DP-RQ-03",
+      "epic": "EP-03",
+      "group": "03 Build websites"
+    },
+    {
+      "screen": "DP-036",
+      "origin": 95,
+      "story": "DEV-036",
+      "requirement": "DP-RQ-03",
+      "epic": "EP-03",
+      "group": "03 Build websites"
+    },
+    {
+      "screen": "DP-037",
+      "origin": 96,
+      "story": "DEV-037",
+      "requirement": "DP-RQ-03",
+      "epic": "EP-03",
+      "group": "03 Build websites"
+    },
+    {
+      "screen": "DP-038",
+      "origin": 31,
+      "story": "DEV-038",
+      "requirement": "DP-RQ-03",
+      "epic": "EP-03",
+      "group": "03 Build websites"
+    },
+    {
+      "screen": "DP-039",
+      "origin": 32,
+      "story": "DEV-039",
+      "requirement": "DP-RQ-03",
+      "epic": "EP-03",
+      "group": "03 Build websites"
+    },
+    {
+      "screen": "DP-040",
+      "origin": 33,
+      "story": "DEV-040",
+      "requirement": "DP-RQ-03",
+      "epic": "EP-03",
+      "group": "03 Build websites"
+    },
+    {
+      "screen": "DP-041",
+      "origin": 34,
+      "story": "DEV-041",
+      "requirement": "DP-RQ-03",
+      "epic": "EP-03",
+      "group": "03 Build websites"
+    },
+    {
+      "screen": "DP-042",
+      "origin": 35,
+      "story": "DEV-042",
+      "requirement": "DP-RQ-03",
+      "epic": "EP-03",
+      "group": "03 Build websites"
+    },
+    {
+      "screen": "DP-043",
+      "origin": 5,
+      "story": "DEV-043",
+      "requirement": "DP-RQ-04",
+      "epic": "EP-04",
+      "group": "04 Build applications"
+    },
+    {
+      "screen": "DP-044",
+      "origin": 36,
+      "story": "DEV-044",
+      "requirement": "DP-RQ-04",
+      "epic": "EP-04",
+      "group": "04 Build applications"
+    },
+    {
+      "screen": "DP-045",
+      "origin": 37,
+      "story": "DEV-045",
+      "requirement": "DP-RQ-04",
+      "epic": "EP-04",
+      "group": "04 Build applications"
+    },
+    {
+      "screen": "DP-046",
+      "origin": 38,
+      "story": "DEV-046",
+      "requirement": "DP-RQ-04",
+      "epic": "EP-04",
+      "group": "04 Build applications"
+    },
+    {
+      "screen": "DP-047",
+      "origin": 40,
+      "story": "DEV-047",
+      "requirement": "DP-RQ-04",
+      "epic": "EP-04",
+      "group": "04 Build applications"
+    },
+    {
+      "screen": "DP-048",
+      "origin": 41,
+      "story": "DEV-048",
+      "requirement": "DP-RQ-04",
+      "epic": "EP-04",
+      "group": "04 Build applications"
+    },
+    {
+      "screen": "DP-049",
+      "origin": 42,
+      "story": "DEV-049",
+      "requirement": "DP-RQ-04",
+      "epic": "EP-04",
+      "group": "04 Build applications"
+    },
+    {
+      "screen": "DP-050",
+      "origin": 43,
+      "story": "DEV-050",
+      "requirement": "DP-RQ-04",
+      "epic": "EP-04",
+      "group": "04 Build applications"
+    },
+    {
+      "screen": "DP-051",
+      "origin": 45,
+      "story": "DEV-051",
+      "requirement": "DP-RQ-04",
+      "epic": "EP-04",
+      "group": "04 Build applications"
+    },
+    {
+      "screen": "DP-052",
+      "origin": 44,
+      "story": "DEV-052",
+      "requirement": "DP-RQ-04",
+      "epic": "EP-04",
+      "group": "04 Build applications"
+    },
+    {
+      "screen": "DP-053",
+      "origin": 39,
+      "story": "DEV-053",
+      "requirement": "DP-RQ-04",
+      "epic": "EP-04",
+      "group": "04 Build applications"
+    },
+    {
+      "screen": "DP-054",
+      "origin": 11,
+      "story": "DEV-054",
+      "requirement": "DP-RQ-04",
+      "epic": "EP-04",
+      "group": "04 Build applications"
+    },
+    {
+      "screen": "DP-055",
+      "origin": 47,
+      "story": "DEV-055",
+      "requirement": "DP-RQ-04",
+      "epic": "EP-04",
+      "group": "04 Build applications"
+    },
+    {
+      "screen": "DP-056",
+      "origin": 48,
+      "story": "DEV-056",
+      "requirement": "DP-RQ-04",
+      "epic": "EP-04",
+      "group": "04 Build applications"
+    },
+    {
+      "screen": "DP-057",
+      "origin": 49,
+      "story": "DEV-057",
+      "requirement": "DP-RQ-04",
+      "epic": "EP-04",
+      "group": "04 Build applications"
+    },
+    {
+      "screen": "DP-058",
+      "origin": 105,
+      "story": "DEV-058",
+      "requirement": "DP-RQ-04",
+      "epic": "EP-04",
+      "group": "04 Build applications"
+    },
+    {
+      "screen": "DP-059",
+      "origin": 106,
+      "story": "DEV-059",
+      "requirement": "DP-RQ-04",
+      "epic": "EP-04",
+      "group": "04 Build applications"
+    },
+    {
+      "screen": "DP-060",
+      "origin": 107,
+      "story": "DEV-060",
+      "requirement": "DP-RQ-04",
+      "epic": "EP-04",
+      "group": "04 Build applications"
+    },
+    {
+      "screen": "DP-061",
+      "origin": 10,
+      "story": "DEV-061",
+      "requirement": "DP-RQ-05",
+      "epic": "EP-05",
+      "group": "05 Integrate and extend"
+    },
+    {
+      "screen": "DP-062",
+      "origin": 57,
+      "story": "DEV-062",
+      "requirement": "DP-RQ-05",
+      "epic": "EP-05",
+      "group": "05 Integrate and extend"
+    },
+    {
+      "screen": "DP-063",
+      "origin": 59,
+      "story": "DEV-063",
+      "requirement": "DP-RQ-05",
+      "epic": "EP-05",
+      "group": "05 Integrate and extend"
+    },
+    {
+      "screen": "DP-064",
+      "origin": 60,
+      "story": "DEV-064",
+      "requirement": "DP-RQ-05",
+      "epic": "EP-05",
+      "group": "05 Integrate and extend"
+    },
+    {
+      "screen": "DP-065",
+      "origin": 61,
+      "story": "DEV-065",
+      "requirement": "DP-RQ-05",
+      "epic": "EP-05",
+      "group": "05 Integrate and extend"
+    },
+    {
+      "screen": "DP-066",
+      "origin": 46,
+      "story": "DEV-066",
+      "requirement": "DP-RQ-05",
+      "epic": "EP-05",
+      "group": "05 Integrate and extend"
+    },
+    {
+      "screen": "DP-067",
+      "origin": 15,
+      "story": "DEV-067",
+      "requirement": "DP-RQ-05",
+      "epic": "EP-05",
+      "group": "05 Integrate and extend"
+    },
+    {
+      "screen": "DP-068",
+      "origin": 65,
+      "story": "DEV-068",
+      "requirement": "DP-RQ-05",
+      "epic": "EP-05",
+      "group": "05 Integrate and extend"
+    },
+    {
+      "screen": "DP-069",
+      "origin": 108,
+      "story": "DEV-069",
+      "requirement": "DP-RQ-05",
+      "epic": "EP-05",
+      "group": "05 Integrate and extend"
+    },
+    {
+      "screen": "DP-070",
+      "origin": 68,
+      "story": "DEV-070",
+      "requirement": "DP-RQ-05",
+      "epic": "EP-05",
+      "group": "05 Integrate and extend"
+    },
+    {
+      "screen": "DP-071",
+      "origin": 69,
+      "story": "DEV-071",
+      "requirement": "DP-RQ-05",
+      "epic": "EP-05",
+      "group": "05 Integrate and extend"
+    },
+    {
+      "screen": "DP-072",
+      "origin": 70,
+      "story": "DEV-072",
+      "requirement": "DP-RQ-05",
+      "epic": "EP-05",
+      "group": "05 Integrate and extend"
+    },
+    {
+      "screen": "DP-073",
+      "origin": 71,
+      "story": "DEV-073",
+      "requirement": "DP-RQ-05",
+      "epic": "EP-05",
+      "group": "05 Integrate and extend"
+    },
+    {
+      "screen": "DP-074",
+      "origin": 85,
+      "story": "DEV-074",
+      "requirement": "DP-RQ-05",
+      "epic": "EP-05",
+      "group": "05 Integrate and extend"
+    },
+    {
+      "screen": "DP-075",
+      "origin": 86,
+      "story": "DEV-075",
+      "requirement": "DP-RQ-05",
+      "epic": "EP-05",
+      "group": "05 Integrate and extend"
+    },
+    {
+      "screen": "DP-076",
+      "origin": 12,
+      "story": "DEV-076",
+      "requirement": "DP-RQ-06",
+      "epic": "EP-06",
+      "group": "06 Validate and deliver"
+    },
+    {
+      "screen": "DP-077",
+      "origin": 81,
+      "story": "DEV-077",
+      "requirement": "DP-RQ-06",
+      "epic": "EP-06",
+      "group": "06 Validate and deliver"
+    },
+    {
+      "screen": "DP-078",
+      "origin": 82,
+      "story": "DEV-078",
+      "requirement": "DP-RQ-06",
+      "epic": "EP-06",
+      "group": "06 Validate and deliver"
+    },
+    {
+      "screen": "DP-079",
+      "origin": 79,
+      "story": "DEV-079",
+      "requirement": "DP-RQ-06",
+      "epic": "EP-06",
+      "group": "06 Validate and deliver"
+    },
+    {
+      "screen": "DP-080",
+      "origin": 80,
+      "story": "DEV-080",
+      "requirement": "DP-RQ-06",
+      "epic": "EP-06",
+      "group": "06 Validate and deliver"
+    },
+    {
+      "screen": "DP-081",
+      "origin": 63,
+      "story": "DEV-081",
+      "requirement": "DP-RQ-06",
+      "epic": "EP-06",
+      "group": "06 Validate and deliver"
+    },
+    {
+      "screen": "DP-082",
+      "origin": 99,
+      "story": "DEV-082",
+      "requirement": "DP-RQ-06",
+      "epic": "EP-06",
+      "group": "06 Validate and deliver"
+    },
+    {
+      "screen": "DP-083",
+      "origin": 62,
+      "story": "DEV-083",
+      "requirement": "DP-RQ-06",
+      "epic": "EP-06",
+      "group": "06 Validate and deliver"
+    },
+    {
+      "screen": "DP-084",
+      "origin": 100,
+      "story": "DEV-084",
+      "requirement": "DP-RQ-06",
+      "epic": "EP-06",
+      "group": "06 Validate and deliver"
+    },
+    {
+      "screen": "DP-085",
+      "origin": 13,
+      "story": "DEV-085",
+      "requirement": "DP-RQ-06",
+      "epic": "EP-06",
+      "group": "06 Validate and deliver"
+    },
+    {
+      "screen": "DP-086",
+      "origin": 52,
+      "story": "DEV-086",
+      "requirement": "DP-RQ-06",
+      "epic": "EP-06",
+      "group": "06 Validate and deliver"
+    },
+    {
+      "screen": "DP-087",
+      "origin": 53,
+      "story": "DEV-087",
+      "requirement": "DP-RQ-06",
+      "epic": "EP-06",
+      "group": "06 Validate and deliver"
+    },
+    {
+      "screen": "DP-088",
+      "origin": 103,
+      "story": "DEV-088",
+      "requirement": "DP-RQ-06",
+      "epic": "EP-06",
+      "group": "06 Validate and deliver"
+    },
+    {
+      "screen": "DP-089",
+      "origin": 83,
+      "story": "DEV-089",
+      "requirement": "DP-RQ-06",
+      "epic": "EP-06",
+      "group": "06 Validate and deliver"
+    },
+    {
+      "screen": "DP-090",
+      "origin": 84,
+      "story": "DEV-090",
+      "requirement": "DP-RQ-06",
+      "epic": "EP-06",
+      "group": "06 Validate and deliver"
+    },
+    {
+      "screen": "DP-091",
+      "origin": 64,
+      "story": "DEV-091",
+      "requirement": "DP-RQ-06",
+      "epic": "EP-06",
+      "group": "06 Validate and deliver"
+    },
+    {
+      "screen": "DP-092",
+      "origin": 50,
+      "story": "DEV-092",
+      "requirement": "DP-RQ-07",
+      "epic": "EP-07",
+      "group": "07 Secure and operate"
+    },
+    {
+      "screen": "DP-093",
+      "origin": 51,
+      "story": "DEV-093",
+      "requirement": "DP-RQ-07",
+      "epic": "EP-07",
+      "group": "07 Secure and operate"
+    },
+    {
+      "screen": "DP-094",
+      "origin": 55,
+      "story": "DEV-094",
+      "requirement": "DP-RQ-07",
+      "epic": "EP-07",
+      "group": "07 Secure and operate"
+    },
+    {
+      "screen": "DP-095",
+      "origin": 66,
+      "story": "DEV-095",
+      "requirement": "DP-RQ-07",
+      "epic": "EP-07",
+      "group": "07 Secure and operate"
+    },
+    {
+      "screen": "DP-096",
+      "origin": 67,
+      "story": "DEV-096",
+      "requirement": "DP-RQ-07",
+      "epic": "EP-07",
+      "group": "07 Secure and operate"
+    },
+    {
+      "screen": "DP-097",
+      "origin": 87,
+      "story": "DEV-097",
+      "requirement": "DP-RQ-07",
+      "epic": "EP-07",
+      "group": "07 Secure and operate"
+    },
+    {
+      "screen": "DP-098",
+      "origin": 88,
+      "story": "DEV-098",
+      "requirement": "DP-RQ-07",
+      "epic": "EP-07",
+      "group": "07 Secure and operate"
+    },
+    {
+      "screen": "DP-099",
+      "origin": 89,
+      "story": "DEV-099",
+      "requirement": "DP-RQ-07",
+      "epic": "EP-07",
+      "group": "07 Secure and operate"
+    },
+    {
+      "screen": "DP-100",
+      "origin": 90,
+      "story": "DEV-100",
+      "requirement": "DP-RQ-07",
+      "epic": "EP-07",
+      "group": "07 Secure and operate"
+    },
+    {
+      "screen": "DP-101",
+      "origin": 91,
+      "story": "DEV-101",
+      "requirement": "DP-RQ-07",
+      "epic": "EP-07",
+      "group": "07 Secure and operate"
+    },
+    {
+      "screen": "DP-102",
+      "origin": 92,
+      "story": "DEV-102",
+      "requirement": "DP-RQ-07",
+      "epic": "EP-07",
+      "group": "07 Secure and operate"
+    },
+    {
+      "screen": "DP-103",
+      "origin": 97,
+      "story": "DEV-103",
+      "requirement": "DP-RQ-07",
+      "epic": "EP-07",
+      "group": "07 Secure and operate"
+    },
+    {
+      "screen": "DP-104",
+      "origin": 98,
+      "story": "DEV-104",
+      "requirement": "DP-RQ-07",
+      "epic": "EP-07",
+      "group": "07 Secure and operate"
+    },
+    {
+      "screen": "DP-105",
+      "origin": 102,
+      "story": "DEV-105",
+      "requirement": "DP-RQ-07",
+      "epic": "EP-07",
+      "group": "07 Secure and operate"
+    },
+    {
+      "screen": "DP-106",
+      "origin": 101,
+      "story": "DEV-106",
+      "requirement": "DP-RQ-07",
+      "epic": "EP-07",
+      "group": "07 Secure and operate"
+    },
+    {
+      "screen": "DP-107",
+      "origin": 54,
+      "story": "DEV-107",
+      "requirement": "DP-RQ-07",
+      "epic": "EP-07",
+      "group": "07 Secure and operate"
+    },
+    {
+      "screen": "DP-108",
+      "origin": 58,
+      "story": "DEV-108",
+      "requirement": "DP-RQ-07",
+      "epic": "EP-07",
+      "group": "07 Secure and operate"
+    }
+  ]
+}

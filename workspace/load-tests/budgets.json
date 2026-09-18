@@ -1,0 +1,13 @@
+{
+  "_comment": "J13/G-17: performance budgets declared as data, not measured ad hoc. Each k6 scenario in load-tests/scenarios/ imports the relevant entry below and turns it into a real k6 `thresholds` block - the mechanism k6 itself uses to fail a run's exit code when a budget is exceeded. A regression beyond budget fails the run (and, once load-test.yml is triggered on a real deployment, the build).",
+  "api": {
+    "health": { "p95Ms": 200, "errorRateMax": 0.01 },
+    "auth_login": { "p95Ms": 800, "errorRateMax": 0.01 },
+    "list_paginated": { "p95Ms": 500, "errorRateMax": 0.01 },
+    "document_post": { "p95Ms": 1000, "errorRateMax": 0.02 }
+  },
+  "page": {
+    "dashboard_home": { "p95Ms": 2500 },
+    "marketing_home": { "p95Ms": 2000 }
+  }
+}

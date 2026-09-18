@@ -1,0 +1,22 @@
+name: CD (disabled pending release-safety foundation)
+
+# FND-P0-007: this repository does not contain the applications, deployment
+# scripts or environment topology assumed by the former CD workflow. Leaving a
+# workflow that could deploy from those stale paths is more dangerous than no
+# CD: a green-looking workflow would be operationally meaningless and manual
+# inputs could target real environments. This workflow has no automatic trigger
+# and contains no credential, migration, registry, rollout or release action.
+on:
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  blocked:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Refuse deployment until the release train is implemented
+        run: |
+          echo "::error::FND-P0-007 blocks deployment from unierp-workspace."
+          echo "Implement and approve a current polyrepo release manifest, immutable artifact provenance, staging topology, migration rehearsal, health/SLO gates and rollback evidence before enabling CD."
+          exit 1

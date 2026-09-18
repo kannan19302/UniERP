@@ -1,0 +1,100 @@
+name: AI agent protocol
+
+on:
+  pull_request:
+    paths:
+      - "governance/**"
+      - "scripts/check-ai-agent-protocol.mjs"
+      - "scripts/test-ai-agent-protocol.mjs"
+      - "scripts/classify-ai-change.mjs"
+      - "scripts/test-ai-change-classifier.mjs"
+      - ".github/workflows/ai-agent-protocol.yml"
+      - "package.json"
+  push:
+    branches: [main]
+    paths:
+      - "governance/**"
+      - "scripts/check-ai-agent-protocol.mjs"
+      - "scripts/test-ai-agent-protocol.mjs"
+      - "scripts/classify-ai-change.mjs"
+      - "scripts/test-ai-change-classifier.mjs"
+      - ".github/workflows/ai-agent-protocol.yml"
+      - "package.json"
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ai-agent-protocol-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out governance repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          path: workspace/unierp-workspace
+
+      - name: Assemble the UniERP polyrepo
+        working-directory: workspace
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --depth 1 https://github.com/kannan19302/unierp-contracts.git unierp-contracts
+          git clone --depth 1 https://github.com/kannan19302/unierp-auth.git auth
+          git clone --depth 1 https://github.com/kannan19302/unierp-config.git config
+          git clone --depth 1 https://github.com/kannan19302/unierp-design-system.git design-system
+          git clone --depth 1 https://github.com/kannan19302/unierp-kernel.git kernel
+          git clone --depth 1 https://github.com/kannan19302/unierp-sdk.git sdk
+          git clone --depth 1 https://github.com/kannan19302/unierp-service-kit.git service-kit
+          git clone --depth 1 https://github.com/kannan19302/unierp-shared.git shared
+          git clone --depth 1 https://github.com/kannan19302/unierp-storybook.git storybook
+          git clone --depth 1 https://github.com/kannan19302/unierp-blockchain.git blockchain
+          git clone --depth 1 https://github.com/kannan19302/unierp-data.git data
+          git clone --depth 1 https://github.com/kannan19302/unierp-extension-api.git extension-api
+          git clone --depth 1 https://github.com/kannan19302/unierp-framework.git framework
+          git clone --depth 1 https://github.com/kannan19302/unierp-sandbox.git sandbox
+          git clone --depth 1 https://github.com/kannan19302/unierp-api.git api
+          git clone --depth 1 https://github.com/kannan19302/unierp-idp.git idp
+          git clone --depth 1 https://github.com/kannan19302/unierp-developer.git developer-platform
+          git clone --depth 1 https://github.com/kannan19302/unierp-corporate-website.git marketing-site
+          git clone --depth 1 https://github.com/kannan19302/unierp-marketplace.git marketplace
+          git clone --depth 1 https://github.com/kannan19302/unierp-console.git provider-admin-os
+          git clone --depth 1 https://github.com/kannan19302/unierp-tenant-admin.git tenant-admin
+          git clone --depth 1 https://github.com/kannan19302/unierp-web.git tenant-apps
+          git clone --depth 1 https://github.com/kannan19302/unierp-corporate-site-template.git tenant-site-template
+          git clone --depth 1 https://github.com/kannan19302/unierp-tenant-sites.git tenant-sites
+          git clone --depth 1 https://github.com/kannan19302/unierp-web-studio.git web-studio
+          git clone --depth 1 https://github.com/kannan19302/unierp-desktop.git desktop-app
+          git clone --depth 1 https://github.com/kannan19302/unierp-mobile.git unierp-mobile
+          git clone --depth 1 https://github.com/kannan19302/unierp-extensions.git extensions
+          git clone --depth 1 https://github.com/kannan19302/unierp-infra.git infra
+          git clone --depth 1 https://github.com/kannan19302/UniERP.git unierp-platform
+          cp unierp-workspace/governance/AGENTS.md AGENTS.md
+          cp unierp-workspace/governance/UniERP.code-workspace UniERP.code-workspace
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 22
+
+      - name: Validate protocol and workspace distribution
+        working-directory: workspace/unierp-workspace
+        run: npm run check:ai-agent-protocol
+
+      - name: Run protocol adversarial tests
+        working-directory: workspace/unierp-workspace
+        run: npm run test:ai-agent-protocol
+
+      - name: Test change classification
+        working-directory: workspace/unierp-workspace
+        run: npm run test:ai-change-classifier
+
+      - name: Verify version-controlled root sources
+        working-directory: workspace/unierp-workspace
+        run: npm run check:ai-agent-governance

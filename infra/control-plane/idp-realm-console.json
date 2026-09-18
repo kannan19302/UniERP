@@ -1,0 +1,23 @@
+{
+  "_comment": "Control-plane IdP realm — PLATFORM_ARCHITECTURE.md § 5.2. Separate realm, not a separate role: no customer identity can obtain a control-plane token because the realm is different, rather than because a claim is checked.",
+  "realm": "unierp-control-plane",
+  "enabled": true,
+  "sslRequired": "all",
+  "registrationAllowed": false,
+  "resetPasswordAllowed": false,
+  "rememberMe": false,
+  "bruteForceProtected": true,
+  "otpPolicyType": "totp",
+  "otpPolicyAlgorithm": "HmacSHA256",
+  "webAuthnPolicyRpEntityName": "UniERP Control Plane",
+  "webAuthnPolicyUserVerificationRequirement": "required",
+  "ssoSessionIdleTimeout": 1800,
+  "ssoSessionMaxLifespan": 28800,
+  "accessTokenLifespan": 300,
+  "browserFlow": "browser-mfa-required",
+  "_requirements": [
+    "mandatory hardware or TOTP MFA — no password-only path exists",
+    "short-lived session: 30 min idle, 8 h absolute",
+    "step-up re-auth for destructive operations (tenant deletion, plan override, impersonation)"
+  ]
+}

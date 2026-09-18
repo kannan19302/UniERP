@@ -1,0 +1,199 @@
+{
+  "generatedAt": "2026-08-14T01:33:18.644Z",
+  "repos": {
+    "unierp-api": {
+      "testFiles": 493,
+      "coverage": {
+        "allTrue": true,
+        "lines": 80,
+        "functions": 80,
+        "branches": 80,
+        "statements": 80
+      }
+    },
+    "unierp-auth": {
+      "testFiles": 1,
+      "coverage": {
+        "allTrue": true,
+        "lines": 50,
+        "functions": 50,
+        "branches": 80,
+        "statements": 50
+      }
+    },
+    "unierp-blockchain": {
+      "testFiles": 1,
+      "coverage": {
+        "allTrue": true,
+        "lines": 0,
+        "functions": 0,
+        "branches": 0,
+        "statements": 0
+      }
+    },
+    "unierp-config": {
+      "testFiles": 0,
+      "coverage": {}
+    },
+    "unierp-console": {
+      "testFiles": 4,
+      "coverage": {
+        "allTrue": true,
+        "lines": 55,
+        "functions": 55,
+        "branches": 30,
+        "statements": 55
+      }
+    },
+    "unierp-contracts": {
+      "testFiles": 5,
+      "coverage": {}
+    },
+    "unierp-corporate-site-template": {
+      "testFiles": 0,
+      "coverage": {}
+    },
+    "unierp-corporate-website": {
+      "testFiles": 1,
+      "coverage": {}
+    },
+    "unierp-data": {
+      "testFiles": 7,
+      "coverage": {
+        "allTrue": true,
+        "lines": 85,
+        "functions": 75,
+        "branches": 70,
+        "statements": 85
+      }
+    },
+    "unierp-design-system": {
+      "testFiles": 10,
+      "coverage": {
+        "allTrue": true,
+        "lines": 30,
+        "functions": 30,
+        "branches": 20,
+        "statements": 30
+      }
+    },
+    "unierp-developer": {
+      "testFiles": 0,
+      "coverage": {}
+    },
+    "unierp-extension-api": {
+      "testFiles": 0,
+      "coverage": {}
+    },
+    "unierp-extensions": {
+      "testFiles": 4,
+      "coverage": {}
+    },
+    "unierp-framework": {
+      "testFiles": 2,
+      "coverage": {
+        "allTrue": true,
+        "lines": 10,
+        "functions": 40,
+        "branches": 60,
+        "statements": 10
+      }
+    },
+    "unierp-idp": {
+      "testFiles": 11,
+      "coverage": {
+        "allTrue": true,
+        "lines": 15,
+        "functions": 32,
+        "branches": 60,
+        "statements": 15
+      }
+    },
+    "unierp-infra": {
+      "testFiles": 0,
+      "coverage": {}
+    },
+    "unierp-kernel": {
+      "testFiles": 1,
+      "coverage": {
+        "allTrue": true,
+        "lines": 95,
+        "functions": 95,
+        "branches": 85,
+        "statements": 95
+      }
+    },
+    "unierp-loop-a": {
+      "testFiles": 0,
+      "coverage": {}
+    },
+    "unierp-loop-b": {
+      "testFiles": 0,
+      "coverage": {}
+    },
+    "unierp-loop-c": {
+      "testFiles": 0,
+      "coverage": {}
+    },
+    "unierp-mobile": {
+      "testFiles": 24,
+      "coverage": {}
+    },
+    "unierp-platform": {
+      "testFiles": 0,
+      "coverage": {}
+    },
+    "unierp-sandbox": {
+      "testFiles": 4,
+      "coverage": {
+        "allTrue": true,
+        "lines": 35,
+        "functions": 40,
+        "branches": 35,
+        "statements": 35
+      }
+    },
+    "unierp-sdk": {
+      "testFiles": 0,
+      "coverage": {}
+    },
+    "unierp-service-kit": {
+      "testFiles": 1,
+      "coverage": {
+        "allTrue": true,
+        "lines": 0,
+        "functions": 0,
+        "branches": 0,
+        "statements": 0
+      }
+    },
+    "unierp-shared": {
+      "testFiles": 6,
+      "coverage": {
+        "allTrue": true,
+        "lines": 35,
+        "functions": 40,
+        "branches": 35,
+        "statements": 35
+      }
+    },
+    "unierp-storybook": {
+      "testFiles": 0,
+      "coverage": {}
+    },
+    "unierp-web": {
+      "testFiles": 17,
+      "coverage": {
+        "allTrue": true,
+        "lines": 3,
+        "functions": 0,
+        "branches": 2,
+        "statements": 3
+      }
+    },
+    "unierp-workspace": {
+      "testFiles": 0,
+      "coverage": {}
+    }
+  }
+}

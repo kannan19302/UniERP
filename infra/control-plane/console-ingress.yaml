@@ -1,0 +1,24 @@
+# The console's own origin — separate DNS, separate TLS certificate, separate
+# cookie scope (§ 3.1). A customer's browser never receives control-plane
+# JavaScript and never holds a control-plane cookie.
+#
+# `admin.unierp.internal` is deliberately not a public DNS name: § 3 requires
+# "no public DNS" for this plane. It resolves only on the operations network.
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: unierp-console
+  namespace: unierp
+spec:
+  entryPoints: [websecure]
+  routes:
+    - match: Host(`admin.unierp.internal`)
+      kind: Rule
+      middlewares:
+        - name: control-plane-allowlist
+        - name: security-headers
+      services:
+        - name: unierp-console
+          port: 3000
+  tls:
+    secretName: console-internal-tls

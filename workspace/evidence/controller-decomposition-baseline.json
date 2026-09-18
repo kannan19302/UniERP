@@ -1,0 +1,2408 @@
+{
+  "controllerCount": 600,
+  "overLimitCount": 88,
+  "withIfCount": 37,
+  "perFile": {
+    "src/common/controllers/bulk-operations.controller.ts": {
+      "lineCount": 100,
+      "ifCount": 0
+    },
+    "src/common/controllers/change-history.controller.ts": {
+      "lineCount": 44,
+      "ifCount": 0
+    },
+    "src/common/controllers/data-quality.controller.ts": {
+      "lineCount": 87,
+      "ifCount": 0
+    },
+    "src/common/controllers/enterprise-audit.controller.ts": {
+      "lineCount": 138,
+      "ifCount": 0
+    },
+    "src/common/controllers/export-v2.controller.ts": {
+      "lineCount": 106,
+      "ifCount": 0
+    },
+    "src/common/controllers/import.controller.ts": {
+      "lineCount": 148,
+      "ifCount": 2
+    },
+    "src/common/platform-credentials/platform-credentials.controller.ts": {
+      "lineCount": 39,
+      "ifCount": 0
+    },
+    "src/health.controller.ts": {
+      "lineCount": 94,
+      "ifCount": 1
+    },
+    "src/metrics.controller.ts": {
+      "lineCount": 17,
+      "ifCount": 0
+    },
+    "src/modules/admin/controllers/activity-feed.controller.ts": {
+      "lineCount": 52,
+      "ifCount": 0
+    },
+    "src/modules/admin/controllers/admin.controller.ts": {
+      "lineCount": 497,
+      "ifCount": 0
+    },
+    "src/modules/admin/controllers/alerts.controller.ts": {
+      "lineCount": 114,
+      "ifCount": 0
+    },
+    "src/modules/admin/controllers/announcements.controller.ts": {
+      "lineCount": 102,
+      "ifCount": 0
+    },
+    "src/modules/admin/controllers/automation-rules.controller.ts": {
+      "lineCount": 140,
+      "ifCount": 0
+    },
+    "src/modules/admin/controllers/bulk-operations.controller.ts": {
+      "lineCount": 89,
+      "ifCount": 0
+    },
+    "src/modules/admin/controllers/custom-fields.controller.ts": {
+      "lineCount": 158,
+      "ifCount": 0
+    },
+    "src/modules/admin/controllers/data-quality.controller.ts": {
+      "lineCount": 93,
+      "ifCount": 0
+    },
+    "src/modules/admin/controllers/error-reports.controller.ts": {
+      "lineCount": 23,
+      "ifCount": 0
+    },
+    "src/modules/admin/controllers/import-export.controller.ts": {
+      "lineCount": 122,
+      "ifCount": 2
+    },
+    "src/modules/admin/controllers/platform.controller.ts": {
+      "lineCount": 254,
+      "ifCount": 0
+    },
+    "src/modules/admin/controllers/recycle-bin.controller.ts": {
+      "lineCount": 96,
+      "ifCount": 0
+    },
+    "src/modules/admin/controllers/subscription.controller.ts": {
+      "lineCount": 88,
+      "ifCount": 0
+    },
+    "src/modules/admin/controllers/support-impersonation.controller.ts": {
+      "lineCount": 59,
+      "ifCount": 0
+    },
+    "src/modules/ai/controllers/ai-admin.controller.ts": {
+      "lineCount": 109,
+      "ifCount": 0
+    },
+    "src/modules/ai/controllers/ai-deep.controller.ts": {
+      "lineCount": 241,
+      "ifCount": 0
+    },
+    "src/modules/ai/controllers/ai-enterprise.controller.ts": {
+      "lineCount": 59,
+      "ifCount": 0
+    },
+    "src/modules/ai/controllers/ai-expansion.controller.ts": {
+      "lineCount": 316,
+      "ifCount": 0
+    },
+    "src/modules/ai/controllers/ai.controller.ts": {
+      "lineCount": 172,
+      "ifCount": 1
+    },
+    "src/modules/ai/controllers/tenant-ai-governance.controller.ts": {
+      "lineCount": 145,
+      "ifCount": 0
+    },
+    "src/modules/analytics/controllers/analytics-anomaly-detection-deep.controller.ts": {
+      "lineCount": 24,
+      "ifCount": 0
+    },
+    "src/modules/analytics/controllers/analytics-cohort-retention-deep.controller.ts": {
+      "lineCount": 59,
+      "ifCount": 0
+    },
+    "src/modules/analytics/controllers/analytics-custom-dashboards-deep.controller.ts": {
+      "lineCount": 62,
+      "ifCount": 0
+    },
+    "src/modules/analytics/controllers/analytics-data-pipelines-deep.controller.ts": {
+      "lineCount": 55,
+      "ifCount": 0
+    },
+    "src/modules/analytics/controllers/analytics-deep.controller.ts": {
+      "lineCount": 345,
+      "ifCount": 0
+    },
+    "src/modules/analytics/controllers/analytics-enterprise.controller.ts": {
+      "lineCount": 176,
+      "ifCount": 0
+    },
+    "src/modules/analytics/controllers/analytics-expansion.controller.ts": {
+      "lineCount": 183,
+      "ifCount": 0
+    },
+    "src/modules/analytics/controllers/analytics-funnel-conversion-deep.controller.ts": {
+      "lineCount": 44,
+      "ifCount": 0
+    },
+    "src/modules/analytics/controllers/analytics-predictive-engine-deep.controller.ts": {
+      "lineCount": 53,
+      "ifCount": 0
+    },
+    "src/modules/analytics/controllers/analytics-realtime-stream-deep.controller.ts": {
+      "lineCount": 24,
+      "ifCount": 0
+    },
+    "src/modules/analytics/controllers/analytics.controller.ts": {
+      "lineCount": 152,
+      "ifCount": 0
+    },
+    "src/modules/analytics/controllers/reporting-admin-deep.controller.ts": {
+      "lineCount": 485,
+      "ifCount": 0
+    },
+    "src/modules/analytics/controllers/reporting-bulk.controller.ts": {
+      "lineCount": 201,
+      "ifCount": 0
+    },
+    "src/modules/analytics/controllers/reporting-compliance-signoff-deep.controller.ts": {
+      "lineCount": 53,
+      "ifCount": 0
+    },
+    "src/modules/analytics/controllers/reporting-data-drilldown-deep.controller.ts": {
+      "lineCount": 40,
+      "ifCount": 0
+    },
+    "src/modules/analytics/controllers/reporting-distribution-lists-deep.controller.ts": {
+      "lineCount": 52,
+      "ifCount": 0
+    },
+    "src/modules/analytics/controllers/reporting-engine.controller.ts": {
+      "lineCount": 110,
+      "ifCount": 2
+    },
+    "src/modules/analytics/controllers/reporting-exports-deep.controller.ts": {
+      "lineCount": 37,
+      "ifCount": 0
+    },
+    "src/modules/analytics/controllers/reporting-generated.controller.ts": {
+      "lineCount": 1998,
+      "ifCount": 0
+    },
+    "src/modules/analytics/controllers/reporting-interactive-viewer-deep.controller.ts": {
+      "lineCount": 39,
+      "ifCount": 0
+    },
+    "src/modules/analytics/controllers/reporting-scheduled-jobs-deep.controller.ts": {
+      "lineCount": 54,
+      "ifCount": 0
+    },
+    "src/modules/analytics/controllers/reporting-templates-deep.controller.ts": {
+      "lineCount": 64,
+      "ifCount": 0
+    },
+    "src/modules/analytics/controllers/reporting.controller.ts": {
+      "lineCount": 76,
+      "ifCount": 0
+    },
+    "src/modules/analytics/controllers/saved-views-generated.controller.ts": {
+      "lineCount": 1998,
+      "ifCount": 0
+    },
+    "src/modules/analytics/controllers/saved-views.controller.ts": {
+      "lineCount": 302,
+      "ifCount": 0
+    },
+    "src/modules/analytics/controllers/scheduled-reports.controller.ts": {
+      "lineCount": 120,
+      "ifCount": 0
+    },
+    "src/modules/analytics/controllers/settings.controller.ts": {
+      "lineCount": 96,
+      "ifCount": 0
+    },
+    "src/modules/api-platform/controllers/api-platform-deep-v2.controller.ts": {
+      "lineCount": 474,
+      "ifCount": 0
+    },
+    "src/modules/api-platform/controllers/api-platform-deep-v3.controller.ts": {
+      "lineCount": 255,
+      "ifCount": 0
+    },
+    "src/modules/api-platform/controllers/api-platform-deep.controller.ts": {
+      "lineCount": 507,
+      "ifCount": 0
+    },
+    "src/modules/api-platform/controllers/api-platform-generated.controller.ts": {
+      "lineCount": 724,
+      "ifCount": 0
+    },
+    "src/modules/api-platform/controllers/api-platform.controller.ts": {
+      "lineCount": 228,
+      "ifCount": 0
+    },
+    "src/modules/blockchain/controllers/blockchain-deep.controller.ts": {
+      "lineCount": 230,
+      "ifCount": 0
+    },
+    "src/modules/blockchain/controllers/blockchain-generated.controller.ts": {
+      "lineCount": 1998,
+      "ifCount": 0
+    },
+    "src/modules/blockchain/controllers/blockchain.controller.ts": {
+      "lineCount": 288,
+      "ifCount": 2
+    },
+    "src/modules/communication/controllers/comm-deep-expansion.controller.ts": {
+      "lineCount": 190,
+      "ifCount": 0
+    },
+    "src/modules/communication/controllers/communication-enterprise.controller.ts": {
+      "lineCount": 145,
+      "ifCount": 0
+    },
+    "src/modules/communication/controllers/communication-expansion.controller.ts": {
+      "lineCount": 278,
+      "ifCount": 0
+    },
+    "src/modules/communication/controllers/communication.controller.ts": {
+      "lineCount": 1594,
+      "ifCount": 0
+    },
+    "src/modules/communication/controllers/helpdesk.controller.ts": {
+      "lineCount": 157,
+      "ifCount": 0
+    },
+    "src/modules/communication/controllers/knowledge-base.controller.ts": {
+      "lineCount": 162,
+      "ifCount": 0
+    },
+    "src/modules/communication/controllers/omnichannel.controller.ts": {
+      "lineCount": 152,
+      "ifCount": 0
+    },
+    "src/modules/communication/controllers/real-time-collab.controller.ts": {
+      "lineCount": 178,
+      "ifCount": 0
+    },
+    "src/modules/communication/controllers/search.controller.ts": {
+      "lineCount": 110,
+      "ifCount": 0
+    },
+    "src/modules/communication/controllers/settings.controller.ts": {
+      "lineCount": 160,
+      "ifCount": 0
+    },
+    "src/modules/communication/controllers/survey.controller.ts": {
+      "lineCount": 162,
+      "ifCount": 0
+    },
+    "src/modules/communication/controllers/video-deep.controller.ts": {
+      "lineCount": 119,
+      "ifCount": 0
+    },
+    "src/modules/communication/controllers/voip.controller.ts": {
+      "lineCount": 122,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-abm-orchestration.controller.ts": {
+      "lineCount": 151,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-account-hierarchies-deep.controller.ts": {
+      "lineCount": 103,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-account-intelligence-deep.controller.ts": {
+      "lineCount": 248,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-activity-capture.controller.ts": {
+      "lineCount": 241,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-ai-drafting.controller.ts": {
+      "lineCount": 215,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-ai-intelligence.controller.ts": {
+      "lineCount": 34,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-cadences.controller.ts": {
+      "lineCount": 166,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-coaching-deep.controller.ts": {
+      "lineCount": 34,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-coaching.controller.ts": {
+      "lineCount": 204,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-commission-automation.controller.ts": {
+      "lineCount": 221,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-communication-deep.controller.ts": {
+      "lineCount": 39,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-communication.controller.ts": {
+      "lineCount": 199,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-competitor-intelligence.controller.ts": {
+      "lineCount": 34,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-content-management.controller.ts": {
+      "lineCount": 39,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-contract-deep.controller.ts": {
+      "lineCount": 39,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-contract-lifecycle.controller.ts": {
+      "lineCount": 492,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-contracts.controller.ts": {
+      "lineCount": 310,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-conversation-intelligence.controller.ts": {
+      "lineCount": 113,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-conversion-analytics.controller.ts": {
+      "lineCount": 114,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-cpq.controller.ts": {
+      "lineCount": 39,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-customer-experience-deep.controller.ts": {
+      "lineCount": 166,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-customer-journey.controller.ts": {
+      "lineCount": 34,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-customer-lifecycle-deep.controller.ts": {
+      "lineCount": 208,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-customer-success-deep.controller.ts": {
+      "lineCount": 219,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-data-management.controller.ts": {
+      "lineCount": 34,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-deal-analytics-deep.controller.ts": {
+      "lineCount": 295,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-deal-desk.controller.ts": {
+      "lineCount": 49,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-deal-room.controller.ts": {
+      "lineCount": 226,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-deep-expansion-v2.controller.ts": {
+      "lineCount": 519,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-duplicates.controller.ts": {
+      "lineCount": 160,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-enterprise.controller.ts": {
+      "lineCount": 119,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-expansion-deep.controller.ts": {
+      "lineCount": 763,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-expansion-v1.controller.ts": {
+      "lineCount": 281,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-expansion.controller.ts": {
+      "lineCount": 534,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-forecast-governance.controller.ts": {
+      "lineCount": 34,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-gamification-deep.controller.ts": {
+      "lineCount": 49,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-gamification.controller.ts": {
+      "lineCount": 170,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-guided-selling.controller.ts": {
+      "lineCount": 312,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-integration-deep.controller.ts": {
+      "lineCount": 119,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-intelligence.controller.ts": {
+      "lineCount": 341,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-knowledge-base.controller.ts": {
+      "lineCount": 224,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-lead-enrichment.controller.ts": {
+      "lineCount": 381,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-lead-scoring.controller.ts": {
+      "lineCount": 98,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-mailbox.controller.ts": {
+      "lineCount": 89,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-marketing-deep.controller.ts": {
+      "lineCount": 84,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-marketing-roi-deep.controller.ts": {
+      "lineCount": 214,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-partner-deep-two.controller.ts": {
+      "lineCount": 119,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-partner-deep.controller.ts": {
+      "lineCount": 193,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-pipeline-deep.controller.ts": {
+      "lineCount": 94,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-pipeline-risk.controller.ts": {
+      "lineCount": 110,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-pipeline-stages.controller.ts": {
+      "lineCount": 110,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-portal-deep.controller.ts": {
+      "lineCount": 89,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-quote-signature.controller.ts": {
+      "lineCount": 123,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-reporting-deep.controller.ts": {
+      "lineCount": 323,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-revenue-intelligence.controller.ts": {
+      "lineCount": 73,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-revenue-optimization-deep.controller.ts": {
+      "lineCount": 142,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-sales-operations-deep.controller.ts": {
+      "lineCount": 158,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-segments.controller.ts": {
+      "lineCount": 98,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-sla.controller.ts": {
+      "lineCount": 98,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-support-deep.controller.ts": {
+      "lineCount": 139,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-territory-deep.controller.ts": {
+      "lineCount": 256,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-territory-rules.controller.ts": {
+      "lineCount": 131,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm-win-loss.controller.ts": {
+      "lineCount": 163,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/crm.controller.ts": {
+      "lineCount": 2980,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/customer-portal-admin.controller.ts": {
+      "lineCount": 95,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/customer-portal.controller.ts": {
+      "lineCount": 294,
+      "ifCount": 0
+    },
+    "src/modules/crm/controllers/settings.controller.ts": {
+      "lineCount": 85,
+      "ifCount": 0
+    },
+    "src/modules/developer/controllers/ab-testing.controller.ts": {
+      "lineCount": 173,
+      "ifCount": 0
+    },
+    "src/modules/developer/controllers/advanced-forms.controller.ts": {
+      "lineCount": 134,
+      "ifCount": 0
+    },
+    "src/modules/developer/controllers/api-builder.controller.ts": {
+      "lineCount": 121,
+      "ifCount": 0
+    },
+    "src/modules/developer/controllers/artifact-revisions.controller.ts": {
+      "lineCount": 129,
+      "ifCount": 1
+    },
+    "src/modules/developer/controllers/bpmn.controller.ts": {
+      "lineCount": 174,
+      "ifCount": 0
+    },
+    "src/modules/developer/controllers/builder-deep-expansion.controller.ts": {
+      "lineCount": 146,
+      "ifCount": 0
+    },
+    "src/modules/developer/controllers/builder-enterprise.controller.ts": {
+      "lineCount": 53,
+      "ifCount": 0
+    },
+    "src/modules/developer/controllers/builder-expansion.controller.ts": {
+      "lineCount": 294,
+      "ifCount": 0
+    },
+    "src/modules/developer/controllers/builder-manifests.controller.ts": {
+      "lineCount": 32,
+      "ifCount": 1
+    },
+    "src/modules/developer/controllers/builder.controller.ts": {
+      "lineCount": 1908,
+      "ifCount": 2
+    },
+    "src/modules/developer/controllers/data-objects.controller.ts": {
+      "lineCount": 85,
+      "ifCount": 0
+    },
+    "src/modules/developer/controllers/dev-home.controller.ts": {
+      "lineCount": 91,
+      "ifCount": 0
+    },
+    "src/modules/developer/controllers/developer-audit.controller.ts": {
+      "lineCount": 12,
+      "ifCount": 0
+    },
+    "src/modules/developer/controllers/developer-builds.controller.ts": {
+      "lineCount": 36,
+      "ifCount": 0
+    },
+    "src/modules/developer/controllers/developer-entitlements.controller.ts": {
+      "lineCount": 22,
+      "ifCount": 0
+    },
+    "src/modules/developer/controllers/developer-packages.controller.ts": {
+      "lineCount": 216,
+      "ifCount": 0
+    },
+    "src/modules/developer/controllers/environment-bindings.controller.ts": {
+      "lineCount": 37,
+      "ifCount": 0
+    },
+    "src/modules/developer/controllers/etl.controller.ts": {
+      "lineCount": 143,
+      "ifCount": 0
+    },
+    "src/modules/developer/controllers/governance.controller.ts": {
+      "lineCount": 308,
+      "ifCount": 1
+    },
+    "src/modules/developer/controllers/library.controller.ts": {
+      "lineCount": 100,
+      "ifCount": 0
+    },
+    "src/modules/developer/controllers/mobile-builder.controller.ts": {
+      "lineCount": 158,
+      "ifCount": 0
+    },
+    "src/modules/developer/controllers/project-artifacts.controller.ts": {
+      "lineCount": 77,
+      "ifCount": 0
+    },
+    "src/modules/developer/controllers/project-change-sets.controller.ts": {
+      "lineCount": 26,
+      "ifCount": 0
+    },
+    "src/modules/developer/controllers/project-preview-resolve.controller.ts": {
+      "lineCount": 19,
+      "ifCount": 0
+    },
+    "src/modules/developer/controllers/project-preview.controller.ts": {
+      "lineCount": 21,
+      "ifCount": 0
+    },
+    "src/modules/developer/controllers/project-releases.controller.ts": {
+      "lineCount": 175,
+      "ifCount": 0
+    },
+    "src/modules/developer/controllers/project-source-export.controller.ts": {
+      "lineCount": 19,
+      "ifCount": 0
+    },
+    "src/modules/developer/controllers/project-source-import.controller.ts": {
+      "lineCount": 21,
+      "ifCount": 0
+    },
+    "src/modules/developer/controllers/project-test-runs.controller.ts": {
+      "lineCount": 19,
+      "ifCount": 0
+    },
+    "src/modules/developer/controllers/rules-engine.controller.ts": {
+      "lineCount": 133,
+      "ifCount": 0
+    },
+    "src/modules/developer/controllers/runtime-cell-assignment.controller.ts": {
+      "lineCount": 34,
+      "ifCount": 0
+    },
+    "src/modules/developer/controllers/runtime-manifest.controller.ts": {
+      "lineCount": 37,
+      "ifCount": 0
+    },
+    "src/modules/developer/controllers/theme-manager.controller.ts": {
+      "lineCount": 128,
+      "ifCount": 0
+    },
+    "src/modules/developer/controllers/web-public.controller.ts": {
+      "lineCount": 146,
+      "ifCount": 0
+    },
+    "src/modules/developer/controllers/web-studio.controller.ts": {
+      "lineCount": 186,
+      "ifCount": 0
+    },
+    "src/modules/devops/controllers/devops-deep-v2.controller.ts": {
+      "lineCount": 260,
+      "ifCount": 0
+    },
+    "src/modules/devops/controllers/devops-deep-v3.controller.ts": {
+      "lineCount": 279,
+      "ifCount": 0
+    },
+    "src/modules/devops/controllers/devops-deep.controller.ts": {
+      "lineCount": 756,
+      "ifCount": 0
+    },
+    "src/modules/devops/controllers/devops-generated.controller.ts": {
+      "lineCount": 626,
+      "ifCount": 0
+    },
+    "src/modules/devops/controllers/devops.controller.ts": {
+      "lineCount": 369,
+      "ifCount": 0
+    },
+    "src/modules/documents/controllers/documents-advanced.controller.ts": {
+      "lineCount": 483,
+      "ifCount": 0
+    },
+    "src/modules/documents/controllers/documents-deep.controller.ts": {
+      "lineCount": 275,
+      "ifCount": 0
+    },
+    "src/modules/documents/controllers/documents-expansion.controller.ts": {
+      "lineCount": 627,
+      "ifCount": 0
+    },
+    "src/modules/documents/controllers/documents-ext.controller.ts": {
+      "lineCount": 472,
+      "ifCount": 0
+    },
+    "src/modules/documents/controllers/drive-deep.controller.ts": {
+      "lineCount": 240,
+      "ifCount": 0
+    },
+    "src/modules/documents/controllers/drive-drive.controller.ts": {
+      "lineCount": 354,
+      "ifCount": 1
+    },
+    "src/modules/documents/controllers/drive-generated.controller.ts": {
+      "lineCount": 1998,
+      "ifCount": 0
+    },
+    "src/modules/documents/controllers/drive-settings.controller.ts": {
+      "lineCount": 128,
+      "ifCount": 0
+    },
+    "src/modules/documents/controllers/drive.controller.ts": {
+      "lineCount": 307,
+      "ifCount": 0
+    },
+    "src/modules/documents/controllers/settings.controller.ts": {
+      "lineCount": 98,
+      "ifCount": 0
+    },
+    "src/modules/documents/controllers/storage-advanced.controller.ts": {
+      "lineCount": 406,
+      "ifCount": 0
+    },
+    "src/modules/documents/controllers/storage-expansion.controller.ts": {
+      "lineCount": 558,
+      "ifCount": 0
+    },
+    "src/modules/documents/controllers/storage-ext.controller.ts": {
+      "lineCount": 780,
+      "ifCount": 0
+    },
+    "src/modules/documents/controllers/storage.controller.ts": {
+      "lineCount": 267,
+      "ifCount": 0
+    },
+    "src/modules/ecommerce/controllers/ecommerce-admin.controller.ts": {
+      "lineCount": 201,
+      "ifCount": 0
+    },
+    "src/modules/ecommerce/controllers/ecommerce-enterprise.controller.ts": {
+      "lineCount": 111,
+      "ifCount": 0
+    },
+    "src/modules/ecommerce/controllers/ecommerce-expansion.controller.ts": {
+      "lineCount": 627,
+      "ifCount": 0
+    },
+    "src/modules/ecommerce/controllers/ecommerce-public.controller.ts": {
+      "lineCount": 283,
+      "ifCount": 2
+    },
+    "src/modules/education/controllers/education-academic.controller.ts": {
+      "lineCount": 64,
+      "ifCount": 0
+    },
+    "src/modules/education/controllers/education-deep.controller.ts": {
+      "lineCount": 644,
+      "ifCount": 0
+    },
+    "src/modules/education/controllers/education-enterprise.controller.ts": {
+      "lineCount": 104,
+      "ifCount": 0
+    },
+    "src/modules/education/controllers/education.controller.ts": {
+      "lineCount": 161,
+      "ifCount": 0
+    },
+    "src/modules/extensions/controllers/apps-extensions.controller.ts": {
+      "lineCount": 117,
+      "ifCount": 0
+    },
+    "src/modules/extensions/controllers/ext-callback.controller.ts": {
+      "lineCount": 135,
+      "ifCount": 4
+    },
+    "src/modules/extensions/controllers/ext-gateway-deep.controller.ts": {
+      "lineCount": 348,
+      "ifCount": 0
+    },
+    "src/modules/extensions/controllers/ext-gateway-generated.controller.ts": {
+      "lineCount": 1753,
+      "ifCount": 0
+    },
+    "src/modules/extensions/controllers/ext-gateway.controller.ts": {
+      "lineCount": 65,
+      "ifCount": 0
+    },
+    "src/modules/extensions/controllers/extension-registry.controller.ts": {
+      "lineCount": 128,
+      "ifCount": 5
+    },
+    "src/modules/field-service/controllers/field-service-enterprise.controller.ts": {
+      "lineCount": 105,
+      "ifCount": 0
+    },
+    "src/modules/field-service/controllers/field-service-operations.controller.ts": {
+      "lineCount": 76,
+      "ifCount": 0
+    },
+    "src/modules/field-service/controllers/field-service.controller.ts": {
+      "lineCount": 776,
+      "ifCount": 0
+    },
+    "src/modules/field-service/controllers/service-management-generated.controller.ts": {
+      "lineCount": 2122,
+      "ifCount": 0
+    },
+    "src/modules/field-service/controllers/ticket.controller.ts": {
+      "lineCount": 86,
+      "ifCount": 0
+    },
+    "src/modules/finance/controllers/advanced-finance.controller.ts": {
+      "lineCount": 8309,
+      "ifCount": 4
+    },
+    "src/modules/finance/controllers/ai-analytics.controller.ts": {
+      "lineCount": 439,
+      "ifCount": 0
+    },
+    "src/modules/finance/controllers/ap-automation.controller.ts": {
+      "lineCount": 425,
+      "ifCount": 0
+    },
+    "src/modules/finance/controllers/ap-deep.controller.ts": {
+      "lineCount": 138,
+      "ifCount": 0
+    },
+    "src/modules/finance/controllers/ar-credit-management.controller.ts": {
+      "lineCount": 179,
+      "ifCount": 0
+    },
+    "src/modules/finance/controllers/ar-deep.controller.ts": {
+      "lineCount": 168,
+      "ifCount": 0
+    },
+    "src/modules/finance/controllers/asc606-deep.controller.ts": {
+      "lineCount": 509,
+      "ifCount": 0
+    },
+    "src/modules/finance/controllers/budget-deep.controller.ts": {
+      "lineCount": 482,
+      "ifCount": 0
+    },
+    "src/modules/finance/controllers/close-management.controller.ts": {
+      "lineCount": 308,
+      "ifCount": 0
+    },
+    "src/modules/finance/controllers/close-ops.controller.ts": {
+      "lineCount": 157,
+      "ifCount": 0
+    },
+    "src/modules/finance/controllers/consolidation-v2.controller.ts": {
+      "lineCount": 343,
+      "ifCount": 0
+    },
+    "src/modules/finance/controllers/e-invoice.controller.ts": {
+      "lineCount": 603,
+      "ifCount": 0
+    },
+    "src/modules/finance/controllers/esg-accounting.controller.ts": {
+      "lineCount": 567,
+      "ifCount": 0
+    },
+    "src/modules/finance/controllers/finance-enterprise.controller.ts": {
+      "lineCount": 110,
+      "ifCount": 0
+    },
+    "src/modules/finance/controllers/finance-expansion-deep.controller.ts": {
+      "lineCount": 2730,
+      "ifCount": 0
+    },
+    "src/modules/finance/controllers/finance-expansion.controller.ts": {
+      "lineCount": 1095,
+      "ifCount": 0
+    },
+    "src/modules/finance/controllers/finance-more-deep.controller.ts": {
+      "lineCount": 1096,
+      "ifCount": 0
+    },
+    "src/modules/finance/controllers/finance-operations.controller.ts": {
+      "lineCount": 1983,
+      "ifCount": 0
+    },
+    "src/modules/finance/controllers/finance-tax-journal-deep.controller.ts": {
+      "lineCount": 270,
+      "ifCount": 0
+    },
+    "src/modules/finance/controllers/finance.controller.ts": {
+      "lineCount": 249,
+      "ifCount": 0
+    },
+    "src/modules/finance/controllers/financial-instruments.controller.ts": {
+      "lineCount": 376,
+      "ifCount": 0
+    },
+    "src/modules/finance/controllers/fixed-asset-deep.controller.ts": {
+      "lineCount": 526,
+      "ifCount": 0
+    },
+    "src/modules/finance/controllers/global-tax-deep.controller.ts": {
+      "lineCount": 469,
+      "ifCount": 0
+    },
+    "src/modules/finance/controllers/leases.controller.ts": {
+      "lineCount": 251,
+      "ifCount": 0
+    },
+    "src/modules/finance/controllers/netting-deep.controller.ts": {
+      "lineCount": 425,
+      "ifCount": 0
+    },
+    "src/modules/finance/controllers/opening-balance-migration.controller.ts": {
+      "lineCount": 47,
+      "ifCount": 0
+    },
+    "src/modules/finance/controllers/project-accounting.controller.ts": {
+      "lineCount": 111,
+      "ifCount": 0
+    },
+    "src/modules/finance/controllers/risk-management.controller.ts": {
+      "lineCount": 443,
+      "ifCount": 0
+    },
+    "src/modules/finance/controllers/settings.controller.ts": {
+      "lineCount": 107,
+      "ifCount": 0
+    },
+    "src/modules/finance/controllers/subscription-billing.controller.ts": {
+      "lineCount": 696,
+      "ifCount": 0
+    },
+    "src/modules/finance/controllers/tax-provisioning.controller.ts": {
+      "lineCount": 533,
+      "ifCount": 0
+    },
+    "src/modules/finance/controllers/treasury-deep.controller.ts": {
+      "lineCount": 553,
+      "ifCount": 0
+    },
+    "src/modules/finance/controllers/working-capital.controller.ts": {
+      "lineCount": 299,
+      "ifCount": 0
+    },
+    "src/modules/fixed-assets/controllers/asset-operations.controller.ts": {
+      "lineCount": 82,
+      "ifCount": 0
+    },
+    "src/modules/fixed-assets/controllers/fixed-assets-bulk.controller.ts": {
+      "lineCount": 342,
+      "ifCount": 0
+    },
+    "src/modules/fixed-assets/controllers/fixed-assets-deep.controller.ts": {
+      "lineCount": 695,
+      "ifCount": 1
+    },
+    "src/modules/fixed-assets/controllers/fixed-assets-generated.controller.ts": {
+      "lineCount": 1998,
+      "ifCount": 0
+    },
+    "src/modules/fixed-assets/controllers/fixed-assets.controller.ts": {
+      "lineCount": 300,
+      "ifCount": 2
+    },
+    "src/modules/healthcare/controllers/healthcare-clinical.controller.ts": {
+      "lineCount": 76,
+      "ifCount": 0
+    },
+    "src/modules/healthcare/controllers/healthcare-deep.controller.ts": {
+      "lineCount": 666,
+      "ifCount": 0
+    },
+    "src/modules/healthcare/controllers/healthcare-enterprise.controller.ts": {
+      "lineCount": 115,
+      "ifCount": 0
+    },
+    "src/modules/healthcare/controllers/healthcare.controller.ts": {
+      "lineCount": 114,
+      "ifCount": 0
+    },
+    "src/modules/hr/controllers/advanced-hr-benefits-admin-deep.controller.ts": {
+      "lineCount": 64,
+      "ifCount": 0
+    },
+    "src/modules/hr/controllers/advanced-hr-compensation-bands-deep.controller.ts": {
+      "lineCount": 43,
+      "ifCount": 0
+    },
+    "src/modules/hr/controllers/advanced-hr-exit-interview-deep.controller.ts": {
+      "lineCount": 49,
+      "ifCount": 0
+    },
+    "src/modules/hr/controllers/advanced-hr-learning-paths-deep.controller.ts": {
+      "lineCount": 57,
+      "ifCount": 0
+    },
+    "src/modules/hr/controllers/advanced-hr-org-chart-deep.controller.ts": {
+      "lineCount": 47,
+      "ifCount": 0
+    },
+    "src/modules/hr/controllers/advanced-hr-succession-planning-deep.controller.ts": {
+      "lineCount": 59,
+      "ifCount": 0
+    },
+    "src/modules/hr/controllers/advanced-hr-workforce-analytics-deep.controller.ts": {
+      "lineCount": 41,
+      "ifCount": 0
+    },
+    "src/modules/hr/controllers/advanced-hr-workforce-deep.controller.ts": {
+      "lineCount": 199,
+      "ifCount": 0
+    },
+    "src/modules/hr/controllers/advanced-hr.controller.ts": {
+      "lineCount": 1174,
+      "ifCount": 0
+    },
+    "src/modules/hr/controllers/hr-advanced.controller.ts": {
+      "lineCount": 1397,
+      "ifCount": 0
+    },
+    "src/modules/hr/controllers/hr-benefits-administration-deep.controller.ts": {
+      "lineCount": 129,
+      "ifCount": 0
+    },
+    "src/modules/hr/controllers/hr-compensation.controller.ts": {
+      "lineCount": 615,
+      "ifCount": 0
+    },
+    "src/modules/hr/controllers/hr-compliance-safety-deep.controller.ts": {
+      "lineCount": 65,
+      "ifCount": 0
+    },
+    "src/modules/hr/controllers/hr-enterprise.controller.ts": {
+      "lineCount": 99,
+      "ifCount": 0
+    },
+    "src/modules/hr/controllers/hr-experience.controller.ts": {
+      "lineCount": 704,
+      "ifCount": 0
+    },
+    "src/modules/hr/controllers/hr-global-payroll-deep.controller.ts": {
+      "lineCount": 119,
+      "ifCount": 0
+    },
+    "src/modules/hr/controllers/hr-operations.controller.ts": {
+      "lineCount": 794,
+      "ifCount": 0
+    },
+    "src/modules/hr/controllers/hr-org-chart-succession-deep.controller.ts": {
+      "lineCount": 83,
+      "ifCount": 0
+    },
+    "src/modules/hr/controllers/hr-performance-appraisals-deep.controller.ts": {
+      "lineCount": 92,
+      "ifCount": 0
+    },
+    "src/modules/hr/controllers/hr-talent-acquisition-deep.controller.ts": {
+      "lineCount": 117,
+      "ifCount": 0
+    },
+    "src/modules/hr/controllers/hr-talent.controller.ts": {
+      "lineCount": 436,
+      "ifCount": 0
+    },
+    "src/modules/hr/controllers/hr-time-attendance-deep.controller.ts": {
+      "lineCount": 96,
+      "ifCount": 0
+    },
+    "src/modules/hr/controllers/hr-workforce-analytics-deep.controller.ts": {
+      "lineCount": 101,
+      "ifCount": 0
+    },
+    "src/modules/hr/controllers/hr.controller.ts": {
+      "lineCount": 1567,
+      "ifCount": 0
+    },
+    "src/modules/hr/controllers/org-structure.controller.ts": {
+      "lineCount": 79,
+      "ifCount": 0
+    },
+    "src/modules/hr/controllers/people-generated.controller.ts": {
+      "lineCount": 1998,
+      "ifCount": 0
+    },
+    "src/modules/hr/controllers/people-operations.controller.ts": {
+      "lineCount": 82,
+      "ifCount": 0
+    },
+    "src/modules/hr/controllers/people.controller.ts": {
+      "lineCount": 189,
+      "ifCount": 0
+    },
+    "src/modules/hr/controllers/settings.controller.ts": {
+      "lineCount": 86,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/asl.controller.ts": {
+      "lineCount": 317,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/asn.controller.ts": {
+      "lineCount": 188,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/catch-weight-recall.controller.ts": {
+      "lineCount": 217,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/cold-chain-writeoff.controller.ts": {
+      "lineCount": 210,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/container-pallet.controller.ts": {
+      "lineCount": 243,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/costing-methods.controller.ts": {
+      "lineCount": 110,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/costing.controller.ts": {
+      "lineCount": 90,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/cross-dock.controller.ts": {
+      "lineCount": 179,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/customer-returns.controller.ts": {
+      "lineCount": 167,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/demand-forecasting.controller.ts": {
+      "lineCount": 298,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/freight-claims.controller.ts": {
+      "lineCount": 140,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/hazmat.controller.ts": {
+      "lineCount": 418,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/inventory-analytics.controller.ts": {
+      "lineCount": 131,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/inventory-atp-ctp.controller.ts": {
+      "lineCount": 141,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/inventory-automation.controller.ts": {
+      "lineCount": 134,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/inventory-customer-consignment.controller.ts": {
+      "lineCount": 109,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/inventory-cycle-counting-deep.controller.ts": {
+      "lineCount": 58,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/inventory-dropship.controller.ts": {
+      "lineCount": 136,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/inventory-drp.controller.ts": {
+      "lineCount": 106,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/inventory-edi-inventory.controller.ts": {
+      "lineCount": 96,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/inventory-enterprise.controller.ts": {
+      "lineCount": 107,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/inventory-labor.controller.ts": {
+      "lineCount": 167,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/inventory-logistics.controller.ts": {
+      "lineCount": 286,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/inventory-lpn-tracking-deep.controller.ts": {
+      "lineCount": 85,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/inventory-rfid.controller.ts": {
+      "lineCount": 166,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/inventory-rma.controller.ts": {
+      "lineCount": 183,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/inventory-serial-batch-genealogy-deep.controller.ts": {
+      "lineCount": 80,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/inventory-subinventory.controller.ts": {
+      "lineCount": 98,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/inventory-warehouse-slotting-deep.controller.ts": {
+      "lineCount": 83,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/inventory-wave-planning.controller.ts": {
+      "lineCount": 237,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/inventory.controller.ts": {
+      "lineCount": 2198,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/landed-cost.controller.ts": {
+      "lineCount": 219,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/lot-expiry.controller.ts": {
+      "lineCount": 128,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/lot-serial-tracking.controller.ts": {
+      "lineCount": 308,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/minmax-replen.controller.ts": {
+      "lineCount": 119,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/packaging-gs1.controller.ts": {
+      "lineCount": 200,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/pick-waves.controller.ts": {
+      "lineCount": 151,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/quality-compliance.controller.ts": {
+      "lineCount": 344,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/rtv.controller.ts": {
+      "lineCount": 245,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/settings.controller.ts": {
+      "lineCount": 83,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/shipment-tracking.controller.ts": {
+      "lineCount": 222,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/stock-take.controller.ts": {
+      "lineCount": 216,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/stock-valuation.controller.ts": {
+      "lineCount": 254,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/supplier-quality.controller.ts": {
+      "lineCount": 145,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/transfer-orders.controller.ts": {
+      "lineCount": 227,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/velocity-abc-xyz.controller.ts": {
+      "lineCount": 161,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/vmi.controller.ts": {
+      "lineCount": 119,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/warehouse-ops.controller.ts": {
+      "lineCount": 280,
+      "ifCount": 0
+    },
+    "src/modules/inventory/controllers/yard-management.controller.ts": {
+      "lineCount": 303,
+      "ifCount": 0
+    },
+    "src/modules/localization/controllers/localization-bulk.controller.ts": {
+      "lineCount": 140,
+      "ifCount": 0
+    },
+    "src/modules/localization/controllers/localization-deep.controller.ts": {
+      "lineCount": 371,
+      "ifCount": 0
+    },
+    "src/modules/localization/controllers/localization-generated.controller.ts": {
+      "lineCount": 1998,
+      "ifCount": 0
+    },
+    "src/modules/localization/controllers/localization.controller.ts": {
+      "lineCount": 234,
+      "ifCount": 0
+    },
+    "src/modules/manufacturing/controllers/manufacturing-advanced-quality.controller.ts": {
+      "lineCount": 102,
+      "ifCount": 0
+    },
+    "src/modules/manufacturing/controllers/manufacturing-aps.controller.ts": {
+      "lineCount": 64,
+      "ifCount": 0
+    },
+    "src/modules/manufacturing/controllers/manufacturing-contract-mfg.controller.ts": {
+      "lineCount": 88,
+      "ifCount": 0
+    },
+    "src/modules/manufacturing/controllers/manufacturing-ddmrp.controller.ts": {
+      "lineCount": 92,
+      "ifCount": 0
+    },
+    "src/modules/manufacturing/controllers/manufacturing-energy.controller.ts": {
+      "lineCount": 94,
+      "ifCount": 0
+    },
+    "src/modules/manufacturing/controllers/manufacturing-enterprise.controller.ts": {
+      "lineCount": 201,
+      "ifCount": 0
+    },
+    "src/modules/manufacturing/controllers/manufacturing-expansion.controller.ts": {
+      "lineCount": 219,
+      "ifCount": 0
+    },
+    "src/modules/manufacturing/controllers/manufacturing-job-cost.controller.ts": {
+      "lineCount": 138,
+      "ifCount": 0
+    },
+    "src/modules/manufacturing/controllers/manufacturing-lean.controller.ts": {
+      "lineCount": 114,
+      "ifCount": 0
+    },
+    "src/modules/manufacturing/controllers/manufacturing-mps.controller.ts": {
+      "lineCount": 116,
+      "ifCount": 0
+    },
+    "src/modules/manufacturing/controllers/manufacturing-tooling.controller.ts": {
+      "lineCount": 99,
+      "ifCount": 0
+    },
+    "src/modules/manufacturing/controllers/manufacturing-tpm.controller.ts": {
+      "lineCount": 89,
+      "ifCount": 0
+    },
+    "src/modules/manufacturing/controllers/manufacturing.controller.ts": {
+      "lineCount": 668,
+      "ifCount": 0
+    },
+    "src/modules/manufacturing/controllers/mfg-deep-expansion.controller.ts": {
+      "lineCount": 168,
+      "ifCount": 0
+    },
+    "src/modules/manufacturing/controllers/scheduling.controller.ts": {
+      "lineCount": 50,
+      "ifCount": 0
+    },
+    "src/modules/manufacturing/controllers/settings.controller.ts": {
+      "lineCount": 97,
+      "ifCount": 0
+    },
+    "src/modules/marketplace/controllers/developer.controller.ts": {
+      "lineCount": 189,
+      "ifCount": 0
+    },
+    "src/modules/marketplace/controllers/marketplace-deep.controller.ts": {
+      "lineCount": 252,
+      "ifCount": 0
+    },
+    "src/modules/marketplace/controllers/marketplace-enterprise.controller.ts": {
+      "lineCount": 64,
+      "ifCount": 0
+    },
+    "src/modules/marketplace/controllers/marketplace.controller.ts": {
+      "lineCount": 497,
+      "ifCount": 0
+    },
+    "src/modules/marketplace/controllers/storefront.controller.ts": {
+      "lineCount": 108,
+      "ifCount": 0
+    },
+    "src/modules/notifications/controllers/device-tokens.controller.ts": {
+      "lineCount": 85,
+      "ifCount": 1
+    },
+    "src/modules/notifications/controllers/notification-preferences.controller.ts": {
+      "lineCount": 58,
+      "ifCount": 0
+    },
+    "src/modules/notifications/controllers/notifications-deep.controller.ts": {
+      "lineCount": 260,
+      "ifCount": 0
+    },
+    "src/modules/notifications/controllers/notifications-generated.controller.ts": {
+      "lineCount": 1998,
+      "ifCount": 0
+    },
+    "src/modules/notifications/controllers/notifications.controller.ts": {
+      "lineCount": 69,
+      "ifCount": 0
+    },
+    "src/modules/pos/controllers/pos-enterprise.controller.ts": {
+      "lineCount": 125,
+      "ifCount": 0
+    },
+    "src/modules/pos/controllers/pos-expansion.controller.ts": {
+      "lineCount": 550,
+      "ifCount": 0
+    },
+    "src/modules/pos/controllers/pos.controller.ts": {
+      "lineCount": 986,
+      "ifCount": 0
+    },
+    "src/modules/pos/controllers/settings.controller.ts": {
+      "lineCount": 111,
+      "ifCount": 0
+    },
+    "src/modules/procurement/controllers/contracts.controller.ts": {
+      "lineCount": 57,
+      "ifCount": 0
+    },
+    "src/modules/procurement/controllers/procurement-enterprise.controller.ts": {
+      "lineCount": 217,
+      "ifCount": 0
+    },
+    "src/modules/procurement/controllers/procurement-expansion.controller.ts": {
+      "lineCount": 591,
+      "ifCount": 0
+    },
+    "src/modules/procurement/controllers/procurement-intelligence.controller.ts": {
+      "lineCount": 399,
+      "ifCount": 0
+    },
+    "src/modules/procurement/controllers/procurement-scheduling.controller.ts": {
+      "lineCount": 283,
+      "ifCount": 0
+    },
+    "src/modules/procurement/controllers/procurement-sourcing.controller.ts": {
+      "lineCount": 407,
+      "ifCount": 0
+    },
+    "src/modules/procurement/controllers/procurement-supplier-performance.controller.ts": {
+      "lineCount": 192,
+      "ifCount": 0
+    },
+    "src/modules/procurement/controllers/procurement.controller.ts": {
+      "lineCount": 467,
+      "ifCount": 0
+    },
+    "src/modules/procurement/controllers/procurement.public.controller.ts": {
+      "lineCount": 35,
+      "ifCount": 0
+    },
+    "src/modules/procurement/controllers/settings.controller.ts": {
+      "lineCount": 74,
+      "ifCount": 0
+    },
+    "src/modules/projects/controllers/advanced-evm.controller.ts": {
+      "lineCount": 136,
+      "ifCount": 0
+    },
+    "src/modules/projects/controllers/agile.controller.ts": {
+      "lineCount": 132,
+      "ifCount": 0
+    },
+    "src/modules/projects/controllers/capex.controller.ts": {
+      "lineCount": 133,
+      "ifCount": 0
+    },
+    "src/modules/projects/controllers/claims.controller.ts": {
+      "lineCount": 122,
+      "ifCount": 0
+    },
+    "src/modules/projects/controllers/collaboration.controller.ts": {
+      "lineCount": 180,
+      "ifCount": 0
+    },
+    "src/modules/projects/controllers/pmo.controller.ts": {
+      "lineCount": 88,
+      "ifCount": 0
+    },
+    "src/modules/projects/controllers/ppm-deep-expansion.controller.ts": {
+      "lineCount": 171,
+      "ifCount": 0
+    },
+    "src/modules/projects/controllers/program-management.controller.ts": {
+      "lineCount": 141,
+      "ifCount": 0
+    },
+    "src/modules/projects/controllers/project-baseline.controller.ts": {
+      "lineCount": 103,
+      "ifCount": 0
+    },
+    "src/modules/projects/controllers/projects-enterprise.controller.ts": {
+      "lineCount": 185,
+      "ifCount": 0
+    },
+    "src/modules/projects/controllers/projects-expansion.controller.ts": {
+      "lineCount": 235,
+      "ifCount": 0
+    },
+    "src/modules/projects/controllers/projects.controller.ts": {
+      "lineCount": 364,
+      "ifCount": 0
+    },
+    "src/modules/projects/controllers/resource-skills.controller.ts": {
+      "lineCount": 140,
+      "ifCount": 0
+    },
+    "src/modules/projects/controllers/risk-register.controller.ts": {
+      "lineCount": 95,
+      "ifCount": 0
+    },
+    "src/modules/projects/controllers/settings.controller.ts": {
+      "lineCount": 88,
+      "ifCount": 0
+    },
+    "src/modules/projects/controllers/timesheet-approval.controller.ts": {
+      "lineCount": 137,
+      "ifCount": 0
+    },
+    "src/modules/projects/controllers/wbs.controller.ts": {
+      "lineCount": 95,
+      "ifCount": 0
+    },
+    "src/modules/pwa/controllers/pwa-generated.controller.ts": {
+      "lineCount": 1998,
+      "ifCount": 0
+    },
+    "src/modules/pwa/controllers/pwa.controller.ts": {
+      "lineCount": 239,
+      "ifCount": 0
+    },
+    "src/modules/real-estate/controllers/real-estate-enterprise.controller.ts": {
+      "lineCount": 100,
+      "ifCount": 0
+    },
+    "src/modules/real-estate/controllers/real-estate-property.controller.ts": {
+      "lineCount": 76,
+      "ifCount": 0
+    },
+    "src/modules/real-estate/controllers/real-estate.controller.ts": {
+      "lineCount": 809,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/activity-feed.controller.ts": {
+      "lineCount": 173,
+      "ifCount": 1
+    },
+    "src/modules/saas/controllers/addon-admin.controller.ts": {
+      "lineCount": 198,
+      "ifCount": 1
+    },
+    "src/modules/saas/controllers/addons.controller.ts": {
+      "lineCount": 83,
+      "ifCount": 1
+    },
+    "src/modules/saas/controllers/analytics-ext.controller.ts": {
+      "lineCount": 322,
+      "ifCount": 4
+    },
+    "src/modules/saas/controllers/announcements.controller.ts": {
+      "lineCount": 91,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/api-keys.controller.ts": {
+      "lineCount": 117,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/audit-log.controller.ts": {
+      "lineCount": 74,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/audit-trail.controller.ts": {
+      "lineCount": 57,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/billing-admin.controller.ts": {
+      "lineCount": 234,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/billing-portal.controller.ts": {
+      "lineCount": 218,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/billing-webhook.controller.ts": {
+      "lineCount": 57,
+      "ifCount": 2
+    },
+    "src/modules/saas/controllers/billing.controller.ts": {
+      "lineCount": 86,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/branding.controller.ts": {
+      "lineCount": 119,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/compliance.controller.ts": {
+      "lineCount": 271,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/contracts.controller.ts": {
+      "lineCount": 291,
+      "ifCount": 13
+    },
+    "src/modules/saas/controllers/coupons-admin.controller.ts": {
+      "lineCount": 204,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/customer-billing.controller.ts": {
+      "lineCount": 224,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/data-export.controller.ts": {
+      "lineCount": 92,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/delegation.controller.ts": {
+      "lineCount": 111,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/domains.controller.ts": {
+      "lineCount": 95,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/feature-flags.controller.ts": {
+      "lineCount": 279,
+      "ifCount": 2
+    },
+    "src/modules/saas/controllers/gdpr-compliance.controller.ts": {
+      "lineCount": 235,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/health.controller.ts": {
+      "lineCount": 105,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/integrations-compliance.controller.ts": {
+      "lineCount": 180,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/integrations.controller.ts": {
+      "lineCount": 257,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/invoice-engine.controller.ts": {
+      "lineCount": 125,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/invoice-templates.controller.ts": {
+      "lineCount": 255,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/marketplace-lifecycle.controller.ts": {
+      "lineCount": 190,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/marketplace.controller.ts": {
+      "lineCount": 256,
+      "ifCount": 1
+    },
+    "src/modules/saas/controllers/metering-engine.controller.ts": {
+      "lineCount": 48,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/migration.controller.ts": {
+      "lineCount": 150,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/notification-prefs.controller.ts": {
+      "lineCount": 205,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/onboarding-flow.controller.ts": {
+      "lineCount": 31,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/onboarding-wizard.controller.ts": {
+      "lineCount": 131,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/onboarding.controller.ts": {
+      "lineCount": 350,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/org-hierarchy.controller.ts": {
+      "lineCount": 191,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/organization-entitlements.controller.ts": {
+      "lineCount": 100,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/payment-methods.controller.ts": {
+      "lineCount": 127,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/payments-ext.controller.ts": {
+      "lineCount": 252,
+      "ifCount": 1
+    },
+    "src/modules/saas/controllers/plan-engine.controller.ts": {
+      "lineCount": 219,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/profile.controller.ts": {
+      "lineCount": 281,
+      "ifCount": 3
+    },
+    "src/modules/saas/controllers/quota-guard.controller.ts": {
+      "lineCount": 43,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/reports.controller.ts": {
+      "lineCount": 259,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/revenue-churn-health.controller.ts": {
+      "lineCount": 135,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/saas-expansion.controller.ts": {
+      "lineCount": 729,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/saas-portal-billing-self-service.controller.ts": {
+      "lineCount": 65,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/saas-portal-billing.controller.ts": {
+      "lineCount": 419,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/saas-portal-enterprise.controller.ts": {
+      "lineCount": 69,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/saas-portal-feedback-roadmap.controller.ts": {
+      "lineCount": 53,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/saas-portal-security.controller.ts": {
+      "lineCount": 537,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/saas-portal-subscription-tier-engine.controller.ts": {
+      "lineCount": 44,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/saas-portal-support-self-service.controller.ts": {
+      "lineCount": 59,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/saas-portal-usage-metrics-portal.controller.ts": {
+      "lineCount": 32,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/saas-portal.controller.ts": {
+      "lineCount": 49,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/saas.controller.ts": {
+      "lineCount": 153,
+      "ifCount": 2
+    },
+    "src/modules/saas/controllers/security.controller.ts": {
+      "lineCount": 239,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/sso-config.controller.ts": {
+      "lineCount": 122,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/sso-saml.controller.ts": {
+      "lineCount": 43,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/subscription-lifecycle.controller.ts": {
+      "lineCount": 236,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/subscription.controller.ts": {
+      "lineCount": 248,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/subscriptions-bulk.controller.ts": {
+      "lineCount": 222,
+      "ifCount": 4
+    },
+    "src/modules/saas/controllers/subscriptions-deep.controller.ts": {
+      "lineCount": 345,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/subscriptions-generated.controller.ts": {
+      "lineCount": 1998,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/subscriptions.controller.ts": {
+      "lineCount": 217,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/support-admin.controller.ts": {
+      "lineCount": 245,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/support-tickets.controller.ts": {
+      "lineCount": 165,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/system-admin.controller.ts": {
+      "lineCount": 228,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/tenant-admin.controller.ts": {
+      "lineCount": 115,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/tenant-provisioning.controller.ts": {
+      "lineCount": 286,
+      "ifCount": 4
+    },
+    "src/modules/saas/controllers/usage-alerts.controller.ts": {
+      "lineCount": 130,
+      "ifCount": 0
+    },
+    "src/modules/saas/controllers/usage-analytics.controller.ts": {
+      "lineCount": 269,
+      "ifCount": 4
+    },
+    "src/modules/saas/controllers/webhooks.controller.ts": {
+      "lineCount": 153,
+      "ifCount": 0
+    },
+    "src/modules/sales/controllers/pricing.controller.ts": {
+      "lineCount": 65,
+      "ifCount": 0
+    },
+    "src/modules/sales/controllers/sales-advanced-enterprise-core-deep.controller.ts": {
+      "lineCount": 1358,
+      "ifCount": 0
+    },
+    "src/modules/sales/controllers/sales-advanced-pricing-deep.controller.ts": {
+      "lineCount": 41,
+      "ifCount": 0
+    },
+    "src/modules/sales/controllers/sales-advanced-pricing.controller.ts": {
+      "lineCount": 228,
+      "ifCount": 0
+    },
+    "src/modules/sales/controllers/sales-analytics.controller.ts": {
+      "lineCount": 115,
+      "ifCount": 0
+    },
+    "src/modules/sales/controllers/sales-commissions.controller.ts": {
+      "lineCount": 156,
+      "ifCount": 0
+    },
+    "src/modules/sales/controllers/sales-contracts.controller.ts": {
+      "lineCount": 167,
+      "ifCount": 0
+    },
+    "src/modules/sales/controllers/sales-cpq.controller.ts": {
+      "lineCount": 312,
+      "ifCount": 0
+    },
+    "src/modules/sales/controllers/sales-customer-success.controller.ts": {
+      "lineCount": 92,
+      "ifCount": 0
+    },
+    "src/modules/sales/controllers/sales-documents-deep.controller.ts": {
+      "lineCount": 82,
+      "ifCount": 0
+    },
+    "src/modules/sales/controllers/sales-enterprise-execution-deep.controller.ts": {
+      "lineCount": 1024,
+      "ifCount": 0
+    },
+    "src/modules/sales/controllers/sales-enterprise.controller.ts": {
+      "lineCount": 234,
+      "ifCount": 0
+    },
+    "src/modules/sales/controllers/sales-expansion.controller.ts": {
+      "lineCount": 89,
+      "ifCount": 0
+    },
+    "src/modules/sales/controllers/sales-forecasting.controller.ts": {
+      "lineCount": 76,
+      "ifCount": 0
+    },
+    "src/modules/sales/controllers/sales-gamification-deep.controller.ts": {
+      "lineCount": 74,
+      "ifCount": 0
+    },
+    "src/modules/sales/controllers/sales-global-revenue-ops-deep.controller.ts": {
+      "lineCount": 621,
+      "ifCount": 0
+    },
+    "src/modules/sales/controllers/sales-intelligence-signals.controller.ts": {
+      "lineCount": 71,
+      "ifCount": 0
+    },
+    "src/modules/sales/controllers/sales-omnichannel-deals-deep.controller.ts": {
+      "lineCount": 623,
+      "ifCount": 0
+    },
+    "src/modules/sales/controllers/sales-partners.controller.ts": {
+      "lineCount": 147,
+      "ifCount": 0
+    },
+    "src/modules/sales/controllers/sales-playbooks-deep.controller.ts": {
+      "lineCount": 76,
+      "ifCount": 0
+    },
+    "src/modules/sales/controllers/sales-promotions.controller.ts": {
+      "lineCount": 161,
+      "ifCount": 0
+    },
+    "src/modules/sales/controllers/sales-quote-cpq-master-deep.controller.ts": {
+      "lineCount": 479,
+      "ifCount": 0
+    },
+    "src/modules/sales/controllers/sales-returns-deep.controller.ts": {
+      "lineCount": 69,
+      "ifCount": 0
+    },
+    "src/modules/sales/controllers/sales-returns.controller.ts": {
+      "lineCount": 206,
+      "ifCount": 0
+    },
+    "src/modules/sales/controllers/sales-spiff.controller.ts": {
+      "lineCount": 165,
+      "ifCount": 0
+    },
+    "src/modules/sales/controllers/sales-subscription.controller.ts": {
+      "lineCount": 151,
+      "ifCount": 0
+    },
+    "src/modules/sales/controllers/sales-territory.controller.ts": {
+      "lineCount": 269,
+      "ifCount": 0
+    },
+    "src/modules/sales/controllers/sales.controller.ts": {
+      "lineCount": 342,
+      "ifCount": 0
+    },
+    "src/modules/sales/controllers/settings.controller.ts": {
+      "lineCount": 77,
+      "ifCount": 0
+    },
+    "src/modules/search/controllers/search-generated.controller.ts": {
+      "lineCount": 1998,
+      "ifCount": 0
+    },
+    "src/modules/search/controllers/search.controller.ts": {
+      "lineCount": 287,
+      "ifCount": 2
+    },
+    "src/modules/supply-chain/controllers/advanced-analytics.controller.ts": {
+      "lineCount": 122,
+      "ifCount": 0
+    },
+    "src/modules/supply-chain/controllers/analytics.controller.ts": {
+      "lineCount": 60,
+      "ifCount": 0
+    },
+    "src/modules/supply-chain/controllers/carrier-contract.controller.ts": {
+      "lineCount": 231,
+      "ifCount": 0
+    },
+    "src/modules/supply-chain/controllers/cold-chain.controller.ts": {
+      "lineCount": 374,
+      "ifCount": 0
+    },
+    "src/modules/supply-chain/controllers/container-tracking.controller.ts": {
+      "lineCount": 164,
+      "ifCount": 0
+    },
+    "src/modules/supply-chain/controllers/control-tower-advanced.controller.ts": {
+      "lineCount": 240,
+      "ifCount": 0
+    },
+    "src/modules/supply-chain/controllers/cross-dock.controller.ts": {
+      "lineCount": 127,
+      "ifCount": 0
+    },
+    "src/modules/supply-chain/controllers/customs-document.controller.ts": {
+      "lineCount": 160,
+      "ifCount": 0
+    },
+    "src/modules/supply-chain/controllers/demand-planning.controller.ts": {
+      "lineCount": 308,
+      "ifCount": 5
+    },
+    "src/modules/supply-chain/controllers/digital-twin.controller.ts": {
+      "lineCount": 184,
+      "ifCount": 0
+    },
+    "src/modules/supply-chain/controllers/fleet-management.controller.ts": {
+      "lineCount": 291,
+      "ifCount": 0
+    },
+    "src/modules/supply-chain/controllers/global-trade.controller.ts": {
+      "lineCount": 340,
+      "ifCount": 0
+    },
+    "src/modules/supply-chain/controllers/lane-rate.controller.ts": {
+      "lineCount": 144,
+      "ifCount": 0
+    },
+    "src/modules/supply-chain/controllers/logistics-execution.controller.ts": {
+      "lineCount": 309,
+      "ifCount": 0
+    },
+    "src/modules/supply-chain/controllers/meio.controller.ts": {
+      "lineCount": 147,
+      "ifCount": 0
+    },
+    "src/modules/supply-chain/controllers/route-optimization.controller.ts": {
+      "lineCount": 48,
+      "ifCount": 0
+    },
+    "src/modules/supply-chain/controllers/scm-control-tower.controller.ts": {
+      "lineCount": 55,
+      "ifCount": 0
+    },
+    "src/modules/supply-chain/controllers/scm-deep-expansion.controller.ts": {
+      "lineCount": 246,
+      "ifCount": 0
+    },
+    "src/modules/supply-chain/controllers/settings.controller.ts": {
+      "lineCount": 77,
+      "ifCount": 0
+    },
+    "src/modules/supply-chain/controllers/supplier-assessment.controller.ts": {
+      "lineCount": 133,
+      "ifCount": 0
+    },
+    "src/modules/supply-chain/controllers/supplier-certification.controller.ts": {
+      "lineCount": 151,
+      "ifCount": 0
+    },
+    "src/modules/supply-chain/controllers/supplier-contract.controller.ts": {
+      "lineCount": 175,
+      "ifCount": 0
+    },
+    "src/modules/supply-chain/controllers/supplier-performance.controller.ts": {
+      "lineCount": 136,
+      "ifCount": 0
+    },
+    "src/modules/supply-chain/controllers/supplier-portal.controller.ts": {
+      "lineCount": 190,
+      "ifCount": 0
+    },
+    "src/modules/supply-chain/controllers/supplier-quality.controller.ts": {
+      "lineCount": 139,
+      "ifCount": 0
+    },
+    "src/modules/supply-chain/controllers/supplier-risk.controller.ts": {
+      "lineCount": 264,
+      "ifCount": 0
+    },
+    "src/modules/supply-chain/controllers/supply-chain-budget.controller.ts": {
+      "lineCount": 166,
+      "ifCount": 0
+    },
+    "src/modules/supply-chain/controllers/supply-chain-enterprise.controller.ts": {
+      "lineCount": 198,
+      "ifCount": 0
+    },
+    "src/modules/supply-chain/controllers/supply-chain-expansion.controller.ts": {
+      "lineCount": 554,
+      "ifCount": 0
+    },
+    "src/modules/supply-chain/controllers/supply-chain-finance.controller.ts": {
+      "lineCount": 188,
+      "ifCount": 0
+    },
+    "src/modules/supply-chain/controllers/supply-chain.controller.ts": {
+      "lineCount": 416,
+      "ifCount": 2
+    },
+    "src/modules/supply-chain/controllers/supply-planning.controller.ts": {
+      "lineCount": 241,
+      "ifCount": 0
+    },
+    "src/modules/supply-chain/controllers/sustainability.controller.ts": {
+      "lineCount": 189,
+      "ifCount": 0
+    },
+    "src/modules/supply-chain/controllers/vendor-returns.controller.ts": {
+      "lineCount": 92,
+      "ifCount": 0
+    },
+    "src/modules/workflow/controllers/workflow-advanced.controller.ts": {
+      "lineCount": 540,
+      "ifCount": 0
+    },
+    "src/modules/workflow/controllers/workflow-engine.controller.ts": {
+      "lineCount": 76,
+      "ifCount": 0
+    },
+    "src/modules/workflow/controllers/workflow-enterprise.controller.ts": {
+      "lineCount": 65,
+      "ifCount": 0
+    },
+    "src/modules/workflow/controllers/workflow-expansion.controller.ts": {
+      "lineCount": 481,
+      "ifCount": 0
+    },
+    "src/modules/workflow/controllers/workflow-ext.controller.ts": {
+      "lineCount": 585,
+      "ifCount": 0
+    },
+    "src/modules/workflow/controllers/workflow.controller.ts": {
+      "lineCount": 345,
+      "ifCount": 0
+    },
+    "src/platform/outbox/outbox-deep.controller.ts": {
+      "lineCount": 220,
+      "ifCount": 0
+    },
+    "src/platform/outbox/outbox-generated.controller.ts": {
+      "lineCount": 1998,
+      "ifCount": 0
+    },
+    "src/platform/outbox/outbox.controller.ts": {
+      "lineCount": 56,
+      "ifCount": 2
+    },
+    "src/platform/v1/ai-governance.controller.ts": {
+      "lineCount": 217,
+      "ifCount": 0
+    },
+    "src/platform/v1/broadcast-maintenance.controller.ts": {
+      "lineCount": 54,
+      "ifCount": 0
+    },
+    "src/platform/v1/budget.controller.ts": {
+      "lineCount": 37,
+      "ifCount": 0
+    },
+    "src/platform/v1/capacity-forecast.controller.ts": {
+      "lineCount": 55,
+      "ifCount": 0
+    },
+    "src/platform/v1/certificate-lifecycle.controller.ts": {
+      "lineCount": 53,
+      "ifCount": 0
+    },
+    "src/platform/v1/cloud-accounts.controller.ts": {
+      "lineCount": 42,
+      "ifCount": 0
+    },
+    "src/platform/v1/cluster-routing.controller.ts": {
+      "lineCount": 46,
+      "ifCount": 0
+    },
+    "src/platform/v1/compliance-control.controller.ts": {
+      "lineCount": 68,
+      "ifCount": 0
+    },
+    "src/platform/v1/control-plane-approvals.controller.ts": {
+      "lineCount": 88,
+      "ifCount": 0
+    },
+    "src/platform/v1/cost-allocation.controller.ts": {
+      "lineCount": 31,
+      "ifCount": 0
+    },
+    "src/platform/v1/cost-ingestion.controller.ts": {
+      "lineCount": 35,
+      "ifCount": 0
+    },
+    "src/platform/v1/customer-import.controller.ts": {
+      "lineCount": 41,
+      "ifCount": 0
+    },
+    "src/platform/v1/desktop-operations.controller.ts": {
+      "lineCount": 102,
+      "ifCount": 0
+    },
+    "src/platform/v1/disaster-recovery.controller.ts": {
+      "lineCount": 66,
+      "ifCount": 0
+    },
+    "src/platform/v1/dunning.controller.ts": {
+      "lineCount": 44,
+      "ifCount": 0
+    },
+    "src/platform/v1/enterprise-scale.controller.ts": {
+      "lineCount": 412,
+      "ifCount": 0
+    },
+    "src/platform/v1/entitlement-quota-binding.controller.ts": {
+      "lineCount": 35,
+      "ifCount": 0
+    },
+    "src/platform/v1/estate-abac.controller.ts": {
+      "lineCount": 40,
+      "ifCount": 0
+    },
+    "src/platform/v1/estate.controller.ts": {
+      "lineCount": 106,
+      "ifCount": 0
+    },
+    "src/platform/v1/feature-flags-metering.controller.ts": {
+      "lineCount": 267,
+      "ifCount": 0
+    },
+    "src/platform/v1/finops-recommendation.controller.ts": {
+      "lineCount": 44,
+      "ifCount": 0
+    },
+    "src/platform/v1/incident.controller.ts": {
+      "lineCount": 28,
+      "ifCount": 0
+    },
+    "src/platform/v1/industry-suite-catalogue.controller.ts": {
+      "lineCount": 41,
+      "ifCount": 0
+    },
+    "src/platform/v1/infrastructure-resource.controller.ts": {
+      "lineCount": 70,
+      "ifCount": 0
+    },
+    "src/platform/v1/invoicing.controller.ts": {
+      "lineCount": 52,
+      "ifCount": 0
+    },
+    "src/platform/v1/kubernetes-fleet.controller.ts": {
+      "lineCount": 81,
+      "ifCount": 0
+    },
+    "src/platform/v1/live-tenant-upgrade.controller.ts": {
+      "lineCount": 53,
+      "ifCount": 0
+    },
+    "src/platform/v1/margin.controller.ts": {
+      "lineCount": 29,
+      "ifCount": 0
+    },
+    "src/platform/v1/marketplace/marketplace.controller.ts": {
+      "lineCount": 55,
+      "ifCount": 0
+    },
+    "src/platform/v1/metering.controller.ts": {
+      "lineCount": 90,
+      "ifCount": 0
+    },
+    "src/platform/v1/mobile-operations.controller.ts": {
+      "lineCount": 112,
+      "ifCount": 0
+    },
+    "src/platform/v1/observability-trace.controller.ts": {
+      "lineCount": 28,
+      "ifCount": 0
+    },
+    "src/platform/v1/operations.controller.ts": {
+      "lineCount": 151,
+      "ifCount": 0
+    },
+    "src/platform/v1/plans.controller.ts": {
+      "lineCount": 88,
+      "ifCount": 0
+    },
+    "src/platform/v1/privilege-elevation.controller.ts": {
+      "lineCount": 35,
+      "ifCount": 0
+    },
+    "src/platform/v1/quota-admin.controller.ts": {
+      "lineCount": 47,
+      "ifCount": 0
+    },
+    "src/platform/v1/release-control.controller.ts": {
+      "lineCount": 60,
+      "ifCount": 0
+    },
+    "src/platform/v1/reseller-channel.controller.ts": {
+      "lineCount": 59,
+      "ifCount": 0
+    },
+    "src/platform/v1/retention-schedule.controller.ts": {
+      "lineCount": 42,
+      "ifCount": 0
+    },
+    "src/platform/v1/runbook.controller.ts": {
+      "lineCount": 65,
+      "ifCount": 0
+    },
+    "src/platform/v1/security-operations.controller.ts": {
+      "lineCount": 55,
+      "ifCount": 0
+    },
+    "src/platform/v1/staff-idp.controller.ts": {
+      "lineCount": 167,
+      "ifCount": 0
+    },
+    "src/platform/v1/subscription-management.controller.ts": {
+      "lineCount": 68,
+      "ifCount": 0
+    },
+    "src/platform/v1/super-admin.controller.ts": {
+      "lineCount": 165,
+      "ifCount": 0
+    },
+    "src/platform/v1/support-workspace.controller.ts": {
+      "lineCount": 50,
+      "ifCount": 0
+    },
+    "src/platform/v1/telemetry.controller.ts": {
+      "lineCount": 49,
+      "ifCount": 0
+    },
+    "src/platform/v1/tenant-export-offboarding.controller.ts": {
+      "lineCount": 61,
+      "ifCount": 0
+    },
+    "src/platform/v1/tenant-lifecycle.controller.ts": {
+      "lineCount": 173,
+      "ifCount": 2
+    },
+    "src/platform/v1/tenant-migration.controller.ts": {
+      "lineCount": 53,
+      "ifCount": 0
+    },
+    "src/platform/v1/webhook-integration.controller.ts": {
+      "lineCount": 63,
+      "ifCount": 0
+    },
+    "src/platform/v1/white-label.controller.ts": {
+      "lineCount": 58,
+      "ifCount": 0
+    }
+  },
+  "recordedAt": "2026-09-03T12:33:03.945Z"
+}

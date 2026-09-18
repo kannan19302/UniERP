@@ -1,0 +1,80 @@
+# Release train — pins the manifest. It does NOT publish packages.
+#
+# Phase A01 rewrote this. What was here was the monorepo's changesets workflow, carried
+# over verbatim: it ran `pnpm install --frozen-lockfile`, `pnpm version-packages` and
+# `pnpm changeset tag` in a repository that has **no package.json and contains no
+# packages**. Every one of those steps would have failed on its first invocation, so the
+# workflow had never done anything — the same shape as D013, where 21 repositories
+# declared a gate whose script existed nowhere.
+#
+# It also could not have worked in principle. Changesets is monorepo tooling: it versions
+# packages that live in one tree. In a 30-repository polyrepo each library owns its own
+# version and publishes itself, which is what
+# `.github/workflows/publish-library.yml` (reusable) now does, called from each of the 13
+# publishable library repositories.
+#
+# What THIS repository owns is the release train: a deploy is a manifest, a rollback is
+# the previous manifest. So this workflow validates the manifest rather than versioning
+# code.
+name: Release train
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "docs/platform-manifest.json"
+      - ".github/workflows/release.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-manifest:
+    name: Validate the pinned release train
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 22
+
+      # Every component version the manifest pins must actually exist on the registry.
+      # A manifest that pins a version nobody can install is a rollback target that
+      # cannot be rolled back to — which defeats the one invariant this repo owns.
+      - name: Every pinned version must be installable
+        run: |
+          set -euo pipefail
+          MISSING=0
+          node -e '
+            const m = require("./docs/platform-manifest.json");
+            const out = [];
+            const walk = (obj, prefix = "") => {
+              for (const [k, v] of Object.entries(obj)) {
+                if (typeof v === "string") out.push([prefix + k, v]);
+                else if (v && typeof v === "object") walk(v, prefix + k + "/");
+              }
+            };
+            walk(m.components);
+            console.log(out.map(([k, v]) => k + " " + v).join("\n"));
+          ' > /tmp/pinned.txt
+          echo "Train: $(node -p 'require("./docs/platform-manifest.json").train')"
+          while read -r component version; do
+            case "$component" in
+              api|web|console|developer|idp) echo "  skip     $component@$version (deployable, not published)"; continue;;
+            esac
+            pkg="@kannan19302/${component}"
+            [ "$component" = "database" ] && pkg="@kannan19302/database"
+            if npm view "$pkg@$version" version >/dev/null 2>&1; then
+              echo "  ok       $pkg@$version"
+            else
+              echo "  MISSING  $pkg@$version"
+              MISSING=$((MISSING+1))
+            fi
+          done < /tmp/pinned.txt
+          if [ "$MISSING" -gt 0 ]; then
+            echo "::error::$MISSING pinned component(s) are not on the registry."
+            echo "A manifest is a rollback target. One that pins an uninstallable version"
+            echo "is not a rollback target."
+            exit 1
+          fi

@@ -1,0 +1,170 @@
+{
+    "folders": [
+        {
+            "name": "L0 · contracts",
+            "path": "unierp-contracts"
+        },
+        {
+            "name": "L1 · auth",
+            "path": "auth"
+        },
+        {
+            "name": "L1 · config",
+            "path": "config"
+        },
+        {
+            "name": "L1 · design-system",
+            "path": "design-system"
+        },
+        {
+            "name": "L1 · kernel",
+            "path": "kernel"
+        },
+        {
+            "name": "L1 · sdk",
+            "path": "sdk"
+        },
+        {
+            "name": "L1 · service-kit",
+            "path": "service-kit"
+        },
+        {
+            "name": "L1 · shared",
+            "path": "shared"
+        },
+        {
+            "name": "L1 · storybook",
+            "path": "storybook"
+        },
+        {
+            "name": "L2 · blockchain",
+            "path": "blockchain"
+        },
+        {
+            "name": "L2 · data",
+            "path": "data"
+        },
+        {
+            "name": "L2 · extension-api",
+            "path": "extension-api"
+        },
+        {
+            "name": "L2 · framework",
+            "path": "framework"
+        },
+        {
+            "name": "L2 · sandbox",
+            "path": "sandbox"
+        },
+        {
+            "name": "L3 · api",
+            "path": "api"
+        },
+        {
+            "name": "L3 · idp",
+            "path": "idp"
+        },
+        {
+            "name": "L4 · developer-platform",
+            "path": "developer-platform"
+        },
+        {
+            "name": "L4 · marketing-site",
+            "path": "marketing-site"
+        },
+        {
+            "name": "L4 · marketplace",
+            "path": "marketplace"
+        },
+        {
+            "name": "L4 · provider-admin-os",
+            "path": "provider-admin-os"
+        },
+        {
+            "name": "L4 · tenant-admin",
+            "path": "tenant-admin"
+        },
+        {
+            "name": "L4 · tenant-apps",
+            "path": "tenant-apps"
+        },
+        {
+            "name": "L4 · tenant-site-template",
+            "path": "tenant-site-template"
+        },
+        {
+            "name": "L4 · tenant-sites",
+            "path": "tenant-sites"
+        },
+        {
+            "name": "L4 · web-studio",
+            "path": "web-studio"
+        },
+        {
+            "name": "L5 · desktop-app",
+            "path": "desktop-app"
+        },
+        {
+            "name": "L5 · mobile",
+            "path": "unierp-mobile"
+        },
+        {
+            "name": "L6 · extensions",
+            "path": "extensions"
+        },
+        {
+            "name": "L7 · infra",
+            "path": "infra"
+        },
+        {
+            "name": "L7 · workspace",
+            "path": "unierp-workspace"
+        },
+        {
+            "name": "— · platform",
+            "path": "unierp-platform"
+        }
+    ],
+    "settings": {
+        "chat.useAgentsMdFile": true,
+        "chat.includeReferencedInstructions": true,
+        "git.autoRepositoryDetection": "all",
+        "git.repositoryScanMaxDepth": 3,
+        "git.scanRepositories": [
+            "api",
+            "auth",
+            "blockchain",
+            "config",
+            "unierp-contracts",
+            "data",
+            "design-system",
+            "desktop-app",
+            "developer-platform",
+            "extension-api",
+            "extensions",
+            "framework",
+            "idp",
+            "infra",
+            "kernel",
+            "marketing-site",
+            "marketplace",
+            "unierp-mobile",
+            "provider-admin-os",
+            "sandbox",
+            "sdk",
+            "service-kit",
+            "shared",
+            "storybook",
+            "tenant-admin",
+            "tenant-apps",
+            "tenant-sites",
+            "tenant-site-template",
+            "unierp-platform",
+            "web-studio",
+            "unierp-workspace"
+        ],
+        "git.ignoredRepositories": []
+    }
+}
+
+

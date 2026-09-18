@@ -1,0 +1,11 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  ci:
+    uses: kannan19302/unierp-workspace/.github/workflows/reusable-ci.yml@0cc3003b3968c28d220f7ad4521bf0b0923093df

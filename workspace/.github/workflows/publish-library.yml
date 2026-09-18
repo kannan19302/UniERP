@@ -1,0 +1,142 @@
+# Reusable: publish one @kannan19302/* library to the public npm registry.
+#
+# Phase A01. Called by each of the 13 publishable library repositories; the gate lives
+# here once and a repository declares only that it applies. That is the invariant this
+# repository's README claims to own — "every gate lives here as a reusable workflow, a
+# repository declares WHICH gates apply, never HOW a gate works" — and D019 found it was
+# true of nothing: `grep -l workflow_call */.github/workflows/*.yml` returned zero, and
+# all 30 CI files were independent hand copies. This is the first workflow in the family
+# that is actually shared. Phase A29 does the rest.
+#
+# Called like this, from a library repo:
+#
+#   jobs:
+#     publish:
+#       uses: kannan19302/unierp-workspace/.github/workflows/publish-library.yml@0bb9682d45d50e23e6de344d71f10ec1a909bf04
+#       permissions:
+#         contents: read
+#         id-token: write        # required — OIDC cannot be delegated implicitly
+#
+# WHY THE PUBLIC REGISTRY, AND WHY NOT GITHUB PACKAGES: GitHub Packages requires the npm
+# scope to equal the account or organisation owning the repository. These repos are owned
+# by the user `kannan19302` and the packages are scoped `@unerp`; no `unerp` organisation
+# exists, and the `unierp` one that does still does not match. ROADMAP.md called GitHub
+# Packages "the obvious candidate" for its existing OIDC tokens — that was wrong for this
+# reason. The public registry is also simply better here: a self-hoster can
+# `npm install @kannan19302/kernel` with no authentication, which is what an AGPL-3.0 claim to
+# be self-hostable in full actually requires.
+name: Publish library
+
+on:
+  workflow_call:
+    inputs:
+      node-version:
+        description: Node major version to build and publish with.
+        type: string
+        default: "22"
+      dry-run:
+        description: Pack and inspect the tarball without publishing. Use to verify a repo is publishable before its first real release.
+        type: boolean
+        default: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+
+      - uses: pnpm/action-setup@f40ffcd9367d9f12939873eb1018b921a783ffaa
+        with:
+          version: 9.15.4
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: ${{ inputs.node-version }}
+          cache: pnpm
+          # Puts the registry in the runner's ~/.npmrc, which is the credential side.
+          # The scope's registry is already declared in each repo's committed .npmrc;
+          # credentials are never committed — that rule has been broken here once, in
+          # fourteen repositories at the same time.
+          registry-url: https://registry.npmjs.org
+
+      # No NPM_TOKEN anywhere. npm trusted publishing mints a short-lived credential
+      # from this workflow's OIDC identity, so there is no long-lived secret to leak,
+      # rotate, or accidentally commit. Requires npm >= 11.5.1; the runner's bundled
+      # npm is often older, and an older npm fails at publish time with an auth error
+      # that reads like a missing secret rather than an old client.
+      - name: Ensure npm supports trusted publishing
+        run: |
+          npm install -g npm@latest
+          echo "npm $(npm --version)"
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      # `files` in each package.json ships dist/, not src/, so a package published
+      # without its build output installs cleanly and then fails on first import.
+      # check-node-resolution.mjs exists because that exact class of failure reached
+      # production once — every gate resolved modules through a bundler and the runtime
+      # did not.
+      - name: Build
+        run: pnpm build
+
+      # Refuse to publish a package that declares a workspace protocol. `workspace:*`
+      # is meaningless outside a workspace and is precisely what made the extracted
+      # repos uninstallable (EUNSUPPORTEDPROTOCOL, per ROADMAP.md). One repo still
+      # carries it — unierp-storybook, D008 — and it is private, so it never reaches
+      # this workflow. If it ever does, this stops it.
+      - name: Refuse workspace protocols
+        run: |
+          if grep -q '"workspace:' package.json; then
+            echo "::error::package.json declares a workspace: protocol. It cannot resolve"
+            echo "outside a workspace and would publish an uninstallable package."
+            grep -n '"workspace:' package.json
+            exit 1
+          fi
+          echo "no workspace: protocols"
+
+      # A published version is permanent — npm forbids republishing one. So check
+      # first rather than failing the release on a version that is already out.
+      - name: Is this version already published?
+        id: check
+        run: |
+          NAME=$(node -p "require('./package.json').name")
+          VERSION=$(node -p "require('./package.json').version")
+          echo "name=$NAME"       >> "$GITHUB_OUTPUT"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          if npm view "$NAME@$VERSION" version >/dev/null 2>&1; then
+            echo "already=true" >> "$GITHUB_OUTPUT"
+            echo "$NAME@$VERSION is already published — nothing to do."
+          else
+            echo "already=false" >> "$GITHUB_OUTPUT"
+            echo "$NAME@$VERSION is not yet published."
+          fi
+
+      # Inspect what would ship before it ships. A tarball containing src/ but no
+      # dist/, or 200 MB of node_modules, is visible here and nowhere later.
+      - name: Pack and inspect
+        run: |
+          npm pack --dry-run 2>&1 | tail -40
+
+      - name: Publish
+        if: steps.check.outputs.already == 'false' && inputs.dry-run == false
+        # --provenance attaches a signed attestation linking the tarball to this
+        # workflow run and commit, so a consumer can verify what built it. It is the
+        # supply-chain half of what ROADMAP.md lists as missing: "no image signing, no
+        # SBOM, no container vulnerability scan."
+        run: npm publish --access public --provenance
+        env:
+          NPM_CONFIG_PROVENANCE: true
+
+      - name: Summary
+        run: |
+          {
+            echo "### ${{ steps.check.outputs.name }}@${{ steps.check.outputs.version }}"
+            if [ "${{ inputs.dry-run }}" = "true" ]; then
+              echo "Dry run — packed and inspected, not published."
+            elif [ "${{ steps.check.outputs.already }}" = "true" ]; then
+              echo "Already on the registry. No action taken."
+            else
+              echo "Published to the public npm registry with provenance."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"

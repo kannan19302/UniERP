@@ -1,0 +1,48 @@
+{
+  "version": "1.0",
+  "description": "SLO alert routing — maps a fired SLO error-budget breach to its delivery destination. An SLO with no route is an alert that can never reach an on-call engineer; the rehearsal in scripts/rehearse-alert-routing.mjs exits 1 on any unrouted SLO.",
+  "production_destination": {
+    "channel": "PagerDuty events API v2 (on-call rotation), broadcast to Slack #incidents",
+    "delivery_contract": "POST JSON event carrying slo_id, severity, error_budget_consumed_pct, fired_at and runbook; the destination acks with HTTP 200, anything else is a failed delivery. scripts/webhook-receiver.mjs enforces exactly this contract locally.",
+    "rehearsal_note": "In rehearsal the receiver URL below is a loopback webhook receiver (scripts/webhook-receiver.mjs). In production the same routing table points at the real destination — the rehearsal proves the route and the payload contract, not the destination's uptime."
+  },
+  "ack_timeout_ms": 5000,
+  "receivers": {
+    "ops-oncall": {
+      "type": "webhook",
+      "url": "http://127.0.0.1:9199/webhook"
+    }
+  },
+  "routes": [
+    {
+      "slo_id": "slo-login",
+      "severity": ["warning", "critical"],
+      "receiver": "ops-oncall",
+      "runbook": "docs/runbooks/INCIDENT-RESPONSE.md#login-failure"
+    },
+    {
+      "slo_id": "slo-list-documents",
+      "severity": ["warning", "critical"],
+      "receiver": "ops-oncall",
+      "runbook": "docs/runbooks/INCIDENT-RESPONSE.md#read-path-failure"
+    },
+    {
+      "slo_id": "slo-post-transaction",
+      "severity": ["warning", "critical"],
+      "receiver": "ops-oncall",
+      "runbook": "docs/runbooks/INCIDENT-RESPONSE.md#finance-transaction-failure"
+    },
+    {
+      "slo_id": "slo-run-report",
+      "severity": ["warning", "critical"],
+      "receiver": "ops-oncall",
+      "runbook": "docs/runbooks/INCIDENT-RESPONSE.md#report-failure"
+    },
+    {
+      "slo_id": "slo-provision-tenant",
+      "severity": ["warning", "critical"],
+      "receiver": "ops-oncall",
+      "runbook": "docs/runbooks/INCIDENT-RESPONSE.md#tenant-provision-failure"
+    }
+  ]
+}

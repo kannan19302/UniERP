@@ -1,0 +1,6 @@
+interface:
+  display_name: "UniERP Enterprise Brain"
+  short_description: "Govern enterprise-grade UniERP development"
+  default_prompt: "Use $unierp-enterprise-brain to plan or execute this UniERP change against the correct product, platform, security, data, contract, and operational authorities."
+policy:
+  allow_implicit_invocation: true

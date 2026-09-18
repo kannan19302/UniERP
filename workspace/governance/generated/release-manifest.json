@@ -1,0 +1,212 @@
+{
+  "schemaVersion": "1.0.0",
+  "releaseId": "REL-2026-09-03T14-23-44-258Z",
+  "generatedAt": "2026-09-03T14:23:44.258Z",
+  "environment": "staging",
+  "governanceGate": "FND-P0-007",
+  "productionEligible": false,
+  "cdStatus": "DISABLED_BY_POLICY",
+  "totalRepositories": 31,
+  "repositories": [
+    {
+      "repository": "unierp-contracts",
+      "commitSha": "15f1e2d488c1a8e20fb2e59ee66c345402a314f4",
+      "version": "1.0.4",
+      "path": "D:/UniERP/unierp-contracts"
+    },
+    {
+      "repository": "auth",
+      "commitSha": "7f01c81420131caaefb8be691a465fa20d6a592d",
+      "version": "1.0.5",
+      "path": "D:/UniERP/auth"
+    },
+    {
+      "repository": "config",
+      "commitSha": "9602f9660614d1f8d4019c8ab4f07c8fbf4dda66",
+      "version": "1.0.2",
+      "path": "D:/UniERP/config"
+    },
+    {
+      "repository": "design-system",
+      "commitSha": "ef75e21ee8f3f78a5469c23e38813ec416f6cc26",
+      "version": "1.0.16",
+      "path": "D:/UniERP/design-system"
+    },
+    {
+      "repository": "kernel",
+      "commitSha": "6461b0c1c81de59ba16e8d643116ddd7308cc732",
+      "version": "1.0.3",
+      "path": "D:/UniERP/kernel"
+    },
+    {
+      "repository": "sdk",
+      "commitSha": "6e7ed1c39931143fa1e09f49af1ef75a0c7a3d87",
+      "version": "1.0.3",
+      "path": "D:/UniERP/sdk"
+    },
+    {
+      "repository": "service-kit",
+      "commitSha": "e3969ac9f45ffabfd2a2d04c554f8c35152639e8",
+      "version": "0.2.3",
+      "path": "D:/UniERP/service-kit"
+    },
+    {
+      "repository": "shared",
+      "commitSha": "ac8cd1e9c0b09e30135c63cef948d93ab8c21950",
+      "version": "1.0.6",
+      "path": "D:/UniERP/shared"
+    },
+    {
+      "repository": "storybook",
+      "commitSha": "1ad63883f96c97d6e0b615c03bbe460719415e15",
+      "version": "0.1.0",
+      "path": "D:/UniERP/storybook"
+    },
+    {
+      "repository": "blockchain",
+      "commitSha": "4aa35c765b4a616276a21c04ec6199d70c6fffc3",
+      "version": "1.0.3",
+      "path": "D:/UniERP/blockchain"
+    },
+    {
+      "repository": "data",
+      "commitSha": "e987469427cca0d2acb4f17837f066da973861aa",
+      "version": "1.0.14",
+      "path": "D:/UniERP/data"
+    },
+    {
+      "repository": "extension-api",
+      "commitSha": "f88e692411914815420c8f927ff0705e7b89a99b",
+      "version": "1.1.0",
+      "path": "D:/UniERP/extension-api"
+    },
+    {
+      "repository": "framework",
+      "commitSha": "a7322f52bdcc5e09fb1659bd049b1a24006a5275",
+      "version": "0.1.4",
+      "path": "D:/UniERP/framework"
+    },
+    {
+      "repository": "sandbox",
+      "commitSha": "b6542915fde40d76eb4036c5313bb753da24477f",
+      "version": "1.1.0",
+      "path": "D:/UniERP/sandbox"
+    },
+    {
+      "repository": "api",
+      "commitSha": "0aa22b64b4f5b320e582851d2b2ded0d68a30665",
+      "version": "0.0.1",
+      "path": "D:/UniERP/api"
+    },
+    {
+      "repository": "idp",
+      "commitSha": "5e2d93b19b6bdac6542231f36813ec6029180f98",
+      "version": "0.0.1",
+      "path": "D:/UniERP/idp"
+    },
+    {
+      "repository": "developer-platform",
+      "commitSha": "fd1b756e1412d3126121953b4fbad7baa569fc5d",
+      "version": "0.0.1",
+      "path": "D:/UniERP/developer-platform"
+    },
+    {
+      "repository": "marketing-site",
+      "commitSha": "1c15d2bfc9e6028f07f53e612635067a4b4ac316",
+      "version": "1.0.0",
+      "path": "D:/UniERP/marketing-site"
+    },
+    {
+      "repository": "marketplace",
+      "commitSha": "94e78f004e73322aaa532d8f8f7b2a49a1b6adec",
+      "version": "0.1.0",
+      "path": "D:/UniERP/marketplace"
+    },
+    {
+      "repository": "provider-admin-os",
+      "commitSha": "8301b6bf25cae9a79731af89e9562c75b04b7018",
+      "version": "0.1.0",
+      "path": "D:/UniERP/provider-admin-os"
+    },
+    {
+      "repository": "tenant-admin",
+      "commitSha": "cf4d4083928f3b5d40743da1fc0a4c9265c2e2ef",
+      "version": "0.1.0",
+      "path": "D:/UniERP/tenant-admin"
+    },
+    {
+      "repository": "tenant-apps",
+      "commitSha": "c8133f56c41884c61bcd052028abfab7894b262f",
+      "version": "0.0.1",
+      "path": "D:/UniERP/tenant-apps"
+    },
+    {
+      "repository": "tenant-site-template",
+      "commitSha": "9708ce2f2ea8ef71c2c8eefec72351f9fcf228c2",
+      "version": "1.0.0",
+      "path": "D:/UniERP/tenant-site-template"
+    },
+    {
+      "repository": "tenant-sites",
+      "commitSha": "776e91a36d4b324b6fb772e78e9858af54fbbeb6",
+      "version": "0.1.0",
+      "path": "D:/UniERP/tenant-sites"
+    },
+    {
+      "repository": "web-studio",
+      "commitSha": "849e8389a1fcbb5986e9f0dae8efd75faca85266",
+      "version": "0.1.0",
+      "path": "D:/UniERP/web-studio"
+    },
+    {
+      "repository": "desktop-app",
+      "commitSha": "031bc02a72d3ec62ffcd7838b1c3d36cb820c0ea",
+      "version": "1.0.0",
+      "path": "D:/UniERP/desktop-app"
+    },
+    {
+      "repository": "unierp-mobile",
+      "commitSha": "fe084d372029c2f26f10d0dab648c22b12706c0e",
+      "version": "unknown",
+      "path": "D:/UniERP/unierp-mobile"
+    },
+    {
+      "repository": "extensions",
+      "commitSha": "171d5790128e61e00fa920922fbaa253024a4dd9",
+      "version": "1.0.0",
+      "path": "D:/UniERP/extensions"
+    },
+    {
+      "repository": "infra",
+      "commitSha": "8a595b6364805ffb25cf3967eff950e543c657d1",
+      "version": "unknown",
+      "path": "D:/UniERP/infra"
+    },
+    {
+      "repository": "unierp-workspace",
+      "commitSha": "0cc3003b3968c28d220f7ad4521bf0b0923093df",
+      "version": "unknown",
+      "path": "D:/UniERP/unierp-workspace"
+    },
+    {
+      "repository": "unierp-platform",
+      "commitSha": "af371a97ab0746e17b0f5966829c33056e8af5a8",
+      "version": "unknown",
+      "path": "D:/UniERP/unierp-platform"
+    }
+  ],
+  "stagingTopology": {
+    "compute": "Kubernetes 1.30 / Isolated Pods",
+    "ingress": "Envoy with strict mTLS & WAF",
+    "database": "PostgreSQL 16 Multi-Tenant RLS (NOBYPASSRLS)",
+    "cache": "Redis 7.2 Cluster with TLS",
+    "eventBus": "Kafka 3.7 with SCRAM-SHA-512"
+  },
+  "rollbackDrill": {
+    "method": "SHA-based atomic rollback via rollout.sh",
+    "targetRTO": "< 300 seconds",
+    "lastSimulatedDrill": "2026-09-03T14:23:44.258Z",
+    "drillResult": "PASS (zero production state modified)"
+  },
+  "manifestDigestSha256": "b595073c4e4db1422da95646cc6ea008ebb704d7d6e5bb1d3a31a5551db2d522"
+}

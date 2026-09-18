@@ -1,0 +1,33 @@
+# The UniERP package registry.
+#
+# Runs beside the other datastores because it is one: after the § 4.2 split the
+# layer boundaries are published artifacts, so a build depends on this service
+# the way it depends on Postgres. Storage is a named volume, so published
+# versions survive restarts — which is what makes § 4.5's "a rollback is the
+# previous manifest" true, since that manifest pins versions that must still
+# exist to be installable.
+services:
+  registry:
+    image: verdaccio/verdaccio:6
+    container_name: unerp-registry
+    restart: unless-stopped
+    ports:
+      - "4873:4873"
+    volumes:
+      - registry_storage:/verdaccio/storage
+      - ./config:/verdaccio/conf:ro
+    environment:
+      VERDACCIO_PORT: "4873"
+    healthcheck:
+      # 127.0.0.1, not localhost: inside this image `localhost` resolves to the
+      # IPv6 ::1 first, where Verdaccio is not listening — it binds IPv4 0.0.0.0.
+      # With `localhost` the probe fails forever while the registry serves
+      # perfectly, so the container reports unhealthy and anything waiting on
+      # `condition: service_healthy` hangs for good.
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1:4873/ || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  registry_storage:

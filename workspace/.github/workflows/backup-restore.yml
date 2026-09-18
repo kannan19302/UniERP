@@ -1,0 +1,69 @@
+# Track A.22 — backup & restore rehearsal on a schedule (G-11).
+#
+# Every scheduled run takes a real backup of the working database and restores
+# it into a disposable database, proving the backup is actually restorable and
+# the restored data is identical to the source. A backup that has never been
+# restored is not a backup.
+#
+# FAILS LOUDLY BY DESIGN. The verify step exits non-zero on any mismatch (table
+# count, per-table row counts, _prisma_migrations), which fails the run and the
+# job. There is deliberately NO continue-on-error and NO `if: hashFiles(...)` —
+# a step that passes by being absent is the exact defect this programme exists
+# to eliminate (D013). If this job starts skipping or going green without
+# restoring, the rehearsal guarantee is gone.
+#
+# Runs nightly at 03:10 UTC; also triggerable manually via workflow_dispatch.
+# The disposable restore-verify database is created and dropped inside the job.
+
+name: Backup & Restore Rehearsal
+
+on:
+  schedule:
+    - cron: '10 3 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: backup-restore-rehearsal
+  cancel-in-progress: false
+
+jobs:
+  rehearse:
+    name: Backup → restore-verify
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+
+      # The scripts run pg_dump/pg_restore via `docker exec unerp-postgres`, so
+      # the job provisions that exact container with the exact dev credentials.
+      - name: Start Postgres
+        run: |
+          docker run -d --name unerp-postgres \
+            -e POSTGRES_DB=unerp_dev \
+            -e POSTGRES_USER=unerp \
+            -e POSTGRES_PASSWORD=unerp_password \
+            -p 5432:5432 \
+            postgres:16-alpine
+          for i in $(seq 1 30); do
+            if docker exec unerp-postgres pg_isready -U unerp -d unerp_dev >/dev/null 2>&1; then
+              echo "postgres ready"
+              break
+            fi
+            sleep 2
+          done
+
+      - name: Seed a minimal schema
+        run: |
+          docker exec unerp-postgres psql -U unerp -d unerp_dev -v ON_ERROR_STOP=1 <<'SQL'
+          CREATE TABLE _prisma_migrations (id text PRIMARY KEY, started_at timestamptz NOT NULL DEFAULT now(), finished_at timestamptz, applied_steps_count int NOT NULL DEFAULT 0);
+          INSERT INTO _prisma_migrations (id) VALUES ('seed-1');
+          CREATE TABLE widget (id serial PRIMARY KEY, name text NOT NULL);
+          INSERT INTO widget (name) SELECT 'widget-' || g FROM generate_series(1, 100) g;
+          SQL
+
+      - name: Take a backup
+        run: node scripts/backup-database.mjs --label scheduled
+
+      # THE EXIT CRITERION. Restores the newest backup into a disposable DB and
+      # proves equality. Non-zero exit on any failure — this job goes red.
+      - name: Restore-verify (fails loudly)
+        run: node scripts/verify-backup.mjs

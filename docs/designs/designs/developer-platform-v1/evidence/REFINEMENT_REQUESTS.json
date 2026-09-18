@@ -1,0 +1,42 @@
+[
+  [
+    83,
+    "Replace header 'Quality gate 2 pending' with 'Quality review pending'. Keep approval Pending and promotion disabled."
+  ],
+  [
+    92,
+    "Requested recovery point Sep 10, 2026 9:24 AM; available snapshot9:12 AM; difference12 minutes. Rename secondary button 'Request production restore'. Keep separate approval and rehearsal pending."
+  ],
+  [
+    94,
+    "Remove Ready score column and92/88/90. Draft source text 'Published versions are immutable. This candidate is a draft.' Remove certified-source claim. Keep tests pending, overlay conflict and publish disabled."
+  ],
+  [
+    95,
+    "Arabic cell for validation.required must be em dash missing, status Missing,2translated1missing. Remove national flags next to language names."
+  ],
+  [
+    96,
+    "Accept optional and Reject optional buttons identical white outlined blue text/border and same size. No filled Accept. Keep optional categories off."
+  ],
+  [
+    100,
+    "Change all2of5/2/5/Completed2of5 to1of5/1/5. Only dependency extraction passed, two pending,two notrun. Register disabled."
+  ],
+  [
+    97,
+    "Replace12%remaining errorbudget with 'Monthly budget: calculation pending'. Remove errorbudget bar. Success99.8 below99.9 uses amber warning, notgreen. Keep sample24h."
+  ],
+  [
+    103,
+    "Checklist1of5completed. Bindings2of5configured. Bindings tab5. Request status Recovery draft to explain previous attempt. Keep existing namespace and retry."
+  ],
+  [
+    104,
+    "Rename consumers Supplier portal, Vendor website, Test project everywhere; allinstalled1.2.0. Remove Readiness42/100. Selected Testproject uninstall blocked by its own1form2rules needing remapping. Other consumers block global retirement only. Replace revertinstallation with 'Remove installation reference after remapping'. Confirmdisabled; retainrecords."
+  ],
+  [
+    108,
+    "Remove entire Readiness72 donut and Schema80/Tests70/Docs60/Consumers80. Replace 'Schema review: Pending', 'Consumer compatibility: Pending', 'Breaking change: Requires new major'. Keep publishdisabled."
+  ]
+]

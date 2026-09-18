@@ -1,0 +1,1119 @@
+{
+  "date": "2026-09-08",
+  "note": "Selected local files and preserved draft lineage; not a complete tool execution log. Initial prompt/call metadata are not reconstructed where unavailable.",
+  "screens": [
+    {
+      "screen": "DP-001",
+      "origin": 73,
+      "selectedFile": "design/001_auth_states.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/73_auth_states_refined.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-002",
+      "origin": 77,
+      "selectedFile": "design/002_developer_getting_started_refined.png",
+      "method": "Image generation with UniERP Strata reference",
+      "originalSource": null,
+      "reference": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/21_app_overview_refined.png",
+      "review": "Visually inspected in this design cycle",
+      "supersededLocalDrafts": [
+        "evidence/original-additions/002_developer_getting_started.png"
+      ]
+    },
+    {
+      "screen": "DP-003",
+      "origin": 1,
+      "selectedFile": "design/003_projects.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v1/01_projects.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-004",
+      "origin": 2,
+      "selectedFile": "design/004_create_project.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v1/02_create_project.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-005",
+      "origin": 3,
+      "selectedFile": "design/005_project_overview.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v1/03_project_overview.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-006",
+      "origin": 78,
+      "selectedFile": "design/006_work_items.png",
+      "method": "Image generation with UniERP Strata reference",
+      "originalSource": null,
+      "reference": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/21_app_overview_refined.png",
+      "review": "Visually inspected in this design cycle",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-007",
+      "origin": 17,
+      "selectedFile": "design/007_applications.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/17_applications.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-008",
+      "origin": 18,
+      "selectedFile": "design/008_websites.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/18_websites.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-009",
+      "origin": 19,
+      "selectedFile": "design/009_new_application.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/19_new_application.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-010",
+      "origin": 20,
+      "selectedFile": "design/010_new_website.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/20_new_website.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-011",
+      "origin": 6,
+      "selectedFile": "design/011_standalone_builders.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v1/06_standalone_builders.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-012",
+      "origin": 7,
+      "selectedFile": "design/012_resource_library.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v1/07_resource_library.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-013",
+      "origin": 21,
+      "selectedFile": "design/013_app_overview.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/21_app_overview_refined.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-014",
+      "origin": 22,
+      "selectedFile": "design/014_site_overview.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/22_site_overview_refined.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-015",
+      "origin": 9,
+      "selectedFile": "design/015_link_to_project.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v1/09_link_to_project.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-016",
+      "origin": 72,
+      "selectedFile": "design/016_resource_updates.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/72_resource_updates_refined.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-017",
+      "origin": 93,
+      "selectedFile": "design/017_portable_import_export.png",
+      "method": "Image generation with UniERP Strata reference",
+      "originalSource": null,
+      "reference": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/21_app_overview_refined.png",
+      "review": "Visually inspected in this design cycle",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-018",
+      "origin": 94,
+      "selectedFile": "design/018_package_publish_refined.png",
+      "method": "Image generation with UniERP Strata reference",
+      "originalSource": null,
+      "reference": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/21_app_overview_refined.png",
+      "review": "Visually inspected in this design cycle",
+      "supersededLocalDrafts": [
+        "evidence/original-additions/018_package_publish.png"
+      ]
+    },
+    {
+      "screen": "DP-019",
+      "origin": 104,
+      "selectedFile": "design/019_package_retirement_final.png",
+      "method": "Image generation with UniERP Strata reference",
+      "originalSource": null,
+      "reference": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/21_app_overview_refined.png",
+      "review": "Visually inspected in this design cycle",
+      "supersededLocalDrafts": [
+        "evidence/original-additions/019_package_retirement.png",
+        "evidence/original-additions/019_package_retirement_refined.png"
+      ]
+    },
+    {
+      "screen": "DP-020",
+      "origin": 8,
+      "selectedFile": "design/020_component_builder.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v1/08_component_builder.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-021",
+      "origin": 56,
+      "selectedFile": "design/021_component_governance.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/56_component_governance_refined.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-022",
+      "origin": 75,
+      "selectedFile": "design/022_project_settings.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/75_project_settings_refined.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-023",
+      "origin": 14,
+      "selectedFile": "design/023_project_settings.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v1/14_project_settings.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-024",
+      "origin": 76,
+      "selectedFile": "design/024_workspace_utilities.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/76_workspace_utilities_refined.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-025",
+      "origin": 16,
+      "selectedFile": "design/025_navigation_states.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v1/16_navigation_states.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-026",
+      "origin": 74,
+      "selectedFile": "design/026_system_states.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/74_system_states_refined.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-027",
+      "origin": 23,
+      "selectedFile": "design/027_pages.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/23_pages.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-028",
+      "origin": 4,
+      "selectedFile": "design/028_website_builder.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v1/04_website_builder.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-029",
+      "origin": 24,
+      "selectedFile": "design/029_collections.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/24_collections.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-030",
+      "origin": 25,
+      "selectedFile": "design/030_collection_editor.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/25_collection_editor_refined.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-031",
+      "origin": 26,
+      "selectedFile": "design/031_blog.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/26_blog.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-032",
+      "origin": 27,
+      "selectedFile": "design/032_post_editor.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/27_post_editor.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-033",
+      "origin": 28,
+      "selectedFile": "design/033_assets.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/28_assets_refined.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-034",
+      "origin": 29,
+      "selectedFile": "design/034_menus.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/29_menus.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-035",
+      "origin": 30,
+      "selectedFile": "design/035_seo.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/30_seo.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-036",
+      "origin": 95,
+      "selectedFile": "design/036_localization_rtl_refined.png",
+      "method": "Image generation with UniERP Strata reference",
+      "originalSource": null,
+      "reference": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/21_app_overview_refined.png",
+      "review": "Visually inspected in this design cycle",
+      "supersededLocalDrafts": [
+        "evidence/original-additions/036_localization_rtl.png"
+      ]
+    },
+    {
+      "screen": "DP-037",
+      "origin": 96,
+      "selectedFile": "design/037_public_access_consent_final.png",
+      "method": "Image generation with UniERP Strata reference",
+      "originalSource": null,
+      "reference": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/21_app_overview_refined.png",
+      "review": "Visually inspected in this design cycle",
+      "supersededLocalDrafts": [
+        "evidence/original-additions/037_public_access_consent.png",
+        "evidence/original-additions/037_public_access_consent_refined.png"
+      ]
+    },
+    {
+      "screen": "DP-038",
+      "origin": 31,
+      "selectedFile": "design/038_experiments.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/31_experiments_refined.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-039",
+      "origin": 32,
+      "selectedFile": "design/039_orders.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/32_orders.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-040",
+      "origin": 33,
+      "selectedFile": "design/040_submissions.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/33_submissions.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-041",
+      "origin": 34,
+      "selectedFile": "design/041_site_settings.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/34_site_settings.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-042",
+      "origin": 35,
+      "selectedFile": "design/042_site_revisions.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/35_site_revisions.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-043",
+      "origin": 5,
+      "selectedFile": "design/043_app_builder.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v1/05_app_builder.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-044",
+      "origin": 36,
+      "selectedFile": "design/044_forms.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/36_forms_refined.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-045",
+      "origin": 37,
+      "selectedFile": "design/045_form_builder.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/37_form_builder.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-046",
+      "origin": 38,
+      "selectedFile": "design/046_advanced_forms.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/38_advanced_forms.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-047",
+      "origin": 40,
+      "selectedFile": "design/047_dashboard_catalog.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/40_dashboard_catalog.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-048",
+      "origin": 41,
+      "selectedFile": "design/048_dashboard_builder.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/41_dashboard_builder_refined_v2.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-049",
+      "origin": 42,
+      "selectedFile": "design/049_data_objects.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/42_data_objects.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-050",
+      "origin": 43,
+      "selectedFile": "design/050_object_designer.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/43_object_designer_refined.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-051",
+      "origin": 45,
+      "selectedFile": "design/051_rules.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/45_rules_refined.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-052",
+      "origin": 44,
+      "selectedFile": "design/052_bpmn.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/44_bpmn.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-053",
+      "origin": 39,
+      "selectedFile": "design/053_workflow_catalog.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/39_workflow_catalog_refined.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-054",
+      "origin": 11,
+      "selectedFile": "design/054_workflow_builder.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v1/11_workflow_builder.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-055",
+      "origin": 47,
+      "selectedFile": "design/055_logic.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/47_logic.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-056",
+      "origin": 48,
+      "selectedFile": "design/056_mobile_builder.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/48_mobile_builder.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-057",
+      "origin": 49,
+      "selectedFile": "design/057_app_customization.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/49_app_customization.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-058",
+      "origin": 105,
+      "selectedFile": "design/058_report_semantics.png",
+      "method": "Image generation with UniERP Strata reference",
+      "originalSource": null,
+      "reference": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/21_app_overview_refined.png",
+      "review": "Visually inspected in this design cycle",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-059",
+      "origin": 106,
+      "selectedFile": "design/059_message_templates.png",
+      "method": "Image generation with UniERP Strata reference",
+      "originalSource": null,
+      "reference": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/21_app_overview_refined.png",
+      "review": "Visually inspected in this design cycle",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-060",
+      "origin": 107,
+      "selectedFile": "design/060_approval_routing.png",
+      "method": "Image generation with UniERP Strata reference",
+      "originalSource": null,
+      "reference": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/21_app_overview_refined.png",
+      "review": "Visually inspected in this design cycle",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-061",
+      "origin": 10,
+      "selectedFile": "design/061_data_integrations.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v1/10_data_integrations.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-062",
+      "origin": 57,
+      "selectedFile": "design/062_connectors.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/57_connectors.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-063",
+      "origin": 59,
+      "selectedFile": "design/063_query_builder.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/59_query_builder_refined_v2.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-064",
+      "origin": 60,
+      "selectedFile": "design/064_widgets.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/60_widgets.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-065",
+      "origin": 61,
+      "selectedFile": "design/065_etl.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/61_etl.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-066",
+      "origin": 46,
+      "selectedFile": "design/066_api_builder.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/46_api_builder.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-067",
+      "origin": 15,
+      "selectedFile": "design/067_api_extensions.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v1/15_api_extensions.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-068",
+      "origin": 65,
+      "selectedFile": "design/068_sdk.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/65_sdk_refined.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-069",
+      "origin": 108,
+      "selectedFile": "design/069_contract_publication_refined.png",
+      "method": "Image generation with UniERP Strata reference",
+      "originalSource": null,
+      "reference": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/21_app_overview_refined.png",
+      "review": "Visually inspected in this design cycle",
+      "supersededLocalDrafts": [
+        "evidence/original-additions/069_contract_publication.png"
+      ]
+    },
+    {
+      "screen": "DP-070",
+      "origin": 68,
+      "selectedFile": "design/070_extensions.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/68_extensions.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-071",
+      "origin": 69,
+      "selectedFile": "design/071_extension_package.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/69_extension_package_refined.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-072",
+      "origin": 70,
+      "selectedFile": "design/072_sandbox.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/70_sandbox.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-073",
+      "origin": 71,
+      "selectedFile": "design/073_diagnostics.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/71_diagnostics.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-074",
+      "origin": 85,
+      "selectedFile": "design/074_webhook_events.png",
+      "method": "Image generation with UniERP Strata reference",
+      "originalSource": null,
+      "reference": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/21_app_overview_refined.png",
+      "review": "Visually inspected in this design cycle",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-075",
+      "origin": 86,
+      "selectedFile": "design/075_jobs_schedules.png",
+      "method": "Image generation with UniERP Strata reference",
+      "originalSource": null,
+      "reference": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/21_app_overview_refined.png",
+      "review": "Visually inspected in this design cycle",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-076",
+      "origin": 12,
+      "selectedFile": "design/076_responsive_preview.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v1/12_responsive_preview.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-077",
+      "origin": 81,
+      "selectedFile": "design/077_test_suite_builder.png",
+      "method": "Image generation with UniERP Strata reference",
+      "originalSource": null,
+      "reference": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/21_app_overview_refined.png",
+      "review": "Visually inspected in this design cycle",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-078",
+      "origin": 82,
+      "selectedFile": "design/078_test_evidence_refined.png",
+      "method": "Image generation with UniERP Strata reference",
+      "originalSource": null,
+      "reference": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/21_app_overview_refined.png",
+      "review": "Visually inspected in this design cycle",
+      "supersededLocalDrafts": [
+        "evidence/original-additions/078_test_evidence.png"
+      ]
+    },
+    {
+      "screen": "DP-079",
+      "origin": 79,
+      "selectedFile": "design/079_change_impact.png",
+      "method": "Image generation with UniERP Strata reference",
+      "originalSource": null,
+      "reference": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/21_app_overview_refined.png",
+      "review": "Visually inspected in this design cycle",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-080",
+      "origin": 80,
+      "selectedFile": "design/080_collaboration_review_refined.png",
+      "method": "Image generation with UniERP Strata reference",
+      "originalSource": null,
+      "reference": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/21_app_overview_refined.png",
+      "review": "Visually inspected in this design cycle",
+      "supersededLocalDrafts": [
+        "evidence/original-additions/080_collaboration_review.png"
+      ]
+    },
+    {
+      "screen": "DP-081",
+      "origin": 63,
+      "selectedFile": "design/081_git.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/63_git.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-082",
+      "origin": 99,
+      "selectedFile": "design/082_schema_migration.png",
+      "method": "Image generation with UniERP Strata reference",
+      "originalSource": null,
+      "reference": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/21_app_overview_refined.png",
+      "review": "Visually inspected in this design cycle",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-083",
+      "origin": 62,
+      "selectedFile": "design/083_theme_manager.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/62_theme_manager.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-084",
+      "origin": 100,
+      "selectedFile": "design/084_builder_conformance_refined.png",
+      "method": "Image generation with UniERP Strata reference",
+      "originalSource": null,
+      "reference": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/21_app_overview_refined.png",
+      "review": "Visually inspected in this design cycle",
+      "supersededLocalDrafts": [
+        "evidence/original-additions/084_builder_conformance.png"
+      ]
+    },
+    {
+      "screen": "DP-085",
+      "origin": 13,
+      "selectedFile": "design/085_releases.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v1/13_releases.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-086",
+      "origin": 52,
+      "selectedFile": "design/086_release_history.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/52_release_history.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-087",
+      "origin": 53,
+      "selectedFile": "design/087_environments.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/53_environments.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-088",
+      "origin": 103,
+      "selectedFile": "design/088_environment_bootstrap_final.png",
+      "method": "Image generation with UniERP Strata reference",
+      "originalSource": null,
+      "reference": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/21_app_overview_refined.png",
+      "review": "Visually inspected in this design cycle",
+      "supersededLocalDrafts": [
+        "evidence/original-additions/088_environment_bootstrap.png",
+        "evidence/original-additions/088_environment_bootstrap_refined.png"
+      ]
+    },
+    {
+      "screen": "DP-089",
+      "origin": 83,
+      "selectedFile": "design/089_release_pipeline_refined.png",
+      "method": "Image generation with UniERP Strata reference",
+      "originalSource": null,
+      "reference": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/21_app_overview_refined.png",
+      "review": "Visually inspected in this design cycle",
+      "supersededLocalDrafts": [
+        "evidence/original-additions/089_release_pipeline.png"
+      ]
+    },
+    {
+      "screen": "DP-090",
+      "origin": 84,
+      "selectedFile": "design/090_deployment_recovery_refined.png",
+      "method": "Image generation with UniERP Strata reference",
+      "originalSource": null,
+      "reference": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/21_app_overview_refined.png",
+      "review": "Visually inspected in this design cycle",
+      "supersededLocalDrafts": [
+        "evidence/original-additions/090_deployment_recovery.png"
+      ]
+    },
+    {
+      "screen": "DP-091",
+      "origin": 64,
+      "selectedFile": "design/091_mobile_export.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/64_mobile_export.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-092",
+      "origin": 50,
+      "selectedFile": "design/092_manage.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/50_manage.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-093",
+      "origin": 51,
+      "selectedFile": "design/093_governance.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/51_governance_refined.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-094",
+      "origin": 55,
+      "selectedFile": "design/094_access_control.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/55_access_control_refined.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-095",
+      "origin": 66,
+      "selectedFile": "design/095_credentials.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/66_credentials_refined.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-096",
+      "origin": 67,
+      "selectedFile": "design/096_credential_lifecycle.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/67_credential_lifecycle_refined.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-097",
+      "origin": 87,
+      "selectedFile": "design/097_record_field_policy.png",
+      "method": "Image generation with UniERP Strata reference",
+      "originalSource": null,
+      "reference": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/21_app_overview_refined.png",
+      "review": "Visually inspected in this design cycle",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-098",
+      "origin": 88,
+      "selectedFile": "design/098_secret_bindings.png",
+      "method": "Image generation with UniERP Strata reference",
+      "originalSource": null,
+      "reference": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/21_app_overview_refined.png",
+      "review": "Visually inspected in this design cycle",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-099",
+      "origin": 89,
+      "selectedFile": "design/099_supply_chain_review_refined.png",
+      "method": "Image generation with UniERP Strata reference",
+      "originalSource": null,
+      "reference": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/21_app_overview_refined.png",
+      "review": "Visually inspected in this design cycle",
+      "supersededLocalDrafts": [
+        "evidence/original-additions/099_supply_chain_review.png"
+      ]
+    },
+    {
+      "screen": "DP-100",
+      "origin": 90,
+      "selectedFile": "design/100_extension_quarantine.png",
+      "method": "Image generation with UniERP Strata reference",
+      "originalSource": null,
+      "reference": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/21_app_overview_refined.png",
+      "review": "Visually inspected in this design cycle",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-101",
+      "origin": 91,
+      "selectedFile": "design/101_audit_evidence.png",
+      "method": "Image generation with UniERP Strata reference",
+      "originalSource": null,
+      "reference": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/21_app_overview_refined.png",
+      "review": "Visually inspected in this design cycle",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-102",
+      "origin": 92,
+      "selectedFile": "design/102_backup_restore_refined.png",
+      "method": "Image generation with UniERP Strata reference",
+      "originalSource": null,
+      "reference": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/21_app_overview_refined.png",
+      "review": "Visually inspected in this design cycle",
+      "supersededLocalDrafts": [
+        "evidence/original-additions/102_backup_restore.png"
+      ]
+    },
+    {
+      "screen": "DP-103",
+      "origin": 97,
+      "selectedFile": "design/103_service_health_refined.png",
+      "method": "Image generation with UniERP Strata reference",
+      "originalSource": null,
+      "reference": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/21_app_overview_refined.png",
+      "review": "Visually inspected in this design cycle",
+      "supersededLocalDrafts": [
+        "evidence/original-additions/103_service_health.png"
+      ]
+    },
+    {
+      "screen": "DP-104",
+      "origin": 98,
+      "selectedFile": "design/104_usage_budgets.png",
+      "method": "Image generation with UniERP Strata reference",
+      "originalSource": null,
+      "reference": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/21_app_overview_refined.png",
+      "review": "Visually inspected in this design cycle",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-105",
+      "origin": 102,
+      "selectedFile": "design/105_app_identity.png",
+      "method": "Image generation with UniERP Strata reference",
+      "originalSource": null,
+      "reference": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/21_app_overview_refined.png",
+      "review": "Visually inspected in this design cycle",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-106",
+      "origin": 101,
+      "selectedFile": "design/106_ai_assisted_changes.png",
+      "method": "Image generation with UniERP Strata reference",
+      "originalSource": null,
+      "reference": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/21_app_overview_refined.png",
+      "review": "Visually inspected in this design cycle",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-107",
+      "origin": 54,
+      "selectedFile": "design/107_run_logs.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/54_run_logs.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    },
+    {
+      "screen": "DP-108",
+      "origin": 58,
+      "selectedFile": "design/108_marketplace_packages.png",
+      "method": "Byte-identical consolidation",
+      "originalSource": "D:/UniERP/docs/designs/developer-studio-strata-v2-complete/58_marketplace_packages.png",
+      "reference": null,
+      "review": "Preserved prior selected design",
+      "supersededLocalDrafts": []
+    }
+  ]
+}

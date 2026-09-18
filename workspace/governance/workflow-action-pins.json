@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "verifiedAt": "2026-08-28",
+  "policy": "Every external GitHub action and reusable workflow must use a full commit SHA listed here. Refreshing a pin requires independently resolving the intended upstream ref and reviewing the upstream change before updating callers.",
+  "repositories": {
+    "actions/checkout": {
+      "requestedRef": "refs/tags/v4",
+      "commits": ["11d5960a326750d5838078e36cf38b85af677262"]
+    },
+    "actions/setup-node": {
+      "requestedRef": "refs/tags/v4",
+      "commits": ["49933ea5288caeca8642d1e84afbd3f7d6820020"]
+    },
+    "actions/upload-artifact": {
+      "requestedRef": "refs/tags/v4",
+      "commits": ["ea165f8d65b6e75b540449e92b4886f43607fa02"]
+    },
+    "actions/labeler": {
+      "requestedRef": "refs/tags/v5",
+      "commits": ["8558fd74291d67161a8a78ce36a881fa63b766a9"]
+    },
+    "chromaui/action": {
+      "requestedRef": "refs/tags/v1",
+      "commits": ["a01e849cbc1f51ec5743358b4d7f9a1eadadf44e"]
+    },
+    "github/codeql-action": {
+      "requestedRef": "refs/tags/v3",
+      "commits": ["5ba2889ada762081db2c4f32a729827dce632c7b"]
+    },
+    "grafana/k6-action": {
+      "requestedRef": "refs/tags/v0.3.0",
+      "commits": ["2bd221c807b7cdbe4bb3abc6b3fa4d2da499fa9b"]
+    },
+    "pnpm/action-setup": {
+      "requestedRefs": ["refs/heads/v3", "refs/tags/v4"],
+      "commits": [
+        "a3252b78c470c02df07e9d59298aecedc3ccdd6d",
+        "f40ffcd9367d9f12939873eb1018b921a783ffaa"
+      ]
+    },
+    "subosito/flutter-action": {
+      "requestedRef": "refs/tags/v2",
+      "commits": ["1a449444c387b1966244ae4d4f8c696479add0b2"]
+    },
+    "kannan19302/unierp-workspace": {
+      "requestedRef": "refs/heads/main",
+      "commits": [
+        "0bb9682d45d50e23e6de344d71f10ec1a909bf04",
+        "0cc3003b3968c28d220f7ad4521bf0b0923093df"
+      ]
+    }
+  }
+}

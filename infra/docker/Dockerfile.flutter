@@ -1,0 +1,33 @@
+FROM ubuntu:24.04
+ENV DEBIAN_FRONTEND=noninteractive
+ENV FLUTTER_HOME=/opt/flutter
+ENV PATH="${FLUTTER_HOME}/bin:${PATH}"
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl git unzip xz-utils zip libglu1-mesa wget gnupg ca-certificates procps \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
+    && echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list \
+    && apt-get update && apt-get install -y google-chrome-stable \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN git clone --depth 1 -b stable https://github.com/flutter/flutter.git ${FLUTTER_HOME} \
+    && flutter config --no-analytics \
+    && flutter config --enable-web
+
+WORKDIR /app/apps/mobile
+EXPOSE 8080
+ENV API_BASE_URL=http://dev:3001
+
+# `flutter run -d web-server` is the live-reload dev loop, but its DDC dev
+# compile relies on a debug-service connection that only works with the Dart
+# Debug Chrome Extension installed — without it (e.g. any plain browser, or a
+# headless one used for automated UI checks) the app compiles and the DOM
+# scaffolding mounts, but no frame ever paints. A release-style
+# `flutter build web` + static file server sidesteps that dev-only bridge
+# entirely, so the container is reliable to open in any browser for manual
+# testing. Trade-off: code changes need a container restart, not hot reload.
+CMD flutter pub get && \
+    flutter build web --dart-define=API_BASE_URL=${API_BASE_URL} && \
+    python3 -m http.server 8080 --directory build/web --bind 0.0.0.0

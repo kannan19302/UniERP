@@ -1,0 +1,734 @@
+[
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\01_projects.png",
+    "Hash": "65BA6EEF68FCCF845CF23A86F779C68D3777E8EDEB3A25AFA5BB75C214208D3E"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\02_create_project.png",
+    "Hash": "3C0636E29802A17B6814C89E23E57A6193515E852417E7E8D1F653792F439152"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\03_project_overview.png",
+    "Hash": "A488F1EE88652F1C7CE92E9D698F3BAD5FBB099EA60AE9F6BB26F6EB2C48ED44"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\04_website_builder.png",
+    "Hash": "805D347F7A35254E6ACB2E4DC630084C05F2E1DFA836DAE2B8FE2C0CA2AD1612"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\05_app_builder.png",
+    "Hash": "99A42BBF8CE109600A6DE0198BF50DD55DABE6F3D71A596875FF56406117E544"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\06_standalone_builders.png",
+    "Hash": "0D84AD95F92D9231D70272F5E30556794638E722DF39773B72180E617D130C3D"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\07_resource_library.png",
+    "Hash": "1AF5FD842F4A97B4753255F68DA91480E2ADD75A129ECE66EC86FFD22FB7AE89"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\08_component_builder.png",
+    "Hash": "82013E0EEEC555D4A6963E90E880021B99A3D8106F25976DAAFDF73C1315A7FE"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\09_link_to_project.png",
+    "Hash": "D1F6A93634D301973E7879C4343E03AFE0A68853A99A8648A56FA7660F1BFA0B"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\10_data_integrations.png",
+    "Hash": "854F18FED9FC0363E670323A17289CBCB7A77D5557DDA41E40F133FD967F359F"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\11_workflow_builder.png",
+    "Hash": "9D44971AB79A521783B24BC13CDA5DC47DA5588ABB35847BD94FE1D13E2B4D94"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\12_responsive_preview.png",
+    "Hash": "11458868FE02344D54CBCC6B511727A6F16C8C000A6CC95AF1024B5F82C48175"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\13_releases.png",
+    "Hash": "D598BB91CF06AD80135A6A9ECA34864A0FB0E1A908B1963D76A3A611305C2646"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\14_project_settings.png",
+    "Hash": "D49BF537652BA754977A41C93AF291A5C08B2CFE249D26CB6B180F53C8F20846"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\15_api_extensions.png",
+    "Hash": "886A684F65A0E39E097C4DC630DCE30F34C75E75E8D079CD5033AA083585D156"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\16_navigation_states.png",
+    "Hash": "40DA15C9AF5FB0FA7CF1D58634A834B4DB2310A5BCD8ADBE223C446756F6042D"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\DESIGN_PLAN.md",
+    "Hash": "1F51A6B291BDB1BC6D6150E34BA8FB89760422216A152E72832805468FA59604"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\PROMPTS.md",
+    "Hash": "34341B18ADBBF81F39F0D17983D818A453A7D3A854A51D4D86F571663251EC76"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\README.md",
+    "Hash": "DBF52B8C362C66CEA1F9F883946E98BC54D9EA6C05CCC09A6DA10278A68497A5"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\VERIFICATION.md",
+    "Hash": "7ED5DBEB5325ACD69120F431E5C5A1B0FAA64BF26345C8A1C6712824E118AC9A"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\17_applications.png",
+    "Hash": "2F4FEC41E174763E27107944FC4A357FD64DD61101E0E5DFBE93E05C43D076DE"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\18_websites.png",
+    "Hash": "9F609BCB979F7FE769571AB179D84F35F3A0644E6A3F677B48ED236871595910"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\19_new_application.png",
+    "Hash": "9054BEDFCB80272951008CF9214D7957033CB0D9F4F684963944EEFC7FD3499F"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\20_new_website.png",
+    "Hash": "4E8D9C1CED39C0745DE0567A1E2379D207A00E849911DC3637BFD0436269B5D5"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\21_app_overview_refined.png",
+    "Hash": "378944AEEB812390C7888634AC14E639F70B6ABE434C8CD2FF6143F0E4BEB9E6"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\21_app_overview.png",
+    "Hash": "6AC7D70A4EC982DEDC862A6375A070718A9E05084B3D56C3BC34D371D8E2CB56"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\22_site_overview_refined.png",
+    "Hash": "1054D63D23A0AE83CFDF108D08E8AEBBE030F32E23988B1BE49522E16C8D0714"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\22_site_overview.png",
+    "Hash": "8EBABA9C14B187173F500293F97948334C2992CC80634EEA425B685E1532B175"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\23_pages.png",
+    "Hash": "86D46BFE12A45A56545BFFED944EED405A29DE17B5AD912DB54EC8190063E919"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\24_collections.png",
+    "Hash": "B6A1B2339959F03907A4F7245C3E32D116BC59F83EE0CD909A50C164A78D5485"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\25_collection_editor_refined.png",
+    "Hash": "B02344C2D954ED7F4E6D9154B52B12281A206FA966FDFF577BEB1134DC3B43DE"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\25_collection_editor.png",
+    "Hash": "8A4D9A6AFB874F5DDAAE7AAF37D3B93258D7864C4F8708B6F66DB7046D381F07"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\26_blog.png",
+    "Hash": "0F421A374589205368DF95ED1A73D8751F63CC512EFEE68B584B84E7F5DD843F"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\27_post_editor.png",
+    "Hash": "E17BB32A354E2F4B9337B3BB81D37CE1C97EB755BFE00DF8009DB7A9BE616992"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\28_assets_refined.png",
+    "Hash": "3246D22700EA3037C446F0FC3A2535984787B72BC28E67EE32393D10C3D96116"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\28_assets.png",
+    "Hash": "CA6496D2627126B44C70F1327B92850F5A68322721B185601CCF2E91E2E59B67"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\29_menus.png",
+    "Hash": "7805490D980D227091D642FFE778107A30A5A82D7E19098A9F11A044D0E0B047"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\30_seo.png",
+    "Hash": "0D12628CBB48672510BE6F501DBFB817F5576FCF8DA4E9D9509AC4D06DE891F3"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\31_experiments_refined.png",
+    "Hash": "B227FD9F4D62D050C2842A87E68C3B96DB12F2C82AD6A5AB57EC72CBA2B9A97B"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\31_experiments.png",
+    "Hash": "B3F1442C179E2944248DB9F4B7FD033BFBB6A0E082F996F16F449BDAA8A51420"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\32_orders.png",
+    "Hash": "8F5FA466616BF7A94C10D85735937AF9E0D1D228C2A32417DC34F46691C73622"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\33_submissions.png",
+    "Hash": "B15792C7055D0F3E9FA4D1CDFEE491FC1DEDDF4D027F0837A4093EA3B384D8B3"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\34_site_settings.png",
+    "Hash": "1C747D57276E3811A5350178C0D81F8259BCD44A6C1FBD5EAF0A7DD8E362139D"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\35_site_revisions.png",
+    "Hash": "B26DFF5946E5E3A36412376E3D0D58F73F21DE462EA74D04F255B2B1F7C8CEF3"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\36_forms_refined.png",
+    "Hash": "E93E0D191A3A39750416FB783B8E07D6A39323CC325DCE816F00E2FA865F1057"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\36_forms.png",
+    "Hash": "AECA5462786DF23DDAFF3AB8116E5D47ED7285218896FA49FC26349804D073DF"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\37_form_builder.png",
+    "Hash": "D868D35C242E45B4FCE91F83F0A69D757F222E542FA22F342B49E2BC764FA0B3"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\38_advanced_forms.png",
+    "Hash": "9F33B1C244A310A9628DA30E1ABEF3443832A0488B4EB72DDD49C364369CC47E"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\39_workflow_catalog_refined.png",
+    "Hash": "6C38B3C5FC10CDE5FCE3F27E78D5E9B209EFD195531160054DA62FD3A29FE902"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\39_workflow_catalog.png",
+    "Hash": "DFF188E292568200E87F9FF411D3D76CE8C499342A85DF84F679664AE9039EF1"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\40_dashboard_catalog.png",
+    "Hash": "DA9613768CA2BBCEDDF058E7BFC20BB79B16DCECBF14FC46F48C510D3BE09763"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\41_dashboard_builder_refined_v2.png",
+    "Hash": "240D5A2FC7B32011C9CEF18853F3DA3AF90A6D3AB928DD08F2E04C49F9A9CF2B"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\41_dashboard_builder_refined.png",
+    "Hash": "7508C811C20FADB8C9A71CA7DF3C85C3C28389907A556D3BE39496E0D955655B"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\41_dashboard_builder.png",
+    "Hash": "0EBDD23207081B27969833C62F205729A051FB973C41E077C38B270AD048395F"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\42_data_objects.png",
+    "Hash": "93AC6B4BCA54939B66F41228D2BA9ABE114F1638BF5747E6D10539A59D345D25"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\43_object_designer_refined.png",
+    "Hash": "ECF32FB835C6D6D139B344E37A2F6D3F875960446D2A5B38943C22E8BCA8F1F7"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\43_object_designer.png",
+    "Hash": "57B4E6E0F395E2CBA806861A6FE7C5AA52B37806E62D2DB615B08E8B38F63539"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\44_bpmn.png",
+    "Hash": "4148445C5EC17A2B430B58EF5CF7EF8A390F2DF059F4E557A2707D30D93B0152"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\45_rules_refined.png",
+    "Hash": "F1A64F37BE2F956EFB122E5EAB5DA5F2E4A149797365680672201206263B07F1"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\45_rules.png",
+    "Hash": "8E5D0EBC8BED5F419AB1CF725A8DC06FCFC0E06787E6A6A83A587A371AAD2E57"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\46_api_builder.png",
+    "Hash": "9749A2911570F7725D4CAE208F7B8138B2C42C437A33E293A59E0D9E10E2CCA7"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\47_logic.png",
+    "Hash": "B929E46C19ABD1C8BEECE154592F600552917164E67BC1AAF1367A2BCCD698B8"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\48_mobile_builder.png",
+    "Hash": "106A03C8F641CCC2AF443A015F56D329E8D041F8FAC843E1354C50CA122D0E38"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\49_app_customization.png",
+    "Hash": "E4AC477FF807305FD50E0E5C95165530EC2CB2E45043E5DF3B6CDFE5F54083CE"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\50_manage.png",
+    "Hash": "9E30E6C9ECFC9C7492B07CB8A60C89AD2C7D9A7D4C6BF4AF51BF47A91E3AAE67"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\51_governance_refined.png",
+    "Hash": "EBC67755809A202ED36997278BCB39F9909EA463646292D83F0844206BA1AD7F"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\51_governance.png",
+    "Hash": "5CAA4CE706A6757047EC84E6FA48299B0B98DA07ACCC3AE94DFED68C80572069"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\52_release_history.png",
+    "Hash": "C6D87862C98F620AF32C4A753F620EF42D377B97B9B6B9E866B2CDC39F5DEEEE"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\53_environments.png",
+    "Hash": "799E38F786EF57C6414F39FD028FB67033C4842DE632A40512404F87AD43E3A5"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\54_run_logs.png",
+    "Hash": "9308F3A3F9915782B7ABD0D27E8714C966264E6D7C6D2A7E90112E6F47B095AB"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\55_access_control_refined.png",
+    "Hash": "5E2B0B2D6190FBC5D3415AF580C30EB38BECA115DE2A3CB152ECD57C572B0BB0"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\55_access_control.png",
+    "Hash": "FD4BDB4CEDD2BFCB46267C11FF7E96504C004BBAA9937BC2E19847965D0C7A03"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\56_component_governance_refined.png",
+    "Hash": "50D8218A5EFAD2BE1CB4A69BAB53E6C1F7D8C332950D5CCE9270F1EDC4307F00"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\56_component_governance.png",
+    "Hash": "11212BF7EC3F2B49DC8652BDCD524B174F8D9E446F54822FE766706809BA035C"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\57_connectors.png",
+    "Hash": "F7B7F8C65AC47BCF8B415CA392B35982756C607FE376CDCEE83FEADDC99CF6BB"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\58_marketplace_packages.png",
+    "Hash": "1F497A470A9417163621493382BF0A30DE8D7E0E4B9D45A679B0A817144ADBC2"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\59_query_builder_refined_v2.png",
+    "Hash": "CDF46E53CF0414813C4276D69A2BACCA2F8A5BC77A67FFB983C209ACB0E5C86E"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\59_query_builder_refined.png",
+    "Hash": "481E38BAD7A65227D9A096E711EB786EA177689CCD5068618EFC47AE88ED9EFD"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\59_query_builder.png",
+    "Hash": "F71DF81400EBB0706E4AF01E806552422D235FECD0AD2E5FBF53B8EC5BD93A5D"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\60_widgets.png",
+    "Hash": "C60352AE8B5AB250F293DFFF3713896B3864450985C7F08783EA2C1E6F374D60"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\61_etl.png",
+    "Hash": "3EE92BDA412844E30ADD47D3ED03E8039BF4F550A460E8A9F3F862B771B0F4A3"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\62_theme_manager.png",
+    "Hash": "00EF1BE6DB038597DE9D9ECB744AB94D99AD3DFD056ABE9CDF2D2AD6DB618D1A"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\63_git.png",
+    "Hash": "443DD60297578571A3B3FC9ECD1C353DA84E1BFDC43326D2A6754AD1DB856749"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\64_mobile_export.png",
+    "Hash": "3CBD4E5CA647ED759737AD1BB7342D1698B1F9E2FE1A31FCB6D3FD089F62F975"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\65_sdk_refined.png",
+    "Hash": "27B4E35AF6FA1FD66CE127129FCC466F403026D5B20D88EB3BBB57285EE04362"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\65_sdk.png",
+    "Hash": "F2DB4C7562F3559BD638EFC340B84F9CEA022C90984261DB7CD1989AC0CF53D0"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\66_credentials_refined.png",
+    "Hash": "14C25BEA17A60DA3E71F70179184CE0FA92A25C1DD2130B97C87698CC342A708"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\66_credentials.png",
+    "Hash": "170E9B9846E03A2E06A8FD10BF286274D320A9614EF4D4995C22E195A261FF15"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\67_credential_lifecycle_refined.png",
+    "Hash": "FE68285D7E77B691ED2B156CE341637A8449F766E1C26CC54843C19ABD00769A"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\67_credential_lifecycle.png",
+    "Hash": "5647FA10C5D4E2CC98149CF08391CF3D523136D30D1C41D3A0827DF8592181AF"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\68_extensions.png",
+    "Hash": "457ACFCDCE5C239892D764FA483333269C7FE60CBEBE98AABAB6DDD974C7A677"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\69_extension_package_refined.png",
+    "Hash": "056001248DB05DE443F82499A22C237B98DA2968FFAB8A0BB7FE89FED3F411B0"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\69_extension_package.png",
+    "Hash": "613FF922290B8978CCA39BC9369936316AFAB119F97E52FCEB7AB139DA1A231A"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\70_sandbox.png",
+    "Hash": "280CF07BD7780C4D9453C3AEC0CBBF5F0FB000EFDC3C9DAA2373DF8BF198AEFB"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\71_diagnostics.png",
+    "Hash": "18598EC8453C392C094F69E6F22924D59641BCA6A078347823BD6030BF2E4FDC"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\72_resource_updates_refined.png",
+    "Hash": "7B478348CF0693F9A841D5326C9D3D087C975FE35A57B2E4086FF903EEF1779A"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\72_resource_updates.png",
+    "Hash": "5A47FA751F84A2861483470C90677C5B4A61D56AA04B6A2F73B676F0331CBC56"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\73_auth_states_refined.png",
+    "Hash": "461B1111F850D0403CCBC94BB90F65E1687179C6D2BDB6F916EEB1519928110D"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\73_auth_states.png",
+    "Hash": "8206B44959AD6D555947AB763AD48E78B6A07FACBEB4EB30A292AAC0B9893A65"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\74_system_states_refined.png",
+    "Hash": "76E21BD2B15148BE16FCEDD4178FCB682D3936A30F7D989664B51F65D49627E6"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\74_system_states.png",
+    "Hash": "3B9ABD643F9D86EC9EC948915CA1ACC53ACD4CC89464E76519624A003DA2415D"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\75_project_settings_refined.png",
+    "Hash": "61B8A43880999D30EF5F9C51B4E27D50A56E98460F6FE2555809E5E8D2184AEA"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\75_project_settings.png",
+    "Hash": "A42CBF3BF9941135CB043AC45A7A7D1BC17FB799638A6A0A1F548C769814C0F1"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\76_workspace_utilities_refined.png",
+    "Hash": "2311E1804461DE2097311583155B710BBC6CE365676C0C10E22570EA35C23264"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\76_workspace_utilities.png",
+    "Hash": "1AD5434F8CC83AAE869A470050A0E6C9AD6724F6F977A8178A60A095D2167628"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\BASELINE_HASHES.json",
+    "Hash": "1ED5883705532C2591424C5E8C10FCDA2AA1BCF4094CB355D6B5F50E9E5BA9B1"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\COVERAGE.json",
+    "Hash": "FE82116DE3AC27E2122E7538822B870734CA3A06AC1FB3E544146ADC61A56DD6"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\COVERAGE.md",
+    "Hash": "D5CC2CCA886B850CC7E28DCC42FD7F33543AE337412610D642830A7591E7FC4E"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\gallery.html",
+    "Hash": "D1A2209009D925AE1995E8E3876164B50F77996925A3FC1BFD195AF450D8E878"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\GENERATION_PROVENANCE.json",
+    "Hash": "9D073ED77EFFF82219193B744D4A9926FE31260EAAD66B601BA00066A936AF02"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\INTERACTION_CONTRACT.md",
+    "Hash": "7E9A12AFDA026543BC2B81BF483D49D7352EACDA3E5B4DE26D85CA9EF9C1359B"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\PLAN.md",
+    "Hash": "98187723F4DFFBF823EAE902AE3C203D406B4C1F38A4EABCD17F6DFE34A53FC4"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\PROMPTS.md",
+    "Hash": "A093AB047908441D346ECD9AF702264B48F7DC450E900C69DF1962C32C72D880"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\README.md",
+    "Hash": "78C840300D01AF11BCE459A287A5716896D0D7FC99073C51650F1FC6DCF0A471"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\REVIEW_NOTES.md",
+    "Hash": "8A56F4CD84CC96A4F7B56C290936C3558218214CFA0B54FC35FC079FB285F0D4"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\SCREEN_INVENTORY.json",
+    "Hash": "8EB11A602D66C974C4DF57AD83F649FE56EBF2641836351DD45941A2D252FED5"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\SOURCE_INVENTORY.json",
+    "Hash": "99FCF59B7FE6292082589CDD41F520763E0D6589591E59B9FD657745DE0612CA"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\STATE_COVERAGE.md",
+    "Hash": "E1ED4C1001313C52F5D6F737243F5EED7C3175B42AA3506AC076F5C402C3D8B2"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\VERIFICATION_DATA.json",
+    "Hash": "16C235F236039C67DBC6C386F45D2C3DB5EC437738525BAE80388185D880DC73"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\VERIFICATION.md",
+    "Hash": "5C3BD1F53EB7AA15D5C85622928ED85D1EDE5D4AE0D5BD8E03F3A6DF65FEA303"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v2-complete\\verify-designs.ps1",
+    "Hash": "EA278A710CAB289CD2FFF9F235CECFC3EE7747A8FF6A97B4E1BD7B8A0118D997"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance\\01_executive_dashboard.jpg",
+    "Hash": "B1379BED1FD98BADCCFFC2FE7E5BBDEBC0EF1061095FF1C68E5C573B5AC61030"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance\\02_general_ledger.jpg",
+    "Hash": "C47CB6BE48C828703C797DF0C65F05B5A1BB543C606BA4A03555CF48E1DB3AFF"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance\\03_accounts_receivable.jpg",
+    "Hash": "FBA2AE53F2513E690E43346741EFAFC2C719DE7427D3AF9DD81A04CBC9813107"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance\\04_accounts_payable.jpg",
+    "Hash": "160D7FD241ACDC7018DFC4C047506B96DF2A01D78EA36275C50B8A71DE047D9F"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance\\05_banking_treasury.jpg",
+    "Hash": "E8CEC11AA7566575990391D8545D5E44BE5A3B0F3F2AD92C3DE21CCA72A875E0"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance\\06_fixed_assets.jpg",
+    "Hash": "CB371154C614679F6F86E5142B29681A1552C3A2BC9B461F9C63EAE76EAD991E"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance\\07_tax_compliance.jpg",
+    "Hash": "0FB23EE92681425F4B9C5088CA93EC3E64066926C6538ECBCE057B9A8F2E057E"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance\\08_budget_planning.jpg",
+    "Hash": "4043CDCB595283C51A6447C20D9E8191A6DBAC8DDA04CB5F7478B4A711C7356C"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance\\09_financial_reports.jpg",
+    "Hash": "77A9F638B909F1093E6B8960B31CF26438A406C48B9323942A92D7BAA1674D64"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance\\10_financial_settings.jpg",
+    "Hash": "9FD23E9E9F79E8276E9F2E2A5CA2F08B8B33EC94CBE2A8E5EBCCBE458719A3A7"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\01_complete_shell.png",
+    "Hash": "9921316AE859F4ED3B349E19580C91CA63CDDA5C05467FFA813B3B2192CE51EA"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\02_sidebar_states.png",
+    "Hash": "13A657497CC7AB571F7F9820693CAE0FFA81F327195BA233E38A571F2FFB4164"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\03_tabs_and_nav_states.png",
+    "Hash": "5D6AF267155600D39D4D7BA4991A2B4564ED2FC2E20B648100B9764BB9320905"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\PROMPTS.md",
+    "Hash": "430ED15DDAAAEC59FC53F55A590A6881E999FC2BC898D86DE33FD4BAE569A207"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\README.md",
+    "Hash": "CB2CD8A9BAAE5175FFA42C16F254749ED4348B5D3ED67AC69A9CE9DBDD113F86"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\SCREENS_INDEX.md",
+    "Hash": "7B572AA58B6E752249C9EE9C4A71C63B838453EFD8AADA30C71A0AD43779ECEB"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\SCREENS_PROMPTS.md",
+    "Hash": "69708CD1CB6C2C65FEDD10DE438268827D64473B81AD29A31A8DABD12CDBFC1C"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\screens\\01_executive_dashboard.png",
+    "Hash": "AB9B9D0B6616B3EA2C08F7E7B85D69D504D7D6672C8A6E23397AC0799CB1E595"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\screens\\02_general_ledger.png",
+    "Hash": "9921316AE859F4ED3B349E19580C91CA63CDDA5C05467FFA813B3B2192CE51EA"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\screens\\03_accounts_receivable.png",
+    "Hash": "6050E546DB3549AEFD9C0BEBEF46E85262A945BB48B91095811BC81FE4AC84B5"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\screens\\04_accounts_payable.png",
+    "Hash": "F00FC6E697FE8D045D555888E1F077A8847786FC7C49E499549EDF15C6EE8106"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\screens\\05_banking_treasury.png",
+    "Hash": "BF6C2C7DBAFEC2B7B484E12F58D1F78E5E5FFD57EF129973003009B060FACBBA"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\screens\\06_fixed_assets.png",
+    "Hash": "19A22DBD34A7B3767855F72CA472B95C5AAB99D6266FA130308ADC8F65F9A311"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\screens\\07_tax_compliance.png",
+    "Hash": "EA78B8B2C078A46F62F4DC1E416248CC0763CB4EF369A789067C99D25FEEC896"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\screens\\08_budget_planning.png",
+    "Hash": "ECC2F79F954408C1047D33BE6854B5108EEFBC074CBAD62752BCFAEB6C3DCBDE"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\screens\\09_financial_reports.png",
+    "Hash": "D5865B43602C4A06200BC674279D560690DC5319F7D4CB513FA97A5249FC8085"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\screens\\10_financial_settings.png",
+    "Hash": "2D6D81F30AC316516BE828E17BF04573DE1F49F8730540EF51EFD4AF0513057E"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance-strata-light-v1\\01_executive_dashboard.png",
+    "Hash": "DFBCEC855FD223A4CF10875B50D21D00544D962414ABB47B583CA6C45515ADCD"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance-strata-light-v1\\02_general_ledger.png",
+    "Hash": "4ED670C870BCBE429E2ED95A193ED7B9D0D0F75E3EA78B590D514AA850466AB4"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance-strata-light-v1\\03_accounts_receivable_refined.png",
+    "Hash": "6CB2BD1E00EC7E38D9746E6A3ACA247326C6D1E417B7F23FFAC77D939B5AC996"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance-strata-light-v1\\03_accounts_receivable.png",
+    "Hash": "7BB682F20E8CCA4C767F1583062C5C202BD6BA652506EB39890303D5A69E38C9"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance-strata-light-v1\\04_accounts_payable.png",
+    "Hash": "1A99482FD7F3ADEC07F0253AA25712CB69B1C8D1CA8627EABAFF4E60FC94352B"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance-strata-light-v1\\05_banking_treasury.png",
+    "Hash": "C5F58C854B6386C9CE5A3A7EC9D0343E994C20A4B19F52BF5763131570FAA935"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance-strata-light-v1\\06_fixed_assets.png",
+    "Hash": "03D0E78F82F8662F3FD7F27618A174664651B7F08B58A66127DAE531D7B93659"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance-strata-light-v1\\07_tax_compliance_refined.png",
+    "Hash": "F78400D063EEAC724D56CD16201C81D1CF48C3BBDF835738E7C3F003DDDF97FF"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance-strata-light-v1\\07_tax_compliance.png",
+    "Hash": "8CC444BDF12B415A94854145A57D674CFEEEF3A7A9FB986C348873FAC8D6A7D8"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance-strata-light-v1\\08_budget_planning_refined.png",
+    "Hash": "DA5A14E2E14C4149A1BA6EA841EE8E6A8BB32E5995423D356AF62E1F8F7586CD"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance-strata-light-v1\\08_budget_planning.png",
+    "Hash": "D586E406D574E396EA18197955B8351C77605630D7A53E98E57606BC0AC3CD34"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance-strata-light-v1\\09_financial_reports.png",
+    "Hash": "DC08E58DD5B51D6BA6F22B41A57D66113DC4E284217BBD55E3E53A76CC5A5278"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance-strata-light-v1\\10_financial_settings.png",
+    "Hash": "A3EB2229FAAA593D174A3B6FEC08C1913FBE88F1DD2CF31A89B85C1A6D1B6629"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance-strata-light-v1\\PROMPTS.md",
+    "Hash": "C487D473A32F32F99EBD8A9DD9BFD330AB82A52B1C12D4ED47B4CE22B3DA7216"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\finance-strata-light-v1\\README.md",
+    "Hash": "C458ACEBD02F4D56FA1EF47917E0DDB44114B0FDC9EEBFD3602A03CBBA8A9EC1"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\01_first_visit.png",
+    "Hash": "430027D8473B31855CD187AF5BD67D6525A4595CC68FE5321104861A9FAFB6D0"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\02_daily_home.png",
+    "Hash": "2F8DB15D2852C11C44DD42531881C891514D9A83F6E70FBB9EA91861E5DE8CC9"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\03_application_library.png",
+    "Hash": "5641EDB328A4A7A81C19E4266DBBE3AD78DB5FCAACE720EA3607AB825F661CF7"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\04_platform_directory.png",
+    "Hash": "42D1F24D9CA86DDF8D6CDCB2C797A2E00E7FF51271E9DD287A16E6093F19C220"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\05_notifications_refined.png",
+    "Hash": "0BC4DC3104FBDBB1098309F4E7E3324E4A4AD3590B87E3D8DF206416CE967270"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\05_notifications.png",
+    "Hash": "7AC458FBFAEBE2B644FCFF67F433689E81CC64B16957CF854AE90F984050433F"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\06_profile_menu.png",
+    "Hash": "BA29F4197CF2D09ECBDAF2983814D3B921EF2EF02BD83659522E731D974FA18A"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\07_account_overview.png",
+    "Hash": "398AE3D228F8513BE51848913D2BF8468DB1A449727C17E467C151E5D2773A7E"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\08_personal_information.png",
+    "Hash": "96960E7B13038C5466EA99E4E5CF0218A71EFDE3E2EBD641F39A0D9A24BD95DA"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\09_signin_recovery.png",
+    "Hash": "3F17D1CAB2037931EAE8773E61912577EDC7D4180255F900A3A40D857D617029"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\10_devices_activity.png",
+    "Hash": "9384118418A1DEA572965AB93E5D2916E9E440CBD375C9FC3F5565571858AD83"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\11_organizations_refined.png",
+    "Hash": "1D71DC701A38E74838980EAE33526B72F51F69A2DF472CAB581575CC94E40271"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\11_organizations.png",
+    "Hash": "A03D4B9DADA00A332CE41EBD7C4ED434BAF732083AEB589875558EEFFD8F3CEB"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\12_connected_privacy_refined.png",
+    "Hash": "F16B7D87E4E5D8BC5C0DB36F13E20809027E2811F0622B08646D536DF4F711FB"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\12_connected_privacy.png",
+    "Hash": "79CB159858CCCBBF40902C784BDAAF43EB4FE497EF17D5DA27C56866B46EA919"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\13_preferences.png",
+    "Hash": "3C6DDA59632E32F3A437618700C5C4E3B60C6AEDE64DAE7236235A9C29240FC2"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\14_search_help.png",
+    "Hash": "10BC1028F850C684CC82A58230D27402163C250B6129A3771500B9ADDEADC34D"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\DESIGN_PLAN.md",
+    "Hash": "3E176E33EE5D044CFDB667D5EDE988EA06259DA740C6CD8B7F971BFC53D38E06"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\PROMPTS.md",
+    "Hash": "900D9B97457833951A5AE01164A302A9FE62146E158B70709D39F2C0B50319CF"
+  },
+  {
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\README.md",
+    "Hash": "B4ABEAD123813CDFD4BF4F45E9F12BF7701E3162D1F0C1129E075370669969E0"
+  }
+]

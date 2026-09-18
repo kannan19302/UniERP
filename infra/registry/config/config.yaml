@@ -1,0 +1,46 @@
+# UniERP package registry (Verdaccio).
+#
+# PLATFORM_ARCHITECTURE.md § 4.2 makes every layer boundary a *published*
+# artifact, so the split needs a registry the way it needs a database. This is
+# that registry, self-hosted alongside the other datastores and backed by a
+# named volume, so it survives restarts exactly as Postgres does.
+#
+# § 10 requires "dependency confusion is closed by scope reservation
+# (@kannan19302, @unierp) and a registry allowlist in every .npmrc" — the scoped
+# blocks below are that reservation: @kannan19302/* and @unierp/* are served ONLY from
+# here and are never proxied upstream, so a public package published under one
+# of our scopes can never shadow an internal one.
+storage: /verdaccio/storage
+auth:
+  htpasswd:
+    file: /verdaccio/storage/htpasswd
+    # A finite limit ALLOWS registration; -1 is Verdaccio's way of disabling it.
+    max_users: 100
+
+uplinks:
+  npmjs:
+    url: https://registry.npmjs.org/
+    cache: true
+
+packages:
+  # Reserved scopes — never proxied. This is the dependency-confusion defence.
+  '@kannan19302/*':
+    access: $all
+    publish: $authenticated
+    unpublish: $authenticated
+  '@unierp/*':
+    access: $all
+    publish: $authenticated
+    unpublish: $authenticated
+  '**':
+    access: $all
+    proxy: npmjs
+
+# Keep published tarballs; a train pins exact versions (§ 4.5 M1) and a rollback
+# is the previous manifest, which is only true if those versions still exist.
+max_body_size: 100mb
+publish:
+  allow_offline: true
+
+log: { type: stdout, format: pretty, level: warn }
+listen: 0.0.0.0:4873

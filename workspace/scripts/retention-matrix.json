@@ -1,0 +1,61 @@
+{
+  "comment": "Track H.4 platform retention matrix — single source for automated enforcement (scripts/enforce-retention.mjs). Business documents are OUT of scope here: they follow G.4 soft-delete + audit and H.1 erasure. Days are platform defaults; a stricter tenant-level GDPR retention record (gdpr.service.ts) wins when shorter.",
+  "classes": [
+    {
+      "dataClass": "notifications-read",
+      "model": "notification",
+      "timestampField": "createdAt",
+      "retentionDays": 180,
+      "where": { "status": { "in": ["READ", "ARCHIVED"] } },
+      "basis": "operational convenience data; unread notifications are never auto-deleted"
+    },
+    {
+      "dataClass": "audit-log",
+      "model": "auditLog",
+      "timestampField": "createdAt",
+      "retentionDays": 730,
+      "where": {},
+      "basis": "2 years default; extend per-tenant for SOX/ISO before shortening anything"
+    },
+    {
+      "dataClass": "change-history",
+      "model": "changeHistory",
+      "timestampField": "createdAt",
+      "retentionDays": 730,
+      "where": {},
+      "basis": "field-level change trail, same clock as audit-log"
+    },
+    {
+      "dataClass": "webhook-delivery-logs",
+      "model": "webhookDeliveryLog",
+      "timestampField": "createdAt",
+      "retentionDays": 90,
+      "where": {},
+      "basis": "transport diagnostics"
+    },
+    {
+      "dataClass": "expired-sessions",
+      "model": "userSession",
+      "timestampField": "expiresAt",
+      "retentionDays": 30,
+      "where": {},
+      "basis": "sessions 30d past expiry; live sessions never matched (cutoff is on expiresAt)"
+    },
+    {
+      "dataClass": "terminal-background-jobs",
+      "model": "backgroundJob",
+      "timestampField": "createdAt",
+      "retentionDays": 90,
+      "where": { "status": { "in": ["COMPLETED", "FAILED", "CANCELLED"] } },
+      "basis": "job bookkeeping in terminal states only; PENDING/RUNNING never touched"
+    },
+    {
+      "dataClass": "provider-telemetry-samples",
+      "model": "telemetrySample",
+      "timestampField": "observedAt",
+      "retentionDays": 90,
+      "where": {},
+      "basis": "Track M (M26) — high-volume utilisation time-series, operational diagnostics only, same class as audit-log's own precedent for high-volume data; RetentionScheduleService (unierp-api) enforces the identical dataClass/model/timestampField/retentionDays declared here and certifies each run"
+    }
+  ]
+}

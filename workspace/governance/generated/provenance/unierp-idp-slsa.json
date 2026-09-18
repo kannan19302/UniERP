@@ -1,0 +1,52 @@
+{
+  "_type": "https://in-toto.io/Statement/v1",
+  "subject": [
+    {
+      "name": "ghcr.io/kannan19302/unierp/idp",
+      "digest": {
+        "sha256": "97c48fe00b59f7715344795dbef3756e315bfda305c80ba7d3f174055d4adae7"
+      }
+    }
+  ],
+  "predicateType": "https://slsa.dev/provenance/v1",
+  "predicate": {
+    "buildDefinition": {
+      "buildType": "https://unierp.org/build/container/v1",
+      "externalParameters": {
+        "sourceUri": "git+https://github.com/kannan19302/UniERP",
+        "commitSha": "0cc3003b3968c28d220f7ad4521bf0b0923093df",
+        "dockerfile": "docker/Dockerfile.idp"
+      },
+      "internalParameters": {
+        "runner": "github-hosted-ubuntu-22.04",
+        "builder": "docker/buildx:v0.12",
+        "cosignVersion": "v2.2.3"
+      },
+      "resolvedDependencies": [
+        {
+          "uri": "git+https://github.com/kannan19302/UniERP#idp",
+          "digest": {
+            "sha1": "0cc3003b3968c28d220f7ad4521bf0b0923093df"
+          }
+        }
+      ]
+    },
+    "runDetails": {
+      "builder": {
+        "id": "https://github.com/kannan19302/unierp-workspace/.github/workflows/reusable-ci.yml"
+      },
+      "metadata": {
+        "invocationId": "run-1788442045558",
+        "startedOn": "2026-09-03T13:27:25.557Z",
+        "finishedOn": "2026-09-03T13:27:25.557Z"
+      },
+      "byproducts": [
+        {
+          "name": "cosign.signature",
+          "mediaType": "application/vnd.dev.sigstore.bundle+json",
+          "signaturePolicy": "Sigstore-Fulcio-Rekor-Keyless"
+        }
+      ]
+    }
+  }
+}

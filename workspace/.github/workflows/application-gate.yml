@@ -1,0 +1,66 @@
+# Reusable: application gate (lint, typecheck, test, build, secrets, layer)
+#
+# Called by owner repositories. Each required command must exist and pass; this workflow never converts a missing
+# test or build into a green result.
+name: Application Gate
+
+on:
+  workflow_call:
+    inputs:
+      node-version:
+        description: Node version
+        type: string
+        default: "22"
+      run-build:
+        description: Whether to execute pnpm build
+        type: boolean
+        default: true
+      run-test:
+        description: Whether to execute pnpm test
+        type: boolean
+        default: true
+
+jobs:
+  app-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+
+      - uses: pnpm/action-setup@f40ffcd9367d9f12939873eb1018b921a783ffaa
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: ${{ inputs.node-version }}
+          cache: pnpm
+
+      - name: Check out workspace scripts
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: kannan19302/unierp-workspace
+          path: .workspace-scripts
+
+      - name: Secret scan
+        run: node .workspace-scripts/scripts/ci/check-secrets.mjs --all
+
+      - name: Layer rule
+        run: node .workspace-scripts/scripts/check-layer.mjs
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Typecheck
+        run: |
+          node -e "const p=require('./package.json'); if (!p.scripts?.typecheck) { console.error('Missing required package script: typecheck'); process.exit(1) }"
+          pnpm typecheck
+
+      - name: Test
+        if: inputs.run-test
+        run: |
+          node -e "const p=require('./package.json'); if (!p.scripts?.test) { console.error('Missing required package script: test'); process.exit(1) }"
+          pnpm test
+
+      - name: Build
+        if: inputs.run-build
+        run: |
+          node -e "const p=require('./package.json'); if (!p.scripts?.build) { console.error('Missing required package script: build'); process.exit(1) }"
+          pnpm build

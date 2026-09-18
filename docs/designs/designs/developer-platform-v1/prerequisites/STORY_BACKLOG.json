@@ -1,0 +1,3362 @@
+{
+  "date": "2026-09-08",
+  "status": "Proposed; implementation Not started",
+  "stories": [
+    {
+      "id": "FND-01",
+      "epic": "FND",
+      "title": "Authority and readiness continuation",
+      "ownerRole": "Governance owner",
+      "priority": "P0",
+      "estimate": "Team refinement required",
+      "dependencies": [],
+      "acceptance": [
+        "Revalidate accepted audit and exact authorized P0 scope; record owner decision before broad implementation",
+        "Required checks have revision-bound evidence; no required Not run",
+        "Owning authority and traceability updated where behavior changes"
+      ],
+      "status": "Not started",
+      "screenId": null
+    },
+    {
+      "id": "FND-02",
+      "epic": "FND",
+      "title": "Project and portability alignment",
+      "ownerRole": "Metadata architect",
+      "priority": "P0",
+      "estimate": "Team refinement required",
+      "dependencies": [
+        "FND-01"
+      ],
+      "acceptance": [
+        "Preserve App/Site XOR and align contracts/registry with accepted portability matrix",
+        "Required checks have revision-bound evidence; no required Not run",
+        "Owning authority and traceability updated where behavior changes"
+      ],
+      "status": "Not started",
+      "screenId": null
+    },
+    {
+      "id": "FND-03",
+      "epic": "FND",
+      "title": "Published contracts and ownership",
+      "ownerRole": "Contract owner",
+      "priority": "P0",
+      "estimate": "Team refinement required",
+      "dependencies": [
+        "FND-02"
+      ],
+      "acceptance": [
+        "Resolve exact API/event/SDK permissions and handoffs with consumer proof",
+        "Required checks have revision-bound evidence; no required Not run",
+        "Owning authority and traceability updated where behavior changes"
+      ],
+      "status": "Not started",
+      "screenId": null
+    },
+    {
+      "id": "FND-04",
+      "epic": "FND",
+      "title": "Disposable environment and fixtures",
+      "ownerRole": "Environment owner",
+      "priority": "P0",
+      "estimate": "Team refinement required",
+      "dependencies": [
+        "FND-01"
+      ],
+      "acceptance": [
+        "Provision isolated dependencies and approved test harness without shared mutation",
+        "Required checks have revision-bound evidence; no required Not run",
+        "Owning authority and traceability updated where behavior changes"
+      ],
+      "status": "Not started",
+      "screenId": null
+    },
+    {
+      "id": "FND-05",
+      "epic": "FND",
+      "title": "Tenant authorization and RLS baseline",
+      "ownerRole": "Security/Data owners",
+      "priority": "P0",
+      "estimate": "Team refinement required",
+      "dependencies": [
+        "FND-03",
+        "FND-04"
+      ],
+      "acceptance": [
+        "Prove tenant A/B/no-context with NOBYPASSRLS and restricted principal",
+        "Required checks have revision-bound evidence; no required Not run",
+        "Owning authority and traceability updated where behavior changes"
+      ],
+      "status": "Not started",
+      "screenId": null
+    },
+    {
+      "id": "FND-06",
+      "epic": "FND",
+      "title": "Artifact revision and package lifecycle",
+      "ownerRole": "Developer backend owner",
+      "priority": "P0",
+      "estimate": "Team refinement required",
+      "dependencies": [
+        "FND-03",
+        "FND-05"
+      ],
+      "acceptance": [
+        "Prove concurrency, idempotency, immutable package and installation semantics",
+        "Required checks have revision-bound evidence; no required Not run",
+        "Owning authority and traceability updated where behavior changes"
+      ],
+      "status": "Not started",
+      "screenId": null
+    },
+    {
+      "id": "FND-07",
+      "epic": "FND",
+      "title": "Sandbox and supply-chain qualification",
+      "ownerRole": "Runtime/Security owners",
+      "priority": "P0",
+      "estimate": "Team refinement required",
+      "dependencies": [
+        "FND-03",
+        "FND-04",
+        "FND-05"
+      ],
+      "acceptance": [
+        "Prove escape prevention, bounded capabilities, signatures and revocation",
+        "Required checks have revision-bound evidence; no required Not run",
+        "Owning authority and traceability updated where behavior changes"
+      ],
+      "status": "Not started",
+      "screenId": null
+    },
+    {
+      "id": "FND-08",
+      "epic": "FND",
+      "title": "Strata shell and accessibility foundation",
+      "ownerRole": "Frontend/Accessibility owners",
+      "priority": "P0",
+      "estimate": "Team refinement required",
+      "dependencies": [
+        "FND-02",
+        "FND-03"
+      ],
+      "acceptance": [
+        "Prove scoped tabs, token conformance, keyboard and screen-reader shell behavior",
+        "Required checks have revision-bound evidence; no required Not run",
+        "Owning authority and traceability updated where behavior changes"
+      ],
+      "status": "Not started",
+      "screenId": null
+    },
+    {
+      "id": "FND-09",
+      "epic": "FND",
+      "title": "App vertical pilot",
+      "ownerRole": "App engineering owner",
+      "priority": "P0",
+      "estimate": "Team refinement required",
+      "dependencies": [
+        "FND-06",
+        "FND-07",
+        "FND-08"
+      ],
+      "acceptance": [
+        "Complete App create-author-test-preview-package-export/import lifecycle",
+        "Required checks have revision-bound evidence; no required Not run",
+        "Owning authority and traceability updated where behavior changes"
+      ],
+      "status": "Not started",
+      "screenId": null
+    },
+    {
+      "id": "FND-10",
+      "epic": "FND",
+      "title": "Site vertical pilot",
+      "ownerRole": "Tenant Sites/Web Studio owners",
+      "priority": "P0",
+      "estimate": "Team refinement required",
+      "dependencies": [
+        "FND-06",
+        "FND-07",
+        "FND-08"
+      ],
+      "acceptance": [
+        "Complete Site lifecycle and anonymous/private boundary with portable rebind",
+        "Required checks have revision-bound evidence; no required Not run",
+        "Owning authority and traceability updated where behavior changes"
+      ],
+      "status": "Not started",
+      "screenId": null
+    },
+    {
+      "id": "FND-11",
+      "epic": "FND",
+      "title": "Release and recovery rehearsal",
+      "ownerRole": "SRE/QA owners",
+      "priority": "P0",
+      "estimate": "Team refinement required",
+      "dependencies": [
+        "FND-09",
+        "FND-10"
+      ],
+      "acceptance": [
+        "Prove same-bundle promotion, independent approval, failed activation and isolated restore",
+        "Required checks have revision-bound evidence; no required Not run",
+        "Owning authority and traceability updated where behavior changes"
+      ],
+      "status": "Not started",
+      "screenId": null
+    },
+    {
+      "id": "FND-12",
+      "epic": "FND",
+      "title": "Gate and handoff qualification",
+      "ownerRole": "Engineering/QA owners",
+      "priority": "P0",
+      "estimate": "Team refinement required",
+      "dependencies": [
+        "FND-11"
+      ],
+      "acceptance": [
+        "Resolve test discovery/lint gaps, inspect all required evidence and obtain continuation decision",
+        "Required checks have revision-bound evidence; no required Not run",
+        "Owning authority and traceability updated where behavior changes"
+      ],
+      "status": "Not started",
+      "screenId": null
+    },
+    {
+      "id": "DEV-001",
+      "screenId": "DP-001",
+      "originId": 73,
+      "epic": "EP-01",
+      "requirement": "DP-RQ-01",
+      "title": "Sign-in handoff and callback recovery",
+      "userStory": "As an authorized builder, I can complete hosted sign-in callback and recover errors so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Complete hosted sign-in callback and recover errors using published contracts and real services",
+        "Invalid callback or expired session cannot establish context",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Invalid callback or expired session cannot establish context",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-002",
+      "screenId": "DP-002",
+      "originId": 77,
+      "epic": "EP-01",
+      "requirement": "DP-RQ-01",
+      "title": "Developer getting started",
+      "userStory": "As an authorized builder, I can start guided App/Site/library creation so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Start guided App/Site/library creation using published contracts and real services",
+        "Independent library resource is not a third project kind",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Independent library resource is not a third project kind",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-003",
+      "screenId": "DP-003",
+      "originId": 1,
+      "epic": "EP-01",
+      "requirement": "DP-RQ-01",
+      "title": "Projects workspace",
+      "userStory": "As an authorized builder, I can find and resume a scoped project so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Find and resume a scoped project using published contracts and real services",
+        "No access to another tenant project through search or recent tabs",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: No access to another tenant project through search or recent tabs",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-004",
+      "screenId": "DP-004",
+      "originId": 2,
+      "epic": "EP-01",
+      "requirement": "DP-RQ-01",
+      "title": "Create project",
+      "userStory": "As an authorized builder, I can create exactly one App or Site project so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Create exactly one App or Site project using published contracts and real services",
+        "Reject invalid dual app/site ownership without partial creation",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Reject invalid dual app/site ownership without partial creation",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-005",
+      "screenId": "DP-005",
+      "originId": 3,
+      "epic": "EP-01",
+      "requirement": "DP-RQ-01",
+      "title": "Project overview",
+      "userStory": "As an authorized builder, I can inspect project resources and resume recent work so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Inspect project resources and resume recent work using published contracts and real services",
+        "Distinguish missing bindings from a ready runtime",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Distinguish missing bindings from a ready runtime",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-006",
+      "screenId": "DP-006",
+      "originId": 78,
+      "epic": "EP-01",
+      "requirement": "DP-RQ-01",
+      "title": "Project work items",
+      "userStory": "As an authorized builder, I can link work items to changes and acceptance so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Link work items to changes and acceptance using published contracts and real services",
+        "Ready status cannot stand in for pending test evidence",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Ready status cannot stand in for pending test evidence",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-007",
+      "screenId": "DP-007",
+      "originId": 17,
+      "epic": "EP-01",
+      "requirement": "DP-RQ-01",
+      "title": "Applications catalog",
+      "userStory": "As an authorized builder, I can filter and open application projects so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Filter and open application projects using published contracts and real services",
+        "Empty search differs from no applications",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Empty search differs from no applications",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-008",
+      "screenId": "DP-008",
+      "originId": 18,
+      "epic": "EP-01",
+      "requirement": "DP-RQ-01",
+      "title": "Websites catalog",
+      "userStory": "As an authorized builder, I can filter and open website projects so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Filter and open website projects using published contracts and real services",
+        "Inaccessible site data is not exposed",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Inaccessible site data is not exposed",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-009",
+      "screenId": "DP-009",
+      "originId": 19,
+      "epic": "EP-01",
+      "requirement": "DP-RQ-01",
+      "title": "Create application",
+      "userStory": "As an authorized builder, I can create an App project with required metadata so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Create an App project with required metadata using published contracts and real services",
+        "Repeated create command creates one project only",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Repeated create command creates one project only",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-010",
+      "screenId": "DP-010",
+      "originId": 20,
+      "epic": "EP-01",
+      "requirement": "DP-RQ-01",
+      "title": "Create website and templates",
+      "userStory": "As an authorized builder, I can create a Site project from a permitted template so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Create a Site project from a permitted template using published contracts and real services",
+        "Unlicensed or incompatible template blocks creation",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Unlicensed or incompatible template blocks creation",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-011",
+      "screenId": "DP-011",
+      "originId": 6,
+      "epic": "EP-01",
+      "requirement": "DP-RQ-01",
+      "title": "Standalone builders",
+      "userStory": "As an authorized builder, I can start a supported independent library builder so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Start a supported independent library builder using published contracts and real services",
+        "Disallow owner scope combinations excluded by accepted matrix",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Disallow owner scope combinations excluded by accepted matrix",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-012",
+      "screenId": "DP-012",
+      "originId": 7,
+      "epic": "EP-01",
+      "requirement": "DP-RQ-01",
+      "title": "Organization library",
+      "userStory": "As an authorized builder, I can search and open organization library artifacts so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Search and open organization library artifacts using published contracts and real services",
+        "Foreign tenant artifacts never appear",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Foreign tenant artifacts never appear",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-013",
+      "screenId": "DP-013",
+      "originId": 21,
+      "epic": "EP-02",
+      "requirement": "DP-RQ-02",
+      "title": "Application workspace",
+      "userStory": "As an authorized builder, I can open App resources through its workspace so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Open App resources through its workspace using published contracts and real services",
+        "Project ID and app ID mismatch is denied",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Project ID and app ID mismatch is denied",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-014",
+      "screenId": "DP-014",
+      "originId": 22,
+      "epic": "EP-02",
+      "requirement": "DP-RQ-02",
+      "title": "Website workspace",
+      "userStory": "As an authorized builder, I can open Site authoring resources through its workspace so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Open Site authoring resources through its workspace using published contracts and real services",
+        "Site publication authority stays with Tenant Sites",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Site publication authority stays with Tenant Sites",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-015",
+      "screenId": "DP-015",
+      "originId": 9,
+      "epic": "EP-02",
+      "requirement": "DP-RQ-02",
+      "title": "Link library resource to project",
+      "userStory": "As an authorized builder, I can review and install a library resource in a project so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Review and install a library resource in a project using published contracts and real services",
+        "Missing capabilities or dependencies block installation",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Missing capabilities or dependencies block installation",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-016",
+      "screenId": "DP-016",
+      "originId": 72,
+      "epic": "EP-02",
+      "requirement": "DP-RQ-02",
+      "title": "Link confirmation and dependency updates",
+      "userStory": "As an authorized builder, I can confirm library link and dependency update so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Confirm library link and dependency update using published contracts and real services",
+        "Upgrade cannot silently change pinned consumers",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Upgrade cannot silently change pinned consumers",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-017",
+      "screenId": "DP-017",
+      "originId": 93,
+      "epic": "EP-02",
+      "requirement": "DP-RQ-02",
+      "title": "Project export and import dry run",
+      "userStory": "As an authorized builder, I can dry-run portable import with explicit mappings so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Dry-run portable import with explicit mappings using published contracts and real services",
+        "No destination writes until all required checks pass",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: No destination writes until all required checks pass",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-018",
+      "screenId": "DP-018",
+      "originId": 94,
+      "epic": "EP-02",
+      "requirement": "DP-RQ-02",
+      "title": "Library package release and overlays",
+      "userStory": "As an authorized builder, I can publish managed library package and review overlays so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Publish managed library package and review overlays using published contracts and real services",
+        "Published source immutable; conflicts block dependent upgrade",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Published source immutable; conflicts block dependent upgrade",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-019",
+      "screenId": "DP-019",
+      "originId": 104,
+      "epic": "EP-02",
+      "requirement": "DP-RQ-02",
+      "title": "Package retirement and uninstall review",
+      "userStory": "As an authorized builder, I can review retirement and scoped uninstall so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Review retirement and scoped uninstall using published contracts and real services",
+        "Selected project references must be remapped before uninstall",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Selected project references must be remapped before uninstall",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-020",
+      "screenId": "DP-020",
+      "originId": 8,
+      "epic": "EP-02",
+      "requirement": "DP-RQ-02",
+      "title": "Reusable component builder",
+      "userStory": "As an authorized builder, I can edit a reusable component and save a revision so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Edit a reusable component and save a revision using published contracts and real services",
+        "Managed published source cannot be mutated",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Managed published source cannot be mutated",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-021",
+      "screenId": "DP-021",
+      "originId": 56,
+      "epic": "EP-02",
+      "requirement": "DP-RQ-02",
+      "title": "Component lifecycle management",
+      "userStory": "As an authorized builder, I can manage component lifecycle and consumers so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Manage component lifecycle and consumers using published contracts and real services",
+        "Retirement blocked by unresolved dependencies",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Retirement blocked by unresolved dependencies",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-022",
+      "screenId": "DP-022",
+      "originId": 75,
+      "epic": "EP-02",
+      "requirement": "DP-RQ-02",
+      "title": "Project lifecycle and general settings",
+      "userStory": "As an authorized builder, I can manage project lifecycle and settings so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Manage project lifecycle and settings using published contracts and real services",
+        "Archive/delete review preserves dependent records and ownership",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Archive/delete review preserves dependent records and ownership",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-023",
+      "screenId": "DP-023",
+      "originId": 14,
+      "epic": "EP-02",
+      "requirement": "DP-RQ-02",
+      "title": "Project settings and access",
+      "userStory": "As an authorized builder, I can manage authorized project collaborators so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Manage authorized project collaborators using published contracts and real services",
+        "Role escalation beyond caller authority denied",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Role escalation beyond caller authority denied",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-024",
+      "screenId": "DP-024",
+      "originId": 76,
+      "epic": "EP-02",
+      "requirement": "DP-RQ-02",
+      "title": "Developer command center and utilities",
+      "userStory": "As an authorized builder, I can use command palette, notifications, launcher and profile so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Use command palette, notifications, launcher and profile using published contracts and real services",
+        "Every utility rechecks target access and preserves context",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Every utility rechecks target access and preserves context",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-025",
+      "screenId": "DP-025",
+      "originId": 16,
+      "epic": "EP-02",
+      "requirement": "DP-RQ-02",
+      "title": "Navigation and recovery states",
+      "userStory": "As an authorized builder, I can navigate document tabs and recover unsaved edits so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Navigate document tabs and recover unsaved edits using published contracts and real services",
+        "Scope switch cannot restore another tenant's content",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Scope switch cannot restore another tenant's content",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-026",
+      "screenId": "DP-026",
+      "originId": 74,
+      "epic": "EP-02",
+      "requirement": "DP-RQ-02",
+      "title": "Loading empty error and access states",
+      "userStory": "As an authorized builder, I can recover loading/empty/error/forbidden/offline states so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Recover loading/empty/error/forbidden/offline states using published contracts and real services",
+        "Retry preserves scope and never claims unsaved work saved",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Retry preserves scope and never claims unsaved work saved",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-027",
+      "screenId": "DP-027",
+      "originId": 23,
+      "epic": "EP-03",
+      "requirement": "DP-RQ-03",
+      "title": "Page tree and page creation",
+      "userStory": "As an authorized builder, I can create and reorder pages in the page tree so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Web Studio + Tenant Sites",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Create and reorder pages in the page tree using published contracts and real services",
+        "Duplicate routes and navigation cycles rejected",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Duplicate routes and navigation cycles rejected",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-028",
+      "screenId": "DP-028",
+      "originId": 4,
+      "epic": "EP-03",
+      "requirement": "DP-RQ-03",
+      "title": "Website visual builder",
+      "userStory": "As an authorized builder, I can insert and configure a responsive website section so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Web Studio + Tenant Sites",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Insert and configure a responsive website section using published contracts and real services",
+        "Invalid nesting and unsafe content cannot be published",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Invalid nesting and unsafe content cannot be published",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-029",
+      "screenId": "DP-029",
+      "originId": 24,
+      "epic": "EP-03",
+      "requirement": "DP-RQ-03",
+      "title": "CMS collections and records",
+      "userStory": "As an authorized builder, I can browse CMS records with scoped filters so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Web Studio + Tenant Sites",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Browse CMS records with scoped filters using published contracts and real services",
+        "Record pagination cannot bypass tenant/field policy",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Record pagination cannot bypass tenant/field policy",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-030",
+      "screenId": "DP-030",
+      "originId": 25,
+      "epic": "EP-03",
+      "requirement": "DP-RQ-03",
+      "title": "Collection schema and item editor",
+      "userStory": "As an authorized builder, I can edit collection schema and a synthetic item so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Web Studio + Tenant Sites",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Edit collection schema and a synthetic item using published contracts and real services",
+        "Breaking schema changes require migration review",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Breaking schema changes require migration review",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-031",
+      "screenId": "DP-031",
+      "originId": 26,
+      "epic": "EP-03",
+      "requirement": "DP-RQ-03",
+      "title": "Blog publishing workspace",
+      "userStory": "As an authorized builder, I can manage draft and scheduled blog content so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Web Studio + Tenant Sites",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Manage draft and scheduled blog content using published contracts and real services",
+        "Draft posts cannot leak to anonymous delivery",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Draft posts cannot leak to anonymous delivery",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-032",
+      "screenId": "DP-032",
+      "originId": 27,
+      "epic": "EP-03",
+      "requirement": "DP-RQ-03",
+      "title": "Blog post editor",
+      "userStory": "As an authorized builder, I can edit and preview a blog post so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Web Studio + Tenant Sites",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Edit and preview a blog post using published contracts and real services",
+        "Unsafe markup and missing required metadata block publish",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Unsafe markup and missing required metadata block publish",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-033",
+      "screenId": "DP-033",
+      "originId": 28,
+      "epic": "EP-03",
+      "requirement": "DP-RQ-03",
+      "title": "Asset library and upload",
+      "userStory": "As an authorized builder, I can upload and reuse a permitted asset so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Web Studio + Tenant Sites",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Upload and reuse a permitted asset using published contracts and real services",
+        "Malicious MIME/type and excessive size quarantined/rejected",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Malicious MIME/type and excessive size quarantined/rejected",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-034",
+      "screenId": "DP-034",
+      "originId": 29,
+      "epic": "EP-03",
+      "requirement": "DP-RQ-03",
+      "title": "Navigation menu builder",
+      "userStory": "As an authorized builder, I can build nested navigation menus so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Web Studio + Tenant Sites",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Build nested navigation menus using published contracts and real services",
+        "Cycles and inaccessible targets identified",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Cycles and inaccessible targets identified",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-035",
+      "screenId": "DP-035",
+      "originId": 30,
+      "epic": "EP-03",
+      "requirement": "DP-RQ-03",
+      "title": "SEO metadata and redirects",
+      "userStory": "As an authorized builder, I can configure metadata and redirects so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Web Studio + Tenant Sites",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Configure metadata and redirects using published contracts and real services",
+        "Redirect loops and unsafe external targets rejected",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Redirect loops and unsafe external targets rejected",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-036",
+      "screenId": "DP-036",
+      "originId": 95,
+      "epic": "EP-03",
+      "requirement": "DP-RQ-03",
+      "title": "Localization and RTL workbench",
+      "userStory": "As an authorized builder, I can translate and preview RTL with ICU validation so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Web Studio + Tenant Sites",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Translate and preview RTL with ICU validation using published contracts and real services",
+        "Missing required translations block locale publication",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Missing required translations block locale publication",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-037",
+      "screenId": "DP-037",
+      "originId": 96,
+      "epic": "EP-03",
+      "requirement": "DP-RQ-03",
+      "title": "Public access and consent",
+      "userStory": "As an authorized builder, I can configure anonymous access and optional consent so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Web Studio + Tenant Sites",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Configure anonymous access and optional consent using published contracts and real services",
+        "Reject/accept have equal prominence; optional tracking defaults off",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Reject/accept have equal prominence; optional tracking defaults off",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-038",
+      "screenId": "DP-038",
+      "originId": 31,
+      "epic": "EP-03",
+      "requirement": "DP-RQ-03",
+      "title": "A/B experiment design",
+      "userStory": "As an authorized builder, I can configure a consent-aware experiment so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Web Studio + Tenant Sites",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Configure a consent-aware experiment using published contracts and real services",
+        "Unapproved tracking cannot activate",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Unapproved tracking cannot activate",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-039",
+      "screenId": "DP-039",
+      "originId": 32,
+      "epic": "EP-03",
+      "requirement": "DP-RQ-03",
+      "title": "Website commerce orders",
+      "userStory": "As an authorized builder, I can inspect site commerce order handoff so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Web Studio + Tenant Sites",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Inspect site commerce order handoff using published contracts and real services",
+        "Developer does not duplicate financial posting authority",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Developer does not duplicate financial posting authority",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-040",
+      "screenId": "DP-040",
+      "originId": 33,
+      "epic": "EP-03",
+      "requirement": "DP-RQ-03",
+      "title": "Form submissions inbox",
+      "userStory": "As an authorized builder, I can review form submissions under policy so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Web Studio + Tenant Sites",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Review form submissions under policy using published contracts and real services",
+        "Export remains separately permission checked",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Export remains separately permission checked",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-041",
+      "screenId": "DP-041",
+      "originId": 34,
+      "epic": "EP-03",
+      "requirement": "DP-RQ-03",
+      "title": "Site settings and domains",
+      "userStory": "As an authorized builder, I can configure site domains and settings so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Web Studio + Tenant Sites",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Configure site domains and settings using published contracts and real services",
+        "Unverified domain cannot become active",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Unverified domain cannot become active",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-042",
+      "screenId": "DP-042",
+      "originId": 35,
+      "epic": "EP-03",
+      "requirement": "DP-RQ-03",
+      "title": "Site revisions and rollback",
+      "userStory": "As an authorized builder, I can compare site revisions and request compatible recovery so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Web Studio + Tenant Sites",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Compare site revisions and request compatible recovery using published contracts and real services",
+        "No blind schema rollback or silent content loss",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: No blind schema rollback or silent content loss",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-043",
+      "screenId": "DP-043",
+      "originId": 5,
+      "epic": "EP-04",
+      "requirement": "DP-RQ-04",
+      "title": "Application visual builder",
+      "userStory": "As an authorized builder, I can compose an application screen from approved components so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Compose an application screen from approved components using published contracts and real services",
+        "Hidden fields remain protected by server policy",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Hidden fields remain protected by server policy",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-044",
+      "screenId": "DP-044",
+      "originId": 36,
+      "epic": "EP-04",
+      "requirement": "DP-RQ-04",
+      "title": "Forms catalog",
+      "userStory": "As an authorized builder, I can find and create a form artifact so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Find and create a form artifact using published contracts and real services",
+        "Unsupported project/library scope denied",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Unsupported project/library scope denied",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-045",
+      "screenId": "DP-045",
+      "originId": 37,
+      "epic": "EP-04",
+      "requirement": "DP-RQ-04",
+      "title": "Form visual builder",
+      "userStory": "As an authorized builder, I can author validated fields and save a form revision so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Author validated fields and save a form revision using published contracts and real services",
+        "Required validation runs server-side as well as preview",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Required validation runs server-side as well as preview",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-046",
+      "screenId": "DP-046",
+      "originId": 38,
+      "epic": "EP-04",
+      "requirement": "DP-RQ-04",
+      "title": "Advanced forms and field library",
+      "userStory": "As an authorized builder, I can compose advanced conditional fields so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Compose advanced conditional fields using published contracts and real services",
+        "Hidden sensitive fields do not enter unauthorized responses",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Hidden sensitive fields do not enter unauthorized responses",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-047",
+      "screenId": "DP-047",
+      "originId": 40,
+      "epic": "EP-04",
+      "requirement": "DP-RQ-04",
+      "title": "Dashboard catalog and creation",
+      "userStory": "As an authorized builder, I can create and organize dashboards so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Create and organize dashboards using published contracts and real services",
+        "Source queries respect viewer record/field policy",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Source queries respect viewer record/field policy",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-048",
+      "screenId": "DP-048",
+      "originId": 41,
+      "epic": "EP-04",
+      "requirement": "DP-RQ-04",
+      "title": "Dashboard visual builder",
+      "userStory": "As an authorized builder, I can bind dashboard widgets to governed metrics so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Bind dashboard widgets to governed metrics using published contracts and real services",
+        "Missing units or incompatible field types diagnosed",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Missing units or incompatible field types diagnosed",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-049",
+      "screenId": "DP-049",
+      "originId": 42,
+      "epic": "EP-04",
+      "requirement": "DP-RQ-04",
+      "title": "Data objects catalog",
+      "userStory": "As an authorized builder, I can find and create data objects so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Find and create data objects using published contracts and real services",
+        "Tenant-owned object schema cannot escape scope",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Tenant-owned object schema cannot escape scope",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-050",
+      "screenId": "DP-050",
+      "originId": 43,
+      "epic": "EP-04",
+      "requirement": "DP-RQ-04",
+      "title": "Object schema and relationships",
+      "userStory": "As an authorized builder, I can define relationships and safe schema evolution so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Define relationships and safe schema evolution using published contracts and real services",
+        "Invalid references and destructive changes blocked",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Invalid references and destructive changes blocked",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-051",
+      "screenId": "DP-051",
+      "originId": 45,
+      "epic": "EP-04",
+      "requirement": "DP-RQ-04",
+      "title": "Decision table and rule designer",
+      "userStory": "As an authorized builder, I can author decision-table rules and simulate so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Author decision-table rules and simulate using published contracts and real services",
+        "Overlapping or missing rules produce explicit diagnostics",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Overlapping or missing rules produce explicit diagnostics",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-052",
+      "screenId": "DP-052",
+      "originId": 44,
+      "epic": "EP-04",
+      "requirement": "DP-RQ-04",
+      "title": "BPMN process designer",
+      "userStory": "As an authorized builder, I can model BPMN process and compensation so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Model BPMN process and compensation using published contracts and real services",
+        "Unsupported node semantics fail validation",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Unsupported node semantics fail validation",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-053",
+      "screenId": "DP-053",
+      "originId": 39,
+      "epic": "EP-04",
+      "requirement": "DP-RQ-04",
+      "title": "Workflow catalog and creation",
+      "userStory": "As an authorized builder, I can create and open a workflow so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Create and open a workflow using published contracts and real services",
+        "Invalid starter schema fails without partial persistence",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Invalid starter schema fails without partial persistence",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-054",
+      "screenId": "DP-054",
+      "originId": 11,
+      "epic": "EP-04",
+      "requirement": "DP-RQ-04",
+      "title": "Workflow and interaction builder",
+      "userStory": "As an authorized builder, I can connect typed workflow steps and simulate execution so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Connect typed workflow steps and simulate execution using published contracts and real services",
+        "Invalid cycles and duplicate business effects are rejected",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Invalid cycles and duplicate business effects are rejected",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-055",
+      "screenId": "DP-055",
+      "originId": 47,
+      "epic": "EP-04",
+      "requirement": "DP-RQ-04",
+      "title": "Logic script workbench",
+      "userStory": "As an authorized builder, I can author a bounded script and run in sandbox so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Author a bounded script and run in sandbox using published contracts and real services",
+        "Ambient network/database and resource escape denied",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Ambient network/database and resource escape denied",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-056",
+      "screenId": "DP-056",
+      "originId": 48,
+      "epic": "EP-04",
+      "requirement": "DP-RQ-04",
+      "title": "Mobile app visual builder",
+      "userStory": "As an authorized builder, I can compose mobile screens with adaptive controls so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Compose mobile screens with adaptive controls using published contracts and real services",
+        "Device permission/offline conflict behavior explicit",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Device permission/offline conflict behavior explicit",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-057",
+      "screenId": "DP-057",
+      "originId": 49,
+      "epic": "EP-04",
+      "requirement": "DP-RQ-04",
+      "title": "Application navigation customization",
+      "userStory": "As an authorized builder, I can configure application navigation so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Configure application navigation using published contracts and real services",
+        "Hidden menu is never treated as server authorization",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Hidden menu is never treated as server authorization",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-058",
+      "screenId": "DP-058",
+      "originId": 105,
+      "epic": "EP-04",
+      "requirement": "DP-RQ-04",
+      "title": "Report and metric designer",
+      "userStory": "As an authorized builder, I can define unit-bearing metric and inspect lineage so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Define unit-bearing metric and inspect lineage using published contracts and real services",
+        "Exports and aggregations retain row/field policy",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Exports and aggregations retain row/field policy",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-059",
+      "screenId": "DP-059",
+      "originId": 106,
+      "epic": "EP-04",
+      "requirement": "DP-RQ-04",
+      "title": "Notification and document templates",
+      "userStory": "As an authorized builder, I can author typed message/document template so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Author typed message/document template using published contracts and real services",
+        "Missing binding blocks test send/publication",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Missing binding blocks test send/publication",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-060",
+      "screenId": "DP-060",
+      "originId": 107,
+      "epic": "EP-04",
+      "requirement": "DP-RQ-04",
+      "title": "Approval routing and delegation",
+      "userStory": "As an authorized builder, I can design independent approval and time-bounded delegation so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Design independent approval and time-bounded delegation using published contracts and real services",
+        "Self approval and escalation bypass denied",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Self approval and escalation bypass denied",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-061",
+      "screenId": "DP-061",
+      "originId": 10,
+      "epic": "EP-05",
+      "requirement": "DP-RQ-05",
+      "title": "Data and integrations",
+      "userStory": "As an authorized builder, I can bind an approved data integration so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Bind an approved data integration using published contracts and real services",
+        "No raw credentials enter the browser",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: No raw credentials enter the browser",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-062",
+      "screenId": "DP-062",
+      "originId": 57,
+      "epic": "EP-05",
+      "requirement": "DP-RQ-05",
+      "title": "Connectors catalog and configuration",
+      "userStory": "As an authorized builder, I can configure an approved connector definition so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Configure an approved connector definition using published contracts and real services",
+        "Credential references resolved only by authorized runtime",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Credential references resolved only by authorized runtime",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-063",
+      "screenId": "DP-063",
+      "originId": 59,
+      "epic": "EP-05",
+      "requirement": "DP-RQ-05",
+      "title": "Visual query builder",
+      "userStory": "As an authorized builder, I can build a parameterized query so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Build a parameterized query using published contracts and real services",
+        "Injection and row/field policy bypass denied",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Injection and row/field policy bypass denied",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-064",
+      "screenId": "DP-064",
+      "originId": 60,
+      "epic": "EP-05",
+      "requirement": "DP-RQ-05",
+      "title": "Reusable widget builder",
+      "userStory": "As an authorized builder, I can author a reusable widget so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Author a reusable widget using published contracts and real services",
+        "Unsupported bindings and accessibility defects diagnosed",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Unsupported bindings and accessibility defects diagnosed",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-065",
+      "screenId": "DP-065",
+      "originId": 61,
+      "epic": "EP-05",
+      "requirement": "DP-RQ-05",
+      "title": "ETL pipeline designer",
+      "userStory": "As an authorized builder, I can build checkpointed ETL steps so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Build checkpointed ETL steps using published contracts and real services",
+        "Retries cannot duplicate sink writes",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Retries cannot duplicate sink writes",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-066",
+      "screenId": "DP-066",
+      "originId": 46,
+      "epic": "EP-05",
+      "requirement": "DP-RQ-05",
+      "title": "Custom API designer",
+      "userStory": "As an authorized builder, I can design a typed API action so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Design a typed API action using published contracts and real services",
+        "Breaking within-major contract change blocked",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Breaking within-major contract change blocked",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-067",
+      "screenId": "DP-067",
+      "originId": 15,
+      "epic": "EP-05",
+      "requirement": "DP-RQ-05",
+      "title": "API and extensions",
+      "userStory": "As an authorized builder, I can inspect API and extension capabilities so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Inspect API and extension capabilities using published contracts and real services",
+        "Unapproved capabilities cannot execute",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Unapproved capabilities cannot execute",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-068",
+      "screenId": "DP-068",
+      "originId": 65,
+      "epic": "EP-05",
+      "requirement": "DP-RQ-05",
+      "title": "SDK documentation and quickstart",
+      "userStory": "As an authorized builder, I can use SDK quickstart against approved contracts so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Use SDK quickstart against approved contracts using published contracts and real services",
+        "Documentation example cannot imply unverified endpoint support",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Documentation example cannot imply unverified endpoint support",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-069",
+      "screenId": "DP-069",
+      "originId": 108,
+      "epic": "EP-05",
+      "requirement": "DP-RQ-05",
+      "title": "API contract publication and consumers",
+      "userStory": "As an authorized builder, I can review API version compatibility and consumers so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Review API version compatibility and consumers using published contracts and real services",
+        "Required field removal cannot publish within same major",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Required field removal cannot publish within same major",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-070",
+      "screenId": "DP-070",
+      "originId": 68,
+      "epic": "EP-05",
+      "requirement": "DP-RQ-05",
+      "title": "Extensions catalog",
+      "userStory": "As an authorized builder, I can inspect installed/available extensions so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Inspect installed/available extensions using published contracts and real services",
+        "Untrusted extension cannot run from catalog visibility alone",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Untrusted extension cannot run from catalog visibility alone",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-071",
+      "screenId": "DP-071",
+      "originId": 69,
+      "epic": "EP-05",
+      "requirement": "DP-RQ-05",
+      "title": "Extension bundle validation",
+      "userStory": "As an authorized builder, I can validate extension bundle and manifest so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Validate extension bundle and manifest using published contracts and real services",
+        "Invalid signature/schema/capability request blocks installation",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Invalid signature/schema/capability request blocks installation",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-072",
+      "screenId": "DP-072",
+      "originId": 70,
+      "epic": "EP-05",
+      "requirement": "DP-RQ-05",
+      "title": "Sandbox execution console",
+      "userStory": "As an authorized builder, I can execute extension in isolated sandbox so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Execute extension in isolated sandbox using published contracts and real services",
+        "Timeout, escape and revoked capability fail closed",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Timeout, escape and revoked capability fail closed",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-073",
+      "screenId": "DP-073",
+      "originId": 71,
+      "epic": "EP-05",
+      "requirement": "DP-RQ-05",
+      "title": "API diagnostics quotas and deprecations",
+      "userStory": "As an authorized builder, I can inspect API diagnostics and deprecation so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Inspect API diagnostics and deprecation using published contracts and real services",
+        "No invented support deadline or hidden breaking change",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: No invented support deadline or hidden breaking change",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-074",
+      "screenId": "DP-074",
+      "originId": 85,
+      "epic": "EP-05",
+      "requirement": "DP-RQ-05",
+      "title": "Events webhooks and redelivery",
+      "userStory": "As an authorized builder, I can inspect webhook delivery and scoped replay so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Inspect webhook delivery and scoped replay using published contracts and real services",
+        "Replay preserves idempotency and endpoint allowlist",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Replay preserves idempotency and endpoint allowlist",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-075",
+      "screenId": "DP-075",
+      "originId": 86,
+      "epic": "EP-05",
+      "requirement": "DP-RQ-05",
+      "title": "Schedules jobs and compensation",
+      "userStory": "As an authorized builder, I can schedule durable jobs and resume checkpoints so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P2",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Schedule durable jobs and resume checkpoints using published contracts and real services",
+        "Overlap and retries obey concurrency/compensation policy",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Overlap and retries obey concurrency/compensation policy",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-076",
+      "screenId": "DP-076",
+      "originId": 12,
+      "epic": "EP-06",
+      "requirement": "DP-RQ-06",
+      "title": "Preview and quality",
+      "userStory": "As an authorized builder, I can preview with explicit environment and principal so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Preview with explicit environment and principal using published contracts and real services",
+        "Preview never inherits author privileges implicitly",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Preview never inherits author privileges implicitly",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-077",
+      "screenId": "DP-077",
+      "originId": 81,
+      "epic": "EP-06",
+      "requirement": "DP-RQ-06",
+      "title": "Test suite designer",
+      "userStory": "As an authorized builder, I can author reproducible test scenarios so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Author reproducible test scenarios using published contracts and real services",
+        "Fixture actions cannot touch production data",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Fixture actions cannot touch production data",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-078",
+      "screenId": "DP-078",
+      "originId": 82,
+      "epic": "EP-06",
+      "requirement": "DP-RQ-06",
+      "title": "Test run evidence",
+      "userStory": "As an authorized builder, I can inspect exact-candidate test evidence so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Inspect exact-candidate test evidence using published contracts and real services",
+        "Failed or required Not run checks block release",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Failed or required Not run checks block release",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-079",
+      "screenId": "DP-079",
+      "originId": 79,
+      "epic": "EP-06",
+      "requirement": "DP-RQ-06",
+      "title": "Changeset and dependency impact",
+      "userStory": "As an authorized builder, I can review semantic changes and affected consumers so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Review semantic changes and affected consumers using published contracts and real services",
+        "Incomplete dependency extraction blocks release review",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Incomplete dependency extraction blocks release review",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-080",
+      "screenId": "DP-080",
+      "originId": 80,
+      "epic": "EP-06",
+      "requirement": "DP-RQ-06",
+      "title": "Collaborative review and conflicts",
+      "userStory": "As an authorized builder, I can resolve Base/Server/Local conflicts so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Resolve Base/Server/Local conflicts using published contracts and real services",
+        "Unresolved fields keep Save disabled and preserve versions",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Unresolved fields keep Save disabled and preserve versions",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-081",
+      "screenId": "DP-081",
+      "originId": 63,
+      "epic": "EP-06",
+      "requirement": "DP-RQ-06",
+      "title": "Source control and merge review",
+      "userStory": "As an authorized builder, I can review source changes and conflicts so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Review source changes and conflicts using published contracts and real services",
+        "Unresolved conflicts cannot overwrite either revision",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Unresolved conflicts cannot overwrite either revision",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-082",
+      "screenId": "DP-082",
+      "originId": 99,
+      "epic": "EP-06",
+      "requirement": "DP-RQ-06",
+      "title": "Metadata migration and reconciliation",
+      "userStory": "As an authorized builder, I can resume safe metadata migration so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Resume safe metadata migration using published contracts and real services",
+        "Contract phase locked until backfill and compatibility proof",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Contract phase locked until backfill and compatibility proof",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-083",
+      "screenId": "DP-083",
+      "originId": 62,
+      "epic": "EP-06",
+      "requirement": "DP-RQ-06",
+      "title": "Theme and token editor",
+      "userStory": "As an authorized builder, I can edit theme with approved semantic tokens so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Edit theme with approved semantic tokens using published contracts and real services",
+        "Contrast or invalid token references block qualification",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Contrast or invalid token references block qualification",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-084",
+      "screenId": "DP-084",
+      "originId": 100,
+      "epic": "EP-06",
+      "requirement": "DP-RQ-06",
+      "title": "Builder registration and conformance",
+      "userStory": "As an authorized builder, I can register builder through conformance checks so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Register builder through conformance checks using published contracts and real services",
+        "File/route presence cannot imply GA or execution trust",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: File/route presence cannot imply GA or execution trust",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-085",
+      "screenId": "DP-085",
+      "originId": 13,
+      "epic": "EP-06",
+      "requirement": "DP-RQ-06",
+      "title": "Release review",
+      "userStory": "As an authorized builder, I can review an immutable release candidate so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Review an immutable release candidate using published contracts and real services",
+        "Stale or self approval cannot authorize promotion",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Stale or self approval cannot authorize promotion",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-086",
+      "screenId": "DP-086",
+      "originId": 52,
+      "epic": "EP-06",
+      "requirement": "DP-RQ-06",
+      "title": "Cross-project release history",
+      "userStory": "As an authorized builder, I can inspect release history across permitted projects so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Inspect release history across permitted projects using published contracts and real services",
+        "Cross-project aggregation respects membership",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Cross-project aggregation respects membership",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-087",
+      "screenId": "DP-087",
+      "originId": 53,
+      "epic": "EP-06",
+      "requirement": "DP-RQ-06",
+      "title": "Environments and configuration",
+      "userStory": "As an authorized builder, I can manage nonsecret environment configuration so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Manage nonsecret environment configuration using published contracts and real services",
+        "Secret values are never copied across environments",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Secret values are never copied across environments",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-088",
+      "screenId": "DP-088",
+      "originId": 103,
+      "epic": "EP-06",
+      "requirement": "DP-RQ-06",
+      "title": "Environment provisioning and synthetic data",
+      "userStory": "As an authorized builder, I can request isolated test environment with synthetic fixtures so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Request isolated test environment with synthetic fixtures using published contracts and real services",
+        "Production cloning and secret copying excluded",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Production cloning and secret copying excluded",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-089",
+      "screenId": "DP-089",
+      "originId": 83,
+      "epic": "EP-06",
+      "requirement": "DP-RQ-06",
+      "title": "Release pipeline and approval",
+      "userStory": "As an authorized builder, I can approve and promote same immutable bundle so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Approve and promote same immutable bundle using published contracts and real services",
+        "Self approval, changed hash or pending gates block promotion",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Self approval, changed hash or pending gates block promotion",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-090",
+      "screenId": "DP-090",
+      "originId": 84,
+      "epic": "EP-06",
+      "requirement": "DP-RQ-06",
+      "title": "Deployment failure and recovery",
+      "userStory": "As an authorized builder, I can recover a failed deployment before activation so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Recover a failed deployment before activation using published contracts and real services",
+        "Serving version stays unchanged after failed health probe",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Serving version stays unchanged after failed health probe",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-091",
+      "screenId": "DP-091",
+      "originId": 64,
+      "epic": "EP-06",
+      "requirement": "DP-RQ-06",
+      "title": "Mobile packaging and export",
+      "userStory": "As an authorized builder, I can review mobile packaging/export so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer frontend + owning backend",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Review mobile packaging/export using published contracts and real services",
+        "Unsigned or incompatible package cannot release",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Unsigned or incompatible package cannot release",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-092",
+      "screenId": "DP-092",
+      "originId": 50,
+      "epic": "EP-07",
+      "requirement": "DP-RQ-07",
+      "title": "Manage workspace",
+      "userStory": "As an authorized operator, I can inspect scoped management workspace so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer + Security/SRE",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Inspect scoped management workspace using published contracts and real services",
+        "Provider controls cannot appear as tenant authority",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Provider controls cannot appear as tenant authority",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-093",
+      "screenId": "DP-093",
+      "originId": 51,
+      "epic": "EP-07",
+      "requirement": "DP-RQ-07",
+      "title": "Developer governance and capacity",
+      "userStory": "As an authorized operator, I can inspect governance and capacity so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer + Security/SRE",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Inspect governance and capacity using published contracts and real services",
+        "Entitlement edits hand off to OCC owner",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Entitlement edits hand off to OCC owner",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-094",
+      "screenId": "DP-094",
+      "originId": 55,
+      "epic": "EP-07",
+      "requirement": "DP-RQ-07",
+      "title": "Developer access control",
+      "userStory": "As an authorized operator, I can review developer permissions so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer + Security/SRE",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Review developer permissions using published contracts and real services",
+        "Deny overrides and inherited policy remain enforceable",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Deny overrides and inherited policy remain enforceable",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-095",
+      "screenId": "DP-095",
+      "originId": 66,
+      "epic": "EP-07",
+      "requirement": "DP-RQ-07",
+      "title": "Application credentials inventory",
+      "userStory": "As an authorized operator, I can inspect scoped application credentials metadata so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer + Security/SRE",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Inspect scoped application credentials metadata using published contracts and real services",
+        "Raw credential values unavailable in inventory",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Raw credential values unavailable in inventory",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-096",
+      "screenId": "DP-096",
+      "originId": 67,
+      "epic": "EP-07",
+      "requirement": "DP-RQ-07",
+      "title": "Create and rotate credentials",
+      "userStory": "As an authorized operator, I can request credential creation or rotation so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer + Security/SRE",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Request credential creation or rotation using published contracts and real services",
+        "Authorization, expiry and revocation handled by owning service",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Authorization, expiry and revocation handled by owning service",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-097",
+      "screenId": "DP-097",
+      "originId": 87,
+      "epic": "EP-07",
+      "requirement": "DP-RQ-07",
+      "title": "Record and field policy simulator",
+      "userStory": "As an authorized operator, I can simulate record and field policy so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer + Security/SRE",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Simulate record and field policy using published contracts and real services",
+        "Simulation and runtime use same server evaluator",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Simulation and runtime use same server evaluator",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-098",
+      "screenId": "DP-098",
+      "originId": 88,
+      "epic": "EP-07",
+      "requirement": "DP-RQ-07",
+      "title": "Environment secret bindings",
+      "userStory": "As an authorized operator, I can map and rotate environment secret references so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer + Security/SRE",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Map and rotate environment secret references using published contracts and real services",
+        "No raw secret in UI/export/logs",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: No raw secret in UI/export/logs",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-099",
+      "screenId": "DP-099",
+      "originId": 89,
+      "epic": "EP-07",
+      "requirement": "DP-RQ-07",
+      "title": "Supply chain and security review",
+      "userStory": "As an authorized operator, I can review SBOM, findings and signing evidence so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer + Security/SRE",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Review SBOM, findings and signing evidence using published contracts and real services",
+        "Unresolved blocking findings or revoked signing key prevent release",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Unresolved blocking findings or revoked signing key prevent release",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-100",
+      "screenId": "DP-100",
+      "originId": 90,
+      "epic": "EP-07",
+      "requirement": "DP-RQ-07",
+      "title": "Extension quarantine and revocation",
+      "userStory": "As an authorized operator, I can review quarantine scope and revocation so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer + Security/SRE",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Review quarantine scope and revocation using published contracts and real services",
+        "Tenant operator cannot execute provider-wide containment",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Tenant operator cannot execute provider-wide containment",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-101",
+      "screenId": "DP-101",
+      "originId": 91,
+      "epic": "EP-07",
+      "requirement": "DP-RQ-07",
+      "title": "Audit trail and evidence export",
+      "userStory": "As an authorized operator, I can inspect immutable audit and scoped export so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer + Security/SRE",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Inspect immutable audit and scoped export using published contracts and real services",
+        "No audit editing or unredacted unauthorized export",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: No audit editing or unredacted unauthorized export",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-102",
+      "screenId": "DP-102",
+      "originId": 92,
+      "epic": "EP-07",
+      "requirement": "DP-RQ-07",
+      "title": "Restore rehearsal and recovery",
+      "userStory": "As an authorized operator, I can rehearse restore to isolated environment so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer + Security/SRE",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Rehearse restore to isolated environment using published contracts and real services",
+        "Snapshot must precede recovery point; no live overwrite",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Snapshot must precede recovery point; no live overwrite",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-103",
+      "screenId": "DP-103",
+      "originId": 97,
+      "epic": "EP-07",
+      "requirement": "DP-RQ-07",
+      "title": "Application health and incidents",
+      "userStory": "As an authorized operator, I can inspect SLI and incident diagnostics so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer + Security/SRE",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Inspect SLI and incident diagnostics using published contracts and real services",
+        "Sample metrics cannot be reported as actual SLA compliance",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Sample metrics cannot be reported as actual SLA compliance",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-104",
+      "screenId": "DP-104",
+      "originId": 98,
+      "epic": "EP-07",
+      "requirement": "DP-RQ-07",
+      "title": "Usage budgets and entitlement limits",
+      "userStory": "As an authorized operator, I can configure scoped usage alerts so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer + Security/SRE",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Configure scoped usage alerts using published contracts and real services",
+        "OCC entitlement limits cannot be elevated locally",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: OCC entitlement limits cannot be elevated locally",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-105",
+      "screenId": "DP-105",
+      "originId": 102,
+      "epic": "EP-07",
+      "requirement": "DP-RQ-07",
+      "title": "Application identity and session policies",
+      "userStory": "As an authorized operator, I can map approved identity claims to application roles so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer + Security/SRE",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Map approved identity claims to application roles using published contracts and real services",
+        "Client cannot edit tenant claim or widen inherited session policy",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Client cannot edit tenant claim or widen inherited session policy",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-106",
+      "screenId": "DP-106",
+      "originId": 101,
+      "epic": "EP-07",
+      "requirement": "DP-RQ-07",
+      "title": "AI-assisted change review",
+      "userStory": "As an authorized operator, I can review AI semantic changes before applying to draft so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer + Security/SRE",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Review AI semantic changes before applying to draft using published contracts and real services",
+        "AI cannot self-authorize publish or production data access",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: AI cannot self-authorize publish or production data access",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-107",
+      "screenId": "DP-107",
+      "originId": 54,
+      "epic": "EP-07",
+      "requirement": "DP-RQ-07",
+      "title": "Run logs and trace detail",
+      "userStory": "As an authorized operator, I can inspect safe run logs and correlated traces so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer + Security/SRE",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Inspect safe run logs and correlated traces using published contracts and real services",
+        "Sensitive payloads and foreign tenant traces redacted/denied",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Sensitive payloads and foreign tenant traces redacted/denied",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    },
+    {
+      "id": "DEV-108",
+      "screenId": "DP-108",
+      "originId": 58,
+      "epic": "EP-07",
+      "requirement": "DP-RQ-07",
+      "title": "Marketplace packages and installation review",
+      "userStory": "As an authorized operator, I can review Marketplace installation so that work remains scoped, reviewable and recoverable.",
+      "ownerRole": "Developer + Security/SRE",
+      "priority": "P1",
+      "estimate": "Refine vertical slice; no committed estimate",
+      "dependencies": [
+        "FND-12"
+      ],
+      "acceptance": [
+        "Review Marketplace installation using published contracts and real services",
+        "Commercial lifecycle remains Marketplace-owned",
+        "Loading, empty, error, forbidden and applicable offline/conflict states meet document08",
+        "Typecheck and affected test/lint/build/security/token/accessibility gates pass with exact revision evidence"
+      ],
+      "verification": [
+        "Positive scenario for primary action",
+        "Negative scenario: Commercial lifecycle remains Marketplace-owned",
+        "Keyboard and assistive-technology check for changed interaction",
+        "Relevant boundary matrix in10_TEST_STRATEGY.md"
+      ],
+      "evidence": [],
+      "status": "Not started"
+    }
+  ]
+}

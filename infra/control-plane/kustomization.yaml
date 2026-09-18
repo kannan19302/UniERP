@@ -1,0 +1,13 @@
+# Apply the control-plane boundary as a unit.
+#
+# Ordering matters: the middlewares must exist before the IngressRoute that
+# references them, or Traefik fails the route. Listing them here rather than
+# relying on someone applying files in the right order is the point of a
+# kustomization.
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: unierp
+resources:
+  - ingress-allowlist.yaml
+  - security-headers.yaml
+  - console-ingress.yaml

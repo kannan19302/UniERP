@@ -1,0 +1,185 @@
+{
+  "title": "UniERP Platform Overview",
+  "description": "Per PLATFORM_ARCHITECTURE.md § 11: Alert rules and Grafana dashboards committed as code. An alert without a runbook fails CI.",
+  "uid": "unierp-platform-overview",
+  "tags": ["unierp", "platform", "slo"],
+  "schemaVersion": 38,
+  "version": 1,
+  "panels": [
+    {
+      "id": 1,
+      "title": "Login Journey — Availability (30d)",
+      "type": "stat",
+      "targets": [
+        {
+          "expr": "sum(rate(http_requests_total{path=~\"/api/v1/auth/.*\",status!~\"5..\"}[30d])) / sum(rate(http_requests_total{path=~\"/api/v1/auth/.*\"}[30d]))",
+          "legendFormat": "Login Availability"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percentunit",
+          "thresholds": {
+            "steps": [
+              { "color": "red", "value": 0 },
+              { "color": "yellow", "value": 0.998 },
+              { "color": "green", "value": 0.999 }
+            ]
+          }
+        }
+      },
+      "sloRef": "slo-login",
+      "runbook": "docs/runbooks/INCIDENT-RESPONSE.md#login-failure"
+    },
+    {
+      "id": 2,
+      "title": "Finance Transaction — Availability (30d)",
+      "type": "stat",
+      "targets": [
+        {
+          "expr": "sum(rate(http_requests_total{path=~\"/api/v1/finance/.*\",status!~\"5..\"}[30d])) / sum(rate(http_requests_total{path=~\"/api/v1/finance/.*\"}[30d]))",
+          "legendFormat": "Finance Availability"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percentunit",
+          "thresholds": {
+            "steps": [
+              { "color": "red", "value": 0 },
+              { "color": "yellow", "value": 0.9994 },
+              { "color": "green", "value": 0.9995 }
+            ]
+          }
+        }
+      },
+      "sloRef": "slo-post-transaction",
+      "runbook": "docs/runbooks/INCIDENT-RESPONSE.md#finance-transaction-failure"
+    },
+    {
+      "id": 3,
+      "title": "Error Budget Burn Rate — All SLOs",
+      "type": "timeseries",
+      "targets": [
+        {
+          "expr": "sum by(journey) (rate(http_requests_total{status=~\"5..\"}[1h])) / sum by(journey) (rate(http_requests_total[1h]))",
+          "legendFormat": "Error Rate — {{journey}}"
+        }
+      ],
+      "fieldConfig": { "defaults": { "unit": "percentunit" } }
+    },
+    {
+      "id": 4,
+      "title": "P95 Response Time by Journey",
+      "type": "timeseries",
+      "targets": [
+        {
+          "expr": "histogram_quantile(0.95, sum by(le, path) (rate(http_request_duration_seconds_bucket[5m])))",
+          "legendFormat": "P95 {{path}}"
+        }
+      ],
+      "fieldConfig": { "defaults": { "unit": "s" } }
+    },
+    {
+      "id": 5,
+      "title": "Per-Tenant Request Rate (Noisy Neighbour Detection)",
+      "type": "timeseries",
+      "targets": [
+        {
+          "expr": "sum by(tenant_id) (rate(http_requests_total[5m]))",
+          "legendFormat": "Tenant {{tenant_id}}"
+        }
+      ],
+      "fieldConfig": { "defaults": { "unit": "reqps" } }
+    },
+    {
+      "id": 6,
+      "title": "DB Connection Pool (PgBouncer)",
+      "type": "stat",
+      "targets": [
+        {
+          "expr": "pgbouncer_pools_client_active",
+          "legendFormat": "Active Connections"
+        }
+      ],
+      "fieldConfig": { "defaults": { "unit": "short" } }
+    },
+    {
+      "id": 7,
+      "title": "Active Extensions by Tenant",
+      "type": "timeseries",
+      "targets": [
+        {
+          "expr": "sum by(tenant_id) (unierp_extensions_active)",
+          "legendFormat": "Extensions — {{tenant_id}}"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Release Pipeline Telemetry",
+      "type": "timeseries",
+      "description": "Build/release telemetry per PLATFORM_ARCHITECTURE.md § 11: lead time, PR latency, manifest drift.",
+      "targets": [
+        {
+          "expr": "unierp_release_lead_time_seconds",
+          "legendFormat": "Lead Time (L0 commit → deployed train)"
+        }
+      ]
+    }
+  ],
+  "alerting": {
+    "rules": [
+      {
+        "id": "alert-login-error-budget-50",
+        "name": "Login SLO — 50% Error Budget Consumed",
+        "condition": "avg(rate(http_requests_total{path=~'/api/v1/auth/.*',status=~'5..'}[6h])) > 0.005",
+        "severity": "warning",
+        "runbook": "docs/runbooks/INCIDENT-RESPONSE.md#login-failure",
+        "annotations": {
+          "summary": "Login SLO error budget is 50% consumed. Investigate immediately."
+        }
+      },
+      {
+        "id": "alert-login-error-budget-90",
+        "name": "Login SLO — 90% Error Budget Consumed",
+        "condition": "avg(rate(http_requests_total{path=~'/api/v1/auth/.*',status=~'5..'}[1h])) > 0.009",
+        "severity": "critical",
+        "runbook": "docs/runbooks/INCIDENT-RESPONSE.md#login-failure",
+        "annotations": {
+          "summary": "Login SLO critical: 90% budget consumed. Feature work MUST pause."
+        }
+      },
+      {
+        "id": "alert-finance-error-budget-25",
+        "name": "Finance SLO — 25% Error Budget Consumed",
+        "condition": "avg(rate(http_requests_total{path=~'/api/v1/finance/.*',status=~'5..'}[6h])) > 0.00125",
+        "severity": "warning",
+        "runbook": "docs/runbooks/INCIDENT-RESPONSE.md#finance-transaction-failure",
+        "annotations": {
+          "summary": "Finance SLO: 25% error budget consumed. This is a money path — escalate early."
+        }
+      },
+      {
+        "id": "alert-finance-error-budget-75",
+        "name": "Finance SLO — 75% Error Budget Consumed",
+        "condition": "avg(rate(http_requests_total{path=~'/api/v1/finance/.*',status=~'5..'}[1h])) > 0.00375",
+        "severity": "critical",
+        "runbook": "docs/runbooks/INCIDENT-RESPONSE.md#finance-transaction-failure",
+        "annotations": {
+          "summary": "Finance SLO critical: 75% budget consumed. ESCALATE TO CTO."
+        }
+      },
+      {
+        "id": "alert-db-pool-exhaustion",
+        "name": "PgBouncer Pool Near Exhaustion",
+        "condition": "pgbouncer_pools_client_waiting > 10",
+        "severity": "critical",
+        "runbook": "docs/runbooks/DATABASE-FAILOVER.md#connection-pool-exhaustion",
+        "annotations": {
+          "summary": "Database connection pool has >10 waiting clients. Immediate investigation required."
+        }
+      }
+    ]
+  }
+}

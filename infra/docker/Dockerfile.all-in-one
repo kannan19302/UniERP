@@ -1,0 +1,33 @@
+# ============================================================
+# UniERP All-in-One Multi-Service Container
+# Runs the Master SSO Platform Wizard & presentation layers
+# inside a single container image using Node process management.
+# ============================================================
+
+FROM node:22-alpine AS all-in-one
+WORKDIR /app
+
+RUN apk add --no-cache curl bash supervisor
+
+# Create directory tree
+RUN mkdir -p /app/wizard /app/desktop /app/supervisor
+
+# Copy Wizard
+COPY infra/platform-wizard/package.json /app/wizard/
+COPY infra/platform-wizard/server.mjs /app/wizard/
+COPY infra/platform-wizard/public /app/wizard/public/
+
+# Copy Desktop App
+COPY desktop-app/package.json /app/desktop/
+COPY desktop-app/server.mjs /app/desktop/
+COPY desktop-app/public /app/desktop/public/
+
+# Supervisord configuration
+RUN printf '[supervisord]\nnodaemon=true\nlogfile=/var/log/supervisord.log\npidfile=/var/run/supervisord.pid\n\n[program:platform-wizard]\ncommand=node server.mjs\ndirectory=/app/wizard\nenvironment=PORT="4000",HOST="0.0.0.0"\nautostart=true\nautorestart=true\nstdout_logfile=/dev/stdout\nstdout_logfile_maxbytes=0\nstderr_logfile=/dev/stderr\nstderr_logfile_maxbytes=0\n\n[program:desktop-app]\ncommand=node server.mjs\ndirectory=/app/desktop\nenvironment=PORT="4010",HOST="0.0.0.0"\nautostart=true\nautorestart=true\nstdout_logfile=/dev/stdout\nstdout_logfile_maxbytes=0\nstderr_logfile=/dev/stderr\nstderr_logfile_maxbytes=0\n' > /etc/supervisord.conf
+
+EXPOSE 4000 4010
+
+HEALTHCHECK --interval=20s --timeout=5s --start-period=10s --retries=3 \
+  CMD curl -f http://localhost:4000/api/auth/session || exit 1
+
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]

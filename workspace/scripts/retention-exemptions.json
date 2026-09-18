@@ -1,0 +1,3572 @@
+{
+  "comment": "Track D12 retention exemptions: models with specialized lifecycles (immutable ledgers, system configs, domain lifecycles)",
+  "models": {
+    "AiProviderModel": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AiPromptVersion": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AiMcpServer": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AiRagIndex": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AiAgentRegistration": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AiEvalSuite": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AiGuardrailPolicy": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "AiGuardrailEvent": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CatalogueProduct": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "CatalogueSuite": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "CatalogueProvisioning": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "ComplianceControl": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ComplianceControlEvaluation": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ComplianceEvidence": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Tenant": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SalesPipeline": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ForecastSnapshot": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Quota": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Activity": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CoachingRubric": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CallScorecard": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CoachingLibraryItem": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DealRoom": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DealRiskDigestRun": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EmailTemplate": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "Setting": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "AppSettings": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "PlatformCredential": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Shipment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BOM": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Dashboard": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Report": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "KPI": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DocumentTemplate": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "DocumentCategory": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "Channel": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ConnectSpace": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ChannelRead": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "UserPresence": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ConnectMeeting": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CalendarEvent": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "UserStatusSchedule": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CustomEmoji": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Reminder": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ChannelTemplate": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "KnowledgeArticle": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "KnowledgeCategory": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "HelpdeskTicket": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaasApp": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaasSubscriptionPlan": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaasSubscription": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaasUsageMeter": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaasInvoice2": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaasPaymentMethod2": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaasCoupon2": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaasFeatureFlag": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "TenantFeatureOverride": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaasTenantSetting": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "SaasTenantDomain": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaasAuditLog": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "ControlPlaneAuditLog": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "ControlPlaneApproval": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ControlPlaneReviewTask": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "TenantConsent": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ImpersonationSession": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaasWebhookEndpoint": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaasApiKey": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaasSupportTicket": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaasAnnouncement": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaasMaintenanceWindow": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SkillCatalog": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "CapexProject": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ManufacturingRoute": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ManufacturingQualityCheckTemplate": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "ManufacturingScrapRecord": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ManufacturingTimeEntry": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "SpcChart": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FmeaWorksheet": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ApqpProject": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PpapSubmission": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ToolingMaster": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "GageRrStudy": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ApsSchedule": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ApsConstraint": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ApsSimulationScenario": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EnergyMeter": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EnergyKpiTarget": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "KanbanBoard": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "LeanImprovement": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "WasteLog": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "ValueStreamMapItem": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "TpmPillar": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "TpmAudit5S": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "TpmKpi": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ContractManufacturer": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "OutsourcingPurchaseOrder": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SubcontractedReceipt": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DdmrpPart": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DdmrpNetFlowStatus": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DdmrpRecommendation": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AnalyticsScheduledExport": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FormAnalytic": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AiEmbedding": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DriveStorageQuota": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DriveActivity": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DriveFileTag": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DynamicDiscountOffer": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SupplyChainFinanceProgram": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CloseTaskDependency": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CloseTaskSla": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CloseCalendarEvent": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CloseEscalationRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "CloseAnalyticsSnapshot": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ConsolidationGroup": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ConsolidationGroupMember": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ConsolidationExecution": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ConsolidationEliminationRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "ConsolidationEliminationEntry": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "ConsolidationTranslationAdjustment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "MinorityInterestSchedule": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CustomerCreditScorecard": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CustomerCreditScore": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "VendorRiskAssessment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "MarketRiskExposure": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "OperationalRiskEvent": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "RiskControlMeasure": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EmissionSourceRecord": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EmissionOffsetCredit": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EsgKpiDefinition": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "EsgKpiActualValue": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EsgReportTemplate": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "EsgDisclosureMapping": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SustainabilityTarget": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "TaxProvisionRun": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "TaxProvisionDetail": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DeferredTaxSchedule": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "UncertainTaxPosition": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ValuationAllowanceAssessment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ApprovalRoutingRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "AiForecastScenario": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AiForecastScenarioLine": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AnomalyDetectionRun": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AnomalyDetectionResult": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SmartGlCodingSuggestion": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PricingRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "QuoteVersion": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "QuoteMargin": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DiscountApprovalMatrix": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ReportCategory": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "SystemReport": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CommunicationOptOut": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CommunicationPreference": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ShipmentEmissions": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CarbonOffset": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SupplierDocument": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PoCollaboration": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "LetterOfCredit": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "LcDocument": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "LcAmendment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "LcPresentation": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BankGuarantee": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SopCycle": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SopDemandPlan": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SopSupplyPlan": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SopConsensusPlan": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "LogisticsProvider": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "LogisticsProviderInvoice": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "LogisticsProviderPerformance": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "ColdChainShipment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ColdChainTemperatureLog": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "ColdChainExcursion": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ScemAlert": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ScemAlertRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "SupplyChainRiskEvent": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ScmRiskMitigation": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "TradeComplianceCheck": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DeniedPartyEntry": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "ExportLicense": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "HsCodeClassification": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "MultiModalTransportOrder": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "MultiModalTransportLeg": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "MultiModalTransportEvent": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ReverseLogisticsOrder": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "ReverseLogisticsItem": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "DeliveryZone": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DeliveryTimeSlot": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "LastMileDelivery": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ScmIotDevice": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ScmIotReading": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SmartReplenishmentOrder": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DynamicDiscountRequest": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ScmFinancingFacility": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ScmFinancingDrawdown": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SupplierDevelopmentPlan": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SupplierDevMilestone": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SupplierDevSurvey": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PortTerminal": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BerthSlot": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ScmKpiSnapshot": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SupplierPortalSession": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SupplierAnnouncement": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "MasterProductionSchedule": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "MpsEntry": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "FmeaRecord": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FmeaMode": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AqlSamplingPlan": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "JobCostSheet": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "StandardCost": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FormulaIngredient": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CoProduct": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ManufacturingMachine": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "MachineOeeRecord": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "MachineMaintenanceLog": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "MachineDowntime": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "MaintenanceSchedule": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SparePart": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SixSigmaProject": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SixSigmaMetric": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SixSigmaTool": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ShopFloorTransaction": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "QualityStandard": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ComplianceAudit": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "GmpBatchRecord": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "HacppPlan": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PpmPortfolio": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PpmPortfolioProject": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PpmRiskRegister": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PpmRaidLog": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "EvmBaseline": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EvmMeasurement": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PpmKanbanBoard": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PpmKanbanColumn": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PpmKanbanCard": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PpmChangeRequest": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PpmProcurementPlan": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PpmProcurementRequisition": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PpmClientPortal": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PpmClientApproval": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PpmTimesheet": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PpmTimesheetEntry": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "PpmQualityPlan": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PpmQualityInspection": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PpmDocument": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PpmDocumentVersion": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SubcontractorDeliverable": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SubcontractorPaymentMilestone": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EmailInbox": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EmailMessage": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EmailRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "VideoRoom": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "VideoRoomParticipant": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "VideoRecording": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "WikiSpace": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "WikiPage": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "WikiPageVersion": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ChatChannel": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ChatChannelMember": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "IntranetPost": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "IntranetComment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "IntranetReaction": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "InternalSurvey": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "InternalSurveyAnswer": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CompanyEvent": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EventRsvp": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CommRetentionPolicy": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "LegalHold": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PhoneExtension": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PhoneCallLog": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "CommWebhook": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CommAnalyticsReport": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BuilderDataModel": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BuilderDataField": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BuilderRelationship": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BuilderDataView": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BusinessRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "BusinessRuleExecution": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "BuilderScript": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CalculatedField": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "IntegrationConnector": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Integration": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "IntegrationLog": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "BuilderTemplate": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "BuilderPermissionRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "BuilderDocumentTemplate": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "BuilderDocumentRender": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BuilderApi": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BuilderTheme": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "MarketplacePackage": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BuilderAnalyticsEvent": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BuilderUsageMetric": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ChatbotDefinition": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "ChatbotIntent": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ChatbotConversation": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EventDefinition": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "EventTrigger": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ScheduledJob": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ReportDefinition": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "ReportRun": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DashboardDefinition": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "DashboardWidget": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CustomerSuccessPlan": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SalesPlaybookDeep": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SalesIntelligenceSignal": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SalesDocumentTemplate": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "SalesDocumentGeneration": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SalesReturnOrderDeep": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SalesGamificationDeep": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SalesQuotaAttainment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaasTenantTierConfig": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "SaasTenantCustomQuota": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaasMeteringRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "SaasUsageEventBatch": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaasMultiTenantCluster": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaasTenantNodeRouting": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaasWhiteLabelDomain": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaasSslCertificate": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaasPartnerResellerChannel": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaasResellerCommission": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaasPortalAccountProfile": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaasPortalPaymentMethod": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaasPortalSubscriptionUpgrade": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaasPortalPlanDowngradeReason": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaasPortalUsageDashboard": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaasPortalInvoiceDownloadLog": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "SaasPortalSupportTicketDeep": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaasPortalTicketMessage": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaasPortalFeatureRequest": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaasPortalFeatureVote": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AnalyticsCustomDashboard": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AnalyticsDashboardWidgetDeep": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AnalyticsDataDataset": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AnalyticsDataPipeline": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AnalyticsPredictiveModel": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AnalyticsForecastRun": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AnalyticsCohortAnalysis": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AnalyticsCohortGroup": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AnalyticsFunnelStep": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AnalyticsFunnelConversion": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ReportingTemplateDeep": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "ReportingTemplateSection": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "ReportingScheduledJobDeep": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ReportingExecutionLog": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "ReportingExportJob": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ReportingExportFile": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ReportingComplianceAudit": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "ReportingSignoffHistory": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "ReportingDistributionList": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ReportingDistributionRecipient": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AdvancedHrLearningPathDeep": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AdvancedHrLearningEnrollment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AdvancedHrSuccessionPlan": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AdvancedHrSuccessionCandidate": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AdvancedHrWorkforceAnalyticsDeep": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AdvancedHrCompensationBandDeep": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AdvancedHrBenefitsPlanDeep": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AdvancedHrBenefitsEnrollment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AdvancedHrOrgChartNodeDeep": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AdvancedHrExitInterviewDeep": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SearchIndex": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SearchIndexRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "SearchQueryLog": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "SearchAnalytics": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "NotificationTemplate": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "NotificationBatch": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "NotificationDigest": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "NotificationDeliveryLog": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "Deployment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Environment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Release": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DeploymentAnalytics": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PwaManifest": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PwaServiceWorker": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PwaOfflineCacheRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "PwaInstallPrompt": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PwaSyncQueue": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PwaPushSubscription": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "OutboxDLQ": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "OutboxDeadLetterMessage": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "OutboxRetryLog": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "OutboxDispatcherState": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ExtConnection": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ExtIntegrationTemplate": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "PeopleCompetency": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PeopleSuccessionPlan": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PeoplePerformanceMetric": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SearchIndexConfig": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "SearchSynonymGroup": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AssetDepreciationSchedule": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AssetMaintenanceSchedule": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AssetDisposalLog": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "ApiRateLimitRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "ApiQuotaPolicy": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "ApiUsageAnalytics": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SubscriptionPlanTier": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SubscriptionUsageBilling": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SubscriptionChurnSurvey": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "StorageBucketConfig": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "StorageLifecycleRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "StorageAccessPolicy": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "PwaOfflineSyncQueue": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PwaManifestConfig": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "SavedViewShare": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SavedViewFilterRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "SavedViewPreference": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PeopleOnboardingTask": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PeopleTimeOffRequest": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PeoplePeerRecognition": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FixedAssetInsurancePolicy": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "FixedAssetRevaluation": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FixedAssetPhysicalAudit": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "ServiceTicketCategory": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "ServiceTicketSLAPolicy": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "ServiceKnowledgeArticle": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FixedAssetComponent": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FixedAssetWarranty": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FixedAssetImpairment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FixedAssetConditionAssessment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FixedAssetDocument": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FixedAssetUtilizationMetric": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FixedAssetGroup": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FixedAssetBudgetAllocation": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SubscriptionCoupon": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SubscriptionPlanGroup": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SubscriptionMigration": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SubscriptionBillingRun": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SubscriptionDunningRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "SubscriptionCreditNote": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SubscriptionAutoScaleRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "SubscriptionAnalyticsSnapshot": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "LocaleTranslationContext": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "LocaleGlossaryEntry": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "LocaleTranslationMemoryEntry": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "LocaleMachineTranslationConfig": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "LocaleApprovalWorkflow": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "LocaleTranslationReview": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "LocaleFallbackChain": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "LocaleContentSchedule": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "RegionValidationRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "ReportBookmark": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ReportShare": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ReportVersion": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ReportExecutionLog": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "ReportDrillPathConfig": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "ReportDataSource": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ReportCacheConfig": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "ReportAlertRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "ReportScheduleInstance": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ReportAuditLog": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "ReportFilterPreset": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ReportColumnPreference": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DocumentTag": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DocumentSmartCollection": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "StorageEncryption": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "StorageReplication": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "StorageBackup": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "StorageAnalytic": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "StorageAlert": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "StorageMigration": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "StorageCompression": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "StorageDeduplication": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "StorageSnapshot": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "StorageRetentionPolicy": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "StorageComplianceLog": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "StorageCache": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "StorageSync": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "WorkflowTemplate": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "WorkflowCategory": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "WorkflowMetric": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "WorkflowTag": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CannedResponse": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "OmnichannelConversation": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ChannelIntegration": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BreakoutRoom": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "MeetingAnalytics": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "VoipCall": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Voicemail": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "IvrMenu": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SavedSearch": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SearchHistory": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "SynonymDictionary": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Whiteboard": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CommSurvey": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CommSurveyTemplate": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "POSTerminal": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "POSRegister": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "POSOrder": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "POSDiscount": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "POSTaxProfile": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "POSLoyaltyProgram": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "POSLoyaltyMember": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "POSGiftCard": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "POSStoreCredit": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "POSReturn": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "POSHeldOrder": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "POSPriceList": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "POSPromotion": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "POSOpenTab": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "POSLayaway": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SerialNumber": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Batch": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CycleCount": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "TransferApprovalRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "PickWave": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ConsignmentStock": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DropShipProvider": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DropShipOrder": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AvailableToPromise": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "RfidTag": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Subinventory": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CustomerConsignmentStock": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DistributionPlanRun": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EdiInventoryTransaction": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "DockAppointment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "GeneratedInvoice": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Currency": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ExchangeRate": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CurrencyRevaluation": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EInvoice": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CostCenter": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Journal": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "TaxRate": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BankReconciliation": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SalaryComponent": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SalaryStructure": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AttendanceRecord": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AssetAssignment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "OnboardingChecklist": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "OffboardingChecklist": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "JobPosting": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Goal": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Feedback360": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SuccessionPlan": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "HRTicket": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EngagementSurvey": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ShiftSchedule": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Appraisal": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Training": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BenefitScheme": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SkillRequirement": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ComplianceCheck": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "TaxTable": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "HolidayCalendar": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ExitInterview": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "RecruitmentAgency": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "OfferTemplate": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "SalaryRevision": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "OvertimeRequest": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AttendanceAdjustment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "KpiTemplate": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "KpiEvaluation": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "LearningCourse": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Certification": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SkillMatrix": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CareerPath": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "MentoringProgram": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BonusPlan": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EquityGrant": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BenefitsEligibilityRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "FlexibleBenefitCredit": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CompensationReview": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CompensationBenchmark": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "TotalRewardsStatement": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DisputeResolution": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BackgroundCheckRequest": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "VisaRecord": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ImmigrationDocument": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DEIMetric": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DEIReport": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "TurnoverPrediction": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ComplianceRequirement": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "WellnessChallenge": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "eNPSurvey": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PulseSurvey": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AlumniRecord": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AlumniEvent": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Workflow": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "NotificationChannel": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "NotificationPreference": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "GeneratedDocument": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "StoredFile": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ReportWidget": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ReportView": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "LanguageOverride": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "OfflineSyncQueue": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaaSPlan": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "UsageRecord": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "MeteringEvent": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaaSCoupon": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SaaSAddOn": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AppStorageUsage": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ExpenseReport": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ExpenseCategoryPolicy": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "MileageRate": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PerDiemRate": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CorporateCard": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CardLimitAuditLog": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "CardLimitIncreaseRequest": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "RevenueSchedule": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Subscription": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ConsolidationRun": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "RecurringJournal": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "BankAccount": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DunningLevel": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DunningRun": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "InterCompanyTransfer": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "QAInspectionTemplate": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "SalesReturn": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PurchaseReturn": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Workstation": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "MRPRun": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "QualityInspectionPlan": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "NonConformanceReport": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SubcontractingOrder": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BuilderForm": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BuilderWorkflow": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BuilderDashboard": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BuilderModule": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AutomationRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "DataImportJob": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AdvancedForm": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FormCondition": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FormCalculatedField": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FormPage": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FormAnalytics": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FormVersion": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BpmnProcessDefinition": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "BpmnTimerDefinition": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "ApiEndpoint": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ApiEndpointMapping": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ApiTestRun": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ApiTestResult": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DecisionTable": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DecisionTableRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "RuleSet": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "RuleDefinition": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "RuleEvaluationLog": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "EtlDataSource": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EtlPipeline": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EtlMapping": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "MobileApp": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "MobileScreen": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "MobileNotificationConfig": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "MobileBuild": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ThemeConfig": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "DesignToken": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "TokenValue": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ThemeSnapshot": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AbTest": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AbTestVariant": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AudienceSegment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SegmentRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "PersonalizationRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "BlogPost": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "SchemaRegistry": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PageRegistry": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AppNavOverlay": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ContactTag": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CustomerTag": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SalesTarget": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EmailSequenceEnrollment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "TerritoryAssignmentLog": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "TerritoryRoundRobinState": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CommissionRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "CommissionEntry": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "ApprovalRequest": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "QuotationSignature": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "UoMConversion": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ReorderRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "Permission": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SystemAnnouncement": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ScheduledReport": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DataRetentionPolicy": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "DataErasureRequest": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SubjectErasureKey": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "RecordLegalHold": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SettingChangeApproval": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "ScheduledTask": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ErrorLog": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "MarketplaceApp": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AppVendor": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AppCollection": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AppSubmission": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CustomFieldDefinition": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "AutomationRuleExecution": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "RecycleBinItem": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AdminAlert": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AlertThreshold": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BulkOperation": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Delegation": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DuplicateSet": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BillingEvent": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CustomWorkflow": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CustomDashboard": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "LogicScript": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "EnvVariable": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "RunLog": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "StudioPermission": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ThirdPartyConnector": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CustomWidget": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "GitConfig": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "NativeBuild": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "MailboxConnection": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SalesPromotion": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SalesPartnerTier": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "StorefrontConfig": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "StorefrontCategory": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "Cart": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "StorefrontCheckoutState": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DuplicateRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "Segment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SlaPolicy": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "SlaBreach": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BankConnection": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ForecastWeek": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "InterCompanyTransaction": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "FxRevaluationRun": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "APMatchException": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CloseTask": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "VarianceFlag": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BudgetScenario": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "APInvoiceCapture": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AllocationRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "EliminationRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "EliminationRun": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BudgetControlConfig": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "BudgetReallocation": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "TaxJurisdiction": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "TaxExemptionCertificate": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "TaxReconciliation": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "WithholdingCertificate": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AmendedTaxFiling": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "TreasuryPosition": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "HedgeInstrument": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DebtFacility": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "VendorStatement": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "APDuplicateFlag": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "APApprovalPolicy": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "GrniRecord": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ARPromiseToPay": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ARDispute": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BadDebtProvision": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AssetInsurance": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AssetImpairment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CapitalProject": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "RollingForecast": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "HeadcountPlan": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BudgetComment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ManagementReport": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BillingRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "ContractModification": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DeferredRevenueRollForward": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "TieredPricingTable": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ControlTest": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SodConflict": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AuditConfirmation": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "PeriodCertification": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SodRuleDefinition": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "IntercompanyLoan": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AssetRevaluation": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AssetDisposal": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CashPool": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "VarianceAlertConfig": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "ConsolidationRate": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Form1099Batch": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EconomicNexusThreshold": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "NexusMonitoringSnapshot": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "NexusRegistration": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SalesStreak": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CommissionSpiff": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CommissionPayout": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ReturnReasonCode": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "VendorRmaRequest": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "VendorReturnShipment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "LaborStandard": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "WorkerTaskLog": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "SupplierScorecard": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SupplierNcr": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SupplierCarRequest": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BinReplenishmentRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "ShippingCarrier": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CarrierServiceLevel": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AdvanceShippingNotice": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "InboundShipment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "OutboundShipment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ShipmentTrackingEvent": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CapaRecord": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CalibrationRecord": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DeviationRecord": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SopDocument": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BinTransferRequest": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "GoodsReceiptNote": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PackingSession": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "LotMovement": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PickSuggestion": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ExpiryAlert": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "QuarantineOrder": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DemandForecast": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ReorderPoint": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SafetyStockConfig": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "ReplenishmentOrder": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "LandedCostVoucher": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CostAdjustment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "TransferOrder": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DockDoor": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "YardAppointment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "YardMove": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "YardInventory": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "HazmatClassification": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "HazmatStorageRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "HazmatManifest": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "HazmatIncident": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ApprovedSupplier": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "VendorItemAttribute": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AslComplianceRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "PalletType": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "ContainerType": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "LoadPlan": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PackingPlan": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CatchWeightConfig": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "CatchWeightReading": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CatchWeightTare": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PackagingSpec": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Gs1ApplicationIdentifier": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "LabelTemplate": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "SsccRecord": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ColdChainRequirement": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "TemperatureExcursion": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "VelocityClassificationRun": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "VelocityClassificationItem": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "VelocitySlottingPolicy": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "CustomerRma": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CustomerRmaLine": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ReturnCredit": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ReturnRestock": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "MinMaxLevel": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ReplenSuggestion": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ReplenRunLog": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "CargoDamageReport": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FreightClaim": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FreightClaimEvent": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "VmiAgreement": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "VmiStockSnapshot": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "VmiOrder": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "LotExpiryRecord": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "LotExpiryAlert": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "LotDisposalRecord": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CrossDockStation": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CrossDockOrder": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CrossDockEvent": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PickTask": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AsnDiscrepancy": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ShipmentException": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SupplierContract": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SupplierPerformanceKpi": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SupplierAssessment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SupplyChainBudget": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ContainerTracking": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CustomsDocument": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SupplierNonConformance": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "LaneRate": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SupplierCertification": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BlockchainTransaction": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "BlockchainVerification": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BlockchainSyncCheckpoint": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BlockchainNetworkHealth": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DocumentSequence": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FloorPriceOverride": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CrossSellRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "UpsellRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "TeamSplit": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ContractPriceEscalationRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "PerformanceObligation": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Asc606ContractModification": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Asc606DeferredRevenueRollForward": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "TransferPricingPolicy": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "TransferPricingAdjustment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ApportionmentFactor": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FairValueMeasurement": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ExpectedCreditLossProvision": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BudgetTemplate": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "BudgetCommitment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BudgetCarryForwardRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "BudgetRevision": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "NettingGroup": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "NettingRun": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SettlementInstruction": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CampaignWorkflow": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ABTestCampaign": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CampaignROI": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "NpsSurvey": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PredictiveLeadScoreModel": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PipelineVelocity": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SalesCycleAnalytic": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ForecastAccuracyAudit": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "RebateAgreement": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "QuoteComparison": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "QuoteMarkupApproval": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SalesNote": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CompetitiveIntelligence": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "MdfProgram": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PartnerPerformanceMetric": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BulkOrderUpload": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "OrderApprovalWorkflow": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "OrderApprovalRequest": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ReturnMerchandiseAuthorization": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "WavePlan": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SafetyStockOptimization": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "GlobalInventoryView": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SourcingProject": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SupplierOnboardingWorkflow": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "HsCode": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CountryOfOrigin": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ImportDeclaration": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ExportDeclaration": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "TradeComplianceScreening": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DemandSenseRun": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SupplyPlan": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SopPlan": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "TransportMode": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CarrierRate": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "LoadBuild": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DocumentDeliveryConfirmation": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SupplierRiskProfile": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AlternativeSourcing": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ControlTowerEvent": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ControlTowerKpi": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ControlTowerAlertConfig": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "EcommerceStore": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "LeadSource": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CrmAiDraft": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CrmFollower": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "OpportunityChecklist": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "LeadScoringRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "LeaderboardSnapshot": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CrmEnrichmentLog": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "CrmLeadEnrichmentData": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CrmLeadRoutingHistory": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "CrmLeadRoundRobinState": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CrmEnrichmentCache": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CrmActionSuggestion": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CrmDealReadinessScore": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CrmSalesPlaybook": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CrmDealGuidance": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CrmCompetitorBattlecard": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CrmObjectionHandler": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CrmOmnichannelCampaign": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CrmAudienceSegmentRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "CrmAttributionModel": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CrmMarketingAsset": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CrmEventWebinar": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CrmAbmAccountGroup": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CrmIntentSignal": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CrmBuyingCommitteeMember": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CrmAccountEngagementLog": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "CrmHealthScoreConfig": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "CrmAccountHealthRecord": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CrmRenewalPipeline": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CrmCustomerFeedbackSurvey": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CrmFieldVisitSchedule": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CrmSalesRoutePlan": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CrmPartnerTierBenefit": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CrmPartnerCertification": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CustomObjectDefinition": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "RuntimeCellAssignment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "TenantDeveloperEntitlement": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DevPackage": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DevSigningKey": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EducationStudent": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EducationCourse": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EducationFeeStructure": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EducationBook": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EducationParent": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EducationReportCard": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EducationScholarship": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EducationAssignmentSubmission": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "TenantExtensionInstallation": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ExtensionInvocationUsage": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "WorkOrder": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FieldSalesRoute": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FieldSalesCheckin": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FieldSalesExpense": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FieldServiceSla": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FieldServiceTicket": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FieldServiceTechnician": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FieldServiceChecklist": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FieldServiceInventoryItem": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FieldServiceContract": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FieldServiceTechnicianDashboard": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FieldServiceSchedule": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FieldServiceCalendarEvent": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FieldServicePartRequest": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FieldServiceVanStock": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FieldServiceWarranty": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FieldServiceWorkOrderExpense": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FieldServiceInspectionChecklist": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Account": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FinanceAuditLog": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "FinancialPeriod": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PaymentSchedule": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PaymentRun": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PaymentTermTemplate": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "PaymentBatch": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FinancialControl": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "InvoiceFactoringFacility": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "InvoiceFactoringAdvance": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "InvoiceCaptureBatch": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "InvoiceCaptureResult": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "InvoiceMatchRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "PaymentRailOptimization": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FinancialNlpQueryLog": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "HealthScoreConfig": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "AppointmentSchedule": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "HealthcarePatient": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "HealthcarePractitioner": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "HealthcareDrug": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "HealthcareFhirResource": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "HealthcareClinicalNote": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "HealthcareTelemedicineSession": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "HealthcareMedicalBill": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EmployeeDocument": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EmployeeSkill": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PayrollRun": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "LeavePolicy": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "LeaveRequest": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EmployeeAchievement": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EmployeeReferral": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EmployeeEducation": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EmployeeDependent": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EmployeeEmergencyContact": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "HrExpenseClaim": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EmployeePromotion": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EmployeeSeparation": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EmployeeWarning": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "HrPolicy": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "HrAnnouncement": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PayrollTaxEntry": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "PayrollContribution": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "HrTicketCategory": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "HrTicket": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EmployeeGrievance": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EmployeeWellnessProgram": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "HrHeadcountPlan": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "HrSuccessionPlan": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EmployeeRecognition": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EmployeeRecognitionAward": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "HrSurveyResponse": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EmployeeJourneyMilestone": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "InventoryItem": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "InventoryItemBin": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "StockReservation": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "StockEntry": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "InventoryValuation": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "StockAlert": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "InvestmentHolding": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "WarehouseShiftTemplate": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "InventoryHold": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "WarehouseTask": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "StockoutPrediction": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "StockValuationPolicy": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "StockValuationLedger": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "StockRevaluation": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "StockTake": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "StockWriteDownRequest": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "StockWriteOffRecord": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "InventoryCostProfile": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "InventoryCostLayer": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "InventoryCostAdjustment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "WarehouseKpi": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "WarehouseNetworkDesign": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "WarehouseNetworkNode": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "RoutingRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "MfgSpcChart": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "MfgSpcDataPoint": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "MfgCostEntry": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "MfgMaintenanceWorkOrder": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "MfgDocumentControl": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "MfgDocumentVersion": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "MarketplaceEarning": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "MarketplacePayoutBatch": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BlackoutPeriod": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Job": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PlatformBulkOperation": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ScheduledOperation": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PlatformEventOutboxEntry": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "WebhookEndpoint": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "WebhookDeliveryAttempt": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "OrgUnit": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "OrgPosition": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ApprovalRouting": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Policy": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "PosRegister2": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PosPaymentMethod": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PosRefund": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PosGiftCard2": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PosCustomerDisplay": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PosOrderType": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "PosDiscountRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "PosTaxRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "PosKitchenDisplay": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PosKitchenOrder": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PosSplitPayment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ProjectPortfolio": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ProductCategory": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "ProductKit": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ProductRecall": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ProductVelocitySnapshot": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ProductConfigRule": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "ProcurementContract": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ProcurementIntelligence": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Program": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ProductionBatch": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ProductionFormula": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ProductionShift": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ProductionAnalyticsSnapshot": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ProjectIssueLog": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "ProjectTemplate": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "ProjectStakeholder": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ProjectBenefit": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ProjectMeeting": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ProjectSubcontractor": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Provider": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ProviderHealthConfig": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "TenantProviderOverride": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "StickyRouteAssignment": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ProviderCircuitState": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CostIngestionBatch": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BudgetPolicy": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "ProviderConsumptionReport": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FinOpsRecommendation": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "StepUpMfaVerification": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PrivilegeElevation": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "SloDefinition": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "Incident": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "UnitOfMeasure": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ProposalDocument": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "RealEstateProperty": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "RealEstatePropertyPortfolio": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "RealEstatePropertyBuilding": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "RealEstateMaintenanceVendor": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "RealEstateCommissionPlan": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "RealEstateMaintenanceRequest": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "RealEstateLeaseRenewal": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "RealEstateRentEscalation": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "RealEstatePropertyFinancial": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "RealEstateExpenseCategory": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "RealEstatePropertyInspection": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "RealEstateRentCollectionLog": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "RealEstateListingSyndicate": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ReconciliationHold": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ResourceKind": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Resource": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DesiredStateVersion": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ResourceAttribution": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "CapacityObservation": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EstateGrant": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "BackupPolicy": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "RestoreRehearsal": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "FailoverRehearsal": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "RetentionCertificate": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Runbook": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "RunbookExecution": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "DataBreach": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "WebhookSubscription": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "WebAsset": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "WebTemplate": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "WebMenu": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "WebSeo": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "WebSettings": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    },
+    "WebCollection": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "WebFormSubmission": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "WebOrder": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "WebSite": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "Role": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AccessReviewCampaign": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "ApiKey": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "UserGroup": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PasswordResetToken": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EmailVerificationToken": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EmailDelivery": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EmailSuppression": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EmailUsageDaily": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "EmailSendReservation": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "PushSubscription": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "MfaPushChallenge": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "OAuthClient": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "OidcSigningKey": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "LoginAttemptCounter": {
+      "reason": "immutable-financial-or-operational-record: permanent retention required by financial/audit regulations"
+    },
+    "Platform": {
+      "reason": "domain-entity-lifecycle: governed by tenant offboarding and parent domain lifecycle"
+    },
+    "AgentDefinition": {
+      "reason": "system-configuration-or-metadata: persistent configuration with no automated expiry"
+    }
+  }
+}

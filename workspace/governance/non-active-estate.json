@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "authority": "UniERP.code-workspace remains the sole active-estate authority; this file only classifies workspace roots that are explicitly not active.",
+  "defaultPolicy": {
+    "buildInput": false,
+    "deploymentInput": false,
+    "contractAuthority": false,
+    "auditEvidence": false,
+    "agentSourceOfTruth": false
+  },
+  "entries": [
+    { "path": "archives", "workspacePresent": false, "status": "ARCHIVE", "owner": "PLT-OPS", "disposition": "Retained outside the active workspace under the operator-managed backup and retention policy; exclude from discovery, builds, deployments, searches used as current evidence, and agent context unless the task explicitly concerns historical recovery." },
+    { "path": "create-unierp", "workspacePresent": false, "status": "RETIRED_BOOTSTRAP", "owner": "PLT-OPS", "disposition": "Legacy bootstrap package retained outside the active workspace. It is not an active repository or package source; migrate any still-required generator behavior into an owned active tool before use." },
+    { "path": "release-artifacts", "workspacePresent": false, "status": "GENERATED_OUTPUT", "owner": "PLT-OPS", "disposition": "Local release output retained outside the active workspace. Never treat it as provenance or release evidence without a signed release manifest produced by the active delivery process." },
+    { "path": "UniERP_scratch", "workspacePresent": false, "status": "SCRATCH", "owner": "PLT-OPS", "disposition": "Untrusted scratch area retained outside the active workspace. Excluded from active code, documentation authority, tests, deployment, secret storage and audit evidence." },
+    { "path": "unierp-api", "workspacePresent": false, "status": "RETIRED_CHECKOUT", "owner": "PLT-BIZ", "replacement": "api", "disposition": "Retired local topology retained outside the active workspace. The active API repository is api; no active automation may read, build or deploy this directory." },
+    { "path": "unierp-infra", "workspacePresent": false, "status": "RETIRED_CHECKOUT", "owner": "PLT-OPS", "replacement": "infra", "disposition": "Retired local topology retained outside the active workspace. The active infrastructure repository is infra; no active automation may read, build or deploy this directory." }
+  ]
+}

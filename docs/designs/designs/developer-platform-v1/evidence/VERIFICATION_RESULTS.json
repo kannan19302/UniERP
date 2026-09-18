@@ -1,0 +1,779 @@
+{
+  "date": "2026-09-08T17:15:09.488Z",
+  "status": "PASS",
+  "screens": 108,
+  "originalCopies": 76,
+  "enterpriseAdditions": 32,
+  "preservedPreviousFiles": 183,
+  "stories": 120,
+  "routes": 73,
+  "registryDefinitions": 34,
+  "owningRequirementIds": 10,
+  "markdownFiles": 25,
+  "checkedLocalMarkdownLinks": 122,
+  "galleryFilterChecks": 4,
+  "images": [
+    {
+      "screen": "DP-001",
+      "file": "001_auth_states.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "461B1111F850D0403CCBC94BB90F65E1687179C6D2BDB6F916EEB1519928110D"
+    },
+    {
+      "screen": "DP-002",
+      "file": "002_developer_getting_started_refined.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "7233C812AB9A91FF004BCAC1718908CAE00C145D033CA65151F965311CCE4DDA"
+    },
+    {
+      "screen": "DP-003",
+      "file": "003_projects.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "65BA6EEF68FCCF845CF23A86F779C68D3777E8EDEB3A25AFA5BB75C214208D3E"
+    },
+    {
+      "screen": "DP-004",
+      "file": "004_create_project.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "3C0636E29802A17B6814C89E23E57A6193515E852417E7E8D1F653792F439152"
+    },
+    {
+      "screen": "DP-005",
+      "file": "005_project_overview.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "A488F1EE88652F1C7CE92E9D698F3BAD5FBB099EA60AE9F6BB26F6EB2C48ED44"
+    },
+    {
+      "screen": "DP-006",
+      "file": "006_work_items.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "5C4B6B90DA0B3DE7277AC1F46E8267C262DD17CB2C4F74B6CF1B856F7486708E"
+    },
+    {
+      "screen": "DP-007",
+      "file": "007_applications.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "2F4FEC41E174763E27107944FC4A357FD64DD61101E0E5DFBE93E05C43D076DE"
+    },
+    {
+      "screen": "DP-008",
+      "file": "008_websites.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "9F609BCB979F7FE769571AB179D84F35F3A0644E6A3F677B48ED236871595910"
+    },
+    {
+      "screen": "DP-009",
+      "file": "009_new_application.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "9054BEDFCB80272951008CF9214D7957033CB0D9F4F684963944EEFC7FD3499F"
+    },
+    {
+      "screen": "DP-010",
+      "file": "010_new_website.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "4E8D9C1CED39C0745DE0567A1E2379D207A00E849911DC3637BFD0436269B5D5"
+    },
+    {
+      "screen": "DP-011",
+      "file": "011_standalone_builders.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "0D84AD95F92D9231D70272F5E30556794638E722DF39773B72180E617D130C3D"
+    },
+    {
+      "screen": "DP-012",
+      "file": "012_resource_library.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "1AF5FD842F4A97B4753255F68DA91480E2ADD75A129ECE66EC86FFD22FB7AE89"
+    },
+    {
+      "screen": "DP-013",
+      "file": "013_app_overview.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "378944AEEB812390C7888634AC14E639F70B6ABE434C8CD2FF6143F0E4BEB9E6"
+    },
+    {
+      "screen": "DP-014",
+      "file": "014_site_overview.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "1054D63D23A0AE83CFDF108D08E8AEBBE030F32E23988B1BE49522E16C8D0714"
+    },
+    {
+      "screen": "DP-015",
+      "file": "015_link_to_project.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "D1F6A93634D301973E7879C4343E03AFE0A68853A99A8648A56FA7660F1BFA0B"
+    },
+    {
+      "screen": "DP-016",
+      "file": "016_resource_updates.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "7B478348CF0693F9A841D5326C9D3D087C975FE35A57B2E4086FF903EEF1779A"
+    },
+    {
+      "screen": "DP-017",
+      "file": "017_portable_import_export.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "1A1C2DCDB9DB74E03F62619BAE1E3D29A57E9074633EEDC6CAC8A64A5FD71CD9"
+    },
+    {
+      "screen": "DP-018",
+      "file": "018_package_publish_refined.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "92CE2ECF621F9AD10FB916533B68C791312B880CCE6E2D7D67C6784050AF7671"
+    },
+    {
+      "screen": "DP-019",
+      "file": "019_package_retirement_final.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "68711EC63E45153CDB025F1E5497C75E4A8966ECDD4FDDA7A0D58EFC2979F082"
+    },
+    {
+      "screen": "DP-020",
+      "file": "020_component_builder.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "82013E0EEEC555D4A6963E90E880021B99A3D8106F25976DAAFDF73C1315A7FE"
+    },
+    {
+      "screen": "DP-021",
+      "file": "021_component_governance.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "50D8218A5EFAD2BE1CB4A69BAB53E6C1F7D8C332950D5CCE9270F1EDC4307F00"
+    },
+    {
+      "screen": "DP-022",
+      "file": "022_project_settings.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "61B8A43880999D30EF5F9C51B4E27D50A56E98460F6FE2555809E5E8D2184AEA"
+    },
+    {
+      "screen": "DP-023",
+      "file": "023_project_settings.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "D49BF537652BA754977A41C93AF291A5C08B2CFE249D26CB6B180F53C8F20846"
+    },
+    {
+      "screen": "DP-024",
+      "file": "024_workspace_utilities.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "2311E1804461DE2097311583155B710BBC6CE365676C0C10E22570EA35C23264"
+    },
+    {
+      "screen": "DP-025",
+      "file": "025_navigation_states.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "40DA15C9AF5FB0FA7CF1D58634A834B4DB2310A5BCD8ADBE223C446756F6042D"
+    },
+    {
+      "screen": "DP-026",
+      "file": "026_system_states.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "76E21BD2B15148BE16FCEDD4178FCB682D3936A30F7D989664B51F65D49627E6"
+    },
+    {
+      "screen": "DP-027",
+      "file": "027_pages.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "86D46BFE12A45A56545BFFED944EED405A29DE17B5AD912DB54EC8190063E919"
+    },
+    {
+      "screen": "DP-028",
+      "file": "028_website_builder.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "805D347F7A35254E6ACB2E4DC630084C05F2E1DFA836DAE2B8FE2C0CA2AD1612"
+    },
+    {
+      "screen": "DP-029",
+      "file": "029_collections.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "B6A1B2339959F03907A4F7245C3E32D116BC59F83EE0CD909A50C164A78D5485"
+    },
+    {
+      "screen": "DP-030",
+      "file": "030_collection_editor.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "B02344C2D954ED7F4E6D9154B52B12281A206FA966FDFF577BEB1134DC3B43DE"
+    },
+    {
+      "screen": "DP-031",
+      "file": "031_blog.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "0F421A374589205368DF95ED1A73D8751F63CC512EFEE68B584B84E7F5DD843F"
+    },
+    {
+      "screen": "DP-032",
+      "file": "032_post_editor.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "E17BB32A354E2F4B9337B3BB81D37CE1C97EB755BFE00DF8009DB7A9BE616992"
+    },
+    {
+      "screen": "DP-033",
+      "file": "033_assets.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "3246D22700EA3037C446F0FC3A2535984787B72BC28E67EE32393D10C3D96116"
+    },
+    {
+      "screen": "DP-034",
+      "file": "034_menus.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "7805490D980D227091D642FFE778107A30A5A82D7E19098A9F11A044D0E0B047"
+    },
+    {
+      "screen": "DP-035",
+      "file": "035_seo.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "0D12628CBB48672510BE6F501DBFB817F5576FCF8DA4E9D9509AC4D06DE891F3"
+    },
+    {
+      "screen": "DP-036",
+      "file": "036_localization_rtl_refined.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "62BEF9A03037C17CDADFFBF7C18D55BE99C130C37D539014930446787C3D7CC1"
+    },
+    {
+      "screen": "DP-037",
+      "file": "037_public_access_consent_final.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "A81FC4F2914A7B728155E05DD7FBA859652EDF1E7CDC27D9F14DA6A8E4C52F3B"
+    },
+    {
+      "screen": "DP-038",
+      "file": "038_experiments.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "B227FD9F4D62D050C2842A87E68C3B96DB12F2C82AD6A5AB57EC72CBA2B9A97B"
+    },
+    {
+      "screen": "DP-039",
+      "file": "039_orders.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "8F5FA466616BF7A94C10D85735937AF9E0D1D228C2A32417DC34F46691C73622"
+    },
+    {
+      "screen": "DP-040",
+      "file": "040_submissions.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "B15792C7055D0F3E9FA4D1CDFEE491FC1DEDDF4D027F0837A4093EA3B384D8B3"
+    },
+    {
+      "screen": "DP-041",
+      "file": "041_site_settings.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "1C747D57276E3811A5350178C0D81F8259BCD44A6C1FBD5EAF0A7DD8E362139D"
+    },
+    {
+      "screen": "DP-042",
+      "file": "042_site_revisions.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "B26DFF5946E5E3A36412376E3D0D58F73F21DE462EA74D04F255B2B1F7C8CEF3"
+    },
+    {
+      "screen": "DP-043",
+      "file": "043_app_builder.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "99A42BBF8CE109600A6DE0198BF50DD55DABE6F3D71A596875FF56406117E544"
+    },
+    {
+      "screen": "DP-044",
+      "file": "044_forms.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "E93E0D191A3A39750416FB783B8E07D6A39323CC325DCE816F00E2FA865F1057"
+    },
+    {
+      "screen": "DP-045",
+      "file": "045_form_builder.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "D868D35C242E45B4FCE91F83F0A69D757F222E542FA22F342B49E2BC764FA0B3"
+    },
+    {
+      "screen": "DP-046",
+      "file": "046_advanced_forms.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "9F33B1C244A310A9628DA30E1ABEF3443832A0488B4EB72DDD49C364369CC47E"
+    },
+    {
+      "screen": "DP-047",
+      "file": "047_dashboard_catalog.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "DA9613768CA2BBCEDDF058E7BFC20BB79B16DCECBF14FC46F48C510D3BE09763"
+    },
+    {
+      "screen": "DP-048",
+      "file": "048_dashboard_builder.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "240D5A2FC7B32011C9CEF18853F3DA3AF90A6D3AB928DD08F2E04C49F9A9CF2B"
+    },
+    {
+      "screen": "DP-049",
+      "file": "049_data_objects.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "93AC6B4BCA54939B66F41228D2BA9ABE114F1638BF5747E6D10539A59D345D25"
+    },
+    {
+      "screen": "DP-050",
+      "file": "050_object_designer.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "ECF32FB835C6D6D139B344E37A2F6D3F875960446D2A5B38943C22E8BCA8F1F7"
+    },
+    {
+      "screen": "DP-051",
+      "file": "051_rules.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "F1A64F37BE2F956EFB122E5EAB5DA5F2E4A149797365680672201206263B07F1"
+    },
+    {
+      "screen": "DP-052",
+      "file": "052_bpmn.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "4148445C5EC17A2B430B58EF5CF7EF8A390F2DF059F4E557A2707D30D93B0152"
+    },
+    {
+      "screen": "DP-053",
+      "file": "053_workflow_catalog.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "6C38B3C5FC10CDE5FCE3F27E78D5E9B209EFD195531160054DA62FD3A29FE902"
+    },
+    {
+      "screen": "DP-054",
+      "file": "054_workflow_builder.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "9D44971AB79A521783B24BC13CDA5DC47DA5588ABB35847BD94FE1D13E2B4D94"
+    },
+    {
+      "screen": "DP-055",
+      "file": "055_logic.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "B929E46C19ABD1C8BEECE154592F600552917164E67BC1AAF1367A2BCCD698B8"
+    },
+    {
+      "screen": "DP-056",
+      "file": "056_mobile_builder.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "106A03C8F641CCC2AF443A015F56D329E8D041F8FAC843E1354C50CA122D0E38"
+    },
+    {
+      "screen": "DP-057",
+      "file": "057_app_customization.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "E4AC477FF807305FD50E0E5C95165530EC2CB2E45043E5DF3B6CDFE5F54083CE"
+    },
+    {
+      "screen": "DP-058",
+      "file": "058_report_semantics.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "69A68FCE4B23733A90DA46DC86D82351CEDBE491EA975301A49F1E3899AEA937"
+    },
+    {
+      "screen": "DP-059",
+      "file": "059_message_templates.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "3696ED974245A6CA8C3C55839FB3E911B91D12E9C678B3ADC68BFA08E8A86894"
+    },
+    {
+      "screen": "DP-060",
+      "file": "060_approval_routing.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "65631C48ECECDCDA32F2F25C9B00A91E689289FDB47267FB909E30DED0FF24E3"
+    },
+    {
+      "screen": "DP-061",
+      "file": "061_data_integrations.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "854F18FED9FC0363E670323A17289CBCB7A77D5557DDA41E40F133FD967F359F"
+    },
+    {
+      "screen": "DP-062",
+      "file": "062_connectors.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "F7B7F8C65AC47BCF8B415CA392B35982756C607FE376CDCEE83FEADDC99CF6BB"
+    },
+    {
+      "screen": "DP-063",
+      "file": "063_query_builder.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "CDF46E53CF0414813C4276D69A2BACCA2F8A5BC77A67FFB983C209ACB0E5C86E"
+    },
+    {
+      "screen": "DP-064",
+      "file": "064_widgets.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "C60352AE8B5AB250F293DFFF3713896B3864450985C7F08783EA2C1E6F374D60"
+    },
+    {
+      "screen": "DP-065",
+      "file": "065_etl.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "3EE92BDA412844E30ADD47D3ED03E8039BF4F550A460E8A9F3F862B771B0F4A3"
+    },
+    {
+      "screen": "DP-066",
+      "file": "066_api_builder.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "9749A2911570F7725D4CAE208F7B8138B2C42C437A33E293A59E0D9E10E2CCA7"
+    },
+    {
+      "screen": "DP-067",
+      "file": "067_api_extensions.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "886A684F65A0E39E097C4DC630DCE30F34C75E75E8D079CD5033AA083585D156"
+    },
+    {
+      "screen": "DP-068",
+      "file": "068_sdk.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "27B4E35AF6FA1FD66CE127129FCC466F403026D5B20D88EB3BBB57285EE04362"
+    },
+    {
+      "screen": "DP-069",
+      "file": "069_contract_publication_refined.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "3A06BA047C2D669C04AE78807FA80C74C06DD8E3014235FDF026A66858E2205E"
+    },
+    {
+      "screen": "DP-070",
+      "file": "070_extensions.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "457ACFCDCE5C239892D764FA483333269C7FE60CBEBE98AABAB6DDD974C7A677"
+    },
+    {
+      "screen": "DP-071",
+      "file": "071_extension_package.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "056001248DB05DE443F82499A22C237B98DA2968FFAB8A0BB7FE89FED3F411B0"
+    },
+    {
+      "screen": "DP-072",
+      "file": "072_sandbox.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "280CF07BD7780C4D9453C3AEC0CBBF5F0FB000EFDC3C9DAA2373DF8BF198AEFB"
+    },
+    {
+      "screen": "DP-073",
+      "file": "073_diagnostics.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "18598EC8453C392C094F69E6F22924D59641BCA6A078347823BD6030BF2E4FDC"
+    },
+    {
+      "screen": "DP-074",
+      "file": "074_webhook_events.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "070563C7BC130D181F151151A5659EBB92573316D69772613D41043467AB22B0"
+    },
+    {
+      "screen": "DP-075",
+      "file": "075_jobs_schedules.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "C6D2ED64E632EA43F446C8EC8050CB32C82E52F1DA8BCD754AAA4BE9EC4DB650"
+    },
+    {
+      "screen": "DP-076",
+      "file": "076_responsive_preview.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "11458868FE02344D54CBCC6B511727A6F16C8C000A6CC95AF1024B5F82C48175"
+    },
+    {
+      "screen": "DP-077",
+      "file": "077_test_suite_builder.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "B6539213F4D9E1DDFCFEFC3D49940F370310ABD22BFDA6AC9439DDC08C0CCDD7"
+    },
+    {
+      "screen": "DP-078",
+      "file": "078_test_evidence_refined.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "42A543441986660F5A549FC7EB2D3BA72ADF2177AC1D8ED0960AA55277CD09E6"
+    },
+    {
+      "screen": "DP-079",
+      "file": "079_change_impact.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "87702D495EDF81D1FBCD032236FB2B0EBA839858FC41CEF4C9EE63ACFF55B7DA"
+    },
+    {
+      "screen": "DP-080",
+      "file": "080_collaboration_review_refined.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "24AE9705392032EF3309414FDD4BB1462F6A07CF044A9831EDFEFCE93AF1433F"
+    },
+    {
+      "screen": "DP-081",
+      "file": "081_git.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "443DD60297578571A3B3FC9ECD1C353DA84E1BFDC43326D2A6754AD1DB856749"
+    },
+    {
+      "screen": "DP-082",
+      "file": "082_schema_migration.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "EF85DE049F587C4AB56A7C387EC856B7646451A1882244FD746EE4FB54BBDE50"
+    },
+    {
+      "screen": "DP-083",
+      "file": "083_theme_manager.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "00EF1BE6DB038597DE9D9ECB744AB94D99AD3DFD056ABE9CDF2D2AD6DB618D1A"
+    },
+    {
+      "screen": "DP-084",
+      "file": "084_builder_conformance_refined.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "43BF6C61704515C4039D72B297891F76DA95ED008B7DEA808113E48644C182FE"
+    },
+    {
+      "screen": "DP-085",
+      "file": "085_releases.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "D598BB91CF06AD80135A6A9ECA34864A0FB0E1A908B1963D76A3A611305C2646"
+    },
+    {
+      "screen": "DP-086",
+      "file": "086_release_history.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "C6D87862C98F620AF32C4A753F620EF42D377B97B9B6B9E866B2CDC39F5DEEEE"
+    },
+    {
+      "screen": "DP-087",
+      "file": "087_environments.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "799E38F786EF57C6414F39FD028FB67033C4842DE632A40512404F87AD43E3A5"
+    },
+    {
+      "screen": "DP-088",
+      "file": "088_environment_bootstrap_final.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "8426FAB73EB89966A1B8FDFEBCA45E83547E59C697F46D5EA412982AD2956887"
+    },
+    {
+      "screen": "DP-089",
+      "file": "089_release_pipeline_refined.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "332C47B1F79E47014DE3CC23738905B2ECE065FA0C66DF0DD38E9D46CACBF416"
+    },
+    {
+      "screen": "DP-090",
+      "file": "090_deployment_recovery_refined.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "DC648656B4026F6B7FCF852E6BEE0D809E29B4F109E727D610B483A35A022979"
+    },
+    {
+      "screen": "DP-091",
+      "file": "091_mobile_export.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "3CBD4E5CA647ED759737AD1BB7342D1698B1F9E2FE1A31FCB6D3FD089F62F975"
+    },
+    {
+      "screen": "DP-092",
+      "file": "092_manage.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "9E30E6C9ECFC9C7492B07CB8A60C89AD2C7D9A7D4C6BF4AF51BF47A91E3AAE67"
+    },
+    {
+      "screen": "DP-093",
+      "file": "093_governance.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "EBC67755809A202ED36997278BCB39F9909EA463646292D83F0844206BA1AD7F"
+    },
+    {
+      "screen": "DP-094",
+      "file": "094_access_control.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "5E2B0B2D6190FBC5D3415AF580C30EB38BECA115DE2A3CB152ECD57C572B0BB0"
+    },
+    {
+      "screen": "DP-095",
+      "file": "095_credentials.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "14C25BEA17A60DA3E71F70179184CE0FA92A25C1DD2130B97C87698CC342A708"
+    },
+    {
+      "screen": "DP-096",
+      "file": "096_credential_lifecycle.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "FE68285D7E77B691ED2B156CE341637A8449F766E1C26CC54843C19ABD00769A"
+    },
+    {
+      "screen": "DP-097",
+      "file": "097_record_field_policy.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "0C0D04D6A3453CB8521FF9202CFBE98A8A6DD4401E35FEEFD37C5D130FE66349"
+    },
+    {
+      "screen": "DP-098",
+      "file": "098_secret_bindings.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "BF56DC2DB598A14A777646EA91EE2BE22EAAB09BADE4EBB6BDF969FEFEB7DE3F"
+    },
+    {
+      "screen": "DP-099",
+      "file": "099_supply_chain_review_refined.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "2C109974BF74DF457958D453177ABD35268F192889478A2E661950ADF3EDA781"
+    },
+    {
+      "screen": "DP-100",
+      "file": "100_extension_quarantine.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "2F900DCCACEBC546358FC63D1F27CC0302FFAEBBDB4A9B3CD906519D0DA569D9"
+    },
+    {
+      "screen": "DP-101",
+      "file": "101_audit_evidence.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "A2BC726852781A11D3E23589C9B9E679967A256B384C3B164757B935919FDAA4"
+    },
+    {
+      "screen": "DP-102",
+      "file": "102_backup_restore_refined.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "655C3E3C38BA589F0A479412B2EB7C49A554F9BE4F79121C2481D087E06E7434"
+    },
+    {
+      "screen": "DP-103",
+      "file": "103_service_health_refined.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "A646446F4B833C859EAC62FA8B795DFABED7A536B7720BCBA4301A4E3FEB8D5C"
+    },
+    {
+      "screen": "DP-104",
+      "file": "104_usage_budgets.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "DEF337B76E894255F01C4F612763555ECC6CD9A82058975B66CEB4BC96CB7094"
+    },
+    {
+      "screen": "DP-105",
+      "file": "105_app_identity.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "D368A7A28F8EA37B42616F02B314676C1DEC2E2C694E791007B109C6681DAACC"
+    },
+    {
+      "screen": "DP-106",
+      "file": "106_ai_assisted_changes.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "C68C48644A7F526D0C94F7BBC7BA1E6B9A45525412253E99776FB2156DE6C677"
+    },
+    {
+      "screen": "DP-107",
+      "file": "107_run_logs.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "9308F3A3F9915782B7ABD0D27E8714C966264E6D7C6D2A7E90112E6F47B095AB"
+    },
+    {
+      "screen": "DP-108",
+      "file": "108_marketplace_packages.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "1F497A470A9417163621493382BF0A30DE8D7E0E4B9D45A679B0A817144ADBC2"
+    }
+  ],
+  "errors": [],
+  "limitations": [
+    "Static gallery logic tested with a minimal DOM harness, not a browser accessibility audit",
+    "Application tests/builds/RLS/accessibility/performance not run: design-only change",
+    "Source declarations are not runtime evidence"
+  ]
+}

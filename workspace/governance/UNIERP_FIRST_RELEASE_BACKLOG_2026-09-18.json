@@ -1,0 +1,1109 @@
+{
+  "document_type": "proposed-release-backlog",
+  "generated_on": "2026-09-18",
+  "source": "UNIERP_FIRST_RELEASE_ROADMAP_2026-09-18.md",
+  "release_target": "2027-01-01",
+  "strategy": "Design first; all agreed core modules; one initial revenue-focused industry pack; subsequent industries one at a time",
+  "task_count": 74,
+  "tasks": [
+    {
+      "id": "R01",
+      "todo": "Confirm date, launch customer, geography, currencies, languages, SaaS/self-hosted model and deployment region.",
+      "window": "W1",
+      "accountable_role": "Product / Architecture / QA",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R02",
+      "todo": "Freeze first-release journeys, explicit exclusions and supported devices; decide whether “all services” means all current product capabilities or all dependencies of the selected release.",
+      "window": "W1",
+      "accountable_role": "Product / Architecture / QA",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R03",
+      "todo": "Assign named platform, domain, data, service, security, release and support owners with reviewers and availability.",
+      "window": "W1",
+      "accountable_role": "Product / Architecture / QA",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R04",
+      "todo": "Refresh the 237-item audit against current revisions; retain historic evidence as historic; reconcile contradictory ledgers.",
+      "window": "W1",
+      "accountable_role": "Product / Architecture / QA",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R05",
+      "todo": "Inventory routes, APIs, jobs, consumers, sockets, tables, contracts, integrations and deployables; map every release action to its implementation and proof.",
+      "window": "W1",
+      "accountable_role": "Product / Architecture / QA",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R06",
+      "todo": "Inventory every exposed button/action/report; replace fake success, dummy metrics and silent fallbacks with working behavior or approved unavailable states.",
+      "window": "W1",
+      "accountable_role": "Product / Architecture / QA",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R07",
+      "todo": "Estimate remaining work with low/likely/high ranges and dependencies; compare critical-path and team capacity before committing dates.",
+      "window": "W1",
+      "accountable_role": "Product / Architecture / QA",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R08",
+      "todo": "Agree tenant/user/record volumes, peak concurrency, availability, latency, queue lag, RPO/RTO and cost envelopes per journey.",
+      "window": "W1",
+      "accountable_role": "Product / Architecture / QA",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R09",
+      "todo": "Close FND-P0-001/002: current estate, layer direction, reproducible toolchain, exact workflow pins, nonzero discovery and representative defect tests.",
+      "window": "W1-W3",
+      "accountable_role": "IAM / Data / Architecture / SRE",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R04",
+        "R05"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R10",
+      "todo": "Replace structural-score release decisions with exact-build behavioral evidence; missing/skipped/stale prerequisites fail closed.",
+      "window": "W1-W3",
+      "accountable_role": "IAM / Data / Architecture / SRE",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R04",
+        "R05"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R11",
+      "todo": "Close FND-P0-003: federation validation, session expiry/revocation, recovery, MFA, malicious issuer/redirect handling and key rotation rehearsal.",
+      "window": "W1-W3",
+      "accountable_role": "IAM / Data / Architecture / SRE",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R04",
+        "R05"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R12",
+      "todo": "Close FND-P0-004: whole-schema application-role RLS plus service-level CRUD, relations, raw SQL, reports, export, cache and background-job isolation.",
+      "window": "W1-W3",
+      "accountable_role": "IAM / Data / Architecture / SRE",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R04",
+        "R05"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R13",
+      "todo": "Prove tenant A, tenant B and no-context denial with NOBYPASSRLS; include pooled-connection context leakage and cross-tenant references.",
+      "window": "W1-W3",
+      "accountable_role": "IAM / Data / Architecture / SRE",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R04",
+        "R05"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R14",
+      "todo": "Close FND-P0-005: all HTTP/non-HTTP entrypoints, record scope, unknown permissions, provider/tenant separation and privileged support access.",
+      "window": "W1-W3",
+      "accountable_role": "IAM / Data / Architecture / SRE",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R04",
+        "R05"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R15",
+      "todo": "Close FND-P0-006: mandatory durable audit, database enforcement, atomic outbox, restart/replay/deduplication, dead letters and reconciliation.",
+      "window": "W1-W3",
+      "accountable_role": "IAM / Data / Architecture / SRE",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R04",
+        "R05"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R16",
+      "todo": "Close FND-P0-007/008: protected delivery controls, complete release manifest, sensitive-data hygiene and secret scanning.",
+      "window": "W1-W3",
+      "accountable_role": "IAM / Data / Architecture / SRE",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R04",
+        "R05"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R17",
+      "todo": "Close FND-P1-001/002/003: domain/aggregate owners, organization hierarchy, effective dates and canonical customer/vendor/item/worker/account masters.",
+      "window": "W1-W3",
+      "accountable_role": "IAM / Data / Architecture / SRE",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R04",
+        "R05"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R18",
+      "todo": "Close FND-P1-004: all consumed API/event/webhook contracts, canonical errors, bounded pagination, version compatibility and generated consumer validation.",
+      "window": "W1-W3",
+      "accountable_role": "IAM / Data / Architecture / SRE",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R04",
+        "R05"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R19",
+      "todo": "Close FND-P1-005: converge duplicate shared engines under one owner; migrate consumers with compatibility and retirement evidence.",
+      "window": "W1-W3",
+      "accountable_role": "IAM / Data / Architecture / SRE",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R04",
+        "R05"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R20",
+      "todo": "Close FND-P1-006: constraints, indexes, decimal precision, units, immutable migrations, resumable backfills and mixed-version rehearsal.",
+      "window": "W1-W3",
+      "accountable_role": "IAM / Data / Architecture / SRE",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R04",
+        "R05"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R21",
+      "todo": "Close FND-P1-007/008: real infrastructure test environments, mandatory adversarial suites, shared UI/tokens and accessibility baseline.",
+      "window": "W1-W3",
+      "accountable_role": "IAM / Data / Architecture / SRE",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R04",
+        "R05"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R22",
+      "todo": "Obtain evidence-based continuation decision for all required P0/P1 items before broad feature expansion.",
+      "window": "W1-W3",
+      "accountable_role": "IAM / Data / Architecture / SRE",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R09",
+        "R10",
+        "R11",
+        "R12",
+        "R13",
+        "R14",
+        "R15",
+        "R16",
+        "R17",
+        "R18",
+        "R19",
+        "R20",
+        "R21"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R23",
+      "todo": "Workflow and approvals: persisted states/timers, delegation, separation of duties, escalation, version migration, compensation and restart.",
+      "window": "W3-W8",
+      "accountable_role": "Business Services / IAM / Operations",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R22",
+        "R66"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R24",
+      "todo": "Notifications/communication: transactional dispatch, templates/localization, preferences/consent, delivery status, retry/provider failure and duplicates.",
+      "window": "W3-W8",
+      "accountable_role": "Business Services / IAM / Operations",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R22",
+        "R66"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R25",
+      "todo": "Files/documents: access control, malware quarantine, signed access expiry, versioning, lifecycle and restored-object integrity.",
+      "window": "W3-W8",
+      "accountable_role": "Business Services / IAM / Operations",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R22",
+        "R66"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R26",
+      "todo": "Search: tenant/record ACLs, index lag, deletion propagation, restartable reindex and reconciliation.",
+      "window": "W3-W8",
+      "accountable_role": "Business Services / IAM / Operations",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R22",
+        "R66"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R27",
+      "todo": "Reporting/analytics: governed metric meanings, row/field security, ledger reconciliation, bounded queries, exports and snapshot reproducibility.",
+      "window": "W3-W8",
+      "accountable_role": "Business Services / IAM / Operations",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R22",
+        "R66"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R28",
+      "todo": "Configuration/flags/entitlements: typed configuration, hierarchy, server-side enforcement, audit, safe defaults and rollback/expiry.",
+      "window": "W3-W8",
+      "accountable_role": "Business Services / IAM / Operations",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R22",
+        "R66"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R29",
+      "todo": "Jobs/scheduling: tenant context, durable leases/fencing, concurrency limits, idempotency, retry/backoff, dead letters and operator recovery.",
+      "window": "W3-W8",
+      "accountable_role": "Business Services / IAM / Operations",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R22",
+        "R66"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R30",
+      "todo": "Import/export: dry run, mapping/versioning, validation, resumable execution, sensitive-field handling and reconciliation.",
+      "window": "W3-W8",
+      "accountable_role": "Business Services / IAM / Operations",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R22",
+        "R66"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R31",
+      "todo": "Localization: decimal/currency/UOM/time-zone/fiscal semantics, supported languages, fallback and required RTL behavior.",
+      "window": "W3-W8",
+      "accountable_role": "Business Services / IAM / Operations",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R22",
+        "R66"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R32",
+      "todo": "Billing/usage: plan owner, immutable readings, callbacks, entitlement transitions, retries and finance reconciliation for selected commercial model.",
+      "window": "W3-W8",
+      "accountable_role": "Business Services / IAM / Operations",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R22",
+        "R66"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R33",
+      "todo": "Custom fields/objects and integrations: qualify only those exposed in release; validate schema, ACL, indexing, quotas, webhook signatures/replays and compatibility.",
+      "window": "W3-W8",
+      "accountable_role": "Business Services / IAM / Operations",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R22",
+        "R66"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R34",
+      "todo": "Shared-service outage tests: fail honestly, bound queues/retries, recover without lost or doubled business effects; record per-service runbooks.",
+      "window": "W3-W8",
+      "accountable_role": "Business Services / IAM / Operations",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R22",
+        "R66"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R35",
+      "todo": "Finish J01 tenant lifecycle and tenant-admin/provider-admin boundaries, including suspension/reactivation and failed provisioning.",
+      "window": "W4-W8",
+      "accountable_role": "Domain lead / Full-stack / QA",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R22",
+        "R66"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R36",
+      "todo": "Finish J08 master/opening-data import; reconcile opening balances and stock before customer onboarding.",
+      "window": "W4-W8",
+      "accountable_role": "Domain lead / Full-stack / QA",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R22",
+        "R66"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R37",
+      "todo": "Finish CRM contacts/leads/opportunities, consent, ownership, conversion and quote lifecycle without duplicate customer masters.",
+      "window": "W4-W8",
+      "accountable_role": "Domain lead / Full-stack / QA",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R22",
+        "R66"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R38",
+      "todo": "Finish J02 sales order, pricing/tax/discount, credit checks, reservation, partial fulfillment, invoice/payment and posting.",
+      "window": "W4-W8",
+      "accountable_role": "Domain lead / Full-stack / QA",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R22",
+        "R66"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R39",
+      "todo": "Finish J03 purchasing approvals, PO, partial goods receipt, tolerances/three-way match, supplier invoice, payment and posting.",
+      "window": "W4-W8",
+      "accountable_role": "Domain lead / Full-stack / QA",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R22",
+        "R66"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R40",
+      "todo": "Finish J04 stock movements, lots/serials where promised, transfers, valuation, returns, counts and concurrent reservations.",
+      "window": "W4-W8",
+      "accountable_role": "Domain lead / Full-stack / QA",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R22",
+        "R66"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R41",
+      "todo": "Finish J05 journals, AR/AP, cash/bank reconciliation, reports, period locks, close and reversals; obtain accounting-owner sign-off.",
+      "window": "W4-W8",
+      "accountable_role": "Domain lead / Full-stack / QA",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R22",
+        "R66"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R42",
+      "todo": "Finish J06 HR/leave if approved; qualify sensitive-field access, joiner/mover/leaver and balance invariants. Do not imply payroll compliance.",
+      "window": "W4-W8",
+      "accountable_role": "Domain lead / Full-stack / QA",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R22",
+        "R66"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R43",
+      "todo": "Finish J07 service cases if approved; prove escalation, reassignment, timer recovery, notifications and permission history.",
+      "window": "W4-W8",
+      "accountable_role": "Domain lead / Full-stack / QA",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R22",
+        "R66"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R44",
+      "todo": "Finish J09 customer trial/activation, commercial state changes, quotas, cancellation/offboarding and export as promised.",
+      "window": "W4-W8",
+      "accountable_role": "Domain lead / Full-stack / QA",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R22",
+        "R66"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R45",
+      "todo": "Reconcile all operational reports to source transactions; remove hardcoded KPIs and impossible success states.",
+      "window": "W4-W8",
+      "accountable_role": "Domain lead / Full-stack / QA",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R22",
+        "R66"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R46",
+      "todo": "Finish accessible responsive states for every committed journey: loading, empty, error, forbidden, stale, offline, conflict and retry.",
+      "window": "W4-W8",
+      "accountable_role": "Domain lead / Full-stack / QA",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R22",
+        "R66"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R47",
+      "todo": "Complete role-specific UAT and actual browser journeys through API/database/queues; test restricted roles as well as the sanctioned administrator account.",
+      "window": "W4-W8",
+      "accountable_role": "Domain lead / Full-stack / QA",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R22",
+        "R66"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R48",
+      "todo": "FND-P2-001: review and validate infrastructure, workload identity, network isolation, secrets/KMS, DNS/TLS, compute, database, queue/cache and storage.",
+      "window": "W1-W12 and launch",
+      "accountable_role": "SRE / Security / QA / Support",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R03",
+        "R08"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R49",
+      "todo": "Provision/recreate an authorized production-shaped environment; prove drift detection, health/readiness, quotas and resource limits.",
+      "window": "W1-W12 and launch",
+      "accountable_role": "SRE / Security / QA / Support",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R03",
+        "R08"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R50",
+      "todo": "FND-P2-002: build once, pin repository versions, SBOM/provenance/signature verification, scan artifacts and promote the same immutable build.",
+      "window": "W1-W12 and launch",
+      "accountable_role": "SRE / Security / QA / Support",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R03",
+        "R08"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R51",
+      "todo": "Rehearse expand/backfill/contract, compatibility, locks, duration, application rollback and database roll-forward on representative data.",
+      "window": "W1-W12 and launch",
+      "accountable_role": "SRE / Security / QA / Support",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R03",
+        "R08"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R52",
+      "todo": "FND-P2-003: trace browser/API/worker operations; implement safe logs, journey SLIs, actionable alerts, dashboards and on-call escalation.",
+      "window": "W1-W12 and launch",
+      "accountable_role": "SRE / Security / QA / Support",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R03",
+        "R08"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R53",
+      "todo": "Load test agreed workload and tenant skew; prove performance budgets, bounded exports/reports, query plans and noisy-neighbor protection.",
+      "window": "W1-W12 and launch",
+      "accountable_role": "SRE / Security / QA / Support",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R03",
+        "R08"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R54",
+      "todo": "Inject database, worker, queue/cache, object-storage and external-provider faults; verify graceful degradation and reconciliation.",
+      "window": "W1-W12 and launch",
+      "accountable_role": "SRE / Security / QA / Support",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R03",
+        "R08"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R55",
+      "todo": "FND-P2-004: independently restore off-site database/WAL, files, configuration and required keys; measure actual RPO/RTO and ledger integrity.",
+      "window": "W1-W12 and launch",
+      "accountable_role": "SRE / Security / QA / Support",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R03",
+        "R08"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R56",
+      "todo": "FND-P2-005: exercise retention, legal hold, export/erasure and access review with synthetic data; obtain jurisdiction-specific specialist review.",
+      "window": "W1-W12 and launch",
+      "accountable_role": "SRE / Security / QA / Support",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R03",
+        "R08"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R57",
+      "todo": "Complete independent security review, dependency/license checks and remediation of release-blocking findings.",
+      "window": "W1-W12 and launch",
+      "accountable_role": "SRE / Security / QA / Support",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R03",
+        "R08"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R58",
+      "todo": "Complete keyboard, screen reader, zoom/reflow, contrast, reduced-motion and supported-browser/device evidence.",
+      "window": "W1-W12 and launch",
+      "accountable_role": "SRE / Security / QA / Support",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R03",
+        "R08"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R59",
+      "todo": "FND-P2-006: publish service ownership, incident/change runbooks, customer support route, severity policy and evidence-expiry schedule.",
+      "window": "W1-W12 and launch",
+      "accountable_role": "SRE / Security / QA / Support",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R03",
+        "R08"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R60",
+      "todo": "Run release/incident game day, customer onboarding training, migration/import rehearsal and support escalation exercise.",
+      "window": "W1-W12 and launch",
+      "accountable_role": "SRE / Security / QA / Support",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R03",
+        "R08"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R61",
+      "todo": "Obtain exact pilot environment authorization; onboard agreed representative customers; record UAT acceptance and daily reconciliation.",
+      "window": "W1-W12 and launch",
+      "accountable_role": "SRE / Security / QA / Support",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R03",
+        "R08"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R62",
+      "todo": "Freeze candidate, rerun affected regression after fixes, review complete diffs and produce signed-off release dossier.",
+      "window": "W1-W12 and launch",
+      "accountable_role": "SRE / Security / QA / Support",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R47",
+        "R55",
+        "R57",
+        "R58",
+        "R60",
+        "R61",
+        "R67",
+        "R68",
+        "R71"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R63",
+      "todo": "Obtain production action/target authorization; execute staged rollout with health/business checks, abort owner and tested recovery.",
+      "window": "W1-W12 and launch",
+      "accountable_role": "SRE / Security / QA / Support",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R62"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R64",
+      "todo": "Provide staffed hypercare for at least the agreed launch support period, daily ledger/queue review, incident handling and follow-up release cadence.",
+      "window": "W1-W12 and launch",
+      "accountable_role": "SRE / Security / QA / Support",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R63"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R65",
+      "todo": "W1–W2, Product/Design: define common module anatomy, navigation, role journeys and reusable floorplans; pass D0 with domain/engineering/QA review.",
+      "window": "As specified in task",
+      "accountable_role": "As specified in task",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R01",
+        "R02"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R66",
+      "todo": "W2–W7, Design/Domain leads: pass D1 per module with prototype, lifecycle, contracts, error/reversal states and customer usability review before implementation.",
+      "window": "As specified in task",
+      "accountable_role": "As specified in task",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R65"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R67",
+      "todo": "W5–W8, Projects/Finance leads: complete J11 project budgets, approved time/expenses, billing and margin reconciliation.",
+      "window": "As specified in task",
+      "accountable_role": "As specified in task",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R22",
+        "R66"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R68",
+      "todo": "W5–W8, Finance lead: complete J12 capitalization, depreciation, transfer/disposal, reversal and GL reconciliation.",
+      "window": "As specified in task",
+      "accountable_role": "As specified in task",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R22",
+        "R66"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R69",
+      "todo": "W1–W2, Product/Founder: interview 10–15 qualified buyers, score industry hypotheses, choose first pack and secure 3 design partners.",
+      "window": "As specified in task",
+      "accountable_role": "As specified in task",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R01"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R70",
+      "todo": "W3–W4, Product/Commercial owner: validate price, onboarding effort and paid-pilot/purchase intent; record delivery conditions and support costs.",
+      "window": "As specified in task",
+      "accountable_role": "As specified in task",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R69"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R71",
+      "todo": "W3–W8, Selected industry lead: design and complete first industry's additional workflows after G2; qualify them with core journeys and customer data-import scenarios.",
+      "window": "As specified in task",
+      "accountable_role": "As specified in task",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R22",
+        "R66",
+        "R69"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R72",
+      "todo": "W5–W12, Product/Support/QA: weekly customer validation, D2 implementation review, onboarding/training and measurable first-value acceptance.",
+      "window": "As specified in task",
+      "accountable_role": "As specified in task",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R66"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R73",
+      "todo": "W11–launch, Commercial/Support owner: seek 2–3 paying conversions; track actual collected recurring revenue, activation and support margin; no invented revenue claims.",
+      "window": "As specified in task",
+      "accountable_role": "As specified in task",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R61",
+        "R70"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    },
+    {
+      "id": "R74",
+      "todo": "Post-launch, Product/Architecture: select next industry from qualified demand after repeatable onboarding and stable core evidence; reuse contracts and avoid customer-specific forks.",
+      "window": "As specified in task",
+      "accountable_role": "As specified in task",
+      "accountable_person": null,
+      "status": "NOT STARTED",
+      "dependency_ids": [
+        "R64",
+        "R73"
+      ],
+      "estimate_person_days": null,
+      "evidence": [],
+      "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
+    }
+  ]
+}

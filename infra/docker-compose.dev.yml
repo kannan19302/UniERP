@@ -1,0 +1,195 @@
+# ============================================================
+# UniERP — shared development services (L7 · unierp-infra)
+# ============================================================
+#
+#   docker compose -f docker-compose.dev.yml up -d
+#   docker compose -f docker-compose.dev.yml --profile pooling up -d pgbouncer
+#   docker compose -f docker-compose.dev.yml --profile ai      up -d ollama
+#   docker compose -f docker-compose.dev.yml down          (add -v to wipe data)
+#
+# ── What this file is, and what it deliberately is not ──────────────────────
+#
+# This is the stack of services that **no application repository owns**:
+# PostgreSQL, Redis, MinIO, the local email capture service, and the optional
+# pooler and inference server. Every
+# plane in the platform talks to these, so they belong to the layer that owns
+# environment topology (PLATFORM_ARCHITECTURE.md § 4.2, L7) rather than to any
+# one consumer of them.
+#
+# It does **not** define `api`, `web`, `console`, `developer` or `idp`.
+#
+# The previous revision of this file did, and none of them could start: it was a
+# byte-copy of `ERPSys/docker-compose.dev.yml` taken at a point in time, so it
+# built from `Dockerfile.dev` and bind-mounted `./apps` and `./packages` —
+# three paths that have never existed in this repository. `docker compose up`
+# failed on the first service. It also drifted behind its source: the original
+# had grown `console`, `developer` and `idp` services, a `max_connections`
+# increase without which the test suite reports flaky failures, and the
+# profiles that keep a developer machine from running five Next.js servers at
+# once. None of that reached the copy.
+#
+# That is precisely the failure § 1.1 catalogues — six Dockerfiles copy-pasted
+# from `fieldservice`, and the same EXPOSE-port bug fixed three times — and
+# § 4.6 answers it with a rule: no file is ever hand-copied between repos. A
+# subset this repository genuinely owns is not a copy. A duplicate of the
+# application stack is, and it will drift again the same way.
+#
+# ── Where the application containers are built ──────────────────────────────
+#
+# In `ERPSys`, which remains the authoritative build (§ 14 rule 4: the monorepo
+# stays buildable at each extraction tag until its consumers have switched):
+#
+#   pnpm dev              datastores here, apps native — the everyday loop
+#   pnpm dev --docker     everything in containers, for CI parity
+#
+# The extracted L3/L4 repositories (`unierp-api`, `unierp-web`,
+# `unierp-console`, `unierp-developer`, `unierp-idp`) cannot yet build an image
+# on their own: their `package.json` files still carry `workspace:*`
+# specifiers, which resolve to nothing outside the monorepo. Completing § 14
+# Phase 3 step 4 for the application layer is what unblocks per-repo images,
+# and it is blocked in turn on a package registry that CI can reach — the
+# self-hosted Verdaccio in `registry/` answers on localhost only, which is why
+# commit a96069e6 reverted the first cutover attempt.
+#
+# When that lands, application services belong in a separate overlay that pulls
+# published images by digest from the release-train manifest (§ 4.5 M1) — not
+# in this file, and never as a second copy of the dev stack.
+# ============================================================
+
+services:
+  # ──────────────────────────────────────────────
+  # PostgreSQL 16 (+ pgvector, for the local-first AI stack in § 8.4)
+  # ──────────────────────────────────────────────
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: unerp_dev
+      POSTGRES_USER: unerp
+      POSTGRES_PASSWORD: unerp_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    command:
+      - postgres
+      - -c
+      - max_connections=300
+      - -c
+      - shared_buffers=256MB
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U unerp -d unerp_dev"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  # ──────────────────────────────────────────────
+  # PgBouncer — transaction-mode pooling (§ 11). Opt in: --profile pooling
+  # ──────────────────────────────────────────────
+  pgbouncer:
+    image: edoburu/pgbouncer
+    container_name: pgbouncer
+    restart: unless-stopped
+    profiles: ["pooling"]
+    environment:
+      DB_HOST: postgres
+      DB_NAME: unerp_dev
+      DB_USER: unerp
+      DB_PASSWORD: unerp_password
+      POOL_MODE: transaction
+      AUTH_TYPE: scram-sha-256
+      LISTEN_PORT: "6432"
+    ports:
+      - "6432:6432"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  # ──────────────────────────────────────────────
+  # Redis 7 — cache, BullMQ queues, rate-limit counters
+  # ──────────────────────────────────────────────
+  redis:
+    image: redis:7-alpine
+    container_name: redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  # ──────────────────────────────────────────────
+  # Mailpit — deterministic local auth-email delivery
+  # ──────────────────────────────────────────────
+  # Bound to loopback only. Production uses a transactional provider and must
+  # never expose a capture inbox.
+  mailpit:
+    image: axllent/mailpit:v1.31.0
+    container_name: mailpit
+    restart: unless-stopped
+    mem_limit: 256m
+    environment:
+      MP_MAX_MESSAGES: "500"
+      MP_DATABASE: /data/mailpit.db
+    ports:
+      - "127.0.0.1:1025:1025"
+      - "127.0.0.1:8025:8025"
+    volumes:
+      - mailpit_data:/data
+    healthcheck:
+      test: ["CMD", "/mailpit", "readyz"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  # ──────────────────────────────────────────────
+  # MinIO — S3-compatible object storage
+  # ──────────────────────────────────────────────
+  minio:
+    image: minio/minio:latest
+    container_name: minio
+    restart: unless-stopped
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    ports:
+      - "9000:9000" # S3 API
+      - "9001:9001" # Web console
+    volumes:
+      - minio_data:/data
+    command: server /data --console-address ":9001"
+    healthcheck:
+      test: ["CMD", "mc", "ready", "local"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  # ──────────────────────────────────────────────
+  # Ollama — local-first inference (§ 8.4). Opt in: --profile ai
+  # ──────────────────────────────────────────────
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    restart: unless-stopped
+    profiles: ["ai"]
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:
+  redis_data:
+  minio_data:
+  mailpit_data:
+  ollama_data:

@@ -1,0 +1,82 @@
+{
+  "title": "UniERP Per-Tenant SLO Dashboard",
+  "uid": "unierp-per-tenant-slo",
+  "description": "Per-tenant telemetry for noisy-neighbour detection, cost attribution, and per-tenant SLO reporting in Platform Admin Console. See PLATFORM_ARCHITECTURE.md § 11.",
+  "tags": ["unierp", "per-tenant", "slo", "cost"],
+  "schemaVersion": 38,
+  "version": 1,
+  "templating": {
+    "list": [
+      {
+        "name": "tenant_id",
+        "type": "query",
+        "query": "label_values(http_requests_total, tenant_id)",
+        "refresh": 2,
+        "includeAll": true,
+        "label": "Tenant"
+      }
+    ]
+  },
+  "panels": [
+    {
+      "id": 1,
+      "title": "Request Rate — $tenant_id",
+      "type": "timeseries",
+      "targets": [
+        {
+          "expr": "sum(rate(http_requests_total{tenant_id=~\"$tenant_id\"}[5m]))",
+          "legendFormat": "req/s"
+        }
+      ],
+      "fieldConfig": { "defaults": { "unit": "reqps" } }
+    },
+    {
+      "id": 2,
+      "title": "Error Rate — $tenant_id",
+      "type": "timeseries",
+      "targets": [
+        {
+          "expr": "sum(rate(http_requests_total{tenant_id=~\"$tenant_id\",status=~\"5..\"}[5m])) / sum(rate(http_requests_total{tenant_id=~\"$tenant_id\"}[5m]))",
+          "legendFormat": "error %"
+        }
+      ],
+      "fieldConfig": { "defaults": { "unit": "percentunit" } }
+    },
+    {
+      "id": 3,
+      "title": "DB Query Duration P95 — $tenant_id",
+      "type": "timeseries",
+      "targets": [
+        {
+          "expr": "histogram_quantile(0.95, sum by(le) (rate(db_query_duration_seconds_bucket{tenant_id=~\"$tenant_id\"}[5m])))",
+          "legendFormat": "P95 query time"
+        }
+      ],
+      "fieldConfig": { "defaults": { "unit": "s" } }
+    },
+    {
+      "id": 4,
+      "title": "Extension CPU Usage — $tenant_id",
+      "type": "timeseries",
+      "targets": [
+        {
+          "expr": "sum by(extension_id) (rate(extension_cpu_ms_total{tenant_id=~\"$tenant_id\"}[5m]))",
+          "legendFormat": "CPU ms/s — {{extension_id}}"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Cost Attribution — $tenant_id (Monthly Estimate)",
+      "type": "stat",
+      "description": "Cost per tenant per month estimate based on request volume and DB query load.",
+      "targets": [
+        {
+          "expr": "sum(increase(http_requests_total{tenant_id=~\"$tenant_id\"}[30d])) * 0.0001 + sum(increase(db_query_duration_seconds_sum{tenant_id=~\"$tenant_id\"}[30d])) * 0.01",
+          "legendFormat": "Estimated cost (USD)"
+        }
+      ],
+      "fieldConfig": { "defaults": { "unit": "currencyUSD" } }
+    }
+  ]
+}

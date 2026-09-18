@@ -1,0 +1,1668 @@
+{
+  "comment": "P12-032 un-indexed foreign key baseline ratchet. May only shrink.",
+  "totalUnindexed": 277,
+  "allowed": [
+    {
+      "key": "Department.parentId",
+      "model": "Department",
+      "field": "parentId",
+      "file": "core-part-1.prisma"
+    },
+    {
+      "key": "Vendor.orgId",
+      "model": "Vendor",
+      "field": "orgId",
+      "file": "core-part-1.prisma"
+    },
+    {
+      "key": "CustomerHealthLog.customerId",
+      "model": "CustomerHealthLog",
+      "field": "customerId",
+      "file": "core-part-1.prisma"
+    },
+    {
+      "key": "Activity.contactId",
+      "model": "Activity",
+      "field": "contactId",
+      "file": "core-part-1.prisma"
+    },
+    {
+      "key": "PurchaseOrder.rfqId",
+      "model": "PurchaseOrder",
+      "field": "rfqId",
+      "file": "core-part-1.prisma"
+    },
+    {
+      "key": "PurchaseOrder.supplierQuotationId",
+      "model": "PurchaseOrder",
+      "field": "supplierQuotationId",
+      "file": "core-part-1.prisma"
+    },
+    {
+      "key": "PurchaseOrder.requisitionId",
+      "model": "PurchaseOrder",
+      "field": "requisitionId",
+      "file": "core-part-1.prisma"
+    },
+    {
+      "key": "PurchaseOrder.blanketAgreementId",
+      "model": "PurchaseOrder",
+      "field": "blanketAgreementId",
+      "file": "core-part-1.prisma"
+    },
+    {
+      "key": "PurchaseOrderItem.productId",
+      "model": "PurchaseOrderItem",
+      "field": "productId",
+      "file": "core-part-1.prisma"
+    },
+    {
+      "key": "RFQItem.productId",
+      "model": "RFQItem",
+      "field": "productId",
+      "file": "core-part-1.prisma"
+    },
+    {
+      "key": "SupplierQuotationItem.productId",
+      "model": "SupplierQuotationItem",
+      "field": "productId",
+      "file": "core-part-1.prisma"
+    },
+    {
+      "key": "SalesOrderItem.productId",
+      "model": "SalesOrderItem",
+      "field": "productId",
+      "file": "core-part-1.prisma"
+    },
+    {
+      "key": "Folder.parentId",
+      "model": "Folder",
+      "field": "parentId",
+      "file": "core-part-1.prisma"
+    },
+    {
+      "key": "Document.folderId",
+      "model": "Document",
+      "field": "folderId",
+      "file": "core-part-1.prisma"
+    },
+    {
+      "key": "FolderShare.folderId",
+      "model": "FolderShare",
+      "field": "folderId",
+      "file": "core-part-1.prisma"
+    },
+    {
+      "key": "DocumentShare.documentId",
+      "model": "DocumentShare",
+      "field": "documentId",
+      "file": "core-part-1.prisma"
+    },
+    {
+      "key": "Signature.documentId",
+      "model": "Signature",
+      "field": "documentId",
+      "file": "core-part-1.prisma"
+    },
+    {
+      "key": "Message.pollId",
+      "model": "Message",
+      "field": "pollId",
+      "file": "core-part-1.prisma"
+    },
+    {
+      "key": "MessageForward.messageId",
+      "model": "MessageForward",
+      "field": "messageId",
+      "file": "core-part-1.prisma"
+    },
+    {
+      "key": "MessageForward.fromChannelId",
+      "model": "MessageForward",
+      "field": "fromChannelId",
+      "file": "core-part-1.prisma"
+    },
+    {
+      "key": "ConnectPollOption.pollId",
+      "model": "ConnectPollOption",
+      "field": "pollId",
+      "file": "core-part-1.prisma"
+    },
+    {
+      "key": "ConnectPollVote.optionId",
+      "model": "ConnectPollVote",
+      "field": "optionId",
+      "file": "core-part-1.prisma"
+    },
+    {
+      "key": "EcommerceCartItem.variantId",
+      "model": "EcommerceCartItem",
+      "field": "variantId",
+      "file": "core-part-10.prisma"
+    },
+    {
+      "key": "EcommerceOrderItem.variantId",
+      "model": "EcommerceOrderItem",
+      "field": "variantId",
+      "file": "core-part-10.prisma"
+    },
+    {
+      "key": "EcommerceReview.orderId",
+      "model": "EcommerceReview",
+      "field": "orderId",
+      "file": "core-part-10.prisma"
+    },
+    {
+      "key": "EcommerceWishlistItem.variantId",
+      "model": "EcommerceWishlistItem",
+      "field": "variantId",
+      "file": "core-part-10.prisma"
+    },
+    {
+      "key": "SaasAppInstallation.versionId",
+      "model": "SaasAppInstallation",
+      "field": "versionId",
+      "file": "core-part-10.prisma"
+    },
+    {
+      "key": "SaasCoupon2Redemption.subscriptionId",
+      "model": "SaasCoupon2Redemption",
+      "field": "subscriptionId",
+      "file": "core-part-10.prisma"
+    },
+    {
+      "key": "CapexProject.projectId",
+      "model": "CapexProject",
+      "field": "projectId",
+      "file": "core-part-10.prisma"
+    },
+    {
+      "key": "VariationOrder.claimId",
+      "model": "VariationOrder",
+      "field": "claimId",
+      "file": "core-part-10.prisma"
+    },
+    {
+      "key": "KanbanCard.productId",
+      "model": "KanbanCard",
+      "field": "productId",
+      "file": "core-part-10.prisma"
+    },
+    {
+      "key": "DriveActivity.entityId",
+      "model": "DriveActivity",
+      "field": "entityId",
+      "file": "core-part-11.prisma"
+    },
+    {
+      "key": "DriveActivity.entityId",
+      "model": "DriveActivity",
+      "field": "entityId",
+      "file": "core-part-11.prisma"
+    },
+    {
+      "key": "SupplierDevSurvey.planId",
+      "model": "SupplierDevSurvey",
+      "field": "planId",
+      "file": "core-part-12.prisma"
+    },
+    {
+      "key": "WikiPage.parentId",
+      "model": "WikiPage",
+      "field": "parentId",
+      "file": "core-part-13.prisma"
+    },
+    {
+      "key": "IntranetComment.parentId",
+      "model": "IntranetComment",
+      "field": "parentId",
+      "file": "core-part-13.prisma"
+    },
+    {
+      "key": "PhoneCallLog.extensionId",
+      "model": "PhoneCallLog",
+      "field": "extensionId",
+      "file": "core-part-13.prisma"
+    },
+    {
+      "key": "Integration.connectorId",
+      "model": "Integration",
+      "field": "connectorId",
+      "file": "core-part-13.prisma"
+    },
+    {
+      "key": "Deployment.depEnvironmentId",
+      "model": "Deployment",
+      "field": "depEnvironmentId",
+      "file": "core-part-13.prisma"
+    },
+    {
+      "key": "Release.environmentId",
+      "model": "Release",
+      "field": "environmentId",
+      "file": "core-part-14.prisma"
+    },
+    {
+      "key": "ReleaseArtifact.deploymentId",
+      "model": "ReleaseArtifact",
+      "field": "deploymentId",
+      "file": "core-part-14.prisma"
+    },
+    {
+      "key": "SubscriptionPlanTier.planGroupId",
+      "model": "SubscriptionPlanTier",
+      "field": "planGroupId",
+      "file": "core-part-14.prisma"
+    },
+    {
+      "key": "ServiceTicket.categoryId",
+      "model": "ServiceTicket",
+      "field": "categoryId",
+      "file": "core-part-14.prisma"
+    },
+    {
+      "key": "ServiceTicket.slaPolicyId",
+      "model": "ServiceTicket",
+      "field": "slaPolicyId",
+      "file": "core-part-14.prisma"
+    },
+    {
+      "key": "ServiceTicketCategory.parentId",
+      "model": "ServiceTicketCategory",
+      "field": "parentId",
+      "file": "core-part-14.prisma"
+    },
+    {
+      "key": "ServiceTicketSLABreach.policyId",
+      "model": "ServiceTicketSLABreach",
+      "field": "policyId",
+      "file": "core-part-14.prisma"
+    },
+    {
+      "key": "FixedAssetGroup.parentId",
+      "model": "FixedAssetGroup",
+      "field": "parentId",
+      "file": "core-part-14.prisma"
+    },
+    {
+      "key": "SubscriptionCouponRedemption.subscriptionId",
+      "model": "SubscriptionCouponRedemption",
+      "field": "subscriptionId",
+      "file": "core-part-14.prisma"
+    },
+    {
+      "key": "DocumentComment.parentId",
+      "model": "DocumentComment",
+      "field": "parentId",
+      "file": "core-part-14.prisma"
+    },
+    {
+      "key": "WorkflowSubprocess.childDefinitionId",
+      "model": "WorkflowSubprocess",
+      "field": "childDefinitionId",
+      "file": "core-part-15.prisma"
+    },
+    {
+      "key": "CommSurvey.templateId",
+      "model": "CommSurvey",
+      "field": "templateId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "POSTerminal.taxProfileId",
+      "model": "POSTerminal",
+      "field": "taxProfileId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "POSTerminal.priceListId",
+      "model": "POSTerminal",
+      "field": "priceListId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "POSRegister.terminalId",
+      "model": "POSRegister",
+      "field": "terminalId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "POSShift.registerId",
+      "model": "POSShift",
+      "field": "registerId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "CashEntry.registerId",
+      "model": "CashEntry",
+      "field": "registerId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "POSOrder.registerId",
+      "model": "POSOrder",
+      "field": "registerId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "POSOrder.shiftId",
+      "model": "POSOrder",
+      "field": "shiftId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "POSPayment.giftCardId",
+      "model": "POSPayment",
+      "field": "giftCardId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "POSCoupon.discountId",
+      "model": "POSCoupon",
+      "field": "discountId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "POSLoyaltyTransaction.programId",
+      "model": "POSLoyaltyTransaction",
+      "field": "programId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "POSStoreCredit.memberId",
+      "model": "POSStoreCredit",
+      "field": "memberId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "LicensePlate.binId",
+      "model": "LicensePlate",
+      "field": "binId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "LicensePlateItem.lotBatchId",
+      "model": "LicensePlateItem",
+      "field": "lotBatchId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "LicensePlateItem.serialNumberId",
+      "model": "LicensePlateItem",
+      "field": "serialNumberId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "PutawayTask.suggestedBinId",
+      "model": "PutawayTask",
+      "field": "suggestedBinId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "TransferApprovalRule.warehouseId",
+      "model": "TransferApprovalRule",
+      "field": "warehouseId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "PickWave.warehouseId",
+      "model": "PickWave",
+      "field": "warehouseId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "PickWaveItem.productId",
+      "model": "PickWaveItem",
+      "field": "productId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "PickWaveItem.binLocationId",
+      "model": "PickWaveItem",
+      "field": "binLocationId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "DropShipOrder.providerId",
+      "model": "DropShipOrder",
+      "field": "providerId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "DropShipOrderItem.productId",
+      "model": "DropShipOrderItem",
+      "field": "productId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "CustomerConsignmentStock.warehouseId",
+      "model": "CustomerConsignmentStock",
+      "field": "warehouseId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "DistributionPlan.sourceWarehouseId",
+      "model": "DistributionPlan",
+      "field": "sourceWarehouseId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "DistributionPlan.destWarehouseId",
+      "model": "DistributionPlan",
+      "field": "destWarehouseId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "CostCenter.parentId",
+      "model": "CostCenter",
+      "field": "parentId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "Journal.bookId",
+      "model": "Journal",
+      "field": "bookId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "Journal.sourceJournalId",
+      "model": "Journal",
+      "field": "sourceJournalId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "JournalEntry.departmentId",
+      "model": "JournalEntry",
+      "field": "departmentId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "JournalEntry.costCenterId",
+      "model": "JournalEntry",
+      "field": "costCenterId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "JournalEntry.projectId",
+      "model": "JournalEntry",
+      "field": "projectId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "Budget.accountId",
+      "model": "Budget",
+      "field": "accountId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "Budget.orgId",
+      "model": "Budget",
+      "field": "orgId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "Budget.costCenterId",
+      "model": "Budget",
+      "field": "costCenterId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "Budget.projectId",
+      "model": "Budget",
+      "field": "projectId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "Budget.forecastScenarioId",
+      "model": "Budget",
+      "field": "forecastScenarioId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "ForecastScenario.orgId",
+      "model": "ForecastScenario",
+      "field": "orgId",
+      "file": "core-part-2.prisma"
+    },
+    {
+      "key": "OnboardingItem.checklistId",
+      "model": "OnboardingItem",
+      "field": "checklistId",
+      "file": "core-part-3.prisma"
+    },
+    {
+      "key": "OffboardingItem.checklistId",
+      "model": "OffboardingItem",
+      "field": "checklistId",
+      "file": "core-part-3.prisma"
+    },
+    {
+      "key": "Applicant.jobPostingId",
+      "model": "Applicant",
+      "field": "jobPostingId",
+      "file": "core-part-3.prisma"
+    },
+    {
+      "key": "Interview.applicantId",
+      "model": "Interview",
+      "field": "applicantId",
+      "file": "core-part-3.prisma"
+    },
+    {
+      "key": "Interview.jobPostingId",
+      "model": "Interview",
+      "field": "jobPostingId",
+      "file": "core-part-3.prisma"
+    },
+    {
+      "key": "KeyResult.goalId",
+      "model": "KeyResult",
+      "field": "goalId",
+      "file": "core-part-3.prisma"
+    },
+    {
+      "key": "FeedbackResponse.feedbackId",
+      "model": "FeedbackResponse",
+      "field": "feedbackId",
+      "file": "core-part-3.prisma"
+    },
+    {
+      "key": "SurveyQuestion.surveyId",
+      "model": "SurveyQuestion",
+      "field": "surveyId",
+      "file": "core-part-3.prisma"
+    },
+    {
+      "key": "SurveyResponse.questionId",
+      "model": "SurveyResponse",
+      "field": "questionId",
+      "file": "core-part-3.prisma"
+    },
+    {
+      "key": "OfferLetter.applicantId",
+      "model": "OfferLetter",
+      "field": "applicantId",
+      "file": "core-part-3.prisma"
+    },
+    {
+      "key": "KpiEvaluation.kpiTemplateId",
+      "model": "KpiEvaluation",
+      "field": "kpiTemplateId",
+      "file": "core-part-3.prisma"
+    },
+    {
+      "key": "AlumniEvent.organizerId",
+      "model": "AlumniEvent",
+      "field": "organizerId",
+      "file": "core-part-3.prisma"
+    },
+    {
+      "key": "WorkflowStep.workflowId",
+      "model": "WorkflowStep",
+      "field": "workflowId",
+      "file": "core-part-3.prisma"
+    },
+    {
+      "key": "ApprovalChain.stepId",
+      "model": "ApprovalChain",
+      "field": "stepId",
+      "file": "core-part-3.prisma"
+    },
+    {
+      "key": "TenantSubscription.planId",
+      "model": "TenantSubscription",
+      "field": "planId",
+      "file": "core-part-3.prisma"
+    },
+    {
+      "key": "TenantAddOn.subscriptionId",
+      "model": "TenantAddOn",
+      "field": "subscriptionId",
+      "file": "core-part-3.prisma"
+    },
+    {
+      "key": "QuotaRule.planId",
+      "model": "QuotaRule",
+      "field": "planId",
+      "file": "core-part-3.prisma"
+    },
+    {
+      "key": "QuotaRule.addonId",
+      "model": "QuotaRule",
+      "field": "addonId",
+      "file": "core-part-3.prisma"
+    },
+    {
+      "key": "SaaSInvoice.subscriptionId",
+      "model": "SaaSInvoice",
+      "field": "subscriptionId",
+      "file": "core-part-3.prisma"
+    },
+    {
+      "key": "SaaSInvoiceLineItem.invoiceId",
+      "model": "SaaSInvoiceLineItem",
+      "field": "invoiceId",
+      "file": "core-part-3.prisma"
+    },
+    {
+      "key": "UsageAlertLog.ruleId",
+      "model": "UsageAlertLog",
+      "field": "ruleId",
+      "file": "core-part-3.prisma"
+    },
+    {
+      "key": "TicketMessage.ticketId",
+      "model": "TicketMessage",
+      "field": "ticketId",
+      "file": "core-part-3.prisma"
+    },
+    {
+      "key": "TenantBranding.customDomainId",
+      "model": "TenantBranding",
+      "field": "customDomainId",
+      "file": "core-part-3.prisma"
+    },
+    {
+      "key": "TenantWebhookDelivery.tenantId",
+      "model": "TenantWebhookDelivery",
+      "field": "tenantId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "ExpenseReportItem.expenseReportId",
+      "model": "ExpenseReportItem",
+      "field": "expenseReportId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "CorporateCardTransaction.cardId",
+      "model": "CorporateCardTransaction",
+      "field": "cardId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "SubscriptionInvoice.invoiceId",
+      "model": "SubscriptionInvoice",
+      "field": "invoiceId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "ConsolidationElimination.consolidationId",
+      "model": "ConsolidationElimination",
+      "field": "consolidationId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "AssetDepreciation.journalId",
+      "model": "AssetDepreciation",
+      "field": "journalId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "CreditNote.customerId",
+      "model": "CreditNote",
+      "field": "customerId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "CreditNote.invoiceId",
+      "model": "CreditNote",
+      "field": "invoiceId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "DebitNote.vendorId",
+      "model": "DebitNote",
+      "field": "vendorId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "DebitNote.purchaseOrderId",
+      "model": "DebitNote",
+      "field": "purchaseOrderId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "TaxRule.orgId",
+      "model": "TaxRule",
+      "field": "orgId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "TaxComponent.taxRuleId",
+      "model": "TaxComponent",
+      "field": "taxRuleId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "TaxComponent.accountId",
+      "model": "TaxComponent",
+      "field": "accountId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "WithholdingTax.orgId",
+      "model": "WithholdingTax",
+      "field": "orgId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "WithholdingTax.accountId",
+      "model": "WithholdingTax",
+      "field": "accountId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "TaxFiling.orgId",
+      "model": "TaxFiling",
+      "field": "orgId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "TreasuryTransaction.orgId",
+      "model": "TreasuryTransaction",
+      "field": "orgId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "TreasuryTransaction.bankAccountId",
+      "model": "TreasuryTransaction",
+      "field": "bankAccountId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "InterCompanyTransfer.fromOrgId",
+      "model": "InterCompanyTransfer",
+      "field": "fromOrgId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "InterCompanyTransfer.toOrgId",
+      "model": "InterCompanyTransfer",
+      "field": "toOrgId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "QAInspectionTemplate.productId",
+      "model": "QAInspectionTemplate",
+      "field": "productId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "SalesReturn.customerId",
+      "model": "SalesReturn",
+      "field": "customerId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "SalesReturn.salesOrderId",
+      "model": "SalesReturn",
+      "field": "salesOrderId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "SalesReturnItem.salesReturnId",
+      "model": "SalesReturnItem",
+      "field": "salesReturnId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "SalesReturnItem.productId",
+      "model": "SalesReturnItem",
+      "field": "productId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "PurchaseReturn.vendorId",
+      "model": "PurchaseReturn",
+      "field": "vendorId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "PurchaseReturn.purchaseOrderId",
+      "model": "PurchaseReturn",
+      "field": "purchaseOrderId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "PurchaseReturnItem.purchaseReturnId",
+      "model": "PurchaseReturnItem",
+      "field": "purchaseReturnId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "PurchaseReturnItem.productId",
+      "model": "PurchaseReturnItem",
+      "field": "productId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "MRPPlannedItem.productId",
+      "model": "MRPPlannedItem",
+      "field": "productId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "MRPPlannedItem.bomId",
+      "model": "MRPPlannedItem",
+      "field": "bomId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "NonConformanceReport.workOrderId",
+      "model": "NonConformanceReport",
+      "field": "workOrderId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "NonConformanceReport.productId",
+      "model": "NonConformanceReport",
+      "field": "productId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "SubcontractingOrder.vendorId",
+      "model": "SubcontractingOrder",
+      "field": "vendorId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "SubcontractingOrder.productId",
+      "model": "SubcontractingOrder",
+      "field": "productId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "SubcontractingOrder.bomId",
+      "model": "SubcontractingOrder",
+      "field": "bomId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "SubcontractingMaterial.productId",
+      "model": "SubcontractingMaterial",
+      "field": "productId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "EtlPipeline.sourceId",
+      "model": "EtlPipeline",
+      "field": "sourceId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "PageRegistry.schemaId",
+      "model": "PageRegistry",
+      "field": "schemaId",
+      "file": "core-part-4.prisma"
+    },
+    {
+      "key": "EmailSequenceEnrollment.sequenceId",
+      "model": "EmailSequenceEnrollment",
+      "field": "sequenceId",
+      "file": "core-part-5.prisma"
+    },
+    {
+      "key": "CadenceAutoEnrollRule.sequenceId",
+      "model": "CadenceAutoEnrollRule",
+      "field": "sequenceId",
+      "file": "core-part-5.prisma"
+    },
+    {
+      "key": "CadenceStepTask.stepId",
+      "model": "CadenceStepTask",
+      "field": "stepId",
+      "file": "core-part-5.prisma"
+    },
+    {
+      "key": "SalesTerritory.parentId",
+      "model": "SalesTerritory",
+      "field": "parentId",
+      "file": "core-part-5.prisma"
+    },
+    {
+      "key": "TerritoryAssignmentRule.territoryId",
+      "model": "TerritoryAssignmentRule",
+      "field": "territoryId",
+      "file": "core-part-5.prisma"
+    },
+    {
+      "key": "CommissionEntry.ruleId",
+      "model": "CommissionEntry",
+      "field": "ruleId",
+      "file": "core-part-5.prisma"
+    },
+    {
+      "key": "ApprovalRequest.processId",
+      "model": "ApprovalRequest",
+      "field": "processId",
+      "file": "core-part-5.prisma"
+    },
+    {
+      "key": "Battlecard.playbookId",
+      "model": "Battlecard",
+      "field": "playbookId",
+      "file": "core-part-5.prisma"
+    },
+    {
+      "key": "DemandForecastRun.orgId",
+      "model": "DemandForecastRun",
+      "field": "orgId",
+      "file": "core-part-5.prisma"
+    },
+    {
+      "key": "PurchaseRequisition.departmentId",
+      "model": "PurchaseRequisition",
+      "field": "departmentId",
+      "file": "core-part-5.prisma"
+    },
+    {
+      "key": "PurchaseRequisitionItem.productId",
+      "model": "PurchaseRequisitionItem",
+      "field": "productId",
+      "file": "core-part-5.prisma"
+    },
+    {
+      "key": "BlanketPurchaseAgreementItem.productId",
+      "model": "BlanketPurchaseAgreementItem",
+      "field": "productId",
+      "file": "core-part-5.prisma"
+    },
+    {
+      "key": "Case.orgId",
+      "model": "Case",
+      "field": "orgId",
+      "file": "core-part-5.prisma"
+    },
+    {
+      "key": "Case.contactId",
+      "model": "Case",
+      "field": "contactId",
+      "file": "core-part-5.prisma"
+    },
+    {
+      "key": "CustomerPortalUser.contactId",
+      "model": "CustomerPortalUser",
+      "field": "contactId",
+      "file": "core-part-5.prisma"
+    },
+    {
+      "key": "Contract.orgId",
+      "model": "Contract",
+      "field": "orgId",
+      "file": "core-part-5.prisma"
+    },
+    {
+      "key": "Contract.renewedFromId",
+      "model": "Contract",
+      "field": "renewedFromId",
+      "file": "core-part-5.prisma"
+    },
+    {
+      "key": "Contract.revisedFromId",
+      "model": "Contract",
+      "field": "revisedFromId",
+      "file": "core-part-5.prisma"
+    },
+    {
+      "key": "RFQAuctionBid.vendorId",
+      "model": "RFQAuctionBid",
+      "field": "vendorId",
+      "file": "core-part-5.prisma"
+    },
+    {
+      "key": "SalesCoupon.promotionId",
+      "model": "SalesCoupon",
+      "field": "promotionId",
+      "file": "core-part-5.prisma"
+    },
+    {
+      "key": "SalesPartner.tierId",
+      "model": "SalesPartner",
+      "field": "tierId",
+      "file": "core-part-5.prisma"
+    },
+    {
+      "key": "CartItem.productListingId",
+      "model": "CartItem",
+      "field": "productListingId",
+      "file": "core-part-5.prisma"
+    },
+    {
+      "key": "ContractLineItem.productId",
+      "model": "ContractLineItem",
+      "field": "productId",
+      "file": "core-part-6.prisma"
+    },
+    {
+      "key": "BankConnection.bankAccountId",
+      "model": "BankConnection",
+      "field": "bankAccountId",
+      "file": "core-part-6.prisma"
+    },
+    {
+      "key": "BankTransaction.connectionId",
+      "model": "BankTransaction",
+      "field": "connectionId",
+      "file": "core-part-6.prisma"
+    },
+    {
+      "key": "FxRevaluationDetail.accountId",
+      "model": "FxRevaluationDetail",
+      "field": "accountId",
+      "file": "core-part-6.prisma"
+    },
+    {
+      "key": "BudgetScenario.clonedFromId",
+      "model": "BudgetScenario",
+      "field": "clonedFromId",
+      "file": "core-part-6.prisma"
+    },
+    {
+      "key": "AllocationRule.sourceAccountId",
+      "model": "AllocationRule",
+      "field": "sourceAccountId",
+      "file": "core-part-6.prisma"
+    },
+    {
+      "key": "AllocationRun.ruleId",
+      "model": "AllocationRun",
+      "field": "ruleId",
+      "file": "core-part-6.prisma"
+    },
+    {
+      "key": "AllocationRun.journalId",
+      "model": "AllocationRun",
+      "field": "journalId",
+      "file": "core-part-6.prisma"
+    },
+    {
+      "key": "EliminationRule.sourceAccountId",
+      "model": "EliminationRule",
+      "field": "sourceAccountId",
+      "file": "core-part-6.prisma"
+    },
+    {
+      "key": "EliminationRule.destinationAccountId",
+      "model": "EliminationRule",
+      "field": "destinationAccountId",
+      "file": "core-part-6.prisma"
+    },
+    {
+      "key": "EliminationRun.journalId",
+      "model": "EliminationRun",
+      "field": "journalId",
+      "file": "core-part-6.prisma"
+    },
+    {
+      "key": "BudgetComment.parentId",
+      "model": "BudgetComment",
+      "field": "parentId",
+      "file": "core-part-6.prisma"
+    },
+    {
+      "key": "Form1099.batchId",
+      "model": "Form1099",
+      "field": "batchId",
+      "file": "core-part-6.prisma"
+    },
+    {
+      "key": "CommissionSpiff.planId",
+      "model": "CommissionSpiff",
+      "field": "planId",
+      "file": "core-part-6.prisma"
+    },
+    {
+      "key": "CommissionPayoutSpiffLine.spiffId",
+      "model": "CommissionPayoutSpiffLine",
+      "field": "spiffId",
+      "file": "core-part-6.prisma"
+    },
+    {
+      "key": "VendorRmaRequest.vendorId",
+      "model": "VendorRmaRequest",
+      "field": "vendorId",
+      "file": "core-part-6.prisma"
+    },
+    {
+      "key": "VendorRmaRequest.orgId",
+      "model": "VendorRmaRequest",
+      "field": "orgId",
+      "file": "core-part-6.prisma"
+    },
+    {
+      "key": "VendorRmaRequest.reasonCodeId",
+      "model": "VendorRmaRequest",
+      "field": "reasonCodeId",
+      "file": "core-part-6.prisma"
+    },
+    {
+      "key": "VendorReturnShipment.rmaRequestId",
+      "model": "VendorReturnShipment",
+      "field": "rmaRequestId",
+      "file": "core-part-6.prisma"
+    },
+    {
+      "key": "VendorReturnShipment.warehouseId",
+      "model": "VendorReturnShipment",
+      "field": "warehouseId",
+      "file": "core-part-6.prisma"
+    },
+    {
+      "key": "SupplierCarRequest.vendorId",
+      "model": "SupplierCarRequest",
+      "field": "vendorId",
+      "file": "core-part-6.prisma"
+    },
+    {
+      "key": "InboundShipment.carrierId",
+      "model": "InboundShipment",
+      "field": "carrierId",
+      "file": "core-part-6.prisma"
+    },
+    {
+      "key": "OutboundShipment.carrierId",
+      "model": "OutboundShipment",
+      "field": "carrierId",
+      "file": "core-part-6.prisma"
+    },
+    {
+      "key": "YardMove.appointmentId",
+      "model": "YardMove",
+      "field": "appointmentId",
+      "file": "core-part-7.prisma"
+    },
+    {
+      "key": "SafetyDataSheet.classificationId",
+      "model": "SafetyDataSheet",
+      "field": "classificationId",
+      "file": "core-part-7.prisma"
+    },
+    {
+      "key": "HazmatManifestLine.classificationId",
+      "model": "HazmatManifestLine",
+      "field": "classificationId",
+      "file": "core-part-7.prisma"
+    },
+    {
+      "key": "LoadPlan.containerTypeId",
+      "model": "LoadPlan",
+      "field": "containerTypeId",
+      "file": "core-part-7.prisma"
+    },
+    {
+      "key": "LoadPlanPallet.palletTypeId",
+      "model": "LoadPlanPallet",
+      "field": "palletTypeId",
+      "file": "core-part-7.prisma"
+    },
+    {
+      "key": "LabelAssignment.templateId",
+      "model": "LabelAssignment",
+      "field": "templateId",
+      "file": "core-part-7.prisma"
+    },
+    {
+      "key": "TemperatureExcursion.requirementId",
+      "model": "TemperatureExcursion",
+      "field": "requirementId",
+      "file": "core-part-7.prisma"
+    },
+    {
+      "key": "ReplenSuggestion.levelId",
+      "model": "ReplenSuggestion",
+      "field": "levelId",
+      "file": "core-part-7.prisma"
+    },
+    {
+      "key": "CrossDockOrder.stationId",
+      "model": "CrossDockOrder",
+      "field": "stationId",
+      "file": "core-part-8.prisma"
+    },
+    {
+      "key": "ContainerTracking.inboundShipmentId",
+      "model": "ContainerTracking",
+      "field": "inboundShipmentId",
+      "file": "core-part-8.prisma"
+    },
+    {
+      "key": "ContainerTracking.outboundShipmentId",
+      "model": "ContainerTracking",
+      "field": "outboundShipmentId",
+      "file": "core-part-8.prisma"
+    },
+    {
+      "key": "CommunicationLog.templateId",
+      "model": "CommunicationLog",
+      "field": "templateId",
+      "file": "core-part-8.prisma"
+    },
+    {
+      "key": "PerformanceObligation.parentId",
+      "model": "PerformanceObligation",
+      "field": "parentId",
+      "file": "core-part-8.prisma"
+    },
+    {
+      "key": "CampaignWorkflowStat.workflowId",
+      "model": "CampaignWorkflowStat",
+      "field": "workflowId",
+      "file": "core-part-8.prisma"
+    },
+    {
+      "key": "RecurringOrderTemplateItem.templateId",
+      "model": "RecurringOrderTemplateItem",
+      "field": "templateId",
+      "file": "core-part-9.prisma"
+    },
+    {
+      "key": "OrderApprovalWorkflowStep.workflowId",
+      "model": "OrderApprovalWorkflowStep",
+      "field": "workflowId",
+      "file": "core-part-9.prisma"
+    },
+    {
+      "key": "OrderApprovalAction.requestId",
+      "model": "OrderApprovalAction",
+      "field": "requestId",
+      "file": "core-part-9.prisma"
+    },
+    {
+      "key": "Lead.sourceId",
+      "model": "Lead",
+      "field": "sourceId",
+      "file": "crm.prisma"
+    },
+    {
+      "key": "Opportunity.leadId",
+      "model": "Opportunity",
+      "field": "leadId",
+      "file": "crm.prisma"
+    },
+    {
+      "key": "Opportunity.competitorId",
+      "model": "Opportunity",
+      "field": "competitorId",
+      "file": "crm.prisma"
+    },
+    {
+      "key": "Opportunity.winLossReasonId",
+      "model": "Opportunity",
+      "field": "winLossReasonId",
+      "file": "crm.prisma"
+    },
+    {
+      "key": "OpportunityLineItem.productId",
+      "model": "OpportunityLineItem",
+      "field": "productId",
+      "file": "crm.prisma"
+    },
+    {
+      "key": "CrmComment.parentId",
+      "model": "CrmComment",
+      "field": "parentId",
+      "file": "crm.prisma"
+    },
+    {
+      "key": "CrmEnrichmentRule.sourceId",
+      "model": "CrmEnrichmentRule",
+      "field": "sourceId",
+      "file": "crm.prisma"
+    },
+    {
+      "key": "CrmEnrichmentFieldMapping.sourceId",
+      "model": "CrmEnrichmentFieldMapping",
+      "field": "sourceId",
+      "file": "crm.prisma"
+    },
+    {
+      "key": "CrmLeadEnrichmentData.sourceId",
+      "model": "CrmLeadEnrichmentData",
+      "field": "sourceId",
+      "file": "crm.prisma"
+    },
+    {
+      "key": "CrmEnrichmentSchedule.ruleId",
+      "model": "CrmEnrichmentSchedule",
+      "field": "ruleId",
+      "file": "crm.prisma"
+    },
+    {
+      "key": "CrmLeadRoutingHistory.ruleId",
+      "model": "CrmLeadRoutingHistory",
+      "field": "ruleId",
+      "file": "crm.prisma"
+    },
+    {
+      "key": "CrmEnrichmentWorkflow.providerId",
+      "model": "CrmEnrichmentWorkflow",
+      "field": "providerId",
+      "file": "crm.prisma"
+    },
+    {
+      "key": "CrmObjectionHandler.battlecardId",
+      "model": "CrmObjectionHandler",
+      "field": "battlecardId",
+      "file": "crm.prisma"
+    },
+    {
+      "key": "EducationAttendanceRecord.attendanceId",
+      "model": "EducationAttendanceRecord",
+      "field": "attendanceId",
+      "file": "education.prisma"
+    },
+    {
+      "key": "EducationLibraryFine.transactionId",
+      "model": "EducationLibraryFine",
+      "field": "transactionId",
+      "file": "education.prisma"
+    },
+    {
+      "key": "WorkOrder.bomId",
+      "model": "WorkOrder",
+      "field": "bomId",
+      "file": "field-service.prisma"
+    },
+    {
+      "key": "WorkOrder.workstationId",
+      "model": "WorkOrder",
+      "field": "workstationId",
+      "file": "field-service.prisma"
+    },
+    {
+      "key": "WorkOrderComponentConsumption.productId",
+      "model": "WorkOrderComponentConsumption",
+      "field": "productId",
+      "file": "field-service.prisma"
+    },
+    {
+      "key": "FieldSalesCheckin.customerId",
+      "model": "FieldSalesCheckin",
+      "field": "customerId",
+      "file": "field-service.prisma"
+    },
+    {
+      "key": "FieldSalesCheckin.routeId",
+      "model": "FieldSalesCheckin",
+      "field": "routeId",
+      "file": "field-service.prisma"
+    },
+    {
+      "key": "FieldServiceTicket.slaId",
+      "model": "FieldServiceTicket",
+      "field": "slaId",
+      "file": "field-service.prisma"
+    },
+    {
+      "key": "FieldServiceContract.slaId",
+      "model": "FieldServiceContract",
+      "field": "slaId",
+      "file": "field-service.prisma"
+    },
+    {
+      "key": "AccountPlan.customerId",
+      "model": "AccountPlan",
+      "field": "customerId",
+      "file": "finance.prisma"
+    },
+    {
+      "key": "InvoiceLineItem.productId",
+      "model": "InvoiceLineItem",
+      "field": "productId",
+      "file": "finance.prisma"
+    },
+    {
+      "key": "Account.parentId",
+      "model": "Account",
+      "field": "parentId",
+      "file": "finance.prisma"
+    },
+    {
+      "key": "FinanceLease.orgId",
+      "model": "FinanceLease",
+      "field": "orgId",
+      "file": "finance.prisma"
+    },
+    {
+      "key": "PaymentMethod.tenantId",
+      "model": "PaymentMethod",
+      "field": "tenantId",
+      "file": "finance.prisma"
+    },
+    {
+      "key": "PaymentTransaction.invoiceId",
+      "model": "PaymentTransaction",
+      "field": "invoiceId",
+      "file": "finance.prisma"
+    },
+    {
+      "key": "PaymentTransaction.paymentMethodId",
+      "model": "PaymentTransaction",
+      "field": "paymentMethodId",
+      "file": "finance.prisma"
+    },
+    {
+      "key": "InvoiceDunningLog.orgId",
+      "model": "InvoiceDunningLog",
+      "field": "orgId",
+      "file": "finance.prisma"
+    },
+    {
+      "key": "InvoiceDunningLog.dunningLevelId",
+      "model": "InvoiceDunningLog",
+      "field": "dunningLevelId",
+      "file": "finance.prisma"
+    },
+    {
+      "key": "InvoiceDunningLog.dunningRunId",
+      "model": "InvoiceDunningLog",
+      "field": "dunningRunId",
+      "file": "finance.prisma"
+    },
+    {
+      "key": "PaymentSchedule.orgId",
+      "model": "PaymentSchedule",
+      "field": "orgId",
+      "file": "finance.prisma"
+    },
+    {
+      "key": "PaymentSchedule.vendorId",
+      "model": "PaymentSchedule",
+      "field": "vendorId",
+      "file": "finance.prisma"
+    },
+    {
+      "key": "PaymentSchedule.purchaseOrderId",
+      "model": "PaymentSchedule",
+      "field": "purchaseOrderId",
+      "file": "finance.prisma"
+    },
+    {
+      "key": "PaymentRun.orgId",
+      "model": "PaymentRun",
+      "field": "orgId",
+      "file": "finance.prisma"
+    },
+    {
+      "key": "PaymentRun.bankAccountId",
+      "model": "PaymentRun",
+      "field": "bankAccountId",
+      "file": "finance.prisma"
+    },
+    {
+      "key": "AccountingBookRule.sourceBookId",
+      "model": "AccountingBookRule",
+      "field": "sourceBookId",
+      "file": "finance.prisma"
+    },
+    {
+      "key": "AccountingBookRule.destinationBookId",
+      "model": "AccountingBookRule",
+      "field": "destinationBookId",
+      "file": "finance.prisma"
+    },
+    {
+      "key": "AccountingBookRule.sourceAccountId",
+      "model": "AccountingBookRule",
+      "field": "sourceAccountId",
+      "file": "finance.prisma"
+    },
+    {
+      "key": "AccountingBookRule.destinationAccountId",
+      "model": "AccountingBookRule",
+      "field": "destinationAccountId",
+      "file": "finance.prisma"
+    },
+    {
+      "key": "PaymentBatch.bankAccountId",
+      "model": "PaymentBatch",
+      "field": "bankAccountId",
+      "file": "finance.prisma"
+    },
+    {
+      "key": "HealthcareControlledSubstanceLog.batchId",
+      "model": "HealthcareControlledSubstanceLog",
+      "field": "batchId",
+      "file": "healthcare.prisma"
+    },
+    {
+      "key": "Employee.departmentId",
+      "model": "Employee",
+      "field": "departmentId",
+      "file": "hr.prisma"
+    },
+    {
+      "key": "PayrollSlip.payrollRunId",
+      "model": "PayrollSlip",
+      "field": "payrollRunId",
+      "file": "hr.prisma"
+    },
+    {
+      "key": "LeaveRequest.policyId",
+      "model": "LeaveRequest",
+      "field": "policyId",
+      "file": "hr.prisma"
+    },
+    {
+      "key": "HrTicket.categoryId",
+      "model": "HrTicket",
+      "field": "categoryId",
+      "file": "hr.prisma"
+    },
+    {
+      "key": "EmployeeRecognition.awardId",
+      "model": "EmployeeRecognition",
+      "field": "awardId",
+      "file": "hr.prisma"
+    },
+    {
+      "key": "InvestmentPortfolio.orgId",
+      "model": "InvestmentPortfolio",
+      "field": "orgId",
+      "file": "inventory.prisma"
+    },
+    {
+      "key": "InvestmentPortfolio.accountId",
+      "model": "InvestmentPortfolio",
+      "field": "accountId",
+      "file": "inventory.prisma"
+    },
+    {
+      "key": "StockLedgerEntry.stockEntryId",
+      "model": "StockLedgerEntry",
+      "field": "stockEntryId",
+      "file": "inventory.prisma"
+    },
+    {
+      "key": "StockEntryItem.fromBinId",
+      "model": "StockEntryItem",
+      "field": "fromBinId",
+      "file": "inventory.prisma"
+    },
+    {
+      "key": "StockEntryItem.toBinId",
+      "model": "StockEntryItem",
+      "field": "toBinId",
+      "file": "inventory.prisma"
+    },
+    {
+      "key": "StockEntryItem.uomId",
+      "model": "StockEntryItem",
+      "field": "uomId",
+      "file": "inventory.prisma"
+    },
+    {
+      "key": "StockEntryItem.batchId",
+      "model": "StockEntryItem",
+      "field": "batchId",
+      "file": "inventory.prisma"
+    },
+    {
+      "key": "StockAlert.productId",
+      "model": "StockAlert",
+      "field": "productId",
+      "file": "inventory.prisma"
+    },
+    {
+      "key": "MfgMaintenanceWorkOrder.scheduleId",
+      "model": "MfgMaintenanceWorkOrder",
+      "field": "scheduleId",
+      "file": "manufacturing.prisma"
+    },
+    {
+      "key": "Position.departmentId",
+      "model": "Position",
+      "field": "departmentId",
+      "file": "pos.prisma"
+    },
+    {
+      "key": "Project.portfolioId",
+      "model": "Project",
+      "field": "portfolioId",
+      "file": "projects.prisma"
+    },
+    {
+      "key": "Project.customerId",
+      "model": "Project",
+      "field": "customerId",
+      "file": "projects.prisma"
+    },
+    {
+      "key": "Milestone.projectId",
+      "model": "Milestone",
+      "field": "projectId",
+      "file": "projects.prisma"
+    },
+    {
+      "key": "ProductKitItem.productId",
+      "model": "ProductKitItem",
+      "field": "productId",
+      "file": "projects.prisma"
+    },
+    {
+      "key": "Incident.sloDefinitionId",
+      "model": "Incident",
+      "field": "sloDefinitionId",
+      "file": "provider-registry.prisma"
+    },
+    {
+      "key": "Resource.kindId",
+      "model": "Resource",
+      "field": "kindId",
+      "file": "resource-model.prisma"
+    },
+    {
+      "key": "WebSettings.activeTemplateId",
+      "model": "WebSettings",
+      "field": "activeTemplateId",
+      "file": "web.prisma"
+    },
+    {
+      "key": "UserSession.userId",
+      "model": "UserSession",
+      "field": "userId",
+      "file": "idp-schema.prisma"
+    }
+  ]
+}

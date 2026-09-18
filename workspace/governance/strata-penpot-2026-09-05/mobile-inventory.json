@@ -1,0 +1,6694 @@
+{
+  "generatedAt": "2026-09-05T03:37:59.817Z",
+  "command": "node unierp-workspace/governance/strata-penpot-2026-09-05/mobile-inventory.mjs",
+  "limitations": "Static routePath declarations, not runtime route reachability or Flutter interaction evidence.",
+  "screens": [
+    {
+      "id": "MOB-0001",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/admin/presentation/pages/admin_api_key_detail_page.dart",
+      "route": "/admin/api-keys/:id",
+      "module": "admin",
+      "title": "API Key",
+      "kind": "record",
+      "labels": [
+        "API Key",
+        "Delete API key?",
+        "Key",
+        "Details",
+        "Permissions"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0002",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/admin/presentation/pages/admin_api_key_list_page.dart",
+      "route": "/admin/api-keys",
+      "module": "admin",
+      "title": "API Keys",
+      "kind": "data",
+      "labels": [
+        "API Keys",
+        "Search by name"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0003",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/admin/presentation/pages/admin_role_detail_page.dart",
+      "route": "/admin/roles/:id",
+      "module": "admin",
+      "title": "Role",
+      "kind": "record",
+      "labels": [
+        "Role",
+        "Details",
+        "Permissions"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0004",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/admin/presentation/pages/admin_role_form_page.dart",
+      "route": "/admin/roles/new",
+      "module": "admin",
+      "title": "Name *",
+      "kind": "form",
+      "labels": [
+        "Name *",
+        "Description"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0005",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/admin/presentation/pages/admin_setting_edit_page.dart",
+      "route": "/admin/settings/:key/edit",
+      "module": "admin",
+      "title": "Edit Setting",
+      "kind": "form",
+      "labels": [
+        "Edit Setting",
+        "Value",
+        "Value (JSON)"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0006",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/admin/presentation/pages/admin_settings_list_page.dart",
+      "route": "/admin/settings",
+      "module": "admin",
+      "title": "Settings",
+      "kind": "data",
+      "labels": [
+        "Settings",
+        "Search by key or name"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0007",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/admin/presentation/pages/admin_tenant_detail_page.dart",
+      "route": "/admin/tenants/:id",
+      "module": "admin",
+      "title": "Tenant",
+      "kind": "record",
+      "labels": [
+        "Tenant",
+        "Details",
+        "Usage"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0008",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/admin/presentation/pages/admin_tenant_list_page.dart",
+      "route": "/admin/tenants",
+      "module": "admin",
+      "title": "Tenants",
+      "kind": "data",
+      "labels": [
+        "Tenants",
+        "Search tenants"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0009",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/admin/presentation/pages/admin_user_form_page.dart",
+      "route": "/admin/users/new",
+      "module": "admin",
+      "title": "First Name *",
+      "kind": "form",
+      "labels": [
+        "First Name *",
+        "Last Name *",
+        "Email *",
+        "Department",
+        "Role",
+        "Status"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0010",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/admin/presentation/pages/admin_user_list_page.dart",
+      "route": "/admin/users",
+      "module": "admin",
+      "title": "Users",
+      "kind": "data",
+      "labels": [
+        "Users",
+        "Search users"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0011",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/admin/presentation/pages/audit_log_list_page.dart",
+      "route": "/admin/audit-log",
+      "module": "admin",
+      "title": "Audit Log",
+      "kind": "data",
+      "labels": [
+        "Audit Log"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0012",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/advanced_finance/presentation/pages/financial_close_task_detail_page.dart",
+      "route": "/advanced-finance/close-tasks/:id",
+      "module": "advanced-finance",
+      "title": "Close Task",
+      "kind": "record",
+      "labels": [
+        "Close Task",
+        "Task Details",
+        "Timeline",
+        "Notes"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0013",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/advanced_finance/presentation/pages/financial_close_task_form_page.dart",
+      "route": "/advanced-finance/close-tasks/new",
+      "module": "advanced-finance",
+      "title": "Title *",
+      "kind": "form",
+      "labels": [
+        "Title *",
+        "Period *",
+        "Status",
+        "Priority",
+        "Assigned To",
+        "Notes"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0014",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/advanced_finance/presentation/pages/financial_close_task_list_page.dart",
+      "route": "/advanced-finance/close-tasks",
+      "module": "advanced-finance",
+      "title": "Close Tasks",
+      "kind": "data",
+      "labels": [
+        "Close Tasks"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0015",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/advanced_finance/presentation/pages/multi_currency_rate_detail_page.dart",
+      "route": "/advanced-finance/currency-rates/:id",
+      "module": "advanced-finance",
+      "title": "Currency Rate",
+      "kind": "record",
+      "labels": [
+        "Currency Rate",
+        "Rate Details",
+        "Timeline"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0016",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/advanced_finance/presentation/pages/multi_currency_rate_form_page.dart",
+      "route": "/advanced-finance/currency-rates/new",
+      "module": "advanced-finance",
+      "title": "From Currency *",
+      "kind": "form",
+      "labels": [
+        "From Currency *",
+        "To Currency *",
+        "Rate *",
+        "Source"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0017",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/advanced_finance/presentation/pages/multi_currency_rate_list_page.dart",
+      "route": "/advanced-finance/currency-rates",
+      "module": "advanced-finance",
+      "title": "Currency Rates",
+      "kind": "data",
+      "labels": [
+        "Currency Rates",
+        "Search by currency"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0018",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/advanced_hr/presentation/pages/compensation_band_detail_page.dart",
+      "route": "/advanced-hr/compensation-bands/:id",
+      "module": "advanced-hr",
+      "title": "Compensation Band",
+      "kind": "record",
+      "labels": [
+        "Compensation Band",
+        "Salary Range",
+        "Details",
+        "Notes"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0019",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/advanced_hr/presentation/pages/compensation_band_form_page.dart",
+      "route": "/advanced-hr/compensation-bands/new",
+      "module": "advanced-hr",
+      "title": "Name *",
+      "kind": "form",
+      "labels": [
+        "Name *",
+        "Min Salary *",
+        "Max Salary *",
+        "Currency",
+        "Grade",
+        "Status",
+        "Notes"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0020",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/advanced_hr/presentation/pages/compensation_band_list_page.dart",
+      "route": "/advanced-hr/compensation-bands",
+      "module": "advanced-hr",
+      "title": "Compensation Bands",
+      "kind": "data",
+      "labels": [
+        "Compensation Bands",
+        "Search by name or grade"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0021",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/advanced_hr/presentation/pages/learning_path_detail_page.dart",
+      "route": "/advanced-hr/learning-paths/:id",
+      "module": "advanced-hr",
+      "title": "Learning Path",
+      "kind": "record",
+      "labels": [
+        "Learning Path",
+        "Metrics",
+        "Details",
+        "Description"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0022",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/advanced_hr/presentation/pages/learning_path_form_page.dart",
+      "route": "/advanced-hr/learning-paths/new",
+      "module": "advanced-hr",
+      "title": "Title *",
+      "kind": "form",
+      "labels": [
+        "Title *",
+        "Category *",
+        "Status",
+        "Description"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0023",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/advanced_hr/presentation/pages/learning_path_list_page.dart",
+      "route": "/advanced-hr/learning-paths",
+      "module": "advanced-hr",
+      "title": "Learning Paths",
+      "kind": "data",
+      "labels": [
+        "Learning Paths",
+        "Search learning paths"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0024",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/ai/presentation/pages/model_detail_page.dart",
+      "route": "/ai/models/:id",
+      "module": "ai",
+      "title": "AI Model",
+      "kind": "record",
+      "labels": [
+        "AI Model",
+        "Model Details",
+        "Capabilities",
+        "Timeline"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0025",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/ai/presentation/pages/model_form_page.dart",
+      "route": "/ai/models/new",
+      "module": "ai",
+      "title": "Name *",
+      "kind": "form",
+      "labels": [
+        "Name *",
+        "Provider",
+        "Version",
+        "Status",
+        "Capabilities"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0026",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/ai/presentation/pages/model_list_page.dart",
+      "route": "/ai/models",
+      "module": "ai",
+      "title": "AI Models",
+      "kind": "data",
+      "labels": [
+        "AI Models",
+        "Search models"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0027",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/ai/presentation/pages/prediction_detail_page.dart",
+      "route": "/ai/predictions/:id",
+      "module": "ai",
+      "title": "Prediction",
+      "kind": "record",
+      "labels": [
+        "Prediction",
+        "Input",
+        "Output",
+        "Details"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0028",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/ai/presentation/pages/prediction_form_page.dart",
+      "route": "/ai/predictions/new",
+      "module": "ai",
+      "title": "Model ID",
+      "kind": "form",
+      "labels": [
+        "Model ID",
+        "Model Name",
+        "Input (JSON)",
+        "Output (JSON)",
+        "Confidence"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0029",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/ai/presentation/pages/prediction_list_page.dart",
+      "route": "/ai/predictions",
+      "module": "ai",
+      "title": "AI Predictions",
+      "kind": "data",
+      "labels": [
+        "AI Predictions",
+        "Search predictions"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0030",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/ai/presentation/pages/prompt_form_page.dart",
+      "route": "/ai/prompts/new",
+      "module": "ai",
+      "title": "Title",
+      "kind": "form",
+      "labels": [
+        "Title",
+        "Prompt *",
+        "Model ID",
+        "Status"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0031",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/ai/presentation/pages/prompt_list_page.dart",
+      "route": "/ai/prompts",
+      "module": "ai",
+      "title": "Prompts",
+      "kind": "data",
+      "labels": [
+        "Prompts",
+        "Search prompts"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0032",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/ai/presentation/pages/training_data_form_page.dart",
+      "route": "/ai/training-data/new",
+      "module": "ai",
+      "title": "Name *",
+      "kind": "form",
+      "labels": [
+        "Name *",
+        "Data Type",
+        "Status",
+        "File URL"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0033",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/ai/presentation/pages/training_data_list_page.dart",
+      "route": "/ai/training",
+      "module": "ai",
+      "title": "Training Data",
+      "kind": "data",
+      "labels": [
+        "Training Data",
+        "Search datasets"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0034",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/analytics/presentation/pages/dashboard_detail_page.dart",
+      "route": "/analytics/dashboards/:id",
+      "module": "analytics",
+      "title": "Dashboard",
+      "kind": "record",
+      "labels": [
+        "Dashboard",
+        "Widgets",
+        "Details"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0035",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/analytics/presentation/pages/dashboard_form_page.dart",
+      "route": "/analytics/dashboards/new",
+      "module": "analytics",
+      "title": "Title *",
+      "kind": "form",
+      "labels": [
+        "Title *",
+        "Description",
+        "Status"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0036",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/analytics/presentation/pages/dashboard_list_page.dart",
+      "route": "/analytics/dashboards",
+      "module": "analytics",
+      "title": "Dashboards",
+      "kind": "data",
+      "labels": [
+        "Dashboards",
+        "Search dashboards"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0037",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/analytics/presentation/pages/kpi_detail_page.dart",
+      "route": "/analytics/kpis/:id",
+      "module": "analytics",
+      "title": "KPI",
+      "kind": "record",
+      "labels": [
+        "KPI",
+        "KPI Details",
+        "Timeline"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0038",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/analytics/presentation/pages/kpi_form_page.dart",
+      "route": "/analytics/kpis/new",
+      "module": "analytics",
+      "title": "Name *",
+      "kind": "form",
+      "labels": [
+        "Name *",
+        "Value",
+        "Target",
+        "Unit",
+        "Period",
+        "Trend",
+        "Status"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0039",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/analytics/presentation/pages/kpi_list_page.dart",
+      "route": "/analytics/kpis",
+      "module": "analytics",
+      "title": "KPIs",
+      "kind": "data",
+      "labels": [
+        "KPIs",
+        "Search KPIs"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0040",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/analytics/presentation/pages/pipeline_detail_page.dart",
+      "route": "/analytics/pipelines/:id",
+      "module": "analytics",
+      "title": "Pipeline",
+      "kind": "record",
+      "labels": [
+        "Pipeline",
+        "Stages",
+        "Details"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0041",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/analytics/presentation/pages/pipeline_list_page.dart",
+      "route": "/analytics/pipelines",
+      "module": "analytics",
+      "title": "Pipelines",
+      "kind": "data",
+      "labels": [
+        "Pipelines",
+        "Search pipelines"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0042",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/analytics/presentation/pages/report_detail_page.dart",
+      "route": "/analytics/reports/:id",
+      "module": "analytics",
+      "title": "Report",
+      "kind": "record",
+      "labels": [
+        "Report",
+        "Report Details",
+        "Timeline"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0043",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/analytics/presentation/pages/report_form_page.dart",
+      "route": "/analytics/reports/new",
+      "module": "analytics",
+      "title": "Title *",
+      "kind": "form",
+      "labels": [
+        "Title *",
+        "Description",
+        "Report Type",
+        "Status"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0044",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/analytics/presentation/pages/report_list_page.dart",
+      "route": "/analytics/reports",
+      "module": "analytics",
+      "title": "Analytics Reports",
+      "kind": "data",
+      "labels": [
+        "Analytics Reports",
+        "Search reports"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0045",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/api_platform/presentation/pages/api_key_form_page.dart",
+      "route": "/api-platform/keys/new",
+      "module": "api-platform",
+      "title": "Name *",
+      "kind": "form",
+      "labels": [
+        "Name *",
+        "Prefix *",
+        "Rate Limit",
+        "Status",
+        "Scopes",
+        "IP Whitelist"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0046",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/api_platform/presentation/pages/api_key_list_page.dart",
+      "route": "/api-platform/keys",
+      "module": "api-platform",
+      "title": "API Keys",
+      "kind": "form",
+      "labels": [
+        "API Keys"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0047",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/api_platform/presentation/pages/usage_log_list_page.dart",
+      "route": "/api-platform/usage-logs",
+      "module": "api-platform",
+      "title": "API Usage Logs",
+      "kind": "form",
+      "labels": [
+        "API Usage Logs"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0048",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/auth/presentation/pages/auth_profile_page.dart",
+      "route": "/profile",
+      "module": "profile",
+      "title": "Profile",
+      "kind": "identity",
+      "labels": [
+        "Profile",
+        "Account",
+        "Preferences",
+        "Email notifications",
+        "Push notifications",
+        "Change Password"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0049",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/auth/presentation/pages/auth_security_page.dart",
+      "route": "/security",
+      "module": "security",
+      "title": "Security",
+      "kind": "identity",
+      "labels": [
+        "Security",
+        "Multi-Factor Authentication",
+        "MFA Protection",
+        "Add an extra layer of security to your account",
+        "Passkeys",
+        "Sign in with fingerprint, face, or a security key",
+        "Recent Activity",
+        "Login History"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0050",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/auth/presentation/pages/auth_sessions_page.dart",
+      "route": "/sessions",
+      "module": "sessions",
+      "title": "Active Sessions",
+      "kind": "identity",
+      "labels": [
+        "Active Sessions",
+        "Revoke session?"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0051",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/auth/presentation/pages/login_page.dart",
+      "route": "/sign-in",
+      "module": "sign-in",
+      "title": "Work email",
+      "kind": "identity",
+      "labels": [
+        "Work email",
+        "Password",
+        "Organisation slug",
+        "Reset password"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0052",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/auth/presentation/pages/mfa_challenge_page.dart",
+      "route": "/sign-in/mfa",
+      "module": "sign-in",
+      "title": "Two-factor authentication",
+      "kind": "identity",
+      "labels": [
+        "Two-factor authentication"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0053",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/auth/presentation/pages/register_page.dart",
+      "route": "/register",
+      "module": "register",
+      "title": "Create your organisation",
+      "kind": "identity",
+      "labels": [
+        "Create your organisation",
+        "First name",
+        "Last name",
+        "Work email",
+        "Organisation name",
+        "Industry (optional)",
+        "Password",
+        "Confirm password"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0054",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/auth/presentation/pages/verify_email_pending_page.dart",
+      "route": "/verify-email-pending",
+      "module": "verify-email-pending",
+      "title": "verify email pending page",
+      "kind": "identity",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0055",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/blockchain/presentation/pages/blockchain_contract_list_page.dart",
+      "route": "/blockchain/contracts",
+      "module": "blockchain",
+      "title": "Smart Contracts",
+      "kind": "data",
+      "labels": [
+        "Smart Contracts",
+        "Search by name or address"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0056",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/blockchain/presentation/pages/blockchain_transaction_list_page.dart",
+      "route": "/blockchain/transactions",
+      "module": "blockchain",
+      "title": "Blockchain Transactions",
+      "kind": "data",
+      "labels": [
+        "Blockchain Transactions",
+        "Search by tx hash or address"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0057",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/blockchain/presentation/pages/contract_form_page.dart",
+      "route": "/blockchain/contracts/new",
+      "module": "blockchain",
+      "title": "Name *",
+      "kind": "form",
+      "labels": [
+        "Name *",
+        "Contract Address *",
+        "Network *",
+        "Status",
+        "ABI (JSON)",
+        "Owner Address"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0058",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/builder/presentation/pages/builder_form_detail_page.dart",
+      "route": "/builder/forms/:id",
+      "module": "builder",
+      "title": "Builder Form",
+      "kind": "form",
+      "labels": [
+        "Builder Form",
+        "Delete form?"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0059",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/builder/presentation/pages/builder_form_form_page.dart",
+      "route": "/builder/forms/new",
+      "module": "builder",
+      "title": "Title *",
+      "kind": "form",
+      "labels": [
+        "Title *",
+        "Description",
+        "Status"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0060",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/builder/presentation/pages/builder_form_list_page.dart",
+      "route": "/builder/forms",
+      "module": "builder",
+      "title": "Builder Forms",
+      "kind": "form",
+      "labels": [
+        "Builder Forms",
+        "Search forms...",
+        "Builder Pages",
+        "Search pages..."
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0061",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/builder/presentation/pages/builder_page_detail_page.dart",
+      "route": "/builder/pages/:id",
+      "module": "builder",
+      "title": "Builder Page",
+      "kind": "record",
+      "labels": [
+        "Builder Page",
+        "Delete page?"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0062",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/builder/presentation/pages/builder_page_form_page.dart",
+      "route": "/builder/pages/new",
+      "module": "builder",
+      "title": "Title *",
+      "kind": "form",
+      "labels": [
+        "Title *",
+        "Slug",
+        "Layout",
+        "Status"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0063",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/builder/presentation/pages/form_runtime_page.dart",
+      "route": "run/:module/:slug",
+      "module": ":module",
+      "title": "This form has no fields",
+      "kind": "form",
+      "labels": [
+        "This form has no fields"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0064",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/communication/presentation/pages/channel_form_page.dart",
+      "route": "/communication/channels/new",
+      "module": "communication",
+      "title": "Name *",
+      "kind": "form",
+      "labels": [
+        "Name *",
+        "Description",
+        "Type"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0065",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/communication/presentation/pages/meeting_form_page.dart",
+      "route": "/communication/meetings/new",
+      "module": "communication",
+      "title": "New Meeting",
+      "kind": "form",
+      "labels": [
+        "New Meeting",
+        "Title *",
+        "Host Name",
+        "Start Time *",
+        "End Time"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0066",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/communication/presentation/pages/message_detail_page.dart",
+      "route": "/communication/messages/:id",
+      "module": "communication",
+      "title": "Message",
+      "kind": "record",
+      "labels": [
+        "Message"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0067",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/communication/presentation/pages/message_list_page.dart",
+      "route": "/communication/channels/:id/messages",
+      "module": "communication",
+      "title": "Messages",
+      "kind": "data",
+      "labels": [
+        "Messages",
+        "Type a message..."
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0068",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/communication/presentation/pages/notification_list_page.dart",
+      "route": "/communication/notifications",
+      "module": "communication",
+      "title": "Notifications",
+      "kind": "data",
+      "labels": [
+        "Notifications",
+        "No notifications"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0069",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/communication/presentation/pages/poll_form_page.dart",
+      "route": "/communication/polls/new",
+      "module": "communication",
+      "title": "New Poll",
+      "kind": "form",
+      "labels": [
+        "New Poll",
+        "Question *",
+        "Option ${entry.key + 1}"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0070",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/crm/presentation/pages/activity_detail_page.dart",
+      "route": "/crm/activities/:id",
+      "module": "crm",
+      "title": "Activity",
+      "kind": "record",
+      "labels": [
+        "Activity",
+        "Delete activity?",
+        "Details",
+        "Description"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0071",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/crm/presentation/pages/activity_form_page.dart",
+      "route": "/crm/activities/new",
+      "module": "crm",
+      "title": "New Activity",
+      "kind": "form",
+      "labels": [
+        "New Activity",
+        "Type",
+        "Subject",
+        "Description",
+        "Status",
+        "Due Date"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0072",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/crm/presentation/pages/activity_list_page.dart",
+      "route": "/crm/activities",
+      "module": "crm",
+      "title": "Activities",
+      "kind": "data",
+      "labels": [
+        "Activities"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0073",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/crm/presentation/pages/contact_detail_page.dart",
+      "route": "/crm/contacts/:id",
+      "module": "crm",
+      "title": "Contact",
+      "kind": "record",
+      "labels": [
+        "Contact",
+        "Delete contact?",
+        "Contact Info",
+        "Organization",
+        "Notes"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0074",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/crm/presentation/pages/contact_form_page.dart",
+      "route": "/crm/contacts/new",
+      "module": "crm",
+      "title": "First Name",
+      "kind": "form",
+      "labels": [
+        "First Name",
+        "Last Name",
+        "Email",
+        "Phone",
+        "Mobile",
+        "Position",
+        "Department",
+        "Customer"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0075",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/crm/presentation/pages/contact_list_page.dart",
+      "route": "/crm/contacts",
+      "module": "crm",
+      "title": "Contacts",
+      "kind": "data",
+      "labels": [
+        "Contacts",
+        "Search name or email"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0076",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/crm/presentation/pages/customer_detail_page.dart",
+      "route": "/crm/customers/:id",
+      "module": "crm",
+      "title": "Customer",
+      "kind": "record",
+      "labels": [
+        "Customer",
+        "Delete customer?",
+        "Contact Info",
+        "Address",
+        "Business Details",
+        "Metrics",
+        "Notes"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0077",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/crm/presentation/pages/customer_form_page.dart",
+      "route": "/crm/customers/new",
+      "module": "crm",
+      "title": "Name *",
+      "kind": "form",
+      "labels": [
+        "Name *",
+        "Email",
+        "Phone",
+        "Tax ID",
+        "Status",
+        "Customer Type",
+        "Industry",
+        "Website"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0078",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/crm/presentation/pages/customer_list_page.dart",
+      "route": "/crm/customers",
+      "module": "crm",
+      "title": "Customers",
+      "kind": "data",
+      "labels": [
+        "Customers",
+        "Search name, email or phone"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0079",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/crm/presentation/pages/email_template_detail_page.dart",
+      "route": "/crm/email-templates/:id",
+      "module": "crm",
+      "title": "Email Template",
+      "kind": "record",
+      "labels": [
+        "Email Template",
+        "Delete template?",
+        "Details",
+        "Body"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0080",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/crm/presentation/pages/email_template_form_page.dart",
+      "route": "/crm/email-templates/new",
+      "module": "crm",
+      "title": "Name",
+      "kind": "form",
+      "labels": [
+        "Name",
+        "Subject",
+        "Category",
+        "Body"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0081",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/crm/presentation/pages/email_template_list_page.dart",
+      "route": "/crm/email-templates",
+      "module": "crm",
+      "title": "Email Templates",
+      "kind": "data",
+      "labels": [
+        "Email Templates",
+        "Search name or subject"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0082",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/crm/presentation/pages/lead_form_page.dart",
+      "route": "/crm/leads/new",
+      "module": "crm",
+      "title": "Salutation",
+      "kind": "form",
+      "labels": [
+        "Salutation",
+        "First Name *",
+        "Last Name",
+        "Email",
+        "Phone",
+        "Company",
+        "Title",
+        "Status"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0083",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/crm/presentation/pages/lead_list_page.dart",
+      "route": "/crm/leads",
+      "module": "crm",
+      "title": "Leads",
+      "kind": "data",
+      "labels": [
+        "Leads",
+        "Search leads"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0084",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/crm/presentation/pages/lead_source_form_page.dart",
+      "route": "/crm/sources/new",
+      "module": "crm",
+      "title": "New Lead Source",
+      "kind": "form",
+      "labels": [
+        "New Lead Source",
+        "Name"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0085",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/crm/presentation/pages/lead_source_list_page.dart",
+      "route": "/crm/sources",
+      "module": "crm",
+      "title": "Lead Sources",
+      "kind": "data",
+      "labels": [
+        "Lead Sources",
+        "Delete source?",
+        "New Lead Source",
+        "Source name"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0086",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/documents/presentation/pages/document_folders_list_page.dart",
+      "route": "/documents/folders",
+      "module": "documents",
+      "title": "Document Folders",
+      "kind": "data",
+      "labels": [
+        "Document Folders",
+        "Search folders"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0087",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/documents/presentation/pages/document_template_detail_page.dart",
+      "route": "/documents/templates/:id",
+      "module": "documents",
+      "title": "Document Template",
+      "kind": "record",
+      "labels": [
+        "Document Template"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0088",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/documents/presentation/pages/documents_list_page.dart",
+      "route": "/documents",
+      "module": "documents",
+      "title": "Documents",
+      "kind": "data",
+      "labels": [
+        "Documents",
+        "Search documents"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0089",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/documents/presentation/pages/folder_detail_page.dart",
+      "route": "/documents/folders/:id",
+      "module": "documents",
+      "title": "Folder",
+      "kind": "record",
+      "labels": [
+        "Folder",
+        "Delete folder?"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0090",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/documents/presentation/pages/folder_form_page.dart",
+      "route": "/documents/folders/new",
+      "module": "documents",
+      "title": "Name *",
+      "kind": "form",
+      "labels": [
+        "Name *",
+        "Description",
+        "Parent Folder ID"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0091",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/drive/presentation/pages/drive_file_list_page.dart",
+      "route": "/drive/files",
+      "module": "drive",
+      "title": "Drive Files",
+      "kind": "data",
+      "labels": [
+        "Drive Files",
+        "Search files"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0092",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/drive/presentation/pages/drive_folder_list_page.dart",
+      "route": "/drive/folders",
+      "module": "drive",
+      "title": "Drive Folders",
+      "kind": "data",
+      "labels": [
+        "Drive Folders"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0093",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/drive/presentation/pages/file_detail_page.dart",
+      "route": "/drive/files/:id",
+      "module": "drive",
+      "title": "File",
+      "kind": "record",
+      "labels": [
+        "File",
+        "Delete file?",
+        "Details",
+        "Storage",
+        "Timeline",
+        "Folder",
+        "Delete folder?"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0094",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/ecommerce/presentation/pages/category_form_page.dart",
+      "route": "categories/new",
+      "module": "new",
+      "title": "category form page",
+      "kind": "form",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0095",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/ecommerce/presentation/pages/ecommerce_product_list_page.dart",
+      "route": "/ecommerce/products",
+      "module": "ecommerce",
+      "title": "Products",
+      "kind": "data",
+      "labels": [
+        "Products",
+        "Search products...",
+        "Orders",
+        "Search order number..."
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0096",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/ecommerce/presentation/pages/order_detail_page.dart",
+      "route": "/ecommerce/orders/:id",
+      "module": "ecommerce",
+      "title": "Order",
+      "kind": "record",
+      "labels": [
+        "Order"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0097",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/ecommerce/presentation/pages/product_detail_page.dart",
+      "route": "/ecommerce/products/:id",
+      "module": "ecommerce",
+      "title": "Product",
+      "kind": "record",
+      "labels": [
+        "Product",
+        "Delete product?"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0098",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/ecommerce/presentation/pages/product_form_page.dart",
+      "route": "/ecommerce/products/new",
+      "module": "ecommerce",
+      "title": "Name *",
+      "kind": "form",
+      "labels": [
+        "Name *",
+        "Description",
+        "Price *",
+        "Compare Price",
+        "SKU",
+        "Currency",
+        "Inventory",
+        "Category ID"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0099",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/education/presentation/pages/course_detail_page.dart",
+      "route": "/education/courses/:id",
+      "module": "education",
+      "title": "Course",
+      "kind": "record",
+      "labels": [
+        "Course"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0100",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/education/presentation/pages/course_form_page.dart",
+      "route": "/education/courses/new",
+      "module": "education",
+      "title": "Course Code *",
+      "kind": "form",
+      "labels": [
+        "Course Code *",
+        "Course Name *",
+        "Department",
+        "Instructor",
+        "Credits",
+        "Duration (hours)",
+        "Description",
+        "Status"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0101",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/education/presentation/pages/course_list_page.dart",
+      "route": "/education/courses",
+      "module": "education",
+      "title": "Courses",
+      "kind": "data",
+      "labels": [
+        "Courses",
+        "Search course name or code"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0102",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/education/presentation/pages/enrollment_form_page.dart",
+      "route": "/education/enrollments/new",
+      "module": "education",
+      "title": "Student ID *",
+      "kind": "form",
+      "labels": [
+        "Student ID *",
+        "Course ID *",
+        "Semester",
+        "Academic Year",
+        "Status"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0103",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/education/presentation/pages/exam_form_page.dart",
+      "route": "/education/exams/new",
+      "module": "education",
+      "title": "Title *",
+      "kind": "form",
+      "labels": [
+        "Title *",
+        "Course ID *",
+        "Exam Type",
+        "Status",
+        "Exam Date *",
+        "Max Score",
+        "Duration (min)",
+        "Room"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0104",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/education/presentation/pages/gradebook_form_page.dart",
+      "route": "/education/gradebook/new",
+      "module": "education",
+      "title": "Grade Entry",
+      "kind": "form",
+      "labels": [
+        "Grade Entry",
+        "Student ID *",
+        "Course ID *",
+        "Score *",
+        "Max Score",
+        "Grade",
+        "Remarks"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0105",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/education/presentation/pages/student_detail_page.dart",
+      "route": "/education/students/:id",
+      "module": "education",
+      "title": "Student",
+      "kind": "record",
+      "labels": [
+        "Student",
+        "Delete student?"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0106",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/education/presentation/pages/student_form_page.dart",
+      "route": "/education/students/new",
+      "module": "education",
+      "title": "First Name *",
+      "kind": "form",
+      "labels": [
+        "First Name *",
+        "Last Name *",
+        "Email",
+        "Phone",
+        "Gender",
+        "Date of Birth",
+        "Address",
+        "Enrollment #"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0107",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/education/presentation/pages/student_list_page.dart",
+      "route": "/education/students",
+      "module": "education",
+      "title": "Students",
+      "kind": "data",
+      "labels": [
+        "Students",
+        "Search student name"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0108",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/field_service/presentation/pages/schedule_form_page.dart",
+      "route": "/schedule-form",
+      "module": "schedule-form",
+      "title": "Edit Schedule",
+      "kind": "form",
+      "labels": [
+        "Edit Schedule"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0109",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/field_service/presentation/pages/service_ticket_list_page.dart",
+      "route": "/field-service/tickets",
+      "module": "field-service",
+      "title": "Service Tickets",
+      "kind": "data",
+      "labels": [
+        "Service Tickets",
+        "Search ticket or customer"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0110",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/field_service/presentation/pages/technician_form_page.dart",
+      "route": "/technician-form",
+      "module": "technician-form",
+      "title": "Edit Technician",
+      "kind": "form",
+      "labels": [
+        "Edit Technician"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0111",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/field_service/presentation/pages/technician_list_page.dart",
+      "route": "/field-service/technicians",
+      "module": "field-service",
+      "title": "Technicians",
+      "kind": "data",
+      "labels": [
+        "Technicians",
+        "Search technician name"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0112",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/field_service/presentation/pages/ticket_form_page.dart",
+      "route": "/ticket-form",
+      "module": "ticket-form",
+      "title": "Edit Ticket",
+      "kind": "form",
+      "labels": [
+        "Edit Ticket"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0113",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/finance/presentation/pages/bank_account_detail_page.dart",
+      "route": "/finance/bank-accounts/:id",
+      "module": "finance",
+      "title": "Bank Account",
+      "kind": "record",
+      "labels": [
+        "Bank Account",
+        "Delete bank account?",
+        "Account Details"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0114",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/finance/presentation/pages/bank_account_form_page.dart",
+      "route": "/finance/bank-accounts/new",
+      "module": "finance",
+      "title": "Add Bank Account",
+      "kind": "form",
+      "labels": [
+        "Add Bank Account",
+        "Account Details",
+        "Account Name",
+        "Account Number",
+        "Bank Name",
+        "Branch",
+        "Currency"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0115",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/finance/presentation/pages/bank_account_list_page.dart",
+      "route": "/finance/bank-accounts",
+      "module": "finance",
+      "title": "Bank Accounts",
+      "kind": "data",
+      "labels": [
+        "Bank Accounts",
+        "Search account name or bank"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0116",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/finance/presentation/pages/budget_detail_page.dart",
+      "route": "/finance/budgets/:id",
+      "module": "finance",
+      "title": "Budget",
+      "kind": "record",
+      "labels": [
+        "Budget",
+        "Delete budget?",
+        "Budget vs Actuals",
+        "Details"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0117",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/finance/presentation/pages/budget_form_page.dart",
+      "route": "/finance/budgets/new",
+      "module": "finance",
+      "title": "Create Budget",
+      "kind": "form",
+      "labels": [
+        "Create Budget",
+        "Budget Details",
+        "Name",
+        "Fiscal Year",
+        "Total Amount"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0118",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/finance/presentation/pages/budget_list_page.dart",
+      "route": "/finance/budgets",
+      "module": "finance",
+      "title": "Budgets",
+      "kind": "data",
+      "labels": [
+        "Budgets",
+        "Search budget name"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0119",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/finance/presentation/pages/chart_of_account_detail_page.dart",
+      "route": "/finance/chart-of-accounts/:id",
+      "module": "finance",
+      "title": "Account",
+      "kind": "record",
+      "labels": [
+        "Account",
+        "Delete account?",
+        "Account Details"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0120",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/finance/presentation/pages/chart_of_account_form_page.dart",
+      "route": "/finance/chart-of-accounts/new",
+      "module": "finance",
+      "title": "Create Account",
+      "kind": "form",
+      "labels": [
+        "Create Account",
+        "Account Details",
+        "Code",
+        "Name",
+        "Type (asset/liability/equity/income/expense)",
+        "Parent ID"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0121",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/finance/presentation/pages/chart_of_account_list_page.dart",
+      "route": "/finance/chart-of-accounts",
+      "module": "finance",
+      "title": "Chart of Accounts",
+      "kind": "data",
+      "labels": [
+        "Chart of Accounts",
+        "Search account name or code"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0122",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/finance/presentation/pages/credit_note_detail_page.dart",
+      "route": "/finance/credit-notes/:id",
+      "module": "finance",
+      "title": "Credit Note",
+      "kind": "form",
+      "labels": [
+        "Credit Note",
+        "Line Items",
+        "Details"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0123",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/finance/presentation/pages/credit_note_form_page.dart",
+      "route": "/finance/credit-notes/new",
+      "module": "finance",
+      "title": "Create Credit Note",
+      "kind": "form",
+      "labels": [
+        "Create Credit Note",
+        "Credit Note Details",
+        "Customer ID",
+        "Invoice ID",
+        "Reason",
+        "Total Amount"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0124",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/finance/presentation/pages/credit_note_list_page.dart",
+      "route": "/finance/credit-notes",
+      "module": "finance",
+      "title": "Credit Notes",
+      "kind": "form",
+      "labels": [
+        "Credit Notes",
+        "Search credit note number or customer"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0125",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/finance/presentation/pages/invoice_detail_page.dart",
+      "route": "/finance/invoices/:id",
+      "module": "finance",
+      "title": "Invoice",
+      "kind": "record",
+      "labels": [
+        "Invoice",
+        "Delete invoice?",
+        "Line Items",
+        "Notes",
+        "${action == "
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0126",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/finance/presentation/pages/invoice_list_page.dart",
+      "route": "/finance/invoices",
+      "module": "finance",
+      "title": "Invoices",
+      "kind": "data",
+      "labels": [
+        "Invoices",
+        "Search invoice number or customer"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0127",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/finance/presentation/pages/journal_entry_detail_page.dart",
+      "route": "/finance/journal-entries/:id",
+      "module": "finance",
+      "title": "Journal Entry",
+      "kind": "record",
+      "labels": [
+        "Journal Entry",
+        "Delete journal entry?",
+        "Line Items",
+        "Details",
+        "Post journal entry?"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0128",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/finance/presentation/pages/journal_entry_form_page.dart",
+      "route": "/finance/journal-entries/new",
+      "module": "finance",
+      "title": "Create Journal Entry",
+      "kind": "form",
+      "labels": [
+        "Create Journal Entry",
+        "Entry Details",
+        "Description",
+        "Reference"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0129",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/finance/presentation/pages/journal_entry_list_page.dart",
+      "route": "/finance/journal-entries",
+      "module": "finance",
+      "title": "Journal Entries",
+      "kind": "data",
+      "labels": [
+        "Journal Entries",
+        "Search entry number or description"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0130",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/finance/presentation/pages/payment_detail_page.dart",
+      "route": "/finance/payments/:id",
+      "module": "finance",
+      "title": "Payment",
+      "kind": "record",
+      "labels": [
+        "Payment"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0131",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/finance/presentation/pages/payment_form_page.dart",
+      "route": "/finance/payments/new",
+      "module": "finance",
+      "title": "Record Payment",
+      "kind": "form",
+      "labels": [
+        "Record Payment",
+        "Payment Details",
+        "Invoice ID",
+        "Amount",
+        "Payment Method",
+        "Reference"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0132",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/finance/presentation/pages/payment_list_page.dart",
+      "route": "/finance/payments",
+      "module": "finance",
+      "title": "Payments",
+      "kind": "data",
+      "labels": [
+        "Payments",
+        "Search invoice or customer"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0133",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/finance/presentation/pages/tax_filing_detail_page.dart",
+      "route": "/finance/tax-filings/:id",
+      "module": "finance",
+      "title": "Tax Filing",
+      "kind": "record",
+      "labels": [
+        "Tax Filing",
+        "Delete tax filing?",
+        "Filing Details",
+        "Notes",
+        "Submit tax filing?"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0134",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/finance/presentation/pages/tax_filing_form_page.dart",
+      "route": "/finance/tax-filings/new",
+      "module": "finance",
+      "title": "Create Tax Filing",
+      "kind": "form",
+      "labels": [
+        "Create Tax Filing",
+        "Filing Details",
+        "Tax Type",
+        "Period",
+        "Return Type",
+        "Total Tax",
+        "Notes"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0135",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/finance/presentation/pages/tax_filing_list_page.dart",
+      "route": "/finance/tax-filings",
+      "module": "finance",
+      "title": "Tax Filings",
+      "kind": "data",
+      "labels": [
+        "Tax Filings",
+        "Search tax type or period"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0136",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/finance/presentation/pages/tax_rate_detail_page.dart",
+      "route": "/finance/tax-rates/:id",
+      "module": "finance",
+      "title": "Tax Rate",
+      "kind": "record",
+      "labels": [
+        "Tax Rate"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0137",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/finance/presentation/pages/tax_rate_form_page.dart",
+      "route": "/finance/tax-rates/new",
+      "module": "finance",
+      "title": "Create Tax Rate",
+      "kind": "form",
+      "labels": [
+        "Create Tax Rate",
+        "Tax Rate Details",
+        "Name",
+        "Rate (%)",
+        "Type"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0138",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/finance/presentation/pages/tax_rate_list_page.dart",
+      "route": "/finance/tax-rates",
+      "module": "finance",
+      "title": "Tax Rates",
+      "kind": "data",
+      "labels": [
+        "Tax Rates",
+        "Search tax name"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0139",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/fixed_assets/presentation/pages/asset_form_page.dart",
+      "route": "/asset-form",
+      "module": "asset-form",
+      "title": "Edit Asset",
+      "kind": "form",
+      "labels": [
+        "Edit Asset"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0140",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/fixed_assets/presentation/pages/disposal_form_page.dart",
+      "route": "/disposal-form",
+      "module": "disposal-form",
+      "title": "Edit Disposal",
+      "kind": "form",
+      "labels": [
+        "Edit Disposal"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0141",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/fixed_assets/presentation/pages/fixed_asset_list_page.dart",
+      "route": "/fixed-assets/assets",
+      "module": "fixed-assets",
+      "title": "Fixed Assets",
+      "kind": "data",
+      "labels": [
+        "Fixed Assets",
+        "Search asset name"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0142",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/fixed_assets/presentation/pages/maintenance_form_page.dart",
+      "route": "/maintenance-form",
+      "module": "maintenance-form",
+      "title": "Edit Maintenance",
+      "kind": "form",
+      "labels": [
+        "Edit Maintenance"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0143",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/healthcare/presentation/pages/appointment_list_page.dart",
+      "route": "/healthcare/appointments",
+      "module": "healthcare",
+      "title": "Appointments",
+      "kind": "data",
+      "labels": [
+        "Appointments",
+        "Search patient or doctor"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0144",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/healthcare/presentation/pages/lab_order_form_page.dart",
+      "route": "/lab-order-form",
+      "module": "lab-order-form",
+      "title": "Edit Prescription",
+      "kind": "form",
+      "labels": [
+        "Edit Prescription"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0145",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/healthcare/presentation/pages/patient_form_page.dart",
+      "route": "/patient-form",
+      "module": "patient-form",
+      "title": "Edit Patient",
+      "kind": "form",
+      "labels": [
+        "Edit Patient"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0146",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/healthcare/presentation/pages/patient_list_page.dart",
+      "route": "/healthcare/patients",
+      "module": "healthcare",
+      "title": "Patients",
+      "kind": "data",
+      "labels": [
+        "Patients",
+        "Search patient name"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0147",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/healthcare/presentation/pages/prescription_detail_page.dart",
+      "route": "/prescription-detail/:id",
+      "module": "prescription-detail",
+      "title": "Prescription",
+      "kind": "record",
+      "labels": [
+        "Prescription"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0148",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/healthcare/presentation/pages/prescription_form_page.dart",
+      "route": "prescriptions/new",
+      "module": "new",
+      "title": "Edit Prescription",
+      "kind": "form",
+      "labels": [
+        "Edit Prescription"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0149",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/home/presentation/pages/home_page.dart",
+      "route": "/",
+      "module": "home",
+      "title": "Quick actions",
+      "kind": "data",
+      "labels": [
+        "Quick actions",
+        "Browse products",
+        "Notifications"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0150",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/hr/presentation/pages/attendance_detail_page.dart",
+      "route": "/hr/attendance/:id",
+      "module": "hr",
+      "title": "Attendance",
+      "kind": "record",
+      "labels": [
+        "Attendance"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0151",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/hr/presentation/pages/attendance_form_page.dart",
+      "route": "/hr/attendance/new",
+      "module": "hr",
+      "title": "Employee *",
+      "kind": "form",
+      "labels": [
+        "Employee *",
+        "Clock In",
+        "Clock Out",
+        "Status",
+        "Notes"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0152",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/hr/presentation/pages/attendance_list_page.dart",
+      "route": "/hr/attendance",
+      "module": "hr",
+      "title": "Attendance",
+      "kind": "data",
+      "labels": [
+        "Attendance",
+        "Search employee..."
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0153",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/hr/presentation/pages/department_detail_page.dart",
+      "route": "/hr/departments/:id",
+      "module": "hr",
+      "title": "Department",
+      "kind": "record",
+      "labels": [
+        "Department",
+        "Department Info",
+        "Sub-departments",
+        "System"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0154",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/hr/presentation/pages/department_form_page.dart",
+      "route": "/hr/departments/new",
+      "module": "hr",
+      "title": "Name *",
+      "kind": "form",
+      "labels": [
+        "Name *",
+        "Parent Department",
+        "Head of Department",
+        "Description"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0155",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/hr/presentation/pages/department_list_page.dart",
+      "route": "/hr/departments",
+      "module": "hr",
+      "title": "Departments",
+      "kind": "data",
+      "labels": [
+        "Departments",
+        "Search departments...",
+        "No departments found"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0156",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/hr/presentation/pages/employee_detail_page.dart",
+      "route": "/hr/employees/:id",
+      "module": "hr",
+      "title": "Employee",
+      "kind": "record",
+      "labels": [
+        "Employee",
+        "Delete employee?",
+        "Contact",
+        "Employment Details",
+        "System"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0157",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/hr/presentation/pages/employee_list_page.dart",
+      "route": "/hr/employees",
+      "module": "hr",
+      "title": "Employees",
+      "kind": "data",
+      "labels": [
+        "Employees",
+        "Search name, email or employee #",
+        "Status",
+        "Department"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0158",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/hr/presentation/pages/hr_dashboard_page.dart",
+      "route": "/hr",
+      "module": "hr",
+      "title": "HR Dashboard",
+      "kind": "data",
+      "labels": [
+        "HR Dashboard",
+        "Organization Summary",
+        "Quick Actions",
+        "Add Employee",
+        "Review Leave Requests",
+        "Process Payroll"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0159",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/hr/presentation/pages/leave_request_form_page.dart",
+      "route": "/hr/leave-requests/new",
+      "module": "hr",
+      "title": "New Leave Request",
+      "kind": "form",
+      "labels": [
+        "New Leave Request",
+        "Employee *",
+        "Leave Type *",
+        "Reason",
+        "Emergency Contact"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0160",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/hr/presentation/pages/leave_request_list_page.dart",
+      "route": "/hr/leave-requests",
+      "module": "hr",
+      "title": "Leave Requests",
+      "kind": "data",
+      "labels": [
+        "Leave Requests",
+        "Status"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0161",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/hr/presentation/pages/leave_type_detail_page.dart",
+      "route": "/hr/leave-types/:id",
+      "module": "hr",
+      "title": "Leave Type",
+      "kind": "record",
+      "labels": [
+        "Leave Type",
+        "Leave Type Details",
+        "System"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0162",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/hr/presentation/pages/leave_type_form_page.dart",
+      "route": "/hr/leave-types/new",
+      "module": "hr",
+      "title": "Name *",
+      "kind": "form",
+      "labels": [
+        "Name *",
+        "Max Days",
+        "Color",
+        "Paid Leave",
+        "Requires Approval",
+        "Pick a color"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0163",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/hr/presentation/pages/leave_type_list_page.dart",
+      "route": "/hr/leave-types",
+      "module": "hr",
+      "title": "Leave Types",
+      "kind": "data",
+      "labels": [
+        "Leave Types",
+        "No leave types"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0164",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/hr/presentation/pages/payroll_entry_detail_page.dart",
+      "route": "/hr/payroll/entry/:id",
+      "module": "hr",
+      "title": "Payslip",
+      "kind": "record",
+      "labels": [
+        "Payslip",
+        "Earnings",
+        "Status"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0165",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/hr/presentation/pages/payroll_entry_list_page.dart",
+      "route": "/hr/payroll/:id/entries",
+      "module": "hr",
+      "title": "Payslips",
+      "kind": "data",
+      "labels": [
+        "Payslips",
+        "No payslips"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0166",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/hr/presentation/pages/payroll_run_detail_page.dart",
+      "route": "/hr/payroll/:id",
+      "module": "hr",
+      "title": "Payroll Run",
+      "kind": "record",
+      "labels": [
+        "Payroll Run",
+        "Summary"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0167",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/hr/presentation/pages/payroll_run_form_page.dart",
+      "route": "/hr/payroll/new",
+      "module": "hr",
+      "title": "New Payroll Run",
+      "kind": "form",
+      "labels": [
+        "New Payroll Run",
+        "Run Name *",
+        "e.g. July 2026 Salary",
+        "Employee Count"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0168",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/hr/presentation/pages/payroll_run_list_page.dart",
+      "route": "/hr/payroll",
+      "module": "hr",
+      "title": "Payroll Runs",
+      "kind": "data",
+      "labels": [
+        "Payroll Runs"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0169",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/hr/presentation/pages/performance_review_detail_page.dart",
+      "route": "/hr/performance-reviews/:id",
+      "module": "hr",
+      "title": "Performance Review",
+      "kind": "form",
+      "labels": [
+        "Performance Review",
+        "Submit review?",
+        "Goals",
+        "Feedback",
+        "Rating",
+        "Timeline"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0170",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/hr/presentation/pages/performance_review_form_page.dart",
+      "route": "/hr/performance-reviews/new",
+      "module": "hr",
+      "title": "Employee *",
+      "kind": "form",
+      "labels": [
+        "Employee *",
+        "Reviewer",
+        "Review Period *",
+        "e.g. Q1 2026",
+        "Goals",
+        "Feedback"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0171",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/hr/presentation/pages/performance_review_list_page.dart",
+      "route": "/hr/performance-reviews",
+      "module": "hr",
+      "title": "Performance Reviews",
+      "kind": "form",
+      "labels": [
+        "Performance Reviews"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0172",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/hr/presentation/pages/timesheet_detail_page.dart",
+      "route": "/hr/timesheets/:id",
+      "module": "hr",
+      "title": "Timesheet",
+      "kind": "record",
+      "labels": [
+        "Timesheet",
+        "Time Entries"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0173",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/hr/presentation/pages/timesheet_form_page.dart",
+      "route": "/hr/timesheets/new",
+      "module": "hr",
+      "title": "New Timesheet Entry",
+      "kind": "form",
+      "labels": [
+        "New Timesheet Entry",
+        "Employee *",
+        "Hours *",
+        "Project",
+        "Task",
+        "Description"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0174",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/hr/presentation/pages/timesheet_list_page.dart",
+      "route": "/hr/timesheets",
+      "module": "hr",
+      "title": "Timesheets",
+      "kind": "data",
+      "labels": [
+        "Timesheets"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0175",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/inventory/presentation/pages/inventory_adjustment_detail_page.dart",
+      "route": "/inventory/adjustments/:id",
+      "module": "inventory",
+      "title": "Adjustment",
+      "kind": "record",
+      "labels": [
+        "Adjustment",
+        "Details"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0176",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/inventory/presentation/pages/inventory_adjustment_form_page.dart",
+      "route": "/inventory/adjustments/new",
+      "module": "inventory",
+      "title": "New Adjustment",
+      "kind": "form",
+      "labels": [
+        "New Adjustment",
+        "Product ID *",
+        "Warehouse ID *",
+        "Type *",
+        "Quantity *",
+        "Reason *",
+        "Reference"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0177",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/inventory/presentation/pages/inventory_adjustment_list_page.dart",
+      "route": "/inventory/adjustments",
+      "module": "inventory",
+      "title": "Adjustments",
+      "kind": "data",
+      "labels": [
+        "Adjustments",
+        "Search adjustments"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0178",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/inventory/presentation/pages/product_category_detail_page.dart",
+      "route": "/inventory/categories/:id",
+      "module": "inventory",
+      "title": "Category",
+      "kind": "record",
+      "labels": [
+        "Category",
+        "Delete category?",
+        "Details"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0179",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/inventory/presentation/pages/product_category_form_page.dart",
+      "route": "/inventory/categories/new",
+      "module": "inventory",
+      "title": "Name *",
+      "kind": "form",
+      "labels": [
+        "Name *",
+        "Description",
+        "Parent Category ID",
+        "Active"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0180",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/inventory/presentation/pages/product_category_list_page.dart",
+      "route": "/inventory/categories",
+      "module": "inventory",
+      "title": "Categories",
+      "kind": "data",
+      "labels": [
+        "Categories",
+        "Search categories"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0181",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/inventory/presentation/pages/product_detail_page.dart",
+      "route": "/inventory/products/:id",
+      "module": "inventory",
+      "title": "Product",
+      "kind": "record",
+      "labels": [
+        "Product",
+        "Delete product?",
+        "Pricing",
+        "Details"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0182",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/inventory/presentation/pages/product_list_page.dart",
+      "route": "/inventory/products",
+      "module": "inventory",
+      "title": "Products",
+      "kind": "data",
+      "labels": [
+        "Products",
+        "Search name, SKU or description"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0183",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/inventory/presentation/pages/reorder_rule_detail_page.dart",
+      "route": "/inventory/reorder-rules/:id",
+      "module": "inventory",
+      "title": "Reorder Rule",
+      "kind": "record",
+      "labels": [
+        "Reorder Rule",
+        "Delete rule?",
+        "Stock Thresholds",
+        "Details"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0184",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/inventory/presentation/pages/reorder_rule_form_page.dart",
+      "route": "/inventory/reorder-rules/new",
+      "module": "inventory",
+      "title": "Product ID *",
+      "kind": "form",
+      "labels": [
+        "Product ID *",
+        "Warehouse ID *",
+        "Min Stock *",
+        "Max Stock *",
+        "Lead Time (days) *",
+        "Active"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0185",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/inventory/presentation/pages/reorder_rule_list_page.dart",
+      "route": "/inventory/reorder-rules",
+      "module": "inventory",
+      "title": "Reorder Rules",
+      "kind": "data",
+      "labels": [
+        "Reorder Rules"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0186",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/inventory/presentation/pages/stock_level_detail_page.dart",
+      "route": "/inventory/stock-levels/:id",
+      "module": "inventory",
+      "title": "Stock Level",
+      "kind": "record",
+      "labels": [
+        "Stock Level",
+        "Quantities",
+        "Reorder"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0187",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/inventory/presentation/pages/stock_level_list_page.dart",
+      "route": "/inventory/stock-levels",
+      "module": "inventory",
+      "title": "Stock Levels",
+      "kind": "data",
+      "labels": [
+        "Stock Levels",
+        "Search by product"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0188",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/inventory/presentation/pages/stock_movement_detail_page.dart",
+      "route": "/inventory/stock-movements/:id",
+      "module": "inventory",
+      "title": "Stock Movement",
+      "kind": "record",
+      "labels": [
+        "Stock Movement",
+        "Details"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0189",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/inventory/presentation/pages/stock_movement_form_page.dart",
+      "route": "/inventory/stock-movements/new",
+      "module": "inventory",
+      "title": "New Stock Movement",
+      "kind": "form",
+      "labels": [
+        "New Stock Movement",
+        "Product ID *",
+        "Warehouse ID *",
+        "Type *",
+        "Quantity *",
+        "Reference",
+        "Reason"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0190",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/inventory/presentation/pages/stock_movement_list_page.dart",
+      "route": "/inventory/stock-movements",
+      "module": "inventory",
+      "title": "Stock Movements",
+      "kind": "data",
+      "labels": [
+        "Stock Movements",
+        "Search movements"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0191",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/inventory/presentation/pages/warehouse_detail_page.dart",
+      "route": "/inventory/warehouses/:id",
+      "module": "inventory",
+      "title": "Warehouse",
+      "kind": "record",
+      "labels": [
+        "Warehouse",
+        "Delete warehouse?",
+        "Capacity",
+        "Details"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0192",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/inventory/presentation/pages/warehouse_form_page.dart",
+      "route": "/inventory/warehouses/new",
+      "module": "inventory",
+      "title": "Name *",
+      "kind": "form",
+      "labels": [
+        "Name *",
+        "Address",
+        "City",
+        "Country",
+        "Capacity",
+        "Active"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0193",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/inventory/presentation/pages/warehouse_list_page.dart",
+      "route": "/inventory/warehouses",
+      "module": "inventory",
+      "title": "Warehouses",
+      "kind": "data",
+      "labels": [
+        "Warehouses",
+        "Search warehouses"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0194",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/localization/presentation/pages/language_detail_page.dart",
+      "route": "/localization/languages/:id",
+      "module": "localization",
+      "title": "Language",
+      "kind": "record",
+      "labels": [
+        "Language",
+        "Language Details",
+        "Metadata"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0195",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/localization/presentation/pages/language_list_page.dart",
+      "route": "/localization/languages",
+      "module": "localization",
+      "title": "Languages",
+      "kind": "data",
+      "labels": [
+        "Languages"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0196",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/manufacturing/presentation/pages/bom_detail_page.dart",
+      "route": "/manufacturing/boms/:id",
+      "module": "manufacturing",
+      "title": "Bill of Materials",
+      "kind": "record",
+      "labels": [
+        "Bill of Materials",
+        "Items (${bom.items.length})",
+        "Details"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0197",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/manufacturing/presentation/pages/bom_form_page.dart",
+      "route": "/manufacturing/boms/new",
+      "module": "manufacturing",
+      "title": "bom form page",
+      "kind": "form",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0198",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/manufacturing/presentation/pages/bom_list_page.dart",
+      "route": "/manufacturing/boms",
+      "module": "manufacturing",
+      "title": "bom list page",
+      "kind": "data",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0199",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/manufacturing/presentation/pages/eco_detail_page.dart",
+      "route": "/manufacturing/ecos/:id",
+      "module": "manufacturing",
+      "title": "eco detail page",
+      "kind": "record",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0200",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/manufacturing/presentation/pages/eco_form_page.dart",
+      "route": "/manufacturing/ecos/new",
+      "module": "manufacturing",
+      "title": "eco form page",
+      "kind": "form",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0201",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/manufacturing/presentation/pages/eco_list_page.dart",
+      "route": "/manufacturing/ecos",
+      "module": "manufacturing",
+      "title": "eco list page",
+      "kind": "data",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0202",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/manufacturing/presentation/pages/manufacturing_dashboard_page.dart",
+      "route": "/manufacturing",
+      "module": "manufacturing",
+      "title": "manufacturing dashboard page",
+      "kind": "data",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0203",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/manufacturing/presentation/pages/mrp_run_detail_page.dart",
+      "route": "/manufacturing/mrp-runs/:id",
+      "module": "manufacturing",
+      "title": "mrp run detail page",
+      "kind": "record",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0204",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/manufacturing/presentation/pages/mrp_run_form_page.dart",
+      "route": "/manufacturing/mrp-runs/new",
+      "module": "manufacturing",
+      "title": "mrp run form page",
+      "kind": "form",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0205",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/manufacturing/presentation/pages/mrp_run_list_page.dart",
+      "route": "/manufacturing/mrp-runs",
+      "module": "manufacturing",
+      "title": "mrp run list page",
+      "kind": "data",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0206",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/manufacturing/presentation/pages/quality_inspection_detail_page.dart",
+      "route": "/manufacturing/quality-inspections/:id",
+      "module": "manufacturing",
+      "title": "quality inspection detail page",
+      "kind": "record",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0207",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/manufacturing/presentation/pages/quality_inspection_form_page.dart",
+      "route": "/manufacturing/quality-inspections/new",
+      "module": "manufacturing",
+      "title": "quality inspection form page",
+      "kind": "form",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0208",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/manufacturing/presentation/pages/quality_inspection_list_page.dart",
+      "route": "/manufacturing/quality-inspections",
+      "module": "manufacturing",
+      "title": "quality inspection list page",
+      "kind": "data",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0209",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/manufacturing/presentation/pages/routing_detail_page.dart",
+      "route": "/manufacturing/routings/:id",
+      "module": "manufacturing",
+      "title": "routing detail page",
+      "kind": "record",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0210",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/manufacturing/presentation/pages/routing_form_page.dart",
+      "route": "/manufacturing/routings/new",
+      "module": "manufacturing",
+      "title": "routing form page",
+      "kind": "form",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0211",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/manufacturing/presentation/pages/routing_list_page.dart",
+      "route": "/manufacturing/routings",
+      "module": "manufacturing",
+      "title": "routing list page",
+      "kind": "data",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0212",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/manufacturing/presentation/pages/work_order_detail_page.dart",
+      "route": "/manufacturing/work-orders/:id",
+      "module": "manufacturing",
+      "title": "Work Order",
+      "kind": "record",
+      "labels": [
+        "Work Order",
+        "Production",
+        "Schedule"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0213",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/manufacturing/presentation/pages/work_order_form_page.dart",
+      "route": "/manufacturing/work-orders/new",
+      "module": "manufacturing",
+      "title": "work order form page",
+      "kind": "form",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0214",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/manufacturing/presentation/pages/work_order_list_page.dart",
+      "route": "/manufacturing/work-orders",
+      "module": "manufacturing",
+      "title": "work order list page",
+      "kind": "data",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0215",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/manufacturing/presentation/pages/workstation_detail_page.dart",
+      "route": "/manufacturing/workstations/:id",
+      "module": "manufacturing",
+      "title": "workstation detail page",
+      "kind": "record",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0216",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/manufacturing/presentation/pages/workstation_form_page.dart",
+      "route": "/manufacturing/workstations/new",
+      "module": "manufacturing",
+      "title": "workstation form page",
+      "kind": "form",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0217",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/manufacturing/presentation/pages/workstation_list_page.dart",
+      "route": "/manufacturing/workstations",
+      "module": "manufacturing",
+      "title": "workstation list page",
+      "kind": "data",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0218",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/marketplace/presentation/pages/app_detail_page.dart",
+      "route": "/marketplace/apps/:id",
+      "module": "marketplace",
+      "title": "App",
+      "kind": "record",
+      "labels": [
+        "App",
+        "Delete app?",
+        "Details"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0219",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/marketplace/presentation/pages/marketplace_app_list_page.dart",
+      "route": "/marketplace/apps",
+      "module": "marketplace",
+      "title": "Marketplace Apps",
+      "kind": "data",
+      "labels": [
+        "Marketplace Apps",
+        "Search apps...",
+        "Submissions",
+        "Search submissions..."
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0220",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/marketplace/presentation/pages/marketplace_submission_list_page.dart",
+      "route": "submissions",
+      "module": "home",
+      "title": "Marketplace Submissions",
+      "kind": "data",
+      "labels": [
+        "Marketplace Submissions"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0221",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/notifications/presentation/pages/notification_preferences_page.dart",
+      "route": "/notifications/preferences",
+      "module": "notifications",
+      "title": "Notification Preferences",
+      "kind": "data",
+      "labels": [
+        "Notification Preferences",
+        "Email Notifications",
+        "Email",
+        "Receive notifications via email",
+        "Daily Digest",
+        "Receive a daily summary instead of individual emails",
+        "Push Notifications",
+        "Push"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0222",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/notifications/presentation/pages/notifications_page.dart",
+      "route": "/notifications",
+      "module": "notifications",
+      "title": "Notifications",
+      "kind": "data",
+      "labels": [
+        "Notifications",
+        "You’re all caught up"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0223",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/onboarding/presentation/pages/onboarding_page.dart",
+      "route": "/onboarding",
+      "module": "onboarding",
+      "title": "Add your profile photo",
+      "kind": "data",
+      "labels": [
+        "Add your profile photo",
+        "Add your organisation logo",
+        "Invite your team",
+        "Install an app from the Marketplace",
+        "Choose a plan",
+        "Visit your dashboard",
+        "Get set up"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0224",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/people/presentation/pages/person_list_page.dart",
+      "route": "/people/directory",
+      "module": "people",
+      "title": "People Directory",
+      "kind": "data",
+      "labels": [
+        "People Directory",
+        "Search name or email"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0225",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/pos/presentation/pages/pos_discount_detail_page.dart",
+      "route": "/pos/discounts/:id",
+      "module": "pos",
+      "title": "pos discount detail page",
+      "kind": "record",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0226",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/pos/presentation/pages/pos_discount_form_page.dart",
+      "route": "/pos/discounts/new",
+      "module": "pos",
+      "title": "pos discount form page",
+      "kind": "form",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0227",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/pos/presentation/pages/pos_discount_list_page.dart",
+      "route": "/pos/discounts",
+      "module": "pos",
+      "title": "pos discount list page",
+      "kind": "data",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0228",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/pos/presentation/pages/pos_order_detail_page.dart",
+      "route": "/pos/orders/:id",
+      "module": "pos",
+      "title": "Order",
+      "kind": "record",
+      "labels": [
+        "Order",
+        "Items",
+        "Totals",
+        "Payments"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0229",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/pos/presentation/pages/pos_order_form_page.dart",
+      "route": "/pos/orders/new",
+      "module": "pos",
+      "title": "pos order form page",
+      "kind": "form",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0230",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/pos/presentation/pages/pos_order_list_page.dart",
+      "route": "/pos/orders",
+      "module": "pos",
+      "title": "pos order list page",
+      "kind": "data",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0231",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/pos/presentation/pages/pos_price_list_form_page.dart",
+      "route": "/pos/price-lists/new",
+      "module": "pos",
+      "title": "pos price list form page",
+      "kind": "form",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0232",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/pos/presentation/pages/pos_price_list_list_page.dart",
+      "route": "/pos/price-lists",
+      "module": "pos",
+      "title": "pos price list list page",
+      "kind": "data",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0233",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/pos/presentation/pages/pos_register_detail_page.dart",
+      "route": "/pos/registers/:id",
+      "module": "pos",
+      "title": "Register",
+      "kind": "record",
+      "labels": [
+        "Register",
+        "Balances"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0234",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/pos/presentation/pages/pos_register_form_page.dart",
+      "route": "/pos/registers/new",
+      "module": "pos",
+      "title": "pos register form page",
+      "kind": "form",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0235",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/pos/presentation/pages/pos_register_list_page.dart",
+      "route": "/pos/registers",
+      "module": "pos",
+      "title": "pos register list page",
+      "kind": "identity",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0236",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/pos/presentation/pages/pos_shift_detail_page.dart",
+      "route": "/pos/shifts/:id",
+      "module": "pos",
+      "title": "pos shift detail page",
+      "kind": "record",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0237",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/pos/presentation/pages/pos_shift_list_page.dart",
+      "route": "/pos/shifts",
+      "module": "pos",
+      "title": "pos shift list page",
+      "kind": "data",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0238",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/procurement/presentation/pages/procurement_dashboard_page.dart",
+      "route": "/procurement",
+      "module": "procurement",
+      "title": "Procurement",
+      "kind": "data",
+      "labels": [
+        "Procurement",
+        "Purchase Orders",
+        "Total Spend",
+        "Pending Approvals",
+        "Vendors",
+        "Spend by Month",
+        "Recent Purchase Orders"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0239",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/procurement/presentation/pages/purchase_order_detail_page.dart",
+      "route": "/procurement/purchase-orders/:id",
+      "module": "procurement",
+      "title": "Purchase Order",
+      "kind": "record",
+      "labels": [
+        "Purchase Order",
+        "Delete PO?",
+        "Items",
+        "Details"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0240",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/procurement/presentation/pages/purchase_order_form_page.dart",
+      "route": "/procurement/purchase-orders/new",
+      "module": "procurement",
+      "title": "Vendor *",
+      "kind": "form",
+      "labels": [
+        "Vendor *",
+        "Order Date",
+        "Expected Delivery",
+        "Product",
+        "Qty",
+        "Rate",
+        "Tax%",
+        "Shipping Address"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0241",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/procurement/presentation/pages/purchase_order_list_page.dart",
+      "route": "/procurement/purchase-orders",
+      "module": "procurement",
+      "title": "Purchase Orders",
+      "kind": "data",
+      "labels": [
+        "Purchase Orders",
+        "Search PO number or vendor"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0242",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/procurement/presentation/pages/purchase_receipt_detail_page.dart",
+      "route": "/procurement/purchase-receipts/:id",
+      "module": "procurement",
+      "title": "Purchase Receipt",
+      "kind": "record",
+      "labels": [
+        "Purchase Receipt",
+        "Items Received",
+        "Details"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0243",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/procurement/presentation/pages/purchase_receipt_form_page.dart",
+      "route": "/procurement/purchase-receipts/new",
+      "module": "procurement",
+      "title": "Purchase Order Reference",
+      "kind": "form",
+      "labels": [
+        "Purchase Order Reference",
+        "Warehouse",
+        "Received Date",
+        "Product",
+        "Received",
+        "Accepted",
+        "Notes"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0244",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/procurement/presentation/pages/purchase_receipt_list_page.dart",
+      "route": "/procurement/purchase-receipts",
+      "module": "procurement",
+      "title": "Purchase Receipts",
+      "kind": "data",
+      "labels": [
+        "Purchase Receipts",
+        "Search receipt number"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0245",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/procurement/presentation/pages/purchase_requisition_detail_page.dart",
+      "route": "/procurement/purchase-requisitions/:id",
+      "module": "procurement",
+      "title": "Purchase Requisition",
+      "kind": "record",
+      "labels": [
+        "Purchase Requisition",
+        "Items",
+        "Details"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0246",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/procurement/presentation/pages/purchase_requisition_form_page.dart",
+      "route": "/procurement/purchase-requisitions/new",
+      "module": "procurement",
+      "title": "Title *",
+      "kind": "form",
+      "labels": [
+        "Title *",
+        "Department",
+        "Priority",
+        "Required Date",
+        "Product",
+        "Qty",
+        "Est. Rate",
+        "Notes"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0247",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/procurement/presentation/pages/purchase_requisition_list_page.dart",
+      "route": "/procurement/purchase-requisitions",
+      "module": "procurement",
+      "title": "Purchase Requisitions",
+      "kind": "data",
+      "labels": [
+        "Purchase Requisitions",
+        "Search by number"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0248",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/procurement/presentation/pages/rfq_detail_page.dart",
+      "route": "/procurement/rfqs/:id",
+      "module": "procurement",
+      "title": "RFQ",
+      "kind": "record",
+      "labels": [
+        "RFQ",
+        "Items",
+        "Details",
+        "Quotations Received"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0249",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/procurement/presentation/pages/rfq_form_page.dart",
+      "route": "/procurement/rfqs/new",
+      "module": "procurement",
+      "title": "Vendor",
+      "kind": "form",
+      "labels": [
+        "Vendor",
+        "Delivery Date",
+        "Product",
+        "Qty",
+        "UOM",
+        "Notes"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0250",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/procurement/presentation/pages/rfq_list_page.dart",
+      "route": "/procurement/rfqs",
+      "module": "procurement",
+      "title": "RFQs",
+      "kind": "data",
+      "labels": [
+        "RFQs",
+        "Search RFQ number or vendor"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0251",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/procurement/presentation/pages/supplier_contract_detail_page.dart",
+      "route": "/procurement/contracts/:id",
+      "module": "procurement",
+      "title": "Supplier Contract",
+      "kind": "record",
+      "labels": [
+        "Supplier Contract",
+        "Details",
+        "Terms",
+        "Notes"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0252",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/procurement/presentation/pages/supplier_contract_form_page.dart",
+      "route": "/procurement/contracts/new",
+      "module": "procurement",
+      "title": "Supplier *",
+      "kind": "form",
+      "labels": [
+        "Supplier *",
+        "Contract Type *",
+        "Start Date",
+        "End Date",
+        "Contract Value",
+        "Currency",
+        "Status",
+        "Terms"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0253",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/procurement/presentation/pages/supplier_contract_list_page.dart",
+      "route": "/procurement/contracts",
+      "module": "procurement",
+      "title": "Supplier Contracts",
+      "kind": "data",
+      "labels": [
+        "Supplier Contracts",
+        "Search by supplier"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0254",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/procurement/presentation/pages/supplier_quotation_detail_page.dart",
+      "route": "/procurement/supplier-quotations/:id",
+      "module": "procurement",
+      "title": "Supplier Quotation",
+      "kind": "record",
+      "labels": [
+        "Supplier Quotation",
+        "Items",
+        "Details"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0255",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/procurement/presentation/pages/supplier_quotation_form_page.dart",
+      "route": "/procurement/supplier-quotations/new",
+      "module": "procurement",
+      "title": "RFQ Reference",
+      "kind": "form",
+      "labels": [
+        "RFQ Reference",
+        "Supplier *",
+        "Valid Until",
+        "Product",
+        "Qty",
+        "Rate",
+        "Notes"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0256",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/procurement/presentation/pages/supplier_quotation_list_page.dart",
+      "route": "/procurement/supplier-quotations",
+      "module": "procurement",
+      "title": "Supplier Quotations",
+      "kind": "data",
+      "labels": [
+        "Supplier Quotations",
+        "Search by number or supplier"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0257",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/procurement/presentation/pages/vendor_detail_page.dart",
+      "route": "/procurement/vendors/:id",
+      "module": "procurement",
+      "title": "Vendor",
+      "kind": "record",
+      "labels": [
+        "Vendor",
+        "Contact",
+        "Details",
+        "Notes"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0258",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/procurement/presentation/pages/vendor_form_page.dart",
+      "route": "/procurement/vendors/new",
+      "module": "procurement",
+      "title": "Name *",
+      "kind": "form",
+      "labels": [
+        "Name *",
+        "Email",
+        "Phone",
+        "Tax ID",
+        "Address",
+        "Status",
+        "Payment Terms",
+        "Currency"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0259",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/procurement/presentation/pages/vendor_list_page.dart",
+      "route": "/procurement/vendors",
+      "module": "procurement",
+      "title": "Vendors",
+      "kind": "data",
+      "labels": [
+        "Vendors",
+        "Search vendor name"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0260",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/projects/presentation/pages/milestone_list_page.dart",
+      "route": "/projects/milestones",
+      "module": "projects",
+      "title": "Milestones",
+      "kind": "data",
+      "labels": [
+        "Milestones"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0261",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/projects/presentation/pages/project_budget_detail_page.dart",
+      "route": "/projects/budgets/:id",
+      "module": "projects",
+      "title": "Budget",
+      "kind": "record",
+      "labels": [
+        "Budget",
+        "Amounts",
+        "Utilization"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0262",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/projects/presentation/pages/project_budget_form_page.dart",
+      "route": "/projects/budgets/new",
+      "module": "projects",
+      "title": "Project ID *",
+      "kind": "form",
+      "labels": [
+        "Project ID *",
+        "Category *",
+        "Estimated Amount *"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0263",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/projects/presentation/pages/project_budget_list_page.dart",
+      "route": "/projects/budgets",
+      "module": "projects",
+      "title": "Project Budgets",
+      "kind": "data",
+      "labels": [
+        "Project Budgets"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0264",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/projects/presentation/pages/project_dashboard_page.dart",
+      "route": "/projects/dashboard",
+      "module": "projects",
+      "title": "Projects Dashboard",
+      "kind": "data",
+      "labels": [
+        "Projects Dashboard",
+        "Tasks by Status",
+        "Budget Distribution",
+        "Recent Activity"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0265",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/projects/presentation/pages/project_form_page.dart",
+      "route": "/projects/new",
+      "module": "projects",
+      "title": "Name *",
+      "kind": "form",
+      "labels": [
+        "Name *",
+        "Description",
+        "Portfolio ID",
+        "Manager",
+        "Start Date",
+        "End Date",
+        "Budget",
+        "Status"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0266",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/projects/presentation/pages/project_list_page.dart",
+      "route": "/projects",
+      "module": "projects",
+      "title": "Projects",
+      "kind": "data",
+      "labels": [
+        "Projects",
+        "Search project name"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0267",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/projects/presentation/pages/project_milestone_form_page.dart",
+      "route": "/projects/milestones/new",
+      "module": "projects",
+      "title": "Name *",
+      "kind": "form",
+      "labels": [
+        "Name *",
+        "Project ID *",
+        "Description",
+        "Due Date *",
+        "Status"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0268",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/projects/presentation/pages/project_portfolio_detail_page.dart",
+      "route": "/projects/portfolios/:id",
+      "module": "projects",
+      "title": "Portfolio",
+      "kind": "record",
+      "labels": [
+        "Portfolio",
+        "Summary"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0269",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/projects/presentation/pages/project_portfolio_form_page.dart",
+      "route": "/projects/portfolios/new",
+      "module": "projects",
+      "title": "Name *",
+      "kind": "form",
+      "labels": [
+        "Name *",
+        "Description"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0270",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/projects/presentation/pages/project_portfolio_list_page.dart",
+      "route": "/projects/portfolios",
+      "module": "projects",
+      "title": "Portfolios",
+      "kind": "data",
+      "labels": [
+        "Portfolios",
+        "Search portfolio name"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0271",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/projects/presentation/pages/project_risk_detail_page.dart",
+      "route": "/projects/risks/:id",
+      "module": "projects",
+      "title": "Risk",
+      "kind": "record",
+      "labels": [
+        "Risk",
+        "Assessment",
+        "Mitigation Plan"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0272",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/projects/presentation/pages/project_risk_form_page.dart",
+      "route": "/projects/risks/new",
+      "module": "projects",
+      "title": "Title *",
+      "kind": "form",
+      "labels": [
+        "Title *",
+        "Description",
+        "Owner",
+        "Probability",
+        "Impact",
+        "Status",
+        "Mitigation Plan"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0273",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/projects/presentation/pages/project_risk_list_page.dart",
+      "route": "/projects/risks",
+      "module": "projects",
+      "title": "Project Risks",
+      "kind": "data",
+      "labels": [
+        "Project Risks"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0274",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/projects/presentation/pages/project_task_form_page.dart",
+      "route": "/projects/tasks/new",
+      "module": "projects",
+      "title": "Title *",
+      "kind": "form",
+      "labels": [
+        "Title *",
+        "Description",
+        "Project ID *",
+        "Assignee",
+        "Estimated Hours",
+        "Due Date",
+        "Priority",
+        "Status"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0275",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/projects/presentation/pages/task_list_page.dart",
+      "route": "/projects/tasks",
+      "module": "projects",
+      "title": "Tasks",
+      "kind": "data",
+      "labels": [
+        "Tasks",
+        "Search task title"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0276",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/projects/presentation/pages/timesheet_detail_page.dart",
+      "route": "/projects/timesheets/:id",
+      "module": "projects",
+      "title": "Timesheet",
+      "kind": "record",
+      "labels": [
+        "Timesheet",
+        "Details"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0277",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/projects/presentation/pages/timesheet_form_page.dart",
+      "route": "/projects/timesheets/new",
+      "module": "projects",
+      "title": "Project ID *",
+      "kind": "form",
+      "labels": [
+        "Project ID *",
+        "Employee ID *",
+        "Date *",
+        "Hours *",
+        "Description",
+        "Billable"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0278",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/projects/presentation/pages/timesheet_list_page.dart",
+      "route": "/projects/timesheets",
+      "module": "projects",
+      "title": "Timesheets",
+      "kind": "data",
+      "labels": [
+        "Timesheets",
+        "Search by project or employee"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0279",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/pwa/presentation/pages/manifest_form_page.dart",
+      "route": "/pwa/manifest/edit",
+      "module": "pwa",
+      "title": "Manifest Config",
+      "kind": "form",
+      "labels": [
+        "Manifest Config",
+        "App Name *",
+        "Short Name *",
+        "Start URL",
+        "Theme Color",
+        "#000000",
+        "Background Color",
+        "#ffffff"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0280",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/pwa/presentation/pages/offline_queue_page.dart",
+      "route": "/pwa/offline-queue",
+      "module": "pwa",
+      "title": "Offline Queue",
+      "kind": "data",
+      "labels": [
+        "Offline Queue",
+        "Queue is empty"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0281",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/pwa/presentation/pages/push_subscription_detail_page.dart",
+      "route": "/pwa/push-subscriptions/:id",
+      "module": "pwa",
+      "title": "Push Subscription",
+      "kind": "record",
+      "labels": [
+        "Push Subscription",
+        "Device Info",
+        "Keys",
+        "Timeline",
+        "Tags"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0282",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/pwa/presentation/pages/push_subscription_list_page.dart",
+      "route": "/pwa/push-subscriptions",
+      "module": "pwa",
+      "title": "Push Subscriptions",
+      "kind": "data",
+      "labels": [
+        "Push Subscriptions"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0283",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/real_estate/presentation/pages/lease_detail_page.dart",
+      "route": "/real-estate/leases/:id",
+      "module": "real-estate",
+      "title": "Lease",
+      "kind": "record",
+      "labels": [
+        "Lease",
+        "Delete lease?",
+        "Tenant",
+        "Term",
+        "Financials"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0284",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/real_estate/presentation/pages/lease_form_page.dart",
+      "route": "/real-estate/leases/new",
+      "module": "real-estate",
+      "title": "Lease Number *",
+      "kind": "form",
+      "labels": [
+        "Lease Number *",
+        "Monthly Rent *",
+        "Security Deposit",
+        "Payment Day",
+        "Currency",
+        "Status",
+        "Start Date",
+        "End Date"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0285",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/real_estate/presentation/pages/property_detail_page.dart",
+      "route": "/real-estate/properties/:id",
+      "module": "real-estate",
+      "title": "Property",
+      "kind": "record",
+      "labels": [
+        "Property",
+        "Delete property?",
+        "Location",
+        "Units & Area",
+        "Financials",
+        "Amenities"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0286",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/real_estate/presentation/pages/property_form_page.dart",
+      "route": "/real-estate/properties/new",
+      "module": "real-estate",
+      "title": "Name *",
+      "kind": "form",
+      "labels": [
+        "Name *",
+        "Property Type",
+        "Status",
+        "Address",
+        "City",
+        "State",
+        "Zip Code",
+        "Total Units"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0287",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/real_estate/presentation/pages/property_list_page.dart",
+      "route": "/real-estate/properties",
+      "module": "real-estate",
+      "title": "Properties",
+      "kind": "data",
+      "labels": [
+        "Properties",
+        "Search property name"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0288",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/real_estate/presentation/pages/tenant_detail_page.dart",
+      "route": "/real-estate/tenants/:id",
+      "module": "real-estate",
+      "title": "Tenant",
+      "kind": "record",
+      "labels": [
+        "Tenant",
+        "Delete tenant?",
+        "Contact",
+        "Leasing Activity"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0289",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/real_estate/presentation/pages/unit_form_page.dart",
+      "route": "/real-estate/units/new",
+      "module": "real-estate",
+      "title": "Unit Label *",
+      "kind": "form",
+      "labels": [
+        "Unit Label *",
+        "e.g. 101",
+        "Status",
+        "Area (sqft)",
+        "Rent",
+        "Description",
+        "Name *",
+        "Email"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0290",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/reporting/presentation/pages/compliance_detail_page.dart",
+      "route": "/reporting/compliance/:id",
+      "module": "reporting",
+      "title": "Compliance Record",
+      "kind": "record",
+      "labels": [
+        "Compliance Record",
+        "Details"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0291",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/reporting/presentation/pages/compliance_form_page.dart",
+      "route": "/reporting/compliance/new",
+      "module": "reporting",
+      "title": "Name *",
+      "kind": "form",
+      "labels": [
+        "Name *",
+        "Regulation",
+        "Status",
+        "Due Date",
+        "Findings Count",
+        "Notes"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0292",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/reporting/presentation/pages/compliance_list_page.dart",
+      "route": "/reporting/compliance",
+      "module": "reporting",
+      "title": "Compliance",
+      "kind": "data",
+      "labels": [
+        "Compliance",
+        "Search compliance records"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0293",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/reporting/presentation/pages/export_detail_page.dart",
+      "route": "/reporting/exports/:id",
+      "module": "reporting",
+      "title": "Export",
+      "kind": "record",
+      "labels": [
+        "Export",
+        "Details"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0294",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/reporting/presentation/pages/export_form_page.dart",
+      "route": "/reporting/exports/new",
+      "module": "reporting",
+      "title": "Export Report",
+      "kind": "form",
+      "labels": [
+        "Export Report",
+        "Export Type",
+        "Format",
+        "Report ID",
+        "Filters"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0295",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/reporting/presentation/pages/export_list_page.dart",
+      "route": "/reporting/exports",
+      "module": "reporting",
+      "title": "Report Exports",
+      "kind": "data",
+      "labels": [
+        "Report Exports",
+        "Search exports"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0296",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/reporting/presentation/pages/job_detail_page.dart",
+      "route": "/reporting/jobs/:id",
+      "module": "reporting",
+      "title": "Report Job",
+      "kind": "record",
+      "labels": [
+        "Report Job",
+        "Details"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0297",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/reporting/presentation/pages/job_form_page.dart",
+      "route": "/reporting/jobs/new",
+      "module": "reporting",
+      "title": "Schedule Report Job",
+      "kind": "form",
+      "labels": [
+        "Schedule Report Job",
+        "Template ID *",
+        "Schedule (cron)",
+        "Output Format"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0298",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/reporting/presentation/pages/job_list_page.dart",
+      "route": "/reporting/jobs",
+      "module": "reporting",
+      "title": "Report Jobs",
+      "kind": "data",
+      "labels": [
+        "Report Jobs",
+        "Search jobs"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0299",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/reporting/presentation/pages/template_form_page.dart",
+      "route": "/reporting/templates/new",
+      "module": "reporting",
+      "title": "Name *",
+      "kind": "form",
+      "labels": [
+        "Name *",
+        "Description",
+        "Format",
+        "Status",
+        "Content / Config"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0300",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/reporting/presentation/pages/template_list_page.dart",
+      "route": "/reporting/templates",
+      "module": "reporting",
+      "title": "Report Templates",
+      "kind": "data",
+      "labels": [
+        "Report Templates",
+        "Search templates"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0301",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/saas_portal/presentation/pages/billing_history_page.dart",
+      "route": "/saas-portal/billing",
+      "module": "saas-portal",
+      "title": "Billing & History",
+      "kind": "data",
+      "labels": [
+        "Billing & History",
+        "Payment Method",
+        "Address"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0302",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/saas_portal/presentation/pages/plan_detail_page.dart",
+      "route": "/saas-portal/plans/:id",
+      "module": "saas-portal",
+      "title": "Plan Details",
+      "kind": "record",
+      "labels": [
+        "Plan Details",
+        "Support Ticket",
+        "Subject *",
+        "Description",
+        "Priority",
+        "Category"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0303",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/saas_portal/presentation/pages/portal_plan_list_page.dart",
+      "route": "/saas-portal/plans",
+      "module": "saas-portal",
+      "title": "Plans",
+      "kind": "data",
+      "labels": [
+        "Plans"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0304",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/saas_portal/presentation/pages/portal_support_ticket_list_page.dart",
+      "route": "/saas-portal/support",
+      "module": "saas-portal",
+      "title": "Support Tickets",
+      "kind": "data",
+      "labels": [
+        "Support Tickets",
+        "Search tickets"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0305",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/saas_portal/presentation/pages/saas_portal_plan_detail_page.dart",
+      "route": "/saas-portal/plans/:id",
+      "module": "saas-portal",
+      "title": "Plan Details",
+      "kind": "record",
+      "labels": [
+        "Plan Details"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0306",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/saas_portal/presentation/pages/saas_portal_support_ticket_detail_page.dart",
+      "route": "/saas-portal/support/:id",
+      "module": "saas-portal",
+      "title": "Support Ticket",
+      "kind": "record",
+      "labels": [
+        "Support Ticket"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0307",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/saas_portal/presentation/pages/saas_portal_support_ticket_form_page.dart",
+      "route": "/saas-portal/support/new",
+      "module": "saas-portal",
+      "title": "Subject *",
+      "kind": "form",
+      "labels": [
+        "Subject *",
+        "Description",
+        "Priority",
+        "Category"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0308",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/saas/presentation/pages/plan_detail_page.dart",
+      "route": "/saas/plans/:id",
+      "module": "saas",
+      "title": "Plan",
+      "kind": "record",
+      "labels": [
+        "Plan",
+        "Delete plan?",
+        "Pricing",
+        "Limits",
+        "Features",
+        "Name *",
+        "Description",
+        "Price *"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0309",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/saas/presentation/pages/saas_billing_detail_page.dart",
+      "route": "/saas/billing/:id",
+      "module": "saas",
+      "title": "Invoice",
+      "kind": "record",
+      "labels": [
+        "Invoice",
+        "Details"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0310",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/saas/presentation/pages/saas_billing_form_page.dart",
+      "route": "/saas/billing/new",
+      "module": "saas",
+      "title": "Create Invoice",
+      "kind": "form",
+      "labels": [
+        "Create Invoice",
+        "Tenant ID *",
+        "Amount *",
+        "Period",
+        "Status"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0311",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/saas/presentation/pages/saas_plan_detail_page.dart",
+      "route": "/saas/plans/:id",
+      "module": "saas",
+      "title": "saas plan detail page",
+      "kind": "record",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0312",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/saas/presentation/pages/saas_plan_form_page.dart",
+      "route": "/saas/plans/new",
+      "module": "saas",
+      "title": "Name *",
+      "kind": "form",
+      "labels": [
+        "Name *",
+        "Description",
+        "Price *",
+        "Billing",
+        "Max Users",
+        "Max Storage (GB)",
+        "Features",
+        "Active"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0313",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/saas/presentation/pages/saas_plan_list_page.dart",
+      "route": "/saas/plans",
+      "module": "saas",
+      "title": "SaaS Plans",
+      "kind": "data",
+      "labels": [
+        "SaaS Plans",
+        "Search plans"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0314",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/saas/presentation/pages/saas_subscription_detail_page.dart",
+      "route": "/saas/subscriptions/:id",
+      "module": "saas",
+      "title": "Subscription",
+      "kind": "record",
+      "labels": [
+        "Subscription",
+        "Period",
+        "Timeline"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0315",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/saas/presentation/pages/saas_subscription_form_page.dart",
+      "route": "/saas/subscriptions/new",
+      "module": "saas",
+      "title": "Plan ID *",
+      "kind": "form",
+      "labels": [
+        "Plan ID *",
+        "Tenant ID *",
+        "Start Date",
+        "Billing Cycle",
+        "Status"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0316",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/saas/presentation/pages/saas_subscription_list_page.dart",
+      "route": "/saas/subscriptions",
+      "module": "saas",
+      "title": "Subscriptions",
+      "kind": "data",
+      "labels": [
+        "Subscriptions",
+        "Search by plan or tenant"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0317",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/saas/presentation/pages/saas_tenant_detail_page.dart",
+      "route": "/saas/tenants/:id",
+      "module": "saas",
+      "title": "Tenant",
+      "kind": "record",
+      "labels": [
+        "Tenant",
+        "Details",
+        "Timeline"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0318",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/saas/presentation/pages/saas_tenant_form_page.dart",
+      "route": "/saas/tenants/new",
+      "module": "saas",
+      "title": "Organization Name *",
+      "kind": "form",
+      "labels": [
+        "Organization Name *",
+        "Domain",
+        "Status"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0319",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/saas/presentation/pages/saas_tenant_list_page.dart",
+      "route": "/saas/tenants",
+      "module": "saas",
+      "title": "SaaS Tenants",
+      "kind": "data",
+      "labels": [
+        "SaaS Tenants",
+        "Search organization name"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0320",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/sales/presentation/pages/delivery_note_detail_page.dart",
+      "route": "/sales/delivery-notes/:id",
+      "module": "sales",
+      "title": "Delivery Note",
+      "kind": "record",
+      "labels": [
+        "Delivery Note",
+        "Delete delivery note?",
+        "Customer",
+        "Items",
+        "Details"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0321",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/sales/presentation/pages/delivery_note_form_page.dart",
+      "route": "/sales/delivery-notes/new",
+      "module": "sales",
+      "title": "New Delivery Note",
+      "kind": "form",
+      "labels": [
+        "New Delivery Note",
+        "Customer *",
+        "Sales Order (optional)",
+        "Delivery Date",
+        "Shipping Address",
+        "Notes",
+        "Product",
+        "Qty"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0322",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/sales/presentation/pages/delivery_note_list_page.dart",
+      "route": "/sales/delivery-notes",
+      "module": "sales",
+      "title": "Delivery Notes",
+      "kind": "data",
+      "labels": [
+        "Delivery Notes",
+        "Search by number or customer"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0323",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/sales/presentation/pages/opportunity_detail_page.dart",
+      "route": "/sales/opportunities/:id",
+      "module": "sales",
+      "title": "Opportunity",
+      "kind": "record",
+      "labels": [
+        "Opportunity",
+        "Delete opportunity?",
+        "Deal Information",
+        "Contact",
+        "Details",
+        "Move to stage"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0324",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/sales/presentation/pages/opportunity_form_page.dart",
+      "route": "/sales/opportunities/new",
+      "module": "sales",
+      "title": "Opportunity Name *",
+      "kind": "form",
+      "labels": [
+        "Opportunity Name *",
+        "Customer *",
+        "Company",
+        "Contact",
+        "Amount",
+        "Currency",
+        "Expected Close Date",
+        "Stage"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0325",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/sales/presentation/pages/opportunity_list_page.dart",
+      "route": "/sales/opportunities",
+      "module": "sales",
+      "title": "Opportunities",
+      "kind": "data",
+      "labels": [
+        "Opportunities",
+        "Search name, company or contact"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0326",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/sales/presentation/pages/quotation_detail_page.dart",
+      "route": "/sales/quotations/:id",
+      "module": "sales",
+      "title": "Quotation",
+      "kind": "record",
+      "labels": [
+        "Quotation",
+        "Delete quotation?",
+        "Items",
+        "Details"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0327",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/sales/presentation/pages/quotation_form_page.dart",
+      "route": "/sales/quotations/new",
+      "module": "sales",
+      "title": "Customer *",
+      "kind": "form",
+      "labels": [
+        "Customer *",
+        "Valid Until",
+        "Terms & Conditions",
+        "Notes",
+        "Product",
+        "Qty",
+        "Rate"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0328",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/sales/presentation/pages/quotation_list_page.dart",
+      "route": "/sales/quotations",
+      "module": "sales",
+      "title": "Quotations",
+      "kind": "data",
+      "labels": [
+        "Quotations",
+        "Search quotations"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0329",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/sales/presentation/pages/sales_dashboard_page.dart",
+      "route": "/sales/dashboard",
+      "module": "sales",
+      "title": "Sales Dashboard",
+      "kind": "data",
+      "labels": [
+        "Sales Dashboard",
+        "Total Orders",
+        "Total Revenue",
+        "Avg Order Value",
+        "Pending",
+        "Revenue Trend",
+        "Orders by Status",
+        "Recent Orders"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0330",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/sales/presentation/pages/sales_forecast_page.dart",
+      "route": "/sales/forecast",
+      "module": "sales",
+      "title": "Sales Forecast",
+      "kind": "data",
+      "labels": [
+        "Sales Forecast",
+        "Pipeline Value",
+        "Weighted Forecast",
+        "Closed Won",
+        "Win Rate",
+        "Forecast by Period",
+        "Opportunities in Period"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0331",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/sales/presentation/pages/sales_order_detail_page.dart",
+      "route": "/sales/orders/:id",
+      "module": "sales",
+      "title": "Sales Order",
+      "kind": "record",
+      "labels": [
+        "Sales Order",
+        "Delete sales order?",
+        "Items",
+        "Details"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0332",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/sales/presentation/pages/sales_order_form_page.dart",
+      "route": "/sales/orders/new",
+      "module": "sales",
+      "title": "Customer *",
+      "kind": "form",
+      "labels": [
+        "Customer *",
+        "Order Date",
+        "Shipping Address",
+        "Notes",
+        "Terms & Conditions",
+        "Product",
+        "Qty",
+        "Rate"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0333",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/sales/presentation/pages/sales_order_list_page.dart",
+      "route": "/sales/orders",
+      "module": "sales",
+      "title": "Sales Orders",
+      "kind": "data",
+      "labels": [
+        "Sales Orders",
+        "Search sales orders"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0334",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/sales/presentation/pages/sales_pipeline_page.dart",
+      "route": "/sales/pipeline",
+      "module": "sales",
+      "title": "Sales Pipeline",
+      "kind": "data",
+      "labels": [
+        "Sales Pipeline",
+        "No pipelines configured"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0335",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/sales/presentation/pages/sales_return_detail_page.dart",
+      "route": "/sales/returns/:id",
+      "module": "sales",
+      "title": "Sales Return",
+      "kind": "record",
+      "labels": [
+        "Sales Return",
+        "Delete sales return?",
+        "Items Returned",
+        "Details"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0336",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/sales/presentation/pages/sales_return_form_page.dart",
+      "route": "/sales/returns/new",
+      "module": "sales",
+      "title": "New Sales Return",
+      "kind": "form",
+      "labels": [
+        "New Sales Return",
+        "Sales Order *",
+        "Return Type",
+        "Reason",
+        "Notes",
+        "Product",
+        "Qty",
+        "Rate"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0337",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/sales/presentation/pages/sales_return_list_page.dart",
+      "route": "/sales/returns",
+      "module": "sales",
+      "title": "Sales Returns",
+      "kind": "data",
+      "labels": [
+        "Sales Returns",
+        "Search by number or customer"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0338",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/saved_views/presentation/pages/saved_view_form_page.dart",
+      "route": "new",
+      "module": "home",
+      "title": "Saved View Form",
+      "kind": "form",
+      "labels": [
+        "Saved View Form"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0339",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/saved_views/presentation/pages/saved_view_list_page.dart",
+      "route": "/saved-views",
+      "module": "saved-views",
+      "title": "Saved Views",
+      "kind": "data",
+      "labels": [
+        "Saved Views",
+        "Search views by name"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0340",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/search/presentation/pages/search_config_form_page.dart",
+      "route": "new",
+      "module": "home",
+      "title": "Search Config Form",
+      "kind": "form",
+      "labels": [
+        "Search Config Form"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0341",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/search/presentation/pages/search_config_page.dart",
+      "route": "/search/config",
+      "module": "search",
+      "title": "Search Configuration",
+      "kind": "data",
+      "labels": [
+        "Search Configuration",
+        "Indexed Resources",
+        "Fuzzy Search",
+        "Fuzzy Level",
+        "1 - Low (default)",
+        "Minimum Score",
+        "0.5",
+        "Actions"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0342",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/search/presentation/pages/search_result_page.dart",
+      "route": "/search",
+      "module": "search",
+      "title": "Search",
+      "kind": "data",
+      "labels": [
+        "Search",
+        "Search across all modules",
+        "Search everything"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0343",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/search/presentation/pages/search_synonym_list_page.dart",
+      "route": "/search/synonyms",
+      "module": "search",
+      "title": "Search Synonyms",
+      "kind": "data",
+      "labels": [
+        "Search Synonyms"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0344",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/service_management/presentation/pages/service_catalog_list_page.dart",
+      "route": "/service-management/catalogs",
+      "module": "service-management",
+      "title": "Service Catalog",
+      "kind": "data",
+      "labels": [
+        "Service Catalog",
+        "Search services...",
+        "Service Requests",
+        "Search requests..."
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0345",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/service_management/presentation/pages/service_request_detail_page.dart",
+      "route": ":id",
+      "module": "home",
+      "title": "Service Request Detail",
+      "kind": "record",
+      "labels": [
+        "Service Request Detail"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0346",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/service_management/presentation/pages/service_request_list_page.dart",
+      "route": "service-requests",
+      "module": "home",
+      "title": "Service Requests",
+      "kind": "data",
+      "labels": [
+        "Service Requests"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0347",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/service_management/presentation/pages/sla_detail_page.dart",
+      "route": "slas/:slaId",
+      "module": ":slaId",
+      "title": "SLA Detail",
+      "kind": "record",
+      "labels": [
+        "SLA Detail"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0348",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/storage/presentation/pages/bucket_detail_page.dart",
+      "route": "/storage/buckets/:id",
+      "module": "storage",
+      "title": "Bucket",
+      "kind": "record",
+      "labels": [
+        "Bucket",
+        "Configuration",
+        "Timeline",
+        "File",
+        "File Info"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0349",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/storage/presentation/pages/bucket_form_page.dart",
+      "route": "/storage/buckets/new",
+      "module": "storage",
+      "title": "Bucket Name *",
+      "kind": "form",
+      "labels": [
+        "Bucket Name *",
+        "Provider",
+        "Region",
+        "Max Quota (GB)",
+        "Public Access",
+        "Enable Versioning"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0350",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/storage/presentation/pages/bucket_list_page.dart",
+      "route": "/storage/buckets",
+      "module": "storage",
+      "title": "Storage Buckets",
+      "kind": "data",
+      "labels": [
+        "Storage Buckets",
+        "Search buckets"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0351",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/storage/presentation/pages/file_list_page.dart",
+      "route": "/storage/files",
+      "module": "storage",
+      "title": "Storage Files",
+      "kind": "data",
+      "labels": [
+        "Storage Files",
+        "Search files"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0352",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/subscriptions/presentation/pages/billing_detail_page.dart",
+      "route": "/subscriptions/billing/:id",
+      "module": "subscriptions",
+      "title": "Billing Cycle",
+      "kind": "record",
+      "labels": [
+        "Billing Cycle",
+        "Period",
+        "Details"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0353",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/subscriptions/presentation/pages/billing_form_page.dart",
+      "route": "/subscriptions/billing/new",
+      "module": "subscriptions",
+      "title": "Billing Cycle",
+      "kind": "form",
+      "labels": [
+        "Billing Cycle",
+        "Amount *",
+        "Currency",
+        "Status",
+        "Invoice ID"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0354",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/subscriptions/presentation/pages/plan_form_page.dart",
+      "route": "/subscriptions/plans/new",
+      "module": "subscriptions",
+      "title": "plan form page",
+      "kind": "form",
+      "labels": [],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0355",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/subscriptions/presentation/pages/subscription_billing_list_page.dart",
+      "route": "/subscriptions/billing",
+      "module": "subscriptions",
+      "title": "Billing Cycles",
+      "kind": "data",
+      "labels": [
+        "Billing Cycles"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0356",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/subscriptions/presentation/pages/subscription_plan_list_page.dart",
+      "route": "/subscriptions/plans",
+      "module": "subscriptions",
+      "title": "Subscription Plans",
+      "kind": "data",
+      "labels": [
+        "Subscription Plans"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0357",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/supply_chain/presentation/pages/carrier_list_page.dart",
+      "route": "/supply-chain/carriers",
+      "module": "supply-chain",
+      "title": "Carriers",
+      "kind": "data",
+      "labels": [
+        "Carriers",
+        "Search carrier name"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0358",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/supply_chain/presentation/pages/demand_forecast_list_page.dart",
+      "route": "/supply-chain/demand-forecast",
+      "module": "supply-chain",
+      "title": "Demand Forecast",
+      "kind": "data",
+      "labels": [
+        "Demand Forecast"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0359",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/supply_chain/presentation/pages/dock_appointment_form_page.dart",
+      "route": "/supply-chain/dock-appointments/new",
+      "module": "supply-chain",
+      "title": "New Dock Appointment",
+      "kind": "form",
+      "labels": [
+        "New Dock Appointment",
+        "Warehouse ID",
+        "Warehouse Name",
+        "Carrier ID",
+        "Carrier Name",
+        "Reference",
+        "Notes"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0360",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/supply_chain/presentation/pages/dock_appointment_list_page.dart",
+      "route": "/supply-chain/dock-appointments",
+      "module": "supply-chain",
+      "title": "Dock Appointments",
+      "kind": "data",
+      "labels": [
+        "Dock Appointments",
+        "Search reference"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0361",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/supply_chain/presentation/pages/reorder_suggestion_list_page.dart",
+      "route": "/supply-chain/reorder-suggestions",
+      "module": "supply-chain",
+      "title": "Reorder Suggestions",
+      "kind": "data",
+      "labels": [
+        "Reorder Suggestions"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0362",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/supply_chain/presentation/pages/shipment_list_page.dart",
+      "route": "/supply-chain/shipments",
+      "module": "supply-chain",
+      "title": "Shipments",
+      "kind": "data",
+      "labels": [
+        "Shipments",
+        "Search shipment number"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0363",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/supply_chain/presentation/pages/supply_chain_dashboard_page.dart",
+      "route": "/supply-chain",
+      "module": "supply-chain",
+      "title": "Supply Chain",
+      "kind": "data",
+      "labels": [
+        "Supply Chain",
+        "Shipments by Status",
+        "Recent Events"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0364",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/supply_chain/presentation/pages/supply_chain_route_form_page.dart",
+      "route": "/supply-chain/routes/new",
+      "module": "supply-chain",
+      "title": "Name *",
+      "kind": "form",
+      "labels": [
+        "Name *",
+        "Origin *",
+        "Destination *",
+        "Carrier ID",
+        "Carrier Name",
+        "Transit Time (days)",
+        "Cost",
+        "Active"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0365",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/supply_chain/presentation/pages/supply_chain_route_list_page.dart",
+      "route": "/supply-chain/routes",
+      "module": "supply-chain",
+      "title": "Routes",
+      "kind": "data",
+      "labels": [
+        "Routes",
+        "Search route name"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0366",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/supply_chain/presentation/pages/tracking_event_list_page.dart",
+      "route": "/supply-chain/tracking-events",
+      "module": "supply-chain",
+      "title": "Tracking Events",
+      "kind": "data",
+      "labels": [
+        "Tracking Events"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0367",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/supply_chain/presentation/pages/warehouse_transfer_form_page.dart",
+      "route": "/supply-chain/warehouse-transfers/new",
+      "module": "supply-chain",
+      "title": "New Warehouse Transfer",
+      "kind": "form",
+      "labels": [
+        "New Warehouse Transfer",
+        "From Warehouse ID",
+        "From Warehouse Name",
+        "To Warehouse ID",
+        "To Warehouse Name",
+        "Product ID",
+        "Product Name",
+        "Quantity *"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0368",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/supply_chain/presentation/pages/warehouse_transfer_list_page.dart",
+      "route": "/supply-chain/warehouse-transfers",
+      "module": "supply-chain",
+      "title": "Warehouse Transfers",
+      "kind": "data",
+      "labels": [
+        "Warehouse Transfers",
+        "Search reference"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0369",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/workflow/presentation/pages/workflow_approval_list_page.dart",
+      "route": "/workflow/approvals",
+      "module": "workflow",
+      "title": "Pending Approvals",
+      "kind": "data",
+      "labels": [
+        "Pending Approvals"
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    },
+    {
+      "id": "MOB-0370",
+      "repo": "unierp-mobile",
+      "file": "unierp-mobile/lib/features/workflow/presentation/pages/workflow_list_page.dart",
+      "route": "/workflow/workflows",
+      "module": "workflow",
+      "title": "Workflow Definitions",
+      "kind": "data",
+      "labels": [
+        "Workflow Definitions",
+        "Search workflows..."
+      ],
+      "columns": [],
+      "states": [],
+      "status": "SOURCE_DISCOVERED",
+      "designStatus": "PENDING"
+    }
+  ]
+}

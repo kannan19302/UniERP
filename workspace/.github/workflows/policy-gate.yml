@@ -1,0 +1,102 @@
+# Reusable: run the policy gate inside the repository that owns the files it checks.
+#
+# Phase A30, defect D024. `check-policy.mjs` lives here, but its rules read application
+# source — and CI checks out one repository, so a gate in the orchestration repo cannot
+# see a sibling's files. Before this, every rule silently returned 0: the ratchets reported
+# a clean 309 → 0 for hardcoded hex and 2,315 → 0 for hardcoded pixels, and `main` had been
+# red since extraction on the one HARD rule honest enough to report a missing target.
+#
+# So the script comes to the code. This workflow checks out the caller, checks out
+# unierp-workspace beside it for the script, and points the gate at the caller's tree.
+#
+# Called like this, from an owning repo:
+#
+#   jobs:
+#     policy:
+#       uses: kannan19302/unierp-workspace/.github/workflows/policy-gate.yml@0bb9682d45d50e23e6de344d71f10ec1a909bf04
+#       with:
+#         repo: unierp-web
+#
+# Which rules run is decided by OWNERSHIP in check-policy.mjs. Anything owned elsewhere is
+# printed as "delegated to <repo>" — never counted, never baselined at 0. A delegation that
+# no repository actually runs is caught by `check-policy-coverage.mjs` in this repo's CI.
+name: Policy gate
+
+on:
+  workflow_call:
+    inputs:
+      repo:
+        description: The repository name this gate is running against. Must match a repo named in check-policy.mjs OWNERSHIP.
+        type: string
+        required: true
+      node-version:
+        type: string
+        default: "22"
+
+jobs:
+  policy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out this repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          path: target
+
+      # The gate's implementation, pinned to main so a rule change reaches every repo at
+      # once. That is the point of a reusable workflow, and D019 found this family had
+      # none — all 30 CI files were independent hand copies, which is how 21 of them came
+      # to declare a gate whose script existed in none.
+      - name: Check out the gate
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: kannan19302/unierp-workspace
+          path: gate
+
+      # The decimal-arithmetic ratchet needs the Prisma schema to learn which fields are
+      # Decimal. A repo holding only source would otherwise learn none, find 0 sites, and
+      # report a clean pass over 658 real ones. The schema lives in unierp-data, so it is
+      # checked out beside the target rather than guessed at.
+      - name: Check out the schema
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: kannan19302/unierp-data
+          path: schema
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: ${{ inputs.node-version }}
+
+      # No install: the gate reads files and has no dependencies. Deliberate — a gate that
+      # needs `pnpm install` to run cannot run before the install is fixed, and A01/A02
+      # exist because installs were broken.
+      - name: Policy gate
+        run: node gate/scripts/ci/check-policy.mjs --report
+        env:
+          POLICY_ROOT: ${{ github.workspace }}/target
+          POLICY_REPO: ${{ inputs.repo }}
+
+      # Money is Decimal(19,4) so it does not drift; summing it through Number() puts it
+      # straight back into float. This ratchet counts those sites. It reported 0 for months
+      # after extraction because it could not find the schema — the real count is 658.
+      - name: Decimal arithmetic ratchet
+        run: node gate/scripts/ci/check-decimal-arithmetic.mjs
+        env:
+          POLICY_ROOT: ${{ github.workspace }}/target
+          POLICY_REPO: ${{ inputs.repo }}
+          DECIMAL_SCHEMA_DIR: ${{ github.workspace }}/schema/prisma/schema
+
+      # A ratchet is only a ratchet if the baseline is committed and compared. A repo that
+      # runs the gate without one silently accepts whatever it finds today as acceptable.
+      - name: The ratchet baseline must be committed
+        run: |
+          if [ ! -f target/.quality-policy-baseline.json ]; then
+            echo "::error::${{ inputs.repo }} runs the policy gate but has no"
+            echo ".quality-policy-baseline.json. Generate it once and commit it:"
+            echo "  POLICY_ROOT=\$PWD POLICY_REPO=${{ inputs.repo }} \\"
+            echo "    node path/to/unierp-workspace/scripts/ci/check-policy.mjs --update"
+            echo "Without it the ratchet has nothing to compare against and accepts today's"
+            echo "debt as the standard — see phase A30."
+            exit 1
+          fi
+          echo "baseline present:"
+          cat target/.quality-policy-baseline.json

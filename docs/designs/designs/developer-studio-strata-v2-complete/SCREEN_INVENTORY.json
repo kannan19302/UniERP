@@ -1,0 +1,488 @@
+{
+  "date": "2026-09-08",
+  "foundationCount": 16,
+  "newCount": 60,
+  "screens": [
+    {
+      "id": 17,
+      "file": "17_applications.png",
+      "title": "Applications catalog",
+      "promptKey": "allDevPrompt0",
+      "originalFile": "17_applications.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 18,
+      "file": "18_websites.png",
+      "title": "Websites catalog",
+      "promptKey": "allDevPrompt1",
+      "originalFile": "18_websites.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 19,
+      "file": "19_new_application.png",
+      "title": "Create application",
+      "promptKey": "allDevPrompt2",
+      "originalFile": "19_new_application.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 20,
+      "file": "20_new_website.png",
+      "title": "Create website and templates",
+      "promptKey": "allDevPrompt3",
+      "originalFile": "20_new_website.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 21,
+      "file": "21_app_overview_refined.png",
+      "title": "Application workspace",
+      "promptKey": "allDevPrompt4",
+      "originalFile": "21_app_overview.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 22,
+      "file": "22_site_overview_refined.png",
+      "title": "Website workspace",
+      "promptKey": "allDevPrompt5",
+      "originalFile": "22_site_overview.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 23,
+      "file": "23_pages.png",
+      "title": "Page tree and page creation",
+      "promptKey": "allDevPrompt6",
+      "originalFile": "23_pages.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 24,
+      "file": "24_collections.png",
+      "title": "CMS collections and records",
+      "promptKey": "allDevPrompt7",
+      "originalFile": "24_collections.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 25,
+      "file": "25_collection_editor_refined.png",
+      "title": "Collection schema and item editor",
+      "promptKey": "allDevPrompt8",
+      "originalFile": "25_collection_editor.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 26,
+      "file": "26_blog.png",
+      "title": "Blog publishing workspace",
+      "promptKey": "allDevPrompt9",
+      "originalFile": "26_blog.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 27,
+      "file": "27_post_editor.png",
+      "title": "Blog post editor",
+      "promptKey": "allDevPrompt10",
+      "originalFile": "27_post_editor.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 28,
+      "file": "28_assets_refined.png",
+      "title": "Asset library and upload",
+      "promptKey": "allDevPrompt11",
+      "originalFile": "28_assets.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 29,
+      "file": "29_menus.png",
+      "title": "Navigation menu builder",
+      "promptKey": "allDevPrompt12",
+      "originalFile": "29_menus.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 30,
+      "file": "30_seo.png",
+      "title": "SEO metadata and redirects",
+      "promptKey": "allDevPrompt13",
+      "originalFile": "30_seo.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 31,
+      "file": "31_experiments_refined.png",
+      "title": "A/B experiment design",
+      "promptKey": "allDevPrompt14",
+      "originalFile": "31_experiments.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 32,
+      "file": "32_orders.png",
+      "title": "Website commerce orders",
+      "promptKey": "allDevPrompt15",
+      "originalFile": "32_orders.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 33,
+      "file": "33_submissions.png",
+      "title": "Form submissions inbox",
+      "promptKey": "allDevPrompt16",
+      "originalFile": "33_submissions.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 34,
+      "file": "34_site_settings.png",
+      "title": "Site settings and domains",
+      "promptKey": "allDevPrompt17",
+      "originalFile": "34_site_settings.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 35,
+      "file": "35_site_revisions.png",
+      "title": "Site revisions and rollback",
+      "promptKey": "allDevPrompt18",
+      "originalFile": "35_site_revisions.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 36,
+      "file": "36_forms_refined.png",
+      "title": "Forms catalog",
+      "promptKey": "allDevPrompt19",
+      "originalFile": "36_forms.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 37,
+      "file": "37_form_builder.png",
+      "title": "Form visual builder",
+      "promptKey": "allDevPrompt20",
+      "originalFile": "37_form_builder.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 38,
+      "file": "38_advanced_forms.png",
+      "title": "Advanced forms and field library",
+      "promptKey": "allDevPrompt21",
+      "originalFile": "38_advanced_forms.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 39,
+      "file": "39_workflow_catalog_refined.png",
+      "title": "Workflow catalog and creation",
+      "promptKey": "allDevPrompt22",
+      "originalFile": "39_workflow_catalog.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 40,
+      "file": "40_dashboard_catalog.png",
+      "title": "Dashboard catalog and creation",
+      "promptKey": "allDevPrompt23",
+      "originalFile": "40_dashboard_catalog.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 41,
+      "file": "41_dashboard_builder_refined_v2.png",
+      "title": "Dashboard visual builder",
+      "promptKey": "allDevPrompt24",
+      "originalFile": "41_dashboard_builder.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 42,
+      "file": "42_data_objects.png",
+      "title": "Data objects catalog",
+      "promptKey": "allDevPrompt25",
+      "originalFile": "42_data_objects.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 43,
+      "file": "43_object_designer_refined.png",
+      "title": "Object schema and relationships",
+      "promptKey": "allDevPrompt26",
+      "originalFile": "43_object_designer.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 44,
+      "file": "44_bpmn.png",
+      "title": "BPMN process designer",
+      "promptKey": "allDevPrompt27",
+      "originalFile": "44_bpmn.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 45,
+      "file": "45_rules_refined.png",
+      "title": "Decision table and rule designer",
+      "promptKey": "allDevPrompt28",
+      "originalFile": "45_rules.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 46,
+      "file": "46_api_builder.png",
+      "title": "Custom API designer",
+      "promptKey": "allDevPrompt29",
+      "originalFile": "46_api_builder.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 47,
+      "file": "47_logic.png",
+      "title": "Logic script workbench",
+      "promptKey": "allDevPrompt30",
+      "originalFile": "47_logic.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 48,
+      "file": "48_mobile_builder.png",
+      "title": "Mobile app visual builder",
+      "promptKey": "allDevPrompt31",
+      "originalFile": "48_mobile_builder.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 49,
+      "file": "49_app_customization.png",
+      "title": "Application navigation customization",
+      "promptKey": "allDevPrompt32",
+      "originalFile": "49_app_customization.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 50,
+      "file": "50_manage.png",
+      "title": "Manage workspace",
+      "promptKey": "allDevPrompt33",
+      "originalFile": "50_manage.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 51,
+      "file": "51_governance_refined.png",
+      "title": "Developer governance and capacity",
+      "promptKey": "allDevPrompt34",
+      "originalFile": "51_governance.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 52,
+      "file": "52_release_history.png",
+      "title": "Cross-project release history",
+      "promptKey": "allDevPrompt35",
+      "originalFile": "52_release_history.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 53,
+      "file": "53_environments.png",
+      "title": "Environments and configuration",
+      "promptKey": "allDevPrompt36",
+      "originalFile": "53_environments.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 54,
+      "file": "54_run_logs.png",
+      "title": "Run logs and trace detail",
+      "promptKey": "allDevPrompt37",
+      "originalFile": "54_run_logs.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 55,
+      "file": "55_access_control_refined.png",
+      "title": "Developer access control",
+      "promptKey": "allDevPrompt38",
+      "originalFile": "55_access_control.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 56,
+      "file": "56_component_governance_refined.png",
+      "title": "Component lifecycle management",
+      "promptKey": "allDevPrompt39",
+      "originalFile": "56_component_governance.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 57,
+      "file": "57_connectors.png",
+      "title": "Connectors catalog and configuration",
+      "promptKey": "allDevPrompt40",
+      "originalFile": "57_connectors.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 58,
+      "file": "58_marketplace_packages.png",
+      "title": "Marketplace packages and installation review",
+      "promptKey": "allDevPrompt41",
+      "originalFile": "58_marketplace_packages.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 59,
+      "file": "59_query_builder_refined_v2.png",
+      "title": "Visual query builder",
+      "promptKey": "allDevPrompt42",
+      "originalFile": "59_query_builder.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 60,
+      "file": "60_widgets.png",
+      "title": "Reusable widget builder",
+      "promptKey": "allDevPrompt43",
+      "originalFile": "60_widgets.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 61,
+      "file": "61_etl.png",
+      "title": "ETL pipeline designer",
+      "promptKey": "allDevPrompt44",
+      "originalFile": "61_etl.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 62,
+      "file": "62_theme_manager.png",
+      "title": "Theme and token editor",
+      "promptKey": "allDevPrompt45",
+      "originalFile": "62_theme_manager.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 63,
+      "file": "63_git.png",
+      "title": "Source control and merge review",
+      "promptKey": "allDevPrompt46",
+      "originalFile": "63_git.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 64,
+      "file": "64_mobile_export.png",
+      "title": "Mobile packaging and export",
+      "promptKey": "allDevPrompt47",
+      "originalFile": "64_mobile_export.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 65,
+      "file": "65_sdk_refined.png",
+      "title": "SDK documentation and quickstart",
+      "promptKey": "allDevPrompt48",
+      "originalFile": "65_sdk.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 66,
+      "file": "66_credentials_refined.png",
+      "title": "Application credentials inventory",
+      "promptKey": "allDevPrompt49",
+      "originalFile": "66_credentials.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 67,
+      "file": "67_credential_lifecycle_refined.png",
+      "title": "Create and rotate credentials",
+      "promptKey": "allDevPrompt50",
+      "originalFile": "67_credential_lifecycle.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 68,
+      "file": "68_extensions.png",
+      "title": "Extensions catalog",
+      "promptKey": "allDevPrompt51",
+      "originalFile": "68_extensions.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 69,
+      "file": "69_extension_package_refined.png",
+      "title": "Extension bundle validation",
+      "promptKey": "allDevPrompt52",
+      "originalFile": "69_extension_package.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 70,
+      "file": "70_sandbox.png",
+      "title": "Sandbox execution console",
+      "promptKey": "allDevPrompt53",
+      "originalFile": "70_sandbox.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 71,
+      "file": "71_diagnostics.png",
+      "title": "API diagnostics quotas and deprecations",
+      "promptKey": "allDevPrompt54",
+      "originalFile": "71_diagnostics.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 72,
+      "file": "72_resource_updates_refined.png",
+      "title": "Link confirmation and dependency updates",
+      "promptKey": "allDevPrompt55",
+      "originalFile": "72_resource_updates.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 73,
+      "file": "73_auth_states_refined.png",
+      "title": "Sign-in handoff and callback recovery",
+      "promptKey": "allDevPrompt56",
+      "originalFile": "73_auth_states.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 74,
+      "file": "74_system_states_refined.png",
+      "title": "Loading empty error and access states",
+      "promptKey": "allDevPrompt57",
+      "originalFile": "74_system_states.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 75,
+      "file": "75_project_settings_refined.png",
+      "title": "Project lifecycle and general settings",
+      "promptKey": "allDevPrompt58",
+      "originalFile": "75_project_settings.png",
+      "visuallyReviewed": true
+    },
+    {
+      "id": 76,
+      "file": "76_workspace_utilities_refined.png",
+      "title": "Developer command center and utilities",
+      "promptKey": "allDevPrompt59",
+      "originalFile": "76_workspace_utilities.png",
+      "visuallyReviewed": true
+    }
+  ],
+  "refinementCount": 25
+}

@@ -1,0 +1,23 @@
+{
+  "generatedAt": "2026-09-14T03:32:28.226Z",
+  "scope": "Local static design artifact only",
+  "screens": 69,
+  "originalImagesPreserved": 17,
+  "desktopAndMobileScreenChecks": 138,
+  "sharedStateChecks": 1104,
+  "browserErrors": [],
+  "screenshots": 73,
+  "interactionChecks": [
+    "sign-in to routing specimen",
+    "validation and recovery",
+    "application setup filter",
+    "mobile menu and Escape"
+  ],
+  "limitations": [
+    "No backend, authentication or real provisioning exercised",
+    "No screen-reader or production accessibility certification",
+    "Screenshots require human visual review",
+    "No deployed or released application"
+  ],
+  "localLinks": 175
+}

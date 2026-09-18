@@ -1,0 +1,460 @@
+{
+  "date": "2026-09-08",
+  "source": "developer-platform/src/app page.tsx; src/platform/builders/definitions/*.ts",
+  "pages": [
+    "developer-platform/src/app\\sites\\[siteId]\\[builder]\\[artifactId]\\page.tsx",
+    "developer-platform/src/app\\sites\\[siteId]\\[builder]\\page.tsx",
+    "developer-platform/src/app\\sites\\[siteId]\\page.tsx",
+    "developer-platform/src/app\\sdk\\page.tsx",
+    "developer-platform/src/app\\login\\page.tsx",
+    "developer-platform/src/app\\library\\[builder]\\[artifactId]\\page.tsx",
+    "developer-platform/src/app\\library\\[builder]\\page.tsx",
+    "developer-platform/src/app\\auth\\callback\\page.tsx",
+    "developer-platform/src/app\\builder\\web\\canvas\\page.tsx",
+    "developer-platform/src/app\\builder\\web\\ab-testing\\page.tsx",
+    "developer-platform/src/app\\apps\\[appId]\\[builder]\\[artifactId]\\page.tsx",
+    "developer-platform/src/app\\apps\\[appId]\\[builder]\\page.tsx",
+    "developer-platform/src/app\\apps\\[appId]\\page.tsx",
+    "developer-platform/src/app\\builder\\web\\(hub)\\submissions\\page.tsx",
+    "developer-platform/src/app\\apps\\[appId]\\[builder]\\new\\page.tsx",
+    "developer-platform/src/app\\builder\\web\\(hub)\\settings\\page.tsx",
+    "developer-platform/src/app\\builder\\web\\(hub)\\assets\\page.tsx",
+    "developer-platform/src/app\\builder\\web\\(hub)\\collections\\page.tsx",
+    "developer-platform/src/app\\builder\\web\\(hub)\\seo\\page.tsx",
+    "developer-platform/src/app\\builder\\web\\(hub)\\pages\\page.tsx",
+    "developer-platform/src/app\\builder\\web\\(hub)\\page.tsx",
+    "developer-platform/src/app\\builder\\web\\(hub)\\blog\\page.tsx",
+    "developer-platform/src/app\\builder\\web\\(hub)\\orders\\page.tsx",
+    "developer-platform/src/app\\(platform)\\sites\\page.tsx",
+    "developer-platform/src/app\\(platform)\\library\\page.tsx",
+    "developer-platform/src/app\\builder\\manage\\widgets\\page.tsx",
+    "developer-platform/src/app\\builder\\sites\\[id]\\page.tsx",
+    "developer-platform/src/app\\builder\\web\\(hub)\\menus\\page.tsx",
+    "developer-platform/src/app\\builder\\manage\\git\\page.tsx",
+    "developer-platform/src/app\\(platform)\\sites\\new\\page.tsx",
+    "developer-platform/src/app\\(platform)\\page.tsx",
+    "developer-platform/src/app\\(platform)\\apps\\page.tsx",
+    "developer-platform/src/app\\builder\\manage\\etl\\page.tsx",
+    "developer-platform/src/app\\builder\\sites\\templates\\page.tsx",
+    "developer-platform/src/app\\builder\\manage\\theme-manager\\page.tsx",
+    "developer-platform/src/app\\builder\\sites\\page.tsx",
+    "developer-platform/src/app\\builder\\manage\\components\\page.tsx",
+    "developer-platform/src/app\\(platform)\\apps\\new\\page.tsx",
+    "developer-platform/src/app\\builder\\manage\\environments\\page.tsx",
+    "developer-platform/src/app\\(platform)\\manage\\page.tsx",
+    "developer-platform/src/app\\builder\\manage\\releases\\page.tsx",
+    "developer-platform/src/app\\builder\\manage\\page.tsx",
+    "developer-platform/src/app\\(platform)\\manage\\[section]\\page.tsx",
+    "developer-platform/src/app\\builder\\manage\\access\\page.tsx",
+    "developer-platform/src/app\\builder\\manage\\developer-governance\\page.tsx",
+    "developer-platform/src/app\\builder\\manage\\connectors\\page.tsx",
+    "developer-platform/src/app\\builder\\manage\\query-builder\\page.tsx",
+    "developer-platform/src/app\\builder\\manage\\logs\\page.tsx",
+    "developer-platform/src/app\\builder\\app-hub\\page.tsx",
+    "developer-platform/src/app\\builder\\erp\\bpmn\\page.tsx",
+    "developer-platform/src/app\\builder\\erp\\page.tsx",
+    "developer-platform/src/app\\builder\\manage\\marketplace\\page.tsx",
+    "developer-platform/src/app\\builder\\erp\\api-builder\\page.tsx",
+    "developer-platform/src/app\\builder\\manage\\mobile-export\\page.tsx",
+    "developer-platform/src/app\\builder\\erp\\logic\\page.tsx",
+    "developer-platform/src/app\\builder\\erp\\rules-engine\\page.tsx",
+    "developer-platform/src/app\\builder\\erp\\apps\\[id]\\page.tsx",
+    "developer-platform/src/app\\builder\\erp\\advanced-forms\\page.tsx",
+    "developer-platform/src/app\\builder\\erp\\data\\page.tsx",
+    "developer-platform/src/app\\builder\\erp\\mobile-builder\\page.tsx",
+    "developer-platform/src/app\\builder\\erp\\modules\\page.tsx",
+    "developer-platform/src/app\\builder\\erp\\workflows\\page.tsx",
+    "developer-platform/src/app\\builder\\erp\\workflows\\[id]\\page.tsx",
+    "developer-platform/src/app\\builder\\erp\\forms\\page.tsx",
+    "developer-platform/src/app\\builder\\erp\\workflows\\new\\page.tsx",
+    "developer-platform/src/app\\builder\\erp\\customize\\page.tsx",
+    "developer-platform/src/app\\builder\\erp\\data-objects\\page.tsx",
+    "developer-platform/src/app\\builder\\erp\\modules\\[id]\\page.tsx",
+    "developer-platform/src/app\\builder\\erp\\forms\\[id]\\page.tsx",
+    "developer-platform/src/app\\builder\\erp\\dashboards\\page.tsx",
+    "developer-platform/src/app\\builder\\erp\\data-objects\\[id]\\page.tsx",
+    "developer-platform/src/app\\builder\\erp\\dashboards\\[id]\\page.tsx",
+    "developer-platform/src/app\\builder\\erp\\dashboards\\new\\page.tsx"
+  ],
+  "definitions": [
+    {
+      "owner": "app",
+      "id": "forms",
+      "segment": "forms",
+      "kind": "builder",
+      "scopes": [
+        "app",
+        "library"
+      ],
+      "editor": true,
+      "create": "inline"
+    },
+    {
+      "owner": "app",
+      "id": "advanced-forms",
+      "segment": "advanced-forms",
+      "kind": "builder",
+      "scopes": [
+        "app",
+        "library"
+      ],
+      "editor": false,
+      "create": "inline"
+    },
+    {
+      "owner": "app",
+      "id": "workflows",
+      "segment": "workflows",
+      "kind": "builder",
+      "scopes": [
+        "app",
+        "library"
+      ],
+      "editor": true,
+      "create": "wizard"
+    },
+    {
+      "owner": "app",
+      "id": "bpmn",
+      "segment": "bpmn",
+      "kind": "builder",
+      "scopes": [
+        "app"
+      ],
+      "editor": false,
+      "create": "inline"
+    },
+    {
+      "owner": "app",
+      "id": "dashboards",
+      "segment": "dashboards",
+      "kind": "builder",
+      "scopes": [
+        "app",
+        "library"
+      ],
+      "editor": true,
+      "create": "wizard"
+    },
+    {
+      "owner": "app",
+      "id": "data-objects",
+      "segment": "data-objects",
+      "kind": "builder",
+      "scopes": [
+        "app"
+      ],
+      "editor": false,
+      "create": "inline"
+    },
+    {
+      "owner": "app",
+      "id": "rules-engine",
+      "segment": "rules",
+      "kind": "builder",
+      "scopes": [
+        "app",
+        "library"
+      ],
+      "editor": false,
+      "create": "inline"
+    },
+    {
+      "owner": "app",
+      "id": "api-builder",
+      "segment": "apis",
+      "kind": "builder",
+      "scopes": [
+        "app"
+      ],
+      "editor": false,
+      "create": "inline"
+    },
+    {
+      "owner": "app",
+      "id": "logic",
+      "segment": "logic",
+      "kind": "builder",
+      "scopes": [
+        "app"
+      ],
+      "editor": false,
+      "create": "inline"
+    },
+    {
+      "owner": "app",
+      "id": "mobile-builder",
+      "segment": "mobile",
+      "kind": "builder",
+      "scopes": [
+        "app"
+      ],
+      "editor": false,
+      "create": "inline"
+    },
+    {
+      "owner": "site",
+      "id": "site-pages",
+      "segment": "pages",
+      "kind": "builder",
+      "scopes": [
+        "site"
+      ],
+      "editor": true,
+      "create": "inline"
+    },
+    {
+      "owner": "site",
+      "id": "site-collections",
+      "segment": "collections",
+      "kind": "builder",
+      "scopes": [
+        "site"
+      ],
+      "editor": false,
+      "create": "inline"
+    },
+    {
+      "owner": "site",
+      "id": "site-blog",
+      "segment": "blog",
+      "kind": "builder",
+      "scopes": [
+        "site"
+      ],
+      "editor": false,
+      "create": "inline"
+    },
+    {
+      "owner": "site",
+      "id": "site-assets",
+      "segment": "assets",
+      "kind": "builder",
+      "scopes": [
+        "site"
+      ],
+      "editor": false,
+      "create": "inline"
+    },
+    {
+      "owner": "site",
+      "id": "site-menus",
+      "segment": "menus",
+      "kind": "builder",
+      "scopes": [
+        "site"
+      ],
+      "editor": false,
+      "create": "inline"
+    },
+    {
+      "owner": "site",
+      "id": "site-seo",
+      "segment": "seo",
+      "kind": "builder",
+      "scopes": [
+        "site"
+      ],
+      "editor": false,
+      "create": "inline"
+    },
+    {
+      "owner": "site",
+      "id": "site-ab-testing",
+      "segment": "ab-testing",
+      "kind": "builder",
+      "scopes": [
+        "site"
+      ],
+      "editor": false,
+      "create": "inline"
+    },
+    {
+      "owner": "site",
+      "id": "site-orders",
+      "segment": "orders",
+      "kind": "data",
+      "scopes": [
+        "site"
+      ],
+      "editor": false,
+      "create": ""
+    },
+    {
+      "owner": "site",
+      "id": "site-submissions",
+      "segment": "submissions",
+      "kind": "data",
+      "scopes": [
+        "site"
+      ],
+      "editor": false,
+      "create": ""
+    },
+    {
+      "owner": "site",
+      "id": "site-settings",
+      "segment": "settings",
+      "kind": "settings",
+      "scopes": [
+        "site"
+      ],
+      "editor": false,
+      "create": ""
+    },
+    {
+      "owner": "manage",
+      "id": "manage-developer-governance",
+      "segment": "developer-governance",
+      "kind": "settings",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": ""
+    },
+    {
+      "owner": "manage",
+      "id": "manage-releases",
+      "segment": "releases",
+      "kind": "data",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": ""
+    },
+    {
+      "owner": "manage",
+      "id": "manage-environments",
+      "segment": "environments",
+      "kind": "settings",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": ""
+    },
+    {
+      "owner": "manage",
+      "id": "manage-logs",
+      "segment": "logs",
+      "kind": "data",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": ""
+    },
+    {
+      "owner": "manage",
+      "id": "manage-access",
+      "segment": "access",
+      "kind": "settings",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": ""
+    },
+    {
+      "owner": "manage",
+      "id": "manage-components",
+      "segment": "components",
+      "kind": "settings",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": ""
+    },
+    {
+      "owner": "manage",
+      "id": "manage-connectors",
+      "segment": "connectors",
+      "kind": "settings",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": ""
+    },
+    {
+      "owner": "manage",
+      "id": "manage-marketplace",
+      "segment": "marketplace",
+      "kind": "settings",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": ""
+    },
+    {
+      "owner": "manage",
+      "id": "manage-query-builder",
+      "segment": "queries",
+      "kind": "builder",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": "inline"
+    },
+    {
+      "owner": "manage",
+      "id": "manage-widgets",
+      "segment": "widgets",
+      "kind": "builder",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": "inline"
+    },
+    {
+      "owner": "manage",
+      "id": "manage-etl",
+      "segment": "etl",
+      "kind": "builder",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": "inline"
+    },
+    {
+      "owner": "manage",
+      "id": "manage-theme",
+      "segment": "themes",
+      "kind": "builder",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": "inline"
+    },
+    {
+      "owner": "manage",
+      "id": "manage-git",
+      "segment": "git",
+      "kind": "settings",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": ""
+    },
+    {
+      "owner": "manage",
+      "id": "manage-mobile-export",
+      "segment": "mobile-export",
+      "kind": "builder",
+      "scopes": [
+        "manage"
+      ],
+      "editor": false,
+      "create": "inline"
+    }
+  ]
+}

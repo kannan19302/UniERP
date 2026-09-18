@@ -1,0 +1,316 @@
+{
+  "$schema": "https://unierp.io/schemas/module-tier-manifest.json",
+  "description": "Module Tier Manifest — see PLATFORM_ARCHITECTURE.md § 6.2. Tier A requires full Clean Architecture. Tier B requires controller/service/dto/tests.",
+  "tiers": {
+    "A": {
+      "description": "Full four-layer Clean Architecture. max-lines: 400 controller / 800 service. Domain layer has zero framework imports. 100% coverage on calculation paths.",
+      "modules": [
+        "finance",
+        "advanced-finance",
+        "fixed-assets",
+        "hr",
+        "advanced-hr",
+        "hr-advanced",
+        "people",
+        "inventory",
+        "supply-chain",
+        "procurement",
+        "sales",
+        "crm",
+        "pos",
+        "ecommerce",
+        "manufacturing"
+      ]
+    },
+    "B": {
+      "description": "Controller / service / dto / tests. max-lines enforced. Promote to Tier A when module exceeds 15 KLoc or acquires money.",
+      "modules": [
+        "admin",
+        "ai",
+        "analytics",
+        "api-platform",
+        "blockchain",
+        "builder",
+        "communication",
+        "connect",
+        "devops",
+        "documents",
+        "drive",
+        "education",
+        "ext-gateway",
+        "field-service",
+        "healthcare",
+        "localization",
+        "notifications",
+        "onboarding",
+        "outbox",
+        "projects",
+        "pwa",
+        "real-estate",
+        "reporting",
+        "saas",
+        "saas-portal",
+        "saved-views",
+        "search",
+        "service-management",
+        "settings",
+        "storage",
+        "subscriptions",
+        "workflow"
+      ]
+    }
+  },
+  "max_lines": {
+    "controller_tier_a": 400,
+    "service_tier_a": 800,
+    "controller_tier_b": 600,
+    "service_tier_b": 1200
+  },
+  "depthTargets": {
+    "admin": {
+      "tier": "Tier-4-exempt",
+      "targetScore": null,
+      "reason": "Platform/plane-2 infrastructure, not a plane-3 business module (Track E's own definition). The 16-row business rubric (approvals, CRUD depth, documents, etc.) does not meaningfully apply."
+    },
+    "advanced-finance": {
+      "tier": "Tier-1",
+      "targetScore": ">=2 every row, >=3 on rows 1,2,3,7,14 (\"next level\")",
+      "reason": "Architecture Tier A (Clean Architecture, handles money or exceeds 15 KLoc) — the highest-stakes modules in the platform get the full rubric target, no partial credit on data model, lifecycle, authorisation, events, or tests."
+    },
+    "advanced-hr": {
+      "tier": "Tier-1",
+      "targetScore": ">=2 every row, >=3 on rows 1,2,3,7,14 (\"next level\")",
+      "reason": "Architecture Tier A (Clean Architecture, handles money or exceeds 15 KLoc) — the highest-stakes modules in the platform get the full rubric target, no partial credit on data model, lifecycle, authorisation, events, or tests."
+    },
+    "ai": {
+      "tier": "Tier-3",
+      "targetScore": ">=2 every row, >=2 on rows 1,2,3,7,14",
+      "reason": "Architecture Tier B (controller/service/dto/tests, no money/regulatory exposure) — real depth required on every row, but not the Tier-1 \"3 on the unrecoverable rows\" bar."
+    },
+    "analytics": {
+      "tier": "Tier-3",
+      "targetScore": ">=2 every row, >=2 on rows 1,2,3,7,14",
+      "reason": "Architecture Tier B (controller/service/dto/tests, no money/regulatory exposure) — real depth required on every row, but not the Tier-1 \"3 on the unrecoverable rows\" bar."
+    },
+    "api-platform": {
+      "tier": "Tier-4-exempt",
+      "targetScore": null,
+      "reason": "Platform/plane-2 infrastructure, not a plane-3 business module (Track E's own definition). The 16-row business rubric (approvals, CRUD depth, documents, etc.) does not meaningfully apply."
+    },
+    "blockchain": {
+      "tier": "Tier-3",
+      "targetScore": ">=2 every row, >=2 on rows 1,2,3,7,14",
+      "reason": "Architecture Tier B (controller/service/dto/tests, no money/regulatory exposure) — real depth required on every row, but not the Tier-1 \"3 on the unrecoverable rows\" bar."
+    },
+    "communication": {
+      "tier": "Tier-3",
+      "targetScore": ">=2 every row, >=2 on rows 1,2,3,7,14",
+      "reason": "Architecture Tier B (controller/service/dto/tests, no money/regulatory exposure) — real depth required on every row, but not the Tier-1 \"3 on the unrecoverable rows\" bar."
+    },
+    "crm": {
+      "tier": "Tier-1",
+      "targetScore": ">=2 every row, >=3 on rows 1,2,3,7,14 (\"next level\")",
+      "reason": "Architecture Tier A (Clean Architecture, handles money or exceeds 15 KLoc) — the highest-stakes modules in the platform get the full rubric target, no partial credit on data model, lifecycle, authorisation, events, or tests."
+    },
+    "devops": {
+      "tier": "Tier-4-exempt",
+      "targetScore": null,
+      "reason": "Platform/plane-2 infrastructure, not a plane-3 business module (Track E's own definition). The 16-row business rubric (approvals, CRUD depth, documents, etc.) does not meaningfully apply."
+    },
+    "documents": {
+      "tier": "Tier-3",
+      "targetScore": ">=2 every row, >=2 on rows 1,2,3,7,14",
+      "reason": "Architecture Tier B (controller/service/dto/tests, no money/regulatory exposure) — real depth required on every row, but not the Tier-1 \"3 on the unrecoverable rows\" bar."
+    },
+    "drive": {
+      "tier": "Tier-3",
+      "targetScore": ">=2 every row, >=2 on rows 1,2,3,7,14",
+      "reason": "Architecture Tier B (controller/service/dto/tests, no money/regulatory exposure) — real depth required on every row, but not the Tier-1 \"3 on the unrecoverable rows\" bar."
+    },
+    "ecommerce": {
+      "tier": "Tier-1",
+      "targetScore": ">=2 every row, >=3 on rows 1,2,3,7,14 (\"next level\")",
+      "reason": "Architecture Tier A (Clean Architecture, handles money or exceeds 15 KLoc) — the highest-stakes modules in the platform get the full rubric target, no partial credit on data model, lifecycle, authorisation, events, or tests."
+    },
+    "education": {
+      "tier": "Tier-3",
+      "targetScore": ">=2 every row, >=2 on rows 1,2,3,7,14",
+      "reason": "Architecture Tier B (controller/service/dto/tests, no money/regulatory exposure) — real depth required on every row, but not the Tier-1 \"3 on the unrecoverable rows\" bar."
+    },
+    "ext-gateway": {
+      "tier": "Tier-4-exempt",
+      "targetScore": null,
+      "reason": "Platform/plane-2 infrastructure, not a plane-3 business module (Track E's own definition). The 16-row business rubric (approvals, CRUD depth, documents, etc.) does not meaningfully apply."
+    },
+    "extension-registry": {
+      "tier": "Tier-4-exempt",
+      "targetScore": null,
+      "reason": "Platform/plane-2 infrastructure, not a plane-3 business module (Track E's own definition). The 16-row business rubric (approvals, CRUD depth, documents, etc.) does not meaningfully apply."
+    },
+    "field-service": {
+      "tier": "Tier-3",
+      "targetScore": ">=2 every row, >=2 on rows 1,2,3,7,14",
+      "reason": "Architecture Tier B (controller/service/dto/tests, no money/regulatory exposure) — real depth required on every row, but not the Tier-1 \"3 on the unrecoverable rows\" bar."
+    },
+    "finance": {
+      "tier": "Tier-1",
+      "targetScore": ">=2 every row, >=3 on rows 1,2,3,7,14 (\"next level\")",
+      "reason": "Architecture Tier A (Clean Architecture, handles money or exceeds 15 KLoc) — the highest-stakes modules in the platform get the full rubric target, no partial credit on data model, lifecycle, authorisation, events, or tests."
+    },
+    "fixed-assets": {
+      "tier": "Tier-1",
+      "targetScore": ">=2 every row, >=3 on rows 1,2,3,7,14 (\"next level\")",
+      "reason": "Architecture Tier A (Clean Architecture, handles money or exceeds 15 KLoc) — the highest-stakes modules in the platform get the full rubric target, no partial credit on data model, lifecycle, authorisation, events, or tests."
+    },
+    "healthcare": {
+      "tier": "Tier-3",
+      "targetScore": ">=2 every row, >=2 on rows 1,2,3,7,14",
+      "reason": "Architecture Tier B (controller/service/dto/tests, no money/regulatory exposure) — real depth required on every row, but not the Tier-1 \"3 on the unrecoverable rows\" bar."
+    },
+    "hr": {
+      "tier": "Tier-1",
+      "targetScore": ">=2 every row, >=3 on rows 1,2,3,7,14 (\"next level\")",
+      "reason": "Architecture Tier A (Clean Architecture, handles money or exceeds 15 KLoc) — the highest-stakes modules in the platform get the full rubric target, no partial credit on data model, lifecycle, authorisation, events, or tests."
+    },
+    "hr-advanced": {
+      "tier": "Tier-1",
+      "targetScore": ">=2 every row, >=3 on rows 1,2,3,7,14 (\"next level\")",
+      "reason": "Architecture Tier A (Clean Architecture, handles money or exceeds 15 KLoc) — the highest-stakes modules in the platform get the full rubric target, no partial credit on data model, lifecycle, authorisation, events, or tests."
+    },
+    "inventory": {
+      "tier": "Tier-1",
+      "targetScore": ">=2 every row, >=3 on rows 1,2,3,7,14 (\"next level\")",
+      "reason": "Architecture Tier A (Clean Architecture, handles money or exceeds 15 KLoc) — the highest-stakes modules in the platform get the full rubric target, no partial credit on data model, lifecycle, authorisation, events, or tests."
+    },
+    "localization": {
+      "tier": "Tier-3",
+      "targetScore": ">=2 every row, >=2 on rows 1,2,3,7,14",
+      "reason": "Architecture Tier B (controller/service/dto/tests, no money/regulatory exposure) — real depth required on every row, but not the Tier-1 \"3 on the unrecoverable rows\" bar."
+    },
+    "manufacturing": {
+      "tier": "Tier-1",
+      "targetScore": ">=2 every row, >=3 on rows 1,2,3,7,14 (\"next level\")",
+      "reason": "Architecture Tier A (Clean Architecture, handles money or exceeds 15 KLoc) — the highest-stakes modules in the platform get the full rubric target, no partial credit on data model, lifecycle, authorisation, events, or tests."
+    },
+    "marketplace": {
+      "tier": "Tier-3",
+      "targetScore": ">=2 every row, >=2 on rows 1,2,3,7,14",
+      "reason": "RECONCILIATION GAP: this module directory exists in unierp-api/src/modules but was absent from both Tier A and Tier B in the pre-existing architecture manifest. Defaulted to Tier-3 (the manifest's own stated default tier) rather than left unassigned. Needs a deliberate Tier A/B call."
+    },
+    "notifications": {
+      "tier": "Tier-3",
+      "targetScore": ">=2 every row, >=2 on rows 1,2,3,7,14",
+      "reason": "Architecture Tier B (controller/service/dto/tests, no money/regulatory exposure) — real depth required on every row, but not the Tier-1 \"3 on the unrecoverable rows\" bar."
+    },
+    "org-structure": {
+      "tier": "Tier-3",
+      "targetScore": ">=2 every row, >=2 on rows 1,2,3,7,14",
+      "reason": "RECONCILIATION GAP: this module directory exists in unierp-api/src/modules but was absent from both Tier A and Tier B in the pre-existing architecture manifest. Defaulted to Tier-3 (the manifest's own stated default tier) rather than left unassigned. Needs a deliberate Tier A/B call."
+    },
+    "outbox": {
+      "tier": "Tier-4-exempt",
+      "targetScore": null,
+      "reason": "Platform/plane-2 infrastructure, not a plane-3 business module (Track E's own definition). The 16-row business rubric (approvals, CRUD depth, documents, etc.) does not meaningfully apply."
+    },
+    "people": {
+      "tier": "Tier-1",
+      "targetScore": ">=2 every row, >=3 on rows 1,2,3,7,14 (\"next level\")",
+      "reason": "Architecture Tier A (Clean Architecture, handles money or exceeds 15 KLoc) — the highest-stakes modules in the platform get the full rubric target, no partial credit on data model, lifecycle, authorisation, events, or tests."
+    },
+    "pos": {
+      "tier": "Tier-1",
+      "targetScore": ">=2 every row, >=3 on rows 1,2,3,7,14 (\"next level\")",
+      "reason": "Architecture Tier A (Clean Architecture, handles money or exceeds 15 KLoc) — the highest-stakes modules in the platform get the full rubric target, no partial credit on data model, lifecycle, authorisation, events, or tests."
+    },
+    "procurement": {
+      "tier": "Tier-1",
+      "targetScore": ">=2 every row, >=3 on rows 1,2,3,7,14 (\"next level\")",
+      "reason": "Architecture Tier A (Clean Architecture, handles money or exceeds 15 KLoc) — the highest-stakes modules in the platform get the full rubric target, no partial credit on data model, lifecycle, authorisation, events, or tests."
+    },
+    "projects": {
+      "tier": "Tier-3",
+      "targetScore": ">=2 every row, >=2 on rows 1,2,3,7,14",
+      "reason": "Architecture Tier B (controller/service/dto/tests, no money/regulatory exposure) — real depth required on every row, but not the Tier-1 \"3 on the unrecoverable rows\" bar."
+    },
+    "pwa": {
+      "tier": "Tier-3",
+      "targetScore": ">=2 every row, >=2 on rows 1,2,3,7,14",
+      "reason": "Architecture Tier B (controller/service/dto/tests, no money/regulatory exposure) — real depth required on every row, but not the Tier-1 \"3 on the unrecoverable rows\" bar."
+    },
+    "real-estate": {
+      "tier": "Tier-3",
+      "targetScore": ">=2 every row, >=2 on rows 1,2,3,7,14",
+      "reason": "Architecture Tier B (controller/service/dto/tests, no money/regulatory exposure) — real depth required on every row, but not the Tier-1 \"3 on the unrecoverable rows\" bar."
+    },
+    "reporting": {
+      "tier": "Tier-3",
+      "targetScore": ">=2 every row, >=2 on rows 1,2,3,7,14",
+      "reason": "Architecture Tier B (controller/service/dto/tests, no money/regulatory exposure) — real depth required on every row, but not the Tier-1 \"3 on the unrecoverable rows\" bar."
+    },
+    "saas": {
+      "tier": "Tier-3",
+      "targetScore": ">=2 every row, >=2 on rows 1,2,3,7,14",
+      "reason": "Architecture Tier B (controller/service/dto/tests, no money/regulatory exposure) — real depth required on every row, but not the Tier-1 \"3 on the unrecoverable rows\" bar."
+    },
+    "saas-portal": {
+      "tier": "Tier-3",
+      "targetScore": ">=2 every row, >=2 on rows 1,2,3,7,14",
+      "reason": "Architecture Tier B (controller/service/dto/tests, no money/regulatory exposure) — real depth required on every row, but not the Tier-1 \"3 on the unrecoverable rows\" bar."
+    },
+    "sales": {
+      "tier": "Tier-1",
+      "targetScore": ">=2 every row, >=3 on rows 1,2,3,7,14 (\"next level\")",
+      "reason": "Architecture Tier A (Clean Architecture, handles money or exceeds 15 KLoc) — the highest-stakes modules in the platform get the full rubric target, no partial credit on data model, lifecycle, authorisation, events, or tests."
+    },
+    "saved-views": {
+      "tier": "Tier-3",
+      "targetScore": ">=2 every row, >=2 on rows 1,2,3,7,14",
+      "reason": "Architecture Tier B (controller/service/dto/tests, no money/regulatory exposure) — real depth required on every row, but not the Tier-1 \"3 on the unrecoverable rows\" bar."
+    },
+    "search": {
+      "tier": "Tier-3",
+      "targetScore": ">=2 every row, >=2 on rows 1,2,3,7,14",
+      "reason": "Architecture Tier B (controller/service/dto/tests, no money/regulatory exposure) — real depth required on every row, but not the Tier-1 \"3 on the unrecoverable rows\" bar."
+    },
+    "service-management": {
+      "tier": "Tier-3",
+      "targetScore": ">=2 every row, >=2 on rows 1,2,3,7,14",
+      "reason": "Architecture Tier B (controller/service/dto/tests, no money/regulatory exposure) — real depth required on every row, but not the Tier-1 \"3 on the unrecoverable rows\" bar."
+    },
+    "storage": {
+      "tier": "Tier-3",
+      "targetScore": ">=2 every row, >=2 on rows 1,2,3,7,14",
+      "reason": "Architecture Tier B (controller/service/dto/tests, no money/regulatory exposure) — real depth required on every row, but not the Tier-1 \"3 on the unrecoverable rows\" bar."
+    },
+    "subscriptions": {
+      "tier": "Tier-3",
+      "targetScore": ">=2 every row, >=2 on rows 1,2,3,7,14",
+      "reason": "Architecture Tier B (controller/service/dto/tests, no money/regulatory exposure) — real depth required on every row, but not the Tier-1 \"3 on the unrecoverable rows\" bar."
+    },
+    "supply-chain": {
+      "tier": "Tier-1",
+      "targetScore": ">=2 every row, >=3 on rows 1,2,3,7,14 (\"next level\")",
+      "reason": "Architecture Tier A (Clean Architecture, handles money or exceeds 15 KLoc) — the highest-stakes modules in the platform get the full rubric target, no partial credit on data model, lifecycle, authorisation, events, or tests."
+    },
+    "workflow": {
+      "tier": "Tier-3",
+      "targetScore": ">=2 every row, >=2 on rows 1,2,3,7,14",
+      "reason": "Architecture Tier B (controller/service/dto/tests, no money/regulatory exposure) — real depth required on every row, but not the Tier-1 \"3 on the unrecoverable rows\" bar."
+    }
+  },
+  "reconciliation": {
+    "generatedBy": "scripts/reconcile-module-tiers.mjs",
+    "realModuleCount": 46,
+    "staleManifestEntries": [
+      "builder",
+      "connect",
+      "onboarding",
+      "settings"
+    ],
+    "unlistedRealModulesFoundAtReconciliation": [
+      "extension-registry",
+      "marketplace",
+      "org-structure"
+    ]
+  }
+}

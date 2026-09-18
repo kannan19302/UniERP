@@ -1,0 +1,102 @@
+# Consumer-driven contracts (CDC) gate — J05, PLATFORM_ARCHITECTURE.md § 4.5 (M2).
+#
+# "A provider change that breaks any published consumer expectation fails the
+# provider's CI." scripts/ci/cdc-harness.mjs already does the real work
+# (replays every consumer's committed cdc/expectations.json against the
+# calling provider's actual exported surface) — it was simply never wired
+# into any workflow anywhere (confirmed: zero matches for "cdc-harness"
+# across every .github/workflows/*.yml in this whole polyrepo before this
+# phase) and its own PROVIDERS/CONSUMERS table still named pre-split monorepo
+# paths (apps/web, packages/sdk) that stopped existing the moment this
+# platform split into 30 repositories — so even a manual run found nothing.
+#
+# Reusable so any provider repo can call it, the same "the gate comes to the
+# code" pattern policy-gate.yml already uses. Checks out unierp-workspace
+# (for the script) plus every sibling provider/consumer repo the harness
+# itself declares, so a caller needs to supply nothing but its own checkout.
+#
+# Called like this, from a provider repo (e.g. unierp-design-system):
+#
+#   jobs:
+#     cdc:
+#       uses: kannan19302/unierp-workspace/.github/workflows/cdc-gate.yml@0bb9682d45d50e23e6de344d71f10ec1a909bf04
+
+name: CDC gate
+
+on:
+  workflow_call: {}
+
+jobs:
+  cdc:
+    runs-on: ubuntu-latest
+    steps:
+      # Checked out under its OWN real name — critically, this is the
+      # commit/PR actually under test, not a fresh clone of that repo's
+      # main branch. The clone loop below skips this name for exactly that
+      # reason: cloning over it would silently replace the change being
+      # verified with whatever is already on main, and the gate would
+      # verify nothing.
+      - name: Check out the calling provider (the commit under test)
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          path: unierp-workspace-siblings/.caller
+
+      - name: Check out the CDC harness
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: kannan19302/unierp-workspace
+          path: unierp-workspace-siblings/unierp-workspace
+
+      # Every OTHER provider and consumer the harness declares, cloned
+      # (not actions/checkout — a matrix would fan this step out into
+      # separate parallel JOBS, each with only one repo, when this gate
+      # needs all of them present together in one job) into the same
+      # sibling layout declared by UniERP.code-workspace. GitHub repository
+      # names remain transport identifiers; checkout directories are the
+      # canonical estate names used by every local gate.
+      - name: Check out the other CDC providers and consumers
+        run: |
+          set -euo pipefail
+          while read -r remote local; do
+            if [ "$remote" = "${{ github.event.repository.name }}" ]; then
+              mv unierp-workspace-siblings/.caller "unierp-workspace-siblings/${local}"
+              continue
+            fi
+            if ! git clone --depth 1 "https://github.com/kannan19302/${remote}.git" \
+              "unierp-workspace-siblings/${local}"; then
+              echo "::warning::could not clone ${remote} into ${local} — the harness reports it as an open surface"
+            fi
+          done <<'REPOSITORIES'
+          unierp-contracts unierp-contracts
+          unierp-kernel kernel
+          unierp-sdk sdk
+          unierp-extension-api extension-api
+          unierp-sandbox sandbox
+          unierp-framework framework
+          unierp-data data
+          unierp-shared shared
+          unierp-auth auth
+          unierp-design-system design-system
+          unierp-web tenant-apps
+          unierp-console provider-admin-os
+          unierp-developer developer-platform
+          unierp-api api
+          unierp-idp idp
+          unierp-extensions extensions
+          REPOSITORIES
+          test ! -d unierp-workspace-siblings/.caller || {
+            echo "::error::calling repository is not declared in the CDC estate map"
+            exit 1
+          }
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: "22"
+
+      - name: Install the harness's own dependency (typescript)
+        working-directory: unierp-workspace-siblings/unierp-workspace
+        run: npm install typescript@5.9.3 --no-save
+
+      - name: CDC gate — replay every consumer expectation against this provider
+        working-directory: unierp-workspace-siblings/unierp-workspace
+        run: node scripts/ci/cdc-harness.mjs

@@ -1,0 +1,59 @@
+name: Choreography Bot (M3)
+
+# Per PLATFORM_ARCHITECTURE.md M3
+# "A bot that automatically coordinates multi-repo changes via changesets.
+# In the polyrepo future, a PR in unierp-contracts will trigger branch creation
+# in unierp-api, unierp-web, etc., run their CIs against the new contracts,
+# and link the PRs."
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  choreography:
+    name: M3 Choreography Sync
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      
+      - name: Setup Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 22
+          cache: 'pnpm'
+          
+      - name: Install pnpm
+        uses: pnpm/action-setup@a3252b78c470c02df07e9d59298aecedc3ccdd6d
+        with:
+          version: 9
+          
+      - name: Run Choreography Sync
+        run: |
+          echo "M3 Choreography bot activated"
+          # In the current monorepo phase, this asserts that cross-layer changes 
+          # have matching versions and valid boundaries.
+          node scripts/ci/check-module-boundaries.mjs
+          
+          # Check for missing changeset files if L0/L1 is touched.
+          #
+          # `grep -q` inside an `if` is used deliberately instead of capturing the
+          # output with `|| true`. A no-match exit status is normal for grep, but
+          # `|| true` is banned repo-wide by the policy gate — it is the exact
+          # construct that lets a real failure pass silently, and a gate cannot
+          # distinguish a benign use from a harmful one. Testing the status
+          # directly needs no suppression at all.
+          if git diff --name-only origin/main | grep -q "^packages/contracts"; then
+            echo "L0 contracts changed. M3 bot would cross-repo sync this."
+            # Enforce changeset exists
+            if ! git diff --name-only origin/main | grep -q "^.changeset/"; then
+              echo "::error::Changes to packages/contracts require a .changeset file for M3 coordination."
+              exit 1
+            fi
+          fi

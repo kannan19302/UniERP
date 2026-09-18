@@ -1,0 +1,2823 @@
+[
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\ab-testing.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "ab-tests",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\ab-testing.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "ab-tests/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\ab-testing.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "ab-tests",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\ab-testing.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "ab-tests/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\ab-testing.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "ab-tests/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\ab-testing.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "ab-tests/:id/start",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\ab-testing.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "ab-tests/:id/variants",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\ab-testing.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "ab-tests/:id/variants",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\ab-testing.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "ab-tests/variants/:variantId",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\ab-testing.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "ab-tests/variants/:variantId",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\ab-testing.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "ab-tests/:id/analyze",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\ab-testing.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "segments",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\ab-testing.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "segments/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\ab-testing.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "segments",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\ab-testing.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "segments/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\ab-testing.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "segments/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\ab-testing.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "ab-testing/dashboard",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\advanced-forms.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "advanced-forms",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\advanced-forms.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "advanced-forms/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\advanced-forms.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "advanced-forms",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\advanced-forms.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "advanced-forms/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\advanced-forms.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "advanced-forms/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\advanced-forms.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "advanced-forms/:id/calculated-fields",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\advanced-forms.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "advanced-forms/:id/pages",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\advanced-forms.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "advanced-forms/:id/analytics",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\advanced-forms.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "advanced-forms/:id/versions",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\advanced-forms.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "advanced-forms/:id/versions",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\advanced-forms.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "advanced-forms/:id/preview",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\api-builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "api-endpoints",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\api-builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "api-endpoints/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\api-builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "api-endpoints",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\api-builder.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "api-endpoints/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\api-builder.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "api-endpoints/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\api-builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "api-endpoints/:id/mappings",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\api-builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "api-endpoints/:id/test",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\api-builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "api-endpoints/:id/test-runs",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\api-builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "api-endpoints/:id/docs",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\api-builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "api-builder/dashboard",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\artifact-revisions.controller.ts",
+    "method": "GET",
+    "controllerPath": "dev",
+    "methodPath": "library/artifacts/:artifactId/revisions",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\artifact-revisions.controller.ts",
+    "method": "GET",
+    "controllerPath": "dev",
+    "methodPath": "library/artifacts/:artifactId/revisions/:revision",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\artifact-revisions.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev",
+    "methodPath": "library/artifacts/:artifactId/revisions",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\artifact-revisions.controller.ts",
+    "method": "GET",
+    "controllerPath": "dev",
+    "methodPath": "projects/:projectId/artifacts/:artifactId/revisions",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\artifact-revisions.controller.ts",
+    "method": "GET",
+    "controllerPath": "dev",
+    "methodPath": "projects/:projectId/artifacts/:artifactId/revisions/:revision",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\artifact-revisions.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev",
+    "methodPath": "projects/:projectId/artifacts/:artifactId/revisions",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\bpmn.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "bpmn/processes",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\bpmn.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "bpmn/processes/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\bpmn.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "bpmn/processes",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\bpmn.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "bpmn/processes/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\bpmn.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "bpmn/processes/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\bpmn.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "bpmn/processes/:id/gateways",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\bpmn.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "bpmn/processes/:id/timers",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\bpmn.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "bpmn/processes/:id/execute",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\bpmn.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "bpmn/processes/:id/instances",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\bpmn.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "bpmn/dashboard",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\bpmn.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "bpmn/instances/:id/escalate",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\bpmn.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "bpmn/processes/import",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\bpmn.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "bpmn/processes/:id/export",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\bpmn.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "bpmn/processes/:id/execute-bpmn",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\bpmn.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "bpmn/instances/:id/advance",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-deep-expansion.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder/deep-expansion",
+    "methodPath": "data-models",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-deep-expansion.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder/deep-expansion",
+    "methodPath": "data-models",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-deep-expansion.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder/deep-expansion",
+    "methodPath": "data-models/:id/fields",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-deep-expansion.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder/deep-expansion",
+    "methodPath": "business-rules",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-deep-expansion.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder/deep-expansion",
+    "methodPath": "business-rules",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-deep-expansion.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder/deep-expansion",
+    "methodPath": "business-rules/:id/execute",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-deep-expansion.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder/deep-expansion",
+    "methodPath": "integration-connectors",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-deep-expansion.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder/deep-expansion",
+    "methodPath": "integration-connectors/:id/integrations",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-deep-expansion.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder/deep-expansion",
+    "methodPath": "document-templates",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-deep-expansion.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder/deep-expansion",
+    "methodPath": "document-templates/:id/render",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-deep-expansion.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder/deep-expansion",
+    "methodPath": "chatbots",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-deep-expansion.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder/deep-expansion",
+    "methodPath": "reports",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-deep-expansion.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder/deep-expansion",
+    "methodPath": "dashboards",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-deep-expansion.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder/deep-expansion",
+    "methodPath": "event-definitions",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-deep-expansion.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder/deep-expansion",
+    "methodPath": "custom-apis",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-enterprise.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder/enterprise",
+    "methodPath": "builder-analytics",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-enterprise.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder/enterprise",
+    "methodPath": "usage-metrics",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-enterprise.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder/enterprise",
+    "methodPath": "template-performance",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-enterprise.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder/enterprise",
+    "methodPath": "governance",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-enterprise.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder/enterprise",
+    "methodPath": "dashboard-kpis",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-expansion.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "form-templates",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-expansion.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "form-templates/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-expansion.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "form-templates",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-expansion.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "form-templates/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-expansion.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "form-templates/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-expansion.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "form-fields",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-expansion.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "form-templates/:templateId/submissions",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-expansion.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "form-templates/:templateId/submit",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-expansion.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "form-templates/:templateId/analytics",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-expansion.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "page-templates",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-expansion.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "page-templates/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-expansion.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "page-templates",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-expansion.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "page-templates/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-expansion.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "page-templates/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-expansion.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "workflow-definitions",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-expansion.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "workflow-definitions/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-expansion.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "workflow-definitions",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-expansion.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "workflow-definitions/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-expansion.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "workflow-definitions/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-expansion.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "workflow-steps",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-expansion.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "workflow-definitions/:id/executions",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder-manifests.controller.ts",
+    "method": "GET",
+    "controllerPath": "dev/builders",
+    "methodPath": ":kind",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "stats",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "recent-items",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "forms",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "forms/stats",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "forms/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "forms",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "forms/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "forms/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "forms/:id/publish",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "workflows",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "workflows/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "workflows",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "workflows/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "workflows/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "workflows/:id/execute",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "workflows/:id/runs",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "workflows/:id/runs/:runId",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "workflows/:id/runs/:runId/steps",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "workflows/:id/runs/:runId/resume",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "workflows/:id/runs/:runId/steps/:stepId/approve",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "workflows/:id/executions",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "dashboards/global-stats",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "dashboards",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "dashboards/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "dashboards",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "dashboards/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "dashboards/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "modules",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "modules/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "modules/generate",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "components/:id/generate",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "modules",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "modules/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "modules/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "modules/:id/full",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "modules/:id/stats",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "modules/:id/components",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "modules/:id/components/:componentId",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "modules/:id/pages",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "modules/:id/pages/:pageId",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "modules/:id/pages/:pageId",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "modules/:id/data-models",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "modules/:id/data-models/:dataModelId",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "modules/:id/test",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "modules/:id/publish",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "modules/:id/unpublish",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "modules/:id/releases",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "modules/:id/releases/:releaseId/diff",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "modules/:id/rollback",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "marketplace",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "marketplace/install",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "marketplace/uninstall",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "automation-rules",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "automation-rules/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "automation-rules",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "automation-rules/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "automation-rules/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "automation-rules/:id/test",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "data-imports",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "data-imports",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "data-imports/:id/execute",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "web-pages",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "web-pages/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "web-pages",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "web-pages/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "web-pages/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "blog-posts",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "blog-posts/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "blog-posts",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "blog-posts/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "blog-posts/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "web-assets",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "web-assets",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "web-assets/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "web-assets/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "web-templates",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "web-templates",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "web-templates/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "web-templates/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "web-menus",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "web-menus",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "web-menus/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "web-menus/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "web-seo",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "web-seo",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "web-seo/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "web-seo/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "analytics",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "ai-generate",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "schema-registries",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "schema-registries/:slug",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "schema-registries",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "schema-registries/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "schema-registries/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "page-registries",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "page-registries/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "page-registries/:module/:slug",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "page-registries",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "page-registries/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "page-registries/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "page-registries/:id/restore",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "page-registries/:id/publish",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "custom-records/:schemaId",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "custom-records/:schemaId/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "custom-records/:schemaId",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "custom-records/:schemaId/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "custom-records/:schemaId/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "web-settings",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "web-settings",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "web-collections/presets",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "web-collections",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "web-collections/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "web-collections",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "web-collections/seed",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "web-collections/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "web-collections/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "web-collections/:id/items",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "web-collections/:id/items/:itemId",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "web-collections/:id/items",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "web-collections/:id/items/:itemId",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "web-collections/:id/items/:itemId",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "web-form-submissions",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "web-form-submissions/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "web-form-submissions/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "web-orders",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "web-orders/stats",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "web-orders/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "web-orders/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "nav-overlay/:moduleId",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "PUT",
+    "controllerPath": "builder",
+    "methodPath": "nav-overlay/:moduleId",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "nav-overlay/:moduleId",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "nav-overlay/:moduleId/submodules",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "nav-overlay/:moduleId/submodules/:slug",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "widgets",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "widgets",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "widgets/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "git/config",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "git/config",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "git/diff",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "git/commit",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "native-builds",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "native-builds/trigger",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "native-builds/:id/logs",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\data-objects.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder/data-objects",
+    "methodPath": ":id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\data-objects.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder/data-objects",
+    "methodPath": ":id/fields",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\data-objects.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder/data-objects",
+    "methodPath": ":id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\dev-home.controller.ts",
+    "method": "GET",
+    "controllerPath": "dev",
+    "methodPath": "home",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\dev-home.controller.ts",
+    "method": "GET",
+    "controllerPath": "dev",
+    "methodPath": "projects/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\dev-home.controller.ts",
+    "method": "GET",
+    "controllerPath": "dev",
+    "methodPath": "recents",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\dev-home.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev",
+    "methodPath": "recents/:projectId",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\dev-home.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev",
+    "methodPath": "apps",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\dev-home.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev",
+    "methodPath": "sites",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\developer-audit.controller.ts",
+    "method": "GET",
+    "controllerPath": "dev/projects",
+    "methodPath": ":projectId/audit-events",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\developer-builds.controller.ts",
+    "method": "GET",
+    "controllerPath": "dev/projects",
+    "methodPath": ":projectId/build-jobs",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\developer-builds.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev/projects",
+    "methodPath": ":projectId/build-jobs",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\developer-entitlements.controller.ts",
+    "method": "GET",
+    "controllerPath": "dev/governance",
+    "methodPath": "entitlements",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\developer-entitlements.controller.ts",
+    "method": "GET",
+    "controllerPath": "dev/governance",
+    "methodPath": "workload-usage",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\developer-entitlements.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev/governance",
+    "methodPath": "entitlements",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\developer-packages.controller.ts",
+    "method": "GET",
+    "controllerPath": "dev",
+    "methodPath": "packages",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\developer-packages.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev",
+    "methodPath": "packages",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\developer-packages.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev",
+    "methodPath": "signing-keys",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\developer-packages.controller.ts",
+    "method": "GET",
+    "controllerPath": "dev",
+    "methodPath": "signing-keys",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\developer-packages.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev",
+    "methodPath": "signing-keys/:keyId/revoke",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\developer-packages.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev",
+    "methodPath": "packages/:packageId/versions",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\developer-packages.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev",
+    "methodPath": "packages/:packageId/versions/:packageVersionId/publish",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\developer-packages.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev",
+    "methodPath": "packages/:packageId/versions/:packageVersionId/certify",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\developer-packages.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev",
+    "methodPath": "packages/:packageId/versions/:packageVersionId/promote-marketplace",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\developer-packages.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev",
+    "methodPath": "packages/:packageId/suspend",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\developer-packages.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev",
+    "methodPath": "packages/:packageId/reinstate",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\developer-packages.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev",
+    "methodPath": "projects/:projectId/installations",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\developer-packages.controller.ts",
+    "method": "GET",
+    "controllerPath": "dev",
+    "methodPath": "projects/:projectId/installations",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\developer-packages.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev",
+    "methodPath": "projects/:projectId/installations/:installationId/upgrade-impact",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\developer-packages.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev",
+    "methodPath": "projects/:projectId/installations/:installationId/upgrade",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\developer-packages.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "dev",
+    "methodPath": "projects/:projectId/installations/:installationId",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\environment-bindings.controller.ts",
+    "method": "GET",
+    "controllerPath": "dev/projects/:projectId/environment-bindings",
+    "methodPath": "environment-options",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\environment-bindings.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev/projects/:projectId/environment-bindings",
+    "methodPath": ":environmentId/:key/verify",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\environment-bindings.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "dev/projects/:projectId/environment-bindings",
+    "methodPath": ":environmentId/:key",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\etl.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "etl/data-sources",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\etl.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "etl/data-sources",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\etl.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "etl/data-sources/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\etl.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "etl/data-sources/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\etl.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "etl/pipelines",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\etl.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "etl/pipelines/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\etl.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "etl/pipelines",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\etl.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "etl/pipelines/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\etl.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "etl/pipelines/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\etl.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "etl/pipelines/:id/execute",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\etl.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "etl/pipelines/:id/jobs",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\etl.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "etl/pipelines/:id/preview",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\etl.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "etl/dashboard",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\governance.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder/governance",
+    "methodPath": "modules/:moduleId/environments",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\governance.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder/governance",
+    "methodPath": "modules/:moduleId/promote-staging",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\governance.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder/governance",
+    "methodPath": "modules/:moduleId/promote-production",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\governance.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder/governance",
+    "methodPath": "modules/:moduleId/permissions",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\governance.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder/governance",
+    "methodPath": "modules/:moduleId/permissions",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\governance.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder/governance",
+    "methodPath": "modules/:moduleId/compare",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\governance.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder/governance",
+    "methodPath": "scripts/execute",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\governance.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder/governance",
+    "methodPath": "scripts/validate",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\governance.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder/governance",
+    "methodPath": "forms/:formId/hook",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\governance.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder/governance",
+    "methodPath": "hooks",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\governance.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder/governance",
+    "methodPath": "query/run",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\governance.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder/governance",
+    "methodPath": "summary",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\governance.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder/governance",
+    "methodPath": "logs",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\governance.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder/governance",
+    "methodPath": "connectors",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\governance.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder/governance",
+    "methodPath": "connectors",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\governance.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder/governance",
+    "methodPath": "connectors/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\governance.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder/governance",
+    "methodPath": "marketplace",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\governance.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder/governance",
+    "methodPath": "permissions",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\governance.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder/governance",
+    "methodPath": "permissions",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\governance.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder/governance",
+    "methodPath": "permissions/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\library.controller.ts",
+    "method": "GET",
+    "controllerPath": "library",
+    "methodPath": ":artifactId/attachments",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\library.controller.ts",
+    "method": "POST",
+    "controllerPath": "library",
+    "methodPath": ":artifactId/publish-to",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\library.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "library",
+    "methodPath": ":artifactId/publish-to/:projectId",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\mobile-builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "mobile-apps",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\mobile-builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "mobile-apps/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\mobile-builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "mobile-apps",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\mobile-builder.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "mobile-apps/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\mobile-builder.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "mobile-apps/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\mobile-builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "mobile-apps/:id/screens",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\mobile-builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "mobile-apps/:id/screens",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\mobile-builder.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "mobile-apps/screens/:screenId",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\mobile-builder.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "mobile-apps/screens/:screenId",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\mobile-builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "mobile-apps/:id/push-config",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\mobile-builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "mobile-apps/:id/push-config",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\mobile-builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "mobile-apps/:id/preview",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\mobile-builder.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "mobile-apps/:id/deploy",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\mobile-builder.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "mobile-apps/:id/builds",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\project-artifacts.controller.ts",
+    "method": "GET",
+    "controllerPath": "dev",
+    "methodPath": "artifacts/reconcile",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\project-artifacts.controller.ts",
+    "method": "GET",
+    "controllerPath": "dev",
+    "methodPath": "deprecations/usage",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\project-artifacts.controller.ts",
+    "method": "GET",
+    "controllerPath": "dev",
+    "methodPath": "projects/:projectId/artifacts",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\project-change-sets.controller.ts",
+    "method": "GET",
+    "controllerPath": "dev/projects",
+    "methodPath": ":projectId/change-sets",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\project-change-sets.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev/projects",
+    "methodPath": ":projectId/change-sets",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\project-change-sets.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev/projects",
+    "methodPath": ":projectId/change-sets/:id/submit",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\project-change-sets.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev/projects",
+    "methodPath": ":projectId/change-sets/:id/reviews",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\project-change-sets.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev/projects",
+    "methodPath": ":projectId/change-sets/:id/merge",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\project-preview-resolve.controller.ts",
+    "method": "GET",
+    "controllerPath": "dev/previews",
+    "methodPath": ":token",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\project-preview-resolve.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev/previews",
+    "methodPath": ":token/submissions",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\project-preview.controller.ts",
+    "method": "GET",
+    "controllerPath": "dev/projects",
+    "methodPath": ":projectId/previews",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\project-preview.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev/projects",
+    "methodPath": ":projectId/previews",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\project-preview.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "dev/projects",
+    "methodPath": ":projectId/previews/:previewId",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\project-releases.controller.ts",
+    "method": "GET",
+    "controllerPath": "dev/projects",
+    "methodPath": ":projectId/releases",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\project-releases.controller.ts",
+    "method": "GET",
+    "controllerPath": "dev/projects",
+    "methodPath": ":projectId/validations",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\project-releases.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev/projects",
+    "methodPath": ":projectId/validations",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\project-releases.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev/projects",
+    "methodPath": ":projectId/releases/prepare",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\project-releases.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev/projects",
+    "methodPath": ":projectId/releases",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\project-releases.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev/projects",
+    "methodPath": ":projectId/releases/:releaseId/approvals",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\project-releases.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev/projects",
+    "methodPath": ":projectId/deployments",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\project-releases.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev/projects",
+    "methodPath": ":projectId/deployments/:deploymentId/rollback",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\project-releases.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev/projects",
+    "methodPath": ":projectId/artifacts/pin",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\project-source-export.controller.ts",
+    "method": "GET",
+    "controllerPath": "dev/projects",
+    "methodPath": ":projectId/source-export",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\project-source-import.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev/projects",
+    "methodPath": ":projectId/source-import/plan",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\project-source-import.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev/projects",
+    "methodPath": ":projectId/source-import/apply",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\project-test-runs.controller.ts",
+    "method": "GET",
+    "controllerPath": "dev/projects",
+    "methodPath": ":projectId/test-runs",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\project-test-runs.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev/projects",
+    "methodPath": ":projectId/test-runs",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\rules-engine.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "decision-tables",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\rules-engine.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "decision-tables/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\rules-engine.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "decision-tables",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\rules-engine.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "decision-tables/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\rules-engine.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "decision-tables/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\rules-engine.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "rule-sets",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\rules-engine.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "rule-sets/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\rules-engine.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "rule-sets",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\rules-engine.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "rule-sets/:id/rules",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\rules-engine.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "rule-sets/:id/evaluate",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\rules-engine.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "rules-engine/analytics",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\rules-engine.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "rule-sets/:id/version",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\runtime-cell-assignment.controller.ts",
+    "method": "GET",
+    "controllerPath": "dev/runtime-cells",
+    "methodPath": "placement",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\runtime-cell-assignment.controller.ts",
+    "method": "GET",
+    "controllerPath": "dev/runtime-cells",
+    "methodPath": "history",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\runtime-cell-assignment.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev/runtime-cells",
+    "methodPath": "relocate",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\runtime-manifest.controller.ts",
+    "method": "GET",
+    "controllerPath": "dev/runtime",
+    "methodPath": "environments/:environmentId/projects/:projectId/manifest",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\runtime-manifest.controller.ts",
+    "method": "POST",
+    "controllerPath": "dev/runtime",
+    "methodPath": "environments/:environmentId/projects/:projectId/submissions",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\theme-manager.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "themes",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\theme-manager.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "themes/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\theme-manager.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "themes",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\theme-manager.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder",
+    "methodPath": "themes/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\theme-manager.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder",
+    "methodPath": "themes/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\theme-manager.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "themes/:id/tokens",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\theme-manager.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "themes/:id/tokens",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\theme-manager.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "themes/:id/preview",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\theme-manager.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "themes/:id/export",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\theme-manager.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder",
+    "methodPath": "themes/:id/snapshots",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\theme-manager.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "themes/:id/snapshots",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\theme-manager.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder",
+    "methodPath": "theme-manager/dashboard",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\web-public.controller.ts",
+    "method": "GET",
+    "controllerPath": "public/web",
+    "methodPath": "site",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\web-public.controller.ts",
+    "method": "GET",
+    "controllerPath": "public/web",
+    "methodPath": "page",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\web-public.controller.ts",
+    "method": "POST",
+    "controllerPath": "public/web",
+    "methodPath": "chat",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\web-public.controller.ts",
+    "method": "GET",
+    "controllerPath": "public/web",
+    "methodPath": "collections/:slug",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\web-public.controller.ts",
+    "method": "GET",
+    "controllerPath": "public/web",
+    "methodPath": "collections/:slug/:itemSlug",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\web-public.controller.ts",
+    "method": "POST",
+    "controllerPath": "public/web",
+    "methodPath": "forms/submit",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\web-public.controller.ts",
+    "method": "POST",
+    "controllerPath": "public/web",
+    "methodPath": "checkout",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\web-studio.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder/web-studio",
+    "methodPath": "sites",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\web-studio.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder/web-studio",
+    "methodPath": "sites/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\web-studio.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder/web-studio",
+    "methodPath": "sites",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\web-studio.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder/web-studio",
+    "methodPath": "sites/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\web-studio.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder/web-studio",
+    "methodPath": "sites/:id",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\web-studio.controller.ts",
+    "method": "POST",
+    "controllerPath": "builder/web-studio",
+    "methodPath": "sites/:id/domains",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\web-studio.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder/web-studio",
+    "methodPath": "sites/:id/domains/:domainId",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\web-studio.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder/web-studio",
+    "methodPath": "sites/:id/pages",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\web-studio.controller.ts",
+    "method": "PUT",
+    "controllerPath": "builder/web-studio",
+    "methodPath": "sites/:id/pages",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\web-studio.controller.ts",
+    "method": "DELETE",
+    "controllerPath": "builder/web-studio",
+    "methodPath": "sites/:id/pages/:pageId",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\web-studio.controller.ts",
+    "method": "GET",
+    "controllerPath": "builder/web-studio",
+    "methodPath": "sites/:id/chatbot",
+    "runtimeVerified": false
+  },
+  {
+    "source": "D:\\UniERP\\api\\src\\modules\\developer\\controllers\\web-studio.controller.ts",
+    "method": "PATCH",
+    "controllerPath": "builder/web-studio",
+    "methodPath": "sites/:id/chatbot",
+    "runtimeVerified": false
+  }
+]

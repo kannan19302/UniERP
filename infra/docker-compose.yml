@@ -1,0 +1,190 @@
+# ============================================================
+# UniERP Master Infrastructure & Core Backend Services (L7 · unierp-infra)
+# ============================================================
+#
+# Ports Summary:
+#   4000  platform-wizard       Master SSO Gateway & Platform Switcher
+#   5432  postgres              PostgreSQL 16 + pgvector
+#   6379  redis                 Redis 7 Alpine
+#   8025  mailpit               Local transactional-email inbox (SMTP 1025)
+#   9000  minio                 MinIO S3 Storage (9001 Web Console)
+#   6432  pgbouncer             PgBouncer Pooler (--profile pooling)
+#   11434 ollama                Local AI Inference (--profile ai)
+# ============================================================
+
+services:
+  # ──────────────────────────────────────────────
+  # Master SSO Platform Wizard & Gateway (port 4000)
+  # ──────────────────────────────────────────────
+  platform-wizard:
+    build:
+      context: ./platform-wizard
+      dockerfile: Dockerfile
+      target: dev
+    container_name: platform-wizard
+    restart: unless-stopped
+    profiles: ["deprecated-wizard"]
+    mem_limit: 512m
+    environment:
+      PORT: "4000"
+      HOST: "0.0.0.0"
+      NODE_ENV: development
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./platform-wizard/public:/app/public
+      - ./platform-wizard/server.mjs:/app/server.mjs
+    healthcheck:
+      test: ["CMD-SHELL", "node -e \"fetch('http://localhost:4000/api/auth/session').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))\""]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  # ──────────────────────────────────────────────
+  # PostgreSQL 16 (+ pgvector, for local-first AI stack)
+  # ──────────────────────────────────────────────
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: unerp_dev
+      POSTGRES_USER: unerp
+      POSTGRES_PASSWORD: unerp_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    command:
+      - postgres
+      - -c
+      - max_connections=300
+      - -c
+      - shared_buffers=256MB
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U unerp -d unerp_dev"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  # ──────────────────────────────────────────────
+  # Redis 7 — Cache, BullMQ queues, rate-limit counters
+  # ──────────────────────────────────────────────
+  redis:
+    image: redis:7-alpine
+    container_name: redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  # ──────────────────────────────────────────────
+  # Mailpit — deterministic local auth-email delivery
+  # ──────────────────────────────────────────────
+  # Development only: messages remain on this workstation and are visible at
+  # http://localhost:8025. Production uses Resend/Brevo/SMTP credentials and
+  # must never expose a capture inbox.
+  mailpit:
+    image: axllent/mailpit:v1.31.0
+    container_name: mailpit
+    restart: unless-stopped
+    mem_limit: 256m
+    environment:
+      MP_MAX_MESSAGES: "500"
+      MP_DATABASE: /data/mailpit.db
+    ports:
+      - "127.0.0.1:1025:1025"
+      - "127.0.0.1:8025:8025"
+    volumes:
+      - mailpit_data:/data
+    healthcheck:
+      test: ["CMD", "/mailpit", "readyz"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  # ──────────────────────────────────────────────
+  # MinIO — S3-compatible Object Storage
+  # ──────────────────────────────────────────────
+  minio:
+    image: minio/minio:latest
+    container_name: minio
+    restart: unless-stopped
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    ports:
+      - "9000:9000" # S3 API
+      - "9001:9001" # Web console
+    volumes:
+      - minio_data:/data
+    command: server /data --console-address ":9001"
+    healthcheck:
+      test: ["CMD", "mc", "ready", "local"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  # ──────────────────────────────────────────────
+  # PgBouncer — Transaction-mode pooling (--profile pooling)
+  # ──────────────────────────────────────────────
+  pgbouncer:
+    image: edoburu/pgbouncer
+    container_name: pgbouncer
+    restart: unless-stopped
+    profiles: ["pooling"]
+    environment:
+      DB_HOST: postgres
+      DB_NAME: unerp_dev
+      DB_USER: unerp
+      DB_PASSWORD: unerp_password
+      POOL_MODE: transaction
+      AUTH_TYPE: scram-sha-256
+      LISTEN_PORT: "6432"
+    ports:
+      - "6432:6432"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  # ──────────────────────────────────────────────
+  # Ollama — Local-first AI inference (--profile ai)
+  # ──────────────────────────────────────────────
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    restart: unless-stopped
+    profiles: ["ai"]
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+networks:
+  default:
+    name: unierp-network
+    driver: bridge
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+  minio_data:
+    driver: local
+  mailpit_data:
+    driver: local
+  ollama_data:
+    driver: local

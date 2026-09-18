@@ -1,0 +1,412 @@
+[
+  {
+    "Algorithm": "SHA256",
+    "Hash": "65BA6EEF68FCCF845CF23A86F779C68D3777E8EDEB3A25AFA5BB75C214208D3E",
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\01_projects.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "3C0636E29802A17B6814C89E23E57A6193515E852417E7E8D1F653792F439152",
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\02_create_project.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "A488F1EE88652F1C7CE92E9D698F3BAD5FBB099EA60AE9F6BB26F6EB2C48ED44",
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\03_project_overview.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "805D347F7A35254E6ACB2E4DC630084C05F2E1DFA836DAE2B8FE2C0CA2AD1612",
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\04_website_builder.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "99A42BBF8CE109600A6DE0198BF50DD55DABE6F3D71A596875FF56406117E544",
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\05_app_builder.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "0D84AD95F92D9231D70272F5E30556794638E722DF39773B72180E617D130C3D",
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\06_standalone_builders.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "1AF5FD842F4A97B4753255F68DA91480E2ADD75A129ECE66EC86FFD22FB7AE89",
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\07_resource_library.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "82013E0EEEC555D4A6963E90E880021B99A3D8106F25976DAAFDF73C1315A7FE",
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\08_component_builder.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "D1F6A93634D301973E7879C4343E03AFE0A68853A99A8648A56FA7660F1BFA0B",
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\09_link_to_project.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "854F18FED9FC0363E670323A17289CBCB7A77D5557DDA41E40F133FD967F359F",
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\10_data_integrations.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "9D44971AB79A521783B24BC13CDA5DC47DA5588ABB35847BD94FE1D13E2B4D94",
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\11_workflow_builder.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "11458868FE02344D54CBCC6B511727A6F16C8C000A6CC95AF1024B5F82C48175",
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\12_responsive_preview.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "D598BB91CF06AD80135A6A9ECA34864A0FB0E1A908B1963D76A3A611305C2646",
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\13_releases.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "D49BF537652BA754977A41C93AF291A5C08B2CFE249D26CB6B180F53C8F20846",
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\14_project_settings.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "886A684F65A0E39E097C4DC630DCE30F34C75E75E8D079CD5033AA083585D156",
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\15_api_extensions.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "40DA15C9AF5FB0FA7CF1D58634A834B4DB2310A5BCD8ADBE223C446756F6042D",
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\16_navigation_states.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "1F51A6B291BDB1BC6D6150E34BA8FB89760422216A152E72832805468FA59604",
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\DESIGN_PLAN.md"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "34341B18ADBBF81F39F0D17983D818A453A7D3A854A51D4D86F571663251EC76",
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\PROMPTS.md"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "DBF52B8C362C66CEA1F9F883946E98BC54D9EA6C05CCC09A6DA10278A68497A5",
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\README.md"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "7ED5DBEB5325ACD69120F431E5C5A1B0FAA64BF26345C8A1C6712824E118AC9A",
+    "Path": "D:\\UniERP\\docs\\designs\\developer-studio-strata-v1\\VERIFICATION.md"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "B1379BED1FD98BADCCFFC2FE7E5BBDEBC0EF1061095FF1C68E5C573B5AC61030",
+    "Path": "D:\\UniERP\\docs\\designs\\finance\\01_executive_dashboard.jpg"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "C47CB6BE48C828703C797DF0C65F05B5A1BB543C606BA4A03555CF48E1DB3AFF",
+    "Path": "D:\\UniERP\\docs\\designs\\finance\\02_general_ledger.jpg"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "FBA2AE53F2513E690E43346741EFAFC2C719DE7427D3AF9DD81A04CBC9813107",
+    "Path": "D:\\UniERP\\docs\\designs\\finance\\03_accounts_receivable.jpg"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "160D7FD241ACDC7018DFC4C047506B96DF2A01D78EA36275C50B8A71DE047D9F",
+    "Path": "D:\\UniERP\\docs\\designs\\finance\\04_accounts_payable.jpg"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "E8CEC11AA7566575990391D8545D5E44BE5A3B0F3F2AD92C3DE21CCA72A875E0",
+    "Path": "D:\\UniERP\\docs\\designs\\finance\\05_banking_treasury.jpg"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "CB371154C614679F6F86E5142B29681A1552C3A2BC9B461F9C63EAE76EAD991E",
+    "Path": "D:\\UniERP\\docs\\designs\\finance\\06_fixed_assets.jpg"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "0FB23EE92681425F4B9C5088CA93EC3E64066926C6538ECBCE057B9A8F2E057E",
+    "Path": "D:\\UniERP\\docs\\designs\\finance\\07_tax_compliance.jpg"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "4043CDCB595283C51A6447C20D9E8191A6DBAC8DDA04CB5F7478B4A711C7356C",
+    "Path": "D:\\UniERP\\docs\\designs\\finance\\08_budget_planning.jpg"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "77A9F638B909F1093E6B8960B31CF26438A406C48B9323942A92D7BAA1674D64",
+    "Path": "D:\\UniERP\\docs\\designs\\finance\\09_financial_reports.jpg"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "9FD23E9E9F79E8276E9F2E2A5CA2F08B8B33EC94CBE2A8E5EBCCBE458719A3A7",
+    "Path": "D:\\UniERP\\docs\\designs\\finance\\10_financial_settings.jpg"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "9921316AE859F4ED3B349E19580C91CA63CDDA5C05467FFA813B3B2192CE51EA",
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\01_complete_shell.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "13A657497CC7AB571F7F9820693CAE0FFA81F327195BA233E38A571F2FFB4164",
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\02_sidebar_states.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "5D6AF267155600D39D4D7BA4991A2B4564ED2FC2E20B648100B9764BB9320905",
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\03_tabs_and_nav_states.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "430ED15DDAAAEC59FC53F55A590A6881E999FC2BC898D86DE33FD4BAE569A207",
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\PROMPTS.md"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "CB2CD8A9BAAE5175FFA42C16F254749ED4348B5D3ED67AC69A9CE9DBDD113F86",
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\README.md"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "7B572AA58B6E752249C9EE9C4A71C63B838453EFD8AADA30C71A0AD43779ECEB",
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\SCREENS_INDEX.md"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "69708CD1CB6C2C65FEDD10DE438268827D64473B81AD29A31A8DABD12CDBFC1C",
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\SCREENS_PROMPTS.md"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "AB9B9D0B6616B3EA2C08F7E7B85D69D504D7D6672C8A6E23397AC0799CB1E595",
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\screens\\01_executive_dashboard.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "9921316AE859F4ED3B349E19580C91CA63CDDA5C05467FFA813B3B2192CE51EA",
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\screens\\02_general_ledger.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "6050E546DB3549AEFD9C0BEBEF46E85262A945BB48B91095811BC81FE4AC84B5",
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\screens\\03_accounts_receivable.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "F00FC6E697FE8D045D555888E1F077A8847786FC7C49E499549EDF15C6EE8106",
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\screens\\04_accounts_payable.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "BF6C2C7DBAFEC2B7B484E12F58D1F78E5E5FFD57EF129973003009B060FACBBA",
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\screens\\05_banking_treasury.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "19A22DBD34A7B3767855F72CA472B95C5AAB99D6266FA130308ADC8F65F9A311",
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\screens\\06_fixed_assets.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "EA78B8B2C078A46F62F4DC1E416248CC0763CB4EF369A789067C99D25FEEC896",
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\screens\\07_tax_compliance.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "ECC2F79F954408C1047D33BE6854B5108EEFBC074CBAD62752BCFAEB6C3DCBDE",
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\screens\\08_budget_planning.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "D5865B43602C4A06200BC674279D560690DC5319F7D4CB513FA97A5249FC8085",
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\screens\\09_financial_reports.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "2D6D81F30AC316516BE828E17BF04573DE1F49F8730540EF51EFD4AF0513057E",
+    "Path": "D:\\UniERP\\docs\\designs\\finance-shell-strata-v2\\screens\\10_financial_settings.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "DFBCEC855FD223A4CF10875B50D21D00544D962414ABB47B583CA6C45515ADCD",
+    "Path": "D:\\UniERP\\docs\\designs\\finance-strata-light-v1\\01_executive_dashboard.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "4ED670C870BCBE429E2ED95A193ED7B9D0D0F75E3EA78B590D514AA850466AB4",
+    "Path": "D:\\UniERP\\docs\\designs\\finance-strata-light-v1\\02_general_ledger.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "6CB2BD1E00EC7E38D9746E6A3ACA247326C6D1E417B7F23FFAC77D939B5AC996",
+    "Path": "D:\\UniERP\\docs\\designs\\finance-strata-light-v1\\03_accounts_receivable_refined.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "7BB682F20E8CCA4C767F1583062C5C202BD6BA652506EB39890303D5A69E38C9",
+    "Path": "D:\\UniERP\\docs\\designs\\finance-strata-light-v1\\03_accounts_receivable.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "1A99482FD7F3ADEC07F0253AA25712CB69B1C8D1CA8627EABAFF4E60FC94352B",
+    "Path": "D:\\UniERP\\docs\\designs\\finance-strata-light-v1\\04_accounts_payable.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "C5F58C854B6386C9CE5A3A7EC9D0343E994C20A4B19F52BF5763131570FAA935",
+    "Path": "D:\\UniERP\\docs\\designs\\finance-strata-light-v1\\05_banking_treasury.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "03D0E78F82F8662F3FD7F27618A174664651B7F08B58A66127DAE531D7B93659",
+    "Path": "D:\\UniERP\\docs\\designs\\finance-strata-light-v1\\06_fixed_assets.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "F78400D063EEAC724D56CD16201C81D1CF48C3BBDF835738E7C3F003DDDF97FF",
+    "Path": "D:\\UniERP\\docs\\designs\\finance-strata-light-v1\\07_tax_compliance_refined.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "8CC444BDF12B415A94854145A57D674CFEEEF3A7A9FB986C348873FAC8D6A7D8",
+    "Path": "D:\\UniERP\\docs\\designs\\finance-strata-light-v1\\07_tax_compliance.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "DA5A14E2E14C4149A1BA6EA841EE8E6A8BB32E5995423D356AF62E1F8F7586CD",
+    "Path": "D:\\UniERP\\docs\\designs\\finance-strata-light-v1\\08_budget_planning_refined.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "D586E406D574E396EA18197955B8351C77605630D7A53E98E57606BC0AC3CD34",
+    "Path": "D:\\UniERP\\docs\\designs\\finance-strata-light-v1\\08_budget_planning.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "DC08E58DD5B51D6BA6F22B41A57D66113DC4E284217BBD55E3E53A76CC5A5278",
+    "Path": "D:\\UniERP\\docs\\designs\\finance-strata-light-v1\\09_financial_reports.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "A3EB2229FAAA593D174A3B6FEC08C1913FBE88F1DD2CF31A89B85C1A6D1B6629",
+    "Path": "D:\\UniERP\\docs\\designs\\finance-strata-light-v1\\10_financial_settings.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "C487D473A32F32F99EBD8A9DD9BFD330AB82A52B1C12D4ED47B4CE22B3DA7216",
+    "Path": "D:\\UniERP\\docs\\designs\\finance-strata-light-v1\\PROMPTS.md"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "C458ACEBD02F4D56FA1EF47917E0DDB44114B0FDC9EEBFD3602A03CBBA8A9EC1",
+    "Path": "D:\\UniERP\\docs\\designs\\finance-strata-light-v1\\README.md"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "430027D8473B31855CD187AF5BD67D6525A4595CC68FE5321104861A9FAFB6D0",
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\01_first_visit.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "2F8DB15D2852C11C44DD42531881C891514D9A83F6E70FBB9EA91861E5DE8CC9",
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\02_daily_home.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "5641EDB328A4A7A81C19E4266DBBE3AD78DB5FCAACE720EA3607AB825F661CF7",
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\03_application_library.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "42D1F24D9CA86DDF8D6CDCB2C797A2E00E7FF51271E9DD287A16E6093F19C220",
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\04_platform_directory.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "0BC4DC3104FBDBB1098309F4E7E3324E4A4AD3590B87E3D8DF206416CE967270",
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\05_notifications_refined.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "7AC458FBFAEBE2B644FCFF67F433689E81CC64B16957CF854AE90F984050433F",
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\05_notifications.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "BA29F4197CF2D09ECBDAF2983814D3B921EF2EF02BD83659522E731D974FA18A",
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\06_profile_menu.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "398AE3D228F8513BE51848913D2BF8468DB1A449727C17E467C151E5D2773A7E",
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\07_account_overview.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "96960E7B13038C5466EA99E4E5CF0218A71EFDE3E2EBD641F39A0D9A24BD95DA",
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\08_personal_information.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "3F17D1CAB2037931EAE8773E61912577EDC7D4180255F900A3A40D857D617029",
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\09_signin_recovery.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "9384118418A1DEA572965AB93E5D2916E9E440CBD375C9FC3F5565571858AD83",
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\10_devices_activity.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "1D71DC701A38E74838980EAE33526B72F51F69A2DF472CAB581575CC94E40271",
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\11_organizations_refined.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "A03D4B9DADA00A332CE41EBD7C4ED434BAF732083AEB589875558EEFFD8F3CEB",
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\11_organizations.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "F16B7D87E4E5D8BC5C0DB36F13E20809027E2811F0622B08646D536DF4F711FB",
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\12_connected_privacy_refined.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "79CB159858CCCBBF40902C784BDAAF43EB4FE497EF17D5DA27C56866B46EA919",
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\12_connected_privacy.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "3C6DDA59632E32F3A437618700C5C4E3B60C6AEDE64DAE7236235A9C29240FC2",
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\13_preferences.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "10BC1028F850C684CC82A58230D27402163C250B6129A3771500B9ADDEADC34D",
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\14_search_help.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "3E176E33EE5D044CFDB667D5EDE988EA06259DA740C6CD8B7F971BFC53D38E06",
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\DESIGN_PLAN.md"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "900D9B97457833951A5AE01164A302A9FE62146E158B70709D39F2C0B50319CF",
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\PROMPTS.md"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "B4ABEAD123813CDFD4BF4F45E9F12BF7701E3162D1F0C1129E075370669969E0",
+    "Path": "D:\\UniERP\\docs\\designs\\unierp-home-account-strata-v1\\README.md"
+  }
+]

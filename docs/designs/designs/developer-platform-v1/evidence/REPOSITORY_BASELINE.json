@@ -1,0 +1,236 @@
+[
+  {
+    "repo": "api",
+    "package": "@kannan19302/api",
+    "engines": {
+      "node": ">=22 <23"
+    },
+    "packageManager": "pnpm@9.15.4",
+    "scripts": {
+      "dev": "pnpm exec nest start --watch",
+      "build": "node --max-old-space-size=8192 ./node_modules/@nestjs/cli/bin/nest.js build",
+      "start": "node dist/main",
+      "start:prod": "node dist/main",
+      "lint": "eslint \"{src,test}/**/*.ts\"",
+      "typecheck": "node --max-old-space-size=8192 ./node_modules/typescript/bin/tsc --noEmit -p tsconfig.json",
+      "security:plane1": "node scripts/check-platform-permissions.mjs",
+      "security:federation": "node scripts/check-retired-sso-model.mjs",
+      "pretest": "node scripts/check-platform-permissions.mjs && node scripts/check-retired-sso-model.mjs",
+      "test": "vitest run",
+      "test:watch": "vitest",
+      "test:coverage": "vitest run --coverage",
+      "test:integration:setup": "tsx test/integration-setup.ts setup",
+      "test:integration:teardown": "tsx test/integration-setup.ts teardown",
+      "test:integration:run": "tsx test/integration-setup.ts run",
+      "architecture:service-purity": "node scripts/check-service-layer-purity.mjs",
+      "architecture:check": "node scripts/check-module-anatomy.mjs && node scripts/check-module-boundaries.mjs && pnpm exec depcruise --config .dependency-cruiser.cjs src --output-type err && node scripts/check-service-layer-purity.mjs --audit",
+      "test:mutation": "npx stryker run",
+      "clean": "rimraf dist"
+    },
+    "revision": "d9102c31beecea150d8b6c386ba252d7c33390f0",
+    "workingStatus": [
+      " M src/modules/developer/services/runtime-plan-cache-invalidation.service.ts",
+      " M src/modules/finance/controllers/advanced-finance.controller.ts",
+      " M src/modules/finance/controllers/finance.controller.ts",
+      " M src/modules/finance/services/bank-statement-parser.service.ts",
+      " M src/modules/finance/services/finance-demo-data.service.ts",
+      " M src/modules/finance/services/finance.service.ts",
+      " M src/modules/finance/services/financial-reporting.service.ts",
+      " M src/modules/finance/services/subledger-invariant.service.ts",
+      " M src/modules/finance/tests/finance.controller.spec.ts",
+      " M src/modules/finance/tests/finance.service.spec.ts"
+    ]
+  },
+  {
+    "repo": "data",
+    "package": "@kannan19302/database",
+    "engines": {
+      "node": ">=22 <23"
+    },
+    "packageManager": "pnpm@9.15.4",
+    "scripts": {
+      "build": "pnpm db:generate && node --max-old-space-size=8192 ./node_modules/typescript/bin/tsc && node scripts/copy-prisma-clients.mjs",
+      "typecheck": "tsc --noEmit",
+      "db:generate": "prisma generate --schema prisma/schema && prisma generate --schema prisma/idp-schema.prisma",
+      "db:migrate": "prisma migrate dev --schema prisma/schema && prisma migrate dev --schema prisma/idp-schema.prisma",
+      "db:deploy": "prisma migrate deploy --schema prisma/schema && prisma migrate deploy --schema prisma/idp-schema.prisma",
+      "db:seed": "tsx prisma/seed.ts",
+      "db:seed:demo": "tsx prisma/seed-demo.ts",
+      "db:seed:platform": "tsx prisma/seed-platform.ts",
+      "db:studio": "prisma studio",
+      "db:reset": "prisma migrate reset",
+      "lint": "eslint src/",
+      "test": "vitest run",
+      "test:watch": "vitest",
+      "clean": "rimraf dist",
+      "postinstall": "node scripts/postinstall.mjs"
+    },
+    "revision": "45c6ce888dd501d55f33bee0fe09d2d999198992",
+    "workingStatus": [
+      " M prisma/idp-schema.prisma",
+      " M prisma/schema/config.prisma",
+      " M prisma/seed-finance-enterprise.ts",
+      " M prisma/seed.ts",
+      " M src/idp-client/edge.js",
+      " M src/idp-client/index.js",
+      " M src/idp-client/package.json",
+      " M src/idp-client/schema.prisma",
+      " M src/idp-client/wasm.js",
+      "?? prisma/run-seed-acme.ts",
+      "?? src/idp-client/libquery_engine-debian-openssl-3.0.x.so.node"
+    ]
+  },
+  {
+    "repo": "unierp-contracts",
+    "package": "@kannan19302/contracts",
+    "engines": {
+      "node": ">=22 <23"
+    },
+    "packageManager": "pnpm@9.15.4",
+    "scripts": {
+      "build": "tsc",
+      "check:control-centers": "npm run build && node scripts/check-control-center-catalog.mjs",
+      "check:control-center-contracts": "npm run build && node scripts/check-control-center-contract-release.mjs",
+      "check:control-center-manifests": "npm run build && node scripts/check-control-center-manifests.mjs",
+      "test": "vitest run",
+      "typecheck": "tsc --noEmit"
+    },
+    "revision": "87470e9c646f7f568fcaed4f2d329cfe2e28258e",
+    "workingStatus": [
+      " M src/entities/finance.ts",
+      " M src/http/finance.ts"
+    ]
+  },
+  {
+    "repo": "sdk",
+    "package": "@kannan19302/sdk",
+    "engines": {
+      "node": ">=22 <23"
+    },
+    "packageManager": "pnpm@9.15.4",
+    "scripts": {
+      "build": "tsc",
+      "typecheck": "tsc --noEmit"
+    },
+    "revision": "6e7ed1c39931143fa1e09f49af1ef75a0c7a3d87",
+    "workingStatus": []
+  },
+  {
+    "repo": "extension-api",
+    "package": "@kannan19302/extension-api",
+    "engines": {
+      "node": ">=22 <23"
+    },
+    "packageManager": "pnpm@9.15.4",
+    "scripts": {
+      "build": "npx tsc"
+    },
+    "revision": "f88e692411914815420c8f927ff0705e7b89a99b",
+    "workingStatus": []
+  },
+  {
+    "repo": "sandbox",
+    "package": "@kannan19302/sandbox",
+    "engines": {
+      "node": ">=22 <23"
+    },
+    "packageManager": "pnpm@9.15.4",
+    "scripts": {
+      "build": "tsc",
+      "test": "vitest run",
+      "test:hardening": "vitest run src/hardening.spec.ts",
+      "test:governor": "vitest run src/governor.spec.ts",
+      "test:escape": "vitest run src/escape-suite.spec.ts",
+      "typecheck": "tsc --noEmit",
+      "lint": "eslint src/"
+    },
+    "revision": "eb953bf2996cdd3c52534f37e527107314a5fc30",
+    "workingStatus": []
+  },
+  {
+    "repo": "design-system",
+    "package": "@kannan19302/ui",
+    "engines": {
+      "node": ">=22 <23"
+    },
+    "packageManager": "pnpm@9.15.4",
+    "scripts": {
+      "build": "node scripts/check-inventory.mjs && node scripts/check-contrast.mjs && node scripts/check-platform-accents.mjs && node scripts/check-density.mjs && node scripts/check-tokens.mjs && node scripts/generate-cross-platform-tokens.mjs --check && rimraf dist && tsc -p tsconfig.build.json && node scripts/copy-css.mjs && node scripts/fix-client-directives.mjs && node scripts/bundle-css-modules.mjs && node scripts/generate-inventory.mjs",
+      "check:inventory": "node scripts/check-inventory.mjs",
+      "check:contrast": "node scripts/check-contrast.mjs",
+      "check:platform-accents": "node scripts/check-platform-accents.mjs",
+      "check:density": "node scripts/check-density.mjs",
+      "check:tokens": "node scripts/check-tokens.mjs",
+      "check:tokens:baseline": "node scripts/check-tokens.mjs --baseline",
+      "lint": "node scripts/check-inventory.mjs && node scripts/check-tokens.mjs && node scripts/check-layer.mjs && node scripts/check-density.mjs && node scripts/check-contrast.mjs && node scripts/check-platform-accents.mjs && tsc --noEmit",
+      "clean": "rimraf dist",
+      "typecheck": "tsc --noEmit",
+      "test": "vitest run",
+      "test:watch": "vitest",
+      "tokens:mobile": "node scripts/generate-cross-platform-tokens.mjs",
+      "check:mobile-tokens": "node scripts/generate-cross-platform-tokens.mjs --check",
+      "scaffold": "node scripts/scaffold-page.mjs"
+    },
+    "revision": "b35f98dbbff76f95b283e37f9bfdf0404eedfb57",
+    "workingStatus": []
+  },
+  {
+    "repo": "tenant-sites",
+    "package": "@kannan19302/tenant-sites",
+    "engines": {
+      "node": ">=22 <23"
+    },
+    "packageManager": "pnpm@9.15.4",
+    "scripts": {
+      "dev": "next dev --port 4004",
+      "build": "next build",
+      "start": "next start --port 4004",
+      "typecheck": "tsc --noEmit",
+      "lint": "next lint",
+      "test": "vitest run --passWithNoTests",
+      "test:watch": "vitest",
+      "test:e2e": "tsx scripts/test-e2e.ts",
+      "check:tokens": "node node_modules/@kannan19302/ui/scripts/check-tokens.mjs ."
+    },
+    "revision": "f96255683ec59c2775dcf54517cc29bb1c6c2f99",
+    "workingStatus": []
+  },
+  {
+    "repo": "web-studio",
+    "package": "@kannan19302/web-studio",
+    "engines": {
+      "node": ">=22 <23"
+    },
+    "packageManager": "pnpm@9.15.4",
+    "scripts": {
+      "dev": "next dev --port 4005",
+      "build": "next build",
+      "start": "next start --port 4005",
+      "typecheck": "tsc --noEmit",
+      "lint": "next lint",
+      "test:e2e": "tsx scripts/test-e2e.ts"
+    },
+    "revision": "849e8389a1fcbb5986e9f0dae8efd75faca85266",
+    "workingStatus": []
+  },
+  {
+    "repo": "developer-platform",
+    "package": "@kannan19302/developer",
+    "engines": {
+      "node": ">=22 <23"
+    },
+    "packageManager": "pnpm@9.15.4",
+    "scripts": {
+      "dev": "next dev -p 4008",
+      "build": "next build",
+      "start": "next start",
+      "lint": "next lint",
+      "typecheck": "tsc --noEmit",
+      "check:nav": "tsx scripts/check-nav-registry.ts",
+      "test:e2e": "tsx scripts/test-e2e.ts",
+      "check:tokens": "node node_modules/@kannan19302/ui/scripts/check-tokens.mjs ."
+    },
+    "revision": "fd1b756e1412d3126121953b4fbad7baa569fc5d",
+    "workingStatus": []
+  }
+]

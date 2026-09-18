@@ -1,0 +1,160 @@
+{
+  "comment": "Track H.1 PII registry â€” every Prisma model carrying personal data MUST declare its erasure treatment here (checked by scripts/check-pii-registry.mjs in CI). Treatments: \u0027erase\u0027 = hard-delete the row on a GDPR Art.17 request; \u0027anonymize\u0027 = blank/scramble PII fields but keep the row (referenced by legal business documents or audit trails); \u0027retain-legal-hold\u0027 = statutory retention overrides erasure until the hold period lapses, then anonymize. Erasure runs must produce an auditable report (gdpr.service.ts â€” runtime half of H.1).",
+  "models": {
+    "User": {
+      "treatment": "anonymize",
+      "rationale": "Referenced as author/actor across audit and business trails; scramble identity fields, keep the id.",
+      "reviewed": "2026-07-18 initial classification (cycle 12) â€” pending human compliance review"
+    },
+    "Organization": {
+      "treatment": "anonymize",
+      "rationale": "Tenant organization contact data; anonymize contact fields on offboarding (H.2 lifecycle owns full purge)."
+    },
+    "Employee": {
+      "treatment": "retain-legal-hold",
+      "rationale": "Labor/tax law mandates multi-year retention of employment records; anonymize after the statutory period."
+    },
+    "Customer": {
+      "treatment": "anonymize",
+      "rationale": "Counterparty on legally retained documents (invoices, orders); PII fields anonymized, document rows kept."
+    },
+    "Vendor": {
+      "treatment": "anonymize",
+      "rationale": "Counterparty on legally retained procurement/AP documents."
+    },
+    "Contact": {
+      "treatment": "erase",
+      "rationale": "CRM person record with no statutory retention of its own."
+    },
+    "Lead": {
+      "treatment": "erase",
+      "rationale": "Prospect data; no legal basis to retain after erasure request."
+    },
+    "POSLoyaltyMember": {
+      "treatment": "erase",
+      "rationale": "Loyalty membership PII; erase on request, points ledger anonymized via member-id unlink."
+    },
+    "Applicant": {
+      "treatment": "erase",
+      "rationale": "Recruitment data; short-lived by design (also subject to jurisdictional application-data limits)."
+    },
+    "CustomerPortalUser": {
+      "treatment": "erase",
+      "rationale": "Portal login identity; erase with the customer-side request."
+    },
+    "VendorPortalUser": {
+      "treatment": "erase",
+      "rationale": "Portal login identity; erase with the vendor-side request."
+    },
+    "HealthcarePatient": {
+      "treatment": "retain-legal-hold",
+      "rationale": "Medical records carry multi-year statutory retention in every jurisdiction we target; anonymize only after the hold lapses. Highest-sensitivity model in the schema (name, date of birth, contact).",
+      "reviewed": "2026-08-04 classified during the platform-split audit â€” pending human compliance review"
+    },
+    "EducationStudent": {
+      "treatment": "retain-legal-hold",
+      "rationale": "Academic records (enrolment, attainment) are subject to statutory retention; anonymize after the period rather than erasing, so transcripts remain verifiable.",
+      "reviewed": "2026-08-04 classified during the platform-split audit â€” pending human compliance review"
+    },
+    "RealEstateTenant": {
+      "treatment": "retain-legal-hold",
+      "rationale": "Tenancy and lease records carry statutory retention (deposit protection, tax); anonymize after the hold.",
+      "reviewed": "2026-08-04 classified during the platform-split audit â€” pending human compliance review"
+    },
+    "EmployeeDependent": {
+      "treatment": "retain-legal-hold",
+      "rationale": "Dependants underpin payroll benefits and tax relief, which are retained with the employment record.",
+      "reviewed": "2026-08-04 classified during the platform-split audit â€” pending human compliance review"
+    },
+    "SaasPortalAccountProfile": {
+      "treatment": "retain-legal-hold",
+      "rationale": "Billing identity (tax id, billing address) appears on issued invoices, which tax law requires us to retain.",
+      "reviewed": "2026-08-04 classified during the platform-split audit â€” pending human compliance review"
+    },
+    "RecruitmentAgency": {
+      "treatment": "anonymize",
+      "rationale": "Agency contact appears on retained hiring and invoice records; scramble contact fields, keep the row.",
+      "reviewed": "2026-08-04 classified during the platform-split audit â€” pending human compliance review"
+    },
+    "SalesPartner": {
+      "treatment": "anonymize",
+      "rationale": "Channel counterparty referenced by retained commission and deal-registration records.",
+      "reviewed": "2026-08-04 classified during the platform-split audit â€” pending human compliance review"
+    },
+    "ContractManufacturer": {
+      "treatment": "anonymize",
+      "rationale": "Supplier counterparty on retained manufacturing and procurement documents.",
+      "reviewed": "2026-08-04 classified during the platform-split audit â€” pending human compliance review"
+    },
+    "RealEstateMaintenanceVendor": {
+      "treatment": "anonymize",
+      "rationale": "Vendor counterparty on retained maintenance work orders and invoices.",
+      "reviewed": "2026-08-04 classified during the platform-split audit â€” pending human compliance review"
+    },
+    "SupplierOnboardingWorkflow": {
+      "treatment": "anonymize",
+      "rationale": "Captures a supplier tax id, which is personal data for a sole trader; anonymize while keeping the onboarding audit trail.",
+      "reviewed": "2026-08-04 classified during the platform-split audit â€” pending human compliance review"
+    },
+    "ProjectStakeholder": {
+      "treatment": "anonymize",
+      "rationale": "Named on retained project governance records (approvals, sign-offs); scramble contact fields, keep attribution.",
+      "reviewed": "2026-08-04 classified during the platform-split audit â€” pending human compliance review"
+    },
+    "FieldServiceTechnician": {
+      "treatment": "anonymize",
+      "rationale": "Attributed on retained work orders and warranty claims; anonymize rather than erase so job history stays intact.",
+      "reviewed": "2026-08-04 classified during the platform-split audit â€” pending human compliance review"
+    },
+    "LoadBuildStop": {
+      "treatment": "anonymize",
+      "rationale": "A delivery stop address can identify a residential consignee; anonymize on request, keep the route record.",
+      "reviewed": "2026-08-04 classified during the platform-split audit â€” pending human compliance review"
+    },
+    "AlumniRecord": {
+      "treatment": "erase",
+      "rationale": "Post-graduation contact data kept for engagement only; no statutory basis once consent is withdrawn.",
+      "reviewed": "2026-08-04 classified during the platform-split audit â€” pending human compliance review"
+    },
+    "EducationParent": {
+      "treatment": "erase",
+      "rationale": "Guardian contact details have no retention basis of their own; the student record is held separately under legal hold.",
+      "reviewed": "2026-08-04 classified during the platform-split audit â€” pending human compliance review"
+    },
+    "EmployeeEmergencyContact": {
+      "treatment": "erase",
+      "rationale": "Third party who never contracted with us and whose data serves no post-employment purpose.",
+      "reviewed": "2026-08-04 classified during the platform-split audit â€” pending human compliance review"
+    },
+    "EcommerceAbandonedCart": {
+      "treatment": "erase",
+      "rationale": "Marketing capture with no completed transaction behind it, so nothing to retain.",
+      "reviewed": "2026-08-04 classified during the platform-split audit â€” pending human compliance review"
+    },
+    "FieldSalesCheckin": {
+      "treatment": "erase",
+      "rationale": "Visit geolocation is operational telemetry about a person; erase on request.",
+      "reviewed": "2026-08-04 classified during the platform-split audit â€” pending human compliance review"
+    },
+    "BlockchainSmartContract": {
+      "treatment": "not-personal",
+      "rationale": "`address` is an on-chain contract address, not a postal address or a natural person.",
+      "reviewed": "2026-08-04 classified during the platform-split audit â€” pending human compliance review"
+    },
+    "PortTerminal": {
+      "treatment": "not-personal",
+      "rationale": "`city` locates a shipping terminal. Reference data about a facility, not about anyone.",
+      "reviewed": "2026-08-04 classified during the platform-split audit â€” pending human compliance review"
+    },
+    "RealEstateProperty": {
+      "treatment": "not-personal",
+      "rationale": "`address`/`city` describe the asset being managed. Occupants are held in RealEstateTenant, which is under legal hold.",
+      "reviewed": "2026-08-04 classified during the platform-split audit â€” pending human compliance review"
+    },
+    "UserIdentity": {
+      "treatment": "erase",
+      "rationale": "External identity link (OAuth/OIDC provider account and the email it asserted). Severing the linkage entirely is the correct erasure: the User row is separately anonymized and keeps attribution, while the federated identity must not survive.",
+      "reviewed": "2026-08-04 classified during the platform-split audit — pending human compliance review"
+    }
+  }
+}

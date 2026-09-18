@@ -1,0 +1,38 @@
+# Track A.13 — alert routing rehearsal on a schedule (Stage 4 / release-deployment-hygiene).
+#
+# Every run fires a synthetic SLO error-budget breach through alerting/alert-routing.json and
+# requires it to be DELIVERED to the configured webhook receiver (the local rehearsal receiver,
+# which enforces the same contract as the production PagerDuty destination). An alert route that
+# has never delivered an alert is not a route.
+#
+# FAILS LOUDLY BY DESIGN. The rehearsal script exits non-zero on any step — unknown SLO, unrouted
+# SLO, unreachable receiver, or an ack that does not match the fired alert — which fails the job.
+# There is deliberately NO continue-on-error and NO `if: hashFiles(...)` guard: a step that passes
+# by being absent is the exact defect this programme exists to eliminate (D013).
+#
+# Runs nightly at 03:20 UTC; also triggerable manually via workflow_dispatch. Delivery is proven
+# on every scheduled run; the persistent Rehearsal log row is written by local rehearsal runs
+# (--no-log keeps the CI checkout read-only).
+
+name: Alert Routing Rehearsal
+
+on:
+  schedule:
+    - cron: '20 3 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: alert-routing-rehearsal
+  cancel-in-progress: false
+
+jobs:
+  rehearse:
+    name: Fire synthetic SLO breach → delivered
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+
+      # THE EXIT CRITERION. Fires a synthetic slo-login critical breach and requires delivery.
+      # Non-zero exit on any failure — this job goes red.
+      - name: Rehearse alert routing (fails loudly)
+        run: node scripts/rehearse-alert-routing.mjs --slo slo-login --severity critical --no-log

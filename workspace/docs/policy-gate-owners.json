@@ -1,0 +1,22 @@
+{
+  "$comment": "Repositories that own delegated policy rules and must run the reusable policy gate. Written by scripts/ci/check-policy-coverage.mjs --update from the on-disk truth. In CI, where siblings are absent, this file IS the check — which is why it is generated from reality rather than maintained by hand.",
+  "generated": "2026-08-07",
+  "owners": {
+    "unierp-api": {
+      "invokesPolicyGate": true,
+      "hasBaseline": true
+    },
+    "unierp-data": {
+      "invokesPolicyGate": true,
+      "hasBaseline": true
+    },
+    "unierp-idp": {
+      "invokesPolicyGate": true,
+      "hasBaseline": true
+    },
+    "unierp-web": {
+      "invokesPolicyGate": true,
+      "hasBaseline": true
+    }
+  }
+}
