@@ -24,9 +24,9 @@ const ignoredDirectories = new Set([
 const surfaces = [
   { repo: "infra/platform-wizard", anatomy: "launch-hero", floorplan: "non-product", density: "comfortable", shell: "LaunchShell", route: /(?:^|\\|\/)page\.tsx$/ },
   { repo: "marketing-site", anatomy: "editorial", floorplan: "non-product", density: "comfortable", shell: "EditorialShell", route: /(?:^|\\|\/)page\.tsx$/ },
-  { repo: "tenant-apps", anatomy: "meridian-workbench", shell: "RecordShell", route: /(?:^|\\|\/)page\.tsx$/ },
+  { repo: "business-suite", anatomy: "meridian-workbench", shell: "RecordShell", route: /(?:^|\\|\/)page\.tsx$/ },
   { repo: "tenant-admin", anatomy: "settings", floorplan: "settings", density: "standard", shell: "SettingsShell", route: /(?:^|\\|\/)page\.tsx$/ },
-  { repo: "provider-admin-os", anatomy: "ops", floorplan: "operational", density: "compact", shell: "OpsShell", route: /(?:^|\\|\/)page\.tsx$/ },
+  { repo: "provider-admin", anatomy: "ops", floorplan: "operational", density: "compact", shell: "OpsShell", route: /(?:^|\\|\/)page\.tsx$/ },
   { repo: "marketplace", anatomy: "catalog", floorplan: "data", density: "standard", shell: "CatalogShell", route: /(?:^|\\|\/)page\.tsx$/ },
   { repo: "developer-platform", anatomy: "workspace-studio", floorplan: "studio", density: "standard", shell: "PlatformShell|WorkspaceShell|StudioShell", route: /(?:^|\\|\/)page\.tsx$/ },
   { repo: "web-studio", anatomy: "workspace-studio", floorplan: "studio", density: "standard", shell: "PlatformShell|WorkspaceShell|StudioShell", route: /(?:^|\\|\/)page\.tsx$/ },

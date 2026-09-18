@@ -13,7 +13,7 @@ const result = spawnSync(
     "--json",
     "data/prisma/schema/core.prisma",
     "api/src/orders/orders.controller.ts",
-    "tenant-apps/app/orders/page.tsx",
+    "business-suite/app/orders/page.tsx",
   ],
   { encoding: "utf8" },
 );
@@ -23,7 +23,7 @@ assert.equal(classification.provisionalRiskClass, "R2");
 assert.equal(classification.manualR3ReviewRequired, true);
 assert.equal(classification.cycleStatus, "NOT STARTED");
 assert.equal(classification.done, false);
-assert.deepEqual(classification.affectedRepositories, ["data", "api", "tenant-apps"]);
+assert.deepEqual(classification.affectedRepositories, ["data", "api", "business-suite"]);
 assert(classification.triggeredPlaybooks.includes("Database, Prisma, migration, or persistence"));
 assert(classification.triggeredPlaybooks.includes("HTTP API, event, SDK, extension, or contract"));
 assert(classification.triggeredPlaybooks.includes("UI, UX, accessibility, or localization"));

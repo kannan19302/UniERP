@@ -6,7 +6,7 @@
  * does not scan historical/dated evidence, where a retired command may be useful historical context.
  */
 import { readFileSync, readdirSync, statSync } from "node:fs";
-import { join, relative, resolve } from "node:path";
+import { dirname, join, relative, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { assertNonEmptyDiscovery, loadActiveEstate, requiredSourceDirectory } from "./lib/estate.mjs";
 
@@ -28,11 +28,16 @@ function markdownFiles(directory, found = []) {
 }
 
 function candidateScriptPaths(estate, documentPath, reference) {
-  const candidates = [resolve(estate.root, reference)];
-  const workspaceRoot = requiredSourceDirectory(estate, "unierp-workspace");
-  const platformDocsRoot = requiredSourceDirectory(estate, "unierp-platform", "docs");
-  if (documentPath.startsWith(workspaceRoot) || documentPath.startsWith(platformDocsRoot)) {
-    candidates.push(resolve(workspaceRoot, reference));
+  const workspaceRoot = requiredSourceDirectory(estate, "platform", "workspace");
+  const platformDocsRoot = requiredSourceDirectory(estate, "platform", "docs");
+  const candidates = [
+    resolve(estate.root, reference),
+    resolve(workspaceRoot, reference),
+    resolve(estate.root, "platform", reference),
+    resolve(dirname(documentPath), reference),
+  ];
+  if (reference.startsWith("unierp-workspace/")) {
+    candidates.push(resolve(workspaceRoot, reference.slice("unierp-workspace/".length)));
   }
   return [...new Set(candidates)];
 }
@@ -40,9 +45,9 @@ function candidateScriptPaths(estate, documentPath, reference) {
 export function checkDocumentationTruth({ estate = loadActiveEstate() } = {}) {
   const roots = [
     join(estate.root, "AGENTS.md"),
-    requiredSourceDirectory(estate, "unierp-workspace", "governance"),
-    requiredSourceDirectory(estate, "unierp-platform", "docs", "standards"),
-    requiredSourceDirectory(estate, "unierp-platform", "docs", "product"),
+    requiredSourceDirectory(estate, "platform", "workspace", "governance"),
+    requiredSourceDirectory(estate, "platform", "docs", "standards"),
+    requiredSourceDirectory(estate, "platform", "docs", "product"),
   ];
   const documents = [roots[0], ...roots.slice(1).flatMap((root) => markdownFiles(root))];
   assertNonEmptyDiscovery("active governance documents", documents);

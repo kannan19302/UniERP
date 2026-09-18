@@ -66,17 +66,17 @@ try {
   assert.equal(schemaResult.filesScanned, 2, "schema checking must scan active-estate Prisma files");
   assert.equal(schemaResult.violations.length, 1, "schema checking must reject an unauthorized model");
 
-  const documentationEstate = fixtureEstate(fixtureRoot, ["unierp-workspace", "unierp-platform"]);
-  file(join(fixtureRoot, "AGENTS.md"), "`unierp-workspace/scripts/check-demo.mjs`");
-  directory(join(fixtureRoot, "unierp-workspace", "governance"));
-  directory(join(fixtureRoot, "unierp-platform", "docs", "standards"));
-  directory(join(fixtureRoot, "unierp-platform", "docs", "product"));
-  file(join(fixtureRoot, "unierp-workspace", "scripts", "check-demo.mjs"), "export {};\n");
+  const documentationEstate = fixtureEstate(fixtureRoot, ["platform"]);
+  file(join(fixtureRoot, "AGENTS.md"), "`platform/workspace/scripts/check-demo.mjs`");
+  directory(join(fixtureRoot, "platform", "workspace", "governance"));
+  directory(join(fixtureRoot, "platform", "docs", "standards"));
+  directory(join(fixtureRoot, "platform", "docs", "product"));
+  file(join(fixtureRoot, "platform", "workspace", "scripts", "check-demo.mjs"), "export {};\n");
   const documentationResult = checkDocumentationTruth({ estate: documentationEstate });
   assert.equal(documentationResult.documentsScanned, 1, "documentation checking must scan the active root entrypoint");
   assert.equal(documentationResult.referencesScanned, 1, "documentation checking must discover executable claims");
   assert.equal(documentationResult.findings.length, 0, "existing executable claims must pass");
-  rmSync(join(fixtureRoot, "unierp-workspace", "scripts", "check-demo.mjs"));
+  rmSync(join(fixtureRoot, "platform", "workspace", "scripts", "check-demo.mjs"));
   assert.equal(
     checkDocumentationTruth({ estate: documentationEstate }).findings.length,
     1,

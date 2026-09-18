@@ -2,11 +2,13 @@ import { readFile } from "node:fs/promises";
 import { dirname, isAbsolute, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 
+import { findWorkspaceRoot } from "./lib/estate.mjs";
+
 const scriptDir = dirname(fileURLToPath(import.meta.url));
-const workspaceRoot = resolve(scriptDir, "..", "..");
+const workspaceRoot = findWorkspaceRoot(scriptDir);
 const mapPath = resolve(
   workspaceRoot,
-  "unierp-platform/docs/standards/AI_REPOSITORY_PLATFORM_MAP.json",
+  "platform/docs/standards/AI_REPOSITORY_PLATFORM_MAP.json",
 );
 const repositoryMap = JSON.parse(await readFile(mapPath, "utf8"));
 const repositories = repositoryMap.repositories;

@@ -2,8 +2,8 @@ import assert from "node:assert/strict";
 import { activeRepositoryPath, loadActiveEstate, parseWorkspaceInventory } from "./lib/estate.mjs";
 
 const estate = loadActiveEstate();
-assert.equal(estate.names.length, 31, "the active estate must declare every current repository");
-for (const name of ["api", "data", "framework", "idp", "unierp-workspace", "unierp-platform"]) {
+assert.equal(estate.names.length, 14, "the active estate must declare every current repository");
+for (const name of ["api", "data", "idp", "platform", "shared", "contracts", "business-suite", "tenant-admin", "provider-admin"]) {
   assert.ok(estate.names.includes(name), `${name} must be present in the active estate`);
   assert.ok(activeRepositoryPath(estate, name).endsWith(name), `${name} must resolve to its current directory`);
 }

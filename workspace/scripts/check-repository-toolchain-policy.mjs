@@ -4,12 +4,11 @@ import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import assert from "node:assert/strict";
 import { dirname, extname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { loadActiveEstate } from "./lib/estate.mjs";
+import { loadActiveEstate, findWorkspaceRoot } from "./lib/estate.mjs";
 
-const scriptDir = dirname(fileURLToPath(import.meta.url));
-const workspaceRoot = resolve(scriptDir, "..", "..");
-const policyPath = resolve(workspaceRoot, "unierp-platform/docs/standards/REPOSITORY_TOOLCHAIN_POLICY.json");
-const catalogPath = resolve(workspaceRoot, "unierp-workspace/governance/active-estate.json");
+const workspaceRoot = findWorkspaceRoot();
+const policyPath = resolve(workspaceRoot, "platform/docs/standards/REPOSITORY_TOOLCHAIN_POLICY.json");
+const catalogPath = resolve(workspaceRoot, "platform/workspace/governance/active-estate.json");
 const failures = [];
 
 function parseJson(path, label) {

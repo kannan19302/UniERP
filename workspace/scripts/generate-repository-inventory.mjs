@@ -4,12 +4,11 @@ import { execFileSync } from "node:child_process";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, relative, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { loadActiveEstate } from "./lib/estate.mjs";
+import { loadActiveEstate, findWorkspaceRoot } from "./lib/estate.mjs";
 
-const scriptDir = dirname(fileURLToPath(import.meta.url));
-const workspaceRoot = resolve(scriptDir, "..", "..");
-const catalogPath = resolve(workspaceRoot, "unierp-workspace/governance/active-estate.json");
-const outputPath = resolve(workspaceRoot, "unierp-workspace/governance/generated/repository-package-dependency-inventory.md");
+const workspaceRoot = findWorkspaceRoot();
+const catalogPath = resolve(workspaceRoot, "platform/workspace/governance/active-estate.json");
+const outputPath = resolve(workspaceRoot, "platform/workspace/governance/generated/repository-package-dependency-inventory.md");
 const checkMode = process.argv.includes("--check");
 
 function readJson(path) {

@@ -3,7 +3,21 @@ import { dirname, isAbsolute, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const scriptDirectory = dirname(fileURLToPath(import.meta.url));
-export const DEFAULT_WORKSPACE_ROOT = resolve(scriptDirectory, "..", "..", "..");
+
+export function findWorkspaceRoot(startDir = scriptDirectory) {
+  let current = resolve(startDir);
+  while (current) {
+    if (existsSync(resolve(current, "UniERP.code-workspace")) && existsSync(resolve(current, "platform"))) {
+      return current;
+    }
+    const parent = dirname(current);
+    if (parent === current) break;
+    current = parent;
+  }
+  return resolve(scriptDirectory, "..", "..", "..", "..");
+}
+
+export const DEFAULT_WORKSPACE_ROOT = findWorkspaceRoot();
 
 function estateError(message) {
   return new Error(`UniERP active-estate error: ${message}`);

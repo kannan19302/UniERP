@@ -6,20 +6,20 @@ UniERP polyrepo. “Agent” includes interactive assistants, autonomous agents,
 subagents from any provider. Read this file before planning or changing anything.
 
 The canonical policy is
-[`unierp-platform/docs/standards/AI_AGENT_DEVELOPMENT_PROTOCOL.md`](unierp-platform/docs/standards/AI_AGENT_DEVELOPMENT_PROTOCOL.md).
+[`platform/docs/standards/AI_AGENT_DEVELOPMENT_PROTOCOL.md`](platform/docs/standards/AI_AGENT_DEVELOPMENT_PROTOCOL.md).
 Its clauses are mandatory. The machine-readable profile is
-[`unierp-platform/docs/standards/AI_AGENT_PROTOCOL.json`](unierp-platform/docs/standards/AI_AGENT_PROTOCOL.json).
+[`platform/docs/standards/AI_AGENT_PROTOCOL.json`](platform/docs/standards/AI_AGENT_PROTOCOL.json).
 
 ## Project-level enterprise brain
 
 Before material analysis, planning, review or mutation, every agent MUST read and apply the project skill at
-`unierp-workspace/governance/skills/unierp-enterprise-brain/SKILL.md`. The skill is the shared operational
+`workspace/governance/skills/unierp-enterprise-brain/SKILL.md`. The skill is the shared operational
 navigation and decision layer for product vision, platform boundaries, enterprise architecture, domains, data,
 security, contracts, experience, delivery, operations and governance. It does not override the instruction
 precedence below or duplicate owning platform specifications.
 
 Every material change MUST classify its knowledge delta and follow
-`unierp-platform/docs/standards/AI_KNOWLEDGE_LIFECYCLE.md`, so authoritative knowledge,
+`platform/docs/standards/AI_KNOWLEDGE_LIFECYCLE.md`, so authoritative knowledge,
 contracts, traceability and evidence evolve with the codebase. If the project skill or knowledge-lifecycle standard
 is unavailable, the governance bundle is incomplete; stop before mutation and report the missing dependency.
 
@@ -37,7 +37,18 @@ Every AI agent working in this polyrepo must strictly adhere to the 11 pillars o
 - **Quality Standards:** [`.agents/standards/ENTERPRISE_SAAS_STANDARDS.md`](.agents/standards/ENTERPRISE_SAAS_STANDARDS.md) (UI DL 2.0, DB safe DDL, API Pino/Otel, Tests).
 - **Governance & Formulation:** [`.agents/governance/ENTERPRISE_SAAS_GOVERNANCE.md`](.agents/governance/ENTERPRISE_SAAS_GOVERNANCE.md) (Mathematical percentage scoring engine).
 - **Agent Fleet Personas:** [`.agents/agents/ENTERPRISE_AGENT_FLEET.md`](.agents/agents/ENTERPRISE_AGENT_FLEET.md) (7 specialized autonomous roles).
-- **Automated Runner:** Run `pnpm run overtake:market` or `node unierp-workspace/scripts/run-enterprise-saas-engine.mjs`.
+- **Automated Runner:** Run `pnpm run overtake:market` or `node workspace/scripts/run-enterprise-saas-engine.mjs`.
+
+## Universal Agent Testing Account (Mandatory for E2E, Browser Subagents, and MCP)
+
+All AI agents from all providers (interactive assistants, autonomous background workers, browser subagents, Playwright E2E suites, and Chrome DevTools MCP sessions) MUST use the following common testing account whenever authenticating or testing any UI or API surface across the UniERP ecosystem:
+
+- **Email**: `test.agent@unierp.com`
+- **Password**: `TestAgent123!`
+- **Role**: `SUPER_ADMIN` (Universal bypass permissions `*` across all modules: Finance, Sales, CRM, HR, Inventory, Procurement, Settings)
+- **Tenant Scope**: Default Enterprise Tenant (`Acme Corp`, slug: `acme`, tenantId: `00000000-0000-0000-0000-000000000001`)
+
+Do NOT invent arbitrary test email addresses or credentials. This account is permanently seeded into `data/prisma/seed.ts` and configured across all test fixtures.
 
 ## Instruction precedence
 
@@ -45,8 +56,8 @@ Apply the first relevant authority in this order:
 
 1. Law, safety constraints, and the human’s explicit current request.
 2. Accepted UniERP ADRs.
-3. The owning platform specification under `unierp-platform/docs/platforms/<platform>/`.
-4. Cross-platform standards under `unierp-platform/docs/standards/`, including the canonical agent protocol.
+3. The owning platform specification under `platform/docs/platforms/<platform>/`.
+4. Cross-platform standards under `platform/docs/standards/`, including the canonical agent protocol.
 5. A repository-local `AGENTS.md` for implementation detail.
 6. Repository configuration, tests, README, and contribution guidance.
 
@@ -87,16 +98,16 @@ Every agent cycle—each implementation/review iteration and every handoff—MUS
 Each cycle report MUST state: status, objective, completed items, incomplete items, verification evidence, and the
 next required action. If the task is not actually complete, say plainly: **“This is not done.”**
 
-Use [`unierp-platform/docs/standards/AI_CHANGE_CONTRACT_TEMPLATE.md`](unierp-platform/docs/standards/AI_CHANGE_CONTRACT_TEMPLATE.md)
+Use [`platform/docs/standards/AI_CHANGE_CONTRACT_TEMPLATE.md`](platform/docs/standards/AI_CHANGE_CONTRACT_TEMPLATE.md)
 for plans and handoffs.
-Use [`unierp-platform/docs/standards/AI_AGENT_PLAYBOOKS.md`](unierp-platform/docs/standards/AI_AGENT_PLAYBOOKS.md)
+Use [`platform/docs/standards/AI_AGENT_PLAYBOOKS.md`](platform/docs/standards/AI_AGENT_PLAYBOOKS.md)
 for triggered workflows and
-[`unierp-platform/docs/standards/AI_CYCLE_STATUS_TEMPLATE.md`](unierp-platform/docs/standards/AI_CYCLE_STATUS_TEMPLATE.md)
+[`platform/docs/standards/AI_CYCLE_STATUS_TEMPLATE.md`](platform/docs/standards/AI_CYCLE_STATUS_TEMPLATE.md)
 for every cycle report.
 
 ## Non-negotiable UniERP rules
 
-- Ownership follows `unierp-platform/docs/PLATFORM_CATALOG.md`; a directory does not define a product boundary.
+- Ownership follows `platform/docs/PLATFORM_CATALOG.md`; a directory does not define a product boundary.
 - Published contracts—not cross-repository source imports—define integrations.
 - Verify tenant context server-side. Every tenant-owned persistence path must enforce tenant scope in service logic
   and PostgreSQL RLS and must have positive, negative, and no-context evidence using a `NOBYPASSRLS` role.

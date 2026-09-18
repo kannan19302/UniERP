@@ -5,15 +5,16 @@ import { createRequire } from "node:module";
 import { dirname, join, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 
+import { findWorkspaceRoot } from "./lib/estate.mjs";
+
 const scriptDirectory = dirname(fileURLToPath(import.meta.url));
-const workspaceRepository = resolve(scriptDirectory, "..");
-const estateRoot = resolve(workspaceRepository, "..");
+const estateRoot = findWorkspaceRoot(scriptDirectory);
 const require = createRequire(import.meta.url);
 const inventory = JSON.parse(readFileSync(join(scriptDirectory, "control-center-route-ownership.json"), "utf8"));
 
-const contractsPath = join(estateRoot, "unierp-contracts", "dist", "control-centers.js");
+const contractsPath = join(estateRoot, "contracts", "dist", "control-centers.js");
 if (!existsSync(contractsPath)) {
-  console.error("unierp-contracts/dist/control-centers.js is missing; run npm run build in unierp-contracts first");
+  console.error("contracts/dist/control-centers.js is missing; run npm run build in contracts first");
   process.exit(1);
 }
 

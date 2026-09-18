@@ -5,17 +5,19 @@ import { createRequire } from "node:module";
 import { dirname, join, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 
+import { findWorkspaceRoot } from "./lib/estate.mjs";
+
 const scriptDirectory = dirname(fileURLToPath(import.meta.url));
-const estateRoot = resolve(scriptDirectory, "../..");
+const estateRoot = findWorkspaceRoot(scriptDirectory);
 const require = createRequire(import.meta.url);
 const {
   assertValidControlCenterManifestSet,
-} = require(join(estateRoot, "unierp-contracts", "dist", "control-center-manifest.js"));
+} = require(join(estateRoot, "contracts", "dist", "control-center-manifest.js"));
 
 const surfaces = [
   {
     center: "PCC",
-    repository: "provider-admin-os",
+    repository: "provider-admin",
     appDirectory: "app",
     manifest: "src/manifests/pcc-apps.json",
   },

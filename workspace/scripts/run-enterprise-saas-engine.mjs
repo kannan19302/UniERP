@@ -23,10 +23,11 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { execSync } from 'child_process';
+import { findWorkspaceRoot } from './lib/estate.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const ROOT_DIR = path.resolve(__dirname, '../..');
+const ROOT_DIR = findWorkspaceRoot(__dirname);
 const LEDGER_PATH = path.resolve(ROOT_DIR, '.agents/memory/ENTERPRISE_SAAS_EXECUTION_LEDGER.json');
 
 // Color formatting helpers
@@ -50,14 +51,11 @@ function renderProgressBar(percentage, width = 30) {
   return `${color}${bar}${reset} ${bold}${percentage.toFixed(1)}%${reset}`;
 }
 
-// All 31 polyrepo repositories
+// 13 canonical polyrepo roots
 const ALL_REPOSITORIES = [
-  'api', 'auth', 'blockchain', 'config', 'data', 'design-system', 'desktop-app',
-  'developer-platform', 'extension-api', 'extensions', 'framework', 'idp', 'infra',
-  'kernel', 'marketing-site', 'marketplace', 'provider-admin-os', 'sandbox', 'sdk',
-  'service-kit', 'shared', 'storybook', 'tenant-admin', 'tenant-apps',
-  'tenant-site-template', 'tenant-sites', 'unierp-contracts', 'unierp-mobile',
-  'unierp-platform', 'unierp-workspace', 'web-studio'
+  'contracts', 'design-system', 'shared', 'data', 'api', 'idp',
+  'tenant-apps', 'provider-admin-os', 'developer-platform', 'marketing-site',
+  'mobile', 'desktop-app', 'platform'
 ];
 
 // 15 Industry Verticals
@@ -354,26 +352,32 @@ export async function runEngine(options = {}) {
 
   console.log(`${bold}🚀  The 10 Super-Platform Moats Status:${reset}`);
   const moats = [
-    { name: '1. Zero-Middleware CRM-to-Ledger Convergence', status: 'VERIFIED', metric: '< 15ms atomic pipeline' },
-    { name: '2. Visual DAG Flow & Neural Event Mesh', status: 'VERIFIED', metric: '0 governor limits' },
-    { name: '3. Autonomous Agent Studio & pgvector RAG', status: 'ACTIVE', metric: 'BYO-LLM enabled' },
-    { name: '4. Sub-50ms Matrix CPQ & Dynamic CLM', status: 'ACTIVE', metric: '< 45ms cart recalc' },
-    { name: '5. 1-Click Universal Enterprise Migration Bridge', status: 'ACTIVE', metric: 'Salesforce schema reverse-ETL' },
-    { name: '6. Bidirectional Round-Trip Visual Studio', status: 'ACTIVE', metric: 'AST TSX roundtrip' },
-    { name: '7. Native WebRTC, WhatsApp & Omnichannel CTI', status: 'VERIFIED', metric: '0 add-on telephony tax' },
-    { name: '8. Sovereign Cloud & Air-Gapped Cell Architecture', status: 'VERIFIED', metric: 'Dedicated pods + blockchain audit' },
-    { name: '9. Offline-First CRDT Edge Mode (Flutter/Desktop)', status: 'ACTIVE', metric: 'Vector clocks sync' },
-    { name: '10. Automated Market Parity & Latency Benchmark Gate', status: 'PASSING', metric: '70%+ TCO savings verified' }
+    { name: '1. Zero-Middleware CRM-to-Ledger Convergence', status: 'TARGET', metric: '< 15ms atomic pipeline' },
+    { name: '2. Visual DAG Flow & Neural Event Mesh', status: 'TARGET', metric: '0 governor limits' },
+    { name: '3. Autonomous Agent Studio & pgvector RAG', status: 'TARGET', metric: 'BYO-LLM enabled' },
+    { name: '4. Sub-50ms Matrix CPQ & Dynamic CLM', status: 'TARGET', metric: '< 45ms cart recalc' },
+    { name: '5. 1-Click Universal Enterprise Migration Bridge', status: 'TARGET', metric: 'Salesforce schema reverse-ETL' },
+    { name: '6. Bidirectional Round-Trip Visual Studio', status: 'TARGET', metric: 'AST TSX roundtrip' },
+    { name: '7. Native WebRTC, WhatsApp & Omnichannel CTI', status: 'TARGET', metric: '0 add-on telephony tax' },
+    { name: '8. Sovereign Cloud & Air-Gapped Cell Architecture', status: 'TARGET', metric: 'Dedicated pods + immutable audit' },
+    { name: '9. Offline-First CRDT Edge Mode (Flutter/Desktop)', status: 'TARGET', metric: 'Vector clocks sync' },
+    { name: '10. Automated Market Parity & Latency Benchmark Gate', status: 'TARGET', metric: '70%+ TCO savings target' }
   ];
 
   for (const moat of moats) {
-    const statusColor = moat.status === 'VERIFIED' ? green : (moat.status === 'PASSING' ? cyan : yellow);
+    const statusColor = moat.status === 'VERIFIED' ? green : cyan;
     console.log(`  [${statusColor}${moat.status.padEnd(8, ' ')}${reset}]  ${bold}${moat.name.padEnd(52, ' ')}${reset} ${gray}(${moat.metric})${reset}`);
   }
   console.log('');
 
-  // Polyrepo Git Automation per LAW-11: Commit and push all changes to GitHub
-  const gitResults = commitAndPushAllChanges(overallPercentage);
+  // Polyrepo Git Automation: Read-only diagnostic by default; requires explicit flag
+  const allowGitPush = process.argv.includes('--commit-and-push') || process.argv.includes('--publish');
+  let gitResults = [];
+  if (allowGitPush) {
+    gitResults = commitAndPushAllChanges(overallPercentage);
+  } else {
+    console.log(`${cyan}ℹ Read-only diagnostic mode active. Remote Git operations skipped (pass --commit-and-push to publish).${reset}\n`);
+  }
 
   // Update persistent execution ledger
   try {

@@ -2,11 +2,10 @@
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { dirname, join, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
-import { loadActiveEstate } from "./lib/estate.mjs";
+import { loadActiveEstate, findWorkspaceRoot } from "./lib/estate.mjs";
 
-const scriptPath = fileURLToPath(import.meta.url);
-const root = resolve(dirname(scriptPath), "..", "..");
-const catalogFile = join(root, "unierp-workspace", "governance", "non-active-estate.json");
+const root = findWorkspaceRoot();
+const catalogFile = join(root, "platform", "workspace", "governance", "non-active-estate.json");
 const allowedStatuses = new Set(["ARCHIVE", "GENERATED_OUTPUT", "RETIRED_BOOTSTRAP", "RETIRED_CHECKOUT", "SCRATCH"]);
 const supportDirectories = new Set([".agents", ".claude", ".codex", ".vscode", "node_modules"]);
 

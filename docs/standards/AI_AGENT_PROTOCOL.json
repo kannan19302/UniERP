@@ -8,28 +8,28 @@
   "entrypointMarker": "UniERP-Agent-Protocol: 1.1.0",
   "workspaceFile": "UniERP.code-workspace",
   "governanceSources": {
-    "AGENTS.md": "unierp-workspace/governance/AGENTS.md",
-    "UniERP.code-workspace": "unierp-workspace/governance/UniERP.code-workspace"
+    "AGENTS.md": "platform/workspace/governance/AGENTS.md",
+    "UniERP.code-workspace": "platform/workspace/governance/UniERP.code-workspace"
   },
   "workspaceDiscoverySettings": {
     "chat.useAgentsMdFile": true,
     "chat.includeReferencedInstructions": true
   },
-  "repositoryPlatformMap": "unierp-platform/docs/standards/AI_REPOSITORY_PLATFORM_MAP.json",
-  "cycleStatusTemplate": "unierp-platform/docs/standards/AI_CYCLE_STATUS_TEMPLATE.md",
-  "playbooksDocument": "unierp-platform/docs/standards/AI_AGENT_PLAYBOOKS.md",
-  "prAttestationTemplate": "unierp-platform/docs/standards/AI_PR_ATTESTATION_TEMPLATE.md",
+  "repositoryPlatformMap": "platform/docs/standards/AI_REPOSITORY_PLATFORM_MAP.json",
+  "cycleStatusTemplate": "platform/docs/standards/AI_CYCLE_STATUS_TEMPLATE.md",
+  "playbooksDocument": "platform/docs/standards/AI_AGENT_PLAYBOOKS.md",
+  "prAttestationTemplate": "platform/docs/standards/AI_PR_ATTESTATION_TEMPLATE.md",
   "prAttestationMarker": "UniERP-AI-PR-Attestation: 1.1.0",
-  "changelogDocument": "unierp-platform/docs/standards/AI_AGENT_PROTOCOL_CHANGELOG.md",
-  "conformanceLedger": "unierp-platform/docs/standards/AI_AGENT_CONFORMANCE_LEDGER.md",
-  "changeClassifier": "unierp-workspace/scripts/classify-ai-change.mjs",
-  "canonicalDocument": "unierp-platform/docs/standards/AI_AGENT_DEVELOPMENT_PROTOCOL.md",
-  "changeContractTemplate": "unierp-platform/docs/standards/AI_CHANGE_CONTRACT_TEMPLATE.md",
+  "changelogDocument": "platform/docs/standards/AI_AGENT_PROTOCOL_CHANGELOG.md",
+  "conformanceLedger": "platform/docs/standards/AI_AGENT_CONFORMANCE_LEDGER.md",
+  "changeClassifier": "platform/workspace/scripts/classify-ai-change.mjs",
+  "canonicalDocument": "platform/docs/standards/AI_AGENT_DEVELOPMENT_PROTOCOL.md",
+  "changeContractTemplate": "platform/docs/standards/AI_CHANGE_CONTRACT_TEMPLATE.md",
   "authority": [
     "explicit-current-human-direction",
-    "unierp-platform/docs/adr",
-    "unierp-platform/docs/platforms",
-    "unierp-platform/docs/standards",
+    "platform/docs/adr",
+    "platform/docs/platforms",
+    "platform/docs/standards",
     "AGENTS.md",
     "repository-local-instructions-and-configuration"
   ],

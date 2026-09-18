@@ -1,7 +1,7 @@
 {
   "version": 1,
   "surfaces": {
-    "PCC": { "repository": "provider-admin-os", "appDirectory": "app" },
+    "PCC": { "repository": "provider-admin", "appDirectory": "app" },
     "OCC": { "repository": "tenant-admin", "appDirectory": "app" }
   },
   "utilityOwners": ["PLT-IAM", "PCC-SHELL", "OCC-SHELL"],
@@ -38,6 +38,14 @@
     { "surface": "PCC", "match": "prefix", "path": "/tenants", "owner": "PCC-18", "disposition": "migrate" },
     { "surface": "PCC", "match": "prefix", "path": "/mobile-operations", "owner": "PCC-11", "disposition": "migrate" },
     { "surface": "PCC", "match": "prefix", "path": "/desktop-operations", "owner": "PCC-12", "disposition": "migrate" },
+    { "surface": "PCC", "match": "prefix", "path": "/api-traffic", "owner": "PCC-08", "disposition": "migrate" },
+    { "surface": "PCC", "match": "prefix", "path": "/apps", "owner": "PCC-17", "disposition": "migrate" },
+    { "surface": "PCC", "match": "prefix", "path": "/entitlement-authority", "owner": "PCC-05", "disposition": "migrate" },
+    { "surface": "PCC", "match": "prefix", "path": "/governance-compliance", "owner": "PCC-09", "disposition": "migrate" },
+    { "surface": "PCC", "match": "prefix", "path": "/keys-secrets", "owner": "PCC-07", "disposition": "migrate" },
+    { "surface": "PCC", "match": "prefix", "path": "/knowledge-adoption", "owner": "PCC-15", "disposition": "migrate" },
+    { "surface": "PCC", "match": "prefix", "path": "/security-intelligence", "owner": "PCC-10", "disposition": "migrate" },
+    { "surface": "PCC", "match": "prefix", "path": "/subscription-operations", "owner": "PCC-04", "disposition": "migrate" },
 
     { "surface": "OCC", "match": "exact", "path": "/", "owner": "OCC-22", "disposition": "compose" },
     { "surface": "OCC", "match": "prefix", "path": "/auth", "owner": "PLT-IAM", "disposition": "retain-utility" },

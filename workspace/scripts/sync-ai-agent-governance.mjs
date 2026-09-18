@@ -2,8 +2,10 @@ import { readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
+import { findWorkspaceRoot } from "./lib/estate.mjs";
+
 const scriptDir = dirname(fileURLToPath(import.meta.url));
-const workspaceRoot = resolve(scriptDir, "..", "..");
+const workspaceRoot = findWorkspaceRoot(scriptDir);
 const write = process.argv.includes("--write");
 const check = process.argv.includes("--check");
 
@@ -13,8 +15,8 @@ if (write === check) {
 }
 
 const sources = {
-  "AGENTS.md": "unierp-workspace/governance/AGENTS.md",
-  "UniERP.code-workspace": "unierp-workspace/governance/UniERP.code-workspace",
+  "AGENTS.md": "platform/workspace/governance/AGENTS.md",
+  "UniERP.code-workspace": "platform/workspace/governance/UniERP.code-workspace",
 };
 const mismatches = [];
 const normalize = (value) => value.replace(/\r\n/g, "\n").trimEnd();

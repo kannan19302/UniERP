@@ -1,14 +1,15 @@
 import { readFile, access } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { findWorkspaceRoot } from "./lib/estate.mjs";
 
 const scriptDir = dirname(fileURLToPath(import.meta.url));
 const workspaceRoot = resolve(
-  process.env.UNIERP_PROTOCOL_ROOT || resolve(scriptDir, "..", ".."),
+  process.env.UNIERP_PROTOCOL_ROOT || findWorkspaceRoot(scriptDir),
 );
 const manifestPath = resolve(
   workspaceRoot,
-  "unierp-platform/docs/standards/AI_AGENT_PROTOCOL.json",
+  "platform/docs/standards/AI_AGENT_PROTOCOL.json",
 );
 
 const failures = [];
@@ -152,7 +153,7 @@ if (manifest) {
       manifest.changeClassifier,
       manifest.canonicalDocument,
       manifest.changeContractTemplate,
-      "unierp-platform/docs/standards/AI_AGENT_PROTOCOL.schema.json",
+      "platform/docs/standards/AI_AGENT_PROTOCOL.schema.json",
     ]
       .filter(Boolean)
       .map(mustExist),
@@ -259,7 +260,7 @@ if (manifest) {
   try {
     const schemaPath = resolve(
       workspaceRoot,
-      "unierp-platform/docs/standards/AI_AGENT_PROTOCOL.schema.json",
+      "platform/docs/standards/AI_AGENT_PROTOCOL.schema.json",
     );
     const schema = JSON.parse(await readFile(schemaPath, "utf8"));
     for (const error of validateWithSchema(manifest, schema, schema)) {
@@ -411,7 +412,7 @@ if (manifest) {
     const traceability = await readFile(
       resolve(
         workspaceRoot,
-        "unierp-platform/docs/standards/TRACEABILITY_MATRIX.md",
+        "platform/docs/standards/TRACEABILITY_MATRIX.md",
       ),
       "utf8",
     );

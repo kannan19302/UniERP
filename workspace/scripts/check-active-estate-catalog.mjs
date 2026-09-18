@@ -1,11 +1,9 @@
-#!/usr/bin/env node
 import { existsSync, readFileSync } from "node:fs";
-import { dirname, resolve } from "node:path";
-import { fileURLToPath } from "node:url";
-import { loadActiveEstate } from "./lib/estate.mjs";
+import { resolve } from "node:path";
+import { loadActiveEstate, findWorkspaceRoot } from "./lib/estate.mjs";
 
-const workspaceRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..", "..");
-const catalogFile = resolve(workspaceRoot, "unierp-workspace", "governance", "active-estate.json");
+const workspaceRoot = findWorkspaceRoot();
+const catalogFile = resolve(workspaceRoot, "platform", "workspace", "governance", "active-estate.json");
 
 function expectedEntries(estate) {
   return estate.names.map((repository) => {

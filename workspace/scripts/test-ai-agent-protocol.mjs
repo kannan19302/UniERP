@@ -10,9 +10,10 @@ import { spawnSync } from "node:child_process";
 import { dirname, resolve } from "node:path";
 import { tmpdir } from "node:os";
 import { fileURLToPath } from "node:url";
+import { findWorkspaceRoot } from "./lib/estate.mjs";
 
 const scriptDir = dirname(fileURLToPath(import.meta.url));
-const sourceRoot = resolve(scriptDir, "..", "..");
+const sourceRoot = findWorkspaceRoot(scriptDir);
 const validator = resolve(scriptDir, "check-ai-agent-protocol.mjs");
 const tempRoot = await mkdtemp(resolve(tmpdir(), "unierp-agent-protocol-"));
 const sourceWorkspace = JSON.parse(
@@ -30,9 +31,9 @@ async function createFixture(name) {
   await mkdir(fixtureRoot, { recursive: true });
   await copyFile("AGENTS.md", fixtureRoot);
   await copyFile("UniERP.code-workspace", fixtureRoot);
-  await copyFile("unierp-workspace/governance", fixtureRoot);
-  await copyFile("unierp-workspace/scripts/classify-ai-change.mjs", fixtureRoot);
-  await copyFile("unierp-platform/docs/standards", fixtureRoot);
+  await copyFile("platform/workspace/governance", fixtureRoot);
+  await copyFile("platform/workspace/scripts/classify-ai-change.mjs", fixtureRoot);
+  await copyFile("platform/docs/standards", fixtureRoot);
   for (const folder of sourceWorkspace.folders) {
     await copyFile(`${folder.path}/AGENTS.md`, fixtureRoot);
     await copyFile(`${folder.path}/.github/pull_request_template.md`, fixtureRoot);
@@ -110,7 +111,7 @@ try {
   const dishonestStatus = await createFixture("dishonest-status");
   const manifestPath = resolve(
     dishonestStatus,
-    "unierp-platform/docs/standards/AI_AGENT_PROTOCOL.json",
+    "platform/docs/standards/AI_AGENT_PROTOCOL.json",
   );
   await mutateJson(manifestPath, (manifest) => {
     manifest.cycleStatuses.PARTIAL = "Useful work exists.";
@@ -124,7 +125,7 @@ try {
   const schemaViolation = await createFixture("schema-violation");
   const invalidManifestPath = resolve(
     schemaViolation,
-    "unierp-platform/docs/standards/AI_AGENT_PROTOCOL.json",
+    "platform/docs/standards/AI_AGENT_PROTOCOL.json",
   );
   await mutateJson(invalidManifestPath, (manifest) => {
     manifest.providerNeutral = "yes";
@@ -138,7 +139,7 @@ try {
   const unmappedRepository = await createFixture("unmapped-repository");
   const repositoryMapPath = resolve(
     unmappedRepository,
-    "unierp-platform/docs/standards/AI_REPOSITORY_PLATFORM_MAP.json",
+    "platform/docs/standards/AI_REPOSITORY_PLATFORM_MAP.json",
   );
   await mutateJson(repositoryMapPath, (repositoryMap) => {
     delete repositoryMap.repositories.api;
@@ -152,7 +153,7 @@ try {
   const untracedRule = await createFixture("untraced-rule");
   const traceabilityPath = resolve(
     untracedRule,
-    "unierp-platform/docs/standards/TRACEABILITY_MATRIX.md",
+    "platform/docs/standards/TRACEABILITY_MATRIX.md",
   );
   await writeFile(
     traceabilityPath,

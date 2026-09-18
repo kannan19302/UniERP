@@ -1,0 +1,324 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-09-18T16:45:00Z",
+  "sourceOfTruth": "UniERP 13-Root Consolidated Topology",
+  "summary": {
+    "totalLegacyRepositories": 31,
+    "activeGitRoots": 13,
+    "nestedPackages": 6,
+    "nestedOperationalDirs": 2,
+    "externallyRetainedPublishedPackages": 10
+  },
+  "dispositions": [
+    {
+      "legacyName": "unierp-contracts",
+      "canonicalPath": "contracts",
+      "package": "@kannan19302/contracts",
+      "layer": 0,
+      "platformOwner": "PLT-BIZ",
+      "trustPlane": "cross-platform-contract",
+      "disposition": "RETAINED",
+      "notes": "Canonical L0 API and schema contracts"
+    },
+    {
+      "legacyName": "auth",
+      "canonicalPath": "idp",
+      "package": "@kannan19302/auth",
+      "layer": 1,
+      "platformOwner": "PLT-IAM",
+      "trustPlane": "identity",
+      "disposition": "EXTERNALLY_CONSUMED",
+      "notes": "Retained as published npm package @kannan19302/auth@^1.0.4; identity provider runtime hosted in idp"
+    },
+    {
+      "legacyName": "config",
+      "canonicalPath": "shared/config",
+      "package": "@kannan19302/config",
+      "layer": 1,
+      "platformOwner": "PLT-OPS",
+      "trustPlane": "runtime",
+      "disposition": "NESTED",
+      "notes": "Nested inside shared/config under shared root"
+    },
+    {
+      "legacyName": "design-system",
+      "canonicalPath": "design-system",
+      "package": "@kannan19302/ui",
+      "layer": 1,
+      "platformOwner": "PLT-DS",
+      "trustPlane": "shared-ui",
+      "disposition": "RETAINED",
+      "notes": "Canonical Strata Design System with 374 verified components"
+    },
+    {
+      "legacyName": "kernel",
+      "canonicalPath": "shared",
+      "package": "@kannan19302/kernel",
+      "layer": 1,
+      "platformOwner": "PLT-BIZ",
+      "trustPlane": "runtime-core",
+      "disposition": "EXTERNALLY_CONSUMED",
+      "notes": "Retained as published npm package @kannan19302/kernel@^1.0.3; primitives absorbed into shared and contracts"
+    },
+    {
+      "legacyName": "sdk",
+      "canonicalPath": "contracts",
+      "package": "@kannan19302/sdk",
+      "layer": 1,
+      "platformOwner": "PLT-DEV",
+      "trustPlane": "client-sdk",
+      "disposition": "EXTERNALLY_CONSUMED",
+      "notes": "Retained as published npm package @kannan19302/sdk@^1.0.3; client generation targets contracts"
+    },
+    {
+      "legacyName": "service-kit",
+      "canonicalPath": "api",
+      "package": "@kannan19302/service-kit",
+      "layer": 1,
+      "platformOwner": "PLT-BIZ",
+      "trustPlane": "service-primitives",
+      "disposition": "EXTERNALLY_CONSUMED",
+      "notes": "Retained as published npm package @kannan19302/service-kit@^0.2.3; consumed by api and idp"
+    },
+    {
+      "legacyName": "shared",
+      "canonicalPath": "shared",
+      "package": "@kannan19302/shared",
+      "layer": 1,
+      "platformOwner": "PLT-OPS",
+      "trustPlane": "cross-platform-library",
+      "disposition": "RETAINED",
+      "notes": "Canonical cross-platform shared utilities and validators"
+    },
+    {
+      "legacyName": "storybook",
+      "canonicalPath": "design-system/storybook",
+      "package": "@kannan19302/storybook",
+      "layer": 4,
+      "platformOwner": "PLT-DS",
+      "trustPlane": "ui-documentation",
+      "disposition": "NESTED",
+      "notes": "Nested inside design-system/storybook; runs on port 6006"
+    },
+    {
+      "legacyName": "blockchain",
+      "canonicalPath": "data",
+      "package": "@kannan19302/blockchain",
+      "layer": 2,
+      "platformOwner": "PLT-BIZ",
+      "trustPlane": "immutable-ledger",
+      "disposition": "EXTERNALLY_CONSUMED",
+      "notes": "Retained as published npm package @kannan19302/blockchain@^1.0.3; immutable ledger primitives provided natively in data"
+    },
+    {
+      "legacyName": "data",
+      "canonicalPath": "data",
+      "package": "@kannan19302/database",
+      "layer": 2,
+      "platformOwner": "PLT-BIZ",
+      "trustPlane": "persistence",
+      "disposition": "RETAINED",
+      "notes": "Canonical PostgreSQL persistence with RLS, outbox, and Prisma schema"
+    },
+    {
+      "legacyName": "extension-api",
+      "canonicalPath": "contracts",
+      "package": "@kannan19302/extension-api",
+      "layer": 2,
+      "platformOwner": "PLT-DEV",
+      "trustPlane": "extension-contract",
+      "disposition": "EXTERNALLY_CONSUMED",
+      "notes": "Retained as published npm package @kannan19302/extension-api@^1.1.0; consumed by developer-platform/extensions"
+    },
+    {
+      "legacyName": "framework",
+      "canonicalPath": "shared/framework",
+      "package": "@kannan19302/framework",
+      "layer": 2,
+      "platformOwner": "PLT-OPS",
+      "trustPlane": "application-framework",
+      "disposition": "NESTED",
+      "notes": "Nested inside shared/framework under shared root"
+    },
+    {
+      "legacyName": "sandbox",
+      "canonicalPath": "developer-platform",
+      "package": "@kannan19302/sandbox",
+      "layer": 2,
+      "platformOwner": "PLT-DEV",
+      "trustPlane": "isolated-execution",
+      "disposition": "EXTERNALLY_CONSUMED",
+      "notes": "Retained as published npm package @kannan19302/sandbox@^1.1.0; consumed for secure extension isolation"
+    },
+    {
+      "legacyName": "api",
+      "canonicalPath": "api",
+      "package": "@kannan19302/api",
+      "layer": 3,
+      "platformOwner": "PLT-BIZ",
+      "trustPlane": "business-logic-backend",
+      "disposition": "RETAINED",
+      "notes": "Canonical NestJS business logic API backend on port 3001"
+    },
+    {
+      "legacyName": "idp",
+      "canonicalPath": "idp",
+      "package": "@kannan19302/idp",
+      "layer": 3,
+      "platformOwner": "PLT-IAM",
+      "trustPlane": "identity",
+      "disposition": "RETAINED",
+      "notes": "Canonical Identity Provider (OIDC / SAML / WebAuthn) on port 3005"
+    },
+    {
+      "legacyName": "developer-platform",
+      "canonicalPath": "developer-platform",
+      "package": "@kannan19302/developer",
+      "layer": 4,
+      "platformOwner": "PLT-DEV",
+      "trustPlane": "developer-ecosystem",
+      "disposition": "RETAINED",
+      "notes": "Canonical Developer Platform on port 4004"
+    },
+    {
+      "legacyName": "marketing-site",
+      "canonicalPath": "marketing-site",
+      "package": "corporate-website",
+      "layer": 4,
+      "platformOwner": "PLT-MAR",
+      "trustPlane": "public-surface",
+      "disposition": "RETAINED",
+      "notes": "Promoted to Unified Landing Page & Platform Gateway on port 4000"
+    },
+    {
+      "legacyName": "marketplace",
+      "canonicalPath": "developer-platform/marketplace",
+      "package": "@kannan19302/marketplace",
+      "layer": 4,
+      "platformOwner": "PLT-MKT",
+      "trustPlane": "marketplace",
+      "disposition": "NESTED",
+      "notes": "Nested inside developer-platform/marketplace; runs on port 4005"
+    },
+    {
+      "legacyName": "provider-admin-os",
+      "canonicalPath": "provider-admin-os",
+      "package": "@kannan19302/console",
+      "layer": 4,
+      "platformOwner": "PLT-PAO",
+      "trustPlane": "provider-surface",
+      "disposition": "RETAINED",
+      "notes": "Provider Admin OS console on port 4001"
+    },
+    {
+      "legacyName": "tenant-admin",
+      "canonicalPath": "tenant-apps/tenant-admin",
+      "package": "@kannan19302/tenant-admin",
+      "layer": 4,
+      "platformOwner": "PLT-TAD",
+      "trustPlane": "tenant-admin",
+      "disposition": "NESTED",
+      "notes": "Nested inside tenant-apps/tenant-admin; runs on port 4003"
+    },
+    {
+      "legacyName": "tenant-apps",
+      "canonicalPath": "tenant-apps",
+      "package": "@kannan19302/web",
+      "layer": 4,
+      "platformOwner": "PLT-ERP",
+      "trustPlane": "tenant-surface",
+      "disposition": "RETAINED",
+      "notes": "Core tenant ERP applications suite on port 4002"
+    },
+    {
+      "legacyName": "tenant-site-template",
+      "canonicalPath": "developer-platform",
+      "package": "@kannan19302/corporate-site-template",
+      "layer": 4,
+      "platformOwner": "PLT-SITE",
+      "trustPlane": "site-template",
+      "disposition": "EXTERNALLY_CONSUMED",
+      "notes": "Retained as published npm package @kannan19302/corporate-site-template@^1.0.0; consumed by builder"
+    },
+    {
+      "legacyName": "tenant-sites",
+      "canonicalPath": "marketing-site",
+      "package": "@kannan19302/tenant-sites",
+      "layer": 4,
+      "platformOwner": "PLT-SITE",
+      "trustPlane": "site-hosting",
+      "disposition": "EXTERNALLY_CONSUMED",
+      "notes": "Retained as published npm package @kannan19302/tenant-sites@^0.1.0; multi-tenant routing served via marketing-site and tenant-apps"
+    },
+    {
+      "legacyName": "web-studio",
+      "canonicalPath": "developer-platform",
+      "package": "@kannan19302/web-studio",
+      "layer": 4,
+      "platformOwner": "PLT-DEV",
+      "trustPlane": "visual-builder",
+      "disposition": "EXTERNALLY_CONSUMED",
+      "notes": "Retained as published npm package @kannan19302/web-studio@^0.1.0; visual low-code/no-code studio unified into developer-platform"
+    },
+    {
+      "legacyName": "desktop-app",
+      "canonicalPath": "desktop-app",
+      "package": "@kannan19302/desktop",
+      "layer": 5,
+      "platformOwner": "PLT-DESK",
+      "trustPlane": "desktop-surface",
+      "disposition": "RETAINED",
+      "notes": "Electron desktop shell on port 4007"
+    },
+    {
+      "legacyName": "mobile",
+      "canonicalPath": "mobile",
+      "package": "unierp-mobile",
+      "layer": 5,
+      "platformOwner": "PLT-MOB",
+      "trustPlane": "mobile-surface",
+      "disposition": "RETAINED",
+      "notes": "Flutter multi-platform client with 0 analyze warnings; runs web dev server on port 4006"
+    },
+    {
+      "legacyName": "extensions",
+      "canonicalPath": "developer-platform/extensions",
+      "package": "unierp-extensions",
+      "layer": 6,
+      "platformOwner": "PLT-DEV",
+      "trustPlane": "extension-ecosystem",
+      "disposition": "NESTED",
+      "notes": "Nested inside developer-platform/extensions under developer-platform root"
+    },
+    {
+      "legacyName": "infra",
+      "canonicalPath": "platform/infra",
+      "package": "N/A",
+      "layer": 7,
+      "platformOwner": "PLT-OPS",
+      "trustPlane": "operational-infra",
+      "disposition": "NESTED",
+      "notes": "Nested inside platform/infra; contains Docker Compose, Kubernetes, and Terraform configs"
+    },
+    {
+      "legacyName": "workspace",
+      "canonicalPath": "platform/workspace",
+      "package": "unierp-programme",
+      "layer": 7,
+      "platformOwner": "PLT-OPS",
+      "trustPlane": "programme-governance",
+      "disposition": "NESTED",
+      "notes": "Nested inside platform/workspace; contains estate scripts, skills, and governance ledgers"
+    },
+    {
+      "legacyName": "platform",
+      "canonicalPath": "platform",
+      "package": "N/A",
+      "layer": 7,
+      "platformOwner": "PLT-OPS",
+      "trustPlane": "operational-governance",
+      "disposition": "RETAINED",
+      "notes": "Parent operational container repository housing platform/docs, platform/infra, and platform/workspace"
+    }
+  ]
+}
