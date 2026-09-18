@@ -3,7 +3,6 @@
 # ============================================================
 #
 # Ports Summary:
-#   4000  platform-wizard       Master SSO Gateway & Platform Switcher
 #   5432  postgres              PostgreSQL 16 + pgvector
 #   6379  redis                 Redis 7 Alpine
 #   8025  mailpit               Local transactional-email inbox (SMTP 1025)
@@ -13,33 +12,6 @@
 # ============================================================
 
 services:
-  # ──────────────────────────────────────────────
-  # Master SSO Platform Wizard & Gateway (port 4000)
-  # ──────────────────────────────────────────────
-  platform-wizard:
-    build:
-      context: ./platform-wizard
-      dockerfile: Dockerfile
-      target: dev
-    container_name: platform-wizard
-    restart: unless-stopped
-    profiles: ["deprecated-wizard"]
-    mem_limit: 512m
-    environment:
-      PORT: "4000"
-      HOST: "0.0.0.0"
-      NODE_ENV: development
-    ports:
-      - "4000:4000"
-    volumes:
-      - ./platform-wizard/public:/app/public
-      - ./platform-wizard/server.mjs:/app/server.mjs
-    healthcheck:
-      test: ["CMD-SHELL", "node -e \"fetch('http://localhost:4000/api/auth/session').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))\""]
-      interval: 15s
-      timeout: 5s
-      retries: 5
-      start_period: 10s
 
   # ──────────────────────────────────────────────
   # PostgreSQL 16 (+ pgvector, for local-first AI stack)

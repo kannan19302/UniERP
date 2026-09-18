@@ -4,22 +4,19 @@
 #
 #   docker compose -f docker-compose.dev.yml -f docker-compose.platform.yml up -d --build
 #
-# PORT ALLOCATION (10 Platforms + 2 Backend Services + Master SSO Wizard)
+# PORT ALLOCATION (8 Contiguous Applications + 2 Core Backends + 1 Catalog)
 # ────────────────────────────────────────────────────────────────────────
-# 4000  ../infra/platform-wizard  Global Platform Wizard (Next.js, real OIDC relying party)
-# 4001  ../marketing-site         L4   P1 — Marketing Site
-# 4002  ../provider-admin-os      L4   P2 — Provider Admin OS (🔒 Internal Only)
-# 4003  ../tenant-apps            L4   P3 — Tenant Applications / ERP
-# 4004  ../tenant-sites           L4   P4 — Tenant Websites
-# 4005  ../web-studio             L4   P5 — Web Studio
-# 4006  ../tenant-admin           L4   P6 — Tenant Admin Console
-# 4007  ../marketplace            L4   P7 — Marketplace
-# 4008  ../developer-platform     L4   P8 — Developer Platform
-# 4009  ../mobile          L5   P9 — Mobile App (Flutter Web)
-# 4010  ../desktop-app            L5   P10 — Desktop App (Web Client Preview)
-# 3001  ../api                    L3   API Monolith Backend
-# 3005  ../idp                    L3   Identity Provider / SSO
-# 6006  ../storybook              Support Design System Catalog
+# 4000  ../marketing-site               L4   P1 — Unified Master Landing Page & Platform Switcher
+# 4001  ../provider-admin-os            L4   P2 — Provider Admin OS (🔒 Internal Cloud Operator)
+# 4002  ../tenant-apps                  L4   P3 — Flagship Multi-Tenant ERP Business Suite
+# 4003  ../tenant-apps/tenant-admin     L4   P4 — Tenant Administration Console (OCC)
+# 4004  ../developer-platform           L4   P5 — Developer Platform & Visual App/Site Studio
+# 4005  ../developer-platform/marketplace L4 P6 — Extension, Template & Module Marketplace
+# 4006  ../mobile                       L5   P7 — Mobile Web Preview Client (Flutter Web)
+# 4007  ../desktop-app                  L5   P8 — Desktop Web Shell Preview (Tauri)
+# 3001  ../api                          L3   API Core Backend Monolith Engine
+# 3005  ../idp                          L3   Sovereign Identity Provider / OIDC Server
+# 6006  ../design-system/storybook      L1   Strata DL Component Catalog & Workbench
 # ============================================================
 
 x-registry: &registry
@@ -283,7 +280,7 @@ services:
     environment:
       <<: *watch-env
       NODE_ENV: development
-      PORT: "4001"
+      PORT: "4000"
       DATABASE_URL: postgresql://unerp:unerp_password@postgres:5432/unerp_marketing?schema=public
       JWT_SECRET: ${JWT_SECRET:?set JWT_SECRET in infra/.env — run scripts/gen-dev-secrets.sh}
       ENCRYPTION_KEY: ${ENCRYPTION_KEY:?set ENCRYPTION_KEY in infra/.env — run scripts/gen-dev-secrets.sh}
@@ -321,7 +318,7 @@ services:
           path: ../marketing-site/next.config.mjs
           target: /app/next.config.mjs
     ports:
-      - "4001:4001"
+      - "4000:4000"
     extra_hosts:
       - "host.docker.internal:host-gateway"
     depends_on:
@@ -378,7 +375,7 @@ services:
           path: ../provider-admin-os/next.config.mjs
           target: /app/next.config.mjs
     ports:
-      - "4002:4002"
+      - "4001:4001"
     extra_hosts:
       - "host.docker.internal:host-gateway"
     depends_on:
@@ -442,7 +439,7 @@ services:
           path: ../tenant-apps/next.config.mjs
           target: /app/next.config.mjs
     ports:
-      - "4003:4003"
+      - "4002:4002"
     extra_hosts:
       - "host.docker.internal:host-gateway"
     depends_on:
@@ -571,7 +568,7 @@ services:
 
   tenant-admin:
     build:
-      context: ../tenant-admin
+      context: ../tenant-apps/tenant-admin
       target: dev
       args:
         <<: *registry
@@ -611,7 +608,7 @@ services:
           path: ../tenant-admin/next.config.mjs
           target: /app/next.config.mjs
     ports:
-      - "4006:4006"
+      - "4003:4003"
     extra_hosts:
       - "host.docker.internal:host-gateway"
     depends_on:
@@ -626,7 +623,7 @@ services:
 
   marketplace:
     build:
-      context: ../marketplace
+      context: ../developer-platform/marketplace
       target: dev
       args:
         <<: *registry
@@ -666,7 +663,7 @@ services:
           path: ../marketplace/next.config.mjs
           target: /app/next.config.mjs
     ports:
-      - "4007:4007"
+      - "4005:4005"
     extra_hosts:
       - "host.docker.internal:host-gateway"
     depends_on:
@@ -716,7 +713,7 @@ services:
           path: ../developer-platform/next.config.mjs
           target: /app/next.config.mjs
     ports:
-      - "4008:4008"
+      - "4004:4004"
     extra_hosts:
       - "host.docker.internal:host-gateway"
     depends_on:
@@ -768,7 +765,7 @@ services:
     volumes:
       - ../desktop-app/public:/app/public
     ports:
-      - "4010:4010"
+      - "4007:4007"
     extra_hosts:
       - "host.docker.internal:host-gateway"
     depends_on:
@@ -781,7 +778,7 @@ services:
 
   storybook:
     build:
-      context: ../storybook
+      context: ../design-system/storybook
       target: dev
       args: *registry
     container_name: storybook
