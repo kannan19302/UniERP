@@ -11,20 +11,20 @@ Summary: 14 active repositories, 12 package identities and 16 internal dependenc
 
 | Repository | Layer | Package identity | Git head | Package manager | Node engine | Lock |
 | --- | ---: | --- | --- | --- | --- | --- |
-| contracts | L0 | @kannan19302/contracts | 3ebbaa5baddc | pnpm@9.15.4 | >=22 <23 | pnpm-lock.yaml |
-| design-system | L1 | @kannan19302/ui | c6ef1da96103 | pnpm@9.15.4 | >=22 <23 | pnpm-lock.yaml |
-| shared | L1 | @kannan19302/shared | 27bd476e91d6 | pnpm@9.15.4 | >=22 <23 | pnpm-lock.yaml |
-| data | L2 | @kannan19302/database | b106013107a8 | pnpm@9.15.4 | >=22 <23 | pnpm-lock.yaml |
-| api | L3 | @kannan19302/api | b252c5ec3d58 | pnpm@9.15.4 | >=22 <23 | pnpm-lock.yaml |
-| idp | L3 | @kannan19302/idp | 620be8b805a1 | pnpm@9.15.4 | >=22 <23 | pnpm-lock.yaml |
-| business-suite | L4 | @kannan19302/web | 0324cfe4e2fe | pnpm@9.15.4 | >=22 <23 | pnpm-lock.yaml |
-| tenant-admin | L4 | @kannan19302/tenant-admin | dceec322e8f8 | pnpm@9.15.4 | >=22 <23 | pnpm-lock.yaml |
-| provider-admin | L4 | @kannan19302/console | b212fbce82d2 | pnpm@9.15.4 | >=22 <23 | pnpm-lock.yaml |
-| developer-platform | L4 | @kannan19302/developer | c80d9e18961a | pnpm@9.15.4 | >=22 <23 | pnpm-lock.yaml |
-| marketing-site | L4 | corporate-website | 3afee74a0baa | pnpm@9.15.4 | >=22 <23 | pnpm-lock.yaml |
-| mobile | L5 | — | 003ed33766ec | — | — | — |
-| desktop-app | L5 | @kannan19302/desktop | f5f783b74b78 | pnpm@9.15.4 | >=22 <23 | pnpm-lock.yaml |
-| platform | L7 | — | 818a376d0d74 | — | — | — |
+| contracts | L0 | @kannan19302/contracts | 38ce0558aaa2 | pnpm@9.15.4 | >=22 <23 | pnpm-lock.yaml |
+| design-system | L1 | @kannan19302/ui | e09913443135 | pnpm@9.15.4 | >=22 <23 | pnpm-lock.yaml |
+| shared | L1 | @kannan19302/shared | 29cb86b7068c | pnpm@9.15.4 | >=22 <23 | pnpm-lock.yaml |
+| data | L2 | @kannan19302/database | 299a9d372141 | pnpm@9.15.4 | >=22 <23 | pnpm-lock.yaml |
+| api | L3 | @kannan19302/api | ffab40b5a3cb | pnpm@9.15.4 | >=22 <23 | pnpm-lock.yaml |
+| idp | L3 | @kannan19302/idp | 470de54f0b92 | pnpm@9.15.4 | >=22 <23 | pnpm-lock.yaml |
+| business-suite | L4 | @kannan19302/web | 5eefdc5653a2 | pnpm@9.15.4 | >=22 <23 | pnpm-lock.yaml |
+| tenant-admin | L4 | @kannan19302/tenant-admin | 5c8eaea31b43 | pnpm@9.15.4 | >=22 <23 | pnpm-lock.yaml |
+| provider-admin | L4 | @kannan19302/console | d741cf4bb417 | pnpm@9.15.4 | >=22 <23 | pnpm-lock.yaml |
+| developer-platform | L4 | @kannan19302/developer | 3d88ad48f534 | pnpm@9.15.4 | >=22 <23 | pnpm-lock.yaml |
+| marketing-site | L4 | corporate-website | e83e6f466a8d | pnpm@9.15.4 | >=22 <23 | pnpm-lock.yaml |
+| mobile | L5 | — | 6079d569d8d6 | — | — | — |
+| desktop-app | L5 | @kannan19302/desktop | 0cc694fe2360 | pnpm@9.15.4 | >=22 <23 | pnpm-lock.yaml |
+| platform | L7 | — | — | — | — | — |
 
 ## Internal package dependencies
 

@@ -44,7 +44,7 @@ for (const repository of estate.names) {
     layer: catalogEntry.layer,
     packages: catalogEntry.packages,
     manifest,
-    head: gitHead(root),
+    head: repository === "platform" ? "—" : gitHead(root),
     lock: existsSync(resolve(root, "pnpm-lock.yaml")) ? "pnpm-lock.yaml" : "—",
   });
 }
