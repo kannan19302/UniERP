@@ -9,27 +9,17 @@ This standard document specifies the technical quality criteria enforced across 
 
 ## 1. UI & Design System Standards (`@kannan19302/ui`)
 
-### Design Token Governance
-* **Zero Raw Hex Colors**: Any instance of `#hex` outside token files fails CI.
-* **Zero Raw Pixel Spacing**: Any `px` spacing outside token definitions fails CI.
-* **Semantic Surfaces**:
-  * Canvas: `var(--color-bg)`
-  * Elevated Card: `var(--color-bg-elevated)`
-  * Sunken Well / Table Header: `var(--color-bg-sunken)`
-  * Interactive Hover: `var(--color-bg-hover)`
-  * Focus Ring: `var(--color-border-focus)` (2px accessible outline)
+The design system is governed by the **10 Pillars of Enterprise Design System Excellence** codified at [`STRATA_DESIGN_SYSTEM_STANDARDS.md`](STRATA_DESIGN_SYSTEM_STANDARDS.md).
 
-### 4-Tier Ergonomic Density Matrix
-All enterprise tables, forms, and lists must react to `data-density`:
-* `ultra-compact` (24px row): Financial ledgers, stock books, trading screens. Font size >= 11px.
-* `compact` (28px row): Operational triage, CRM lead lists, inventory allocations.
-* `standard` (32px row): Standard ERP forms, detail views, settings.
-* `comfortable` (40px row): Touch-first POS registers, warehouse tablets.
+### Key Architectural Inviolable Rules
+* **100% Token Purity**: Zero raw hex colors, zero raw pixel dimensions outside tokens (verified by `check-tokens.mjs`).
+* **CSS Logical Properties**: Mandatory `margin-inline-start/end`, `padding-inline-start/end`, `inset-inline-start/end`; zero physical directions.
+* **Universal Ref Forwarding & Polymorphism**: `React.forwardRef` and `asChild` (Radix Slot) on all primitives.
+* **4-Tier Ergonomic Density Matrix**: `ultra-compact` (24px row), `compact` (28px row), `standard` (32px row), `comfortable` (40px row).
+* **Accessibility (WCAG 2.2 AA & WHCM)**: Contrast $\ge$ 4.5:1, 2px focus ring, `@media (forced-colors: active)` support, and zero `vitest-axe` violations.
+* **The 5 Canonical Enterprise States**: Default, Loading/Skeleton (`CLS < 0.05`), Actionable Empty, Error/Incident (`INC-...`), and Unauthorized/403.
+* **Package Hygiene**: Mandatory `"sideEffects": ["*.css", "**/*.css"]` and component weight budgets.
 
-### Accessibility (WCAG 2.2 AA)
-* Standard text contrast >= 4.5:1; large text and graphical borders >= 3.0:1 across `strata`, `strata-dark`, and `strata-high-contrast`.
-* 100% keyboard navigable (Tab, Shift+Tab, Arrow keys, Enter, Space, Escape) with visible focus indicators.
-* Vitest-axe test required on all components (`expect(results).toHaveNoViolations()`).
 
 ---
 
