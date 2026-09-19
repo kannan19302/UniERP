@@ -222,5 +222,9 @@ Before submitting or committing any UI component changes:
 - [ ] `AllStatesGallery` or `StateMatrix` story included visualizing all states in one place.
 - [ ] Sub-elements and compound anatomy visualized.
 - [ ] 4-Tier density variations demonstrated.
+- [ ] Story compilation gate clean (`node scripts/check-stories-compilation.mjs` passes with zero syntax or JSX transform errors).
+- [ ] Zero unescaped `>` or `<` inside JSX text nodes (strictly use `&gt;`, `&lt;`, or string literals `{"..."}`).
+- [ ] Universal Strata typography enforced: uses `var(--font-sans)` with Inter & system fallbacks; zero unstyled browser serif fonts.
 - [ ] Zero accessibility violations in Storybook A11y addon.
 - [ ] Token gate clean (`node scripts/check-tokens.mjs` passes).
+- [ ] Storybook standards gate clean (`node scripts/check-storybook-standards.mjs` passes).
