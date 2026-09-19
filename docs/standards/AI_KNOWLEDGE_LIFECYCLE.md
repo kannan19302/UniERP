@@ -11,7 +11,7 @@ current intent, ownership, contracts, constraints, operating procedures and evid
 repository layout or stale implementation as a source of truth.
 
 The project-level operational adapter is
-`unierp-workspace/governance/skills/unierp-enterprise-brain/SKILL.md`. It routes agents
+`platform/workspace/governance/skills/unierp-enterprise-brain/SKILL.md`. It routes agents
 through this policy and the canonical sources; it does not override the authority order in the AI agent
 development protocol.
 
@@ -59,7 +59,7 @@ development protocol.
 | Implementation observations | dated/generated `docs/evidence/` or platform evidence |
 | Operating procedure | owning platform operations document and runbook |
 | Time-bound sequencing and backlog | operational governance plans, not product authority |
-| Reusable agent navigation/decision procedure | `unierp-workspace/governance/skills/unierp-enterprise-brain/` |
+| Reusable agent navigation/decision procedure | `platform/workspace/governance/skills/unierp-enterprise-brain/` |
 
 ## Required change sequence
 
@@ -87,7 +87,7 @@ development protocol.
 The project skill validator is:
 
 ```powershell
-node unierp-workspace/governance/skills/unierp-enterprise-brain/scripts/validate-brain.mjs
+node platform/workspace/governance/skills/unierp-enterprise-brain/scripts/validate-brain.mjs --workspace-root .
 ```
 
 It verifies the project-level skill bundle, mandatory authorities, plan, repository inventory and repository agent

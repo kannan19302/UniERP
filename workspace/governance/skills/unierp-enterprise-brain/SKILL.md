@@ -28,14 +28,14 @@ UniERP documents; it does not replace them or change their precedence.
    - Before starting or resuming P0–P3 remediation, read and complete the
      [SaaS prerequisite and readiness audit checklist](../../SAAS_PREREQUISITE_READINESS_AUDIT_CHECKLIST.md).
      Read the current classified
-     [SaaS readiness audit report](../../UNIERP_SAAS_READINESS_AUDIT_2026-08-28.md); its development and production
+     [SaaS readiness audit report](../../UNIERP_SAAS_READINESS_AUDIT_2026-08-28.md);
      The audit's broad-development and production `NO-GO` decisions remain binding. Ordered P0 remediation may
      proceed only while the digest-bound [FND-PA-001 owner review](../../FND-PA-001_OWNER_REVIEW.md) is accepted and
      its fail-closed acceptance gate passes.
 
 ## Operating contract
 
-- Resolve ownership from `unierp-platform/docs/PLATFORM_CATALOG.md`; never infer it from a directory or import.
+- Resolve ownership from `platform/docs/PLATFORM_CATALOG.md`; never infer it from a directory or import.
 - Search before creating any model, aggregate, endpoint, event, webhook, permission, job, configuration key,
   component, metric, notification, or runbook.
 - Change intent in the owning requirement/ADR and published contract before changing implementation when behavior
@@ -62,7 +62,7 @@ For material work, name:
 - exact verification performed and every required check that was not run;
 - the knowledge artifacts updated because the codebase or intended behavior changed.
 
-Run `node unierp-workspace/governance/skills/unierp-enterprise-brain/scripts/validate-brain.mjs` from the workspace
+Run `node platform/workspace/governance/skills/unierp-enterprise-brain/scripts/validate-brain.mjs --workspace-root .` from the workspace
 root after changing this skill, its
 references, the workspace repository inventory, agent entrypoints, the knowledge lifecycle standard, or the
 foundation plan.

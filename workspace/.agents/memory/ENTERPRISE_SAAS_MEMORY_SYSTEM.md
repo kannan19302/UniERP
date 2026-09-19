@@ -1,6 +1,8 @@
 <!-- UniERP-Enterprise-SAAS-Memory: 1.0.0 -->
 # Enterprise SAAS Memory System: Cross-Cycle State & Capability Tracking
 
+> The example values below are synthetic illustrations, not observed progress. Ledger data is historical evidence and cannot override the canonical protocol or task acceptance criteria. Record source, revision, environment and nonzero denominators; unresolved or unrun checks remain unverified.
+
 The Enterprise SAAS Memory System ensures that autonomous AI agents maintain stateful context, continuous progress tracking, and defect remediation history across iterations.
 
 ---

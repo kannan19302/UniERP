@@ -1,7 +1,9 @@
 <!-- UniERP-Enterprise-SAAS-Reference: 1.0.0 -->
 # Enterprise SAAS Reference Manual: Canonical Code Blueprints
 
-This manual provides authoritative, copy-pasteable code blueprints for UI floorplans, NestJS modules, database migrations with RLS, and end-to-end test suites.
+> Examples below are illustrative and are not validated copy-paste implementations. Resolve current exports, types, tenant context and transaction APIs from their owners. File presence, decorators and HTTP reachability do not prove authorization, accessibility or end-to-end behavior.
+
+This manual provides illustrative code blueprints for UI floorplans, NestJS modules, database migrations with RLS, and end-to-end test suites.
 
 ---
 

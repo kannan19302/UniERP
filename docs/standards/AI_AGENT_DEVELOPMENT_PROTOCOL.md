@@ -41,6 +41,42 @@ Existing implementation is evidence, not automatic authority. When implementatio
 standard, record a gap; do not silently change the standard to bless the code or change security-sensitive code
 based only on a prose claim.
 
+## 2.1 Mandatory Execution Protocols
+
+Every AI development agent must strictly abide by the four fundamental execution protocols across all workspace operations:
+
+1. **Protocol 1: DEPENDENCY-ORDERED MULTI-REPO EXECUTION** (`DEPENDENCY-ORDERED EXECUTION`)
+   - For any multi-repository change, work strictly flows downstream from upstream providers to downstream consumers:
+     `TASK` $\rightarrow$ `IMPACT ANALYSIS` $\rightarrow$ `DEPENDENCY DISCOVERY` $\rightarrow$ `DEPENDENCY GRAPH` $\rightarrow$ `UPSTREAM CHANGES` $\rightarrow$ `UPSTREAM VALIDATION` $\rightarrow$ `DOWNSTREAM CONSUMER MIGRATION` $\rightarrow$ `CONSUMER VALIDATION` $\rightarrow$ `CROSS-REPO INTEGRATION VALIDATION` $\rightarrow$ `FINAL VERIFIED COMPLETION`.
+   - Contract order: `CONTRACT (L0)` $\rightarrow$ `PROVIDER (L3)` $\rightarrow$ `CONSUMER (L4/L5)` $\rightarrow$ `INTEGRATION VALIDATION`.
+   - Database order: `CONTRACT (L0)` $\rightarrow$ `PERSISTENCE (L2)` $\rightarrow$ `BACKEND / IAM (L3)` $\rightarrow$ `PRESENTATION (L4)` $\rightarrow$ `CLIENTS (L5)`.
+   - Never mutate consumers before upstream dependency verification has completed cleanly.
+
+2. **Protocol 2: EVIDENCE-GATED COMPLETION** (`EVIDENCE-GATED COMPLETION`)
+   - Agents are strictly prohibited from claiming completion (`Done`, `Complete`, `Fixed`, `Fully working`, `Production ready`, `Validation passed`) unless objective evidence exists.
+   - Every iteration must conclude with exactly one honest status:
+     - `VERIFIED COMPLETE` (Protocol `DONE`)
+     - `IMPLEMENTED — VERIFICATION PENDING` (Protocol `NOT VERIFIED`)
+     - `PARTIALLY COMPLETE` (Protocol `PARTIAL`)
+     - `BLOCKED` (Protocol `BLOCKED`)
+     - `FAILED VALIDATION` (Protocol `FAILED`)
+   - If an automated check cannot be executed, explicitly state `VERIFICATION NOT EXECUTED` with the exact technical cause.
+   - At the conclusion of every iteration, publish an Iteration Evidence Report (`STATUS`, `CHANGES`, `VALIDATION EXECUTED`, `RESULTS`, `ACCEPTANCE CRITERIA`, `REMAINING WORK`, `NEXT ACTION`).
+
+3. **Protocol 3: CONTEXT-BOUNDED EXECUTION** (`CONTEXT-BOUNDED EXECUTION`)
+   - Agents must maintain two discrete context boundaries:
+     - *Level 1 (Global Context):* Compact model of platform architecture, 14 canonical roots, package dependencies, current goal, and overall progress.
+     - *Level 2 (Active Repository Context):* Detailed examination limited to the current repository, direct upstream contracts, direct downstream consumers, and active task files.
+   - Switching between repositories mandates emitting a Structured Handoff (`Completed`, `Dependencies changed`, `Contracts changed`, `Files changed`, `Validation performed`, `Known issues`, `Downstream impact`, `Next repository`, `Next task`, `Required context`).
+
+4. **Protocol 4: ACCEPTANCE-CRITERIA-DRIVEN EXECUTION** (`ACCEPTANCE-CRITERIA-DRIVEN EXECUTION`)
+   - All tasks must be decomposed into explicit, numbered acceptance criteria (`AC-01`, `AC-02`, ...) prior to implementation.
+   - Each criterion tracks one of four states: `PASS`, `FAIL`, `BLOCKED`, `NOT VERIFIED`.
+   - Completion (`VERIFIED COMPLETE` / `DONE`) cannot be claimed while mandatory criteria remain `FAIL`, `BLOCKED`, or `NOT VERIFIED`.
+
+5. **Protocol 5: MANDATORY ITERATION COMMIT & PUSH TO GITHUB** (`MANDATORY COMMIT AND PUSH`)
+   - At the conclusion of every implementation iteration, following verification gate execution and Iteration Evidence Report generation, the agent MUST review the working tree, stage changes, commit with structured documentation, and push all commits to the remote GitHub repository.
+
 ## 3. Risk and autonomy model
 
 Classify the highest applicable risk before implementation.

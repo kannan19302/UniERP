@@ -7,9 +7,9 @@ Read this reference at the start of every material UniERP task.
 Apply the first relevant authority in this order:
 
 1. Law, safety constraints, and the human's explicit current request.
-2. Accepted ADRs under `unierp-platform/docs/adr/` or an owning platform's `adr/` directory.
-3. The owning suite under `unierp-platform/docs/platforms/<platform>/`.
-4. Cross-platform standards under `unierp-platform/docs/standards/`.
+2. Accepted ADRs under `platform/docs/adr/` or an owning platform's `adr/` directory.
+3. The owning suite under `platform/docs/platforms/<platform>/`.
+4. Cross-platform standards under `platform/docs/standards/`.
 5. Repository-local `AGENTS.md` instructions.
 6. Repository configuration, tests, README, contribution guidance, and current code.
 
@@ -20,16 +20,16 @@ and obtain the accountable owner's decision when precedence does not settle it.
 
 | Need | Authoritative source |
 | --- | --- |
-| Product promise, scope and top-level requirements | `unierp-platform/docs/product/` |
-| Platform/repository ownership | `unierp-platform/docs/PLATFORM_CATALOG.md` |
-| Platform intent and evidence | `unierp-platform/docs/platforms/<platform>/` |
-| Cross-platform engineering rules | `unierp-platform/docs/standards/` |
-| Accepted architectural decisions | `unierp-platform/docs/adr/` and platform `adr/` directories |
-| Agent risk, lifecycle, proof and reporting | `unierp-platform/docs/standards/AI_AGENT_DEVELOPMENT_PROTOCOL.md` |
-| Knowledge evolution | `unierp-platform/docs/standards/AI_KNOWLEDGE_LIFECYCLE.md` |
+| Product promise, scope and top-level requirements | `platform/docs/product/` |
+| Platform/repository ownership | `platform/docs/PLATFORM_CATALOG.md` |
+| Platform intent and evidence | `platform/docs/platforms/<platform>/` |
+| Cross-platform engineering rules | `platform/docs/standards/` |
+| Accepted architectural decisions | `platform/docs/adr/` and platform `adr/` directories |
+| Agent risk, lifecycle, proof and reporting | `platform/docs/standards/AI_AGENT_DEVELOPMENT_PROTOCOL.md` |
+| Knowledge evolution | `platform/docs/standards/AI_KNOWLEDGE_LIFECYCLE.md` |
 | Current repository inventory | `UniERP.code-workspace` |
-| Implementation signals | `unierp-platform/docs/evidence/` and platform `evidence/` directories |
-| Foundation remediation sequence | `unierp-workspace/governance/UNIERP_FOUNDATION_REMEDIATION_PLAN.md` |
+| Implementation signals | `platform/docs/evidence/` and platform `evidence/` directories |
+| Foundation remediation sequence | `platform/workspace/governance/UNIERP_FOUNDATION_REMEDIATION_PLAN.md` |
 
 ## Find the owner before designing
 

@@ -1,7 +1,9 @@
 <!-- UniERP-Enterprise-SAAS-Standards: 1.0.0 -->
 # Enterprise SAAS Engineering Standards: UI, DB, API & Test
 
-This standard document specifies the technical quality criteria enforced across all 31 repositories in the UniERP polyrepo.
+> This operational checklist is subordinate to accepted ADRs, owning platform specifications and the canonical agent protocol. Apply relevant rows to the affected boundary; do not infer a universal schema, guard chain, precision or module layout from these examples. Automated accessibility and HTTP reachability are partial evidence only.
+
+This standard document specifies the technical quality criteria enforced across the active repositories in the UniERP polyrepo.
 
 ---
 

@@ -1,22 +1,28 @@
 ---
 name: platform-governance-standards
-description: Authoritative standards, architectural boundaries, coding anatomy, and verification gates for unierp-platform.
+description: Repository guidance, architectural context, and verification routing for platform.
 version: 1.0.0
 author: UniERP Architecture Governance
 ---
 
 # UniERP Platform Architecture Specifications & Standards — AI Agent Guidance & Project Skill
 
-This skill governs all code modification, analysis, and testing within `unierp-platform` (**Layer Normative: Governance**). Every AI agent and software engineer working in this repository MUST follow these rules without exception.
+Read the [applicable AGENTS.md](../../../AGENTS.md) first. This skill is subordinate implementation guidance.
+Resolve ownership and current topology through that entrypoint; examples and performance aspirations are not
+verified product facts. Select verification from the owning package scripts and canonical risk matrix.
+The commands below are not a complete substitute for applicable security, integration, lint or build gates.
+
+
+This skill governs all code modification, analysis, and testing within `platform` (**Layer Normative: Governance**). Every AI agent and software engineer working in this repository MUST follow these rules without exception.
 
 ---
 
 ## 🏛️ 1. Architectural Position & Boundary Rules
 
-- **Repository**: `unierp-platform`
+- **Repository**: `platform`
 - **Layer**: **Normative (Governance)**
-- **Package Identity**: `unierp-platform-docs`
-- **Allowed Inbound Callers**: All human and AI engineers across all 31 repositories
+- **Package Identity**: `platform-docs`
+- **Allowed Inbound Callers**: All human and AI engineers across the active repositories
 - **Allowed Outbound Dependencies**: NONE (Normative specifications depend on no code)
 - **STRICTLY FORBIDDEN DEPENDENCIES**:
   - ❌ Runtime code dependencies
@@ -38,9 +44,9 @@ Authoritative platform specifications, Architecture Decision Records (ADRs), Pro
 ## 📐 3. Repository-Specific Coding Standards
 
 ### Core Implementation Standards
-1. Maintain strict modular boundaries and single-responsibility interfaces.
-2. Export all public types from the root `index.ts`.
-3. Ensure zero TypeScript compilation errors under `tsc --noEmit`.
+1. Preserve accepted ADRs and link normative facts to their owning specification.
+2. Keep generated inventories separate from intent and regenerate them with their owning tools.
+3. Verify documentation links, governance discovery and affected protocol gates from the platform root.
 
 ---
 
@@ -49,7 +55,7 @@ Authoritative platform specifications, Architecture Decision Records (ADRs), Pro
 Before submitting or reporting completion on any change in this repository, run and verify:
 
 ```bash
-node scripts/validate-truth.mjs (via workspace)
+node workspace/scripts/check-ai-agent-protocol.mjs
 ```
 
 All tests must pass with 0 failures and 0 type errors.

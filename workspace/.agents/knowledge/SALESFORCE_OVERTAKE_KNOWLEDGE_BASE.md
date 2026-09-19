@@ -1,7 +1,9 @@
 <!-- UniERP-Enterprise-SAAS-Knowledge: 1.0.0 -->
 # Enterprise SAAS Knowledge Base: Market Leadership & Industry Blueprints
 
-This knowledge base serves as the authoritative encyclopedia for achieving global enterprise software market leadership under the tagline **"Enterprise SAAS business platform"**.
+> This is a proposal catalog, not authoritative product intent or verified competitive research. Capability, price, performance and superiority claims below are UNVERIFIED unless tied to dated primary sources and build-bound evidence. Follow owning platform requirements before implementing a recipe.
+
+This knowledge base serves as a proposal catalog for achieving global enterprise software market leadership under the tagline **"Enterprise SAAS business platform"**.
 
 ---
 

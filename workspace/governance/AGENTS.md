@@ -13,7 +13,7 @@ Its clauses are mandatory. The machine-readable profile is
 ## Project-level enterprise brain
 
 Before material analysis, planning, review or mutation, every agent MUST read and apply the project skill at
-`workspace/governance/skills/unierp-enterprise-brain/SKILL.md`. The skill is the shared operational
+[`platform/workspace/governance/skills/unierp-enterprise-brain/SKILL.md`](platform/workspace/governance/skills/unierp-enterprise-brain/SKILL.md). The skill is the shared operational
 navigation and decision layer for product vision, platform boundaries, enterprise architecture, domains, data,
 security, contracts, experience, delivery, operations and governance. It does not override the instruction
 precedence below or duplicate owning platform specifications.
@@ -27,7 +27,7 @@ is unavailable, the governance bundle is incomplete; stop before mutation and re
 
 Every AI agent working in this polyrepo must strictly adhere to the 11 pillars of the **Enterprise SAAS business platform** standard to achieve global market leadership:
 
-- **Rules & Inviolable Laws:** [`.agents/rules/ENTERPRISE_SAAS_RULES.md`](.agents/rules/ENTERPRISE_SAAS_RULES.md) (Non-stopping iteration, zero-mock mandate, PostgreSQL RLS universality, zero-trust `@Permissions`).
+- **Rules & Inviolable Laws:** [`.agents/rules/ENTERPRISE_SAAS_RULES.md`](.agents/rules/ENTERPRISE_SAAS_RULES.md) (Scoped iteration, truthful production data, PostgreSQL RLS, and server-side authorization).
 - **End-to-End Workflow:** [`.agents/workflow/ENTERPRISE_SAAS_WORKFLOW.md`](.agents/workflow/ENTERPRISE_SAAS_WORKFLOW.md) (7-phase multi-repo delivery from L0 Contracts to L7 Operations).
 - **Operational Skill:** [`.agents/skills/salesforce-overtake-engine/SKILL.md`](.agents/skills/salesforce-overtake-engine/SKILL.md) (Run scripts, 10 super-platform moats, and recipes).
 - **Knowledge Base & Blueprints:** [`.agents/knowledge/SALESFORCE_OVERTAKE_KNOWLEDGE_BASE.md`](.agents/knowledge/SALESFORCE_OVERTAKE_KNOWLEDGE_BASE.md) (Market parity matrix & 15 industry clouds).
@@ -37,7 +37,7 @@ Every AI agent working in this polyrepo must strictly adhere to the 11 pillars o
 - **Quality Standards:** [`.agents/standards/ENTERPRISE_SAAS_STANDARDS.md`](.agents/standards/ENTERPRISE_SAAS_STANDARDS.md) (UI DL 2.0, DB safe DDL, API Pino/Otel, Tests).
 - **Governance & Formulation:** [`.agents/governance/ENTERPRISE_SAAS_GOVERNANCE.md`](.agents/governance/ENTERPRISE_SAAS_GOVERNANCE.md) (Mathematical percentage scoring engine).
 - **Agent Fleet Personas:** [`.agents/agents/ENTERPRISE_AGENT_FLEET.md`](.agents/agents/ENTERPRISE_AGENT_FLEET.md) (7 specialized autonomous roles).
-- **Automated Runner:** Run `pnpm run overtake:market` or `node workspace/scripts/run-enterprise-saas-engine.mjs`.
+- **Automated Runner:** Inspect `platform/workspace/scripts/run-enterprise-saas-engine.mjs` before running it. Its score is diagnostic evidence, not task completion; see [.agents/governance/ENTERPRISE_SAAS_GOVERNANCE.md](.agents/governance/ENTERPRISE_SAAS_GOVERNANCE.md).
 
 ## Universal Agent Testing Account (Mandatory for E2E, Browser Subagents, and MCP)
 
@@ -55,7 +55,7 @@ Do NOT invent arbitrary test email addresses or credentials. This account is per
 Apply the first relevant authority in this order:
 
 1. Law, safety constraints, and the human’s explicit current request.
-2. Accepted UniERP ADRs.
+2. Accepted UniERP ADRs (e.g. ADR-0012 14-Root Consolidation).
 3. The owning platform specification under `platform/docs/platforms/<platform>/`.
 4. Cross-platform standards under `platform/docs/standards/`, including the canonical agent protocol.
 5. A repository-local `AGENTS.md` for implementation detail.
@@ -64,46 +64,280 @@ Apply the first relevant authority in this order:
 Do not silently choose when authorities conflict. Preserve the safer behavior, identify the conflict, and request
 an owner decision. Existing code is evidence of current behavior, not automatically the intended design.
 
-## Mandatory work loop
+---
 
-1. **Discover:** read applicable instructions; inspect status/diffs, ownership, nearby code, schemas, contracts,
-   tests, and available scripts. Search before inventing a new model, endpoint, event, permission, component, or job.
-2. **Classify:** identify affected platforms/repositories and rate risk using the canonical protocol. State material
-   assumptions. Create a written change contract for high-risk or cross-repository work.
-3. **Design:** update the owning requirement/ADR and published contract before implementation when behavior or a
-   boundary changes. Define authorization, tenant scope, data lifecycle, failure modes, compatibility, telemetry,
-   rollback, and proof.
-4. **Implement:** make the smallest coherent change. Follow local types, lint, formatting, architecture, and design
-   tokens. Preserve unrelated human work. Do not create parallel sources of truth or speculative abstractions.
-5. **Prove:** add tests at the boundary that can fail for the defect. Run focused checks, then every affected gate.
-   Never weaken assertions, skip tests, hide errors, or call unrun work “passing.”
-6. **Report:** summarize behavior and risk, list changed repositories/files, commands with pass/fail/not-run status,
-   migrations or compatibility impact, and residual risks or required human actions.
+# Mandatory Execution Protocols
 
-## Strict cycle status
+Every coding agent operating in this workspace must strictly follow these four permanent engineering execution protocols:
 
-Every agent cycle—each implementation/review iteration and every handoff—MUST end with exactly one honest status:
-`DONE`, `PARTIAL`, `BLOCKED`, `FAILED`, `NOT STARTED`, or `NOT VERIFIED`.
+## Protocol 1: DEPENDENCY-ORDERED MULTI-REPO EXECUTION
 
-- `DONE` is allowed only when every in-scope acceptance criterion is satisfied, required evidence passed, the diff
-  was reviewed, and no required work remains. “Mostly,” “code written,” or “should work” is not `DONE`.
-- Any unmet criterion, required `NOT RUN` check, missing consumer, pending migration, unresolved defect, or unverified
-  claim makes the status `PARTIAL` or `NOT VERIFIED`, not `DONE`.
-- `BLOCKED` names the exact external dependency or missing authority, evidence of the blocker, completed work, and
-  what remains. Time, token budget, complexity, or inconvenience alone is not a blocker.
-- `FAILED` means the attempted objective was not achieved. Do not euphemize it as partial success.
-- Report separately whether work is designed, implemented, tested, integrated, deployed, and released. Never use
-  one state as evidence of another.
+**Keyword:** `DEPENDENCY-ORDERED EXECUTION`
 
-Each cycle report MUST state: status, objective, completed items, incomplete items, verification evidence, and the
-next required action. If the task is not actually complete, say plainly: **“This is not done.”**
+For any task affecting multiple repositories, agents MUST NOT modify repositories in arbitrary order. Changes must strictly flow downwards from upstream dependencies to downstream consumers.
 
-Use [`platform/docs/standards/AI_CHANGE_CONTRACT_TEMPLATE.md`](platform/docs/standards/AI_CHANGE_CONTRACT_TEMPLATE.md)
-for plans and handoffs.
-Use [`platform/docs/standards/AI_AGENT_PLAYBOOKS.md`](platform/docs/standards/AI_AGENT_PLAYBOOKS.md)
-for triggered workflows and
-[`platform/docs/standards/AI_CYCLE_STATUS_TEMPLATE.md`](platform/docs/standards/AI_CYCLE_STATUS_TEMPLATE.md)
-for every cycle report.
+### Required Workflow
+```
+TASK
+  ↓
+IMPACT ANALYSIS
+  ↓
+DEPENDENCY DISCOVERY
+  ↓
+DEPENDENCY GRAPH
+  ↓
+UPSTREAM CHANGES
+  ↓
+UPSTREAM VALIDATION
+  ↓
+DOWNSTREAM CONSUMER MIGRATION
+  ↓
+CONSUMER VALIDATION
+  ↓
+CROSS-REPOSITORY INTEGRATION VALIDATION
+  ↓
+FINAL VERIFIED COMPLETION
+```
+
+### Pre-Implementation Dependency Discovery
+Before writing code or mutating files, determine:
+- Repositories affected
+- Direct dependencies
+- Transitive dependencies
+- Upstream providers
+- Downstream consumers
+- Contracts/interfaces affected
+- Migration requirements
+- Compatibility risks
+- Required execution order
+
+Never assume repository order. Derive it from actual package dependencies in the workspace:
+- **Contract/API Changes:** `CONTRACT (L0)` $\rightarrow$ `PROVIDER (L3 api/idp)` $\rightarrow$ `CONSUMER (L4/L5)` $\rightarrow$ `INTEGRATION VALIDATION`.
+- **Database/Persistence Changes:** `CONTRACTS (L0)` $\rightarrow$ `DATA (L2)` $\rightarrow$ `BACKEND / SERVICES (L3)` $\rightarrow$ `PRESENTATION (L4)` $\rightarrow$ `CLIENTS (L5)`.
+- **Design System Changes:** `DESIGN SYSTEM (L1)` $\rightarrow$ `BUILD/TEST/VALIDATE DESIGN SYSTEM` $\rightarrow$ `PRESENTATION APPS (L4)` $\rightarrow$ `CROSS-REPO VERIFICATION`.
+
+Do NOT start modifying consumers before the required upstream dependency is ready and verified, unless parallel execution has been explicitly proven safe.
+
+### Multi-Repository Checkpoint State
+For cross-repository tasks, maintain and update this state after every major repository transition:
+```text
+MULTI-REPO TASK STATE
+Task: <task description>
+Acceptance criteria: <count>
+Repositories affected: <list>
+Dependency order:
+  1. <upstream-repo>
+  2. <midstream-repo>
+  3. <downstream-repo>
+Completed repositories: <list>
+Current repository: <repo>
+Pending repositories: <list>
+Validation state: <state>
+Blockers: <list>
+Overall status: <status>
+```
+
+---
+
+## Protocol 2: EVIDENCE-GATED COMPLETION
+
+**Keyword:** `EVIDENCE-GATED COMPLETION`
+
+Agents are STRICTLY PROHIBITED from claiming completion (`Done`, `Complete`, `Fixed`, `Successfully implemented`, `Fully working`, `Production ready`, `Validation passed`) unless objective, verifiable evidence exists.
+
+- Implementation is NOT completion.
+- Code generation is NOT completion.
+- Saving a file is NOT completion.
+- A successful command unrelated to the acceptance criteria is NOT completion.
+
+### Strict Status Categories
+Every implementation iteration and handoff MUST end with EXACTLY ONE truthful status category:
+1. `VERIFIED COMPLETE`: All in-scope acceptance criteria are satisfied, all required validation gates passed with clean output, diff has been reviewed, and zero required work remains. (Maps to protocol `DONE`).
+2. `IMPLEMENTED — VERIFICATION PENDING`: Code changes have been made, but required automated tests or verification gates have not yet been executed. (Maps to protocol `NOT VERIFIED`).
+3. `PARTIALLY COMPLETE`: Concrete in-scope work is complete, but one or more acceptance criteria, consumers, or gates remain unfinished. (Maps to protocol `PARTIAL`).
+4. `BLOCKED`: Progress cannot continue due to an explicit external dependency, missing environment capability, or missing authority. Names the exact blocker. (Maps to protocol `BLOCKED`).
+5. `FAILED VALIDATION`: An implementation or verification step was executed and failed tests, build, lint, or typecheck. (Maps to protocol `FAILED`).
+
+If a command cannot be executed, explicitly state `VERIFICATION NOT EXECUTED` and provide the concrete technical reason. Never fabricate test results, never infer success from code appearance, and never hide failures.
+
+### Iteration Evidence Report
+At the end of EVERY implementation iteration, output:
+```text
+============================================================
+ITERATION EVIDENCE REPORT
+============================================================
+STATUS:
+<VERIFIED COMPLETE | IMPLEMENTED — VERIFICATION PENDING | PARTIALLY COMPLETE | BLOCKED | FAILED VALIDATION>
+
+CHANGES:
+- <file path> (<repository>)
+
+VALIDATION EXECUTED:
+- <exact command executed with cwd>
+
+RESULTS:
+- Passed: <count / details>
+- Failed: <count / details>
+- Warnings: <count / details>
+
+ACCEPTANCE CRITERIA:
+- [PASS] <criterion>
+- [FAIL] <criterion>
+- [NOT VERIFIED] <criterion>
+
+REMAINING WORK:
+- <concrete unfinished items or "None">
+
+NEXT ACTION:
+- <exact next executable step or "Handoff/Complete">
+============================================================
+```
+
+Do not use vague statements such as "Everything should work", "It appears complete", "This should resolve the issue", or "Likely fixed". Replace assumptions with verification.
+
+---
+
+## Protocol 3: CONTEXT-BOUNDED EXECUTION
+
+**Keyword:** `CONTEXT-BOUNDED EXECUTION`
+
+Do NOT continuously load or reason over the entire multi-repository workspace unnecessarily. Maintain two disciplined context levels:
+
+### Level 1 — Global Context
+Keep a compact understanding of:
+- Platform architecture & 14 canonical roots
+- Repository map & layer hierarchy (L0 to L7)
+- Published contracts & package identities
+- Current task & global goal
+- Completed repositories vs outstanding work
+
+### Level 2 — Active Repository Context
+Load detailed information only for:
+- Current active repository
+- Directly relevant upstream dependency contracts
+- Directly affected downstream consumers
+- Specific files required for the current task
+
+### Structured Repository Handoff
+When switching execution from one repository to another, generate a structured handoff:
+```text
+STRUCTURED HANDOFF
+Completed: <work completed in current repo>
+Dependencies changed: <dependencies mutated>
+Contracts changed: <contracts or public interfaces modified>
+Files changed: <list of files>
+Validation performed: <commands run and results>
+Known issues: <unresolved issues or warnings>
+Downstream impact: <impact on downstream consumers>
+Next repository: <target repository name>
+Next task: <specific task in next repo>
+Required context: <files or types needed in next repo>
+```
+
+Context-bounded execution MUST NOT cause dependency impacts to be ignored. Efficiency must never override correctness.
+
+---
+
+## Protocol 4: ACCEPTANCE-CRITERIA-DRIVEN EXECUTION
+
+**Keyword:** `ACCEPTANCE-CRITERIA-DRIVEN EXECUTION`
+
+Before implementation, convert the user's request into explicit, testable, and numbered acceptance criteria (`AC-01`, `AC-02`, ...).
+
+### Criterion State Model
+Each criterion must track one of four states:
+- `PASS`: Objective evidence confirms the criterion is fully satisfied.
+- `FAIL`: Verification ran and failed to satisfy the criterion.
+- `BLOCKED`: Verification cannot proceed due to an identified external blocker.
+- `NOT VERIFIED`: Code may be written, but verification has not yet been executed.
+
+A task CANNOT become `VERIFIED COMPLETE` while mandatory acceptance criteria remain `FAIL`, `BLOCKED`, or `NOT VERIFIED`, unless those criteria were explicitly removed or deferred by the user.
+
+---
+
+## Protocol 5: MANDATORY ITERATION COMMIT & PUSH TO GITHUB
+
+**Keyword:** `MANDATORY COMMIT AND PUSH`
+
+At the end of EVERY implementation iteration, once all in-scope changes have been verified and the Iteration Evidence Report has been generated, the agent MUST:
+1. Review `git status` and the complete diff across all modified repositories.
+2. Stage all modified and newly created in-scope files (`git add .` or explicit paths).
+3. Create a structured, descriptive commit message documenting the task, status, affected repositories, and verification evidence.
+4. Push all commits to the remote GitHub repository (`git push origin <branch>`).
+5. Verify that the push succeeded cleanly before declaring verified completion or concluding the iteration.
+
+---
+
+## Combined Execution Protocol Workflow
+
+For every non-trivial task, follow this combined sequence:
+```
+REQUEST
+   ↓
+ACCEPTANCE CRITERIA
+   ↓
+IMPACT ANALYSIS
+   ↓
+DEPENDENCY GRAPH
+   ↓
+EXECUTION PLAN
+   ↓
+DEPENDENCY-ORDERED IMPLEMENTATION
+   ↓
+REPOSITORY VALIDATION
+   ↓
+STRUCTURED HANDOFF
+   ↓
+NEXT DEPENDENCY/CONSUMER
+   ↓
+CROSS-REPO VALIDATION
+   ↓
+EVIDENCE REVIEW
+   ↓
+GIT COMMIT & PUSH TO GITHUB
+   ↓
+VERIFIED COMPLETION
+```
+
+- **Dependency-Ordered Execution** determines WHERE and IN WHAT ORDER work occurs.
+- **Acceptance-Criteria-Driven Execution** determines WHAT SUCCESS MEANS.
+- **Context-Bounded Execution** determines WHAT CONTEXT SHOULD BE LOADED.
+- **Evidence-Gated Completion** determines WHETHER THE AGENT IS ALLOWED TO CLAIM COMPLETION.
+- **Mandatory Commit & Push** guarantees all verified changes are safely persisted to remote version control.
+
+---
+
+## Agent Behavioral Rules
+
+### Agents MUST:
+- Inspect before modifying
+- Plan before large changes
+- Understand dependency direction (downward only)
+- Preserve architectural boundaries and package layering
+- Use existing project conventions
+- Make minimal necessary changes
+- Validate each dependency boundary before progressing downstream
+- Report failures truthfully
+- Maintain structured handoffs between repositories
+- Distinguish implementation from verification
+- Distinguish local repository success from system-wide success
+- Stage, commit, and push all verified changes across affected repositories to GitHub at the end of each iteration
+
+### Agents MUST NOT:
+- Claim completion based solely on generated code
+- Fabricate command or test execution
+- Silently skip validation
+- Modify unrelated repositories
+- Perform arbitrary cross-repository changes out of dependency order
+- Ignore downstream consumers
+- Assume compilation means functional correctness
+- Mark TODOs as completed work
+- Hide unresolved errors
+- Weaken tests merely to obtain a passing result
+- Delete failing tests without justification
+- Bypass architectural boundaries for convenience
+
+---
 
 ## Non-negotiable UniERP rules
 
@@ -151,3 +385,12 @@ require the security plane gate. UI changes require token, accessibility, and re
 
 If a check cannot run, report `NOT RUN` and the concrete reason. A pre-existing failure must be reproduced and
 reported separately; do not erase or mislabel it.
+
+## Applying operational guidance
+
+Paths in this workspace entrypoint are relative to the workspace root, including when reading its maintained
+copy under platform/workspace/governance. Operational recipes and ledgers are subordinate to the canonical
+protocol. Scope completion to the requested acceptance criteria; in accordance with the mandatory iteration commit and push rule, agents must stage, commit, and push all verified changes across affected repositories to GitHub at the conclusion of each iteration.
+The shared privileged account is for approved smoke testing. Authorization-denial and RLS evidence require
+approved limited-role fixtures and a NOBYPASSRLS database role; do not invent credentials or treat bypass success
+as isolation proof. Report missing fixtures without weakening the check.

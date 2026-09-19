@@ -3,7 +3,7 @@
 Read this reference whenever a task can change what future agents need to know.
 
 The normative policy is
-`unierp-platform/docs/standards/AI_KNOWLEDGE_LIFECYCLE.md`. This reference explains its working procedure.
+`platform/docs/standards/AI_KNOWLEDGE_LIFECYCLE.md`. This reference explains its working procedure.
 
 ## Classify the knowledge delta
 

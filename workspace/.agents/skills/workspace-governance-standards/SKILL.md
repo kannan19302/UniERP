@@ -1,19 +1,25 @@
 ---
 name: workspace-governance-standards
-description: Authoritative standards, architectural boundaries, coding anatomy, and verification gates for unierp-workspace.
+description: Repository guidance, architectural context, and verification routing for platform/workspace.
 version: 1.0.0
 author: UniERP Architecture Governance
 ---
 
 # UniERP Polyrepo Workspace & Governance Engine — AI Agent Guidance & Project Skill
 
-This skill governs all code modification, analysis, and testing within `unierp-workspace` (**Layer L7: Operations**). Every AI agent and software engineer working in this repository MUST follow these rules without exception.
+Read the [applicable AGENTS.md](../../../AGENTS.md) first. This skill is subordinate implementation guidance.
+Resolve ownership and current topology through that entrypoint; examples and performance aspirations are not
+verified product facts. Select verification from the owning package scripts and canonical risk matrix.
+The commands below are not a complete substitute for applicable security, integration, lint or build gates.
+
+
+This skill governs all code modification, analysis, and testing within `platform/workspace` (**Layer L7: Operations**). Every AI agent and software engineer working in this repository MUST follow these rules without exception.
 
 ---
 
 ## 🏛️ 1. Architectural Position & Boundary Rules
 
-- **Repository**: `unierp-workspace`
+- **Repository**: `platform/workspace`
 - **Layer**: **L7 (Operations)**
 - **Package Identity**: `unierp-programme`
 - **Allowed Inbound Callers**: All contributors, CI workflows, platform architects
