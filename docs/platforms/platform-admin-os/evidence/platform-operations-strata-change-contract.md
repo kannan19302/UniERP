@@ -73,3 +73,36 @@ One initial workspace assertion counted breadcrumb links along with section navi
 5. Complete final source-bound diff review and traceability. No schema/migration, dependency or deployment changes this cycle. Local rollback is reversal of task edits only; preserve pre-existing provider shell, middleware, navigation and API billing changes.
 
 Build isolation uses optional NEXT_BUILD_DIR; default remains .next. TypeScript includes verification output types. Toolchain reports Node 24 while repositories request Node 22; record this environmental mismatch in qualification. Full provider diff check also finds an existing extra EOF blank line in src/middleware.ts, outside this task's edits.
+
+## Evidence — 2026-09-21, operations overview experience cycle
+
+Status: PARTIAL. This is not done.
+
+Scope: presentation-only refinement of the PCC-01 operations landing and the shared provider page-header action breakpoint. No API, contract, permission, persistence, migration, infrastructure or command semantics changed. PLT-PAO remains the experience owner and the existing operations endpoints remain the data owners. Knowledge delta: UPDATED in this evidence record; no normative behavior changed beyond the already-owned PAO-FR-003 and PAO-UX requirements.
+
+Acceptance criteria:
+
+- AC-16: Health is presented as healthy only when the dashboard and health sources both affirm it. Missing percentages remain `Unknown`, not `Unknown%`.
+- AC-17: The landing uses a status ledger, workload strip, service register, queue workspace and compact route index instead of decorative status animation, navigation pills and nested card grids.
+- AC-18: Independent source errors remain visible. Refresh, retry and backup actions retain permission checks, explicit feedback and backup confirmation.
+- AC-19: The page and header actions remain horizontally contained at desktop and 390-pixel widths with visible keyboard focus.
+- AC-20: Focused component and browser tests, typecheck, lint, token policy, rendered review and repository baselines are recorded before handoff.
+
+Rollback: revert the provider-admin implementation commit and this evidence update. No data or contract rollback is required.
+
+Verification results:
+
+| Result | Repository | Exact command | Evidence |
+| --- | --- | --- | --- |
+| PASS | provider-admin-os | `pnpm test` | 341 passed, 1 skipped across 89 files |
+| PASS | provider-admin-os | `pnpm exec vitest run __tests__/operations-workspaces.test.tsx` | 4 focused component tests |
+| PASS | provider-admin-os | `pnpm exec playwright test e2e/operations-overview.spec.ts --workers=1 --reporter=line` | authentication setup plus desktop truthfulness and 390-pixel containment tests passed |
+| PASS | provider-admin-os | `pnpm typecheck` | no compiler errors |
+| PASS | provider-admin-os | focused ESLint for the operations page and changed tests | no findings; an initial invocation incorrectly included CSS and produced a parser error, then the corrected source-only command passed |
+| PASS | provider-admin-os | `pnpm check:tokens` | no new violations; 53 existing violations remain baselined in 40 files |
+| PASS | provider-admin-os | `node ../platform/workspace/scripts/check-layer.mjs` | L4 package boundary verified |
+| PASS | browser review | desktop and 390-pixel rendered captures | action hierarchy, data density and mobile containment reviewed; temporary captures removed after inspection |
+| FAIL — PRE-EXISTING | provider-admin-os | `pnpm lint` | unrelated errors remain in the email provider selector and conditional tenant-provision hook, plus existing warnings |
+| FAIL — PRE-EXISTING | provider-admin-os | isolated `next build --no-lint` | compilation and type validation passed; `/login` prerender still fails because `useSearchParams()` lacks a Suspense boundary |
+
+The runtime used Node 24 while the package requests Node 22. This environmental warning did not prevent the passing focused gates.
