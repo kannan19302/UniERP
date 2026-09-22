@@ -388,3 +388,20 @@ Verification:
 - PASS `pnpm exec eslint 'app/(control-plane)/governance-compliance/page.tsx' 'app/(control-plane)/entitlement-authority/page.tsx'` (provider-admin-os)
 
 Residual: these surfaces still require full visual, responsive, keyboard, and browser review.
+
+## Evidence — 2026-09-22, integrations and developers fallback removal
+
+Status: PARTIAL. This is not done.
+
+Scope: removed explicit fabricated KPI defaults from Integrations → Events and Developers overview.
+
+Acceptance:
+- AC-65 webhook deliveries, DLQ failures, and SaaS webhook counts are source-derived or Unknown.
+- AC-66 developer API endpoint count is source-derived or Unknown; no fallback `38` remains.
+- AC-67 existing redrive controls, developer tabs, and endpoint behavior remain unchanged.
+
+Verification:
+- PASS `pnpm exec tsc --noEmit` (provider-admin-os)
+- PASS `pnpm exec eslint 'app/(control-plane)/integrations/events/page.tsx' 'app/(control-plane)/developers/page.tsx'` (provider-admin-os)
+
+Residual: both domains still require full visual, responsive, keyboard, and browser review; developer fixture state requires a separate zero-mock audit.
