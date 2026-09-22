@@ -240,3 +240,20 @@ Verification results:
 | FAIL — PRE-EXISTING | provider-admin-os | `$env:NEXT_BUILD_DIR='.next/operations-verification'; pnpm exec next build --no-lint` | compilation and type validation passed; `/login` prerender still fails because `useSearchParams()` lacks a Suspense boundary |
 
 The API incident service still contains synthetic fallback incidents and accepts optional actor IDs with a `SYSTEM` fallback. The provider UI now avoids asserting identity or billing outcomes, but upstream fallback removal and session-derived actor attribution remain required for full live-data and audit truthfulness. Node 24 remained active while the package requests Node 22.
+
+## Evidence — 2026-09-22, support incident register cycle
+
+Status: PARTIAL. This is not done.
+
+Scope: aligned the Support → Incidents route with the measured operations workspace language, removing inline dashboard styling and the secondary summary endpoint fallback.
+
+Acceptance:
+- AC-43 source-derived incident ledger and register with explicit Unknown/error states.
+- AC-44 searchable DataWorkspace with severity/status hierarchy and token-based layout.
+- AC-45 no new mutation, fabricated KPI, or identity assertion introduced.
+
+Verification:
+- PASS `pnpm exec tsc --noEmit` (provider-admin-os)
+- PASS `pnpm exec eslint 'app/(control-plane)/support/incidents/page.tsx'` (provider-admin-os)
+
+Residual: full provider-admin UI sweep, full lint/build gates, and cross-surface browser review remain outstanding.
