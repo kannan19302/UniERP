@@ -423,6 +423,8 @@ Verification:
 
 Residual: the broader inline-style conversion, browser review, full route inventory, and repository lint/build blockers remain.
 
+Follow-up: the bulk cycle included a 20th provider-admin file, Developers → Documentation, whose endpoint and section KPIs now show Unknown on catalog failure.
+
 ## Evidence — 2026-09-22, integrations and developers fallback removal
 
 Status: PARTIAL. This is not done.
