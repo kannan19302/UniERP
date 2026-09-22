@@ -172,3 +172,37 @@ Verification results:
 | FAIL — PRE-EXISTING | provider-admin-os | `$env:NEXT_BUILD_DIR='.next/operations-verification'; pnpm exec next build --no-lint` | compilation and type validation passed; `/login` prerender still fails because `useSearchParams()` lacks a Suspense boundary |
 
 The current promotion API requires the caller to submit a Boolean health result. The UI now makes that operator assertion explicit, but server-owned health evidence remains a future contract improvement. Node 24 remained active while the package requests Node 22.
+
+## Evidence — 2026-09-22, automation workspace cycle
+
+Status: PARTIAL. This is not done.
+
+Scope: presentation, client validation and guarded-command correction for the Automation route, plus removal of closed `CrudDrawer` dialogs from the accessibility tree. The route continues to consume the existing runbook list, authoring, dry-run, publication and deletion endpoints and their existing permission checks. No API, public contract, authorization rule, persistence, migration or infrastructure boundary changed. PLT-PAO owns the experience; the runbook and policy services remain authoritative for state and command handling. Knowledge delta: UPDATED in this evidence record; the implementation applies existing PAO-FR-003, PAO-SEC and PAO-UX requirements.
+
+Acceptance criteria:
+
+- AC-31: Summary counts derive from returned runbooks, failed sources show `Unknown`, and the client does not claim a fabricated 100-percent dry-run health rate.
+- AC-32: Author, publish and decommission requests contain only operator-entered or source-reported values; hardcoded actor identities and prefilled automation definitions are removed.
+- AC-33: Authored JSON must contain at least one step and every step must supply a non-empty resource identifier and proposed-state object.
+- AC-34: Dry-run results are visibly labelled as session validation evidence; policy publication requires a named policy; decommissioning requires explicit irreversible-action acknowledgement.
+- AC-35: Closed authoring drawers are absent from the accessibility tree, active commands have visible text labels, and modal controls remain pointer- and keyboard-operable.
+- AC-36: The runbook register uses the shared searchable/filterable `DataWorkspace` floorplan and remains horizontally contained at 390 pixels.
+
+Rollback: revert the provider-admin implementation commit and this evidence update. No data, migration or contract rollback is required.
+
+Verification results:
+
+| Result | Repository | Exact command | Evidence |
+| --- | --- | --- | --- |
+| PASS | provider-admin-os | `pnpm test` | 350 passed, 1 skipped across 90 files |
+| PASS | provider-admin-os | `pnpm exec vitest run __tests__/pages/ops-automation.test.tsx` | 6 focused schema, truthfulness, dry-run and guarded-command tests |
+| PASS | provider-admin-os | `pnpm exec playwright test e2e/automation-workspace.spec.ts --workers=1 --reporter=line --timeout=90000` | authentication setup, search, dry-run evidence, publication/decommission guards and 390-pixel containment passed |
+| PASS | provider-admin-os | `pnpm typecheck` | no compiler errors |
+| PASS | provider-admin-os | focused ESLint for the automation route, shared drawer, schema and changed tests | no findings after correcting the drawer initial-value dependency |
+| PASS | provider-admin-os | `pnpm check:tokens` | no new violations; 53 existing violations remain baselined in 40 files |
+| PASS | provider-admin-os | `node ../platform/workspace/scripts/check-layer.mjs` | L4 package boundary verified |
+| PASS | browser review | Automation desktop and 390-pixel rendered captures | register hierarchy, action density, filtering and mobile containment reviewed; temporary capture references removed from the permanent test |
+| FAIL — PRE-EXISTING | provider-admin-os | `pnpm lint` | unrelated email-provider-selector and tenant-provision errors remain, plus existing warnings |
+| FAIL — PRE-EXISTING | provider-admin-os | `$env:NEXT_BUILD_DIR='.next/operations-verification'; pnpm exec next build --no-lint` | compilation and type validation passed; `/login` prerender still fails because `useSearchParams()` lacks a Suspense boundary |
+
+The API runbook service still returns hardcoded fallback records when storage is empty or unavailable. This presentation cycle cannot distinguish those records from persisted data; removing that upstream fallback remains required before end-to-end live-data truthfulness can be claimed. Node 24 remained active while the package requests Node 22.
