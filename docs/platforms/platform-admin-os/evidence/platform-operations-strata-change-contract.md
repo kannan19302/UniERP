@@ -389,6 +389,22 @@ Verification:
 
 Residual: these surfaces still require full visual, responsive, keyboard, and browser review.
 
+## Evidence — 2026-09-22, operations overview fallback removal
+
+Status: PARTIAL. This is not done.
+
+Scope: corrected Overview → Operations summary handling so queue depth, outbox lag, degraded tenants, and job counts do not collapse missing data to zero.
+
+Acceptance:
+- AC-71 operational summary metrics are source-derived or Unknown.
+- AC-72 the pre-existing Platform Health working-tree change remains preserved and untouched.
+
+Verification:
+- PASS `pnpm exec tsc --noEmit` (provider-admin-os)
+- PASS `pnpm exec eslint 'app/(control-plane)/overview/operations/page.tsx'` (provider-admin-os)
+
+Residual: Operations still needs full visual, responsive, keyboard, and browser review.
+
 ## Evidence — 2026-09-22, integrations and developers fallback removal
 
 Status: PARTIAL. This is not done.
