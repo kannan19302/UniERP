@@ -139,3 +139,36 @@ Verification results:
 | FAIL — PRE-EXISTING | provider-admin-os | isolated `next build --no-lint` | compilation and type validation passed; `/login` prerender still fails because `useSearchParams()` lacks a Suspense boundary |
 
 The isolated build added its temporary output path to `tsconfig.json`; that generated edit was removed before diff review. Node 24 remained active while the package requests Node 22.
+
+## Evidence — 2026-09-22, release-control workspace cycle
+
+Status: PARTIAL. This is not done.
+
+Scope: presentation and client-command safety correction for the Releases route. The route continues to consume the existing release manifest, pipeline, canary-allocation, rollback and promotion endpoints and their existing permission checks. No API, public contract, authorization rule, persistence, migration or infrastructure boundary changed. PLT-PAO owns the experience; the release-control service remains authoritative for state and command handling. Knowledge delta: UPDATED in this evidence record; the implementation applies existing PAO-FR-003, PAO-SEC and PAO-UX requirements.
+
+Acceptance criteria:
+
+- AC-26: Missing manifest, stage, canary and version values render as `Unknown`, `Not reported` or explicit empty states; the client invents no release version, stage record, stage count or canary allocation.
+- AC-27: Canary, rollback and promotion payloads contain only operator-selected or source-reported values; the client no longer supplies a hardcoded actor identity.
+- AC-28: Rollback stays disabled until a source-reported previous manifest exists and the operator supplies an audit reason of at least 10 characters; the dialog identifies global blast radius and server-side dual control.
+- AC-29: Promotion stays disabled until the operator explicitly confirms the external health-gate result required by the current API contract; the client does not silently claim a healthy release.
+- AC-30: Release evidence uses a compact ledger and table floorplan, and its guarded dialogs remain keyboard-operable, pointer-operable and horizontally contained at 390 pixels.
+
+Rollback: revert the provider-admin implementation commit and this evidence update. No data, migration or contract rollback is required.
+
+Verification results:
+
+| Result | Repository | Exact command | Evidence |
+| --- | --- | --- | --- |
+| PASS | provider-admin-os | `pnpm test` | 348 passed, 1 skipped across 90 files |
+| PASS | provider-admin-os | `pnpm exec vitest run __tests__/pages/ops-releases.test.tsx` | 5 focused truthfulness and guarded-command tests |
+| PASS | provider-admin-os | `pnpm exec playwright test e2e/releases-workspace.spec.ts --workers=1 --reporter=line` | authentication setup, source-bound command review and 390-pixel containment passed; an initial run exposed the backdrop above the dialog and the implementation was corrected before rerun |
+| PASS | provider-admin-os | `pnpm typecheck` | no compiler errors |
+| PASS | provider-admin-os | focused ESLint for the release page and changed tests | no findings |
+| PASS | provider-admin-os | `pnpm check:tokens` | no new violations; 53 existing violations remain baselined in 40 files |
+| PASS | provider-admin-os | `node ../platform/workspace/scripts/check-layer.mjs` | L4 package boundary verified |
+| PASS | browser review | Releases desktop and 390-pixel rendered captures | ledger hierarchy, table density, action hierarchy and mobile containment reviewed; temporary capture references removed from the permanent test |
+| FAIL — PRE-EXISTING | provider-admin-os | `pnpm lint` | unrelated email-provider-selector and tenant-provision errors remain, plus existing warnings |
+| FAIL — PRE-EXISTING | provider-admin-os | `$env:NEXT_BUILD_DIR='.next/operations-verification'; pnpm exec next build --no-lint` | compilation and type validation passed; `/login` prerender still fails because `useSearchParams()` lacks a Suspense boundary |
+
+The current promotion API requires the caller to submit a Boolean health result. The UI now makes that operator assertion explicit, but server-owned health evidence remains a future contract improvement. Node 24 remained active while the package requests Node 22.
