@@ -322,3 +322,19 @@ Verification:
 - PASS `pnpm exec eslint 'app/(control-plane)/overview/usage/page.tsx'` (provider-admin-os)
 
 Residual: the Usage page still needs a dedicated visual density and responsive browser review.
+
+## Evidence — 2026-09-22, access overview trust cycle
+
+Status: PARTIAL. This is not done.
+
+Scope: corrected Users & Access KPI fallbacks so directory, role, group, and audit counts remain Unknown when their source is loading or unavailable rather than presenting partial arrays as complete posture.
+
+Acceptance:
+- AC-55 access summary counts distinguish reported zero from loading/error/partial source state.
+- AC-56 existing authorization routes and read-only behavior remain unchanged.
+
+Verification:
+- PASS `pnpm exec tsc --noEmit` (provider-admin-os)
+- PASS `pnpm exec eslint 'app/(control-plane)/access/page.tsx'` (provider-admin-os)
+
+Residual: Access still needs a full visual density, keyboard, and responsive browser review.
