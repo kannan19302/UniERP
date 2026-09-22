@@ -206,3 +206,37 @@ Verification results:
 | FAIL — PRE-EXISTING | provider-admin-os | `$env:NEXT_BUILD_DIR='.next/operations-verification'; pnpm exec next build --no-lint` | compilation and type validation passed; `/login` prerender still fails because `useSearchParams()` lacks a Suspense boundary |
 
 The API runbook service still returns hardcoded fallback records when storage is empty or unavailable. This presentation cycle cannot distinguish those records from persisted data; removing that upstream fallback remains required before end-to-end live-data truthfulness can be claimed. Node 24 remained active while the package requests Node 22.
+
+## Evidence — 2026-09-22, incident response workspace cycle
+
+Status: PARTIAL. This is not done.
+
+Scope: presentation and client-command safety correction for the Incidents route. The route continues to consume the existing incident list/detail, escalation and resolution endpoints and their existing permission checks. The unsafe SLO-breach simulation control was removed from this provider UI because its API path can create an incident and apply an invoice adjustment; no API, public contract, authorization rule, persistence, migration or infrastructure boundary changed. PLT-PAO owns the experience; incident, notification and invoicing services remain authoritative. Knowledge delta: UPDATED in this evidence record; the implementation applies existing PAO-FR-003, PAO-SEC and PAO-UX requirements.
+
+Acceptance criteria:
+
+- AC-37: Summary metrics derive from returned incidents and failed reads show `Unknown`; fabricated SLO compliance is absent.
+- AC-38: The provider UI does not expose the invoice-affecting SLO simulation control or submit spoofed actor identities.
+- AC-39: Escalation requires a rationale of at least 10 characters; resolution requires substantive root-cause and corrective-action evidence.
+- AC-40: Incident detail presents source-reported facts, resolution evidence and a chronologically sorted response timeline.
+- AC-41: Response controls remain permission-gated, keyboard-operable and pointer-operable in the corrected modal layer.
+- AC-42: The incident register uses the shared searchable/filterable `DataWorkspace` floorplan and remains contained at 390 pixels.
+
+Rollback: revert the provider-admin implementation commit and this evidence update. No data, migration or contract rollback is required.
+
+Verification results:
+
+| Result | Repository | Exact command | Evidence |
+| --- | --- | --- | --- |
+| PASS | provider-admin-os | `pnpm test` | 351 passed, 1 skipped across 90 files |
+| PASS | provider-admin-os | `pnpm exec vitest run __tests__/pages/ops-incidents.test.tsx` | 5 focused source-truth, chronology and guarded-command tests |
+| PASS | provider-admin-os | `pnpm exec playwright test e2e/incidents-workspace.spec.ts --workers=1 --reporter=line --timeout=90000` | authentication setup, search, response modal, command payload and 390-pixel containment passed; an initial run exposed the legacy drawer backdrop layering and was corrected by using the verified modal layer |
+| PASS | provider-admin-os | `pnpm typecheck` | no compiler errors |
+| PASS | provider-admin-os | focused ESLint for the incident route and changed tests | no findings |
+| PASS | provider-admin-os | `pnpm check:tokens` | no new violations; 53 existing violations remain baselined in 40 files |
+| PASS | provider-admin-os | `node ../platform/workspace/scripts/check-layer.mjs` | L4 package boundary verified |
+| PASS | browser review | Incidents desktop and 390-pixel rendered captures | measured ledger, register density, severity hierarchy, response modal and mobile containment reviewed; temporary capture references removed from the permanent test |
+| FAIL — PRE-EXISTING | provider-admin-os | `pnpm lint` | unrelated email-provider-selector and tenant-provision errors remain, plus existing warnings |
+| FAIL — PRE-EXISTING | provider-admin-os | `$env:NEXT_BUILD_DIR='.next/operations-verification'; pnpm exec next build --no-lint` | compilation and type validation passed; `/login` prerender still fails because `useSearchParams()` lacks a Suspense boundary |
+
+The API incident service still contains synthetic fallback incidents and accepts optional actor IDs with a `SYSTEM` fallback. The provider UI now avoids asserting identity or billing outcomes, but upstream fallback removal and session-derived actor attribution remain required for full live-data and audit truthfulness. Node 24 remained active while the package requests Node 22.
