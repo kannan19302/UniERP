@@ -425,6 +425,29 @@ Residual: the broader inline-style conversion, browser review, full route invent
 
 Follow-up: the bulk cycle included a 20th provider-admin file, Developers → Documentation, whose endpoint and section KPIs now show Unknown on catalog failure.
 
+## Evidence — 2026-09-22, repository gate remediation
+
+Status: PARTIAL. This is not done.
+
+Scope: removed the three repository-level completion blockers: wrapped login search-parameter consumption in an accessible Suspense boundary, restored unconditional tenant-provision hook ordering, and corrected JSX quote escaping in the email provider selector.
+
+Acceptance:
+- AC-76 `/login` prerenders successfully with an explicit loading boundary.
+- AC-77 tenant provisioning obeys React hook ordering without changing permission behavior.
+- AC-78 the repository lint gate has zero errors.
+
+Validation:
+- PASS `pnpm typecheck`
+- PASS `pnpm lint` (zero errors; seven existing warnings remain)
+- PASS `pnpm check:tokens` (53 baselined violations, no new violations)
+- PASS `pnpm test` (351 passed, 1 skipped)
+- PASS `pnpm build` (165 static pages generated; `/login` included)
+- PASS `node ../platform/workspace/scripts/check-layer.mjs`
+
+Warnings: Node v24 remains active while the package requests Node >=22 <23; Vitest reports existing canvas and source-map warnings.
+
+Residual: full visual/browser inventory and remaining warning/inline-style remediation are still required before verified completion.
+
 ## Evidence — 2026-09-22, integrations and developers fallback removal
 
 Status: PARTIAL. This is not done.
