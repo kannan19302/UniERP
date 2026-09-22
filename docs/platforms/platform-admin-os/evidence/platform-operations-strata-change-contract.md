@@ -405,3 +405,20 @@ Verification:
 - PASS `pnpm exec eslint 'app/(control-plane)/integrations/events/page.tsx' 'app/(control-plane)/developers/page.tsx'` (provider-admin-os)
 
 Residual: both domains still require full visual, responsive, keyboard, and browser review; developer fixture state requires a separate zero-mock audit.
+
+## Evidence — 2026-09-22, security settings and support fallback removal
+
+Status: PARTIAL. This is not done.
+
+Scope: removed unsupported operational KPI defaults from Security Intelligence, Settings → Features, and the Support SLA workforce panel.
+
+Acceptance:
+- AC-68 SOC/SIEM/containment KPIs are Not reported unless a source field exists; active threat count is Unknown on source failure.
+- AC-69 configured environment count is source-derived or Unknown.
+- AC-70 workforce counts and response time are source-derived or Unknown.
+
+Verification:
+- PASS `pnpm exec tsc --noEmit` (provider-admin-os)
+- PASS `pnpm exec eslint 'app/(control-plane)/security-intelligence/page.tsx' 'app/(control-plane)/settings/features/page.tsx' 'app/(control-plane)/support/_components/SlaDashboard.tsx'` (provider-admin-os)
+
+Residual: these surfaces still require full visual, responsive, keyboard, and browser review.
