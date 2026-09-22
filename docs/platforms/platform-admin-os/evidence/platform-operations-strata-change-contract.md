@@ -355,3 +355,19 @@ Verification:
 - PASS `pnpm exec eslint 'app/(control-plane)/security/page.tsx'` (provider-admin-os)
 
 Residual: Security still needs a full visual density, keyboard, and responsive browser review.
+
+## Evidence — 2026-09-22, infrastructure overview trust cycle
+
+Status: PARTIAL. This is not done.
+
+Scope: corrected Infrastructure overview KPI handling so absent cluster health, backup totals, region counts, and availability do not masquerade as zero or healthy state.
+
+Acceptance:
+- AC-60 infrastructure KPIs preserve Unknown for unavailable source fields.
+- AC-61 reported zero remains distinct from missing data and existing read-only behavior is unchanged.
+
+Verification:
+- PASS `pnpm exec tsc --noEmit` (provider-admin-os)
+- PASS `pnpm exec eslint 'app/(control-plane)/infrastructure/page.tsx'` (provider-admin-os)
+
+Residual: Infrastructure still needs a full visual density, keyboard, and responsive browser review.
