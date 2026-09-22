@@ -338,3 +338,20 @@ Verification:
 - PASS `pnpm exec eslint 'app/(control-plane)/access/page.tsx'` (provider-admin-os)
 
 Residual: Access still needs a full visual density, keyboard, and responsive browser review.
+
+## Evidence — 2026-09-22, security overview trust cycle
+
+Status: PARTIAL. This is not done.
+
+Scope: corrected Security & Compliance overview KPI and alert labeling so partial/error sources do not masquerade as complete posture and missing severity is not invented as WARNING.
+
+Acceptance:
+- AC-57 security counts distinguish source-unavailable state from a reported zero.
+- AC-58 missing alert severity renders UNKNOWN while preserving the existing severity color mapping.
+- AC-59 authorization and security read behavior remain unchanged.
+
+Verification:
+- PASS `pnpm exec tsc --noEmit` (provider-admin-os)
+- PASS `pnpm exec eslint 'app/(control-plane)/security/page.tsx'` (provider-admin-os)
+
+Residual: Security still needs a full visual density, keyboard, and responsive browser review.
