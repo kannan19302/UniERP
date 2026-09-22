@@ -106,3 +106,36 @@ Verification results:
 | FAIL — PRE-EXISTING | provider-admin-os | isolated `next build --no-lint` | compilation and type validation passed; `/login` prerender still fails because `useSearchParams()` lacks a Suspense boundary |
 
 The runtime used Node 24 while the package requests Node 22. This environmental warning did not prevent the passing focused gates.
+
+## Evidence — 2026-09-22, operations record-workspace cycle
+
+Status: PARTIAL. This is not done.
+
+Scope: presentation and client-state correction for the Jobs, Environments, Deployments, Workflows and Maintenance routes. All five routes continue to consume their existing APIs and permission checks. No API, schema, persistence, authorization, command, migration or infrastructure boundary changed. PLT-PAO owns the experience; existing operations, release, workflow and broadcast services remain authoritative for returned data. Knowledge delta: UPDATED in this evidence record; the implementation applies existing PAO-FR-003 and PAO-UX requirements.
+
+Acceptance criteria:
+
+- AC-21: Missing queue counts remain `Unknown`; a queue is not labeled clear unless its failed count is measured as zero.
+- AC-22: Environment and deployment targets come only from the release manifest; the client does not invent staging or production rows.
+- AC-23: Workflow running and failure summaries use `lastStatus`, while `lastRun` is formatted only as time evidence.
+- AC-24: Each route uses the shared searchable `DataWorkspace` floorplan, explicit source error/empty states and a compact measured summary.
+- AC-25: Desktop and 390-pixel layouts remain contained, keyboard-searchable and source failures remain visible.
+
+Rollback: revert the provider-admin implementation commit and this evidence update. No data, migration or contract rollback is required.
+
+Verification results:
+
+| Result | Repository | Exact command | Evidence |
+| --- | --- | --- | --- |
+| PASS | provider-admin-os | `pnpm test` | 346 passed, 1 skipped across 90 files |
+| PASS | provider-admin-os | `pnpm exec vitest run __tests__/pages/ops-record-workspaces.test.tsx` | 5 focused truthfulness and state-semantics tests |
+| PASS | provider-admin-os | `pnpm exec playwright test e2e/operations-record-workspaces.spec.ts --workers=1 --reporter=line` | authentication setup, five-route record-workspace traversal and 390-pixel containment passed |
+| PASS | provider-admin-os | `pnpm typecheck` | no compiler errors |
+| PASS | provider-admin-os | focused ESLint for five routes and changed tests | no findings |
+| PASS | provider-admin-os | `pnpm check:tokens` | no new violations; 53 existing violations remain baselined in 40 files |
+| PASS | provider-admin-os | `node ../platform/workspace/scripts/check-layer.mjs` | L4 package boundary verified |
+| PASS | browser review | Jobs desktop and 390-pixel rendered captures | summary hierarchy, searchable tables, action placement and page containment reviewed; temporary captures removed |
+| FAIL — PRE-EXISTING | provider-admin-os | `pnpm lint` | unrelated email-provider-selector and tenant-provision errors remain, plus existing warnings |
+| FAIL — PRE-EXISTING | provider-admin-os | isolated `next build --no-lint` | compilation and type validation passed; `/login` prerender still fails because `useSearchParams()` lacks a Suspense boundary |
+
+The isolated build added its temporary output path to `tsconfig.json`; that generated edit was removed before diff review. Node 24 remained active while the package requests Node 22.
