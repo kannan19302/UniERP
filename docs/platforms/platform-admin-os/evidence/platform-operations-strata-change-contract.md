@@ -257,3 +257,19 @@ Verification:
 - PASS `pnpm exec eslint 'app/(control-plane)/support/incidents/page.tsx'` (provider-admin-os)
 
 Residual: full provider-admin UI sweep, full lint/build gates, and cross-surface browser review remain outstanding.
+
+## Evidence — 2026-09-22, API traffic metric truthfulness cycle
+
+Status: PARTIAL. This is not done.
+
+Scope: removed fabricated API Traffic KPI defaults and synthetic notification recipient copy from the provider-admin presentation layer.
+
+Acceptance:
+- AC-46 gateway KPIs show loading/Unknown when the traffic-stats source does not report values.
+- AC-47 sunset notification copy uses only the reported recipient count or a neutral success message.
+
+Verification:
+- PASS `pnpm exec tsc --noEmit` (provider-admin-os)
+- PASS `pnpm exec eslint 'app/(control-plane)/api-traffic/page.tsx'` (provider-admin-os)
+
+Residual: API Traffic remains a larger multi-tab workspace and still requires a dedicated density/accessibility/browser pass.
