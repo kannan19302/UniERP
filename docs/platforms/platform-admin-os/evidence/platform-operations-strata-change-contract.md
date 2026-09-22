@@ -290,3 +290,19 @@ Verification:
 - PASS `pnpm exec eslint 'app/(control-plane)/billing/page.tsx'` (provider-admin-os)
 
 Residual: billing subroutes still require the broader visual and accessibility sweep.
+
+## Evidence — 2026-09-22, business overview truthfulness cycle
+
+Status: PARTIAL. This is not done.
+
+Scope: corrected the Overview → Business KPI layer so ARR is read from an explicit source field, missing tenant/revenue values remain Unknown, and averages are not presented from incomplete data.
+
+Acceptance:
+- AC-51 ARR is never synthesized from MRR when the source does not report ARR.
+- AC-52 missing summary values do not collapse to zero or a misleading average.
+
+Verification:
+- PASS `pnpm exec tsc --noEmit` (provider-admin-os)
+- PASS `pnpm exec eslint 'app/(control-plane)/overview/business/page.tsx'` (provider-admin-os)
+
+Residual: the Business page still needs a dedicated visual density and responsive browser review.
