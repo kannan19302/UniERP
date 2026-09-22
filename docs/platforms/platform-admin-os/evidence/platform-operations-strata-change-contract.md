@@ -405,6 +405,24 @@ Verification:
 
 Residual: Operations still needs full visual, responsive, keyboard, and browser review.
 
+## Evidence — 2026-09-22, bulk source-truth fallback cycle (20 files)
+
+Status: PARTIAL. This is not done.
+
+Scope: one bulk cycle across 20 provider-admin presentation files. Replaced missing-data numeric fallbacks with source-aware Unknown states or neutral unavailable values across security, infrastructure, developer, marketplace, analytics, subscription, tenant, support, integration, and AI surfaces.
+
+Acceptance:
+- AC-73 no changed surface invents a production count, percentage, availability, response time, price, or resource total when its source is absent.
+- AC-74 reported zero remains representable where the source explicitly reports zero.
+- AC-75 existing permissions, mutations, navigation, and endpoint contracts remain unchanged.
+
+Verification:
+- PASS `pnpm exec tsc --noEmit` (provider-admin-os)
+- PASS focused ESLint over all 20 changed provider-admin files
+- PASS `git diff --cached --check` pending commit
+
+Residual: the broader inline-style conversion, browser review, full route inventory, and repository lint/build blockers remain.
+
 ## Evidence — 2026-09-22, integrations and developers fallback removal
 
 Status: PARTIAL. This is not done.
