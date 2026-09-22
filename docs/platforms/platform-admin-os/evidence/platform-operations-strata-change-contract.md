@@ -371,3 +371,20 @@ Verification:
 - PASS `pnpm exec eslint 'app/(control-plane)/infrastructure/page.tsx'` (provider-admin-os)
 
 Residual: Infrastructure still needs a full visual density, keyboard, and responsive browser review.
+
+## Evidence — 2026-09-22, governance and entitlement fallback removal
+
+Status: PARTIAL. This is not done.
+
+Scope: removed fabricated Governance & Compliance and Entitlement Authority KPI fallbacks. Unsupported certification/gap claims now render Not reported; entitlement counts and utilization preserve Unknown when sources are loading or unavailable.
+
+Acceptance:
+- AC-62 Governance active-control count is source-derived; unsupported certification and evidence-gap claims are not asserted.
+- AC-63 Entitlement pool, capacity, utilization, and offline-license KPIs do not invent defaults.
+- AC-64 Existing privileged actions, permission gates, and endpoint behavior remain unchanged.
+
+Verification:
+- PASS `pnpm exec tsc --noEmit` (provider-admin-os)
+- PASS `pnpm exec eslint 'app/(control-plane)/governance-compliance/page.tsx' 'app/(control-plane)/entitlement-authority/page.tsx'` (provider-admin-os)
+
+Residual: these surfaces still require full visual, responsive, keyboard, and browser review.
