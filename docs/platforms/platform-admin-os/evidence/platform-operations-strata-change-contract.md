@@ -306,3 +306,19 @@ Verification:
 - PASS `pnpm exec eslint 'app/(control-plane)/overview/business/page.tsx'` (provider-admin-os)
 
 Residual: the Business page still needs a dedicated visual density and responsive browser review.
+
+## Evidence — 2026-09-22, usage overview truthfulness cycle
+
+Status: PARTIAL. This is not done.
+
+Scope: corrected Overview → Usage summary handling so missing tenant, quota, and over-quota values do not collapse to zero and imply healthy metering.
+
+Acceptance:
+- AC-53 tenant and over-quota counts preserve Unknown when the summary source is absent or fails.
+- AC-54 quota-rule counts distinguish loading, unavailable, and an explicitly empty result.
+
+Verification:
+- PASS `pnpm exec tsc --noEmit` (provider-admin-os)
+- PASS `pnpm exec eslint 'app/(control-plane)/overview/usage/page.tsx'` (provider-admin-os)
+
+Residual: the Usage page still needs a dedicated visual density and responsive browser review.
