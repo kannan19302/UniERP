@@ -273,3 +273,20 @@ Verification:
 - PASS `pnpm exec eslint 'app/(control-plane)/api-traffic/page.tsx'` (provider-admin-os)
 
 Residual: API Traffic remains a larger multi-tab workspace and still requires a dedicated density/accessibility/browser pass.
+
+## Evidence — 2026-09-22, billing overview workspace cycle
+
+Status: PARTIAL. This is not done.
+
+Scope: replaced the Billing overview’s inline dashboard/list composition with the shared measured summary strip and searchable invoice register.
+
+Acceptance:
+- AC-48 billing summary values are source-derived and explicitly Unknown while loading or when absent.
+- AC-49 invoice register exposes source errors, empty state, search, status hierarchy, and reported amount/currency without inference.
+- AC-50 refresh action reloads both billing sources and introduces no mutation or fabricated values.
+
+Verification:
+- PASS `pnpm exec tsc --noEmit` (provider-admin-os)
+- PASS `pnpm exec eslint 'app/(control-plane)/billing/page.tsx'` (provider-admin-os)
+
+Residual: billing subroutes still require the broader visual and accessibility sweep.
