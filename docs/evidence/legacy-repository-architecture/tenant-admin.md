@@ -1,7 +1,9 @@
-# Architecture Specification: UniERP Polyrepo Workspace & Governance Engine (`unierp-workspace`)
+> Historical, non-authoritative copy of `tenant-admin/ARCHITECTURE.md`. Preserved during the 14-root documentation consolidation on 2026-09-24. Current architecture is owned by the accepted ADRs and `platform/docs/platforms/`; current repository rules are in its root `AGENTS.md`.
 
-- **Layer**: Layer L7 (Operations)
-- **Package Identity**: `unierp-programme`
+# Architecture Specification: UniERP Tenant Administration Portal (`tenant-admin`)
+
+- **Layer**: Layer L4 (Presentation)
+- **Package Identity**: `@kannan19302/tenant-admin`
 - **Owning ADR**: [ADR-0010: UniERP Master Platform Goal and Polyrepo Architecture Boundaries](../unierp-platform/docs/adr/ADR-0010-platform-north-star-and-polyrepo-boundaries.md)
 - **Status**: Authoritative & Production-Active
 
@@ -9,7 +11,7 @@
 
 ## 1. Executive Summary & Purpose
 
-Polyrepo governance verification, CI fitness gates, change contracts, static architectural inventory scanners, and enterprise brain state.
+Tenant self-service administration: user management, role assignments, SSO federation configuration, and billing subscriptions.
 
 This repository is one delivery unit in the UniERP 31-repository polyrepo estate, anchored by the **UniERP Master Platform North Star Goal**:
 > "Build the world's premier autonomous, multi-tenant Enterprise SaaS Operating System: delivering 100% Zero-Trust Multi-Tenant Isolation with PostgreSQL Row-Level Security on every tenant table, Absolute Decimal(19,4) Numeric Precision across all ledgers, Atomic Durable Audit Logging, Sub-100ms P99 Transaction Latency, and a Unified High-Density Strata Workbench Design Language across all 1,198 web routes, native mobile, and desktop clients."
@@ -20,10 +22,10 @@ This repository is one delivery unit in the UniERP 31-repository polyrepo estate
 
 ```mermaid
 graph LR
-  Callers["Allowed Inbound Callers<br/>All contributors, CI workflows, platform architects"] --> Repo["<b>unierp-workspace (L7)</b><br/>UniERP Polyrepo Workspace & Governance Engine"]
-  Repo --> Outbound["Allowed Outbound Dependencies<br/>All layers (Static inspection, verification, and linting only)"]
-  
-  Forbidden["Strictly Forbidden<br/>Runtime production code imports"] -.-x Repo
+  Callers["Allowed Inbound Callers<br/>Tenant IT administrators, enterprise security officers"] --> Repo["<b>tenant-admin (L4)</b><br/>UniERP Tenant Administration Portal"]
+  Repo --> Outbound["Allowed Outbound Dependencies<br/>@kannan19302/ui (L1), @kannan19302/contracts (L0), @kannan19302/auth (L1), L3 via HTTP/SDK"]
+
+  Forbidden["Strictly Forbidden<br/>Direct database ORM, L2 internals, Provider control plane routes"] -.-x Repo
 
   classDef r fill:#0f172a,stroke:#3b82f6,stroke-width:2px,color:#fff;
   classDef c fill:#1e293b,stroke:#64748b,stroke-width:1px,color:#fff;
@@ -34,18 +36,20 @@ graph LR
 ```
 
 ### Boundary Contract
-- **Allowed Inbound Consumers**: All contributors, CI workflows, platform architects
-- **Allowed Outbound Dependencies**: All layers (Static inspection, verification, and linting only)
+- **Allowed Inbound Consumers**: Tenant IT administrators, enterprise security officers
+- **Allowed Outbound Dependencies**: @kannan19302/ui (L1); @kannan19302/contracts (L0); @kannan19302/auth (L1); L3 via HTTP/SDK
 - **Strictly Forbidden Dependencies**:
-  - ❌ Runtime production code imports
+  - ❌ Direct database ORM
+  - ❌ L2 internals
+  - ❌ Provider control plane routes
 
 ---
 
 ## 3. Technology Stack & Key Primitives
 
-- **Core Runtime & Languages**: Node.js, ESM, Bash, PowerShell
-- **Primary Interface**: `unierp-programme`
-- **Verification Harness**: `node scripts/test-discovery-gates.mjs`
+- **Core Runtime & Languages**: Next.js, React, Strata Workbench Dark Theme, TypeScript
+- **Primary Interface**: `@kannan19302/tenant-admin`
+- **Verification Harness**: `pnpm typecheck`
 
 ---
 
@@ -60,6 +64,6 @@ To maintain institutional reliability, this repository is governed by the follow
 
 ## 5. Associated AI Skills & Governance Links
 
-- **Project Skill**: [`.agents/skills/workspace-governance-standards/SKILL.md`](.agents/skills/workspace-governance-standards/SKILL.md)
+- **Project Skill**: [`.agents/skills/tenant-admin-standards/SKILL.md`](.agents/skills/tenant-admin-standards/SKILL.md)
 - **Workspace Governance**: [`../unierp-workspace/governance/UNIERP_MASTER_PLATFORM_GOAL.md`](../unierp-workspace/governance/UNIERP_MASTER_PLATFORM_GOAL.md)
 - **Canonical Protocol**: [`../unierp-platform/docs/standards/AI_AGENT_DEVELOPMENT_PROTOCOL.md`](../unierp-platform/docs/standards/AI_AGENT_DEVELOPMENT_PROTOCOL.md)

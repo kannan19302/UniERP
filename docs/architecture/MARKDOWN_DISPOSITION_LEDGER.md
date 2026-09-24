@@ -1,6 +1,12 @@
 # UniERP Markdown Disposition Ledger
 
-Authoritative inventory and reviewed disposition for all **1072** first-party Markdown documents across the 13 canonical roots.
+> Historical, non-authoritative inventory captured before ADR-0012. Its 1,072-file,
+> 13-root counts and KEEP-LOCAL decisions do not describe the current workspace.
+> Use the 14-root active estate and the current documentation consolidation
+> change contract for present decisions. Do not execute its archive list without
+> fresh owner and inbound-link review.
+
+Original inventory and reviewed disposition for **1072** first-party Markdown documents across the former 13 roots.
 
 ## 1. Scope & Exclusion Policy
 

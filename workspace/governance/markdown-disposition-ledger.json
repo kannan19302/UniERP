@@ -1,5 +1,7 @@
 {
   "version": "1.0.0",
+  "status": "HISTORICAL_NON_AUTHORITATIVE",
+  "supersededBy": "platform/workspace/governance/change-contracts/2026-09-24-agent-documentation-consolidation.md",
   "generatedAt": "2026-09-18T17:26:39.767Z",
   "totalFiles": 1072,
   "excludedClasses": [

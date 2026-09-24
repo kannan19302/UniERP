@@ -54,6 +54,14 @@ REMAINING WORK: Rebuild the Markdown disposition inventory, review candidates wi
 
 NEXT ACTION: Continue the documentation disposition sequence above without deleting normative sources.
 
+## Iteration evidence — superseded repository architecture copies
+
+ADR-0012 superseded the 31-repository topology and ADR-0001 assigns normative architecture to `platform/docs`. Fifteen repository or nested-unit `ARCHITECTURE.md` files still claimed to be authoritative on the retired topology and linked to absent `unierp-platform` paths. Their content was preserved in `platform/docs/evidence/legacy-repository-architecture/` with whitespace normalization, a non-authoritative banner and source path; original bytes remain in Git history. Hashes of every source were recorded during the copy. The current owning platform architecture and accepted ADRs remain in place.
+
+The old Markdown disposition ledger is now marked historical; its KEEP-LOCAL decisions for these files cannot override ADR-0012 or the documentation authority decision. The old scaffolder was changed into a read-only current-root checker so it cannot regenerate the stale copies. The two nested Platform architecture files were removed after their archived copies were verified. The thirteen other root copies remain until their owning repositories can remove them in dependency order.
+
+Status: PARTIALLY COMPLETE. This is not done. Next action: verify the Platform archive and governance checks, publish that upstream preservation change, then remove only the thirteen source copies from repository roots and validate every affected root.
+
 ## Verification and rollback
 
 Run the protocol, estate, layer, link, and enterprise-brain checks applicable to documentation. Review all 14 repository diffs and the platform diff. Roll back by reverting this documentation-only change; no data migration is involved. No production action, release, publication, destructive cleanup, or security-control weakening is authorized.
