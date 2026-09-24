@@ -15,7 +15,7 @@ if (write === check) {
 }
 
 const sources = {
-  "AGENTS.md": "platform/workspace/governance/AGENTS.md",
+  "AGENTS.md": "platform/workspace/governance/AGENT_ENTRYPOINT_SOURCE.md",
   "UniERP.code-workspace": "platform/workspace/governance/UniERP.code-workspace",
 };
 const mismatches = [];
@@ -46,4 +46,3 @@ if (write) {
 } else {
   console.log("Workspace governance artifacts match their version-controlled sources.");
 }
-

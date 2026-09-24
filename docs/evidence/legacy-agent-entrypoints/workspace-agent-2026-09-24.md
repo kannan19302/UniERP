@@ -1,3 +1,5 @@
+> Historical, non-authoritative agent instruction. Current rules are in workspace AGENTS.md and platform/AGENTS.md.
+
 <!-- UniERP-Agent-Protocol: 1.1.0 -->
 # UniERP Nested Unit Agent Entrypoint: Workspace Toolchain (`platform/workspace`)
 

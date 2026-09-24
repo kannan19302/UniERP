@@ -55,50 +55,50 @@ for (const path of requiredSkillFiles) {
 
 const rootAgent = requireFile("AGENTS.md", "workspace agent entrypoint");
 const protocol = requireFile(
-  "unierp-platform/docs/standards/AI_AGENT_DEVELOPMENT_PROTOCOL.md",
+  "platform/docs/standards/AI_AGENT_DEVELOPMENT_PROTOCOL.md",
   "canonical AI protocol",
 );
 const knowledgePolicy = requireFile(
-  "unierp-platform/docs/standards/AI_KNOWLEDGE_LIFECYCLE.md",
+  "platform/docs/standards/AI_KNOWLEDGE_LIFECYCLE.md",
   "knowledge lifecycle standard",
 );
 const documentationIndex = requireFile(
-  "unierp-platform/docs/README.md",
+  "platform/docs/README.md",
   "product documentation index",
 );
 const standardsIndex = requireFile(
-  "unierp-platform/docs/standards/README.md",
+  "platform/docs/standards/README.md",
   "cross-platform standards index",
 );
-requireFile("unierp-platform/docs/PLATFORM_CATALOG.md", "platform catalog");
+requireFile("platform/docs/PLATFORM_CATALOG.md", "platform catalog");
 const plan = requireFile(
-  "unierp-workspace/governance/UNIERP_FOUNDATION_REMEDIATION_PLAN.md",
+  "platform/workspace/governance/UNIERP_FOUNDATION_REMEDIATION_PLAN.md",
   "foundation remediation plan",
 );
 const saasAuditChecklist = requireFile(
-  "unierp-workspace/governance/SAAS_PREREQUISITE_READINESS_AUDIT_CHECKLIST.md",
+  "platform/workspace/governance/SAAS_PREREQUISITE_READINESS_AUDIT_CHECKLIST.md",
   "SaaS prerequisite and readiness audit checklist",
 );
 const saasAuditContract = requireFile(
-  "unierp-workspace/governance/change-contracts/FND-PA-001-saas-readiness-audit.md",
+  "platform/workspace/governance/change-contracts/FND-PA-001-saas-readiness-audit.md",
   "SaaS readiness audit change contract",
 );
 const saasAuditReport = requireFile(
-  "unierp-workspace/governance/UNIERP_SAAS_READINESS_AUDIT_2026-08-28.md",
+  "platform/workspace/governance/UNIERP_SAAS_READINESS_AUDIT_2026-08-28.md",
   "classified SaaS readiness audit report",
 );
 const saasAuditReview = requireFile(
-  "unierp-workspace/governance/FND-PA-001_OWNER_REVIEW.md",
+  "platform/workspace/governance/FND-PA-001_OWNER_REVIEW.md",
   "SaaS readiness audit owner review",
 );
 const saasAuditAcceptanceGate = requireFile(
-  "unierp-workspace/scripts/check-saas-audit-acceptance.mjs",
+  "platform/workspace/scripts/check-saas-audit-acceptance.mjs",
   "SaaS readiness audit acceptance gate",
 );
 const workspaceFile = requireFile("UniERP.code-workspace", "workspace repository inventory");
 
 requireText(rootAgent, [
-  /unierp-workspace\/governance\/skills\/unierp-enterprise-brain\/SKILL\.md/,
+  /platform\/workspace\/governance\/skills\/unierp-enterprise-brain\/SKILL\.md/,
   /AI_KNOWLEDGE_LIFECYCLE\.md/,
 ]);
 requireText(protocol, [/Protocol version:\s*\d+\.\d+\.\d+/]);

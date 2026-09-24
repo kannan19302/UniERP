@@ -8,7 +8,7 @@
   "entrypointMarker": "UniERP-Agent-Protocol: 1.1.0",
   "workspaceFile": "UniERP.code-workspace",
   "governanceSources": {
-    "AGENTS.md": "platform/workspace/governance/AGENTS.md",
+    "AGENTS.md": "platform/workspace/governance/AGENT_ENTRYPOINT_SOURCE.md",
     "UniERP.code-workspace": "platform/workspace/governance/UniERP.code-workspace"
   },
   "workspaceDiscoverySettings": {

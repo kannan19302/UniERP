@@ -26,7 +26,7 @@ The machine-readable conformance profile for development agents is
 [`AI_AGENT_PROTOCOL.json`](AI_AGENT_PROTOCOL.json). The workspace discovery entry point remains the root
 `AGENTS.md`; vendor adapters may point to it but must not redefine this standard.
 
-The project-level `unierp-workspace/governance/skills/unierp-enterprise-brain/` skill provides a provider-neutral operational
+The project-level `platform/workspace/governance/skills/unierp-enterprise-brain/` skill provides a provider-neutral operational
 navigation layer over these authorities. It is not a competing product or architecture source of truth.
 
 The manifest is defined by [`AI_AGENT_PROTOCOL.schema.json`](AI_AGENT_PROTOCOL.schema.json), and every repository

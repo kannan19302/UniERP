@@ -1,81 +1,35 @@
-# UniERP Product Documentation
+# UniERP documentation
 
-This directory is the authoritative product and platform documentation source for the UniERP polyrepo.
-Repository-level `README.md` files may explain installation and local development, but must not redefine
-product requirements, architecture boundaries, security policy, or platform contracts.
+[Product goal and first-release scope](product/PRD.md) is the starting point.
+[ADR-0012](adr/ADR-0012-polyrepo-consolidation-to-14-core-roots.md) defines the
+14 active Git roots; the [platform catalog](PLATFORM_CATALOG.md) assigns product
+ownership. The [active estate](../workspace/governance/active-estate.json) and
+`UniERP.code-workspace` identify current repositories. Do not use historical
+repository names or file counts as current readiness evidence.
 
-Start with the [overall UniERP product suite](product/README.md), then follow the owning platform.
+## One owner for each kind of knowledge
 
-## Authority order
-
-1. Accepted architecture decision records (ADRs).
-2. Platform specifications in `platforms/<platform>/`.
-3. Cross-platform standards in `standards/`.
-4. Generated implementation evidence in `evidence/`.
-5. Repository README, contribution, support, and historical documents.
-
-When code and an authoritative document disagree, record the discrepancy as a gap. Do not silently present
-either side as the intended state.
-
-## Platform map
-
-| Platform | Primary repositories | Documentation owner |
-| --- | --- | --- |
-| Platform Admin OS | `provider-admin-os`, `api`, `idp`, `infra` | `platforms/platform-admin-os/` |
-| Tenant Admin | `tenant-admin`, `api`, `idp` | `platforms/tenant-admin/` |
-| Tenant Apps ERP | `tenant-apps`, `api`, `data` | `platforms/tenant-apps/` |
-| Developer Platform | `developer-platform`, `sdk`, `extension-api`, `sandbox` | `platforms/developer-platform/` |
-| Marketplace | `marketplace`, API marketplace modules, `extensions` | `platforms/marketplace/` |
-| Identity Platform | `idp`, `auth` | `platforms/identity/` |
-| Data and Business Services | `api`, `data`, `unierp-contracts` | `platforms/business-services/` |
-| Design Platform | `design-system`, `storybook`, `framework` | `platforms/design-system/` |
-| Tenant Sites and Studio | `tenant-sites`, `tenant-site-template`, `web-studio` | `platforms/tenant-sites/` |
-| Mobile Client | `unierp-mobile` | `platforms/mobile/` |
-| Desktop Client | `desktop-app` | `platforms/desktop/` |
-| Marketing Site | `marketing-site` | `platforms/marketing-site/` |
-| Runtime and Operations | `infra`, `config`, `kernel`, `shared`, `service-kit` | `platforms/runtime-operations/` |
-
-## Required suite per platform
-
-Every platform directory must contain:
-
-- `README.md`: ownership, scope, evidence, status and document index.
-- `PRD.md`: users, outcomes, business rules, scope and success measures.
-- `REQUIREMENTS.md`: functional requirements/FRS, SRS behavior and NFRs.
-- `ARCHITECTURE.md`: TRD, runtime design, boundaries, trust zones and decisions.
-- `CONTRACTS.md`: API, event, integration and data contracts.
-- `SECURITY.md`: IAM, tenant isolation, privacy, compliance and threat requirements.
-- `EXPERIENCE.md`: UX, accessibility, localization and design-system requirements.
-- `OPERATIONS.md`: infrastructure, delivery, SRE, observability, testing and runbooks.
-- `TRACEABILITY.md`: requirement to architecture, implementation and test evidence.
-- `adr/`: decisions local to that platform.
-
-Cross-platform rules are defined once in `standards/` and referenced, not copied.
-
-## Evidence vocabulary
-
-| Status | Meaning |
+| Question | Owning source |
 | --- | --- |
-| `IMPLEMENTED` | A concrete implementation and a relevant passing test or runtime proof were inspected. |
-| `PARTIAL` | Some mechanism exists, but required behavior or proof is incomplete. |
-| `DECLARED` | Documentation or route naming expresses intent without sufficient implementation proof. |
-| `UNVERIFIED` | Code may exist, but no evidence has yet been inspected. |
-| `GAP` | Required behavior is absent or contradicted by inspected evidence. |
-| `N/A` | Explicitly outside the platform boundary, with an owner named elsewhere. |
+| Product promise, customers, release scope and success | [Product PRD](product/PRD.md) and product requirements |
+| Durable architecture choice | [Accepted ADRs](adr/README.md) |
+| A platform's actors, behavior and non-functional requirements | `platforms/<owner>/PRD.md` and `REQUIREMENTS.md` |
+| Runtime design, data flow and trust boundary | Owning platform `ARCHITECTURE.md` |
+| Published HTTP, event, SDK and extension behavior | Owning versioned contract and platform `CONTRACTS.md` |
+| Cross-platform engineering or security rule | [Standards](standards/README.md) |
+| Agent workflow and repository coding rule | Workspace `AGENTS.md` and the one `AGENTS.md` at each active Git root |
+| Implementation observation and test result | Dated `evidence/` record tied to a revision |
+| Deployment, recovery and support | Owning `OPERATIONS.md` and runbook |
 
-See [documentation governance](standards/DOCUMENTATION_GOVERNANCE.md) and the
-[platform catalog](PLATFORM_CATALOG.md).
+The accepted [documentation authority decision](adr/ADR-0001-platform-documentation-authority.md)
+keeps these distinct sources. Minimal documentation means one authoritative owner
+per fact and short navigation, not deletion of contracts, ADRs or release proof.
+Before archiving a duplicate, classify its owner, backlinks and unique content.
+Historical and generated material is non-authoritative and must say so clearly.
 
-All AI development agents, independent of provider or runtime, follow the
-[AI agent development protocol](standards/AI_AGENT_DEVELOPMENT_PROTOCOL.md). The workspace root `AGENTS.md`
-is its mandatory discovery entry point.
-
-Agents also use the project-level `unierp-workspace/governance/skills/unierp-enterprise-brain/` adapter and follow the
-[AI knowledge lifecycle](standards/AI_KNOWLEDGE_LIFECYCLE.md), ensuring that authoritative knowledge,
-contracts, evidence and operational guidance evolve with the codebase without creating duplicate sources of truth.
-
-The dated [implementation baseline](evidence/IMPLEMENTATION_BASELINE.md) records repository-level source and test signals.
-The [requirement traceability coverage matrix](evidence/REQUIREMENT_TRACEABILITY_COVERAGE.md) exposes every linked and unmapped requirement.
-The [polyrepo test inventory](evidence/TEST_INVENTORY.md) records current test-like files and evidence gaps.
-The [documentation completion audit](evidence/DOCUMENTATION_COMPLETION_AUDIT.md) records the final structural checks and completion boundary.
-The [duplication audit](evidence/DOCUMENT_DUPLICATION_AUDIT.md) checks authoritative normative files for exact duplicates.
+The [knowledge lifecycle](standards/AI_KNOWLEDGE_LIFECYCLE.md) governs updates.
+Agent instructions are in the [canonical protocol](standards/AI_AGENT_DEVELOPMENT_PROTOCOL.md)
+and routed by the [unierp-enterprise-brain](../workspace/governance/skills/unierp-enterprise-brain/SKILL.md).
+The product/platform files remain authoritative when code or agent guidance differs;
+record that difference as a gap. A route, module, document or score does not prove
+a customer journey or production readiness.

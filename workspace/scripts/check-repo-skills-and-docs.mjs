@@ -1,84 +1,79 @@
 #!/usr/bin/env node
 /**
- * scripts/check-repo-skills-and-docs.mjs
- *
- * Verifies that all 31 repositories in active-estate.json have:
- * 1. A dedicated project skill at .agents/skills/<name>/SKILL.md with valid YAML frontmatter.
- * 2. An authoritative ARCHITECTURE.md file with Mermaid diagrams and boundary definitions.
+ * Verify the 14 active repository agent entrypoints against the current product
+ * authority. Repository architecture and product intent live in platform/docs,
+ * not duplicate repository Markdown.
  */
+import { readFileSync, existsSync, readdirSync } from "node:fs";
+import { resolve } from "node:path";
+import { findWorkspaceRoot } from "./lib/estate.mjs";
 
-import { readdirSync, readFileSync, existsSync } from 'node:fs';
-import { resolve, join } from 'node:path';
+const root = findWorkspaceRoot();
+const estate = JSON.parse(
+  readFileSync(resolve(root, "platform/workspace/governance/active-estate.json"), "utf8"),
+);
+const workspace = JSON.parse(readFileSync(resolve(root, "UniERP.code-workspace"), "utf8"));
+const catalog = readFileSync(resolve(root, "platform/docs/PLATFORM_CATALOG.md"), "utf8");
+const map = JSON.parse(
+  readFileSync(resolve(root, "platform/docs/standards/AI_REPOSITORY_PLATFORM_MAP.json"), "utf8"),
+);
+const failures = [];
+const repositories = estate.repositories ?? [];
+const workspacePaths = new Set((workspace.folders ?? []).map((entry) => entry.path));
+const ignoredDirectories = new Set([".git", "node_modules", ".next", ".pnpm-store", "dist", "build", "coverage"]);
 
-const WORKSPACE_DIR = resolve('.');
-const PARENT_DIR = resolve('..');
-const ESTATE_FILE = join(WORKSPACE_DIR, 'governance', 'active-estate.json');
+function findAgentFiles(directory) {
+  const found = [];
+  for (const entry of readdirSync(directory, { withFileTypes: true })) {
+    if (entry.isDirectory() && !ignoredDirectories.has(entry.name)) {
+      found.push(...findAgentFiles(resolve(directory, entry.name)));
+    } else if (entry.isFile() && entry.name === "AGENTS.md") {
+      found.push(resolve(directory, entry.name));
+    }
+  }
+  return found;
+}
 
-const estate = JSON.parse(readFileSync(ESTATE_FILE, 'utf8'));
-const repositories = estate.repositories;
-
-console.log(`Verifying project skills and ARCHITECTURE.md across ${repositories.length} repositories...\n`);
-
-let missingSkills = [];
-let missingDocs = [];
-let invalidSkills = [];
+if (repositories.length !== 14 || workspacePaths.size !== 14) {
+  failures.push(`expected 14 active roots; found ${repositories.length} estate entries and ${workspacePaths.size} workspace folders`);
+}
 
 for (const entry of repositories) {
-  const repoName = entry.repository;
-  const repoPath = resolve(PARENT_DIR, repoName);
-
-  if (!existsSync(repoPath)) {
-    console.warn(`⚠️ Repository folder missing: ${repoPath}`);
+  const repo = entry.repository;
+  if (!workspacePaths.has(repo)) failures.push(`${repo}: missing from workspace`);
+  const dir = resolve(root, repo);
+  if (!existsSync(dir)) {
+    failures.push(`${repo}: repository root missing`);
     continue;
   }
-
-  // 1. Check ARCHITECTURE.md
-  const archFile = join(repoPath, 'ARCHITECTURE.md');
-  if (!existsSync(archFile)) {
-    missingDocs.push(repoName);
-  } else {
-    const content = readFileSync(archFile, 'utf8');
-    if (!content.includes('```mermaid') || !content.includes('Layer')) {
-      missingDocs.push(`${repoName} (missing mermaid or layer specification)`);
-    }
+  const path = resolve(dir, "AGENTS.md");
+  const agentFiles = findAgentFiles(dir);
+  if (agentFiles.length !== 1 || agentFiles[0] !== path) {
+    failures.push(`${repo}: expected one root AGENTS.md; found ${agentFiles.length}`);
   }
-
-  // 2. Check .agents/skills/*/SKILL.md
-  const skillsDir = join(repoPath, '.agents', 'skills');
-  if (!existsSync(skillsDir)) {
-    missingSkills.push(repoName);
-  } else {
-    const subdirs = readdirSync(skillsDir, { withFileTypes: true }).filter((d) => d.isDirectory());
-    if (subdirs.length === 0) {
-      missingSkills.push(repoName);
-    } else {
-      let hasValidSkill = false;
-      for (const sub of subdirs) {
-        const skillFile = join(skillsDir, sub.name, 'SKILL.md');
-        if (existsSync(skillFile)) {
-          const content = readFileSync(skillFile, 'utf8');
-          if (content.startsWith('---') && content.includes('name:') && content.includes('description:')) {
-            hasValidSkill = true;
-            break;
-          }
-        }
-      }
-      if (!hasValidSkill) {
-        invalidSkills.push(repoName);
-      }
-    }
+  if (!existsSync(path)) {
+    failures.push(`${repo}: AGENTS.md missing`);
+    continue;
+  }
+  const agent = readFileSync(path, "utf8");
+  for (const required of [
+    "UniERP-Agent-Protocol: 1.1.0",
+    "../AGENTS.md",
+    "platform/docs/standards/AI_AGENT_DEVELOPMENT_PROTOCOL.md",
+    "## Repository rules",
+    "## Verification",
+  ]) {
+    if (!agent.includes(required)) failures.push(`${repo}: missing ${required}`);
+  }
+  const owner = map.repositories?.[repo]?.primaryPlatform;
+  if (!owner || !catalog.includes(`| ${owner} |`)) {
+    failures.push(`${repo}: unmapped or undocumented platform owner ${owner ?? ""}`);
   }
 }
 
-console.log('── Validation Results ──────────────────────────────────────────');
-if (missingSkills.length === 0 && missingDocs.length === 0 && invalidSkills.length === 0) {
-  console.log(`✅ All ${repositories.length} repositories have valid, authoritative:`);
-  console.log(`   - Dedicated Project AI Skills (.agents/skills/*/SKILL.md)`);
-  console.log(`   - Publication-Grade ARCHITECTURE.md documents with Mermaid diagrams.`);
-  process.exit(0);
-} else {
-  if (missingSkills.length > 0) console.error(`❌ Missing skills in: ${missingSkills.join(', ')}`);
-  if (missingDocs.length > 0) console.error(`❌ Missing/invalid architecture docs in: ${missingDocs.join(', ')}`);
-  if (invalidSkills.length > 0) console.error(`❌ Invalid skill formatting in: ${invalidSkills.join(', ')}`);
+if (failures.length) {
+  console.error("Repository agent/documentation check failed:");
+  for (const failure of failures) console.error(`- ${failure}`);
   process.exit(1);
 }
+console.log(`Repository agent/documentation check passed: ${repositories.length} current roots and platform owners; no zero-target success.`);

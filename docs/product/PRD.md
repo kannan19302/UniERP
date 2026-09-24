@@ -2,8 +2,33 @@
 
 ## Product promise
 
-UniERP shall provide tenant-isolated, auditable business systems and extensible workflows across web, mobile and
-supported desktop/public experiences, with separate provider and tenant administration planes.
+UniERP helps an organization run connected, tenant-isolated and auditable business
+workflows from customer demand through delivery, payment and reconciliation. The
+customer products are the Business Suite, Tenant Admin and Developer Platform.
+Marketing Site and Provider Admin support acquisition, onboarding and safe operation.
+Mobile, desktop, marketplace and other capabilities remain part of the wider product;
+their presence in source does not make them part of a release.
+
+The first working release targets January 1, 2027. The date is conditional on the
+foundation continuation gate, named customer journeys, representative customer
+acceptance and production readiness. It is not a release authorization.
+
+## First-release decision rule
+
+Select initial industries from observed customer problems, buyer access, willingness
+to pay and the ability to onboard repeatably. A sector page or code module is not
+evidence of a sellable industry product. Every advertised industry must have a
+complete, supported journey through configuration, transactions, exceptions,
+reporting, reconciliation and support. Keep unsupported industries in discovery or
+pilot status with truthful claims.
+
+Within the Business Suite, finish the connected Finance spine of controlled
+journals, ledgers, receivables, payables, cash and close before expanding advanced
+Finance breadth. Tenant Admin must let an owner configure and govern their tenant.
+Developer Platform must complete at least one supported external integration
+lifecycle through published contracts and scoped credentials. Provider Admin must
+support tenant lifecycle and operations without tenant-business authority. Marketing
+must hand a prospect into usable onboarding and make only verified claims.
 
 ## Actors
 
@@ -22,9 +47,12 @@ and publishers; public prospects/site visitors; human and machine principals.
 
 ## Scope
 
-Provider operations, tenant administration, ERP/business services, identity, developer/extension ecosystem,
-marketplace, design system, tenant sites/studio, mobile, desktop, marketing and runtime operations. A route,
-module or schema is not automatically a committed capability until traced to requirements and tests.
+The full product spans provider operations, tenant administration, ERP/business
+services, identity, developer and extension ecosystems, marketplace, design system,
+tenant sites/studio, mobile, desktop, marketing and runtime operations. The exact
+first-release subset is decided through the owned requirements and release manifest.
+A route, module or schema is not automatically a committed capability until traced
+to requirements and behavioral evidence.
 
 ## Success measures
 

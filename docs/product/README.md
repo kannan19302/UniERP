@@ -1,21 +1,25 @@
-# UniERP Product
+# UniERP product
 
-UniERP is an enterprise multi-tenant SaaS ERP product composed of 13 owned platforms. This product suite defines
-outcomes and cross-platform system behavior; each platform suite owns the detailed requirements and evidence for
-its boundary.
+[The product PRD](PRD.md) states the single product promise, first-release
+decision rule and success measures. Its January 1, 2027 date is a target
+conditional on customer and release evidence.
 
-## Suite
+The first release focuses on three customer products: Business Suite, Tenant
+Admin and Developer Platform. Marketing Site and Provider Admin provide the
+acquisition and operations paths. Industry availability follows complete,
+customer-accepted journeys and truthful claims.
 
-- [Product requirements](PRD.md)
-- [System and non-functional requirements](REQUIREMENTS.md)
-- [Architecture and TRD](ARCHITECTURE.md)
-- [Cross-platform contracts](CONTRACTS.md)
-- [Security, IAM and compliance](SECURITY.md)
-- [Security vulnerability reporting](SECURITY_REPORTING.md)
-- [Product experience](EXPERIENCE.md)
-- [Delivery, SRE and QA](OPERATIONS.md)
-- [Traceability](TRACEABILITY.md)
-- [Platform catalog](../PLATFORM_CATALOG.md)
-- [Architecture decisions](../adr/README.md)
+Read only the source needed for the question:
 
-`evidence/` contains retired master documents preserved for provenance. They are explicitly non-authoritative.
+- [Requirements](REQUIREMENTS.md): cross-platform functional and non-functional behavior.
+- [Architecture](ARCHITECTURE.md): product-level system boundaries.
+- [Contracts](CONTRACTS.md): cross-platform integration direction.
+- [Security](SECURITY.md) and [experience](EXPERIENCE.md): product-wide constraints.
+- [Operations](OPERATIONS.md): delivery and support expectations.
+- [Traceability](TRACEABILITY.md): requirement-to-evidence state.
+- [Platform catalog](../PLATFORM_CATALOG.md): accountable platform for each capability.
+- [ADRs](../adr/README.md): accepted durable decisions.
+
+Owning platform suites contain the detail. Files under `evidence/` are dated,
+non-authoritative records; they cannot override a requirement or establish release
+readiness by themselves.

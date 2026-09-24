@@ -70,4 +70,4 @@ assert.throws(
   "an unmapped manifest package must fail closed",
 );
 
-console.log("✅ All Layer Gate tests passed: active 13-root mapping, nested package resolution, lower-layer allowance, same-layer rejection, upward-layer rejection, unmapped internal package failure, missing local target failure, circular dependency failure, and unmapped package failure verified.");
+console.log("✅ All Layer Gate tests passed: active 14-root mapping, nested package resolution, lower-layer allowance, same-layer rejection, upward-layer rejection, unmapped internal package failure, missing local target failure, circular dependency failure, and unmapped package failure verified.");

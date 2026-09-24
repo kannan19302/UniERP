@@ -69,8 +69,9 @@
       "data",
       "api",
       "idp",
-      "tenant-apps",
-      "provider-admin-os",
+      "business-suite",
+      "tenant-admin",
+      "provider-admin",
       "developer-platform",
       "marketing-site",
       "mobile",
@@ -85,6 +86,28 @@
       "**/.DS_Store": true,
       "**/Thumbs.db": true,
       ".agents": true
-    }
+    },
+    "files.watcherExclude": {
+      "**/.git/objects/**": true,
+      "**/.git/subtree-cache/**": true,
+      "**/node_modules/**": true,
+      "**/.next/**": true,
+      "**/dist/**": true,
+      "**/.pnpm/**": true
+    },
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/dist": true,
+      "**/.next": true
+    },
+    "typescript.preferences.includePackageJsonAutoImports": "on",
+    "typescript.suggest.autoImports": true,
+    "typescript.tsserver.maxTsServerMemory": 8192,
+    "typescript.tsserver.experimental.enableProjectDiagnostics": false,
+    "eslint.workingDirectories": [
+      {
+        "mode": "auto"
+      }
+    ]
   }
 }
