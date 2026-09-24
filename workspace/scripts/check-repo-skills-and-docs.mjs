@@ -51,6 +51,9 @@ for (const entry of repositories) {
   if (agentFiles.length !== 1 || agentFiles[0] !== path) {
     failures.push(`${repo}: expected one root AGENTS.md; found ${agentFiles.length}`);
   }
+  if (existsSync(resolve(dir, "ARCHITECTURE.md"))) {
+    failures.push(`${repo}: duplicate root ARCHITECTURE.md; use the owning platform specification`);
+  }
   if (!existsSync(path)) {
     failures.push(`${repo}: AGENTS.md missing`);
     continue;

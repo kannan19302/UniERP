@@ -1,3 +1,5 @@
+> Historical, non-authoritative copy of `platform/ARCHITECTURE.md`. Preserved during the 14-root documentation consolidation on 2026-09-24. Current architecture is owned by the accepted ADRs and `platform/docs/platforms/`; current repository rules are in its root `AGENTS.md`.
+
 # Architecture Specification: UniERP Platform Architecture Specifications & Standards (`unierp-platform`)
 
 - **Layer**: Layer Normative (Governance)
@@ -22,7 +24,7 @@ This repository is one delivery unit in the UniERP 31-repository polyrepo estate
 graph LR
   Callers["Allowed Inbound Callers<br/>All human and AI engineers across all 31 repositories"] --> Repo["<b>unierp-platform (Normative)</b><br/>UniERP Platform Architecture Specifications & Standards"]
   Repo --> Outbound["Allowed Outbound Dependencies<br/>NONE (Normative specifications depend on no code)"]
-  
+
   Forbidden["Strictly Forbidden<br/>Runtime code dependencies"] -.-x Repo
 
   classDef r fill:#0f172a,stroke:#3b82f6,stroke-width:2px,color:#fff;

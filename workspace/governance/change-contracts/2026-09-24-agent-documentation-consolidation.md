@@ -56,11 +56,11 @@ NEXT ACTION: Continue the documentation disposition sequence above without delet
 
 ## Iteration evidence — superseded repository architecture copies
 
-ADR-0012 superseded the 31-repository topology and ADR-0001 assigns normative architecture to `platform/docs`. Fifteen repository or nested-unit `ARCHITECTURE.md` files still claimed to be authoritative on the retired topology and linked to absent `unierp-platform` paths. Their content was preserved in `platform/docs/evidence/legacy-repository-architecture/` with whitespace normalization, a non-authoritative banner and source path; original bytes remain in Git history. Hashes of every source were recorded during the copy. The current owning platform architecture and accepted ADRs remain in place.
+ADR-0012 superseded the 31-repository topology and ADR-0001 assigns normative architecture to `platform/docs`. Sixteen repository or nested-unit `ARCHITECTURE.md` files still claimed to be authoritative on the retired topology and linked to absent `unierp-platform` paths. Their content was preserved in `platform/docs/evidence/legacy-repository-architecture/` with whitespace normalization, a non-authoritative banner and source path; original bytes remain in Git history. Hashes of the first fifteen sources were recorded during the copy and the Platform root payload was compared to its archive. The current owning platform architecture and accepted ADRs remain in place.
 
-The old Markdown disposition ledger is now marked historical; its KEEP-LOCAL decisions for these files cannot override ADR-0012 or the documentation authority decision. The old scaffolder was changed into a read-only current-root checker so it cannot regenerate the stale copies. The two nested Platform architecture files were removed after their archived copies were verified. The thirteen other root copies remain until their owning repositories can remove them in dependency order.
+The old Markdown disposition ledger is now marked historical; its KEEP-LOCAL decisions for these files cannot override ADR-0012 or the documentation authority decision. The old scaffolder was changed into a read-only current-root checker so it cannot regenerate the stale copies. The Platform root and two nested Platform architecture files and all thirteen other root copies were removed after their archived copies were verified and the latter were pushed in dependency order.
 
-Status: PARTIALLY COMPLETE. This is not done. Next action: verify the Platform archive and governance checks, publish that upstream preservation change, then remove only the thirteen source copies from repository roots and validate every affected root.
+Status: PARTIALLY COMPLETE. This is not done. Next action: enforce the no-duplicate-root-architecture rule, validate current links and authority routes, then perform the remaining owner-reviewed Markdown disposition work.
 
 ## Verification and rollback
 
