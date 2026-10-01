@@ -3,7 +3,7 @@
 ## Functional requirements
 
 - `DS-FR-001`: The platform shall publish versioned tokens and themes.
-- `DS-FR-002`: The platform shall provide accessible reusable components and complex patterns.
+- `DS-FR-002`: The platform shall provide accessible reusable components and complex patterns. Breadcrumb navigation shall support an opt-in collapsed long-path presentation that keeps root and recent/current segments visible and preserves keyboard-reachable access to omitted ancestors; the default remains the complete uncollapsed path.
 - `DS-FR-003`: The platform shall render schema-driven forms and settings safely.
 - `DS-FR-004`: The platform shall provide framework navigation, session and permission primitives.
 - `DS-FR-005`: The platform shall publish stories, usage guidance and visual baselines.

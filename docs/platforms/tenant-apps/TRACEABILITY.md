@@ -53,3 +53,11 @@ These requirements are linked to their owning architecture and live repository b
 | ERP-UX-004 | [owning architecture](ARCHITECTURE.md) | [repository baseline](../../evidence/IMPLEMENTATION_BASELINE.md) | [test inventory](../../evidence/TEST_INVENTORY.md) — boundary/assertions not mapped | GAP | inspect mechanism and behavioral assertions |
 | ERP-UX-005 | [owning architecture](ARCHITECTURE.md) | [repository baseline](../../evidence/IMPLEMENTATION_BASELINE.md) | [test inventory](../../evidence/TEST_INVENTORY.md) — boundary/assertions not mapped | GAP | inspect mechanism and behavioral assertions |
 
+
+## Strata app-grid consumer evidence — 2026-09-28
+
+Business Suite references the shared `StrataAppGrid` from both home and the app catalog; app data, filtering, links and authorization remain PLT-ERP-owned. The PLT-DS visual comparison is documented in [the StrataAppGrid packet](../../../../design-system/docs/evidence/component-benchmarks/2026-09-28/strata-app-grid/comparison.md). Static source usage is confirmed, but route rendering, tenant entitlement filtering, and live tenant journey are `NOT VERIFIED`. The shared component's overall benchmark remains `NOT VERIFIED`; no consumer integration or release is claimed. Status: `PARTIAL`; knowledge delta: `UPDATED`.
+
+## Labeled field consumer alignment — 2026-09-28
+
+Business Suite now uses the public Design System form-level LabeledTextField for 325 labeled/hinted controls across 61 files. The root primitive TextField remains unchanged. The latest supported Node 22 typecheck clears every TS2322 field-shape error but still fails with 331 TS2305 missing-export errors. Business Suite lint could not execute because the package's eslint binary is unavailable. Route-level accessibility and customer-journey proof remains NOT VERIFIED; this local linked-source migration is not package publication or release evidence. Status: PARTIAL; see the [provider/consumer contract](../../../../design-system/docs/changes/strata-form-labeled-text-field-business-suite-2026-09-28.md). Knowledge delta: UPDATED.

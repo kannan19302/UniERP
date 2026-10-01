@@ -5,12 +5,18 @@ import { dirname, resolve, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const scriptDir = dirname(fileURLToPath(import.meta.url));
-const apiDir = resolve(scriptDir, "../../api");
+const workspaceRoot = resolve(scriptDir, "..");
+const apiDir = resolve(workspaceRoot, "../../api");
 const runnerScript = join(apiDir, "scripts/verify-node22-behavioral-isolation.cjs");
 
 console.log("Delegating FND-P0-004 behavioral multi-tenant isolation suite to Node 22 api container...");
 
-spawnSync("docker", ["cp", runnerScript, "api:/app/verify-node22-behavioral-isolation.cjs"], { stdio: "inherit" });
+const copy = spawnSync("docker", ["cp", runnerScript, "api:/app/verify-node22-behavioral-isolation.cjs"], { stdio: "inherit" });
+if (copy.error) throw copy.error;
+if (copy.status !== 0) {
+  process.exit(copy.status ?? 1);
+}
+
 const r = spawnSync(
   "docker",
   [

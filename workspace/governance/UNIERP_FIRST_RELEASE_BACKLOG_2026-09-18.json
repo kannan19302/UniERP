@@ -1,7 +1,7 @@
 {
   "document_type": "proposed-release-backlog",
   "generated_on": "2026-09-18",
-  "source": "UNIERP_FIRST_RELEASE_ROADMAP_2026-09-18.md",
+  "source": "../../docs/evidence/legacy-first-release-roadmap-2026-09-18.md",
   "release_target": "2027-01-01",
   "strategy": "Design first; all agreed core modules; one initial revenue-focused industry pack; subsequent industries one at a time",
   "task_count": 74,
@@ -1105,5 +1105,7 @@
       "evidence": [],
       "note": "Planning status only; inspect existing implementation before execution. Dependencies are packet-level prerequisites; refine at ticket decomposition. Operational rehearsals require applicable foundation gates and environment authorization."
     }
-  ]
+  ],
+  "status": "HISTORICAL_NON_AUTHORITATIVE",
+  "superseded_by": "UNIERP_V1_RELEASE_ROADMAP_2026-09-24.md"
 }

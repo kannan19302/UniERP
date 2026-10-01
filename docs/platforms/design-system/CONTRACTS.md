@@ -20,6 +20,10 @@ Canonical failures include unauthenticated, forbidden, validation, conflict, rat
   removal criteria and usage evidence. A root export may be discouraged without being removed inside the major.
 - `DS-PKG-005`: CSS token artifacts are side-effectful public assets. Their ordered layers shall produce the same
   typography and semantic roles whether consumed directly or through the supported aggregate stylesheet.
+- `DS-PKG-006`: Platform-specific subpaths may expose pure reusable presentation. They shall accept data and
+  callbacks from the owning application and shall not own that platform's route catalog, entitlements,
+  persistence, business rules, or mutation authority. `@kannan19302/ui/platforms/business-suite` follows this
+  boundary; Business Suite app data and effects remain PLT-ERP-owned.
 
 ## Shell adaptation contract
 

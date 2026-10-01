@@ -1,3 +1,5 @@
+> Historical, non-authoritative September 18 plan. It uses the retired 31-root topology and is superseded by the [September 24 v1 roadmap](../../workspace/governance/UNIERP_V1_RELEASE_ROADMAP_2026-09-24.md). Keep it for provenance only.
+
 # UniERP first production release — delivery roadmap and checklist
 
 Draft date: 2026-09-18. Planning owner: Product + Architecture + Engineering Delivery.
@@ -385,3 +387,4 @@ Cycle status: **DONE — roadmap drafting objective only**.
 - Product verification NOT RUN: application tests, RLS, cloud, migration, performance, accessibility and recovery suites; this task changes planning documents only and makes no new product qualification claim.
 - Designed: YES for roadmap. Implemented: YES for planning artifacts only. Tested: YES for artifact consistency, product testing not performed. Integrated: NO new product integration. Deployed: NO. Released: NO.
 - Next required action: product/engineering owners allocate named capacity and execute R01–R08/R65/R69, then commit a feasible baseline at G0. No production authorization is implied.
+
